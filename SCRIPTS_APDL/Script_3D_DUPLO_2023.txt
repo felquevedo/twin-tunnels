@@ -1,6 +1,6 @@
 !************************************************************!
 !** PROGRAMA ANÁLISE TUNEL DUPLO (MODELO 3D) 		   **!
-!** Versão: 2023.11 					   **!
+!** Versão: 2023.12 					   **!
 !** 							   **!
 !** Objetivo: faz análise da convergência de túneis 	   **!
 !** profundos com seção circular dupla (gêmeos)		   **!
@@ -164,9 +164,10 @@ dtpmax1		= dtpmax		! [dias] incremento máximo de tempo dentro de cada passo
 !
 ! Discretização do tempo nos passos após a escavação
 tp2 		= 1 		! [dias] tempo de cada passo de solução após a escavação do túnel
-np2 		= 100 		! [un] número de passos de solução após a escavação do túnel
+np2max 		= 100 		! [un] número máximo de passos de solução após a escavação do túnel
 dtp2		= 0.5*tp2	! [dias] incremento de tempo de cada passo
 dtp2max		= dtp2		! [dias] incremento máximo de tempo de cada passo
+deltaumin	= 1E-12		! [adm] critério de convergência no tempo							      
 !
 !************************************************************!
 !****_ 		2.6 Discretização da malha              _****!
@@ -210,6 +211,8 @@ m4ga		= Lp1/1.3 	! [m] tamanho dos elementos na galeria
 !************************************************************!
 !****_ 		2.7 Configuração da saida de dados    	_****!
 !************************************************************!
+teta		= 90		! angulo da posição do perfil de convergências no túnel longitudinal
+direcao 	= 'Y'		! componente dos deslocamentos para o perfil de convergências										    						      
 iso		= 0 		! 0 - contorno padrão, 1 - isolinhas (apenas 0 se isosup=1)
 flag1 		= 1 		! 1 - saida jpg do gráfico de convergência em arquivo
 flag2 		= 1 		! 1 - saida txt de resultados do gráfico de convergênci
@@ -299,6 +302,11 @@ vpi = 3.14159265358979323846
 ! calculando o número de escavações na galeria de modo que seja inteiro
 *IF,NINT(nesc1)-nesc1,GT,0,THEN
 	nesc1 = NINT(nesc1)
+*ENDIF
+!
+! caso não haja escavação na galeria
+*IF,escavagaleria,EQ,0,THEN
+	nesc1 = 0
 *ENDIF
 !
 ! verificando se haverá análise após a construção do túnel
@@ -1889,39 +1897,41 @@ CMSEL,S,T1esc %i%,ELEM
 *ENDIF
 !
 ! Proximas escavações e resvestimentos da primeira galeria
-*DO,i,2,nesc1,1
-	fi=npi1*Lp1+(i-2)*Lp1
-	ff=npi1*Lp1+(i-1)*Lp1
-	ESEL,S,CENT,Z,fi,ff
-	ESEL,R,CENT,X,0,re1-0.01
-	ESEL,R,CENT,Y,0,180
-	CM,T1esc %i%,ELEM
-	CMSEL,S,T1esc %i%,ELEM
-	!
-	*IF,matrev,NE,0,THEN
-		! criando grupos com os elementos revestidos do passo i
-		*IF,i,EQ,2,THEN
-			fi=-re
-		*ELSE
-			fi=(i-2)*Lp1
-		*ENDIF
-		*IF,i,EQ,nesc1,THEN
-			ff=l2/2-re
-		*ELSE
-			ff=npi1*Lp1+(i-2)*Lp1-d01
-		*ENDIF
-		ESEL,ALL
-		CMSEL,S,Revestimento2,ELEM
-		ESEL,R,CENT,Z,fi,ff
-		ESEL,R,CENT,X,ri1,re1-0.01
+*IF,escavagaleria,EQ,1,THEN
+	*DO,i,2,nesc1,1
+		fi=npi1*Lp1+(i-2)*Lp1
+		ff=npi1*Lp1+(i-1)*Lp1
+		ESEL,S,CENT,Z,fi,ff
+		ESEL,R,CENT,X,0,re1-0.01
 		ESEL,R,CENT,Y,0,180
-		MPCHG,nesc-1+i,ALL
-		CM,T1rev %i-1%,ELEM
-		CMSEL,S,T1rev %i-1%,ELEM
-	*ELSE
-		! não aplica revestimento
-	*ENDIF
-*ENDDO
+		CM,T1esc %i%,ELEM
+		CMSEL,S,T1esc %i%,ELEM
+		!
+		*IF,matrev,NE,0,THEN
+			! criando grupos com os elementos revestidos do passo i
+			*IF,i,EQ,2,THEN
+				fi=-re
+			*ELSE
+				fi=(i-2)*Lp1
+			*ENDIF
+			*IF,i,EQ,nesc1,THEN
+				ff=l2/2-re
+			*ELSE
+				ff=npi1*Lp1+(i-2)*Lp1-d01
+			*ENDIF
+			ESEL,ALL
+			CMSEL,S,Revestimento2,ELEM
+			ESEL,R,CENT,Z,fi,ff
+			ESEL,R,CENT,X,ri1,re1-0.01
+			ESEL,R,CENT,Y,0,180
+			MPCHG,nesc-1+i,ALL
+			CM,T1rev %i-1%,ELEM
+			CMSEL,S,T1rev %i-1%,ELEM
+		*ELSE
+			! não aplica revestimento
+		*ENDIF
+	*ENDDO
+*ENDIF
 CSYS,0
 !
 !************************************************************!
@@ -2003,20 +2013,14 @@ ALLSEL,ALL
 !
 ! numero máximo de analises
 nanalises = 0
-*IF,escavagaleria,EQ,1,THEN
-*ELSE
-	nesc1 = 0
-*ENDIF
 nanalises=nesc+nesc1
 *IF,analise2,EQ,1,THEN
-	nanalises=nanalises + np2
+	nanalises=nanalises + np2max
 *ENDIF	
 *DIM,criterio,TABLE,nanalises,2
 !
 ! Selecionando o nó de controle da convergencia no tempo		
 uatual = 0
-direcao = 'Y'
-teta	= 90
 LOCAL,11,1,0,0,lt,0,0,0,0
 CSYS,11,
 ALLSEL,ALL
@@ -2027,7 +2031,6 @@ NSLE,R,CORNER
 CSYS,0 
 *GET,nocontrole,NODE,0,NUM,MAX
 ALLSEL,ALL
-!
 !
 ! Solução com as escavações
 /SOL
@@ -2144,6 +2147,7 @@ ALLSEL,ALL
 	! Próximos passos de escavação
 	/SOL
 	ANTYPE,0,RESTART
+	tad1 = 0
 	*DO,i,2,nesc,1
 		!
 		! desligando elementos do grupo de escavação i
@@ -2237,9 +2241,10 @@ ALLSEL,ALL
 		!criterio(i,2) = deltau
 	*ENDDO
 	!
+	np2 = 0
 	*IF,analise2,EQ,1,THEN
-		! Faz o cálculo após o término da construção do túnel	                    
-		*DO,i,1,np2
+		! Faz o cálculo após o término da construção do túnel	                    								  
+		*DO,i,1,np2max
 			TIME,tp*nesc+tad1+i*tp2		
 			DELTIM,dtp2,,dtp2max			
 			SAVE
@@ -2248,13 +2253,13 @@ ALLSEL,ALL
 			SOLVE
 			!
 			! Criterio de convergencia no tempo
-			j = j+1
-			criterio(j,1) = tp*(nesc)+i*tp2
+			np2 = np2+1
+			criterio(np2,1) = tp*(nesc)+tad1+i*tp2
 			uanterior = uatual
 			*GET,uatual,NODE,nocontrole,U,SUM
 			deltau = uatual - uanterior
-			criterio(j,2) = deltau
-			*IF,deltau,LT,1E-12,*EXIT			
+			criterio(np2,2) = deltau
+			*IF,deltau,LT,deltaumin,*EXIT			
 		*ENDDO
 	*ENDIF	
 	FINISH
@@ -2302,20 +2307,6 @@ JPEG,TMOD,1
 !************************************************************!
 /POST1
 !
-! numero de analises
-nanalises = 0
-*IF,escavagaleria,EQ,1,THEN
-*ELSE
-	nesc1 = 0
-*ENDIF
-nanalises=nesc+nesc1
-*IF,analise2,EQ,1,THEN
-	nanalises=nanalises + j
-*ENDIF	
-!
-direcao = 'Y'
-teta	= 90
-!
 ! selecionando os nós na interface entre revestimento e o maciço
 LOCAL,11,1,0,0,lt,0,0,0,0
 CSYS,11,
@@ -2329,6 +2320,8 @@ CSYS,0
 RSYS,0
 !
 ! dimensionando arrays
+nanalises = 0
+*GET,nanalises,ACTIVE,0,SET,NSET	! pegando o número de análises								 
 *GET,ncount,NODE,,COUNT			  ! pegando numero máximo de nós selecionados
 *GET,ntotal,NODE,,NUM,MAX		  ! pegando numero total de nós
 *DIM,convergence_teta,TABLE,ncount,2+nanalises ! dimensionando tabela de convergencias
@@ -2474,19 +2467,6 @@ PARSAV,SCALAR,parametros,txt
 !************************************************************!
 /POST1
 !
-! numero de analises
-nanalises = 0
-*IF,escavagaleria,EQ,1,THEN
-*ELSE
-	nesc1 = 0
-*ENDIF
-nanalises=nesc+nesc1
-*IF,analise2,EQ,1,THEN
-	nanalises=nanalises + j
-*ENDIF	
-!
-direcao = 'Y'
-teta	= 90
 !
 ! selecionando os nós na interface entre revestimento e o maciço
 LOCAL,12,1,re,0,lt-l2/2,0,0,90
@@ -2504,6 +2484,8 @@ CSYS,0,
 RSYS,0
 !
 ! dimensionando arrays
+nanalises = 0
+*GET,nanalises,ACTIVE,0,SET,NSET	! pegando o número de análises								 
 *GET,ncount,NODE,,COUNT			  ! pegando numero máximo de nós selecionados
 *GET,ntotal,NODE,,NUM,MAX		  ! pegando numero total de nós
 *DIM,convergence1_teta,TABLE,ncount,2+nanalises ! dimensionando tabela de convergencias

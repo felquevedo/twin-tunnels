@@ -1,6 +1,6 @@
 !************************************************************!
 !** SCRIPT TUNEL AXISSIMÉTRICO                             **!
-!** Versão: 2023.5                                         **!
+!** Versão: 2023.6                                         **!
 !**                                                        **!
 !** Objetivo: faz análise da convergência de tuneis        **!
 !**           profundos (PROFUNDIDADE>10R) com seção       **!
@@ -136,10 +136,11 @@ dtp 		= 0.5*tp		! [dias] incremento de tempo durante o cálculo
 dtpmax 		= dtp		! [dias] incremento de tempo máximo
 !
 ! Discretização do tempo nos passos após a escavação
-tp2	= 1			! [dias] numero de dias por intervalo no final da contrução
-np2	= 100			! [un] numero de intervalos de dias no final da construção
-dtp2	= 0.5*tp2			! 0.5[dias] incremento de tempo inicial dentro de cada passo
-dtp2max	= dtp2			! [dias] incremento máximo de tempo dentro de cada passo
+tp2		= 1		! [dias] tempo de cada passo de solução após a escavação do túnel
+np2max		= 100		! [un] número máximo de passos de solução após a escavação do túnel
+dtp2		= 0.5*tp2	! [dias] incremento de tempo de cada passo
+dtp2max		= dtp2		! [dias] incremento máximo de tempo de cada passo
+deltaumin	= 1E-12		! [adm] critério de convergência no tempo
 !
 !************************************************************!
 !****_ 		2.6 Discretização da malha              _****!
@@ -713,7 +714,7 @@ ALLSEL,ALL
 ! numero máximo de análises
 nanalises = nesc
 *IF,analise2,EQ,1,THEN
-	nanalises=nanalises + np2
+	nanalises=nanalises + np2max
 *ENDIF
 *DIM,criterio,TABLE,nanalises,2
 !
@@ -850,10 +851,10 @@ ALLSEL,ALL
 		!criterio(i,2) = deltau
 	*ENDDO
 	!
-	j = 0
+	np2 = 0
 	*IF,analise2,EQ,1,THEN
 		! Faz o cálculo após o término da construção do túnel
-		*DO,i,1,np2
+		*DO,i,1,np2max
 			TIME,tp*(nesc)+i*tp2
 			DELTIM,dtp2,,dtp2max
 			SAVE
@@ -862,13 +863,13 @@ ALLSEL,ALL
 			SOLVE
 			!
 			! Criterio de convergencia no tempo
-			j = j+1
-			criterio(j,1) = tp*(nesc)+i*tp2
+			np2 = np2+1
+			criterio(np2,1) = tp*(nesc)+i*tp2
 			uanterior = uatual
 			*GET,uatual,NODE,nocontrole,U,SUM
 			deltau = uatual - uanterior
-			criterio(j,2) = deltau
-			*IF,deltau,LT,1E-12,*EXIT
+			criterio(np2,2) = deltau
+			*IF,deltau,LT,deltaumin,*EXIT
 		*ENDDO
 	*ENDIF
 	FINISH
@@ -906,12 +907,6 @@ JPEG,TMOD,1
 !************************************************************!
 /POST1	  
 !
-! numero de analises
-nanalises = nesc
-*IF,analise2,EQ,1,THEN
-	nanalises=nanalises + j
-*ENDIF	
-!
 ! selecionando os nós na interface entre revestimento e o maciço
 NSEL,ALL
 NSEL,S,LOC,X,0.999*Re,1.001*Re
@@ -920,6 +915,8 @@ NSEL,S,LOC,X,0.999*Re,1.001*Re
 RSYS,5
 !
 ! dimensionando arrays
+nanalises = 0
+*GET,nanalises,ACTIVE,0,SET,NSET	! pegando o número de análises	
 *GET,ncount,NODE,,COUNT			  ! pegando numero máximo de nós selecionados
 *GET,ntotal,NODE,,NUM,MAX		  ! pegando numero total de nós
 *DIM,convergence,TABLE,ncount,2+nanalises ! dimensionando tabela de convergencias
