@@ -150,7 +150,7 @@ kkDomIntPt	= 1		! [un] identificação do ponto de integração para saída
 !************************************************************!
 prx 		= 30 		! [MPa] tensões hidrostáticas iniciais na direção x
 pry		= 30		! [MPa] tensões hidrostáticas iniciais na direção y
-prz		= 30 		!nu1*(prx+pry)	! [MPa] tensões hidrostáticas iniciais na direção z
+prz		= nu1*(prx+pry)	! [MPa] tensões hidrostáticas iniciais na direção z
 !
 !************************************************************!
 !****_ 		2.5 Discretização do tempo nos passos	_****!
