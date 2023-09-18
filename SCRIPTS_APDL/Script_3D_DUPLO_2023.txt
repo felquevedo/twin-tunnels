@@ -148,7 +148,9 @@ kkDomIntPt	= 1		! [un] identificação do ponto de integração para saída
 !************************************************************!
 !****_ 		2.4 Condições de Contorno	  	_****!
 !************************************************************!
-pr 		= 2.2 		! [MPa] tensões hidrostáticas iniciais
+prx 		= 2.2 		! [MPa] tensões iniciais na direção x
+pry		= 2.2		! [MPa] tensões iniciais na direção y
+prz		= 2.2		! nu1*(prx+pry)	! [MPa] tensões iniciais na direção z
 !
 !************************************************************!
 !****_ 		2.5 Discretização do tempo nos passos	_****!
@@ -200,10 +202,10 @@ m4ga		= Lp1/1.3 	! [m] tamanho dos elementos na galeria
 	nd5		= 12		! 8 [un] numero de elementos no trecho adjacente a galeria transversal (exemplo: 6, 8)
 	md5		= 4		! 3 [adm] taxa de crescimento (exemplo: 2, 6)
 *ELSEIF,d1,EQ,4,THEN
-	nd1 		= 5		! [un] numero de elementos na horizontal e vertical contigua ao tunel longitudinal
+	nd1 		= 7		! [un] numero de elementos na horizontal e vertical contigua ao tunel longitudinal
 	md1 		= 5 		! [adm] taxa de crescimento		
-	nd4 		= 10 		! [un] numero de elementos na horizontal e vertical contigua a região próxima do tunel longitudinal
-	md4 		= 3 		! [adm] taxa de crescimento
+	nd4 		= 12 		! [un] numero de elementos na horizontal e vertical contigua a região próxima do tunel longitudinal
+	md4 		= 6 		! [adm] taxa de crescimento
 	nd6		= nd1*2		! [un] número de elementos na vertical contígua a galeria transversal
 	md6		= md1		! [adm] taxa de crescimento
 	nd5		= 6		! [un] numero de elementos no trecho adjacente a galeria transversal
@@ -1788,7 +1790,7 @@ EPLOT
 CSYS,0
 ! aplica tensões iniciais
 ALLSEL,ALL
-INISTATE, DEFINE,,,,,-pr,-pr,-pr,0,0,0
+INISTATE, DEFINE,,,,,-prx,-pry,-prz,0,0,0
 !
 !Aplica condição de simetria na face direita do modelo
 LOCAL,11,0,0,0,0
@@ -1812,19 +1814,22 @@ DA,ALL,UZ,0
 LOCAL,11,0,0,0,0
 ALLSEL,ALL
 ASEL,S,LOC,Y,d3,d3
-SFA,ALL,1,PRES,pr
+ASEL,U,ACCA,
+SFA,ALL,1,PRES,pry
 !
 ! Aplica pressão na face esquerda do modelo
 LOCAL,11,0,0,0,0
 ALLSEL,ALL
 ASEL,S,LOC,X,-d4,-d4
-SFA,ALL,1,PRES,pr
+ASEL,U,ACCA,
+SFA,ALL,1,PRES,prx
 !
 ! Aplica pressão na face do fundo
 LOCAL,11,0,0,0,0
 ALLSEL,ALL
 ASEL,S,LOC,z,0,0
-SFA,ALL,1,PRES,pr
+ASEL,U,ACCA,
+SFA,ALL,1,PRES,prz
 !
 !************************************************************!
 !****_ 		3.13 Criando elementos do revestimento	_****!
