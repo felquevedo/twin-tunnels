@@ -1,6 +1,6 @@
 !************************************************************!
 !** PROGRAMA ANÁLISE TUNEL DUPLO (MODELO 3D) 		   **!
-!** Versão: 2023.12 					   **!
+!** Versão: 2023.13 					   **!
 !** 							   **!
 !** Objetivo: faz análise da convergência de túneis 	   **!
 !** profundos com seção circular dupla (gêmeos)		   **!
@@ -63,6 +63,8 @@ d1 		= 3		! [m] distância entre eixos dos túneis longitudinais (d1 = 16*Re ou 
 	d5		= 2
 *ELSEIF,d1,EQ,3,THEN
 	d5		= 2
+*ELSEIF,d1,EQ,5,THEN
+	d5		= 2		    	
 *ENDIF
 
 !
@@ -92,7 +94,7 @@ nu1 		= 0.23		 ! [adm] coeficiente de poisson (1,2,22,23,4,5,6,7,8)
 superficief	= 2		 ! função de escoamento: 1-DPI, 2-DPII, 3-DPIII (6,8)
 superficieg 	= 2		 ! função potencial: 1-DPI, 2-DPII, 3-DPIII (6,8)
 fi	    	= 0		 ! [graus] angulo de atrito (0 - VM ou TR) (6,8)
-psi	    	= 0		 ! [graus] angulo de dilatância (6,8)
+psi	    	= fi		 ! [graus] angulo de dilatância (6,8)
 c1	    	= 1E10*SQRT(3)/2 ! [MPa] coesão inicial (2,22,23,4,6,8)
 c2	    	= 1E10*SQRT(3)/2 ! [MPa] coesão de pico (2,22,23,4,6,8)
 c3	    	= 1E10*SQRT(3)/2 ! [MPa] coesão residual (22,6,8)
@@ -210,6 +212,15 @@ m4ga		= Lp1/1.3 	! [m] tamanho dos elementos na galeria
 	md6		= md1		! [adm] taxa de crescimento
 	nd5		= 6		! [un] numero de elementos no trecho adjacente a galeria transversal
 	md5		= 4		! [adm] taxa de crescimento
+*ELSEIF,d1,EQ,5,THEN
+	nd1 		= 9		! [un] numero de elementos na horizontal e vertical contigua ao tunel longitudinal
+	md1 		= 7 		! [adm] taxa de crescimento		
+	nd4 		= 12 		! [un] numero de elementos na horizontal e vertical contigua a região próxima do tunel longitudinal
+	md4 		= 6 		! [adm] taxa de crescimento
+	nd6		= nd1*2		! [un] número de elementos na vertical contígua a galeria transversal
+	md6		= md1		! [adm] taxa de crescimento
+	nd5		= 6		! [un] numero de elementos no trecho adjacente a galeria transversal
+	md5		= 4		! [adm] taxa de crescimento		    				      
 *ELSEIF,d1,EQ,3,THEN
 	nd1 		= 5		! [un] numero de elementos na horizontal e vertical contigua ao tunel longitudinal
 	md1 		= 5 		! [adm] taxa de crescimento		
