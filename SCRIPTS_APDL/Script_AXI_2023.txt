@@ -69,12 +69,12 @@ superficief	= 2		 ! função de escoamento: 1-DPI, 2-DPII, 3-DPIII (6,8)
 superficieg 	= 2		 ! função potencial: 1-DPI, 2-DPII, 3-DPIII (6,8)
 fi	    	= 0		 ! [graus] angulo de atrito (0 - VM ou TR) (6,8)
 psi	    	= 0		 ! [graus] angulo de dilatância (6,8)
-c1	    	= 1E10*SQRT(3)/2 ! [MPa] coesão inicial (2,22,23,4,6,8)
-c2	    	= 1E10*SQRT(3)/2 ! [MPa] coesão de pico (2,22,23,4,6,8)
-c3	    	= 1E10*SQRT(3)/2 ! [MPa] coesão residual (22,6,8)
+c1	    	= 1E10*1.4*SQRT(3)/2 ! [MPa] coesão inicial (2,22,23,4,6,8)
+c2	    	= 1E10*1.4*SQRT(3)/2 ! [MPa] coesão de pico (2,22,23,4,6,8)
+c3	    	= 1E10*1.4*SQRT(3)/2 ! [MPa] coesão residual (22,6,8)
 eps1	    	= 0.010		 ! [adm] deformação equiv. limite da zona 1 (22,6,8)
-eps2	    	= 0.020		 ! [adm] deformação equiv. limite da zona 2 (22,6,8)
-eps3	    	= 0.025		 ! [adm] deformação equiv. limite da zona 3 (22,6,8)
+eps2	    	= 0.010		 ! [adm] deformação equiv. limite da zona 2 (22,6,8)
+eps3	    	= 0.010		 ! [adm] deformação equiv. limite da zona 3 (22,6,8)
 Dalg		= 0		 ! 0 - módulo elastico, 1 - módulo algoritmíco (6,8)
 !                                
 ! Parametros para o modelo 23, 7 e 8
@@ -82,7 +82,7 @@ superficiefvp 	= 2		 ! função de escoamento: 1-DPI, 2-DPII, 3-DPIII (7,8)
 superficiegvp 	= 2		 ! função potencial: 1-DPI, 2-DPII, 3-DPIII (7,8)
 fivp          	= 0		 ! [graus] angulo de atrito (0 - VM ou TR)(7,8)
 psivp         	= 0		 ! [graus] angulo de dilatância (7,8)
-cvp 	      	= 1*SQRT(3)/2	 ! [MPa] coesão viscoplastica (23,7,8)
+cvp 	      	= 0.6*SQRT(3)/2	 ! [MPa] coesão viscoplastica (23,7,8)
 n1	      	= 1		 ! [adm] expoente do modelo de Perzyna (23,7,8)
 eta           	= 1E7/(60*60*24) ! [dia] constante de viscosidade dinâmica (23,7,8)
 f0     	      	= 1		 ! [MPa] valor de referência (23,7,8)
@@ -96,18 +96,18 @@ thetavp       	= 0		 ! 0 - totalmente explícito, 1 - semi-implicito (7,8)
 !	1 - Ansys_Elástico
 !	2 - Usermat_Viscoelastico_CEB-MC90
 !
-matrev 		= 0		! Tipo de material (0-SR,1-E,2-VE)
+matrev 		= 2		! Tipo de material (0-SR,1-E,2-VE)
 !
 ! Parâmetros para os modelos 1 e 2
-E2 		= 3000		! [MPa] módulo de elasticidade do revestimento (matrev=1)
-nu2 		= 0.3    	! [adm] coeficiente de Poisson do revestimento (matrev=1,2)		
+E2 		= 30000		! [MPa] módulo de elasticidade do revestimento (matrev=1)
+nu2 		= 0.2    	! [adm] coeficiente de Poisson do revestimento (matrev=1,2)		
 !
 ! Parâmetros para o modelo 2
 fck 		= 20		! [MPa] resistência característica do concreto (2)
 s 		= 0.2		! [adm] coef. que depende do tipo de concreto (2)
 ti 		= 0		! [dias] início do concreto (2)
 rh 		= 70		! [%] umidade relativa do ambiente (2)
-hf 		= 0.4083	! [m] espessura fictítica (2)
+hf 		= 0.2111	! [m] espessura fictítica (2)
 ts 		= 7		! [dias] idade do concreto no início da secagem (2)
 t0		= 1		! [dias] idade do concreto no início do carregamento (2)
 tinf		= 3000		! [dias] tempo final da análise (2)
@@ -121,10 +121,13 @@ ktime		= 10		! [dias] tempo da análise para saída de dados
 kelemid		= 2060		! [un] identificação do elemento para saída
 kkDomIntPt	= 1		! [un] identificação do ponto de integração para saída
 !
+! Calculo do módulo
+fcm 		= fck + 8
+E2 		= 21500*(fcm/10)**(1/3)		    	       
 !************************************************************!
 !****_ 		2.4 Condições de Contorno	  	_****!
 !************************************************************!
-pr		= 4		! [MPa] tensões iniciais e pressão hidrostáticas
+pr		= 3		! [MPa] tensões iniciais e pressão hidrostáticas
 !
 !************************************************************!
 !****_ 		2.5 Discretização do tempo nos passos	_****!
@@ -136,11 +139,11 @@ dtp 		= 0.5*tp		! [dias] incremento de tempo durante o cálculo
 dtpmax 		= dtp		! [dias] incremento de tempo máximo
 !
 ! Discretização do tempo nos passos após a escavação
-tp2		= 1		! [dias] tempo de cada passo de solução após a escavação do túnel
-np2max		= 100		! [un] número máximo de passos de solução após a escavação do túnel
+tp2		= 100		! [dias] tempo de cada passo de solução após a escavação do túnel
+np2max		= 25		! [un] número máximo de passos de solução após a escavação do túnel
 dtp2		= 0.5*tp2	! [dias] incremento de tempo de cada passo
 dtp2max		= dtp2		! [dias] incremento máximo de tempo de cada passo
-deltaumin	= 1E-12		! [adm] critério de convergência no tempo
+deltaumin	= 1E-8		! [adm] critério de convergência no tempo
 !
 !************************************************************!
 !****_ 		2.6 Discretização da malha              _****!
@@ -370,7 +373,7 @@ KEYOPT,1,6,0
 		TBTEMP,1.0
 		TBDATA,1,9
 		TBDATA,2,ligafluencia,ligaretracao
-		TBDATA,4,tp*(i-1)
+		TBDATA,4,npi*tp+tp*(i-2)
 		TBDATA,5,ts,t0,tinf
 		TBDATA,8,fck,nu2
 		TBDATA,10,s,rh,hf,betasc,alpha
@@ -716,7 +719,7 @@ nanalises = nesc
 *IF,analise2,EQ,1,THEN
 	nanalises=nanalises + np2max
 *ENDIF
-*DIM,criterio,TABLE,nanalises,2
+*DIM,criterio,TABLE,nanalises,3
 !
 ! Selecionando o nó de controle da convergencia no tempo
 uatual = 0
@@ -787,7 +790,7 @@ ALLSEL,ALL
 	EKILL,ALL
 	ESEL,S,LIVE
 	EPLOT
-	TIME,tp*i
+	TIME,tp*npi
 	DELTIM,dtp,,dtpmax
 	ESEL,ALL
 	!CNVTOL,F,,tolf,,0.01
@@ -835,7 +838,7 @@ ALLSEL,ALL
 		*ENDIF
 		ESEL,S,LIVE
 		EPLOT
-		TIME,tp*i
+		TIME,npi*tp+tp*i
 		DELTIM,dtp,,dtpmax
 		ESEL,ALL
 		SAVE
@@ -855,7 +858,7 @@ ALLSEL,ALL
 	*IF,analise2,EQ,1,THEN
 		! Faz o cálculo após o término da construção do túnel
 		*DO,i,1,np2max
-			TIME,tp*(nesc)+i*tp2
+			TIME,npi*tp+tp*(nesc-1)+i*tp2
 			DELTIM,dtp2,,dtp2max
 			SAVE
 			!CNVTOL,F,,tolf2,,0.01
@@ -864,23 +867,17 @@ ALLSEL,ALL
 			!
 			! Criterio de convergencia no tempo
 			np2 = np2+1
-			criterio(np2,1) = tp*(nesc)+i*tp2
+			criterio(np2,1) = npi*tp+tp*(nesc-1)+i*tp2
 			uanterior = uatual
 			*GET,uatual,NODE,nocontrole,U,SUM
 			deltau = uatual - uanterior
 			criterio(np2,2) = deltau
+			criterio(np2,3) = uatual
 			*IF,deltau,LT,deltaumin,*EXIT
 		*ENDDO
 	*ENDIF
 	FINISH
 *ENDIF
-!
-! Escrevendo criterio de convergencia no tempo
-*CREATE,ansuitmp
-*MWRITE,criterio,criterio,txt
-(1000(E10.4,3X))
-*END
-/INPUT,ansuitmp
 !
 !************************************************************!
 !****_ 5. PÓS-PROCESSAMENTO 				_****!
@@ -901,6 +898,44 @@ JPEG,COLOR,2
 JPEG,TMOD,1
 /GFILE,800,
 /TYPE,,3
+!
+!************************************************************!
+!****_ 		5.1 Plotando nó de controle no tempo 	_****!
+!************************************************************!
+!
+! Escrevendo criterio de convergencia no tempo
+! criterio(:,1) - tempo
+! criterio(:,2) - deltau
+! criterio(:,3) - uatual
+!
+*CREATE,ansuitmp
+*MWRITE,criterio,criterio,txt
+(1000(E10.4,3X))
+*END
+/INPUT,ansuitmp
+!
+! formatando grafico para plotar uatual x tempo
+/RGB,INDEX,100,100,100,0
+/RGB,INDEX,0,0,0,15
+/AXLAB,X,t
+/AXLAB,Y,u(r=Re,z=Lt)
+/XRANGE,0,npi*tp+tp*(nesc-1)+np2*tp2
+*VSCFUN,criteriomax,max,criterio(1,3)
+/YRANGE,0,criteriomax*1.2
+/GROPT,DIVY,20
+/GROPT,DIVX,10
+/GROPT,DIG1,3
+/GTHK,CURVE,1
+/PLOPTS,INFO,on
+!
+! graficando na tela do Ansys
+/ERASE
+/SHOW,JPEG,,iso
+*VLEN,np2       
+*VPLOT,criterio(1,1),criterio(1,3)
+/SHOW,CLOSE	   
+/ERASE
+!
 !
 !************************************************************!
 !****_ 		5.2 Perfis de convergências e pressões 	_****!
