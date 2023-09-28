@@ -86,7 +86,7 @@ cvp 	      	= 0.6*SQRT(3)/2	 ! [MPa] coesão viscoplastica (23,7,8)
 n1	      	= 1		 ! [adm] expoente do modelo de Perzyna (23,7,8)
 eta           	= 1E7/(60*60*24) ! [dia] constante de viscosidade dinâmica (23,7,8)
 f0     	      	= 1		 ! [MPa] valor de referência (23,7,8)
-thetavp       	= 0		 ! 0 - totalmente explícito, 1 - semi-implicito (7,8)
+thetavp       	= 1		 ! 0 - totalmente explícito, 1 - semi-implicito (7,8)
 !
 !********************************************************************!
 !****_ 		2.3 Parâmetros constitutivos do revest	_****!
@@ -134,15 +134,25 @@ pr		= 3		! [MPa] tensões iniciais e pressão hidrostáticas
 !************************************************************!
 !
 ! Discretização do tempo durante os passos de escavação
-tp		= Lp/(Vp)	! [dias] tempo para fazer um passo
-dtp 		= 0.5*tp		! [dias] incremento de tempo durante o cálculo
+tp		= Lp/(Vp)	! [dias] tempo de cada passo
+dtp 		= 0.5*tp	! [dias] incremento de tempo durante o cálculo
 dtpmax 		= dtp		! [dias] incremento de tempo máximo
 !
 ! Discretização do tempo nos passos após a escavação
 tp2		= 100		! [dias] tempo de cada passo de solução após a escavação do túnel
 np2max		= 25		! [un] número máximo de passos de solução após a escavação do túnel
 dtp2		= 0.5*tp2	! [dias] incremento de tempo de cada passo
-dtp2max		= dtp2		! [dias] incremento máximo de tempo de cada passo
+!
+tp2autots	= 0		! Especifica quando usar incremento de tempo automático
+!				!      -1 - O programa escolhe
+!				! 	0 - não usa incremento de tempo automático (usa apenas dtp2)
+!				!	1 - usa incremento de tempo automático (usa o dpt2min e dpt2max)
+tp2carry	= 0		! Incremento de tempo entre passos
+!				!	0 - usa o dtp2 como o incremento de tempo em cada passo
+!				!	1 - usa o incremento de tempo do passo anterior em cada passo (se dtp2autots = 1)
+dtp2min		= tp2/2		! [dias] incremento mínimo de tempo de cada passo 
+dtp2max		= tp2		! [dias] incremento máximo de tempo de cada passo				! 
+!
 deltaumin	= 1E-8		! [adm] critério de convergência no tempo
 !
 !************************************************************!
@@ -719,7 +729,11 @@ nanalises = nesc
 *IF,analise2,EQ,1,THEN
 	nanalises=nanalises + np2max
 *ENDIF
-*DIM,criterio,TABLE,nanalises,3
+!
+! criando a tabela com o criterio de parada do longo prazo (np2,deltau,uatual)
+*IF,analise2,EQ,1,THEN
+	*DIM,criterio,TABLE,nanalises,3
+*ENDIF
 !
 ! Selecionando o nó de controle da convergencia no tempo
 uatual = 0
@@ -858,14 +872,15 @@ ALLSEL,ALL
 	*IF,analise2,EQ,1,THEN
 		! Faz o cálculo após o término da construção do túnel
 		*DO,i,1,np2max
+			AUTOTS,tp2autots
 			TIME,npi*tp+tp*(nesc-1)+i*tp2
-			DELTIM,dtp2,,dtp2max
+			DELTIM,dtp2,dtp2min,dtp2max,tp2carry
 			SAVE
 			!CNVTOL,F,,tolf2,,0.01
 			!CNVTOL,U,,tolu2,,0.01
 			SOLVE
 			!
-			! Criterio de convergencia no tempo
+			! Criterio de parada no longo prazo
 			np2 = np2+1
 			criterio(np2,1) = npi*tp+tp*(nesc-1)+i*tp2
 			uanterior = uatual
@@ -900,13 +915,15 @@ JPEG,TMOD,1
 /TYPE,,3
 !
 !************************************************************!
-!****_ 		5.1 Plotando nó de controle no tempo 	_****!
+!****_ 		5.2 Plotando nó de controle no tempo 	_****!
 !************************************************************!
 !
 ! Escrevendo criterio de convergencia no tempo
 ! criterio(:,1) - tempo
 ! criterio(:,2) - deltau
 ! criterio(:,3) - uatual
+!
+*IF,analise2,EQ,1,THEN
 !
 *CREATE,ansuitmp
 *MWRITE,criterio,criterio,txt
@@ -936,9 +953,11 @@ JPEG,TMOD,1
 /SHOW,CLOSE	   
 /ERASE
 !
+*ENDIF
+!
 !
 !************************************************************!
-!****_ 		5.2 Perfis de convergências e pressões 	_****!
+!****_ 		5.3 Perfis de convergências e pressões 	_****!
 !************************************************************!
 /POST1	  
 !
