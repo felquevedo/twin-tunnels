@@ -1,9 +1,0 @@
-del *.log
-del *.txt
-del *.obj
-del *.f90
-del *.mod
-del *.dll
-del *.lrf
-del *.def
-del *.pdb
