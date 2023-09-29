@@ -960,18 +960,18 @@ c     !
 c     !**************************************************************************! 
 c     ! Verificação do incremento de tempo                                       !
 c     !**************************************************************************!
-      IF(PHI.GT.0.0d0)THEN
-      dt1 = 4.0d0/3.0d0*eta/PHI*(1.0d0+posn)/young*DSQRT(3.0d0*J2)
-      dt2 = eta*f0/(n*(fVP/f0)**(n-1))*
-     &        (1.0d0+posn)*(1.0d0-2.0d0*posn)/young*
-     &        ((3.0d0-DSIN(fiVP))**2)/
-     &        (3.0d0/4.0d0*(1.0d0-2.0d0*posn)*(3.0d0-DSIN(fiVP))**2+
-     &        6.0d0*(1.0d0+posn)*DSIN(fiVP)**2)     
-      IF(dtime.GT.dt1.OR.dtime.GT.dt2)THEN
-          keycut = 1
-          RETURN
-      ENDIF
-      ENDIF
+c     IF(PHI.GT.0.0d0)THEN
+c     dt1 = 4.0d0/3.0d0*eta/PHI*(1.0d0+posn)/young*DSQRT(3.0d0*J2)
+c     dt2 = eta*f0/(n*(fVP/f0)**(n-1))*
+c    &        (1.0d0+posn)*(1.0d0-2.0d0*posn)/young*
+c    &        ((3.0d0-DSIN(fiVP))**2)/
+c    &        (3.0d0/4.0d0*(1.0d0-2.0d0*posn)*(3.0d0-DSIN(fiVP))**2+
+c    &        6.0d0*(1.0d0+posn)*DSIN(fiVP)**2)     
+c     IF(dtime.GT.dt1.OR.dtime.GT.dt2)THEN
+c         keycut = 1
+c         RETURN
+c     ENDIF
+c     ENDIF
 c
 c     !**************************************************************************! 
 c     ! Atualização do módulo constitutivo                                       !
@@ -1354,18 +1354,18 @@ c     !
 c     !**************************************************************************! 
 c     ! Verificação do incremento de tempo                                       !
 c     !**************************************************************************!
-c      IF(PHI.GT.0.0d0)THEN
-c      dt1 = 4.0d0/3.0d0*eta/PHI*(1.0d0+posn)/young*DSQRT(3.0d0*J2)
-c      dt2 = eta*f0/(n*(fVP/f0)**(n-1))*
-c     &        (1.0d0+posn)*(1.0d0-2.0d0*posn)/young*
-c     &        ((3.0d0-DSIN(fiVP))**2)/
-c     &        (3.0d0/4.0d0*(1.0d0-2.0d0*posn)*(3.0d0-DSIN(fiVP))**2+
-c     &        6.0d0*(1.0d0+posn)*DSIN(fiVP)**2)
-c      IF(dtime.GT.dt1.OR.dtime.GT.dt2)THEN
-c          keycut = 1
-c          RETURN
-c      ENDIF
-c      ENDIF
+c       IF(PHI.GT.0.0d0)THEN
+c       dt1 = 4.0d0/3.0d0*eta/PHI*(1.0d0+posn)/young*DSQRT(3.0d0*J2)
+c       dt2 = eta*f0/(n*(fVP/f0)**(n-1))*
+c      &        (1.0d0+posn)*(1.0d0-2.0d0*posn)/young*
+c      &        ((3.0d0-DSIN(fiVP))**2)/
+c      &        (3.0d0/4.0d0*(1.0d0-2.0d0*posn)*(3.0d0-DSIN(fiVP))**2+
+c      &        6.0d0*(1.0d0+posn)*DSIN(fiVP)**2)
+c       IF(dtime.GT.dt1.OR.dtime.GT.dt2)THEN
+c           keycut = 1
+c           RETURN
+c       ENDIF
+c       ENDIF
 c     !
 c     !**************************************************************************! 
 c     ! Atualização do módulo constitutivo                                       !

@@ -12,22 +12,5 @@ Copyright (C) Microsoft Corporation.  All rights reserved.
 -manifest:embed 
 -defaultlib:ANSYS.lib 
 *.obj 
-LINK : fatal error LNK1168: n∆o foi poss°vel abrir usermatLib.dll para escrita
-  
- ======================================== 
- Linking usermat ... 
-Microsoft (R) Incremental Linker Version 14.27.29112.0
-Copyright (C) Microsoft Corporation.  All rights reserved.
-
--out:usermatLib.dll 
--def:usermatLibex.def 
--dll 
--debug 
--machine:X64 
--map 
--manifest:embed 
--defaultlib:ANSYS.lib 
-*.obj 
-LINK : usermatLib.dll n∆o encontrado ou n∆o compilado pelo o £ltimo link incremental; executando link completo
    Criando biblioteca usermatLib.lib e objeto usermatLib.exp
   
