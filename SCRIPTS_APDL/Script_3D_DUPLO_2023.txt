@@ -134,6 +134,7 @@ s 		= 0.2		! [adm] coef. que depende do tipo de concreto (2)
 ti 		= 0		! [dias] início do concreto (2)
 rh 		= 70		! [%] umidade relativa do ambiente (2)
 hf 		= (Re**2-(Re-esp)**2)/(Re-esp) ! [m] espessura fictítica (QUEVEDO, 2017, p. 84) (2)
+hf1		= (Re1**2-(Re1-esp1)**2)/(Re1-esp1)  ! [m] espessura fictítica da galeria (QUEVEDO, 2017, p. 84) (2)
 ts 		= 7		! [dias] idade do concreto no início da secagem (2)
 t0		= 1		! [dias] idade do concreto no início do carregamento (2)
 tinf		= 3000		! [dias] tempo final da análise (2)
@@ -513,16 +514,18 @@ analise2 = 0
 		*IF,escavagaleria,EQ,1,THEN
 			*IF,i,LT,nesc+nesc1,THEN
 				TBDATA,4,npi*tp+tp*(i-2)
+				TBDATA,10,s,rh,hf,betasc,alpha
 			*ELSE
-				TBDATA,4,tp*nesc + tp1*np1 + tp1*(i-2)		
+				TBDATA,4,tp*nesc + tp1*np1 + tp1*(i-2)
+				TBDATA,10,s,rh,hf1,betasc,alpha
 			*ENDIF
 		*ELSE
 			TBDATA,4,npi*tp+tp*(i-2)
+			TBDATA,10,s,rh,hf,betasc,alpha
 		*ENDIF
 		!
 		TBDATA,5,ts,t0,tinf
 		TBDATA,8,fck,nu2
-		TBDATA,10,s,rh,hf,betasc,alpha
 		TBDATA,15,ndec
 		TBDATA,16,ktime,kelemid,kkDomIntPt
 		TB,STATE,i,,500
