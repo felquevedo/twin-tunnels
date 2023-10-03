@@ -1586,10 +1586,6 @@ TYPE, tipoelem
 ALLSEL,ALL
 CMSEL,S,VA5,VOLUME
 CMSEL,A,VA6,VOLUME
-CMSEL,A,VB5,VOLUME
-CMSEL,A,VB6,VOLUME
-CMSEL,A,VC5,VOLUME
-CMSEL,A,VC6,VOLUME
 VSWEEP,ALL
 !
 ! malha mapeada
@@ -1601,12 +1597,8 @@ CMSEL,S,VA1,VOLUME
 CMSEL,A,VA2,VOLUME
 CMSEL,A,VA3,VOLUME
 CMSEL,A,VA4,VOLUME
-CMSEL,A,VB1,VOLUME
-CMSEL,A,VB2,VOLUME
 CMSEL,A,VB3,VOLUME
 CMSEL,A,VB4,VOLUME
-CMSEL,A,VC1,VOLUME
-CMSEL,A,VC2,VOLUME
 CMSEL,A,VC3,VOLUME
 CMSEL,A,VC4,VOLUME
 CMSEL,A,VD3,VOLUME
@@ -1725,6 +1717,34 @@ VSEL,R,LOC,Z,lt-l2/2,lt-l2/2-re1
 CMSEL,U,VD7,VOLUME
 CM,VE8,VOLUME
 !
+! junta nós repetidos e mantém a numeração mais baixa
+CSYS,0
+ALLSEL,ALL
+NUMMRG,KP, , , ,LOW
+NUMCMP,ALL							 
+!
+! malha sweep da região a posteriori da galeria
+MSHAPE,0,3d
+MSHKEY,1
+TYPE, tipoelem
+ALLSEL,ALL
+CMSEL,S,VB5,VOLUME
+CMSEL,A,VB6,VOLUME
+CMSEL,A,VC5,VOLUME
+CMSEL,A,VC6,VOLUME
+VSWEEP,ALL      
+!
+! malha mapeada da região a posteriori da galeria
+MSHAPE,0,3d ! 0 - hexaedro, 1 - tetraedro
+MSHKEY,1
+TYPE, tipoelem
+ALLSEL,ALL
+CMSEL,S,VB1,VOLUME
+CMSEL,A,VB2,VOLUME
+CMSEL,A,VC1,VOLUME
+CMSEL,A,VC2,VOLUME
+VSWEEP,ALL
+!	  
 ALLSEL,ALL
 CMSEL,S,VE51,VOLUME
 CMSEL,A,VE52,VOLUME
@@ -1733,6 +1753,12 @@ CMSEL,A,VE62,VOLUME
 CMSEL,A,VE7,VOLUME
 CMSEL,A,VE8,VOLUME
 !
+! junta nós repetidos e mantém a numeração mais baixa
+CSYS,0
+ALLSEL,ALL
+NUMMRG,node, , , ,LOW
+NUMCMP,ALL
+!							 
 !************************************************************!
 !****_ 		3.10 Grupos elementos do revestimento 	_****!
 !************************************************************!
