@@ -122,7 +122,7 @@ thetavp       	= 1		 ! 0 - totalmente explícito, 1 - semi-implicito (7,8)
 !	1 - Ansys_Elástico
 !	2 - Usermat_Viscoelastico_CEB-MC90
 !
-matrev 		= 2		! Tipo de material (0-SR,1-E,2-VE)
+matrev 		= 1		! Tipo de material (0-SR,1-E,2-VE)
 !
 ! Parâmetros para os modelos 1 e 2
 E2 		= 30000		! [MPa] módulo de elasticidade do revestimento (matrev=1)
@@ -650,7 +650,7 @@ VDELE,ALL,,,1
 !
 ! juntando pontos duplicados
 ALLSEL,ALL
-NUMMRG,ALL, , , ,LOW
+NUMMRG,KP, , , ,LOW
 !
 ! renumerando a geometria
 NUMCMP,KP
@@ -1567,7 +1567,7 @@ CMSEL,A,VD8,VOLU
 !
 ! juntando pontos duplicados
 ALLSEL,ALL
-NUMMRG,ALL, , , ,LOW
+NUMMRG,KP, , , ,LOW
 !
 ! renumerando a geometria
 NUMCMP,KP
