@@ -1287,7 +1287,7 @@ c     ! Modelo EP
       epsEPeq = ustatev(1)
       dlam    = ustatev(2)
       c       = ustatev(3)
-      q       = ustatev(5)
+      q       = ustatev(4)
       CALL vmove(ustatev(9), epsEP(1), ncomp)
 c     !
 c     ! Inicializa o valor da coesão
@@ -1548,9 +1548,9 @@ c     ! Guarda valores nas variáveis de estado
       ustatev(2) = dlam
       ustatev(3) = c
       ustatev(4) = q
-      ustatev(5) = epsEPeq+epsVPeq
+      ustatev(5) = f
       ustatev(6) = epsVPeq
-      ustatev(7) = dt1
+      ustatev(7) = epsEPeq+epsVPeq
       ustatev(8) = dt2
       CALL vmove(epsEP(1), ustatev(9), ncomp)
       CALL vmove(epsVP(1), ustatev(15), ncomp)
