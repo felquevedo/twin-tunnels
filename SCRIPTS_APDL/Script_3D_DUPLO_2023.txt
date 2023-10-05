@@ -1,6 +1,6 @@
 !************************************************************!
 !** PROGRAMA ANÁLISE TUNEL DUPLO (MODELO 3D) 		   **!
-!** Versão: 2023.13 					   **!
+!** Versão: 2023.14 					   **!
 !** 							   **!
 !** Objetivo: faz análise da convergência de túneis 	   **!
 !** profundos com seção circular dupla (gêmeos)		   **!
@@ -41,7 +41,7 @@ revesteface 	= 1 		! 0 - não reveste a face, 1 - reveste a face
 ! referente as galeiras transversais
 Re1 		= 2*Lp 		! [m] raio externo da galeria (deve multiplo de Lp)
 esp1		= 0.1		! [m] espessura do revestimento
-Lp1 		= 1/3*re1 	! [m] passo de escavação das galerias transversais (tem que ser multiplo de (d1/2+re))
+!Lp1 		= 1/3*re1 	! [m] passo de escavação das galerias transversais (tem que ser multiplo de (d1/2+re))
 nd01 		= 2 		! [Lp1] dimensão não suportada (deve ser multiplo de Lp1)
 npi1 		= 3 		! [un] numero de passos escavados na primeira escavação
 Vp1 		= 1 		! [m/dia] velocidade de escavação
@@ -59,14 +59,17 @@ d1 		= 3		! [m] distância entre eixos dos túneis longitudinais (d1 = 16*Re ou 
 ! distância adjacente a galeria com malha livre [Lp]
 *IF,d1,EQ,16,THEN
 	d5		= 6			! 6
+	Lp1		= 0.3387*re1
 *ELSEIF,d1,EQ,4,THEN
 	d5		= 2
+	Lp1		= 0.3*re1
 *ELSEIF,d1,EQ,3,THEN
 	d5		= 2
+	Lp1		= 0.25*re1
 *ELSEIF,d1,EQ,5,THEN
-	d5		= 2		    	
+	d5		= 2
+	Lp1		= 0.375*re1	
 *ENDIF
-
 !
 !
 !************************************************************!
@@ -107,7 +110,7 @@ Dalg		= 0		 ! 0 - módulo elastico, 1 - módulo algoritmíco (6,8)
 superficiefvp 	= 2		 ! função de escoamento: 1-DPI, 2-DPII, 3-DPIII (7,8)
 superficiegvp 	= 2		 ! função potencial: 1-DPI, 2-DPII, 3-DPIII (7,8)
 fivp          	= 0		 ! [graus] angulo de atrito (0 - VM ou TR)(7,8)
-psivp         	= 0		 ! [graus] angulo de dilatância (7,8)
+psivp         	= fivp		 ! [graus] angulo de dilatância (7,8)
 cvp 	      	= 0.6*SQRT(3)/2	 ! [MPa] coesão viscoplastica (23,7,8)
 n1	      	= 1		 ! [adm] expoente do modelo de Perzyna (23,7,8)
 eta           	= 1E7/(60*60*24) ! [dia] constante de viscosidade dinâmica (23,7,8)
@@ -265,7 +268,7 @@ flag3 		= 1 		! 1 - saida do gráfico de convergência na tela do Ansys
 !****_ 		2.8 Configurações da solução	     	_****!
 !***********************************************************! 
 !
-nr	= 2	! Tipo de Newton-Raphson
+nr	= 1	! Tipo de Newton-Raphson
 !		! 1 - INIT rigidez não é atualizada
 !		! 2 - FULL rigidez atualizada a cada iteração
 !		! 3 - UNSYM assimétrica atualizada a cada iteração
@@ -2359,7 +2362,7 @@ ALLSEL,ALL
 					!CNVTOL,U,,tolu1
 					SOLVE
 				*ENDDO
-				tad1 = npi1*tpi1+tp1*(nesc1-1)
+				tad1 = npi1*tp1+tp1*(nesc1-1)
 			*ENDIF
 			!
 		*ENDIF
