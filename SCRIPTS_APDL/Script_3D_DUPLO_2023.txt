@@ -333,7 +333,9 @@ d2 		= l2/2 			! [m] posição da galeria ao longo do eixo longitudinal
 d01		= nd01*Lp1		! [m] [m] dimensão não suportada da galeria (multiplo do passo)
 np1 		= (d1/2-re)/Lp1 	! [un] total de passos escavados nas galerias transversais
 nesc1 		= np1-npi1+1 		! [un] total de escavações ao longo do eixo das galerias transversais
-pig1 		= pig1+l2/(2*Lp)	! [un] numero de passos de escavação no túnel longitudinal no qual iniciará a escavação da galeria 1
+!pig1 		= pig1+l2/(2*Lp)	! [un] numero de passos de escavação no túnel longitudinal no qual iniciará a escavação da galeria 1
+!
+nescinig		= np/2-npi+1+re1/Lp+pig1	! [un] numero da escavação em que se inicia a galeria
 !
 m1		= Lp/nLp 		! [m] tamanho do elemento ao longo do eixo do tunel longitudinal no trecho escavado
 m9 		= m1 			! [m] tamanho dos elementos na região do tunel oposta a galeria
@@ -2220,7 +2222,7 @@ ALLSEL,ALL
 		!
 		! grupo de escavação da galeria 1
 		*IF,escavagaleria,EQ,1,THEN
-			*IF,i,EQ,pig1,THEN
+			*IF,i,EQ,nescinig,THEN
 				! escava entrada da galeria 1
 				*IF,matrev,NE,0,THEN
 					ESEL,ALL
@@ -2323,7 +2325,7 @@ ALLSEL,ALL
 		!
 		! grupo de escavação da galeria 1
 		*IF,escavagaleria,EQ,1,THEN
-			*IF,i,EQ,pig1,THEN
+			*IF,i,EQ,nescinig,THEN
 				! escava entrada da galeria 1
 				*IF,matrev,NE,0,THEN
 					ESEL,ALL
@@ -2354,7 +2356,7 @@ ALLSEL,ALL
 					!
 					ESEL,S,LIVE
 					EPLOT
-					TIME,npi*tp+tp*i+npi1*tp1+tp1*(j-1)
+					TIME,npi*tp+tp*(i-1)+npi1*tp1+tp1*(j-1)
 					DELTIM,dtp1,,dtpmax1
 					ESEL,ALL
 					SAVE
@@ -2369,7 +2371,7 @@ ALLSEL,ALL
 		!
 		ESEL,S,LIVE
 		EPLOT
-		TIME,npi*tp+tp*i+tad1
+		TIME,npi*tp+tp*(i-1)+tad1
 		DELTIM,dtp,,dtpmax
 		ESEL,ALL
 		SAVE
