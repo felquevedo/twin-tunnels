@@ -852,7 +852,7 @@ ALLSEL,ALL
 		*ENDIF
 		ESEL,S,LIVE
 		EPLOT
-		TIME,npi*tp+tp*i
+		TIME,npi*tp+tp*(i-1)
 		DELTIM,dtp,,dtpmax
 		ESEL,ALL
 		SAVE
@@ -861,7 +861,7 @@ ALLSEL,ALL
 		SOLVE
 		!
 		! Criterio de convergencia no tempo
-		!criterio(i,1) = tp*i
+		!criterio(i,1) = tp*(i-1)
 		uanterior = uatual
 		*GET,uatual,NODE,nocontrole,U,SUM
 		!deltau = uatual - uanterior
