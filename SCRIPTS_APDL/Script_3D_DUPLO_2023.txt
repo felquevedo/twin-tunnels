@@ -172,8 +172,8 @@ dtpmax 		= dtp 		! [dias] incremento máximo de tempo dentro de cada passo
 !
 ! Discretização do tempo durante os passos de escavação da galeria
 tp1 		= Lp1/(Vp1) 	! [dias] tempo para fazer um passo de escavação na galeria transversal
-dtp1		= dtp		! [dias] incremento de tempo inicial dentro de cada passo
-dtpmax1		= dtpmax		! [dias] incremento máximo de tempo dentro de cada passo
+dtp1		= 0.5*tp1	! [dias] incremento de tempo inicial dentro de cada passo
+dtpmax1		= dtp1		! [dias] incremento máximo de tempo dentro de cada passo
 !
 ! Discretização do tempo nos passos após a escavação
 tp2 		= 100 		! [dias] tempo de cada passo de solução após a escavação do túnel
