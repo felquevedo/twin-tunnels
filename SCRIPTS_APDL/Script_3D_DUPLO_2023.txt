@@ -45,7 +45,7 @@ esp1		= 0.1		! [m] espessura do revestimento
 nd01 		= 2 		! [Lp1] dimensão não suportada (deve ser multiplo de Lp1)
 npi1 		= 3 		! [un] numero de passos escavados na primeira escavação
 Vp1 		= 5 		! [m/dia] velocidade de escavação
-escavagaleria 	= 0 		! escavação das galerias: 0 - não escava, 1 - escava
+escavagaleria 	= 1 		! escavação das galerias: 0 - não escava, 1 - escava
 revestegaleria 	= 0 		! revestimento da galeria: 0 - não reveste, 1 - reveste
 pig1 		= 5 		! [un] numero de passos de escavação a partir da galeria no qual iniciará a escavação da galeria
 !
@@ -98,9 +98,9 @@ superficief	= 2		 ! função de escoamento: 1-DPI, 2-DPII, 3-DPIII (6,8)
 superficieg 	= 2		 ! função potencial: 1-DPI, 2-DPII, 3-DPIII (6,8)
 fi	    	= 0		 ! [graus] angulo de atrito (0 - VM ou TR) (6,8)
 psi	    	= fi		 ! [graus] angulo de dilatância (6,8)
-c1	    	= 1.4*SQRT(3)/2 ! [MPa] coesão inicial (2,22,23,4,6,8)
-c2	    	= 1.4*SQRT(3)/2 ! [MPa] coesão de pico (2,22,23,4,6,8)
-c3	    	= 1.4*SQRT(3)/2 ! [MPa] coesão residual (22,6,8)
+c1	    	= 1E10*1.4*SQRT(3)/2 ! [MPa] coesão inicial (2,22,23,4,6,8)
+c2	    	= 1E10*1.4*SQRT(3)/2 ! [MPa] coesão de pico (2,22,23,4,6,8)
+c3	    	= 1E10*1.4*SQRT(3)/2 ! [MPa] coesão residual (22,6,8)
 eps1	    	= 0.010		 ! [adm] deformação equiv. limite da zona 1 (22,6,8)
 eps2	    	= 0.010		 ! [adm] deformação equiv. limite da zona 2 (22,6,8)
 eps3	    	= 0.010		 ! [adm] deformação equiv. limite da zona 3 (22,6,8)
@@ -111,7 +111,7 @@ superficiefvp 	= 2		 ! função de escoamento: 1-DPI, 2-DPII, 3-DPIII (7,8)
 superficiegvp 	= 2		 ! função potencial: 1-DPI, 2-DPII, 3-DPIII (7,8)
 fivp          	= 0		 ! [graus] angulo de atrito (0 - VM ou TR)(7,8)
 psivp         	= fivp		 ! [graus] angulo de dilatância (7,8)
-cvp 	      	= 0.6*SQRT(3)/2	 ! [MPa] coesão viscoplastica (23,7,8)
+cvp 	      	= 1E10*0.6*SQRT(3)/2	 ! [MPa] coesão viscoplastica (23,7,8)
 n1	      	= 1		 ! [adm] expoente do modelo de Perzyna (23,7,8)
 eta           	= 1E7/(60*60*24) ! [dia] constante de viscosidade dinâmica (23,7,8)
 f0     	      	= 1		 ! [MPa] valor de referência (23,7,8)
@@ -125,7 +125,7 @@ thetavp       	= 1		 ! 0 - totalmente explícito, 1 - semi-implicito (7,8)
 !	1 - Ansys_Elástico
 !	2 - Usermat_Viscoelastico_CEB-MC90
 !
-matrev 		= 1		! Tipo de material (0-SR,1-E,2-VE)
+matrev 		= 0		! Tipo de material (0-SR,1-E,2-VE)
 !
 ! Parâmetros para os modelos 1 e 2
 E2 		= 30000		! [MPa] módulo de elasticidade do revestimento (matrev=1)
@@ -2367,6 +2367,13 @@ ALLSEL,ALL
 				tad1 = npi1*tp1+tp1*(nesc1-1)
 			*ENDIF
 			!
+		*ENDIF
+		!
+		! Pular um Loop
+		*IF,escavagaleria,EQ,1,THEN
+			*IF,i,EQ,nescinig,THEN
+				*CYCLE
+			*ENDIF
 		*ENDIF
 		!
 		ESEL,S,LIVE
