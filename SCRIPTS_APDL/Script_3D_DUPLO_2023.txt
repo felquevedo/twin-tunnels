@@ -1,6 +1,6 @@
 !************************************************************!
 !** PROGRAMA ANÁLISE TUNEL DUPLO (MODELO 3D) 		   **!
-!** Versão: 2023.15 					   **!
+!** Versão: 2023.16 					   **!
 !** 							   **!
 !** Objetivo: faz análise da convergência de túneis 	   **!
 !** profundos com seção circular dupla (gêmeos)		   **!
@@ -34,7 +34,7 @@ esp		= 0.1		! [m] espessura do revestimento
 Lp 		= 1/3*Re 	! [m] comprimento do passo de escavação
 nd0 		= 2 		! [Lp] número de passos que representam a dimensão não suportada
 npi 		= 3 		! [Lp] número de passos escavados na primeira escavação
-Vp 		= 5 		! [m/dia] velocidade do passo de escavação
+Vp 		= 12.5 		! [m/dia] velocidade do passo de escavação
 revested0 	= 1 		! 0 - não reveste ultimo d0+Lp, 1 - reveste ultimo d0+Lp
 revesteface 	= 1 		! 0 - não reveste a face, 1 - reveste a face
 !
@@ -44,8 +44,8 @@ esp1		= 0.1		! [m] espessura do revestimento
 !Lp1 		= 1/3*re1 	! [m] passo de escavação das galerias transversais (tem que ser multiplo de (d1/2+re))
 nd01 		= 2 		! [Lp1] dimensão não suportada (deve ser multiplo de Lp1)
 npi1 		= 3 		! [un] numero de passos escavados na primeira escavação
-Vp1 		= 5 		! [m/dia] velocidade de escavação
-escavagaleria 	= 1 		! escavação das galerias: 0 - não escava, 1 - escava
+Vp1 		= 12.5 		! [m/dia] velocidade de escavação
+escavagaleria 	= 0 		! escavação das galerias: 0 - não escava, 1 - escava
 revestegaleria 	= 0 		! revestimento da galeria: 0 - não reveste, 1 - reveste
 pig1 		= 5 		! [un] numero de passos de escavação a partir da galeria no qual iniciará a escavação da galeria
 !
@@ -90,7 +90,7 @@ d1 		= 4		! [m] distância entre eixos dos túneis longitudinais (d1 = 16*Re ou 
 matmacico	= 8
 !                                
 ! Parâmetros de todos os modelos 
-E1 		= 1000		 ! [MPa] modulo elasticidade (1,2,22,23,4,5,6,7,8)
+E1 		= 1500		 ! [MPa] modulo elasticidade (1,2,22,23,4,5,6,7,8)
 nu1 		= 0.498		 ! [adm] coeficiente de poisson (1,2,22,23,4,5,6,7,8)
 !                                
 ! Parametros para o modelo 2, 22, 6 e 8
@@ -98,9 +98,9 @@ superficief	= 2		 ! função de escoamento: 1-DPI, 2-DPII, 3-DPIII (6,8)
 superficieg 	= 2		 ! função potencial: 1-DPI, 2-DPII, 3-DPIII (6,8)
 fi	    	= 0		 ! [graus] angulo de atrito (0 - VM ou TR) (6,8)
 psi	    	= fi		 ! [graus] angulo de dilatância (6,8)
-c1	    	= 1.4*SQRT(3)/2 ! [MPa] coesão inicial (2,22,23,4,6,8)
-c2	    	= 1.4*SQRT(3)/2 ! [MPa] coesão de pico (2,22,23,4,6,8)
-c3	    	= 1.4*SQRT(3)/2 ! [MPa] coesão residual (22,6,8)
+c1	    	= 4*SQRT(3)/2 ! [MPa] coesão inicial (2,22,23,4,6,8)
+c2	    	= 4*SQRT(3)/2 ! [MPa] coesão de pico (2,22,23,4,6,8)
+c3	    	= 4*SQRT(3)/2 ! [MPa] coesão residual (22,6,8)
 eps1	    	= 0.010		 ! [adm] deformação equiv. limite da zona 1 (22,6,8)
 eps2	    	= 0.010		 ! [adm] deformação equiv. limite da zona 2 (22,6,8)
 eps3	    	= 0.010		 ! [adm] deformação equiv. limite da zona 3 (22,6,8)
@@ -111,9 +111,9 @@ superficiefvp 	= 2		 ! função de escoamento: 1-DPI, 2-DPII, 3-DPIII (7,8)
 superficiegvp 	= 2		 ! função potencial: 1-DPI, 2-DPII, 3-DPIII (7,8)
 fivp          	= 0		 ! [graus] angulo de atrito (0 - VM ou TR)(7,8)
 psivp         	= fivp		 ! [graus] angulo de dilatância (7,8)
-cvp 	      	= 0.6*SQRT(3)/2	 ! [MPa] coesão viscoplastica (23,7,8)
+cvp 	      	= 2*SQRT(3)/2	 ! [MPa] coesão viscoplastica (23,7,8)
 n1	      	= 1		 ! [adm] expoente do modelo de Perzyna (23,7,8)
-eta           	= 1E7/(60*60*24) ! [dia] constante de viscosidade dinâmica (23,7,8)
+eta           	= 4E4 ! [dia] constante de viscosidade dinâmica (23,7,8)
 f0     	      	= 1		 ! [MPa] valor de referência (23,7,8)
 thetavp       	= 1		 ! 0 - totalmente explícito, 1 - semi-implicito (7,8)
 !
@@ -157,9 +157,9 @@ E2 		= 21500*(fcm/10)**(1/3)
 !************************************************************!
 !****_ 		2.4 Condições de Contorno	  	_****!
 !************************************************************!
-prx 		= 4 		! [MPa] tensões iniciais na direção x
-pry		= 4		! [MPa] tensões iniciais na direção y
-prz		= 4		! nu1*(prx+pry)	! [MPa] tensões iniciais na direção z
+prx 		= 9 		! [MPa] tensões iniciais na direção x
+pry		= 9		! [MPa] tensões iniciais na direção y
+prz		= 9		! nu1*(prx+pry)	! [MPa] tensões iniciais na direção z
 !
 !************************************************************!
 !****_ 		2.5 Discretização do tempo nos passos	_****!
@@ -180,11 +180,11 @@ tp2 		= 100 		! [dias] tempo de cada passo de solução após a escavação do t
 np2max 		= 30 		! [un] número máximo de passos de solução após a escavação do túnel
 dtp2		= 0.5*tp2	! [dias] incremento de tempo de cada passo
 !
-tp2autots	= 0		! Especifica quando usar incremento de tempo automático
+tp2autots	= 1		! Especifica quando usar incremento de tempo automático
 !				!      -1 - O programa escolhe
 !				! 	0 - não usa incremento de tempo automático (usa apenas dtp2)
 !				!	1 - usa incremento de tempo automático (usa o dpt2min e dpt2max)
-tp2carry	= 0		! Incremento de tempo entre passos
+tp2carry	= 1		! Incremento de tempo entre passos
 !				!	0 - usa o dtp2 como o incremento de tempo em cada passo
 !				!	1 - usa o incremento de tempo do passo anterior em cada passo (se dtp2autots = 1)
 dtp2min		= tp2/2		! [dias] incremento mínimo de tempo de cada passo 
@@ -2416,10 +2416,10 @@ ALLSEL,ALL
 			criterio(np2,1) = npi*tp+tp*(nesc-1)+tad1+i*tp2
 			uanterior = uatual
 			*GET,uatual,NODE,nocontrole,U,SUM
-			deltau = uatual - uanterior
+			deltau = abs(uatual - uanterior)
 			criterio(np2,2) = deltau
 			criterio(np2,3) = uatual			   
-			*IF,deltau,LT,deltaumin,*EXIT			
+			!*IF,deltau,LT,deltaumin,*EXIT			
 		*ENDDO
 	*ENDIF	
 	FINISH
