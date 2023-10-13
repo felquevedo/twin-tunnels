@@ -1,6 +1,6 @@
 !************************************************************!
 !** SCRIPT TUNEL AXISSIMÉTRICO                             **!
-!** Versão: 2023.6                                         **!
+!** Versão: 2023.7                                         **!
 !**                                                        **!
 !** Objetivo: faz análise da convergência de tuneis        **!
 !**           profundos (PROFUNDIDADE>10R) com seção       **!
@@ -69,19 +69,19 @@ superficief	= 2		 ! função de escoamento: 1-DPI, 2-DPII, 3-DPIII (6,8)
 superficieg 	= 2		 ! função potencial: 1-DPI, 2-DPII, 3-DPIII (6,8)
 fi	    	= 0		 ! [graus] angulo de atrito (0 - VM ou TR) (6,8)
 psi	    	= fi		 ! [graus] angulo de dilatância (6,8)
-c1	    	= 1E10*1.4*SQRT(3)/2 ! [MPa] coesão inicial (2,22,23,4,6,8)
-c2	    	= 1E10*1.4*SQRT(3)/2 ! [MPa] coesão de pico (2,22,23,4,6,8)
-c3	    	= 1E10*1.4*SQRT(3)/2 ! [MPa] coesão residual (22,6,8)
+c1	    	= 1.4*SQRT(3)/2 ! [MPa] coesão inicial (2,22,23,4,6,8)
+c2	    	= 1.4*SQRT(3)/2 ! [MPa] coesão de pico (2,22,23,4,6,8)
+c3	    	= 1.4*SQRT(3)/2 ! [MPa] coesão residual (22,6,8)
 eps1	    	= 0.010		 ! [adm] deformação equiv. limite da zona 1 (22,6,8)
 eps2	    	= 0.010		 ! [adm] deformação equiv. limite da zona 2 (22,6,8)
 eps3	    	= 0.010		 ! [adm] deformação equiv. limite da zona 3 (22,6,8)
-Dalg		= 0		 ! 0 - módulo elastico, 1 - módulo algoritmíco (6,8)
+Dalg		= 1		 ! 0 - módulo elastico, 1 - módulo algoritmíco (6,8)
 !                                
 ! Parametros para o modelo 23, 7 e 8
 superficiefvp 	= 2		 ! função de escoamento: 1-DPI, 2-DPII, 3-DPIII (7,8)
 superficiegvp 	= 2		 ! função potencial: 1-DPI, 2-DPII, 3-DPIII (7,8)
 fivp          	= 0		 ! [graus] angulo de atrito (0 - VM ou TR)(7,8)
-psivp         	= 0		 ! [graus] angulo de dilatância (7,8)
+psivp         	= fivp		 ! [graus] angulo de dilatância (7,8)
 cvp 	      	= 0.6*SQRT(3)/2	 ! [MPa] coesão viscoplastica (23,7,8)
 n1	      	= 1		 ! [adm] expoente do modelo de Perzyna (23,7,8)
 eta           	= 1E7/(60*60*24) ! [dia] constante de viscosidade dinâmica (23,7,8)
@@ -96,11 +96,11 @@ thetavp       	= 1		 ! 0 - totalmente explícito, 1 - semi-implicito (7,8)
 !	1 - Ansys_Elástico
 !	2 - Usermat_Viscoelastico_CEB-MC90
 !
-matrev 		= 2		! Tipo de material (0-SR,1-E,2-VE)
+matrev 		= 1		! Tipo de material (0-SR,1-E,2-VE)
 !
 ! Parâmetros para os modelos 1 e 2
 E2 		= 30000		! [MPa] módulo de elasticidade do revestimento (matrev=1)
-nu2 		= 0.2    	! [adm] coeficiente de Poisson do revestimento (matrev=1,2)		
+nu2 		= 0.3    	! [adm] coeficiente de Poisson do revestimento (matrev=1,2)		
 !
 ! Parâmetros para o modelo 2
 fck 		= 20		! [MPa] resistência característica do concreto (2)
@@ -127,7 +127,7 @@ E2 		= 21500*(fcm/10)**(1/3)
 !************************************************************!
 !****_ 		2.4 Condições de Contorno	  	_****!
 !************************************************************!
-pr		= 3		! [MPa] tensões iniciais e pressão hidrostáticas
+pr		= 4		! [MPa] tensões iniciais e pressão hidrostáticas
 !
 !************************************************************!
 !****_ 		2.5 Discretização do tempo nos passos	_****!
@@ -140,7 +140,7 @@ dtpmax 		= dtp		! [dias] incremento de tempo máximo
 !
 ! Discretização do tempo nos passos após a escavação
 tp2		= 100		! [dias] tempo de cada passo de solução após a escavação do túnel
-np2max		= 25		! [un] número máximo de passos de solução após a escavação do túnel
+np2max		= 30		! [un] número máximo de passos de solução após a escavação do túnel
 dtp2		= 0.5*tp2	! [dias] incremento de tempo de cada passo
 !
 tp2autots	= 0		! Especifica quando usar incremento de tempo automático
@@ -200,9 +200,12 @@ tolu	= 1e-4	! tolerância para o incremento de deslocamento (padrão 0.05)
 tolf2	= 1e-6	! tolerância para o resíduo
 tolu2	= 1e-4	! tolerância para o incremento de deslocamento
 !
+! Tolerância para o incremento de deformação plástica equivalente
+plslimit = 0.15
+! 
 psc	= 1	! 1 - Ativa, 0 - desativa a opção de paralelização SMP
 nlg	= 0	! 1 - Ativa, 0 - desativa a não lineariedade geométrica
-soleq	= 1	! 1 - calcula o equilibrio do maciço antes de iniciar
+soleq	= 0	! 1 - calcula o equilibrio do maciço antes de iniciar
 !
 !************************************************************!
 !****_ 		2.9 Titulo e nome dos arquivos  	_****!
@@ -682,6 +685,9 @@ CSYS,0
 	PSCONTROL,ALL,ON
 *ENDIF
 !
+! Critério do incremento de deformação equivalente plástica
+CUTCONTROL,PLSLIMIT,plslimit
+!
 ! Gravação da saida de resultados
 ALLSEL,ALL
 OUTRES,ESOL,LAST
@@ -712,7 +718,7 @@ ALLSEL,ALL
 	TIME,1
 	DELTIM,1,,1
 	!CNVTOL,F,,tolf,,0.01
-	!CNVTOL,U,,tolu,,0.01
+	!CNVTOL,U,,tolu
 	SOLVE
 	FINISH
 	!
@@ -790,7 +796,7 @@ ALLSEL,ALL
 	ESEL,ALL
 	SAVE
 	!CNVTOL,F,,tolf,,0.01
-	!CNVTOL,U,,tolu,,0.01
+	!CNVTOL,U,,tolu
 	SOLVE
 	FINISH
 *ELSE
@@ -808,7 +814,7 @@ ALLSEL,ALL
 	DELTIM,dtp,,dtpmax
 	ESEL,ALL
 	!CNVTOL,F,,tolf,,0.01
-	!CNVTOL,U,,tolu,,0.01
+	!CNVTOL,U,,tolu
 	SOLVE
 	SAVE
 	FINISH
@@ -857,7 +863,7 @@ ALLSEL,ALL
 		ESEL,ALL
 		SAVE
 		!CNVTOL,F,,tolf,,0.01
-		!CNVTOL,U,,tolu,,0.01
+		!CNVTOL,U,,tolu
 		SOLVE
 		!
 		! Criterio de convergencia no tempo
@@ -877,7 +883,7 @@ ALLSEL,ALL
 			DELTIM,dtp2,dtp2min,dtp2max,tp2carry
 			SAVE
 			!CNVTOL,F,,tolf2,,0.01
-			!CNVTOL,U,,tolu2,,0.01
+			!CNVTOL,U,,tolu2
 			SOLVE
 			!
 			! Criterio de parada no longo prazo
