@@ -22,7 +22,7 @@ def graficar(arquivo,                   # nome do arquivo de leitura
              ymin,ymax,                 # intervalo eixo y
              ncoluna,                   # numero da coluna (dados em y)
              lblcoluna,                 # legenda da coluna
-             cor,tamanho,ordem,alpha,   # formatacao
+             cor,tamanho,ordem,alpha,estilo,   # formatacao
              invertx,                   # inverter eixo x
              suavizar,filterx1,filterx2,wl,poly, # parametros do filtro de suavização
              figura):
@@ -50,7 +50,12 @@ def graficar(arquivo,                   # nome do arquivo de leitura
             y[filterx1:filterx2] = savgol_filter(data[filterx1:filterx2,ncoluna],wl,poly, mode = 'interp')
         
     # Plotando os dados
-    plt.plot(x,y,color = cor,zorder = ordem, lw = tamanho, alpha = alpha, label = lblcoluna)
+    plt.plot(x,y,color = cor,
+             zorder = ordem, 
+             linestyle=estilo, 
+             lw = tamanho, 
+             alpha = alpha, 
+             label = lblcoluna)
 
     # Formatando os eixos
     #plt.axvline(x0,color = 'k', label = lblx0, linestyle = '--')
@@ -75,8 +80,14 @@ def graficar(arquivo,                   # nome do arquivo de leitura
     # Salvando em arquivo    
     plt.savefig('profile'+ str(figura) + '.pdf')
 
+
+""" ********************************************
+CONVERGENCE PROFILES - MODEL EP_CRE
+******************************************** """ 
+
 # Formatação do gráfico
-titulo      = 'Convergence Profiles'
+figura      = 1
+titulo      = 'Convergence Profiles - model EP_CRE'
 eixox       = r'$y/R_e$'  
 eixoy       = r'$U=-u(R_e,\theta = 90^\circ)/R_{e}$ [\%]'
 ymin        = 0
@@ -93,82 +104,335 @@ wl          = 30
 poly        = 10
 
 
-figura      = 1
-arquivo     = 'EP_CRE_CG_D1_4RE_3D.txt'
-ncoluna     = 81
-lblcoluna   = 'EP_CRE - $d_1 = 4R_e$'
-cor         = 'b'
-tamanho     = 3
-ordem       = 1
-alpha       = 1
-graficar(arquivo,titulo,eixox,eixoy,
-         xmin,xmax,ymin,ymax,
-         ncoluna,lblcoluna,
-         cor,tamanho,ordem,alpha,
-         invertx,
-         suavizar,filterx1,filterx2,wl,poly,
-         figura)
-
-figura      = 1
-arquivo     = 'EPVP_CRVE_CG_D1_4RE_3D.txt'
-ncoluna     = 111
-lblcoluna   = 'EPVP_CRVE - $d_1 = 4R_e$'
-cor         = 'pink'
-tamanho     = 3
-ordem       = 1
-alpha       = 1
-graficar(arquivo,titulo,eixox,eixoy,
-         xmin,xmax,ymin,ymax,
-         ncoluna,lblcoluna,
-         cor,tamanho,ordem,alpha,
-         invertx,
-         suavizar,filterx1,filterx2,wl,poly,
-         figura)
-
-figura      = 1
-arquivo     = 'EP_CRE_CG_D1_8RE_3D.txt'
-ncoluna     = 90
-lblcoluna   = 'EP_CRE - $d_1 = 8R_e$'
-cor         = 'g'
-tamanho     = 3
-ordem       = 1
-alpha       = 1
-graficar(arquivo,titulo,eixox,eixoy,
-          xmin,xmax,ymin,ymax,
-          ncoluna,lblcoluna,
-          cor,tamanho,ordem,alpha,
-          invertx,
-          suavizar,filterx1,filterx2,wl,poly,
-          figura)
-
-figura      = 1
-arquivo     = 'EP_CRE_CG_D1_16RE_3D.txt'
-ncoluna     = 107
-lblcoluna   = 'EP_CRE - $d_1 = 16R_e$'
-cor         = 'r'
-tamanho     = 3
-ordem       = 1
-alpha       = 1
-graficar(arquivo,titulo,eixox,eixoy,
-          xmin,xmax,ymin,ymax,
-          ncoluna,lblcoluna,
-          cor,tamanho,ordem,alpha,
-          invertx,
-          suavizar,filterx1,filterx2,wl,poly,
-          figura)
-
-figura      = 1
-arquivo     = 'EP-CRE-SG-D1-INF-AXI.txt'
+arquivo     = 'EP-CRE-SG-D1-INF-AXI\convergencias.txt'
 ncoluna     = 79
-lblcoluna   = 'EP_CRE - AXI'
-cor         = 'gray'
-tamanho     = 3
-ordem       = 1
+lblcoluna   = '$d_1 = \infty$ and without gallery'
+cor         = 'b'
+tamanho     = 1.5
+ordem       = 4
 alpha       = 1
+estilo      = 'dashed'
 graficar(arquivo,titulo,eixox,eixoy,
           xmin,xmax,ymin,ymax,
           ncoluna,lblcoluna,
-          cor,tamanho,ordem,alpha,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+arquivo     = 'EP_CRE_CG_D1_16RE_3D\convergencias_90.txt'
+ncoluna     = 107
+lblcoluna   = '$d_1 = 16R_e$'
+cor         = 'r'
+tamanho     = 2
+ordem       = 3
+alpha       = 0.3
+estilo      = 'solid'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+arquivo     = 'EP_CRE_CG_D1_8RE_3D\convergencias_90.txt'
+ncoluna     = 90
+lblcoluna   = ' $d_1 = 8R_e$'
+cor         = 'r'
+tamanho     = 2
+ordem       = 2
+alpha       = 0.6
+estilo      = 'solid'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+arquivo     = 'EP_CRE_CG_D1_4RE_3D\convergencias_90.txt'
+ncoluna     = 81
+lblcoluna   = '$d_1 = 4R_e$'
+cor         = 'r'
+tamanho     = 2
+ordem       = 1
+alpha       = 1
+estilo      = 'solid'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+
+# Colocar uma linha vertical
+x0          = 80*1/3
+lblx0       = 'Face'
+plt.axvline(x0,color = 'k', label = lblx0, linestyle = '--')
+
+
+
+""" ********************************************
+CONVERGENCE PROFILES - MODEL EPVP_CRE
+******************************************** """ 
+
+# Formatação do gráfico
+figura      = 2
+titulo      = 'Convergence Profiles - model EPVP_CRE'
+eixox       = r'$y/R_e$'  
+eixoy       = r'$U=-u(R_e,\theta = 90^\circ)/R_{e}$ [\%]'
+ymin        = 0
+ymax        = 1.5
+xmin        = 5
+xmax        = 35
+invertx     = True
+suavizar    = True
+
+# parametros para o filtro de suavização
+filterx1    = 35
+filterx2    = 90
+wl          = 30
+poly        = 10
+
+
+arquivo     = 'EPVP-CRE-SG-D1-INF-AXI\convergencias.txt'
+ncoluna     = 109
+lblcoluna   = '$d_1 = \infty$ and without gallery'
+cor         = 'b'
+tamanho     = 1.5
+ordem       = 4
+alpha       = 1
+estilo      = 'dashed'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+arquivo     = 'EPVP_CRE_CG_D1_16RE_3D\convergencias_90.txt'
+ncoluna     = 137
+lblcoluna   = '$d_1 = 16R_e$'
+cor         = 'r'
+tamanho     = 2
+ordem       = 3
+alpha       = 0.3
+estilo      = 'solid'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+arquivo     = 'EPVP_CRE_CG_D1_8RE_3D\convergencias_90.txt'
+ncoluna     = 120
+lblcoluna   = ' $d_1 = 8R_e$'
+cor         = 'r'
+tamanho     = 2
+ordem       = 2
+alpha       = 0.6
+estilo      = 'solid'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+arquivo     = 'EPVP_CRE_CG_D1_4RE_3D\convergencias_90.txt'
+ncoluna     = 111
+lblcoluna   = '$d_1 = 4R_e$'
+cor         = 'r'
+tamanho     = 2
+ordem       = 1
+alpha       = 1
+estilo      = 'solid'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+
+# Colocar uma linha vertical
+x0          = 80*1/3
+lblx0       = 'Face'
+plt.axvline(x0,color = 'k', label = lblx0, linestyle = '--')
+
+
+""" ********************************************
+CONVERGENCE PROFILES - MODEL EPVP_CRVE
+******************************************** """ 
+
+# Formatação do gráfico
+figura      = 3
+titulo      = 'Convergence Profiles - model EPVP_CRVE'
+eixox       = r'$y/R_e$'  
+eixoy       = r'$U=-u(R_e,\theta = 90^\circ)/R_{e}$ [\%]'
+ymin        = 0
+ymax        = 1.5
+xmin        = 5
+xmax        = 35
+invertx     = True
+suavizar    = True
+
+# parametros para o filtro de suavização
+filterx1    = 35
+filterx2    = 90
+wl          = 30
+poly        = 10
+
+
+arquivo     = 'EPVP-CRVE-SG-D1-INF-AXI\convergencias.txt'
+ncoluna     = 109
+lblcoluna   = '$d_1 = \infty$ and without gallery'
+cor         = 'b'
+tamanho     = 1.5
+ordem       = 4
+alpha       = 1
+estilo      = 'dashed'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+arquivo     = 'EPVP_CRVE_CG_D1_16RE_3D\convergencias_90.txt'
+ncoluna     = 137
+lblcoluna   = '$d_1 = 16R_e$'
+cor         = 'r'
+tamanho     = 2
+ordem       = 3
+alpha       = 0.3
+estilo      = 'solid'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+arquivo     = 'EPVP_CRVE_CG_D1_8RE_3D\convergencias_90.txt'
+ncoluna     = 120
+lblcoluna   = ' $d_1 = 8R_e$'
+cor         = 'r'
+tamanho     = 2
+ordem       = 2
+alpha       = 0.6
+estilo      = 'solid'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+arquivo     = 'EPVP_CRVE_CG_D1_4RE_3D\convergencias_90.txt'
+ncoluna     = 111
+lblcoluna   = '$d_1 = 4R_e$'
+cor         = 'r'
+tamanho     = 2
+ordem       = 1
+alpha       = 1
+estilo      = 'solid'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+
+# Colocar uma linha vertical
+x0          = 80*1/3
+lblx0       = 'Face'
+plt.axvline(x0,color = 'k', label = lblx0, linestyle = '--')
+
+
+
+
+""" ********************************************
+CONVERGENCE PROFILES - MODEL D1=4Re
+******************************************** """ 
+
+# Formatação do gráfico
+figura      = 4
+titulo      = 'Convergence Profiles - model $d_1=4R_e$'
+eixox       = r'$y/R_e$'  
+eixoy       = r'$U=-u(R_e,\theta = 90^\circ)/R_{e}$ [\%]'
+ymin        = 0
+ymax        = 1.5
+xmin        = 5
+xmax        = 35
+invertx     = True
+suavizar    = True
+
+# parametros para o filtro de suavização
+filterx1    = 35
+filterx2    = 90
+wl          = 30
+poly        = 10
+
+
+arquivo     = 'EP_CRE_CG_D1_4RE_3D\convergencias_90.txt'
+ncoluna     = 81
+lblcoluna   = 'EP_CRE'
+cor         = 'r'
+tamanho     = 2
+ordem       = 3
+alpha       = 0.3
+estilo      = 'solid'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+arquivo     = 'EPVP_CRE_CG_D1_4RE_3D\convergencias_90.txt'
+ncoluna     = 111
+lblcoluna   = 'EPVP_CRE'
+cor         = 'r'
+tamanho     = 2
+ordem       = 3
+alpha       = 0.6
+estilo      = 'solid'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+arquivo     = 'EPVP_CRVE_CG_D1_4RE_3D\convergencias_90.txt'
+ncoluna     = 111
+lblcoluna   = 'EPVP_CRVE'
+cor         = 'r'
+tamanho     = 2
+ordem       = 3
+alpha       = 0.9
+estilo      = 'solid'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
           invertx,
           suavizar,filterx1,filterx2,wl,poly,
           figura)
@@ -179,57 +443,316 @@ lblx0       = 'Face'
 plt.axvline(x0,color = 'k', label = lblx0, linestyle = '--')
 
 
-#GALERIA
-
+""" ********************************************
+CONVERGENCE PROFILES - MODEL D1=8Re
+******************************************** """ 
 
 # Formatação do gráfico
-titulo      = 'Gallery Convergence Profiles'
+figura      = 5
+titulo      = 'Convergence Profiles - model $d_1=8R_e$'
+eixox       = r'$y/R_e$'  
+eixoy       = r'$U=-u(R_e,\theta = 90^\circ)/R_{e}$ [\%]'
+ymin        = 0
+ymax        = 1.5
+xmin        = 5
+xmax        = 35
+invertx     = True
+suavizar    = True
+
+# parametros para o filtro de suavização
+filterx1    = 35
+filterx2    = 90
+wl          = 30
+poly        = 10
+
+
+arquivo     = 'EP_CRE_CG_D1_8RE_3D\convergencias_90.txt'
+ncoluna     = 90
+lblcoluna   = 'EP_CRE'
+cor         = 'r'
+tamanho     = 2
+ordem       = 3
+alpha       = 0.3
+estilo      = 'solid'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+arquivo     = 'EPVP_CRE_CG_D1_8RE_3D\convergencias_90.txt'
+ncoluna     = 120
+lblcoluna   = 'EPVP_CRE'
+cor         = 'r'
+tamanho     = 2
+ordem       = 3
+alpha       = 0.6
+estilo      = 'solid'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+arquivo     = 'EPVP_CRVE_CG_D1_8RE_3D\convergencias_90.txt'
+ncoluna     = 120
+lblcoluna   = 'EPVP_CRVE'
+cor         = 'r'
+tamanho     = 2
+ordem       = 3
+alpha       = 0.9
+estilo      = 'solid'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+# Colocar uma linha vertical
+x0          = 80*1/3
+lblx0       = 'Face'
+plt.axvline(x0,color = 'k', label = lblx0, linestyle = '--')
+
+
+""" ********************************************
+CONVERGENCE PROFILES - MODEL D1=16Re
+******************************************** """ 
+
+# Formatação do gráfico
+figura      = 6
+titulo      = 'Convergence Profiles - model $d_1=16R_e$'
+eixox       = r'$y/R_e$'  
+eixoy       = r'$U=-u(R_e,\theta = 90^\circ)/R_{e}$ [\%]'
+ymin        = 0
+ymax        = 1.5
+xmin        = 5
+xmax        = 35
+invertx     = True
+suavizar    = True
+
+# parametros para o filtro de suavização
+filterx1    = 35
+filterx2    = 90
+wl          = 30
+poly        = 10
+
+
+arquivo     = 'EP_CRE_CG_D1_16RE_3D\convergencias_90.txt'
+ncoluna     = 107
+lblcoluna   = 'EP_CRE'
+cor         = 'r'
+tamanho     = 2
+ordem       = 3
+alpha       = 0.3
+estilo      = 'solid'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+arquivo     = 'EPVP_CRE_CG_D1_16RE_3D\convergencias_90.txt'
+ncoluna     = 137
+lblcoluna   = 'EPVP_CRE'
+cor         = 'r'
+tamanho     = 2
+ordem       = 3
+alpha       = 0.6
+estilo      = 'solid'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+arquivo     = 'EPVP_CRVE_CG_D1_16RE_3D\convergencias_90.txt'
+ncoluna     = 137
+lblcoluna   = 'EPVP_CRVE'
+cor         = 'r'
+tamanho     = 2
+ordem       = 3
+alpha       = 0.9
+estilo      = 'solid'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+# Colocar uma linha vertical
+x0          = 80*1/3
+lblx0       = 'Face'
+plt.axvline(x0,color = 'k', label = lblx0, linestyle = '--')
+
+
+""" ********************************************
+CONVERGENCE PROFILES - GALLERY MODEL D1=16Re
+******************************************** """ 
+
+# Formatação do gráfico
+figura      = 7
+titulo      = 'Gallery Convergence Profiles $d_1 = 16R_e$'
 eixox       = r'$y/R_{e1}$'  
 eixoy       = r'$U{1}=-u{1}(R_{e1},\theta = 90^\circ)/R_{e1}$ [%]'
 ymin        = 0.75
-ymax        = 1.9
+ymax        = 2
 xmin        = 0
 xmax        = 12
 invertx     = False
+suavizar    = True
+
+# parametros para o filtro de suavização
+filterx1    = 0
+filterx2    = 80
+wl          = 30
+poly        = 10
+
+arquivo     = 'EP_CRE_CG_D1_16RE_3D\convergencias1_90.txt'
+ncoluna     = 107
+lblcoluna   = 'EP_CRE'
+cor         = 'r'
+tamanho     = 2
+ordem       = 3
+alpha       = 0.3
+estilo      = 'solid'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+arquivo     = 'EPVP_CRE_CG_D1_16RE_3D\convergencias1_90.txt'
+ncoluna     = 137
+lblcoluna   = 'EPVP_CRE'
+cor         = 'r'
+tamanho     = 2
+ordem       = 3
+alpha       = 0.6
+estilo      = 'solid'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+arquivo     = 'EPVP_CRVE_CG_D1_16RE_3D\convergencias1_90.txt'
+ncoluna     = 137
+lblcoluna   = 'EPVP_CRVE'
+cor         = 'r'
+tamanho     = 2
+ordem       = 3
+alpha       = 0.9
+estilo      = 'solid'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+""" ********************************************
+CONVERGENCE PROFILES - GALLERY MODEL D1=8Re
+******************************************** """ 
+
+# Formatação do gráfico
+figura      = 8
+titulo      = 'Gallery Convergence Profiles $d_1 = 8R_e$'
+eixox       = r'$y/R_{e1}$'  
+eixoy       = r'$U{1}=-u{1}(R_{e1},\theta = 90^\circ)/R_{e1}$ [%]'
+ymin        = 0.75
+ymax        = 2
+xmin        = 0
+xmax        = 12
+invertx     = False
+suavizar    = True
 
 # parametros para o filtro de suavização
 filterx1    = 0
 filterx2    = 80
 wl          = 20
-poly        = 6
+poly        = 5
 
-
-figura      = 2
-arquivo     = 'EPVP_CRVE_CG_D1_16RE_3D_GALERIA.txt'
-ncoluna     = 79
-lblcoluna   = 'EPVP_CRVE - $d_1 = 16R_e$'
+arquivo     = 'EP_CRE_CG_D1_8RE_3D\convergencias1_90.txt'
+ncoluna     = 90
+lblcoluna   = 'EP_CRE'
 cor         = 'r'
-tamanho     = 3
-ordem       = 1
-alpha       = 1
+tamanho     = 2
+ordem       = 3
+alpha       = 0.3
+estilo      = 'solid'
 graficar(arquivo,titulo,eixox,eixoy,
           xmin,xmax,ymin,ymax,
           ncoluna,lblcoluna,
-          cor,tamanho,ordem,alpha,
+          cor,tamanho,ordem,alpha,estilo,
           invertx,
           suavizar,filterx1,filterx2,wl,poly,
           figura)
 
-figura      = 2
-arquivo     = 'EPVP_CRVE_CG_D1_8RE_3D_GALERIA.txt'
-ncoluna     = 79
-lblcoluna   = 'EPVP_CRVE - $d_1 = 8R_e$'
-cor         = 'green'
-tamanho     = 3
-ordem       = 1
-alpha       = 1
+arquivo     = 'EPVP_CRE_CG_D1_8RE_3D\convergencias1_90.txt'
+ncoluna     = 120
+lblcoluna   = 'EPVP_CRE'
+cor         = 'r'
+tamanho     = 2
+ordem       = 3
+alpha       = 0.6
+estilo      = 'solid'
 graficar(arquivo,titulo,eixox,eixoy,
           xmin,xmax,ymin,ymax,
           ncoluna,lblcoluna,
-          cor,tamanho,ordem,alpha,
+          cor,tamanho,ordem,alpha,estilo,
           invertx,
           suavizar,filterx1,filterx2,wl,poly,
           figura)
+
+arquivo     = 'EPVP_CRVE_CG_D1_8RE_3D\convergencias1_90.txt'
+ncoluna     = 120
+lblcoluna   = 'EPVP_CRVE'
+cor         = 'r'
+tamanho     = 2
+ordem       = 3
+alpha       = 0.9
+estilo      = 'solid'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+
+""" ********************************************
+CONVERGENCE PROFILES - GALLERY MODEL D1=4Re
+******************************************** """ 
+
+# Formatação do gráfico
+figura      = 9
+titulo      = 'Gallery Convergence Profiles $d_1 = 4R_e$'
+eixox       = r'$y/R_{e1}$'  
+eixoy       = r'$U{1}=-u{1}(R_{e1},\theta = 90^\circ)/R_{e1}$ [%]'
+ymin        = 0.75
+ymax        = 2
+xmin        = 0
+xmax        = 12
+invertx     = False
+suavizar    = True
 
 # parametros para o filtro de suavização
 filterx1    = 0
@@ -237,18 +760,194 @@ filterx2    = 80
 wl          = 10
 poly        = 6
 
-figura      = 2
-arquivo     = 'EPVP_CRVE_CG_D1_4RE_3D_GALERIA.txt'
-ncoluna     = 79
-lblcoluna   = 'EPVP_CRVE - $d_1 = 4R_e$'
-cor         = 'b'
-tamanho     = 3
-ordem       = 1
-alpha       = 1
+arquivo     = 'EP_CRE_CG_D1_4RE_3D\convergencias1_90.txt'
+ncoluna     = 81
+lblcoluna   = 'EP_CRE'
+cor         = 'r'
+tamanho     = 2
+ordem       = 3
+alpha       = 0.3
+estilo      = 'solid'
 graficar(arquivo,titulo,eixox,eixoy,
           xmin,xmax,ymin,ymax,
           ncoluna,lblcoluna,
-          cor,tamanho,ordem,alpha,
+          cor,tamanho,ordem,alpha,estilo,
           invertx,
           suavizar,filterx1,filterx2,wl,poly,
           figura)
+
+arquivo     = 'EPVP_CRE_CG_D1_4RE_3D\convergencias1_90.txt'
+ncoluna     = 111
+lblcoluna   = 'EPVP_CRE'
+cor         = 'r'
+tamanho     = 2
+ordem       = 3
+alpha       = 0.6
+estilo      = 'solid'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+arquivo     = 'EPVP_CRVE_CG_D1_4RE_3D\convergencias1_90.txt'
+ncoluna     = 111
+lblcoluna   = 'EPVP_CRVE'
+cor         = 'r'
+tamanho     = 2
+ordem       = 3
+alpha       = 0.9
+estilo      = 'solid'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+# figura      = 1
+# arquivo     = 'EPVP_CRVE_CG_D1_4RE_3D\convergencias_90.txt'
+# ncoluna     = 111
+# lblcoluna   = 'EPVP_CRVE - $d_1 = 4R_e$'
+# cor         = 'pink'
+# tamanho     = 3
+# ordem       = 1
+# alpha       = 1
+# graficar(arquivo,titulo,eixox,eixoy,
+#          xmin,xmax,ymin,ymax,
+#          ncoluna,lblcoluna,
+#          cor,tamanho,ordem,alpha,
+#          invertx,
+#          suavizar,filterx1,filterx2,wl,poly,
+#          figura)
+
+# figura      = 1
+# arquivo     = 'EP_CRE_CG_D1_8RE_3D\convergencias_90.txt'
+# ncoluna     = 90
+# lblcoluna   = 'EP_CRE - $d_1 = 8R_e$'
+# cor         = 'g'
+# tamanho     = 3
+# ordem       = 1
+# alpha       = 1
+# graficar(arquivo,titulo,eixox,eixoy,
+#           xmin,xmax,ymin,ymax,
+#           ncoluna,lblcoluna,
+#           cor,tamanho,ordem,alpha,
+#           invertx,
+#           suavizar,filterx1,filterx2,wl,poly,
+#           figura)
+
+# figura      = 1
+# arquivo     = 'EP_CRE_CG_D1_16RE_3D\convergencias_90.txt'
+# ncoluna     = 107
+# lblcoluna   = 'EP_CRE - $d_1 = 16R_e$'
+# cor         = 'r'
+# tamanho     = 3
+# ordem       = 1
+# alpha       = 1
+# graficar(arquivo,titulo,eixox,eixoy,
+#           xmin,xmax,ymin,ymax,
+#           ncoluna,lblcoluna,
+#           cor,tamanho,ordem,alpha,
+#           invertx,
+#           suavizar,filterx1,filterx2,wl,poly,
+#           figura)
+
+# figura      = 1
+# arquivo     = 'EP-CRE-SG-D1-INF-AXI\convergencias.txt'
+# ncoluna     = 79
+# lblcoluna   = 'EP_CRE - AXI'
+# cor         = 'gray'
+# tamanho     = 3
+# ordem       = 1
+# alpha       = 1
+# graficar(arquivo,titulo,eixox,eixoy,
+#           xmin,xmax,ymin,ymax,
+#           ncoluna,lblcoluna,
+#           cor,tamanho,ordem,alpha,
+#           invertx,
+#           suavizar,filterx1,filterx2,wl,poly,
+#           figura)
+
+# # Colocar uma linha vertical
+# x0          = 80*1/3
+# lblx0       = 'Face'
+# plt.axvline(x0,color = 'k', label = lblx0, linestyle = '--')
+
+
+# #GALERIA
+
+
+# # Formatação do gráfico
+# titulo      = 'Gallery Convergence Profiles'
+# eixox       = r'$y/R_{e1}$'  
+# eixoy       = r'$U{1}=-u{1}(R_{e1},\theta = 90^\circ)/R_{e1}$ [%]'
+# ymin        = 0.75
+# ymax        = 1.9
+# xmin        = 0
+# xmax        = 12
+# invertx     = False
+
+# # parametros para o filtro de suavização
+# filterx1    = 0
+# filterx2    = 80
+# wl          = 20
+# poly        = 6
+
+
+# figura      = 2
+# arquivo     = 'EPVP_CRVE_CG_D1_16RE_3D\convergencias1_90.txt'
+# ncoluna     = 79
+# lblcoluna   = 'EPVP_CRVE - $d_1 = 16R_e$'
+# cor         = 'r'
+# tamanho     = 3
+# ordem       = 1
+# alpha       = 1
+# graficar(arquivo,titulo,eixox,eixoy,
+#           xmin,xmax,ymin,ymax,
+#           ncoluna,lblcoluna,
+#           cor,tamanho,ordem,alpha,
+#           invertx,
+#           suavizar,filterx1,filterx2,wl,poly,
+#           figura)
+
+# figura      = 2
+# arquivo     = 'EPVP_CRVE_CG_D1_8RE_3D\convergencias1_90.txt'
+# ncoluna     = 79
+# lblcoluna   = 'EPVP_CRVE - $d_1 = 8R_e$'
+# cor         = 'green'
+# tamanho     = 3
+# ordem       = 1
+# alpha       = 1
+# graficar(arquivo,titulo,eixox,eixoy,
+#           xmin,xmax,ymin,ymax,
+#           ncoluna,lblcoluna,
+#           cor,tamanho,ordem,alpha,
+#           invertx,
+#           suavizar,filterx1,filterx2,wl,poly,
+#           figura)
+
+# # parametros para o filtro de suavização
+# filterx1    = 0
+# filterx2    = 80
+# wl          = 10
+# poly        = 6
+
+# figura      = 2
+# arquivo     = 'EPVP_CRVE_CG_D1_4RE_3D\convergencias1_90.txt'
+# ncoluna     = 79
+# lblcoluna   = 'EPVP_CRVE - $d_1 = 4R_e$'
+# cor         = 'b'
+# tamanho     = 3
+# ordem       = 1
+# alpha       = 1
+# graficar(arquivo,titulo,eixox,eixoy,
+#           xmin,xmax,ymin,ymax,
+#           ncoluna,lblcoluna,
+#           cor,tamanho,ordem,alpha,
+#           invertx,
+#           suavizar,filterx1,filterx2,wl,poly,
+#           figura)
