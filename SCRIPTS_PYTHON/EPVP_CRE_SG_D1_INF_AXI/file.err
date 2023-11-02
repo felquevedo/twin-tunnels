@@ -1,0 +1,34 @@
+/COM,ANSYS RELEASE 2021 R2           BUILD 21.2      UP20210601       19:48:04
+
+ *** WARNING ***                         CP =       0.266   TIME= 19:48:06
+ Shape testing revealed that 6 of the 30 new or modified elements        
+ violate shape warning limits.  To review test results, please see the   
+ output file or issue the CHECK command.                                 
+
+ *** WARNING ***                         CP =       0.828   TIME= 19:48:06
+ Overlapping elements will be generated due to zero node increment.      
+
+ *** WARNING ***                         CP =       2.578   TIME= 19:48:06
+ Overlapping elements will be generated due to zero node increment.      
+
+ *** WARNING ***                         CP =       2.828   TIME= 19:48:06
+ Previous testing revealed that 6 of the 2828 selected elements violate  
+ shape warning limits.  To review warning messages, please see the       
+ output or error file, or issue the CHECK command.                       
+
+ *** WARNING ***                         CP =       3.078   TIME= 19:48:06
+ ANSYS,INC.-supplied version of coding for USERCK has been used.         
+
+ *** WARNING ***                         CP =      22.297   TIME= 19:48:07
+ Both solid model and finite element model boundary conditions have been 
+ applied to this model.  As solid loads are transferred to the nodes or  
+ elements, they can overwrite directly applied loads.                    
+
+ *** WARNING ***                         CP =      22.297   TIME= 19:48:07
+ Both solid model and finite element model boundary conditions have been 
+ applied to this model.  As solid loads are transferred to the nodes or  
+ elements, they can overwrite directly applied loads.                    
+
+ *** WARNING ***                         CP =    1031.328   TIME= 19:49:11
+ The view for graph plots is currently NOT changeable.                   
+  To enable graph view manipulation, issue /GROPTS,VIEW,1.               

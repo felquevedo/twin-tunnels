@@ -6,15 +6,14 @@ Versão: 2023.1
 Situação : Teste (11/07/2020) 
 ******************************************** """ 
 
-# Importar bibliotecas
+#%% 1. IMPORTAR BIBLIOTECAS
+
 import pandas as pd                   # importa o pacote para manmipular tabelas 
 import matplotlib.pyplot as plt       # importa o módulo para plotagem
-import numpy as np                    # importa o pacote para operar arrays
-from matplotlib import rc             # importa a função com os parâmetros de configuração da plotagem
-from scipy.interpolate import interp1d
-from scipy.signal import savgol_filter
-#
-#
+from scipy.signal import savgol_filter # importa filtro
+
+#%% 2. FUNÇÃO GRAFICAR
+
 def graficar(arquivo,                   # nome do arquivo de leitura
              titulo,                    # titulo do gráfico
              eixox,eixoy,               # nome dos eixos x e y
@@ -32,11 +31,11 @@ def graficar(arquivo,                   # nome do arquivo de leitura
     data = pd.read_csv(arquivo,delim_whitespace= True).values
 
     # Definindo as dimensões do layout da figura
-    plt.figure(figura,figsize = (9,5))
+    fig = plt.figure(figura,figsize = (9,5))
 
     # Eixo x
     if invertx == True:
-        x = -(data[:,1]-max(data[:,1]))
+        x = -(data[:,1]-max(data[:,1]))-x0
     elif invertx == False:
         x =  data[:,1]
     #x = data[:,1]
@@ -60,7 +59,7 @@ def graficar(arquivo,                   # nome do arquivo de leitura
     # Formatando os eixos
     #plt.axvline(x0,color = 'k', label = lblx0, linestyle = '--')
     plt.ylim([ymin, ymax])
-    plt.xlim([xmin, xmax])
+    plt.xlim([xmin-x0, xmax-x0])
     plt.ylabel(eixoy)
     plt.xlabel(eixox)
     plt.legend()
@@ -73,7 +72,7 @@ def graficar(arquivo,                   # nome do arquivo de leitura
     
     # Inserir linha vertical em x0
     if inserirx0 == True:
-        plt.axvline(x0,color = 'k', linestyle = '--')
+        plt.axvline(x0-x0,color = 'k', lw = 2, linestyle = 'dotted')
     
     # adicionando título
     plt.title(titulo, fontsize = 16) 
@@ -83,15 +82,92 @@ def graficar(arquivo,                   # nome do arquivo de leitura
     plt.legend(
         loc = 'center',
         shadow=False,
-        framealpha = 0.8,
+        framealpha = 0,
         ncol = 4,
         columnspacing = 0.5,
         bbox_to_anchor=(0.5, -0.2))
     
     # Salvando em arquivo    
-    plt.savefig(str(titulo) + '.pdf')
+    plt.savefig(str(titulo) + '.pdf', 
+                dpi = fig.dpi, 
+                bbox_inches='tight', 
+                pad_inches=0.2)
 
+#%% 3. DEFININDO OS DICIONÁRIOS COM AS COLUNAS DOS RESULTADOS
+dicncolunalongterm = {
+   
+    'EP_CRE_SG_D1_INF_AXI': 79,
+    'EP_CRE_CG_D1_16RE_3D': 107,
+    'EP_CRE_CG_D1_8RE_3D': 90,
+    'EP_CRE_CG_D1_4RE_3D': 81,
+    
+    'EP_CRE_SG_D1_16RE_3D': 79,
+    'EP_CRE_SG_D1_8RE_3D': 79,
+    'EP_CRE_SG_D1_4RE_3D': 79,
 
+    'VP_CRE_SG_D1_INF_AXI': 109,
+    'VP_CRE_CG_D1_16RE_3D': 137,
+    'VP_CRE_CG_D1_8RE_3D': 120,
+    'VP_CRE_CG_D1_4RE_3D': 111, 
+    
+    'VP_CRE_SG_D1_16RE_3D': 109,
+    'VP_CRE_SG_D1_8RE_3D': 109,
+    'VP_CRE_SG_D1_4RE_3D': 109, 
+
+    'EPVP_CRE_SG_D1_INF_AXI': 109,
+    'EPVP_CRE_CG_D1_16RE_3D': 137,
+    'EPVP_CRE_CG_D1_8RE_3D': 120,
+    'EPVP_CRE_CG_D1_4RE_3D': 111,
+    
+    'EPVP_CRE_SG_D1_16RE_3D': 109,
+    'EPVP_CRE_SG_D1_8RE_3D': 109,
+    'EPVP_CRE_SG_D1_4RE_3D': 109,
+    
+    'EPVP_CRVE_SG_D1_INF_AXI': 109,
+    'EPVP_CRVE_CG_D1_16RE_3D': 137,
+    'EPVP_CRVE_CG_D1_8RE_3D': 120,
+    'EPVP_CRVE_CG_D1_4RE_3D': 111,
+    
+    'EPVP_CRVE_SG_D1_16RE_3D': 109,
+    'EPVP_CRVE_SG_D1_8RE_3D': 109,
+    'EPVP_CRVE_SG_D1_4RE_3D': 109,
+       
+    }
+
+dicncolunafinalexcavation = {
+
+    'VP_CRE_SG_D1_INF_AXI': 79,
+    'VP_CRE_CG_D1_16RE_3D': 107,
+    'VP_CRE_CG_D1_8RE_3D': 90,
+    'VP_CRE_CG_D1_4RE_3D': 81,
+    
+    'VP_CRE_SG_D1_16RE_3D': 79,
+    'VP_CRE_SG_D1_8RE_3D': 79,
+    'VP_CRE_SG_D1_4RE_3D': 79,
+
+    'EPVP_CRE_SG_D1_INF_AXI': 79,
+    'EPVP_CRE_CG_D1_16RE_3D': 107,
+    'EPVP_CRE_CG_D1_8RE_3D': 90,
+    'EPVP_CRE_CG_D1_4RE_3D': 81,
+    
+    'EPVP_CRE_SG_D1_16RE_3D': 79,
+    'EPVP_CRE_SG_D1_8RE_3D': 79,
+    'EPVP_CRE_SG_D1_4RE_3D': 79,
+    
+    'EPVP_CRVE_SG_D1_INF_AXI': 79,
+    'EPVP_CRVE_CG_D1_16RE_3D': 107,
+    'EPVP_CRVE_CG_D1_8RE_3D': 90,
+    'EPVP_CRVE_CG_D1_4RE_3D': 82,
+    
+    'EPVP_CRVE_SG_D1_16RE_3D': 79,
+    'EPVP_CRVE_SG_D1_8RE_3D': 79,
+    'EPVP_CRVE_SG_D1_4RE_3D': 79,
+       
+    }
+
+ncoluna = dicncolunalongterm['EP_CRE_SG_D1_INF_AXI']
+
+#%% 4. CONVERGENCE PROFILES - MODEL EP_CRE
 """ ********************************************
 CONVERGENCE PROFILES - MODEL EP_CRE
 ******************************************** """ 
@@ -100,7 +176,7 @@ CONVERGENCE PROFILES - MODEL EP_CRE
 figura      = 1
 titulo      = 'Convergence Profiles - EP_CRE'
 eixox       = r'$y/R_e$'  
-eixoy       = r'$U=-u(R_e,\theta = 90^\circ)/R_{e}$ [\%]'
+eixoy       = r'$U=-u(R_e,\theta = 90^\circ)/R_{e}$ [%]'
 ymin        = 0
 ymax        = 1.5
 xmin        = 5
@@ -116,11 +192,11 @@ filterx2    = 90
 wl          = 30
 poly        = 10
 
-
-arquivo     = 'EP-CRE-SG-D1-INF-AXI\convergencias.txt'
-ncoluna     = 79
+modelo      = 'EP_CRE_SG_D1_INF_AXI'
+arquivo     = modelo + '\convergencias.txt'
+ncoluna     = dicncolunalongterm[modelo]
 lblcoluna   = '$d_1 = \infty$ and without gallery'
-cor         = 'b'
+cor         = 'k'
 tamanho     = 1.5
 ordem       = 4
 alpha       = 1
@@ -134,13 +210,14 @@ graficar(arquivo,titulo,eixox,eixoy,
           suavizar,filterx1,filterx2,wl,poly,
           figura)
 
-arquivo     = 'EP_CRE_CG_D1_16RE_3D\convergencias_90.txt'
-ncoluna     = 107
+modelo      = 'EP_CRE_CG_D1_16RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
 lblcoluna   = '$d_1 = 16R_e$'
-cor         = 'r'
+cor         = 'orange'
 tamanho     = 2
 ordem       = 3
-alpha       = 0.3
+alpha       = 1
 estilo      = 'solid'
 graficar(arquivo,titulo,eixox,eixoy,
           xmin,xmax,ymin,ymax,
@@ -151,13 +228,15 @@ graficar(arquivo,titulo,eixox,eixoy,
           suavizar,filterx1,filterx2,wl,poly,
           figura)
 
-arquivo     = 'EP_CRE_CG_D1_8RE_3D\convergencias_90.txt'
-ncoluna     = 90
+
+modelo      = 'EP_CRE_CG_D1_8RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
 lblcoluna   = ' $d_1 = 8R_e$'
-cor         = 'r'
+cor         = 'g'
 tamanho     = 2
 ordem       = 2
-alpha       = 0.6
+alpha       = 1
 estilo      = 'solid'
 graficar(arquivo,titulo,eixox,eixoy,
           xmin,xmax,ymin,ymax,
@@ -168,8 +247,10 @@ graficar(arquivo,titulo,eixox,eixoy,
           suavizar,filterx1,filterx2,wl,poly,
           figura)
 
-arquivo     = 'EP_CRE_CG_D1_4RE_3D\convergencias_90.txt'
-ncoluna     = 81
+
+modelo      = 'EP_CRE_CG_D1_4RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
 lblcoluna   = '$d_1 = 4R_e$'
 cor         = 'r'
 tamanho     = 2
@@ -185,15 +266,16 @@ graficar(arquivo,titulo,eixox,eixoy,
           suavizar,filterx1,filterx2,wl,poly,
           figura)
 
+#%% 5. CONVERGENCE PROFILES - LONG-TERM - MODEL VP_CRE
 """ ********************************************
 CONVERGENCE PROFILES - LONG-TERM - MODEL VP_CRE
 ******************************************** """ 
 
 # Formatação do gráfico
-figura      = 2
+figura      = figura+1
 titulo      = 'Convergence Profiles - Long-term - VP_CRE'
 eixox       = r'$y/R_e$'  
-eixoy       = r'$U=-u(R_e,\theta = 90^\circ)/R_{e}$ [\%]'
+eixoy       = r'$U=-u(R_e,\theta = 90^\circ)/R_{e}$ [%]'
 ymin        = 0
 ymax        = 1.5
 xmin        = 5
@@ -209,11 +291,13 @@ filterx2    = 90
 wl          = 30
 poly        = 10
 
-arquivo     = 'VP_CRE_SG_D1_INF_AXI\convergencias.txt'
-ncoluna     = 109
+
+modelo      = 'VP_CRE_SG_D1_INF_AXI'
+arquivo     = modelo + '\convergencias.txt'
+ncoluna     = dicncolunalongterm[modelo]
 lblcoluna   = '$d_1 = \infty$ without gallery'
-cor         = 'b'
-tamanho     = 1.5
+cor         = 'k'
+tamanho     = 2
 ordem       = 4
 alpha       = 1
 estilo      = 'dashed'
@@ -226,11 +310,12 @@ graficar(arquivo,titulo,eixox,eixoy,
           suavizar,filterx1,filterx2,wl,poly,
           figura)
 
-arquivo     = 'VP_CRE_CG_D1_4RE_3D\convergencias_90.txt'
-ncoluna     = 111
+modelo      = 'VP_CRE_CG_D1_4RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
 lblcoluna   = '$d_1 = 4R_e$'
 cor         = 'r'
-tamanho     = 1.5
+tamanho     = 2
 ordem       = 4
 alpha       = 1
 estilo      = 'solid'
@@ -243,13 +328,14 @@ graficar(arquivo,titulo,eixox,eixoy,
           suavizar,filterx1,filterx2,wl,poly,
           figura)
 
-arquivo     = 'VP_CRE_CG_D1_8RE_3D\convergencias_90.txt'
-ncoluna     = 120
+modelo      = 'VP_CRE_CG_D1_8RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
 lblcoluna   = '$d_1 = 8R_e$'
-cor         = 'r'
-tamanho     = 1.5
+cor         = 'g'
+tamanho     = 2
 ordem       = 4
-alpha       = 0.6
+alpha       = 1
 estilo      = 'solid'
 graficar(arquivo,titulo,eixox,eixoy,
           xmin,xmax,ymin,ymax,
@@ -260,15 +346,16 @@ graficar(arquivo,titulo,eixox,eixoy,
           suavizar,filterx1,filterx2,wl,poly,
           figura)
 
+#%% 6. CONVERGENCE PROFILES - FINAL EXCAVATION - MODEL VP_CRE
 """ ********************************************
 CONVERGENCE PROFILES - FINAL EXCAVATION - MODEL VP_CRE
 ******************************************** """ 
 
 # Formatação do gráfico
-figura      = 3
+figura      = figura+1
 titulo      = 'Convergence Profiles - Final excavation - VP_CRE'
 eixox       = r'$y/R_e$'  
-eixoy       = r'$U=-u(R_e,\theta = 90^\circ)/R_{e}$ [\%]'
+eixoy       = r'$U=-u(R_e,\theta = 90^\circ)/R_{e}$ [%]'
 ymin        = 0
 ymax        = 1.5
 xmin        = 5
@@ -284,10 +371,11 @@ filterx2    = 90
 wl          = 30
 poly        = 10
 
-arquivo     = 'VP_CRE_SG_D1_INF_AXI\convergencias.txt'
-ncoluna     = 79
+modelo      = 'VP_CRE_SG_D1_INF_AXI'
+arquivo     = modelo + '\convergencias.txt'
+ncoluna     = dicncolunafinalexcavation[modelo]
 lblcoluna   = '$d_1 = \infty$ without gallery'
-cor         = 'b'
+cor         = 'k'
 tamanho     = 1.5
 ordem       = 4
 alpha       = 1
@@ -301,8 +389,9 @@ graficar(arquivo,titulo,eixox,eixoy,
           suavizar,filterx1,filterx2,wl,poly,
           figura)
 
-arquivo     = 'VP_CRE_CG_D1_4RE_3D\convergencias_90.txt'
-ncoluna     = 81
+modelo      = 'VP_CRE_CG_D1_4RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunafinalexcavation[modelo]
 lblcoluna   = '$d_1 = 4R_e$'
 cor         = 'r'
 tamanho     = 1.5
@@ -318,13 +407,15 @@ graficar(arquivo,titulo,eixox,eixoy,
           suavizar,filterx1,filterx2,wl,poly,
           figura)
 
-arquivo     = 'VP_CRE_CG_D1_8RE_3D\convergencias_90.txt'
-ncoluna     = 90
+
+modelo      = 'VP_CRE_CG_D1_8RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunafinalexcavation[modelo]
 lblcoluna   = '$d_1 = 8R_e$'
-cor         = 'r'
+cor         = 'g'
 tamanho     = 1.5
 ordem       = 4
-alpha       = 0.6
+alpha       = 1
 estilo      = 'solid'
 graficar(arquivo,titulo,eixox,eixoy,
           xmin,xmax,ymin,ymax,
@@ -335,15 +426,16 @@ graficar(arquivo,titulo,eixox,eixoy,
           suavizar,filterx1,filterx2,wl,poly,
           figura)
 
+#%% 7. CONVERGENCE PROFILES - LONG-TERM - EPVP_CRE
 """ ********************************************
 CONVERGENCE PROFILES - LONG-TERM - EPVP_CRE
 ******************************************** """ 
 
 # Formatação do gráfico
-figura      = 4
+figura      = figura+1
 titulo      = 'Convergence Profiles - Long-term - EPVP_CRE'
 eixox       = r'$y/R_e$'  
-eixoy       = r'$U=-u(R_e,\theta = 90^\circ)/R_{e}$ [\%]'
+eixoy       = r'$U=-u(R_e,\theta = 90^\circ)/R_{e}$ [%]'
 ymin        = 0
 ymax        = 1.5
 xmin        = 5
@@ -360,10 +452,11 @@ wl          = 30
 poly        = 10
 
 
-arquivo     = 'EPVP-CRE-SG-D1-INF-AXI\convergencias.txt'
-ncoluna     = 109
+modelo      = 'EPVP_CRE_SG_D1_INF_AXI'
+arquivo     = modelo + '\convergencias.txt'
+ncoluna     = dicncolunalongterm[modelo]
 lblcoluna   = '$d_1 = \infty$ and without gallery'
-cor         = 'b'
+cor         = 'k'
 tamanho     = 1.5
 ordem       = 4
 alpha       = 1
@@ -377,13 +470,14 @@ graficar(arquivo,titulo,eixox,eixoy,
           suavizar,filterx1,filterx2,wl,poly,
           figura)
 
-arquivo     = 'EPVP_CRE_CG_D1_16RE_3D\convergencias_90.txt'
-ncoluna     = 137
+modelo      = 'EPVP_CRE_CG_D1_16RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
 lblcoluna   = '$d_1 = 16R_e$'
-cor         = 'r'
+cor         = 'orange'
 tamanho     = 2
 ordem       = 3
-alpha       = 0.3
+alpha       = 1
 estilo      = 'solid'
 graficar(arquivo,titulo,eixox,eixoy,
           xmin,xmax,ymin,ymax,
@@ -394,13 +488,14 @@ graficar(arquivo,titulo,eixox,eixoy,
           suavizar,filterx1,filterx2,wl,poly,
           figura)
 
-arquivo     = 'EPVP_CRE_CG_D1_8RE_3D\convergencias_90.txt'
-ncoluna     = 120
+modelo      = 'EPVP_CRE_CG_D1_8RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
 lblcoluna   = ' $d_1 = 8R_e$'
-cor         = 'r'
+cor         = 'g'
 tamanho     = 2
 ordem       = 2
-alpha       = 0.6
+alpha       = 1
 estilo      = 'solid'
 graficar(arquivo,titulo,eixox,eixoy,
           xmin,xmax,ymin,ymax,
@@ -411,8 +506,9 @@ graficar(arquivo,titulo,eixox,eixoy,
           suavizar,filterx1,filterx2,wl,poly,
           figura)
 
-arquivo     = 'EPVP_CRE_CG_D1_4RE_3D\convergencias_90.txt'
-ncoluna     = 111
+modelo      = 'EPVP_CRE_CG_D1_4RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
 lblcoluna   = '$d_1 = 4R_e$'
 cor         = 'r'
 tamanho     = 2
@@ -428,15 +524,16 @@ graficar(arquivo,titulo,eixox,eixoy,
           suavizar,filterx1,filterx2,wl,poly,
           figura)
 
+#%% 8. CONVERGENCE PROFILES - FINAL-EXCAVATION - EPVP_CRE
 """ ********************************************
 CONVERGENCE PROFILES - FINAL-EXCAVATION - EPVP_CRE
 ******************************************** """ 
 
 # Formatação do gráfico
-figura      = 5
+figura      = figura+1
 titulo      = 'Convergence Profiles - Final Excavation - EPVP_CRE'
 eixox       = r'$y/R_e$'  
-eixoy       = r'$U=-u(R_e,\theta = 90^\circ)/R_{e}$ [\%]'
+eixoy       = r'$U=-u(R_e,\theta = 90^\circ)/R_{e}$ [%]'
 ymin        = 0
 ymax        = 1.5
 xmin        = 5
@@ -452,11 +549,11 @@ filterx2    = 90
 wl          = 30
 poly        = 10
 
-
-arquivo     = 'EPVP-CRE-SG-D1-INF-AXI\convergencias.txt'
-ncoluna     = 79
+modelo      = 'EPVP_CRE_SG_D1_INF_AXI'
+arquivo     = modelo + '\convergencias.txt'
+ncoluna     = dicncolunafinalexcavation[modelo]
 lblcoluna   = '$d_1 = \infty$ and without gallery'
-cor         = 'b'
+cor         = 'k'
 tamanho     = 1.5
 ordem       = 4
 alpha       = 1
@@ -470,13 +567,14 @@ graficar(arquivo,titulo,eixox,eixoy,
           suavizar,filterx1,filterx2,wl,poly,
           figura)
 
-arquivo     = 'EPVP_CRE_CG_D1_16RE_3D\convergencias_90.txt'
-ncoluna     = 107
+modelo      = 'EPVP_CRE_CG_D1_16RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunafinalexcavation[modelo]
 lblcoluna   = '$d_1 = 16R_e$'
-cor         = 'r'
+cor         = 'orange'
 tamanho     = 2
 ordem       = 3
-alpha       = 0.3
+alpha       = 1
 estilo      = 'solid'
 graficar(arquivo,titulo,eixox,eixoy,
           xmin,xmax,ymin,ymax,
@@ -487,13 +585,14 @@ graficar(arquivo,titulo,eixox,eixoy,
           suavizar,filterx1,filterx2,wl,poly,
           figura)
 
-arquivo     = 'EPVP_CRE_CG_D1_8RE_3D\convergencias_90.txt'
-ncoluna     = 91
+modelo      = 'EPVP_CRE_CG_D1_8RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunafinalexcavation[modelo]
 lblcoluna   = ' $d_1 = 8R_e$'
-cor         = 'r'
+cor         = 'g'
 tamanho     = 2
 ordem       = 2
-alpha       = 0.6
+alpha       = 1
 estilo      = 'solid'
 graficar(arquivo,titulo,eixox,eixoy,
           xmin,xmax,ymin,ymax,
@@ -504,8 +603,9 @@ graficar(arquivo,titulo,eixox,eixoy,
           suavizar,filterx1,filterx2,wl,poly,
           figura)
 
-arquivo     = 'EPVP_CRE_CG_D1_4RE_3D\convergencias_90.txt'
-ncoluna     = 81
+modelo      = 'EPVP_CRE_CG_D1_4RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunafinalexcavation[modelo]
 lblcoluna   = '$d_1 = 4R_e$'
 cor         = 'r'
 tamanho     = 2
@@ -521,15 +621,16 @@ graficar(arquivo,titulo,eixox,eixoy,
           suavizar,filterx1,filterx2,wl,poly,
           figura)
 
+#%% 9. CONVERGENCE PROFILES - LONG-TERM - EPVP_CRVE
 """ ********************************************
 CONVERGENCE PROFILES - LONG-TERM - EPVP_CRVE
 ******************************************** """ 
 
 # Formatação do gráfico
-figura      = 6
+figura      = figura+1
 titulo      = 'Convergence Profiles - Long-term - EPVP_CRVE'
 eixox       = r'$y/R_e$'  
-eixoy       = r'$U=-u(R_e,\theta = 90^\circ)/R_{e}$ [\%]'
+eixoy       = r'$U=-u(R_e,\theta = 90^\circ)/R_{e}$ [%]'
 ymin        = 0
 ymax        = 1.5
 xmin        = 5
@@ -546,10 +647,11 @@ wl          = 30
 poly        = 10
 
 
-arquivo     = 'EPVP-CRVE-SG-D1-INF-AXI\convergencias.txt'
-ncoluna     = 109
+modelo      = 'EPVP_CRVE_SG_D1_INF_AXI'
+arquivo     = modelo + '\convergencias.txt'
+ncoluna     = dicncolunalongterm[modelo]
 lblcoluna   = '$d_1 = \infty$ and without gallery'
-cor         = 'b'
+cor         = 'k'
 tamanho     = 1.5
 ordem       = 4
 alpha       = 1
@@ -563,13 +665,14 @@ graficar(arquivo,titulo,eixox,eixoy,
           suavizar,filterx1,filterx2,wl,poly,
           figura)
 
-arquivo     = 'EPVP_CRVE_CG_D1_16RE_3D\convergencias_90.txt'
-ncoluna     = 137
+modelo      = 'EPVP_CRVE_CG_D1_16RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
 lblcoluna   = '$d_1 = 16R_e$'
-cor         = 'r'
+cor         = 'orange'
 tamanho     = 2
 ordem       = 3
-alpha       = 0.3
+alpha       = 1
 estilo      = 'solid'
 graficar(arquivo,titulo,eixox,eixoy,
           xmin,xmax,ymin,ymax,
@@ -580,13 +683,14 @@ graficar(arquivo,titulo,eixox,eixoy,
           suavizar,filterx1,filterx2,wl,poly,
           figura)
 
-arquivo     = 'EPVP_CRVE_CG_D1_8RE_3D\convergencias_90.txt'
-ncoluna     = 120
+modelo      = 'EPVP_CRVE_CG_D1_8RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
 lblcoluna   = ' $d_1 = 8R_e$'
-cor         = 'r'
+cor         = 'g'
 tamanho     = 2
 ordem       = 2
-alpha       = 0.6
+alpha       = 1
 estilo      = 'solid'
 graficar(arquivo,titulo,eixox,eixoy,
           xmin,xmax,ymin,ymax,
@@ -597,8 +701,9 @@ graficar(arquivo,titulo,eixox,eixoy,
           suavizar,filterx1,filterx2,wl,poly,
           figura)
 
-arquivo     = 'EPVP_CRVE_CG_D1_4RE_3D\convergencias_90.txt'
-ncoluna     = 111
+modelo      = 'EPVP_CRVE_CG_D1_4RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
 lblcoluna   = '$d_1 = 4R_e$'
 cor         = 'r'
 tamanho     = 2
@@ -614,15 +719,16 @@ graficar(arquivo,titulo,eixox,eixoy,
           suavizar,filterx1,filterx2,wl,poly,
           figura)
 
+#%% 10. CONVERGENCE PROFILES - FINAL EXCAVATION - EPVP_CRVE
 """ ********************************************
-CONVERGENCE PROFILES - LONG-TERM - EPVP_CRVE
+CONVERGENCE PROFILES - FINAL EXCAVATION - EPVP_CRVE
 ******************************************** """ 
 
 # Formatação do gráfico
-figura      = 7
+figura      = figura+1
 titulo      = 'Convergence Profiles - Final excavation - EPVP_CRVE'
 eixox       = r'$y/R_e$'  
-eixoy       = r'$U=-u(R_e,\theta = 90^\circ)/R_{e}$ [\%]'
+eixoy       = r'$U=-u(R_e,\theta = 90^\circ)/R_{e}$ [%]'
 ymin        = 0
 ymax        = 1.5
 xmin        = 5
@@ -639,10 +745,11 @@ wl          = 30
 poly        = 10
 
 
-arquivo     = 'EPVP-CRVE-SG-D1-INF-AXI\convergencias.txt'
-ncoluna     = 79
+modelo      = 'EPVP_CRVE_SG_D1_INF_AXI'
+arquivo     = modelo + '\convergencias.txt'
+ncoluna     = dicncolunafinalexcavation[modelo]
 lblcoluna   = '$d_1 = \infty$ and without gallery'
-cor         = 'b'
+cor         = 'k'
 tamanho     = 1.5
 ordem       = 4
 alpha       = 1
@@ -656,13 +763,14 @@ graficar(arquivo,titulo,eixox,eixoy,
           suavizar,filterx1,filterx2,wl,poly,
           figura)
 
-arquivo     = 'EPVP_CRVE_CG_D1_16RE_3D\convergencias_90.txt'
-ncoluna     = 108
+modelo      = 'EPVP_CRVE_CG_D1_16RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunafinalexcavation[modelo]
 lblcoluna   = '$d_1 = 16R_e$'
-cor         = 'r'
+cor         = 'orange'
 tamanho     = 2
 ordem       = 3
-alpha       = 0.3
+alpha       = 1
 estilo      = 'solid'
 graficar(arquivo,titulo,eixox,eixoy,
           xmin,xmax,ymin,ymax,
@@ -673,13 +781,14 @@ graficar(arquivo,titulo,eixox,eixoy,
           suavizar,filterx1,filterx2,wl,poly,
           figura)
 
-arquivo     = 'EPVP_CRVE_CG_D1_8RE_3D\convergencias_90.txt'
-ncoluna     = 91
+modelo      = 'EPVP_CRVE_CG_D1_8RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunafinalexcavation[modelo]
 lblcoluna   = ' $d_1 = 8R_e$'
-cor         = 'r'
+cor         = 'g'
 tamanho     = 2
 ordem       = 2
-alpha       = 0.6
+alpha       = 1
 estilo      = 'solid'
 graficar(arquivo,titulo,eixox,eixoy,
           xmin,xmax,ymin,ymax,
@@ -690,8 +799,9 @@ graficar(arquivo,titulo,eixox,eixoy,
           suavizar,filterx1,filterx2,wl,poly,
           figura)
 
-arquivo     = 'EPVP_CRVE_CG_D1_4RE_3D\convergencias_90.txt'
-ncoluna     = 82
+modelo      = 'EPVP_CRVE_CG_D1_4RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunafinalexcavation[modelo]
 lblcoluna   = '$d_1 = 4R_e$'
 cor         = 'r'
 tamanho     = 2
@@ -707,16 +817,16 @@ graficar(arquivo,titulo,eixox,eixoy,
           suavizar,filterx1,filterx2,wl,poly,
           figura)
 
-
+#%% 11. CONVERGENCE PROFILES - LONG-TERM - D1=16Re
 """ ********************************************
 CONVERGENCE PROFILES - LONG-TERM - D1=16Re
 ******************************************** """ 
 
 # Formatação do gráfico
-figura      = 8
+figura      = figura+1
 titulo      = 'Convergence Profiles - Long-term - $d_1=16R_e$'
 eixox       = r'$y/R_e$'  
-eixoy       = r'$U=-u(R_e,\theta = 90^\circ)/R_{e}$ [\%]'
+eixoy       = r'$U=-u(R_e,\theta = 90^\circ)/R_{e}$ [%]'
 ymin        = 0
 ymax        = 1.5
 xmin        = 5
@@ -733,13 +843,14 @@ wl          = 30
 poly        = 10
 
 
-arquivo     = 'EP_CRE_CG_D1_16RE_3D\convergencias_90.txt'
-ncoluna     = 107
+modelo      = 'EP_CRE_CG_D1_16RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
 lblcoluna   = 'EP_CRE'
-cor         = 'r'
+cor         = 'orange'
 tamanho     = 2
 ordem       = 3
-alpha       = 0.3
+alpha       = 1
 estilo      = 'solid'
 graficar(arquivo,titulo,eixox,eixoy,
           xmin,xmax,ymin,ymax,
@@ -750,13 +861,14 @@ graficar(arquivo,titulo,eixox,eixoy,
           suavizar,filterx1,filterx2,wl,poly,
           figura)
 
-arquivo     = 'EPVP_CRE_CG_D1_16RE_3D\convergencias_90.txt'
-ncoluna     = 137
+modelo      = 'EPVP_CRE_CG_D1_16RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
 lblcoluna   = 'EPVP_CRE'
-cor         = 'r'
+cor         = 'g'
 tamanho     = 2
 ordem       = 3
-alpha       = 0.6
+alpha       = 1
 estilo      = 'solid'
 graficar(arquivo,titulo,eixox,eixoy,
           xmin,xmax,ymin,ymax,
@@ -767,13 +879,14 @@ graficar(arquivo,titulo,eixox,eixoy,
           suavizar,filterx1,filterx2,wl,poly,
           figura)
 
-arquivo     = 'EPVP_CRVE_CG_D1_16RE_3D\convergencias_90.txt'
-ncoluna     = 137
+modelo      = 'EPVP_CRVE_CG_D1_16RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
 lblcoluna   = 'EPVP_CRVE'
 cor         = 'r'
 tamanho     = 2
 ordem       = 3
-alpha       = 0.9
+alpha       = 1
 estilo      = 'solid'
 graficar(arquivo,titulo,eixox,eixoy,
           xmin,xmax,ymin,ymax,
@@ -784,16 +897,16 @@ graficar(arquivo,titulo,eixox,eixoy,
           suavizar,filterx1,filterx2,wl,poly,
           figura)
 
-
+#%% 12. CONVERGENCE PROFILES - LONG-TERM - D1=8Re
 """ ********************************************
 CONVERGENCE PROFILES - LONG-TERM - D1=8Re
 ******************************************** """ 
 
 # Formatação do gráfico
-figura      = 9
+figura      = figura+1
 titulo      = 'Convergence Profiles - Long-term - $d_1=8R_e$'
 eixox       = r'$y/R_e$'  
-eixoy       = r'$U=-u(R_e,\theta = 90^\circ)/R_{e}$ [\%]'
+eixoy       = r'$U=-u(R_e,\theta = 90^\circ)/R_{e}$ [%]'
 ymin        = 0
 ymax        = 1.5
 xmin        = 5
@@ -809,14 +922,14 @@ filterx2    = 90
 wl          = 30
 poly        = 10
 
-
-arquivo     = 'EP_CRE_CG_D1_8RE_3D\convergencias_90.txt'
-ncoluna     = 90
+modelo      = 'EP_CRE_CG_D1_8RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
 lblcoluna   = 'EP_CRE'
-cor         = 'r'
+cor         = 'orange'
 tamanho     = 2
 ordem       = 3
-alpha       = 0.3
+alpha       = 1
 estilo      = 'solid'
 graficar(arquivo,titulo,eixox,eixoy,
           xmin,xmax,ymin,ymax,
@@ -827,13 +940,14 @@ graficar(arquivo,titulo,eixox,eixoy,
           suavizar,filterx1,filterx2,wl,poly,
           figura)
 
-arquivo     = 'EPVP_CRE_CG_D1_8RE_3D\convergencias_90.txt'
-ncoluna     = 120
+modelo      = 'EPVP_CRE_CG_D1_8RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
 lblcoluna   = 'EPVP_CRE'
-cor         = 'r'
+cor         = 'g'
 tamanho     = 2
 ordem       = 3
-alpha       = 0.6
+alpha       = 1
 estilo      = 'solid'
 graficar(arquivo,titulo,eixox,eixoy,
           xmin,xmax,ymin,ymax,
@@ -844,13 +958,14 @@ graficar(arquivo,titulo,eixox,eixoy,
           suavizar,filterx1,filterx2,wl,poly,
           figura)
 
-arquivo     = 'EPVP_CRVE_CG_D1_8RE_3D\convergencias_90.txt'
-ncoluna     = 120
+modelo      = 'EPVP_CRVE_CG_D1_8RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
 lblcoluna   = 'EPVP_CRVE'
 cor         = 'r'
 tamanho     = 2
 ordem       = 3
-alpha       = 0.9
+alpha       = 1
 estilo      = 'solid'
 graficar(arquivo,titulo,eixox,eixoy,
           xmin,xmax,ymin,ymax,
@@ -861,15 +976,16 @@ graficar(arquivo,titulo,eixox,eixoy,
           suavizar,filterx1,filterx2,wl,poly,
           figura)
 
+#%% 13. CONVERGENCE PROFILES - LONG-TERM - D1=4Re
 """ ********************************************
 CONVERGENCE PROFILES - LONG-TERM - D1=4Re
 ******************************************** """ 
 
 # Formatação do gráfico
-figura      = 10
+figura      = figura+1
 titulo      = 'Convergence Profiles - Long-term - $d_1=4R_e$'
 eixox       = r'$y/R_e$'  
-eixoy       = r'$U=-u(R_e,\theta = 90^\circ)/R_{e}$ [\%]'
+eixoy       = r'$U=-u(R_e,\theta = 90^\circ)/R_{e}$ [%]'
 ymin        = 0
 ymax        = 1.5
 xmin        = 5
@@ -885,14 +1001,14 @@ filterx2    = 90
 wl          = 30
 poly        = 10
 
-
-arquivo     = 'EP_CRE_CG_D1_4RE_3D\convergencias_90.txt'
-ncoluna     = 81
+modelo      = 'EP_CRE_CG_D1_4RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
 lblcoluna   = 'EP_CRE'
-cor         = 'r'
+cor         = 'orange'
 tamanho     = 2
 ordem       = 3
-alpha       = 0.3
+alpha       = 1
 estilo      = 'solid'
 graficar(arquivo,titulo,eixox,eixoy,
           xmin,xmax,ymin,ymax,
@@ -903,13 +1019,14 @@ graficar(arquivo,titulo,eixox,eixoy,
           suavizar,filterx1,filterx2,wl,poly,
           figura)
 
-arquivo     = 'EPVP_CRE_CG_D1_4RE_3D\convergencias_90.txt'
-ncoluna     = 111
+modelo      = 'EPVP_CRE_CG_D1_4RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
 lblcoluna   = 'EPVP_CRE'
-cor         = 'r'
+cor         = 'g'
 tamanho     = 2
 ordem       = 3
-alpha       = 0.6
+alpha       = 1
 estilo      = 'solid'
 graficar(arquivo,titulo,eixox,eixoy,
           xmin,xmax,ymin,ymax,
@@ -920,13 +1037,14 @@ graficar(arquivo,titulo,eixox,eixoy,
           suavizar,filterx1,filterx2,wl,poly,
           figura)
 
-arquivo     = 'EPVP_CRVE_CG_D1_4RE_3D\convergencias_90.txt'
-ncoluna     = 111
+modelo      = 'EPVP_CRVE_CG_D1_4RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
 lblcoluna   = 'EPVP_CRVE'
 cor         = 'r'
 tamanho     = 2
 ordem       = 3
-alpha       = 0.9
+alpha       = 1
 estilo      = 'solid'
 graficar(arquivo,titulo,eixox,eixoy,
           xmin,xmax,ymin,ymax,
@@ -937,12 +1055,13 @@ graficar(arquivo,titulo,eixox,eixoy,
           suavizar,filterx1,filterx2,wl,poly,
           figura)
 
+#%% 14. GALLERY CONVERGENCE PROFILES - LONG-TERM - D1=16Re
 """ ********************************************
 GALLERY CONVERGENCE PROFILES - LONG-TERM - D1=16Re
 ******************************************** """ 
 
 # Formatação do gráfico
-figura      = 11
+figura      = figura+1
 titulo      = 'Gallery Convergence Profiles - Long-term - $d_1 = 16R_e$'
 eixox       = r'$y/R_{e1}$'  
 eixoy       = r'$U{1}=-u{1}(R_{e1},\theta = 90^\circ)/R_{e1}$ [%]'
@@ -961,10 +1080,11 @@ filterx2    = 80
 wl          = 30
 poly        = 10
 
-arquivo     = 'EP_CRE_SG_D1_16RE_3D\convergencias1_90.txt'
-ncoluna     = 79
+modelo      = 'EP_CRE_SG_D1_16RE_3D'
+arquivo     = modelo + '\convergencias1_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
 lblcoluna   = 'EP_CRE - without gallery'
-cor         = 'blue'
+cor         = 'k'
 tamanho     = 2
 ordem       = 3
 alpha       = 1
@@ -978,13 +1098,14 @@ graficar(arquivo,titulo,eixox,eixoy,
           suavizar,filterx1,filterx2,wl,poly,
           figura)
 
-arquivo     = 'EP_CRE_CG_D1_16RE_3D\convergencias1_90.txt'
-ncoluna     = 107
+modelo      = 'EP_CRE_CG_D1_16RE_3D'
+arquivo     = modelo + '\convergencias1_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
 lblcoluna   = 'EP_CRE'
-cor         = 'r'
+cor         = 'orange'
 tamanho     = 2
 ordem       = 3
-alpha       = 0.3
+alpha       = 1
 estilo      = 'solid'
 graficar(arquivo,titulo,eixox,eixoy,
           xmin,xmax,ymin,ymax,
@@ -995,13 +1116,14 @@ graficar(arquivo,titulo,eixox,eixoy,
           suavizar,filterx1,filterx2,wl,poly,
           figura)
 
-arquivo     = 'EPVP_CRE_CG_D1_16RE_3D\convergencias1_90.txt'
-ncoluna     = 137
+modelo      = 'EPVP_CRE_CG_D1_16RE_3D'
+arquivo     = modelo + '\convergencias1_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
 lblcoluna   = 'EPVP_CRE'
-cor         = 'r'
+cor         = 'g'
 tamanho     = 2
 ordem       = 3
-alpha       = 0.6
+alpha       = 1
 estilo      = 'solid'
 graficar(arquivo,titulo,eixox,eixoy,
           xmin,xmax,ymin,ymax,
@@ -1012,13 +1134,14 @@ graficar(arquivo,titulo,eixox,eixoy,
           suavizar,filterx1,filterx2,wl,poly,
           figura)
 
-arquivo     = 'EPVP_CRVE_CG_D1_16RE_3D\convergencias1_90.txt'
-ncoluna     = 137
+modelo      = 'EPVP_CRVE_CG_D1_16RE_3D'
+arquivo     = modelo + '\convergencias1_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
 lblcoluna   = 'EPVP_CRVE'
 cor         = 'r'
 tamanho     = 2
 ordem       = 3
-alpha       = 0.9
+alpha       = 1
 estilo      = 'solid'
 graficar(arquivo,titulo,eixox,eixoy,
           xmin,xmax,ymin,ymax,
@@ -1029,13 +1152,13 @@ graficar(arquivo,titulo,eixox,eixoy,
           suavizar,filterx1,filterx2,wl,poly,
           figura)
 
-
+#%% 15. GALLERY CONVERGENCE PROFILES - LONG-TERM - D1=8Re
 """ ********************************************
 GALLERY CONVERGENCE PROFILES - LONG-TERM - D1=8Re
 ******************************************** """ 
 
 # Formatação do gráfico
-figura      = 12
+figura      = figura+1
 titulo      = 'Gallery Convergence Profiles - Long-term - $d_1 = 8R_e$'
 eixox       = r'$y/R_{e1}$'  
 eixoy       = r'$U{1}=-u{1}(R_{e1},\theta = 90^\circ)/R_{e1}$ [%]'
@@ -1054,10 +1177,11 @@ filterx2    = 80
 wl          = 20
 poly        = 5
 
-arquivo     = 'EP_CRE_SG_D1_8RE_3D\convergencias1_90.txt'
-ncoluna     = 79
+modelo      = 'EP_CRE_SG_D1_8RE_3D'
+arquivo     = modelo + '\convergencias1_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
 lblcoluna   = 'EP_CRE - without gallery'
-cor         = 'blue'
+cor         = 'k'
 tamanho     = 2
 ordem       = 3
 alpha       = 1
@@ -1071,13 +1195,14 @@ graficar(arquivo,titulo,eixox,eixoy,
           suavizar,filterx1,filterx2,wl,poly,
           figura)
 
-arquivo     = 'EP_CRE_CG_D1_8RE_3D\convergencias1_90.txt'
-ncoluna     = 90
+modelo      = 'EP_CRE_CG_D1_8RE_3D'
+arquivo     = modelo + '\convergencias1_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
 lblcoluna   = 'EP_CRE'
-cor         = 'r'
+cor         = 'orange'
 tamanho     = 2
 ordem       = 3
-alpha       = 0.3
+alpha       = 1
 estilo      = 'solid'
 graficar(arquivo,titulo,eixox,eixoy,
           xmin,xmax,ymin,ymax,
@@ -1088,13 +1213,14 @@ graficar(arquivo,titulo,eixox,eixoy,
           suavizar,filterx1,filterx2,wl,poly,
           figura)
 
-arquivo     = 'EPVP_CRE_CG_D1_8RE_3D\convergencias1_90.txt'
-ncoluna     = 120
+modelo      = 'EPVP_CRE_CG_D1_8RE_3D'
+arquivo     = modelo + '\convergencias1_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
 lblcoluna   = 'EPVP_CRE'
-cor         = 'r'
+cor         = 'g'
 tamanho     = 2
 ordem       = 3
-alpha       = 0.6
+alpha       = 1
 estilo      = 'solid'
 graficar(arquivo,titulo,eixox,eixoy,
           xmin,xmax,ymin,ymax,
@@ -1105,13 +1231,14 @@ graficar(arquivo,titulo,eixox,eixoy,
           suavizar,filterx1,filterx2,wl,poly,
           figura)
 
-arquivo     = 'EPVP_CRVE_CG_D1_8RE_3D\convergencias1_90.txt'
-ncoluna     = 120
+modelo      = 'EPVP_CRVE_CG_D1_8RE_3D'
+arquivo     = modelo + '\convergencias1_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
 lblcoluna   = 'EPVP_CRVE'
 cor         = 'r'
 tamanho     = 2
 ordem       = 3
-alpha       = 0.9
+alpha       = 1
 estilo      = 'solid'
 graficar(arquivo,titulo,eixox,eixoy,
           xmin,xmax,ymin,ymax,
@@ -1122,13 +1249,13 @@ graficar(arquivo,titulo,eixox,eixoy,
           suavizar,filterx1,filterx2,wl,poly,
           figura)
 
-
+#%% 16. GALLERY CONVERGENCE PROFILES - LONG-TERM - D1=4Re
 """ ********************************************
 GALLERY CONVERGENCE PROFILES - LONG-TERM - D1=4Re
 ******************************************** """ 
 
 # Formatação do gráfico
-figura      = 13
+figura      = figura+1
 titulo      = 'Gallery Convergence Profiles - Long-term - $d_1 = 4R_e$'
 eixox       = r'$y/R_{e1}$'  
 eixoy       = r'$U{1}=-u{1}(R_{e1},\theta = 90^\circ)/R_{e1}$ [%]'
@@ -1147,10 +1274,11 @@ filterx2    = 80
 wl          = 10
 poly        = 6
 
-arquivo     = 'EP_CRE_SG_D1_4RE_3D\convergencias1_90.txt'
-ncoluna     = 79
+modelo      = 'EP_CRE_SG_D1_4RE_3D'
+arquivo     = modelo + '\convergencias1_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
 lblcoluna   = 'EP_CRE - without gallery'
-cor         = 'blue'
+cor         = 'k'
 tamanho     = 2
 ordem       = 3
 alpha       = 1
@@ -1164,13 +1292,14 @@ graficar(arquivo,titulo,eixox,eixoy,
           suavizar,filterx1,filterx2,wl,poly,
           figura)
 
-arquivo     = 'EP_CRE_CG_D1_4RE_3D\convergencias1_90.txt'
-ncoluna     = 81
+modelo      = 'EP_CRE_CG_D1_4RE_3D'
+arquivo     = modelo + '\convergencias1_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
 lblcoluna   = 'EP_CRE'
-cor         = 'r'
+cor         = 'orange'
 tamanho     = 2
 ordem       = 3
-alpha       = 0.3
+alpha       = 1
 estilo      = 'solid'
 graficar(arquivo,titulo,eixox,eixoy,
           xmin,xmax,ymin,ymax,
@@ -1181,13 +1310,14 @@ graficar(arquivo,titulo,eixox,eixoy,
           suavizar,filterx1,filterx2,wl,poly,
           figura)
 
-arquivo     = 'EPVP_CRE_CG_D1_4RE_3D\convergencias1_90.txt'
-ncoluna     = 111
+modelo      = 'EPVP_CRE_CG_D1_4RE_3D'
+arquivo     = modelo + '\convergencias1_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
 lblcoluna   = 'EPVP_CRE'
-cor         = 'r'
+cor         = 'g'
 tamanho     = 2
 ordem       = 3
-alpha       = 0.6
+alpha       = 1
 estilo      = 'solid'
 graficar(arquivo,titulo,eixox,eixoy,
           xmin,xmax,ymin,ymax,
@@ -1198,13 +1328,14 @@ graficar(arquivo,titulo,eixox,eixoy,
           suavizar,filterx1,filterx2,wl,poly,
           figura)
 
-arquivo     = 'EPVP_CRVE_CG_D1_4RE_3D\convergencias1_90.txt'
-ncoluna     = 111
+modelo      = 'EPVP_CRVE_CG_D1_4RE_3D'
+arquivo     = modelo + '\convergencias1_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
 lblcoluna   = 'EPVP_CRVE'
 cor         = 'r'
 tamanho     = 2
 ordem       = 3
-alpha       = 0.9
+alpha       = 1
 estilo      = 'solid'
 graficar(arquivo,titulo,eixox,eixoy,
           xmin,xmax,ymin,ymax,
@@ -1216,13 +1347,13 @@ graficar(arquivo,titulo,eixox,eixoy,
           figura)
 
 
-
+#%% 17. GALLERY CONVERGENCE PROFILES EP-CRE
 """ ********************************************
 GALLERY CONVERGENCE PROFILES EP-CRE
 ******************************************** """ 
 
 # Formatação do gráfico
-figura      = 14
+figura      = figura+1
 titulo      = 'Gallery Convergence Profiles EP_CRE'
 eixox       = r'$y/R_{e1}$'  
 eixoy       = r'$U{1}=-u{1}(R_{e1},\theta = 90^\circ)/R_{e1}$ [%]'
@@ -1241,13 +1372,14 @@ filterx2    = 80
 wl          = 10
 poly        = 6
 
-arquivo     = 'EP_CRE_CG_D1_4RE_3D\convergencias1_90.txt'
-ncoluna     = 81
+modelo      = 'EP_CRE_CG_D1_4RE_3D'
+arquivo     = modelo + '\convergencias1_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
 lblcoluna   = '$d_1 = 4R_e$'
 cor         = 'r'
 tamanho     = 2
 ordem       = 3
-alpha       = 0.3
+alpha       = 1
 estilo      = 'solid'
 graficar(arquivo,titulo,eixox,eixoy,
           xmin,xmax,ymin,ymax,
@@ -1264,13 +1396,14 @@ filterx2    = 80
 wl          = 20
 poly        = 5
 
-arquivo     = 'EP_CRE_CG_D1_8RE_3D\convergencias1_90.txt'
-ncoluna     = 90
+modelo      = 'EP_CRE_CG_D1_8RE_3D'
+arquivo     = modelo + '\convergencias1_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
 lblcoluna   = '$d_1 = 8R_e$'
-cor         = 'r'
+cor         = 'g'
 tamanho     = 2
 ordem       = 3
-alpha       = 0.6
+alpha       = 1
 estilo      = 'solid'
 graficar(arquivo,titulo,eixox,eixoy,
           xmin,xmax,ymin,ymax,
@@ -1281,13 +1414,14 @@ graficar(arquivo,titulo,eixox,eixoy,
           suavizar,filterx1,filterx2,wl,poly,
           figura)
 
-arquivo     = 'EP_CRE_CG_D1_16RE_3D\convergencias1_90.txt'
-ncoluna     = 107
+modelo      = 'EP_CRE_CG_D1_16RE_3D'
+arquivo     = modelo + '\convergencias1_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
 lblcoluna   = '$d_1 = 16R_e$'
-cor         = 'r'
+cor         = 'orange'
 tamanho     = 2
 ordem       = 3
-alpha       = 0.9
+alpha       = 1
 estilo      = 'solid'
 graficar(arquivo,titulo,eixox,eixoy,
           xmin,xmax,ymin,ymax,
@@ -1299,13 +1433,13 @@ graficar(arquivo,titulo,eixox,eixoy,
           figura)
 
 
-
+#%% 18. GALLERY CONVERGENCE PROFILES - LONG-TERM - EPVP-CRE
 """ ********************************************
 GALLERY CONVERGENCE PROFILES - LONG-TERM - EPVP-CRE
 ******************************************** """ 
 
 # Formatação do gráfico
-figura      = 15
+figura      = figura+1
 titulo      = 'Gallery Convergence Profiles - Long-term - EPVP_CRE'
 eixox       = r'$y/R_{e1}$'  
 eixoy       = r'$U{1}=-u{1}(R_{e1},\theta = 90^\circ)/R_{e1}$ [%]'
@@ -1324,13 +1458,14 @@ filterx2    = 80
 wl          = 10
 poly        = 6
 
-arquivo     = 'EPVP_CRE_CG_D1_4RE_3D\convergencias1_90.txt'
-ncoluna     = 111
+modelo      = 'EPVP_CRE_CG_D1_4RE_3D'
+arquivo     = modelo + '\convergencias1_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
 lblcoluna   = '$d_1 = 4R_e$'
 cor         = 'r'
 tamanho     = 2
 ordem       = 3
-alpha       = 0.3
+alpha       = 1
 estilo      = 'solid'
 graficar(arquivo,titulo,eixox,eixoy,
           xmin,xmax,ymin,ymax,
@@ -1347,13 +1482,14 @@ filterx2    = 80
 wl          = 20
 poly        = 5
 
-arquivo     = 'EPVP_CRE_CG_D1_8RE_3D\convergencias1_90.txt'
-ncoluna     = 120
+modelo      = 'EPVP_CRE_CG_D1_8RE_3D'
+arquivo     = modelo + '\convergencias1_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
 lblcoluna   = '$d_1 = 8R_e$'
-cor         = 'r'
+cor         = 'g'
 tamanho     = 2
 ordem       = 3
-alpha       = 0.6
+alpha       = 1
 estilo      = 'solid'
 graficar(arquivo,titulo,eixox,eixoy,
           xmin,xmax,ymin,ymax,
@@ -1364,13 +1500,14 @@ graficar(arquivo,titulo,eixox,eixoy,
           suavizar,filterx1,filterx2,wl,poly,
           figura)
 
-arquivo     = 'EPVP_CRE_CG_D1_16RE_3D\convergencias1_90.txt'
-ncoluna     = 137
+modelo      = 'EPVP_CRE_CG_D1_16RE_3D'
+arquivo     = modelo + '\convergencias1_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
 lblcoluna   = '$d_1 = 16R_e$'
-cor         = 'r'
+cor         = 'orange'
 tamanho     = 2
 ordem       = 3
-alpha       = 0.9
+alpha       = 1
 estilo      = 'solid'
 graficar(arquivo,titulo,eixox,eixoy,
           xmin,xmax,ymin,ymax,
@@ -1381,12 +1518,13 @@ graficar(arquivo,titulo,eixox,eixoy,
           suavizar,filterx1,filterx2,wl,poly,
           figura)
 
+#%% 19. GALLERY CONVERGENCE PROFILES - LONG-TERM - EPVP-CRVE
 """ ********************************************
 GALLERY CONVERGENCE PROFILES - LONG-TERM - EPVP-CRVE
 ******************************************** """ 
 
 # Formatação do gráfico
-figura      = 16
+figura      = figura+1
 titulo      = 'Gallery Convergence Profiles - Long-term - EPVP_CRVE'
 eixox       = r'$y/R_{e1}$'  
 eixoy       = r'$U{1}=-u{1}(R_{e1},\theta = 90^\circ)/R_{e1}$ [%]'
@@ -1405,13 +1543,14 @@ filterx2    = 80
 wl          = 10
 poly        = 6
 
-arquivo     = 'EPVP_CRVE_CG_D1_4RE_3D\convergencias1_90.txt'
-ncoluna     = 111
+modelo      = 'EPVP_CRVE_CG_D1_4RE_3D'
+arquivo     = modelo + '\convergencias1_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
 lblcoluna   = '$d_1 = 4R_e$'
 cor         = 'r'
 tamanho     = 2
 ordem       = 3
-alpha       = 0.3
+alpha       = 1
 estilo      = 'solid'
 graficar(arquivo,titulo,eixox,eixoy,
           xmin,xmax,ymin,ymax,
@@ -1428,13 +1567,14 @@ filterx2    = 80
 wl          = 20
 poly        = 5
 
-arquivo     = 'EPVP_CRVE_CG_D1_8RE_3D\convergencias1_90.txt'
-ncoluna     = 120
+modelo      = 'EPVP_CRVE_CG_D1_8RE_3D'
+arquivo     = modelo + '\convergencias1_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
 lblcoluna   = '$d_1 = 8R_e$'
-cor         = 'r'
+cor         = 'g'
 tamanho     = 2
 ordem       = 3
-alpha       = 0.6
+alpha       = 1
 estilo      = 'solid'
 graficar(arquivo,titulo,eixox,eixoy,
           xmin,xmax,ymin,ymax,
@@ -1445,13 +1585,14 @@ graficar(arquivo,titulo,eixox,eixoy,
           suavizar,filterx1,filterx2,wl,poly,
           figura)
 
-arquivo     = 'EPVP_CRVE_CG_D1_16RE_3D\convergencias1_90.txt'
-ncoluna     = 137
+modelo      = 'EPVP_CRVE_CG_D1_16RE_3D'
+arquivo     = modelo + '\convergencias1_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
 lblcoluna   = '$d_1 = 16R_e$'
-cor         = 'r'
+cor         = 'orange'
 tamanho     = 2
 ordem       = 3
-alpha       = 0.9
+alpha       = 1
 estilo      = 'solid'
 graficar(arquivo,titulo,eixox,eixoy,
           xmin,xmax,ymin,ymax,
@@ -1464,13 +1605,13 @@ graficar(arquivo,titulo,eixox,eixoy,
 
 
 
-
+#%% 20. PRESSURE PROFILES - EP_CRE
 """ ********************************************
 PRESSURE PROFILES - EP_CRE
 ******************************************** """ 
 
 # Formatação do gráfico
-figura      = 17
+figura      = figura+1
 titulo      = 'Pressure Profiles - EP_CRE'
 eixox       = r'$y/R_e$'  
 eixoy       = r'$p=p(R_e,\theta = 90^\circ)$ [MPa]'
@@ -1489,11 +1630,11 @@ filterx2    = 90
 wl          = 40
 poly        = 2
 
-
-arquivo     = 'EP-CRE-SG-D1-INF-AXI\pressure.txt'
-ncoluna     = 79
+modelo      = 'EP_CRE_SG_D1_INF_AXI'
+arquivo     = modelo + '\pressure.txt'
+ncoluna     = dicncolunalongterm[modelo]
 lblcoluna   = '$d_1 = \infty$ and without gallery'
-cor         = 'b'
+cor         = 'k'
 tamanho     = 1.5
 ordem       = 4
 alpha       = 1
@@ -1507,13 +1648,14 @@ graficar(arquivo,titulo,eixox,eixoy,
           suavizar,filterx1,filterx2,wl,poly,
           figura)
 
-arquivo     = 'EP_CRE_CG_D1_16RE_3D\pressure_90.txt'
-ncoluna     = 107
+modelo      = 'EP_CRE_CG_D1_16RE_3D'
+arquivo     = modelo + '\pressure_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
 lblcoluna   = '$d_1 = 16R_e$'
-cor         = 'r'
+cor         = 'orange'
 tamanho     = 2
 ordem       = 3
-alpha       = 0.3
+alpha       = 1
 estilo      = 'solid'
 graficar(arquivo,titulo,eixox,eixoy,
           xmin,xmax,ymin,ymax,
@@ -1524,13 +1666,14 @@ graficar(arquivo,titulo,eixox,eixoy,
           suavizar,filterx1,filterx2,wl,poly,
           figura)
 
-arquivo     = 'EP_CRE_CG_D1_8RE_3D\pressure_90.txt'
-ncoluna     = 90
+modelo      = 'EP_CRE_CG_D1_8RE_3D'
+arquivo     = modelo + '\pressure_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
 lblcoluna   = ' $d_1 = 8R_e$'
-cor         = 'r'
+cor         = 'g'
 tamanho     = 2
 ordem       = 2
-alpha       = 0.6
+alpha       = 1
 estilo      = 'solid'
 graficar(arquivo,titulo,eixox,eixoy,
           xmin,xmax,ymin,ymax,
@@ -1541,8 +1684,9 @@ graficar(arquivo,titulo,eixox,eixoy,
           suavizar,filterx1,filterx2,wl,poly,
           figura)
 
-arquivo     = 'EP_CRE_CG_D1_4RE_3D\pressure_90.txt'
-ncoluna     = 81
+modelo      = 'EP_CRE_CG_D1_4RE_3D'
+arquivo     = modelo + '\pressure_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
 lblcoluna   = '$d_1 = 4R_e$'
 cor         = 'r'
 tamanho     = 2
@@ -1558,12 +1702,13 @@ graficar(arquivo,titulo,eixox,eixoy,
           suavizar,filterx1,filterx2,wl,poly,
           figura)
 
+#%% 21. PRESSURE PROFILES - LONG-TERM - EPVP_CRE
 """ ********************************************
 PRESSURE PROFILES - LONG-TERM - EPVP_CRE
 ******************************************** """ 
 
 # Formatação do gráfico
-figura      = 18
+figura      = figura+1
 titulo      = 'Pressure Profiles - Long-term - EPVP_CRE'
 eixox       = r'$y/R_e$'  
 eixoy       = r'$p=p(R_e,\theta = 90^\circ)$ [MPa]'
@@ -1582,11 +1727,11 @@ filterx2    = 90
 wl          = 30
 poly        = 2
 
-
-arquivo     = 'EPVP-CRE-SG-D1-INF-AXI\pressure.txt'
-ncoluna     = 109
+modelo      = 'EPVP_CRE_SG_D1_INF_AXI'
+arquivo     = modelo + '\pressure.txt'
+ncoluna     = dicncolunalongterm[modelo]
 lblcoluna   = '$d_1 = \infty$ and without gallery'
-cor         = 'b'
+cor         = 'k'
 tamanho     = 1.5
 ordem       = 4
 alpha       = 1
@@ -1600,13 +1745,14 @@ graficar(arquivo,titulo,eixox,eixoy,
           suavizar,filterx1,filterx2,wl,poly,
           figura)
 
-arquivo     = 'EPVP_CRE_CG_D1_16RE_3D\pressure_90.txt'
-ncoluna     = 137
+modelo      = 'EPVP_CRE_CG_D1_16RE_3D'
+arquivo     = modelo + '\pressure_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
 lblcoluna   = '$d_1 = 16R_e$'
-cor         = 'r'
+cor         = 'orange'
 tamanho     = 2
 ordem       = 3
-alpha       = 0.3
+alpha       = 1
 estilo      = 'solid'
 graficar(arquivo,titulo,eixox,eixoy,
           xmin,xmax,ymin,ymax,
@@ -1617,13 +1763,14 @@ graficar(arquivo,titulo,eixox,eixoy,
           suavizar,filterx1,filterx2,wl,poly,
           figura)
 
-arquivo     = 'EPVP_CRE_CG_D1_8RE_3D\pressure_90.txt'
-ncoluna     = 120
+modelo      = 'EPVP_CRE_CG_D1_8RE_3D'
+arquivo     = modelo + '\pressure_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
 lblcoluna   = ' $d_1 = 8R_e$'
-cor         = 'r'
+cor         = 'g'
 tamanho     = 2
 ordem       = 2
-alpha       = 0.6
+alpha       = 1
 estilo      = 'solid'
 graficar(arquivo,titulo,eixox,eixoy,
           xmin,xmax,ymin,ymax,
@@ -1634,8 +1781,9 @@ graficar(arquivo,titulo,eixox,eixoy,
           suavizar,filterx1,filterx2,wl,poly,
           figura)
 
-arquivo     = 'EPVP_CRE_CG_D1_4RE_3D\pressure_90.txt'
-ncoluna     = 111
+modelo      = 'EPVP_CRE_CG_D1_4RE_3D'
+arquivo     = modelo + '\pressure_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
 lblcoluna   = '$d_1 = 4R_e$'
 cor         = 'r'
 tamanho     = 2
@@ -1651,12 +1799,13 @@ graficar(arquivo,titulo,eixox,eixoy,
           suavizar,filterx1,filterx2,wl,poly,
           figura)
 
+#%% 22. PRESSURE PROFILES - LONG-TERM - EPVP_CRVE
 """ ********************************************
 PRESSURE PROFILES - LONG-TERM - EPVP_CRVE
 ******************************************** """ 
 
 # Formatação do gráfico
-figura      = 19
+figura      = figura+1
 titulo      = 'Pressure Profiles - Long-term - EPVP_CRVE'
 eixox       = r'$y/R_e$'  
 eixoy       = r'$p=p(R_e,\theta = 90^\circ)$ [MPa]'
@@ -1675,11 +1824,11 @@ filterx2    = 90
 wl          = 30
 poly        = 2
 
-
-arquivo     = 'EPVP-CRVE-SG-D1-INF-AXI\pressure.txt'
-ncoluna     = 109
+modelo      = 'EPVP_CRVE_SG_D1_INF_AXI'
+arquivo     = modelo + '\pressure.txt'
+ncoluna     = dicncolunalongterm[modelo]
 lblcoluna   = '$d_1 = \infty$ and without gallery'
-cor         = 'b'
+cor         = 'k'
 tamanho     = 1.5
 ordem       = 4
 alpha       = 1
@@ -1693,13 +1842,14 @@ graficar(arquivo,titulo,eixox,eixoy,
           suavizar,filterx1,filterx2,wl,poly,
           figura)
 
-arquivo     = 'EPVP_CRVE_CG_D1_16RE_3D\pressure_90.txt'
-ncoluna     = 137
+modelo      = 'EPVP_CRVE_CG_D1_16RE_3D'
+arquivo     = modelo + '\pressure_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
 lblcoluna   = '$d_1 = 16R_e$'
-cor         = 'r'
+cor         = 'orange'
 tamanho     = 2
 ordem       = 3
-alpha       = 0.3
+alpha       = 1
 estilo      = 'solid'
 graficar(arquivo,titulo,eixox,eixoy,
           xmin,xmax,ymin,ymax,
@@ -1710,13 +1860,14 @@ graficar(arquivo,titulo,eixox,eixoy,
           suavizar,filterx1,filterx2,wl,poly,
           figura)
 
-arquivo     = 'EPVP_CRVE_CG_D1_8RE_3D\pressure_90.txt'
-ncoluna     = 120
+modelo      = 'EPVP_CRVE_CG_D1_8RE_3D'
+arquivo     = modelo + '\pressure_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
 lblcoluna   = ' $d_1 = 8R_e$'
-cor         = 'r'
+cor         = 'g'
 tamanho     = 2
 ordem       = 2
-alpha       = 0.6
+alpha       = 1
 estilo      = 'solid'
 graficar(arquivo,titulo,eixox,eixoy,
           xmin,xmax,ymin,ymax,
@@ -1727,8 +1878,9 @@ graficar(arquivo,titulo,eixox,eixoy,
           suavizar,filterx1,filterx2,wl,poly,
           figura)
 
-arquivo     = 'EPVP_CRVE_CG_D1_4RE_3D\pressure_90.txt'
-ncoluna     = 111
+modelo      = 'EPVP_CRVE_CG_D1_4RE_3D'
+arquivo     = modelo + '\pressure_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
 lblcoluna   = '$d_1 = 4R_e$'
 cor         = 'r'
 tamanho     = 2
@@ -1744,146 +1896,3 @@ graficar(arquivo,titulo,eixox,eixoy,
           suavizar,filterx1,filterx2,wl,poly,
           figura)
 
-# figura      = 1
-# arquivo     = 'EPVP_CRVE_CG_D1_4RE_3D\convergencias_90.txt'
-# ncoluna     = 111
-# lblcoluna   = 'EPVP_CRVE - $d_1 = 4R_e$'
-# cor         = 'pink'
-# tamanho     = 3
-# ordem       = 1
-# alpha       = 1
-# graficar(arquivo,titulo,eixox,eixoy,
-#          xmin,xmax,ymin,ymax,
-#          ncoluna,lblcoluna,
-#          cor,tamanho,ordem,alpha,
-#          invertx,
-#          suavizar,filterx1,filterx2,wl,poly,
-#          figura)
-
-# figura      = 1
-# arquivo     = 'EP_CRE_CG_D1_8RE_3D\convergencias_90.txt'
-# ncoluna     = 90
-# lblcoluna   = 'EP_CRE - $d_1 = 8R_e$'
-# cor         = 'g'
-# tamanho     = 3
-# ordem       = 1
-# alpha       = 1
-# graficar(arquivo,titulo,eixox,eixoy,
-#           xmin,xmax,ymin,ymax,
-#           ncoluna,lblcoluna,
-#           cor,tamanho,ordem,alpha,
-#           invertx,
-#           suavizar,filterx1,filterx2,wl,poly,
-#           figura)
-
-# figura      = 1
-# arquivo     = 'EP_CRE_CG_D1_16RE_3D\convergencias_90.txt'
-# ncoluna     = 107
-# lblcoluna   = 'EP_CRE - $d_1 = 16R_e$'
-# cor         = 'r'
-# tamanho     = 3
-# ordem       = 1
-# alpha       = 1
-# graficar(arquivo,titulo,eixox,eixoy,
-#           xmin,xmax,ymin,ymax,
-#           ncoluna,lblcoluna,
-#           cor,tamanho,ordem,alpha,
-#           invertx,
-#           suavizar,filterx1,filterx2,wl,poly,
-#           figura)
-
-# figura      = 1
-# arquivo     = 'EP-CRE-SG-D1-INF-AXI\convergencias.txt'
-# ncoluna     = 79
-# lblcoluna   = 'EP_CRE - AXI'
-# cor         = 'gray'
-# tamanho     = 3
-# ordem       = 1
-# alpha       = 1
-# graficar(arquivo,titulo,eixox,eixoy,
-#           xmin,xmax,ymin,ymax,
-#           ncoluna,lblcoluna,
-#           cor,tamanho,ordem,alpha,
-#           invertx,
-#           suavizar,filterx1,filterx2,wl,poly,
-#           figura)
-
-# # Colocar uma linha vertical
-# x0          = 80*1/3
-# lblx0       = 'Face'
-# plt.axvline(x0,color = 'k', label = lblx0, linestyle = '--')
-
-
-# #GALERIA
-
-
-# # Formatação do gráfico
-# titulo      = 'Gallery Convergence Profiles'
-# eixox       = r'$y/R_{e1}$'  
-# eixoy       = r'$U{1}=-u{1}(R_{e1},\theta = 90^\circ)/R_{e1}$ [%]'
-# ymin        = 0.75
-# ymax        = 1.9
-# xmin        = 0
-# xmax        = 12
-# invertx     = False
-
-# # parametros para o filtro de suavização
-# filterx1    = 0
-# filterx2    = 80
-# wl          = 20
-# poly        = 6
-
-
-# figura      = 2
-# arquivo     = 'EPVP_CRVE_CG_D1_16RE_3D\convergencias1_90.txt'
-# ncoluna     = 79
-# lblcoluna   = 'EPVP_CRVE - $d_1 = 16R_e$'
-# cor         = 'r'
-# tamanho     = 3
-# ordem       = 1
-# alpha       = 1
-# graficar(arquivo,titulo,eixox,eixoy,
-#           xmin,xmax,ymin,ymax,
-#           ncoluna,lblcoluna,
-#           cor,tamanho,ordem,alpha,
-#           invertx,
-#           suavizar,filterx1,filterx2,wl,poly,
-#           figura)
-
-# figura      = 2
-# arquivo     = 'EPVP_CRVE_CG_D1_8RE_3D\convergencias1_90.txt'
-# ncoluna     = 79
-# lblcoluna   = 'EPVP_CRVE - $d_1 = 8R_e$'
-# cor         = 'green'
-# tamanho     = 3
-# ordem       = 1
-# alpha       = 1
-# graficar(arquivo,titulo,eixox,eixoy,
-#           xmin,xmax,ymin,ymax,
-#           ncoluna,lblcoluna,
-#           cor,tamanho,ordem,alpha,
-#           invertx,
-#           suavizar,filterx1,filterx2,wl,poly,
-#           figura)
-
-# # parametros para o filtro de suavização
-# filterx1    = 0
-# filterx2    = 80
-# wl          = 10
-# poly        = 6
-
-# figura      = 2
-# arquivo     = 'EPVP_CRVE_CG_D1_4RE_3D\convergencias1_90.txt'
-# ncoluna     = 79
-# lblcoluna   = 'EPVP_CRVE - $d_1 = 4R_e$'
-# cor         = 'b'
-# tamanho     = 3
-# ordem       = 1
-# alpha       = 1
-# graficar(arquivo,titulo,eixox,eixoy,
-#           xmin,xmax,ymin,ymax,
-#           ncoluna,lblcoluna,
-#           cor,tamanho,ordem,alpha,
-#           invertx,
-#           suavizar,filterx1,filterx2,wl,poly,
-#           figura)
