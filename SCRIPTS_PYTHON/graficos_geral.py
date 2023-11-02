@@ -8,9 +8,11 @@ Situação : Teste (11/07/2020)
 
 #%% 1. IMPORTAR BIBLIOTECAS
 
-import pandas as pd                   # importa o pacote para manmipular tabelas 
-import matplotlib.pyplot as plt       # importa o módulo para plotagem
+import pandas as pd                    # importa o pacote para manmipular tabelas 
+import matplotlib.pyplot as plt        # importa o módulo para plotagem
 from scipy.signal import savgol_filter # importa filtro
+import locale                          # importa módulo para definir a localização usada no ponto decimal
+from matplotlib.ticker import StrMethodFormatter # importa módulo para formatar eixo
 
 #%% 2. FUNÇÃO GRAFICAR
 
@@ -26,6 +28,9 @@ def graficar(arquivo,                   # nome do arquivo de leitura
              inserirx0,x0,              # adicionar linha pontilhada vertical
              suavizar,filterx1,filterx2,wl,poly, # parametros do filtro de suavização
              figura):
+    
+    # define localização para o ponto decimal
+    locale.setlocale(locale.LC_NUMERIC,"ru_RU.utf8")
     
     # Lendo arquivo de dados      
     data = pd.read_csv(arquivo,delim_whitespace= True).values
@@ -60,9 +65,15 @@ def graficar(arquivo,                   # nome do arquivo de leitura
     #plt.axvline(x0,color = 'k', label = lblx0, linestyle = '--')
     plt.ylim([ymin, ymax])
     plt.xlim([xmin-x0, xmax-x0])
-    plt.ylabel(eixoy)
-    plt.xlabel(eixox)
+    plt.ylabel(eixoy, fontsize=12)
+    plt.xlabel(eixox, fontsize=12)
     plt.legend()
+    
+    # numero de dígitos após o ponto decimal
+    #plt.gca().yaxis.set_major_formatter(StrMethodFormatter("{x:.2f}")
+    
+    # aplica localização para o ponto decimal
+    plt.rcParams['axes.formatter.use_locale'] = True
     
     # Formatando grades
     plt.rcParams['axes.axisbelow'] = True 
@@ -75,7 +86,7 @@ def graficar(arquivo,                   # nome do arquivo de leitura
         plt.axvline(x0-x0,color = 'k', lw = 2, linestyle = 'dotted')
     
     # adicionando título
-    plt.title(titulo, fontsize = 16) 
+    plt.title(titulo, fontsize = 16, fontweight="bold") 
     #plt.autoscale(axis='y')
     
     # Formatando a legenda
@@ -85,7 +96,8 @@ def graficar(arquivo,                   # nome do arquivo de leitura
         framealpha = 0,
         ncol = 4,
         columnspacing = 0.5,
-        bbox_to_anchor=(0.5, -0.2))
+        bbox_to_anchor=(0.5, -0.2),
+        fontsize="11")
     
     # Salvando em arquivo    
     plt.savefig(str(titulo) + '.pdf', 
@@ -165,6 +177,43 @@ dicncolunafinalexcavation = {
        
     }
 
+# Parametros para o túnel gêmeo
+x0_twin_profile                         = 80*1/3
+xmin_twin_profile                       = 5
+xmax_twin_profile                       = 35
+ymin_twin_convergence_profile           = 0
+ymax_twin_convergence_profile           = 1.5
+ymin_twin_pressure_profile              = -15
+ymax_twin_pressure_profile              = 1
+
+suavizar_twin                           = True
+
+filterx1_twin_convergence_profile       = 35
+filterx2_twin_convergence_profile       = 90
+wl_twin_convergence_profile             = 30
+poly_twin_convergence_profile           = 10
+
+filterx1_twin_pressure_profile          = 35
+filterx2_twin_pressure_profile          = 90
+wl_twin_pressure_profile                = 30
+poly_twin_pressure_profile              = 2
+
+# Parametros para galeria
+x0_gallery_profile                      = 0
+xmin_gallery_profile                    = 0
+xmax_gallery_profile                    = 12
+ymin_gallery_convergence_profile        = 0
+ymax_gallery_convergence_profile        = 2
+ymin_gallery_pressure_profile           = 0
+ymax_gallery_pressure_profile           = 1.5
+
+suavizar_gallery                        = True
+
+filterx1_gallery_convergence_profile    = 0
+filterx2_gallery_convergence_profile    = 80
+wl_gallery_convergence_profile          = 10
+poly_gallery_convergence_profile        = 4
+
 ncoluna = dicncolunalongterm['EP_CRE_SG_D1_INF_AXI']
 
 #%% 4. CONVERGENCE PROFILES - MODEL EP_CRE
@@ -175,22 +224,22 @@ CONVERGENCE PROFILES - MODEL EP_CRE
 # Formatação do gráfico
 figura      = 1
 titulo      = 'Convergence Profiles - EP_CRE'
-eixox       = r'$y/R_e$'  
-eixoy       = r'$U=-u(R_e,\theta = 90^\circ)/R_{e}$ [%]'
-ymin        = 0
-ymax        = 1.5
-xmin        = 5
-xmax        = 35
+eixox       = r'$x/R_e$'  
+eixoy       = r'$U=-u(r = R_e,\theta = 90^\circ)/R_{e}$ [%]'
+ymin        = ymin_twin_convergence_profile
+ymax        = ymax_twin_convergence_profile
+xmin        = xmin_twin_profile
+xmax        = xmax_twin_profile
 invertx     = True
 inserirx0   = True
-x0          = 80*1/3
-suavizar    = True
+x0          = x0_twin_profile
+suavizar    = suavizar_twin
 
 # parametros para o filtro de suavização
-filterx1    = 35
-filterx2    = 90
-wl          = 30
-poly        = 10
+filterx1    = filterx1_twin_convergence_profile
+filterx2    = filterx2_twin_convergence_profile
+wl          = wl_twin_convergence_profile
+poly        = poly_twin_convergence_profile
 
 modelo      = 'EP_CRE_SG_D1_INF_AXI'
 arquivo     = modelo + '\convergencias.txt'
@@ -274,22 +323,22 @@ CONVERGENCE PROFILES - LONG-TERM - MODEL VP_CRE
 # Formatação do gráfico
 figura      = figura+1
 titulo      = 'Convergence Profiles - Long-term - VP_CRE'
-eixox       = r'$y/R_e$'  
-eixoy       = r'$U=-u(R_e,\theta = 90^\circ)/R_{e}$ [%]'
-ymin        = 0
-ymax        = 1.5
-xmin        = 5
-xmax        = 35
+eixox       = r'$x/R_e$'  
+eixoy       = r'$U=-u(r = R_e,\theta = 90^\circ)/R_{e}$ [%]'
+ymin        = ymin_twin_convergence_profile
+ymax        = ymax_twin_convergence_profile
+xmin        = xmin_twin_profile
+xmax        = xmax_twin_profile
 invertx     = True
 inserirx0   = True
-x0          = 80*1/3
-suavizar    = True
+x0          = x0_twin_profile
+suavizar    = suavizar_twin
 
 # parametros para o filtro de suavização
-filterx1    = 35
-filterx2    = 90
-wl          = 30
-poly        = 10
+filterx1    = filterx1_twin_convergence_profile
+filterx2    = filterx2_twin_convergence_profile
+wl          = wl_twin_convergence_profile
+poly        = poly_twin_convergence_profile
 
 
 modelo      = 'VP_CRE_SG_D1_INF_AXI'
@@ -354,22 +403,22 @@ CONVERGENCE PROFILES - FINAL EXCAVATION - MODEL VP_CRE
 # Formatação do gráfico
 figura      = figura+1
 titulo      = 'Convergence Profiles - Final excavation - VP_CRE'
-eixox       = r'$y/R_e$'  
-eixoy       = r'$U=-u(R_e,\theta = 90^\circ)/R_{e}$ [%]'
-ymin        = 0
-ymax        = 1.5
-xmin        = 5
-xmax        = 35
+eixox       = r'$x/R_e$'  
+eixoy       = r'$U=-u(r = R_e,\theta = 90^\circ)/R_{e}$ [%]'
+ymin        = ymin_twin_convergence_profile
+ymax        = ymax_twin_convergence_profile
+xmin        = xmin_twin_profile
+xmax        = xmax_twin_profile
 invertx     = True
 inserirx0   = True
-x0          = 80*1/3
-suavizar    = True
+x0          = x0_twin_profile
+suavizar    = suavizar_twin
 
 # parametros para o filtro de suavização
-filterx1    = 35
-filterx2    = 90
-wl          = 30
-poly        = 10
+filterx1    = filterx1_twin_convergence_profile
+filterx2    = filterx2_twin_convergence_profile
+wl          = wl_twin_convergence_profile
+poly        = poly_twin_convergence_profile
 
 modelo      = 'VP_CRE_SG_D1_INF_AXI'
 arquivo     = modelo + '\convergencias.txt'
@@ -434,22 +483,22 @@ CONVERGENCE PROFILES - LONG-TERM - EPVP_CRE
 # Formatação do gráfico
 figura      = figura+1
 titulo      = 'Convergence Profiles - Long-term - EPVP_CRE'
-eixox       = r'$y/R_e$'  
-eixoy       = r'$U=-u(R_e,\theta = 90^\circ)/R_{e}$ [%]'
-ymin        = 0
-ymax        = 1.5
-xmin        = 5
-xmax        = 35
+eixox       = r'$x/R_e$'  
+eixoy       = r'$U=-u(r = R_e,\theta = 90^\circ)/R_{e}$ [%]'
+ymin        = ymin_twin_convergence_profile
+ymax        = ymax_twin_convergence_profile
+xmin        = xmin_twin_profile
+xmax        = xmax_twin_profile
 invertx     = True
 inserirx0   = True
-x0          = 80*1/3
-suavizar    = True
+x0          = x0_twin_profile
+suavizar    = suavizar_twin
 
 # parametros para o filtro de suavização
-filterx1    = 35
-filterx2    = 90
-wl          = 30
-poly        = 10
+filterx1    = filterx1_twin_convergence_profile
+filterx2    = filterx2_twin_convergence_profile
+wl          = wl_twin_convergence_profile
+poly        = poly_twin_convergence_profile
 
 
 modelo      = 'EPVP_CRE_SG_D1_INF_AXI'
@@ -532,22 +581,22 @@ CONVERGENCE PROFILES - FINAL-EXCAVATION - EPVP_CRE
 # Formatação do gráfico
 figura      = figura+1
 titulo      = 'Convergence Profiles - Final Excavation - EPVP_CRE'
-eixox       = r'$y/R_e$'  
-eixoy       = r'$U=-u(R_e,\theta = 90^\circ)/R_{e}$ [%]'
-ymin        = 0
-ymax        = 1.5
-xmin        = 5
-xmax        = 35
+eixox       = r'$x/R_e$'  
+eixoy       = r'$U=-u(r = R_e,\theta = 90^\circ)/R_{e}$ [%]'
+ymin        = ymin_twin_convergence_profile
+ymax        = ymax_twin_convergence_profile
+xmin        = xmin_twin_profile
+xmax        = xmax_twin_profile
 invertx     = True
 inserirx0   = True
-x0          = 80*1/3
-suavizar    = True
+x0          = x0_twin_profile
+suavizar    = suavizar_twin
 
 # parametros para o filtro de suavização
-filterx1    = 35
-filterx2    = 90
-wl          = 30
-poly        = 10
+filterx1    = filterx1_twin_convergence_profile
+filterx2    = filterx2_twin_convergence_profile
+wl          = wl_twin_convergence_profile
+poly        = poly_twin_convergence_profile
 
 modelo      = 'EPVP_CRE_SG_D1_INF_AXI'
 arquivo     = modelo + '\convergencias.txt'
@@ -629,22 +678,22 @@ CONVERGENCE PROFILES - LONG-TERM - EPVP_CRVE
 # Formatação do gráfico
 figura      = figura+1
 titulo      = 'Convergence Profiles - Long-term - EPVP_CRVE'
-eixox       = r'$y/R_e$'  
-eixoy       = r'$U=-u(R_e,\theta = 90^\circ)/R_{e}$ [%]'
-ymin        = 0
-ymax        = 1.5
-xmin        = 5
-xmax        = 35
+eixox       = r'$x/R_e$'  
+eixoy       = r'$U=-u(r = R_e,\theta = 90^\circ)/R_{e}$ [%]'
+ymin        = ymin_twin_convergence_profile
+ymax        = ymax_twin_convergence_profile
+xmin        = xmin_twin_profile
+xmax        = xmax_twin_profile
 invertx     = True
 inserirx0   = True
-x0          = 80*1/3
-suavizar    = True
+x0          = x0_twin_profile
+suavizar    = suavizar_twin
 
 # parametros para o filtro de suavização
-filterx1    = 35
-filterx2    = 90
-wl          = 30
-poly        = 10
+filterx1    = filterx1_twin_convergence_profile
+filterx2    = filterx2_twin_convergence_profile
+wl          = wl_twin_convergence_profile
+poly        = poly_twin_convergence_profile
 
 
 modelo      = 'EPVP_CRVE_SG_D1_INF_AXI'
@@ -727,22 +776,22 @@ CONVERGENCE PROFILES - FINAL EXCAVATION - EPVP_CRVE
 # Formatação do gráfico
 figura      = figura+1
 titulo      = 'Convergence Profiles - Final excavation - EPVP_CRVE'
-eixox       = r'$y/R_e$'  
-eixoy       = r'$U=-u(R_e,\theta = 90^\circ)/R_{e}$ [%]'
-ymin        = 0
-ymax        = 1.5
-xmin        = 5
-xmax        = 35
+eixox       = r'$x/R_e$'  
+eixoy       = r'$U=-u(r = R_e,\theta = 90^\circ)/R_{e}$ [%]'
+ymin        = ymin_twin_convergence_profile
+ymax        = ymax_twin_convergence_profile
+xmin        = xmin_twin_profile
+xmax        = xmax_twin_profile
 invertx     = True
 inserirx0   = True
-x0          = 80*1/3
-suavizar    = True
+x0          = x0_twin_profile
+suavizar    = suavizar_twin
 
 # parametros para o filtro de suavização
-filterx1    = 35
-filterx2    = 90
-wl          = 30
-poly        = 10
+filterx1    = filterx1_twin_convergence_profile
+filterx2    = filterx2_twin_convergence_profile
+wl          = wl_twin_convergence_profile
+poly        = poly_twin_convergence_profile
 
 
 modelo      = 'EPVP_CRVE_SG_D1_INF_AXI'
@@ -825,22 +874,22 @@ CONVERGENCE PROFILES - LONG-TERM - D1=16Re
 # Formatação do gráfico
 figura      = figura+1
 titulo      = 'Convergence Profiles - Long-term - $d_1=16R_e$'
-eixox       = r'$y/R_e$'  
-eixoy       = r'$U=-u(R_e,\theta = 90^\circ)/R_{e}$ [%]'
-ymin        = 0
-ymax        = 1.5
-xmin        = 5
-xmax        = 35
+eixox       = r'$x/R_e$'  
+eixoy       = r'$U=-u(r = R_e,\theta = 90^\circ)/R_{e}$ [%]'
+ymin        = ymin_twin_convergence_profile
+ymax        = ymax_twin_convergence_profile
+xmin        = xmin_twin_profile
+xmax        = xmax_twin_profile
 invertx     = True
 inserirx0   = True
-x0          = 80*1/3
-suavizar    = True
+x0          = x0_twin_profile
+suavizar    = suavizar_twin
 
 # parametros para o filtro de suavização
-filterx1    = 35
-filterx2    = 90
-wl          = 30
-poly        = 10
+filterx1    = filterx1_twin_convergence_profile
+filterx2    = filterx2_twin_convergence_profile
+wl          = wl_twin_convergence_profile
+poly        = poly_twin_convergence_profile
 
 
 modelo      = 'EP_CRE_CG_D1_16RE_3D'
@@ -905,22 +954,22 @@ CONVERGENCE PROFILES - LONG-TERM - D1=8Re
 # Formatação do gráfico
 figura      = figura+1
 titulo      = 'Convergence Profiles - Long-term - $d_1=8R_e$'
-eixox       = r'$y/R_e$'  
-eixoy       = r'$U=-u(R_e,\theta = 90^\circ)/R_{e}$ [%]'
-ymin        = 0
-ymax        = 1.5
-xmin        = 5
-xmax        = 35
+eixox       = r'$x/R_e$'  
+eixoy       = r'$U=-u(r = R_e,\theta = 90^\circ)/R_{e}$ [%]'
+ymin        = ymin_twin_convergence_profile
+ymax        = ymax_twin_convergence_profile
+xmin        = xmin_twin_profile
+xmax        = xmax_twin_profile
 invertx     = True
 inserirx0   = True
-x0          = 80*1/3
-suavizar    = True
+x0          = x0_twin_profile
+suavizar    = suavizar_twin
 
 # parametros para o filtro de suavização
-filterx1    = 35
-filterx2    = 90
-wl          = 30
-poly        = 10
+filterx1    = filterx1_twin_convergence_profile
+filterx2    = filterx2_twin_convergence_profile
+wl          = wl_twin_convergence_profile
+poly        = poly_twin_convergence_profile
 
 modelo      = 'EP_CRE_CG_D1_8RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
@@ -984,22 +1033,22 @@ CONVERGENCE PROFILES - LONG-TERM - D1=4Re
 # Formatação do gráfico
 figura      = figura+1
 titulo      = 'Convergence Profiles - Long-term - $d_1=4R_e$'
-eixox       = r'$y/R_e$'  
-eixoy       = r'$U=-u(R_e,\theta = 90^\circ)/R_{e}$ [%]'
-ymin        = 0
-ymax        = 1.5
-xmin        = 5
-xmax        = 35
+eixox       = r'$x/R_e$'  
+eixoy       = r'$U=-u(r = R_e,\theta = 90^\circ)/R_{e}$ [%]'
+ymin        = ymin_twin_convergence_profile
+ymax        = ymax_twin_convergence_profile
+xmin        = xmin_twin_profile
+xmax        = xmax_twin_profile
 invertx     = True
 inserirx0   = True
-x0          = 80*1/3
-suavizar    = True
+x0          = x0_twin_profile
+suavizar    = suavizar_twin
 
 # parametros para o filtro de suavização
-filterx1    = 35
-filterx2    = 90
-wl          = 30
-poly        = 10
+filterx1    = filterx1_twin_convergence_profile
+filterx2    = filterx2_twin_convergence_profile
+wl          = wl_twin_convergence_profile
+poly        = poly_twin_convergence_profile
 
 modelo      = 'EP_CRE_CG_D1_4RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
@@ -1064,21 +1113,21 @@ GALLERY CONVERGENCE PROFILES - LONG-TERM - D1=16Re
 figura      = figura+1
 titulo      = 'Gallery Convergence Profiles - Long-term - $d_1 = 16R_e$'
 eixox       = r'$y/R_{e1}$'  
-eixoy       = r'$U{1}=-u{1}(R_{e1},\theta = 90^\circ)/R_{e1}$ [%]'
-ymin        = 0
-ymax        = 2
-xmin        = 0
-xmax        = 12
+eixoy       = r'$U_{1}=-u_{1}(r = R_{e1},\theta = 90^\circ)/R_{e1}$ [%]'
+ymin        = ymin_gallery_convergence_profile
+ymax        = ymax_gallery_convergence_profile
+xmin        = xmin_gallery_profile
+xmax        = xmax_gallery_profile
 invertx     = False
 inserirx0   = False
 x0          = 0
-suavizar    = True
+suavizar    = suavizar_twin
 
 # parametros para o filtro de suavização
-filterx1    = 0
-filterx2    = 80
-wl          = 30
-poly        = 10
+filterx1    = filterx1_gallery_convergence_profile
+filterx2    = filterx2_gallery_convergence_profile
+wl          = wl_gallery_convergence_profile
+poly        = poly_gallery_convergence_profile
 
 modelo      = 'EP_CRE_SG_D1_16RE_3D'
 arquivo     = modelo + '\convergencias1_90.txt'
@@ -1095,7 +1144,7 @@ graficar(arquivo,titulo,eixox,eixoy,
           cor,tamanho,ordem,alpha,estilo,
           invertx,
           inserirx0,x0,
-          suavizar,filterx1,filterx2,wl,poly,
+          False,filterx1,filterx2,wl,poly,
           figura)
 
 modelo      = 'EP_CRE_CG_D1_16RE_3D'
@@ -1160,22 +1209,22 @@ GALLERY CONVERGENCE PROFILES - LONG-TERM - D1=8Re
 # Formatação do gráfico
 figura      = figura+1
 titulo      = 'Gallery Convergence Profiles - Long-term - $d_1 = 8R_e$'
-eixox       = r'$y/R_{e1}$'  
-eixoy       = r'$U{1}=-u{1}(R_{e1},\theta = 90^\circ)/R_{e1}$ [%]'
-ymin        = 0
-ymax        = 2
-xmin        = 0
-xmax        = 12
+eixox       = r'$x/R_{e1}$'  
+eixoy       = r'$U_{1}=-u_{1}(r = R_{e1},\theta = 90^\circ)/R_{e1}$ [%]'
+ymin        = ymin_gallery_convergence_profile
+ymax        = ymax_gallery_convergence_profile
+xmin        = xmin_gallery_profile
+xmax        = xmax_gallery_profile
 invertx     = False
 inserirx0   = False
 x0          = 0
-suavizar    = True
+suavizar    = suavizar_gallery
 
 # parametros para o filtro de suavização
-filterx1    = 0
-filterx2    = 80
-wl          = 20
-poly        = 5
+filterx1    = filterx1_gallery_convergence_profile
+filterx2    = filterx2_gallery_convergence_profile
+wl          = wl_gallery_convergence_profile
+poly        = poly_gallery_convergence_profile
 
 modelo      = 'EP_CRE_SG_D1_8RE_3D'
 arquivo     = modelo + '\convergencias1_90.txt'
@@ -1192,7 +1241,7 @@ graficar(arquivo,titulo,eixox,eixoy,
           cor,tamanho,ordem,alpha,estilo,
           invertx,
           inserirx0,x0,
-          suavizar,filterx1,filterx2,wl,poly,
+          False,filterx1,filterx2,wl,poly,
           figura)
 
 modelo      = 'EP_CRE_CG_D1_8RE_3D'
@@ -1257,22 +1306,22 @@ GALLERY CONVERGENCE PROFILES - LONG-TERM - D1=4Re
 # Formatação do gráfico
 figura      = figura+1
 titulo      = 'Gallery Convergence Profiles - Long-term - $d_1 = 4R_e$'
-eixox       = r'$y/R_{e1}$'  
-eixoy       = r'$U{1}=-u{1}(R_{e1},\theta = 90^\circ)/R_{e1}$ [%]'
-ymin        = 0
-ymax        = 2
-xmin        = 0
-xmax        = 12
+eixox       = r'$x/R_{e1}$'  
+eixoy       = r'$U_{1}=-u_{1}(r = R_{e1},\theta = 90^\circ)/R_{e1}$ [%]'
+ymin        = ymin_gallery_convergence_profile
+ymax        = ymax_gallery_convergence_profile
+xmin        = xmin_gallery_profile
+xmax        = xmax_gallery_profile
 invertx     = False
 inserirx0   = False
 x0          = 0
-suavizar    = True
+suavizar    = suavizar_gallery
 
 # parametros para o filtro de suavização
-filterx1    = 0
-filterx2    = 80
-wl          = 10
-poly        = 6
+filterx1    = filterx1_gallery_convergence_profile
+filterx2    = filterx2_gallery_convergence_profile
+wl          = wl_gallery_convergence_profile
+poly        = poly_gallery_convergence_profile
 
 modelo      = 'EP_CRE_SG_D1_4RE_3D'
 arquivo     = modelo + '\convergencias1_90.txt'
@@ -1289,7 +1338,7 @@ graficar(arquivo,titulo,eixox,eixoy,
           cor,tamanho,ordem,alpha,estilo,
           invertx,
           inserirx0,x0,
-          suavizar,filterx1,filterx2,wl,poly,
+          False,filterx1,filterx2,wl,poly,
           figura)
 
 modelo      = 'EP_CRE_CG_D1_4RE_3D'
@@ -1355,22 +1404,22 @@ GALLERY CONVERGENCE PROFILES EP-CRE
 # Formatação do gráfico
 figura      = figura+1
 titulo      = 'Gallery Convergence Profiles EP_CRE'
-eixox       = r'$y/R_{e1}$'  
-eixoy       = r'$U{1}=-u{1}(R_{e1},\theta = 90^\circ)/R_{e1}$ [%]'
-ymin        = 0.75
-ymax        = 2
-xmin        = 0
-xmax        = 12
+eixox       = r'$x/R_{e1}$'  
+eixoy       = r'$U_{1}=-u_{1}(r = R_{e1},\theta = 90^\circ)/R_{e1}$ [%]'
+ymin        = ymin_gallery_convergence_profile
+ymax        = ymax_gallery_convergence_profile
+xmin        = xmin_gallery_profile
+xmax        = xmax_gallery_profile
 invertx     = False
 inserirx0   = False
 x0          = 0
-suavizar    = True
+suavizar    = suavizar_gallery
 
 # parametros para o filtro de suavização
-filterx1    = 0
-filterx2    = 80
-wl          = 10
-poly        = 6
+filterx1    = filterx1_gallery_convergence_profile
+filterx2    = filterx2_gallery_convergence_profile
+wl          = wl_gallery_convergence_profile
+poly        = poly_gallery_convergence_profile
 
 modelo      = 'EP_CRE_CG_D1_4RE_3D'
 arquivo     = modelo + '\convergencias1_90.txt'
@@ -1389,12 +1438,6 @@ graficar(arquivo,titulo,eixox,eixoy,
           inserirx0,x0,
           suavizar,filterx1,filterx2,wl,poly,
           figura)
-
-# parametros para o filtro de suavização
-filterx1    = 0
-filterx2    = 80
-wl          = 20
-poly        = 5
 
 modelo      = 'EP_CRE_CG_D1_8RE_3D'
 arquivo     = modelo + '\convergencias1_90.txt'
@@ -1441,22 +1484,22 @@ GALLERY CONVERGENCE PROFILES - LONG-TERM - EPVP-CRE
 # Formatação do gráfico
 figura      = figura+1
 titulo      = 'Gallery Convergence Profiles - Long-term - EPVP_CRE'
-eixox       = r'$y/R_{e1}$'  
-eixoy       = r'$U{1}=-u{1}(R_{e1},\theta = 90^\circ)/R_{e1}$ [%]'
-ymin        = 0.75
-ymax        = 2
-xmin        = 0
-xmax        = 12
+eixox       = r'$x/R_{e1}$'  
+eixoy       = r'$U_{1}=-u_{1}(r = R_{e1},\theta = 90^\circ)/R_{e1}$ [%]'
+ymin        = ymin_gallery_convergence_profile
+ymax        = ymax_gallery_convergence_profile
+xmin        = xmin_gallery_profile
+xmax        = xmax_gallery_profile
 invertx     = False
 inserirx0   = False
 x0          = 0
-suavizar    = True
+suavizar    = suavizar_gallery
 
 # parametros para o filtro de suavização
-filterx1    = 0
-filterx2    = 80
-wl          = 10
-poly        = 6
+filterx1    = filterx1_gallery_convergence_profile
+filterx2    = filterx2_gallery_convergence_profile
+wl          = wl_gallery_convergence_profile
+poly        = poly_gallery_convergence_profile
 
 modelo      = 'EPVP_CRE_CG_D1_4RE_3D'
 arquivo     = modelo + '\convergencias1_90.txt'
@@ -1475,12 +1518,6 @@ graficar(arquivo,titulo,eixox,eixoy,
           inserirx0,x0,
           suavizar,filterx1,filterx2,wl,poly,
           figura)
-
-# parametros para o filtro de suavização
-filterx1    = 0
-filterx2    = 80
-wl          = 20
-poly        = 5
 
 modelo      = 'EPVP_CRE_CG_D1_8RE_3D'
 arquivo     = modelo + '\convergencias1_90.txt'
@@ -1526,22 +1563,22 @@ GALLERY CONVERGENCE PROFILES - LONG-TERM - EPVP-CRVE
 # Formatação do gráfico
 figura      = figura+1
 titulo      = 'Gallery Convergence Profiles - Long-term - EPVP_CRVE'
-eixox       = r'$y/R_{e1}$'  
-eixoy       = r'$U{1}=-u{1}(R_{e1},\theta = 90^\circ)/R_{e1}$ [%]'
-ymin        = 0.75
-ymax        = 2
-xmin        = 0
-xmax        = 12
+eixox       = r'$x/R_{e1}$'  
+eixoy       = r'$U_{1}=-u_{1}(r = R_{e1},\theta = 90^\circ)/R_{e1}$ [%]'
+ymin        = ymin_gallery_convergence_profile
+ymax        = ymax_gallery_convergence_profile
+xmin        = xmin_gallery_profile
+xmax        = xmax_gallery_profile
 invertx     = False
 inserirx0   = False
 x0          = 0
-suavizar    = True
+suavizar    = suavizar_gallery
 
 # parametros para o filtro de suavização
-filterx1    = 0
-filterx2    = 80
-wl          = 10
-poly        = 6
+filterx1    = filterx1_gallery_convergence_profile
+filterx2    = filterx2_gallery_convergence_profile
+wl          = wl_gallery_convergence_profile
+poly        = poly_gallery_convergence_profile
 
 modelo      = 'EPVP_CRVE_CG_D1_4RE_3D'
 arquivo     = modelo + '\convergencias1_90.txt'
@@ -1560,12 +1597,6 @@ graficar(arquivo,titulo,eixox,eixoy,
           inserirx0,x0,
           suavizar,filterx1,filterx2,wl,poly,
           figura)
-
-# parametros para o filtro de suavização
-filterx1    = 0
-filterx2    = 80
-wl          = 20
-poly        = 5
 
 modelo      = 'EPVP_CRVE_CG_D1_8RE_3D'
 arquivo     = modelo + '\convergencias1_90.txt'
@@ -1613,22 +1644,22 @@ PRESSURE PROFILES - EP_CRE
 # Formatação do gráfico
 figura      = figura+1
 titulo      = 'Pressure Profiles - EP_CRE'
-eixox       = r'$y/R_e$'  
-eixoy       = r'$p=p(R_e,\theta = 90^\circ)$ [MPa]'
-ymin        = -15
-ymax        = 1
-xmin        = 5
-xmax        = 35
+eixox       = r'$x/R_e$'  
+eixoy       = r'$p=p(r = R_e,\theta = 90^\circ)$ [MPa]'
+ymin        = ymin_twin_pressure_profile
+ymax        = ymax_twin_pressure_profile
+xmin        = xmin_twin_profile
+xmax        = xmax_twin_profile
 invertx     = True
 inserirx0   = True
-x0          = 80*1/3
-suavizar    = True
+x0          = x0_twin_profile
+suavizar    = suavizar_twin
 
 # parametros para o filtro de suavização
-filterx1    = 35
-filterx2    = 90
-wl          = 40
-poly        = 2
+filterx1    = filterx1_twin_pressure_profile
+filterx2    = filterx2_twin_pressure_profile
+wl          = wl_twin_pressure_profile
+poly        = poly_twin_pressure_profile
 
 modelo      = 'EP_CRE_SG_D1_INF_AXI'
 arquivo     = modelo + '\pressure.txt'
@@ -1710,22 +1741,22 @@ PRESSURE PROFILES - LONG-TERM - EPVP_CRE
 # Formatação do gráfico
 figura      = figura+1
 titulo      = 'Pressure Profiles - Long-term - EPVP_CRE'
-eixox       = r'$y/R_e$'  
-eixoy       = r'$p=p(R_e,\theta = 90^\circ)$ [MPa]'
-ymin        = -15
-ymax        = 1
-xmin        = 5
-xmax        = 35
+eixox       = r'$x/R_e$'  
+eixoy       = r'$p=p(r = R_e,\theta = 90^\circ)$ [MPa]'
+ymin        = ymin_twin_pressure_profile
+ymax        = ymax_twin_pressure_profile
+xmin        = xmin_twin_profile
+xmax        = xmax_twin_profile
 invertx     = True
 inserirx0   = True
-x0          = 80*1/3
-suavizar    = True
+x0          = x0_twin_profile
+suavizar    = suavizar_twin
 
 # parametros para o filtro de suavização
-filterx1    = 35
-filterx2    = 90
-wl          = 30
-poly        = 2
+filterx1    = filterx1_twin_pressure_profile
+filterx2    = filterx2_twin_pressure_profile
+wl          = wl_twin_pressure_profile
+poly        = poly_twin_pressure_profile
 
 modelo      = 'EPVP_CRE_SG_D1_INF_AXI'
 arquivo     = modelo + '\pressure.txt'
@@ -1807,22 +1838,22 @@ PRESSURE PROFILES - LONG-TERM - EPVP_CRVE
 # Formatação do gráfico
 figura      = figura+1
 titulo      = 'Pressure Profiles - Long-term - EPVP_CRVE'
-eixox       = r'$y/R_e$'  
-eixoy       = r'$p=p(R_e,\theta = 90^\circ)$ [MPa]'
-ymin        = -15
-ymax        = 1
-xmin        = 5
-xmax        = 35
+eixox       = r'$x/R_e$'  
+eixoy       = r'$p=p(r = R_e,\theta = 90^\circ)$ [MPa]'
+ymin        = ymin_twin_pressure_profile
+ymax        = ymax_twin_pressure_profile
+xmin        = xmin_twin_profile
+xmax        = xmax_twin_profile
 invertx     = True
 inserirx0   = True
-x0          = 80*1/3
-suavizar    = True
+x0          = x0_twin_profile
+suavizar    = suavizar_twin
 
 # parametros para o filtro de suavização
-filterx1    = 35
-filterx2    = 90
-wl          = 30
-poly        = 2
+filterx1    = filterx1_twin_pressure_profile
+filterx2    = filterx2_twin_pressure_profile
+wl          = wl_twin_pressure_profile
+poly        = poly_twin_pressure_profile
 
 modelo      = 'EPVP_CRVE_SG_D1_INF_AXI'
 arquivo     = modelo + '\pressure.txt'
