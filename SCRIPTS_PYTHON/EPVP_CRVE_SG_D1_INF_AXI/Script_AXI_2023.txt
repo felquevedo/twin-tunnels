@@ -39,7 +39,7 @@ revesteface 	= 1		! 0 - não reveste a face, 1 - reveste a face
 !
 ! referente ao restante do domínio
 l1		= 10 		! [Re] comprimento não escavado
-l2		= 80		! [Lp] comprimento do trecho escavado
+l2		= 100		! [Lp] comprimento do trecho escavado
 l3		= 20		! [Re] dimensão vertical do maciço
 !
 !

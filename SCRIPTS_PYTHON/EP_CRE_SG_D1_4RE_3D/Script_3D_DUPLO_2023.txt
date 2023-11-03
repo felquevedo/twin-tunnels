@@ -47,18 +47,24 @@ npi1 		= 3 		! [un] numero de passos escavados na primeira escavação
 Vp1 		= 12.5 		! [m/dia] velocidade de escavação
 escavagaleria 	= 0 		! escavação das galerias: 0 - não escava, 1 - escava
 revestegaleria 	= 0 		! revestimento da galeria: 0 - não reveste, 1 - reveste
-pig1 		= 5 		! [un] numero de passos de escavação a partir da galeria no qual iniciará a escavação da galeria
+pig1 		= 15 		! [un] numero de passos de escavação a partir da galeria no qual iniciará a escavação da galeria
 !
 ! referente ao restante do domínio
 l1 		= 10 		! [Re] comprimento do trecho não escavado (deve ser suficiente para captar os efeitos na última frente de escavação)
-l2 		= 80 		! [Lp] comprimento do trecho escavado
+l2 		= 100 		! [Lp] comprimento do trecho escavado
 d3 		= 20 		! [Re] altura do domínio (profundidade do eixo do túnel longitudinal)
 d4 		= 20 		! [Re] distância das bordas laterais do domínio até o eixo do tunel longitudinal
-d1 		= 4		! [m] distância entre eixos dos túneis longitudinais (d1 = 16*Re ou d1 = 4*Re)
+d1 		= 4		! [Re] distância entre eixos dos túneis longitudinais (d1 = 16*Re ou d1 = 4*Re)
 !
 ! distância adjacente a galeria com malha livre [Lp]
+!
+! Lp1 deve ter uma medida que se tenha n passos inteiros para se escavar, 
+! portanto: Lp1 = K*Re1 em que K = (d1/2-Re)/(n*Re1). 
+! o valor de d5 é ajustado de modo a ter uma discretização na região da galeria
+!
+!
 *IF,d1,EQ,16,THEN
-	d5		= 6			! 6
+	d5		= 6			
 	Lp1		= 0.3387*re1
 *ELSEIF,d1,EQ,4,THEN
 	d5		= 2
@@ -68,7 +74,10 @@ d1 		= 4		! [m] distância entre eixos dos túneis longitudinais (d1 = 16*Re ou 
 	Lp1		= 0.25*re1
 *ELSEIF,d1,EQ,5,THEN
 	d5		= 2
-	Lp1		= 0.375*re1	
+	Lp1		= 0.375*re1
+*ELSEIF,d1,EQ,8,THEN
+	d5		= 4
+	Lp1		= 0.3214*re1	
 *ENDIF
 !
 !
@@ -237,7 +246,16 @@ m4ga		= Lp1/1.3 	! [m] tamanho dos elementos na galeria
 	nd6		= nd1*2		! [un] número de elementos na vertical contígua a galeria transversal
 	md6		= md1		! [adm] taxa de crescimento
 	nd5		= 6		! [un] numero de elementos no trecho adjacente a galeria transversal
-	md5		= 4		! [adm] taxa de crescimento		    				      
+	md5		= 4		! [adm] taxa de crescimento
+*ELSEIF,d1,EQ,8,THEN
+	nd1 		= 14		! [un] numero de elementos na horizontal e vertical contigua ao tunel longitudinal
+	md1 		= 10 		! [adm] taxa de crescimento		
+	nd4 		= 12 		! [un] numero de elementos na horizontal e vertical contigua a região próxima do tunel longitudinal
+	md4 		= 6 		! [adm] taxa de crescimento
+	nd6		= nd1*2		! [un] número de elementos na vertical contígua a galeria transversal
+	md6		= md1		! [adm] taxa de crescimento
+	nd5		= 8		! [un] numero de elementos no trecho adjacente a galeria transversal
+	md5		= 6		! [adm] taxa de crescimento	
 *ELSEIF,d1,EQ,3,THEN
 	nd1 		= 5		! [un] numero de elementos na horizontal e vertical contigua ao tunel longitudinal
 	md1 		= 5 		! [adm] taxa de crescimento		
@@ -335,7 +353,7 @@ ri1 		= re1-esp1 		! [m] raio da face interna do revestimento das galerias trans
 d2 		= l2/2 			! [m] posição da galeria ao longo do eixo longitudinal
 d01		= nd01*Lp1		! [m] [m] dimensão não suportada da galeria (multiplo do passo)
 np1 		= (d1/2-re)/Lp1 	! [un] total de passos escavados nas galerias transversais
-nesc1 		= np1-npi1+1 		! [un] total de escavações ao longo do eixo das galerias transversais
+nesc1 		= NINT(np1-npi1+1) 		! [un] total de escavações ao longo do eixo das galerias transversais
 !pig1 		= pig1+l2/(2*Lp)	! [un] numero de passos de escavação no túnel longitudinal no qual iniciará a escavação da galeria 1
 !
 nescinig		= np/2-npi+1+re1/Lp+pig1	! [un] numero da escavação em que se inicia a galeria
@@ -344,11 +362,6 @@ m1		= Lp/nLp 		! [m] tamanho do elemento ao longo do eixo do tunel longitudinal 
 m9 		= m1 			! [m] tamanho dos elementos na região do tunel oposta a galeria
 !
 vpi = 3.14159265358979323846
-!
-! calculando o número de escavações na galeria de modo que seja inteiro
-*IF,NINT(nesc1)-nesc1,GT,0,THEN
-	nesc1 = NINT(nesc1)
-*ENDIF
 !
 ! caso não haja escavação na galeria
 *IF,escavagaleria,EQ,0,THEN
@@ -1797,6 +1810,12 @@ CM,Casca2,ELEM
 !************************************************************!
 !****_		3.11 Alterando a cor dos elementos	_****!
 !************************************************************!
+!
+! mudando a cor da janela
+/RGB,INDEX,100,100,100,0
+/RGB,INDEX,0,0,0,15
+!
+! região adjacente ao túnel
 ALLSEL,ALL
 CMSEL,S,VA1,VOLUME
 CMSEL,A,VA2,VOLUME
@@ -1810,7 +1829,8 @@ CMSEL,A,VE1,VOLUME
 CMSEL,A,VE2,VOLUME
 ESLV,S
 /COLOR,ELEM,14,ALL
-
+!
+! região escavada e externa
 ALLSEL,ALL
 CMSEL,S,VA3,VOLUME
 CMSEL,A,VA4,VOLUME
@@ -1832,18 +1852,20 @@ CMSEL,A,VE7,VOLUME
 ESLV,S
 /COLOR,ELEM,13,ALL
 !
+! região da casca do túnel longitudinal
 ALLSEL,ALL
 CMSEL,S,Casca1,ELEM
 /COLOR,ELEM,6,ALL
 !
+! região da casca da galeria transversal
 ALLSEL,ALL
 CMSEL,S,Casca2,ELEM
 /COLOR,ELEM,12,ALL
 !
+! plotar elementos da casca
 CMSEL,S,Casca1,ELEM
 CMSEL,A,Casca2,ELEM
 EPLOT
-!
 !
 !************************************************************!
 !****_ 		3.12 Condições de contorno		_****!
@@ -2597,7 +2619,7 @@ nanalises = 0
 *DO,i,1,nanalises,1
 	*IF,i,EQ,nanalises,THEN
 		/COLOR,CURVE,MAGE,1
-	*ELSEIF,i,EQ,nesc+nesc1,THEN
+	*ELSEIF,i,EQ,nesc+nesc1-1,THEN
 		/COLOR,CURVE,YELL,1
 	*ELSE
 		/COLOR,CURVE,LGRA,1
@@ -2628,7 +2650,7 @@ nanalises = 0
 *DO,i,1,nanalises,1
 	*IF,i,EQ,nanalises,THEN
 		/COLOR,CURVE,MAGE,1
-	*ELSEIF,i,EQ,nesc,THEN
+	*ELSEIF,i,EQ,nesc+nesc1-1,THEN
 		/COLOR,CURVE,YELL,1
 	*ELSE
 		/COLOR,CURVE,LGRA,1
@@ -2761,7 +2783,7 @@ nanalises = 0
 *DO,i,1,nanalises,1
 	*IF,i,EQ,nanalises,THEN
 		/COLOR,CURVE,MAGE,1
-	*ELSEIF,i,EQ,nesc+nesc1,THEN
+	*ELSEIF,i,EQ,nesc+nesc1-1,THEN
 		/COLOR,CURVE,YELL,1
 	*ELSE
 		/COLOR,CURVE,LGRA,1
@@ -2792,7 +2814,7 @@ nanalises = 0
 *DO,i,1,nanalises,1
 	*IF,i,EQ,nanalises,THEN
 		/COLOR,CURVE,MAGE,1
-	*ELSEIF,i,EQ,nesc,THEN
+	*ELSEIF,i,EQ,nesc+nesc1-1,THEN
 		/COLOR,CURVE,YELL,1
 	*ELSE
 		/COLOR,CURVE,LGRA,1

@@ -47,11 +47,11 @@ npi1 		= 3 		! [un] numero de passos escavados na primeira escavação
 Vp1 		= 12.5 		! [m/dia] velocidade de escavação
 escavagaleria 	= 1 		! escavação das galerias: 0 - não escava, 1 - escava
 revestegaleria 	= 1 		! revestimento da galeria: 0 - não reveste, 1 - reveste
-pig1 		= 5 		! [un] numero de passos de escavação a partir da galeria no qual iniciará a escavação da galeria
+pig1 		= 15 		! [un] numero de passos de escavação a partir da galeria no qual iniciará a escavação da galeria
 !
 ! referente ao restante do domínio
 l1 		= 10 		! [Re] comprimento do trecho não escavado (deve ser suficiente para captar os efeitos na última frente de escavação)
-l2 		= 80 		! [Lp] comprimento do trecho escavado
+l2 		= 100 		! [Lp] comprimento do trecho escavado
 d3 		= 20 		! [Re] altura do domínio (profundidade do eixo do túnel longitudinal)
 d4 		= 20 		! [Re] distância das bordas laterais do domínio até o eixo do tunel longitudinal
 d1 		= 8		! [Re] distância entre eixos dos túneis longitudinais (d1 = 16*Re ou d1 = 4*Re)
@@ -2619,7 +2619,7 @@ nanalises = 0
 *DO,i,1,nanalises,1
 	*IF,i,EQ,nanalises,THEN
 		/COLOR,CURVE,MAGE,1
-	*ELSEIF,i,EQ,nesc+nesc1,THEN
+	*ELSEIF,i,EQ,nesc+nesc1-1,THEN
 		/COLOR,CURVE,YELL,1
 	*ELSE
 		/COLOR,CURVE,LGRA,1
@@ -2650,7 +2650,7 @@ nanalises = 0
 *DO,i,1,nanalises,1
 	*IF,i,EQ,nanalises,THEN
 		/COLOR,CURVE,MAGE,1
-	*ELSEIF,i,EQ,nesc,THEN
+	*ELSEIF,i,EQ,nesc+nesc1-1,THEN
 		/COLOR,CURVE,YELL,1
 	*ELSE
 		/COLOR,CURVE,LGRA,1
@@ -2783,7 +2783,7 @@ nanalises = 0
 *DO,i,1,nanalises,1
 	*IF,i,EQ,nanalises,THEN
 		/COLOR,CURVE,MAGE,1
-	*ELSEIF,i,EQ,nesc+nesc1,THEN
+	*ELSEIF,i,EQ,nesc+nesc1-1,THEN
 		/COLOR,CURVE,YELL,1
 	*ELSE
 		/COLOR,CURVE,LGRA,1
@@ -2814,7 +2814,7 @@ nanalises = 0
 *DO,i,1,nanalises,1
 	*IF,i,EQ,nanalises,THEN
 		/COLOR,CURVE,MAGE,1
-	*ELSEIF,i,EQ,nesc,THEN
+	*ELSEIF,i,EQ,nesc+nesc1-1,THEN
 		/COLOR,CURVE,YELL,1
 	*ELSE
 		/COLOR,CURVE,LGRA,1
