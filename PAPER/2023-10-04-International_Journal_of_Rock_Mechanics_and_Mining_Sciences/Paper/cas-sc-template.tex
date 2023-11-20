@@ -17,29 +17,16 @@
 %% Template article for cas-sc documentclass for 
 %% single column output.
 
+% Document Class
 \documentclass[a4paper,fleqn]{cas-sc}
 
-% If the frontmatter runs over more than one page
-% use the longmktitle option.
-
-%\documentclass[a4paper,fleqn,longmktitle]{cas-sc}
-
-%\usepackage[numbers]{natbib}
-%\usepackage[authoryear]{natbib}
+% Packages
 \usepackage[authoryear,longnamesfirst]{natbib}
 
-%%%Author macros
+%Author macros
 \def\tsc#1{\csdef{#1}{\textsc{\lowercase{#1}}\xspace}}
 \tsc{WGM}
 \tsc{QE}
-%%%
-
-% Uncomment and use as if needed
-%\newtheorem{theorem}{Theorem}
-%\newtheorem{lemma}[theorem]{Lemma}
-%\newdefinition{rmk}{Remark}
-%\newproof{pf}{Proof}
-%\newproof{pot}{Proof of Theorem \ref{thm}}
 
 \begin{document}
 \let\WriteBookmarks\relax
@@ -47,98 +34,50 @@
 \def\textpagefraction{.001}
 
 % Short title
-\shorttitle{<short title of the paper for running head>}    
+\shorttitle{Transverse gallery of twin tunnels}    
 
 % Short author
-\shortauthors{<short author list for running head>}  
+\shortauthors{Quevedo et al.}  
 
 % Main title of the paper
-\title [mode = title]{<main title>}  
-
-% Title footnote mark
-% eg: \tnotemark[1]
-\tnotemark[<tnote number>] 
-
-% Title footnote 1.
-% eg: \tnotetext[1]{Title footnote text}
-\tnotetext[<tnote number>]{<tnote text>} 
+\title [mode = title]{Numerical analysis of the intersection zone 
+	in twin tunnels galleries using plastic and viscous 
+	constitutive models for rockmass and lining}  
 
 % First author
-%
-% Options: Use if required
-% eg: \author[1,3]{Author Name}[type=editor,
-%       style=chinese,
-%       auid=000,
-%       bioid=1,
-%       prefix=Sir,
-%       orcid=0000-0000-0000-0000,
-%       facebook=<facebook id>,
-%       twitter=<twitter id>,
-%       linkedin=<linkedin id>,
-%       gplus=<gplus id>]
+\author[1]{Quevedo, F. P. M.}[style = chinese, orcid = 0000-0003-4171-1696]
+\cormark[1] 					
+\cortext[cor1]{Corresponding author.}
+\ead{motta.quevedo@ufrgs.br}
+\ead[url]{https://www.researchgate.net/profile/Felipe-Pinto-Da-Motta-Quevedo}
 
-\author[<aff no>]{<author name>}[<options>]
+% Second author
+\author[1]{Colombo, C. A. M. M.}[style=chinese, orcid=0000-0000-0000-0000]
+\ead{carlos.colombo@ufrgs.br}
+\ead[url]{http://lattes.cnpq.br/4919388217690564}
 
-% Corresponding author indication
-\cormark[<corr mark no>]
+% Third author
+\author[1]{Bernaud, D.}[style=chinese, orcid=0000-0001-6365-3269]
+\ead{denise.bernaud@ufrgs.br}
+\ead[url]{http://lattes.cnpq.br/2809615143819128}
 
-% Footnote of the first author
-\fnmark[<footnote mark no>]
+% Four author
+\author[1]{Maghous, S.}[style=chinese, orcid=0000-0002-1123-3411]
+\ead{samir.maghous@ufrgs.br}
+\ead[url]{http://lattes.cnpq.br/6305244914209829}
 
-% Email id of the first author
-\ead{<email address>}
-
-% URL of the first author
-\ead[url]{<URL>}
-
-% Credit authorship
-% eg: \credit{Conceptualization of this study, Methodology, Software}
-\credit{<Credit authorship details>}
-
-% Address/affiliation
-\affiliation[<aff no>]{organization={},
-            addressline={}, 
-            city={},
-%          citysep={}, % Uncomment if no comma needed between city and postcode
-            postcode={}, 
-            state={},
-            country={}}
-
-\author[<aff no>]{<author name>}[<options>]
-
-% Footnote of the second author
-\fnmark[2]
-
-% Email id of the second author
-\ead{}
-
-% URL of the second author
-\ead[url]{}
-
-% Credit authorship
-\credit{}
-
-% Address/affiliation
-\affiliation[<aff no>]{organization={},
-            addressline={}, 
-            city={},
-%          citysep={}, % Uncomment if no comma needed between city and postcode
-            postcode={}, 
-            state={},
-            country={}}
-
-% Corresponding author text
-\cortext[1]{Corresponding author}
-
-% Footnote text
-\fntext[1]{}
-
-% For a title note without a number/mark
-%\nonumnote{}
+% Afilliation
+\affiliation[1]{organization={Federal University of Rio Grande do Sul},
+	addressline={Av. Osvaldo Aranha, 99}, 
+	city={Porto Alegre},
+	postcode={90.035-190}, 
+	state={RS},
+	country={Brazil}}
 
 % Here goes the abstract
 \begin{abstract}
-
+%This paper aims to demonstrate the long-term implications of the rheological constitutive behavior of rock mass and concrete lining in the convergence of the intersection area of twin tunnel galleries using a three-dimensional numerical analysis based on the finite-element method. A Drucker-Prager-Perzyna elastoplastic-viscoplastic constitutive law represents the rock mass and, for the lining, an elastic and viscoelastic law. The deactivation-activation methods simulate the excavation process. Comparisons of convergence reveal that the viscous effects of the rock mass and the lining significantly influence the peak convergence within the intersection zone, resulting in differences of approximately 10\% in convergence values.
+É necessário um resumo conciso e factual. O resumo deve indicar sucintamente o objetivo da investigação, os principais resultados e as principais conclusões. O resumo é frequentemente apresentado separadamente do artigo, pelo que deve ser autónomo. Por esta razão, as referências devem ser evitadas, mas se forem essenciais, devem citar-se o(s) autor(es) e o(s) ano(s). Além disso, devem ser evitadas abreviaturas não padronizadas ou pouco comuns, mas se forem essenciais, devem ser definidas na primeira menção no próprio resumo. Os artigos com "Sugestões de Métodos" não devem conter resumos.
 \end{abstract}
 
 % Use if graphical abstract is present
@@ -148,21 +87,61 @@
 
 % Research highlights
 \begin{highlights}
-\item 
-\item 
-\item 
+	\item Qualquer coisa 1
+	\item Qualquer coisa 2
+	\item Qualquer coisa 3 
 \end{highlights}
 
 % Keywords
-% Each keyword is seperated by \sep
 \begin{keywords}
- \sep \sep \sep
+twin tunnels \sep transverse gallery \sep constitutive models \sep finite element method
 \end{keywords}
 
 \maketitle
 
+\section{Introduction}\label{}
+
+Indicar os objectivos do trabalho e fornecer um contexto adequado, evitando uma pesquisa bibliográfica
+ou um resumo dos resultados.
+
+\section{Material and Methods}\label{}
+
+Fornecer pormenores suficientes para que o trabalho possa ser reproduzido por um investigador independente. Os métodos que já tenham sido publicados devem ser resumidos e indicados por uma referência. Se citar diretamente de um método previamente publicado, use aspas e cite também a fonte. Quaisquer modificações dos métodos existentes também devem ser descritas. 
+
+\subsection{Assumptions}\label{}
+
+
+
+\subsection{Constitutive Model of the Rock Mass}\label{}
+
+
+\subsection{Constitutive Model of the Lining}\label{}
+
+\subsection{Spatial Discretization of the Tunnel Problem}\label{}
+
+\section{Theory/Calculation}\label{}
+
+Uma secção de Teoria deve alargar, e não repetir, os antecedentes do artigo já tratados na Introdução e estabelecer as bases para o trabalho futuro. Em contrapartida, uma secção de Cálculo representa um desenvolvimento prático a partir de uma base teórica.
+
+\section{Results}\label{}
+
+Resultados devem ser claros e concisos
+
+\section{Discussion}\label{}
+
+Esta deve explorar o significado dos resultados do trabalho e não repeti-los. Uma secção combinada de Resultados e Discussão é frequentemente adequada. Evitar citações e discussões extensas da literatura publicada.
+
+\section{Conclusions}\label{}
+
+As principais conclusões do estudo podem ser apresentadas numa breve secção de Conclusões, que pode ser autónoma ou constituir uma subsecção de uma secção de Discussão ou de Resultados e Discussão.
+
+\section{Appendices}\label{}
+
+Se houver mais do que um apêndice, estes devem ser identificados como A, B, etc. As fórmulas e equações dos apêndices devem ser numeradas separadamente: Eq. (A.1), Eq. (A.2), etc.; num apêndice seguinte,
+Eq. (B.1) e assim por diante. O mesmo se aplica aos quadros e figuras: Tabe a A.1; Fig. A.1, etc.
+
 % Main text
-\section{}\label{}
+%\section{}\label{}
 
 % Numbered list
 % Use the style of numbering in square brackets.
@@ -188,26 +167,26 @@
 %\end{description}  
 
 % Figure
-\begin{figure}[<options>]
-	\centering
-		\includegraphics[<options>]{}
-	  \caption{}\label{fig1}
-\end{figure}
-
-
-\begin{table}[<options>]
-\caption{}\label{tbl1}
-\begin{tabular*}{\tblwidth}{@{}LL@{}}
-\toprule
-  &  \\ % Table header row
-\midrule
- & \\
- & \\
- & \\
- & \\
-\bottomrule
-\end{tabular*}
-\end{table}
+%\begin{figure}[<options>]
+%	\centering
+%		\includegraphics[<options>]{}
+%	  \caption{}\label{fig1}
+%\end{figure}
+%
+%
+%\begin{table}[<options>]
+%\caption{}\label{tbl1}
+%\begin{tabular*}{\tblwidth}{@{}LL@{}}
+%\toprule
+%  &  \\ % Table header row
+%\midrule
+% & \\
+% & \\
+% & \\
+% & \\
+%\bottomrule
+%\end{tabular*}
+%\end{table}
 
 % Uncomment and use as the case may be
 %\begin{theorem} 
@@ -221,26 +200,26 @@
 %% appendix sections are then done as normal sections
 %% \appendix
 
-\section{}\label{}
-
-% To print the credit authorship contribution details
-\printcredits
-
-%% Loading bibliography style file
-%\bibliographystyle{model1-num-names}
-\bibliographystyle{cas-model2-names}
-
-% Loading bibliography database
-\bibliography{}
-
-% Biography
-\bio{}
-% Here goes the biography details.
-\endbio
-
-\bio{pic1}
-% Here goes the biography details.
-\endbio
+%\section{}\label{}
+%
+%% To print the credit authorship contribution details
+%\printcredits
+%
+%%% Loading bibliography style file
+%%\bibliographystyle{model1-num-names}
+%\bibliographystyle{cas-model2-names}
+%
+%% Loading bibliography database
+%\bibliography{}
+%
+%% Biography
+%\bio{}
+%% Here goes the biography details.
+%\endbio
+%
+%\bio{pic1}
+%% Here goes the biography details.
+%\endbio
 
 \end{document}
 
