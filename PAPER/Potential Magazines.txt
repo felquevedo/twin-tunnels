@@ -1,0 +1,65 @@
+
+CLASSIFICAÇÃO QUALIS: https://sucupira.capes.gov.br/sucupira/public/consultas/coleta/veiculoPublicacaoQualis/listaConsultaGeralPeriodicos.xhtml
+
+****
+Samir: mais genérica na área da geomecânica
+ISSN: 			1096-9853	
+TÍTULO: 		INTERNATIONAL JOURNAL FOR NUMERICAL AND ANALYTICAL METHODS IN GEOMECHANICS	
+ÁREA DE AVALIAÇÃO: 	ENGENHARIAS I, ENGENHARIAS III	
+CLASSIFICAÇÃO: 		A1
+Impact factor (2022):	4.0
+AIM AND SCOPE:		https://onlinelibrary.wiley.com/page/journal/10969853/homepage/productinformation.html	
+SUBMISSION: 		https://onlinelibrary.wiley.com/page/journal/10969853/homepage/forauthors.html
+
+(Denise)
+*
+Samir: mais específica
+ISSN:			0886-7798
+TÍTULO:			TUNNELLING AND UNDERGROUND SPACE TECHNOLOGY
+ÁREA DE AVALIAÇÃO:	ENGENHARIAS I
+CLASSIFICAÇÃO:		A1
+Impact factor (2022):	6.9
+CiteScore:		11.5
+AIM AND SCOPE:		https://www.sciencedirect.com/journal/tunnelling-and-underground-space-technology/about/aims-and-scope
+SUBMISSION:		https://www.editorialmanager.com/tust/default2.aspx	
+
+****
+ISSN:			1532-3641
+TÍTULO:			INTERNATIONAL JOURNAL OF GEOMECHANICS
+ÁREA DE AVALIAÇÃO:	ENGENHARIAS I, ENGENHARIAS II e GEOCIÊNCIAS
+CLASSIFICAÇÃO:		A2
+Impact factor:		3.918
+CiteScore: 		6
+AIM AND SCOPE:		https://ascelibrary.org/page/ijgnai/editorialboard
+SUBMISSION:		https://www.editorialmanager.com/jrngmeng/default2.aspx	
+
+(Denise!)
+***
+ISSN:			1365-1609
+TÍTULO:			INTERNATIONAL JOURNAL OF ROCK MECHANICS AND MINING SCIENCES (1997)
+ÁREA DE AVALIAÇÃO:	ENGENHARIAS I
+CLASSIFICAÇÃO:		A1
+Impact factor:		7.2
+CiteScore:		13
+AIM AND SCOPE:		https://www.sciencedirect.com/journal/international-journal-of-rock-mechanics-and-mining-sciences
+SUBMISSION:		https://www.editorialmanager.com/ijrmms/default2.aspx
+
+***
+ISSN:			1674-7755	
+TÍTULO:			JOURNAL OF ROCK MECHANICS AND GEOTECHNICAL ENGINEERING	
+ÁREA:			ENGENHARIAS I	
+CLASSIFICAÇÃO:		A1
+Impact factor:		7.3
+CiteScore:		10.9
+AIM AND SCOPE:		https://www.sciencedirect.com/journal/journal-of-rock-mechanics-and-geotechnical-engineering	
+SUBMISSION:		https://www.editorialmanager.com/jrmge/default2.aspx
+
+****
+ISSN:			0723-2632	
+TÍTULO:			ROCK MECHANICS AND ROCK ENGINEERING (PRINT)	
+ÁREA:			ENGENHARIAS I	
+CLASSIFICAÇÃO:		A1
+Impact factor:		6.2
+AIM AND SCOPE:		https://www.springer.com/journal/603
+SUBMISSION:		https://www.editorialmanager.com/rmre/default2.aspx
+
