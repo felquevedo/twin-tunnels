@@ -40,8 +40,7 @@
 \shortauthors{Quevedo et al.}  
 
 % Main title of the paper
-\title [mode = title]{Numerical analysis of the intersection zone 
-	in twin tunnels galleries using plastic and viscous 
+\title [mode = title]{Numerical analysis of the twin tunnels with transverse galleries using plastic and viscous 
 	constitutive models for rockmass and lining}  
 
 % First author
@@ -76,8 +75,8 @@
 
 % Here goes the abstract
 \begin{abstract}
-%This paper aims to demonstrate the long-term implications of the rheological constitutive behavior of rock mass and concrete lining in the convergence of the intersection area of twin tunnel galleries using a three-dimensional numerical analysis based on the finite-element method. A Drucker-Prager-Perzyna elastoplastic-viscoplastic constitutive law represents the rock mass and, for the lining, an elastic and viscoelastic law. The deactivation-activation methods simulate the excavation process. Comparisons of convergence reveal that the viscous effects of the rock mass and the lining significantly influence the peak convergence within the intersection zone, resulting in differences of approximately 10\% in convergence values.
-É necessário um resumo conciso e factual. O resumo deve indicar sucintamente o objetivo da investigação, os principais resultados e as principais conclusões. O resumo é frequentemente apresentado separadamente do artigo, pelo que deve ser autónomo. Por esta razão, as referências devem ser evitadas, mas se forem essenciais, devem citar-se o(s) autor(es) e o(s) ano(s). Além disso, devem ser evitadas abreviaturas não padronizadas ou pouco comuns, mas se forem essenciais, devem ser definidas na primeira menção no próprio resumo. Os artigos com "Sugestões de Métodos" não devem conter resumos.
+This paper aims to demonstrate the long-term implications of the rheological constitutive behavior of rock mass and concrete lining in the convergence of the intersection area of twin tunnel galleries using a three-dimensional numerical analysis based on the finite-element method. A Drucker-Prager-Perzyna elastoplastic-viscoplastic constitutive law represents the rock mass and, for the lining, an elastic and viscoelastic law. The deactivation-activation methods simulate the excavation process. Comparisons of convergence reveal that the viscous effects of the rock mass and the lining significantly influence the peak convergence within the intersection zone, resulting in differences of approximately 10\% in convergence values.
+%É necessário um resumo conciso e factual. O resumo deve indicar sucintamente o objetivo da investigação, os principais resultados e as principais conclusões. O resumo é frequentemente apresentado separadamente do artigo, pelo que deve ser autónomo. Por esta razão, as referências devem ser evitadas, mas se forem essenciais, devem citar-se o(s) autor(es) e o(s) ano(s). Além disso, devem ser evitadas abreviaturas não padronizadas ou pouco comuns, mas se forem essenciais, devem ser definidas na primeira menção no próprio resumo. Os artigos com "Sugestões de Métodos" não devem conter resumos.
 \end{abstract}
 
 % Use if graphical abstract is present
@@ -101,6 +100,15 @@ twin tunnels \sep transverse gallery \sep constitutive models \sep finite elemen
 
 \section{Introduction}\label{}
 
+The structural design of deep twin tunnels involves estimating cross-section convergence, lining pressure, and the size of the plastic zone within the rock mass caused by the excavation process. The final convergence and stress field around the tunnel depend on \textit{in situ} initial stresses, cross-section geometry, and the coupling between the lining and the rock mass during construction. Unlinke a single tunnel, the proximity between twin tunnels break the symmetry of deformations in tunnel wall. Many twin tunnels have transverse galleries that serve as emergency routes. These galleries will introduce a local effect on the convergence profile of the longitudinal tunnel. 
+
+Additionaly, the rheological behavior of the rockmass and lining plays a crucial role in how stress and displacements fields evolve over time.
+
+%Many studies have proposed viscous constitutive models for the rock mass. Some of these models use instantaneous linear elastic behavior. However, more and more studies have analyzed the impact of instantaneous elastoplastic behavior with viscous long-term components [\citenum{rousset1988}, \citenum{piepi1995}, \citenum{Purwodihardjo2003}, \citenum{Kleine2007}, \citenum{Shafiqu2008}, \citenum{Barla2010}, \citenum{souley2011}, \citenum{Manh2015}]. Incorporating elastoplastic behavior has a more apropriate representation of rock mass since the stress state can reach plasticity during excavation. These coupled models are better in regions with high-stress deviations where plasticity-induced stress redistribution will impact the viscous component.
+
+%Despite these developments, there are few studies about the interaction of the rheological behavior of the lining with viscous rock mass [\citenum{pottler1990}, \citenum{meschke1996}, \citenum{mavsin2009}, \citenum{NEUNER2021}]. Thus, the aim of this study is to investigate the influence of some of the main parameters of deep concrete-lined tunnels in long-term convergence.
+
+
 Indicar os objectivos do trabalho e fornecer um contexto adequado, evitando uma pesquisa bibliográfica
 ou um resumo dos resultados.
 
@@ -108,7 +116,7 @@ ou um resumo dos resultados.
 
 Fornecer pormenores suficientes para que o trabalho possa ser reproduzido por um investigador independente. Os métodos que já tenham sido publicados devem ser resumidos e indicados por uma referência. Se citar diretamente de um método previamente publicado, use aspas e cite também a fonte. Quaisquer modificações dos métodos existentes também devem ser descritas. 
 
-\subsection{Assumptions}\label{}
+\subsection{Problem description and assumptions}\label{}
 
 
 
@@ -117,19 +125,23 @@ Fornecer pormenores suficientes para que o trabalho possa ser reproduzido por um
 
 \subsection{Constitutive Model of the Lining}\label{}
 
-\subsection{Spatial Discretization of the Tunnel Problem}\label{}
+\subsection{Description of numerical model}\label{}
 
-\section{Theory/Calculation}\label{}
+\section{Verification with analytical solutions}\label{}
 
-Uma secção de Teoria deve alargar, e não repetir, os antecedentes do artigo já tratados na Introdução e estabelecer as bases para o trabalho futuro. Em contrapartida, uma secção de Cálculo representa um desenvolvimento prático a partir de uma base teórica.
-
-\section{Results}\label{}
+\section{Results and Discussion}\label{}
 
 Resultados devem ser claros e concisos
 
-\section{Discussion}\label{}
+\subsection{Influência do afastamento entre os túneis}\label{}
 
-Esta deve explorar o significado dos resultados do trabalho e não repeti-los. Uma secção combinada de Resultados e Discussão é frequentemente adequada. Evitar citações e discussões extensas da literatura publicada.
+\subsection{A influência da rigidez do revestimento}\label{}
+
+\subsection{A influência da presença da galeria no túnel longitudinal}\label{}
+
+\subsection{Abrangencia da região de influência da galeria}\label{}
+
+\subsection{A influência dos modelos que envolve efeitos diferidos}\label{}
 
 \section{Conclusions}\label{}
 
