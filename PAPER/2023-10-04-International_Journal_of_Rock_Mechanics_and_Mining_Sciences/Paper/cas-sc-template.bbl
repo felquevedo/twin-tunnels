@@ -1,0 +1,80 @@
+\begin{thebibliography}{9}
+\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+\providecommand{\url}[1]{\texttt{#1}}
+\providecommand{\href}[2]{#2}
+\providecommand{\path}[1]{#1}
+\providecommand{\DOIprefix}{doi:}
+\providecommand{\ArXivprefix}{arXiv:}
+\providecommand{\URLprefix}{URL: }
+\providecommand{\Pubmedprefix}{pmid:}
+\providecommand{\doi}[1]{\href{http://dx.doi.org/#1}{\path{#1}}}
+\providecommand{\Pubmed}[1]{\href{pmid:#1}{\path{#1}}}
+\providecommand{\bibinfo}[2]{#2}
+\ifx\xfnm\relax \def\xfnm[#1]{\unskip,\space#1}\fi
+%Type = Manual
+\bibitem[{ANSYS()}]{ANSYS:2013b}
+ANSYS, \bibinfo{year}{2013}.
+\newblock \bibinfo{title}{ANSYS Programmer's Reference; release 15.0}.
+\newblock \bibinfo{address}{Canonsburg, Pennsylvania}.
+%Type = Article
+\bibitem[{Ba{\v{z}}ant and Prasannan(1989a)}]{bazant:1989a}
+\bibinfo{author}{Ba{\v{z}}ant, Z.P.}, \bibinfo{author}{Prasannan, S.},
+  \bibinfo{year}{1989}a.
+\newblock \bibinfo{title}{Solidification theory for concrete creep. i:
+  Formulation}.
+\newblock \bibinfo{journal}{Journal of engineering mechanics}
+  \bibinfo{volume}{115}, \bibinfo{pages}{1691--1703}.
+%Type = Article
+\bibitem[{Ba{\v{z}}ant and Prasannan(1989b)}]{bazant:1989b}
+\bibinfo{author}{Ba{\v{z}}ant, Z.P.}, \bibinfo{author}{Prasannan, S.},
+  \bibinfo{year}{1989}b.
+\newblock \bibinfo{title}{Solidification theory for concrete creep. ii:
+  Verification and application}.
+\newblock \bibinfo{journal}{Journal of engineering mechanics}
+  \bibinfo{volume}{115}, \bibinfo{pages}{1704--1725}.
+%Type = Phdthesis
+\bibitem[{Bernaud(1991)}]{bernaud1991}
+\bibinfo{author}{Bernaud, D.}, \bibinfo{year}{1991}.
+\newblock \bibinfo{title}{Tunnels profonds dans les milieux viscoplastiques:
+  approches exp{\'e}rimentale et num{\'e}rique}.
+\newblock Ph.D. thesis. Ecole Nationale des Ponts et Chauss{\'e}es.
+  \bibinfo{address}{Paris, French}.
+%Type = Manual
+\bibitem[{CEB-FIP(1993)}]{CEB:1993}
+\bibinfo{author}{CEB-FIP}, \bibinfo{year}{1993}.
+\newblock \bibinfo{title}{CEB-FIP model code 1990: Design code}.
+\newblock \bibinfo{organization}{Comité Euro International du Béton and
+  Fédération Internationale de la Précontrainte (CEB-FIP)}.
+%Type = Masterthesis
+\bibitem[{Quevedo(2017)}]{quevedo2017comportamento}
+\bibinfo{author}{Quevedo, F.P.M.}, \bibinfo{year}{2017}.
+\newblock \bibinfo{title}{Comportamento a longo prazo de t{\'u}neis profundos
+  revestidos com concreto: modelo em elementos finitos}.
+\newblock \bibinfo{type}{M.{S}. thesis}. Federal University of Rio Grande do
+  Sul. \bibinfo{address}{Porto Alegre, Brazil}.
+%Type = Misc
+\bibitem[{Quevedo(2021)}]{quevedo2022thesis}
+\bibinfo{author}{Quevedo, F.P.M.}, \bibinfo{year}{2021}.
+\newblock \bibinfo{title}{An{\'a}lise computacional das deformações em
+  t{\'u}neis profundos considerando o acoplamento
+  plasticidade-viscoplasticidade}.
+%Type = Article
+\bibitem[{Quevedo et~al.(2022a)Quevedo, Bernaud and Campos~Filho}]{quevedo2022}
+\bibinfo{author}{Quevedo, F.P.M.}, \bibinfo{author}{Bernaud, D.},
+  \bibinfo{author}{Campos~Filho, A.}, \bibinfo{year}{2022}a.
+\newblock \bibinfo{title}{Numerical analysis of deep tunnels in viscoplastic
+  rock mass considering the creep and shrinkage of the concrete lining}.
+\newblock \bibinfo{journal}{International Journal of Geomechanics}
+  \bibinfo{volume}{22}.
+\newblock \DOIprefix\doi{10.1061/(ASCE)GM.1943-5622.0002282}.
+%Type = Article
+\bibitem[{Quevedo et~al.(2022b)Quevedo, Bernaud and S.}]{quevedo2022b}
+\bibinfo{author}{Quevedo, F.P.M.}, \bibinfo{author}{Bernaud, D.},
+  \bibinfo{author}{S., M.}, \bibinfo{year}{2022}b.
+\newblock \bibinfo{title}{Numerical integration scheme for coupled
+  elastoplastic–viscoplastic constitutive law for tunnels}.
+\newblock \bibinfo{journal}{International Journal of Geomechanics}
+  \bibinfo{volume}{22}.
+\newblock \DOIprefix\doi{10.1061/(ASCE)GM.1943-5622.0002512}.
+
+\end{thebibliography}
