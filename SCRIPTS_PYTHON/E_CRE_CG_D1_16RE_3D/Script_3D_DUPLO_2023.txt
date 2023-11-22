@@ -1867,48 +1867,6 @@ CMSEL,S,Casca1,ELEM
 CMSEL,A,Casca2,ELEM
 EPLOT
 !
-!
-CSYS,0
-fi = l1+l2/2-d5-5*lp
-ff = l1+l2/2+d5+5*lp
-ESEL,R,CENT,Z,fi,ff
-/EXPAND,1,RECT,HALF,,-0.001,, ,RECT,FULL,,,, ,RECT,FULL,,,, 
-
-/PSF,DEFA, ,1,0,0   
-/PBF,DEFA, ,1   
-/PSYMB,CS,0 
-/PSYMB,NDIR,0   
-/PSYMB,ESYS,0   
-/PSYMB,LDIV,0   
-/PSYMB,LDIR,0   
-/PSYMB,ADIR,0   
-/PSYMB,ECON,0   
-/PSYMB,XNODE,0  
-/PSYMB,DOT,0
-/PSYMB,PCONV,   
-/PSYMB,LAYR,0   
-/PSYMB,FBCS,0   
-!*  
-/PBC,ALL, ,1
-/REP
-
-WPSTYLE,,,,,,,,0
-/PLOPTS,INFO,0  
-/PLOPTS,LEG1,1  
-/PLOPTS,LEG2,1  
-/PLOPTS,LEG3,1  
-/PLOPTS,FRAME,1 
-/PLOPTS,TITLE,1 
-/PLOPTS,MINM,1  
-/PLOPTS,FILE,0  
-/PLOPTS,SPNO,0  
-/PLOPTS,LOGO,0  
-/PLOPTS,WINS,1  
-/PLOPTS,WP,0
-/PLOPTS,DATE,2  
-/TRIAD,OFF   
-/REPLOT 
-
 !************************************************************!
 !****_ 		3.12 Condições de contorno		_****!
 !************************************************************!

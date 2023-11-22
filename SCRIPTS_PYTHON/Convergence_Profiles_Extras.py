@@ -94,7 +94,7 @@ def graficar(arquivo,                   # nome do arquivo de leitura
         loc = 'center',
         shadow=False,
         framealpha = 0,
-        ncol = 6,
+        ncol = 3,
         columnspacing = 0.5,
         bbox_to_anchor=(0.5, -0.2),
         fontsize="11")
@@ -244,7 +244,7 @@ CONVERGENCE PROFILES - MODEL EP_SR_SG
 
 # Formatação do gráfico
 figura      = figura+1
-titulo      = 'Convergence Profiles - EP_SR_SG'
+titulo      = 'Perfil de convergências - EP_SR_SG'
 eixox       = r'$x/R_e$'  
 eixoy       = r'$U=-u(r = R_e,\theta = 90^\circ)/R_{e}$ [%]'
 ymin        = 0
@@ -265,7 +265,7 @@ poly        = poly_twin_convergence_profile
 modelo      = 'EP_SR_SG_D1_INF_AXI'
 arquivo     = modelo + '\convergencias.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = '$d_1 = \infty$'
+lblcoluna   = 'túnel isolado'
 cor         = 'k'
 tamanho     = 1.5
 ordem       = 4
@@ -345,7 +345,7 @@ CONVERGENCE PROFILES - MODEL EP_D1_16RE
 
 # Formatação do gráfico
 figura      = figura+1
-titulo      = 'Convergence Profiles - EP_D1_16RE'
+titulo      = 'Perfil de convergências - EP_d1_16Re'
 eixox       = r'$x/R_e$'  
 eixoy       = r'$U=-u(r = R_e,\theta = 90^\circ)/R_{e}$ [%]'
 ymin        = 0
@@ -366,12 +366,30 @@ poly        = poly_twin_convergence_profile
 modelo      = 'EP_SR_SG_D1_INF_AXI'
 arquivo     = modelo + '\convergencias.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'SG_SR_$d_1 = \infty$'
+lblcoluna   = 'SG_SR_túnel isolado'
 cor         = 'k'
 tamanho     = 1.5
 ordem       = 4
 alpha       = 1
 estilo      = 'dashed'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'EP_CRE_SG_D1_INF_AXI'
+arquivo     = modelo + '\convergencias.txt'
+ncoluna     = dicncolunalongterm[modelo]
+lblcoluna   = 'SG_CRE_túnel isolado'
+cor         = 'k'
+tamanho     = 1.5
+ordem       = 4
+alpha       = 1
+estilo      = 'solid'
 graficar(arquivo,titulo,eixox,eixoy,
           xmin,xmax,ymin,ymax,
           ncoluna,lblcoluna,
@@ -399,42 +417,6 @@ graficar(arquivo,titulo,eixox,eixoy,
           suavizar,filterx1,filterx2,wl,poly,
           figura)
 
-modelo      = 'EP_SR_CG_D1_16RE_3D'
-arquivo     = modelo + '\convergencias_90.txt'
-ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'CG_SR_$d_1 = 16R_e$'
-cor         = 'b'
-tamanho     = 2
-ordem       = 1
-alpha       = 1
-estilo      = 'dashed'
-graficar(arquivo,titulo,eixox,eixoy,
-          xmin,xmax,ymin,ymax,
-          ncoluna,lblcoluna,
-          cor,tamanho,ordem,alpha,estilo,
-          invertx,
-          inserirx0,x0,
-          suavizar,filterx1,filterx2,wl,poly,
-          figura)
-
-modelo      = 'EP_CRE_SG_D1_INF_AXI'
-arquivo     = modelo + '\convergencias.txt'
-ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'SG_CRE_$d_1 = \infty$'
-cor         = 'k'
-tamanho     = 1.5
-ordem       = 4
-alpha       = 1
-estilo      = 'solid'
-graficar(arquivo,titulo,eixox,eixoy,
-          xmin,xmax,ymin,ymax,
-          ncoluna,lblcoluna,
-          cor,tamanho,ordem,alpha,estilo,
-          invertx,
-          inserirx0,x0,
-          suavizar,filterx1,filterx2,wl,poly,
-          figura)
-
 modelo      = 'EP_CRE_SG_D1_16RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
@@ -453,6 +435,23 @@ graficar(arquivo,titulo,eixox,eixoy,
           suavizar,filterx1,filterx2,wl,poly,
           figura)
 
+modelo      = 'EP_SR_CG_D1_16RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
+lblcoluna   = 'CG_SR_$d_1 = 16R_e$'
+cor         = 'b'
+tamanho     = 2
+ordem       = 1
+alpha       = 1
+estilo      = 'dashed'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
 
 modelo      = 'EP_CRE_CG_D1_16RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
@@ -479,7 +478,7 @@ CONVERGENCE PROFILES - MODEL EP_D1_8RE
 
 # Formatação do gráfico
 figura      = figura+1
-titulo      = 'Convergence Profiles - EP_D1_8RE'
+titulo      = 'Perfil de convergências - EP_d1_8Re'
 eixox       = r'$x/R_e$'  
 eixoy       = r'$U=-u(r = R_e,\theta = 90^\circ)/R_{e}$ [%]'
 ymin        = 0
@@ -500,12 +499,30 @@ poly        = poly_twin_convergence_profile
 modelo      = 'EP_SR_SG_D1_INF_AXI'
 arquivo     = modelo + '\convergencias.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'SG_SR_$d_1 = \infty$'
+lblcoluna   = 'SG_SR_túnel isolado'
 cor         = 'k'
 tamanho     = 1.5
 ordem       = 4
 alpha       = 1
 estilo      = 'dashed'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'EP_CRE_SG_D1_INF_AXI'
+arquivo     = modelo + '\convergencias.txt'
+ncoluna     = dicncolunalongterm[modelo]
+lblcoluna   = 'SG_CRE_túnel isolado'
+cor         = 'k'
+tamanho     = 1.5
+ordem       = 4
+alpha       = 1
+estilo      = 'solid'
 graficar(arquivo,titulo,eixox,eixoy,
           xmin,xmax,ymin,ymax,
           ncoluna,lblcoluna,
@@ -533,42 +550,6 @@ graficar(arquivo,titulo,eixox,eixoy,
           suavizar,filterx1,filterx2,wl,poly,
           figura)
 
-modelo      = 'EP_SR_CG_D1_8RE_3D'
-arquivo     = modelo + '\convergencias_90.txt'
-ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'CG_SR_$d_1 = 8R_e$'
-cor         = 'b'
-tamanho     = 2
-ordem       = 1
-alpha       = 1
-estilo      = 'dashed'
-graficar(arquivo,titulo,eixox,eixoy,
-          xmin,xmax,ymin,ymax,
-          ncoluna,lblcoluna,
-          cor,tamanho,ordem,alpha,estilo,
-          invertx,
-          inserirx0,x0,
-          suavizar,filterx1,filterx2,wl,poly,
-          figura)
-
-modelo      = 'EP_CRE_SG_D1_INF_AXI'
-arquivo     = modelo + '\convergencias.txt'
-ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'SG_CRE_$d_1 = \infty$'
-cor         = 'k'
-tamanho     = 1.5
-ordem       = 4
-alpha       = 1
-estilo      = 'solid'
-graficar(arquivo,titulo,eixox,eixoy,
-          xmin,xmax,ymin,ymax,
-          ncoluna,lblcoluna,
-          cor,tamanho,ordem,alpha,estilo,
-          invertx,
-          inserirx0,x0,
-          suavizar,filterx1,filterx2,wl,poly,
-          figura)
-
 modelo      = 'EP_CRE_SG_D1_8RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
@@ -587,6 +568,23 @@ graficar(arquivo,titulo,eixox,eixoy,
           suavizar,filterx1,filterx2,wl,poly,
           figura)
 
+modelo      = 'EP_SR_CG_D1_8RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
+lblcoluna   = 'CG_SR_$d_1 = 8R_e$'
+cor         = 'b'
+tamanho     = 2
+ordem       = 1
+alpha       = 1
+estilo      = 'dashed'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
 
 modelo      = 'EP_CRE_CG_D1_8RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
@@ -613,7 +611,7 @@ CONVERGENCE PROFILES - MODEL EP_D1_4RE
 
 # Formatação do gráfico
 figura      = figura+1
-titulo      = 'Convergence Profiles - EP_D1_4RE'
+titulo      = 'Perfil de convergências - EP_d1_4Re'
 eixox       = r'$x/R_e$'  
 eixoy       = r'$U=-u(r = R_e,\theta = 90^\circ)/R_{e}$ [%]'
 ymin        = 0
@@ -634,12 +632,30 @@ poly        = poly_twin_convergence_profile
 modelo      = 'EP_SR_SG_D1_INF_AXI'
 arquivo     = modelo + '\convergencias.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'SG_SR_$d_1 = \infty$'
+lblcoluna   = 'SG_SR_túnel isolado'
 cor         = 'k'
 tamanho     = 1.5
 ordem       = 4
 alpha       = 1
 estilo      = 'dashed'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'EP_CRE_SG_D1_INF_AXI'
+arquivo     = modelo + '\convergencias.txt'
+ncoluna     = dicncolunalongterm[modelo]
+lblcoluna   = 'SG_CRE_túnel isolado'
+cor         = 'k'
+tamanho     = 1.5
+ordem       = 4
+alpha       = 1
+estilo      = 'solid'
 graficar(arquivo,titulo,eixox,eixoy,
           xmin,xmax,ymin,ymax,
           ncoluna,lblcoluna,
@@ -667,42 +683,6 @@ graficar(arquivo,titulo,eixox,eixoy,
           suavizar,filterx1,filterx2,wl,poly,
           figura)
 
-modelo      = 'EP_SR_CG_D1_4RE_3D'
-arquivo     = modelo + '\convergencias_90.txt'
-ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'CG_SR_$d_1 = 4R_e$'
-cor         = 'b'
-tamanho     = 2
-ordem       = 1
-alpha       = 1
-estilo      = 'dashed'
-graficar(arquivo,titulo,eixox,eixoy,
-          xmin,xmax,ymin,ymax,
-          ncoluna,lblcoluna,
-          cor,tamanho,ordem,alpha,estilo,
-          invertx,
-          inserirx0,x0,
-          suavizar,filterx1,filterx2,wl,poly,
-          figura)
-
-modelo      = 'EP_CRE_SG_D1_INF_AXI'
-arquivo     = modelo + '\convergencias.txt'
-ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'SG_CRE_$d_1 = \infty$'
-cor         = 'k'
-tamanho     = 1.5
-ordem       = 4
-alpha       = 1
-estilo      = 'solid'
-graficar(arquivo,titulo,eixox,eixoy,
-          xmin,xmax,ymin,ymax,
-          ncoluna,lblcoluna,
-          cor,tamanho,ordem,alpha,estilo,
-          invertx,
-          inserirx0,x0,
-          suavizar,filterx1,filterx2,wl,poly,
-          figura)
-
 modelo      = 'EP_CRE_SG_D1_4RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
@@ -721,6 +701,23 @@ graficar(arquivo,titulo,eixox,eixoy,
           suavizar,filterx1,filterx2,wl,poly,
           figura)
 
+modelo      = 'EP_SR_CG_D1_4RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
+lblcoluna   = 'CG_SR_$d_1 = 4R_e$'
+cor         = 'b'
+tamanho     = 2
+ordem       = 1
+alpha       = 1
+estilo      = 'dashed'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
 
 modelo      = 'EP_CRE_CG_D1_4RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
@@ -748,7 +745,7 @@ CONVERGENCE PROFILES - MODEL EP_EPVP_SG
 
 # Formatação do gráfico
 figura      = figura+1
-titulo      = 'Convergence Profiles - EP_EPVP_SG_d_1 = infity'
+titulo      = 'Perfil de convergências - EP_EPVP_SG_túnel isolado'
 eixox       = r'$x/R_e$'  
 eixoy       = r'$U=-u(r = R_e,\theta = 90^\circ)/R_{e}$ [%]'
 ymin        = 0
@@ -806,7 +803,7 @@ graficar(arquivo,titulo,eixox,eixoy,
 # modelo      = 'EPVP_SR_SG_D1_INF_AXI'
 # arquivo     = modelo + '\convergencias.txt'
 # ncoluna     = dicncolunafinalexcavation[modelo]
-# lblcoluna   = 'EPVP_ST_SR_$d_1 = \infty$'
+# lblcoluna   = 'EPVP_CP_SR_$d_1 = \infty$'
 # cor         = 'orange'
 # tamanho     = 1.5
 # ordem       = 3
@@ -824,7 +821,7 @@ graficar(arquivo,titulo,eixox,eixoy,
 # modelo      = 'EPVP_CRE_SG_D1_INF_AXI'
 # arquivo     = modelo + '\convergencias.txt'
 # ncoluna     = dicncolunafinalexcavation[modelo]
-# lblcoluna   = 'EPVP_ST_CRE_$d_1 = \infty$'
+# lblcoluna   = 'EPVP_CP_CRE_$d_1 = \infty$'
 # cor         = 'orange'
 # tamanho     = 1.5
 # ordem       = 3
@@ -842,7 +839,7 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EPVP_SR_SG_D1_INF_AXI'
 arquivo     = modelo + '\convergencias.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'EPVP_SR_LT'
+lblcoluna   = 'EPVP_SR_LP'
 cor         = 'r'
 tamanho     = 1.5
 ordem       = 3
@@ -860,7 +857,7 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EPVP_CRE_SG_D1_INF_AXI'
 arquivo     = modelo + '\convergencias.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'EPVP_CRE_LT'
+lblcoluna   = 'EPVP_CRE_LP'
 cor         = 'r'
 tamanho     = 1.5
 ordem       = 3
@@ -878,7 +875,7 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EPVP_CRVE_SG_D1_INF_AXI'
 arquivo     = modelo + '\convergencias.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'EPVP_CRVE_LT'
+lblcoluna   = 'EPVP_CRVE_LP'
 cor         = 'b'
 tamanho     = 1.5
 ordem       = 3

@@ -94,7 +94,7 @@ def graficar(arquivo,                   # nome do arquivo de leitura
         loc = 'center',
         shadow=False,
         framealpha = 0,
-        ncol = 6,
+        ncol = 4,
         columnspacing = 0.5,
         bbox_to_anchor=(0.5, -0.2),
         fontsize="11")
@@ -244,7 +244,7 @@ CONVERGENCE PROFILES - MODEL E_CRE_CG
 
 # Formatação do gráfico
 figura      = figura+1
-titulo      = 'Convergence Profiles - E_CRE_CG'
+titulo      = 'Perfil de convergências - E_CRE_CG'
 eixox       = r'$x/R_e$'  
 eixoy       = r'$U=-u(r = R_e,\theta = 90^\circ)/R_{e}$ [%]'
 ymin        = ymin_twin_convergence_profile
@@ -265,7 +265,7 @@ poly        = poly_twin_convergence_profile
 modelo      = 'E_CRE_SG_D1_INF_AXI'
 arquivo     = modelo + '\convergencias.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = '$d_1 = \infty$ and without gallery'
+lblcoluna   = 'túnel isolado'
 cor         = 'k'
 tamanho     = 1.5
 ordem       = 4
@@ -302,7 +302,7 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'E_CRE_CG_D1_8RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = ' $d_1 = 8R_e$'
+lblcoluna   = '$d_1 = 8R_e$'
 cor         = 'g'
 tamanho     = 2
 ordem       = 2
@@ -344,7 +344,7 @@ CONVERGENCE PROFILES - MODEL EP_SR_SG
 
 # Formatação do gráfico
 figura      = figura+1
-titulo      = 'Convergence Profiles - EP_SR_SG'
+titulo      = 'Perfil de convergências - EP_SR_SG'
 eixox       = r'$x/R_e$'  
 eixoy       = r'$U=-u(r = R_e,\theta = 90^\circ)/R_{e}$ [%]'
 ymin        = ymin_twin_convergence_profile
@@ -365,7 +365,7 @@ poly        = poly_twin_convergence_profile
 modelo      = 'EP_SR_SG_D1_INF_AXI'
 arquivo     = modelo + '\convergencias.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = '$d_1 = \infty$ and without gallery'
+lblcoluna   = 'túnel isolado'
 cor         = 'k'
 tamanho     = 1.5
 ordem       = 4
@@ -443,7 +443,7 @@ CONVERGENCE PROFILES - MODEL EP_SR_CG
 
 # Formatação do gráfico
 figura      = figura + 1
-titulo      = 'Convergence Profiles - EP_SR_CG'
+titulo      = 'Perfil de convergências - EP_SR_CG'
 eixox       = r'$x/R_e$'  
 eixoy       = r'$U=-u(r = R_e,\theta = 90^\circ)/R_{e}$ [%]'
 ymin        = ymin_twin_convergence_profile
@@ -464,7 +464,7 @@ poly        = poly_twin_convergence_profile
 modelo      = 'EP_SR_SG_D1_INF_AXI'
 arquivo     = modelo + '\convergencias.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = '$d_1 = \infty$ and without gallery'
+lblcoluna   = 'túnel isolado'
 cor         = 'k'
 tamanho     = 1.5
 ordem       = 4
@@ -535,6 +535,157 @@ graficar(arquivo,titulo,eixox,eixoy,
           suavizar,filterx1,filterx2,wl,poly,
           figura)
 
+#%% #.  CONVERGENCE PROFILES - MODEL EP_SR_SG_CG
+""" ********************************************
+CONVERGENCE PROFILES - MODEL EP_SR_SG_CG
+******************************************** """ 
+
+# Formatação do gráfico
+figura      = figura + 1
+titulo      = 'Perfil de convergências - EP_SR_SG_CG'
+eixox       = r'$x/R_e$'  
+eixoy       = r'$U=-u(r = R_e,\theta = 90^\circ)/R_{e}$ [%]'
+ymin        = ymin_twin_convergence_profile
+ymax        = ymax_twin_convergence_profile+1
+xmin        = xmin_twin_profile
+xmax        = xmax_twin_profile
+invertx     = True
+inserirx0   = True
+x0          = x0_twin_profile
+suavizar    = suavizar_twin
+
+# parametros para o filtro de suavização
+filterx1    = filterx1_twin_convergence_profile
+filterx2    = filterx2_twin_convergence_profile
+wl          = wl_twin_convergence_profile
+poly        = poly_twin_convergence_profile
+
+modelo      = 'EP_SR_SG_D1_16RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
+lblcoluna   = 'SG_$d_1 = 16R_e$_Ueq=1,407'
+cor         = 'orange'
+tamanho     = 2
+ordem       = 3
+alpha       = 1
+estilo      = 'solid'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'EP_SR_CG_D1_16RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
+lblcoluna   = 'CG_$d_1 = 16R_e$_Ueq=1,425'
+cor         = 'orange'
+tamanho     = 2
+ordem       = 3
+alpha       = 1
+estilo      = 'dashed'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'EP_SR_SG_D1_8RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
+lblcoluna   = 'SG_$d_1 = 8R_e$_Ueq=1,429'
+cor         = 'g'
+tamanho     = 2
+ordem       = 2
+alpha       = 1
+estilo      = 'solid'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'EP_SR_CG_D1_8RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
+lblcoluna   = 'CG_$d_1 = 8R_e$_Ueq=1,439'
+cor         = 'g'
+tamanho     = 2
+ordem       = 2
+alpha       = 1
+estilo      = 'dashed'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'EP_SR_SG_D1_4RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
+lblcoluna   = 'SG_$d_1 = 4R_e$_Ueq=1,83'
+cor         = 'r'
+tamanho     = 2
+ordem       = 1
+alpha       = 1
+estilo      = 'solid'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'EP_SR_CG_D1_4RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
+lblcoluna   = 'CG_$d_1 = 4R_e$_Ueq=1,845'
+cor         = 'r'
+tamanho     = 2
+ordem       = 1
+alpha       = 1
+estilo      = 'dashed'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'EP_SR_SG_D1_INF_AXI'
+arquivo     = modelo + '\convergencias.txt'
+ncoluna     = dicncolunalongterm[modelo]
+lblcoluna   = 'túnel isolado_Ueq=1,406'
+cor         = 'k'
+tamanho     = 1.5
+ordem       = 4
+alpha       = 1
+estilo      = 'dashed'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
 #%% #.  CONVERGENCE PROFILES - MODEL EP_CRE_SG
 """ ********************************************
 CONVERGENCE PROFILES - MODEL EP_CRE
@@ -542,7 +693,7 @@ CONVERGENCE PROFILES - MODEL EP_CRE
 
 # Formatação do gráfico
 figura      = figura+1
-titulo      = 'Convergence Profiles - EP_CRE_SG'
+titulo      = 'Perfil de convergências - EP_CRE_SG'
 eixox       = r'$x/R_e$'  
 eixoy       = r'$U=-u(r = R_e,\theta = 90^\circ)/R_{e}$ [%]'
 ymin        = ymin_twin_convergence_profile
@@ -563,7 +714,7 @@ poly        = poly_twin_convergence_profile
 modelo      = 'EP_CRE_SG_D1_INF_AXI'
 arquivo     = modelo + '\convergencias.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = '$d_1 = \infty$ and without gallery'
+lblcoluna   = 'túnel isolado'
 cor         = 'k'
 tamanho     = 1.5
 ordem       = 4
@@ -600,7 +751,7 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EP_CRE_SG_D1_8RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = ' $d_1 = 8R_e$'
+lblcoluna   = '$d_1 = 8R_e$'
 cor         = 'g'
 tamanho     = 2
 ordem       = 2
@@ -642,7 +793,7 @@ CONVERGENCE PROFILES - MODEL EP_CRE
 
 # Formatação do gráfico
 figura      = figura + 1
-titulo      = 'Convergence Profiles - EP_CRE_CG'
+titulo      = 'Perfil de convergências - EP_CRE_CG'
 eixox       = r'$x/R_e$'  
 eixoy       = r'$U=-u(r = R_e,\theta = 90^\circ)/R_{e}$ [%]'
 ymin        = ymin_twin_convergence_profile
@@ -663,7 +814,7 @@ poly        = poly_twin_convergence_profile
 modelo      = 'EP_CRE_SG_D1_INF_AXI'
 arquivo     = modelo + '\convergencias.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = '$d_1 = \infty$ and without gallery'
+lblcoluna   = 'túnel isolado'
 cor         = 'k'
 tamanho     = 1.5
 ordem       = 4
@@ -700,7 +851,7 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EP_CRE_CG_D1_8RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = ' $d_1 = 8R_e$'
+lblcoluna   = '$d_1 = 8R_e$'
 cor         = 'g'
 tamanho     = 2
 ordem       = 2
@@ -734,15 +885,14 @@ graficar(arquivo,titulo,eixox,eixoy,
           suavizar,filterx1,filterx2,wl,poly,
           figura)
 
-
-#%% #.  CONVERGENCE PROFILES - MODEL VP_CRE_CG_ST
+#%% #.  CONVERGENCE PROFILES - MODEL VP_CRE_SG_CP
 """ ********************************************
-CONVERGENCE PROFILES - MODEL VP_CRE_CG_ST
+CONVERGENCE PROFILES - MODEL VP_CRE_SG_CP
 ******************************************** """ 
 
 # Formatação do gráfico
 figura      = figura + 1
-titulo      = 'Convergence Profiles - VP_CRE_CG_ST'
+titulo      = 'Perfil de convergências - VP_CRE_SG_CP'
 eixox       = r'$x/R_e$'  
 eixoy       = r'$U=-u(r = R_e,\theta = 90^\circ)/R_{e}$ [%]'
 ymin        = ymin_twin_convergence_profile
@@ -763,7 +913,105 @@ poly        = poly_twin_convergence_profile
 modelo      = 'VP_CRE_SG_D1_INF_AXI'
 arquivo     = modelo + '\convergencias.txt'
 ncoluna     = dicncolunafinalexcavation[modelo]
-lblcoluna   = '$d_1 = \infty$ and without gallery'
+lblcoluna   = 'túnel isolado'
+cor         = 'k'
+tamanho     = 1.5
+ordem       = 4
+alpha       = 1
+estilo      = 'dashed'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'VP_CRE_SG_D1_16RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunafinalexcavation[modelo]
+lblcoluna   = '$d_1 = 16R_e$'
+cor         = 'orange'
+tamanho     = 2
+ordem       = 3
+alpha       = 1
+estilo      = 'solid'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+
+modelo      = 'VP_CRE_SG_D1_8RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunafinalexcavation[modelo]
+lblcoluna   = '$d_1 = 8R_e$'
+cor         = 'g'
+tamanho     = 2
+ordem       = 2
+alpha       = 1
+estilo      = 'solid'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'VP_CRE_SG_D1_4RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunafinalexcavation[modelo]
+lblcoluna   = '$d_1 = 4R_e$'
+cor         = 'r'
+tamanho     = 2
+ordem       = 1
+alpha       = 1
+estilo      = 'solid'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+#%% #.  CONVERGENCE PROFILES - MODEL VP_CRE_CG_CP
+""" ********************************************
+CONVERGENCE PROFILES - MODEL VP_CRE_CG_CP
+******************************************** """ 
+
+# Formatação do gráfico
+figura      = figura + 1
+titulo      = 'Perfil de convergências - VP_CRE_CG_CP'
+eixox       = r'$x/R_e$'  
+eixoy       = r'$U=-u(r = R_e,\theta = 90^\circ)/R_{e}$ [%]'
+ymin        = ymin_twin_convergence_profile
+ymax        = ymax_twin_convergence_profile
+xmin        = xmin_twin_profile
+xmax        = xmax_twin_profile
+invertx     = True
+inserirx0   = True
+x0          = x0_twin_profile
+suavizar    = suavizar_twin
+
+# parametros para o filtro de suavização
+filterx1    = filterx1_twin_convergence_profile
+filterx2    = filterx2_twin_convergence_profile
+wl          = wl_twin_convergence_profile
+poly        = poly_twin_convergence_profile
+
+modelo      = 'VP_CRE_SG_D1_INF_AXI'
+arquivo     = modelo + '\convergencias.txt'
+ncoluna     = dicncolunafinalexcavation[modelo]
+lblcoluna   = 'túnel isolado'
 cor         = 'k'
 tamanho     = 1.5
 ordem       = 4
@@ -800,7 +1048,7 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'VP_CRE_CG_D1_8RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunafinalexcavation[modelo]
-lblcoluna   = ' $d_1 = 8R_e$'
+lblcoluna   = '$d_1 = 8R_e$'
 cor         = 'g'
 tamanho     = 2
 ordem       = 2
@@ -834,15 +1082,15 @@ graficar(arquivo,titulo,eixox,eixoy,
           suavizar,filterx1,filterx2,wl,poly,
           figura)
 
-#%% #.  CONVERGENCE PROFILES - MODEL VP_CRE_CG_LT
+#%% #.  CONVERGENCE PROFILES - MODEL VP_CRE_SG_LP
 
 """ ********************************************
-CONVERGENCE PROFILES - MODEL VP_CRE_CG_LT
+CONVERGENCE PROFILES - MODEL VP_CRE_SG_LP
 ******************************************** """ 
 
 # Formatação do gráfico
 figura      = figura + 1
-titulo      = 'Convergence Profiles - VP_CRE_CG_LT'
+titulo      = 'Perfil de convergências - VP_CRE_SG_LP'
 eixox       = r'$x/R_e$'  
 eixoy       = r'$U=-u(r = R_e,\theta = 90^\circ)/R_{e}$ [%]'
 ymin        = ymin_twin_convergence_profile
@@ -863,7 +1111,107 @@ poly        = poly_twin_convergence_profile
 modelo      = 'VP_CRE_SG_D1_INF_AXI'
 arquivo     = modelo + '\convergencias.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = '$d_1 = \infty$ and without gallery'
+lblcoluna   = 'túnel isolado'
+cor         = 'k'
+tamanho     = 1.5
+ordem       = 4
+alpha       = 1
+estilo      = 'dashed'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'VP_CRE_SG_D1_16RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
+lblcoluna   = '$d_1 = 16R_e$'
+cor         = 'orange'
+tamanho     = 2
+ordem       = 3
+alpha       = 1
+estilo      = 'solid'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+
+modelo      = 'VP_CRE_SG_D1_8RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
+lblcoluna   = '$d_1 = 8R_e$'
+cor         = 'g'
+tamanho     = 2
+ordem       = 2
+alpha       = 1
+estilo      = 'solid'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+
+modelo      = 'VP_CRE_SG_D1_4RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
+lblcoluna   = '$d_1 = 4R_e$'
+cor         = 'r'
+tamanho     = 2
+ordem       = 1
+alpha       = 1
+estilo      = 'solid'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+#%% #.  CONVERGENCE PROFILES - MODEL VP_CRE_CG_LP
+
+""" ********************************************
+CONVERGENCE PROFILES - MODEL VP_CRE_CG_LP
+******************************************** """ 
+
+# Formatação do gráfico
+figura      = figura + 1
+titulo      = 'Perfil de convergências - VP_CRE_CG_LP'
+eixox       = r'$x/R_e$'  
+eixoy       = r'$U=-u(r = R_e,\theta = 90^\circ)/R_{e}$ [%]'
+ymin        = ymin_twin_convergence_profile
+ymax        = ymax_twin_convergence_profile
+xmin        = xmin_twin_profile
+xmax        = xmax_twin_profile
+invertx     = True
+inserirx0   = True
+x0          = x0_twin_profile
+suavizar    = suavizar_twin
+
+# parametros para o filtro de suavização
+filterx1    = filterx1_twin_convergence_profile
+filterx2    = filterx2_twin_convergence_profile
+wl          = wl_twin_convergence_profile
+poly        = poly_twin_convergence_profile
+
+modelo      = 'VP_CRE_SG_D1_INF_AXI'
+arquivo     = modelo + '\convergencias.txt'
+ncoluna     = dicncolunalongterm[modelo]
+lblcoluna   = 'túnel isolado'
 cor         = 'k'
 tamanho     = 1.5
 ordem       = 4
@@ -900,7 +1248,7 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'VP_CRE_CG_D1_8RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = ' $d_1 = 8R_e$'
+lblcoluna   = '$d_1 = 8R_e$'
 cor         = 'g'
 tamanho     = 2
 ordem       = 2
@@ -934,15 +1282,353 @@ graficar(arquivo,titulo,eixox,eixoy,
           suavizar,filterx1,filterx2,wl,poly,
           figura)
 
-
-#%% #.  CONVERGENCE PROFILES - MODEL EPVP_CRE_SG_ST
+#%% #.  CONVERGENCE PROFILES - MODEL EP_VP_CRE_SG_LP
 """ ********************************************
-CONVERGENCE PROFILES - MODEL EPVP_CRE_CG_ST
+CONVERGENCE PROFILES - MODEL EP_VP_CRE_SG_LP
+******************************************** """ 
+
+# Formatação do gráfico
+figura      = figura+1
+titulo      = 'Perfil de convergências - EP_VP_CRE_SG_LP'
+eixox       = r'$x/R_e$'  
+eixoy       = r'$U=-u(r = R_e,\theta = 90^\circ)/R_{e}$ [%]'
+ymin        = ymin_twin_convergence_profile
+ymax        = ymax_twin_convergence_profile
+xmin        = xmin_twin_profile
+xmax        = xmax_twin_profile
+invertx     = True
+inserirx0   = True
+x0          = x0_twin_profile
+suavizar    = suavizar_twin
+
+# parametros para o filtro de suavização
+filterx1    = filterx1_twin_convergence_profile
+filterx2    = filterx2_twin_convergence_profile
+wl          = wl_twin_convergence_profile
+poly        = poly_twin_convergence_profile
+
+modelo      = 'EP_CRE_SG_D1_INF_AXI'
+arquivo     = modelo + '\convergencias.txt'
+ncoluna     = dicncolunalongterm[modelo]
+lblcoluna   = 'EP_túnel isolado_Ueq=0,914'
+cor         = 'k'
+tamanho     = 1.5
+ordem       = 4
+alpha       = 1
+estilo      = 'dashed'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'VP_CRE_SG_D1_INF_AXI'
+arquivo     = modelo + '\convergencias.txt'
+ncoluna     = dicncolunalongterm[modelo]
+lblcoluna   = 'VP_túnel isolado_Ueq=0,784'
+cor         = 'k'
+tamanho     = 1.5
+ordem       = 4
+alpha       = 1
+estilo      = 'solid'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'EP_CRE_SG_D1_16RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
+lblcoluna   = 'EP_$d_1 = 16R_e$_Ueq=0,921'
+cor         = 'orange'
+tamanho     = 2
+ordem       = 3
+alpha       = 1
+estilo      = 'dashed'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'VP_CRE_SG_D1_16RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
+lblcoluna   = 'VP_$d_1 = 16R_e$_Ueq=0,787'
+cor         = 'orange'
+tamanho     = 2
+ordem       = 3
+alpha       = 1
+estilo      = 'solid'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'EP_CRE_SG_D1_8RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
+lblcoluna   = 'EP_$d_1 = 8R_e$_Ueq=0,935'
+cor         = 'g'
+tamanho     = 2
+ordem       = 2
+alpha       = 1
+estilo      = 'dashed'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'VP_CRE_SG_D1_8RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
+lblcoluna   = 'VP_$d_1 = 8R_e$_Ueq=0,799'
+cor         = 'g'
+tamanho     = 2
+ordem       = 2
+alpha       = 1
+estilo      = 'solid'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'EP_CRE_SG_D1_4RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
+lblcoluna   = 'EP_$d_1 = 4R_e$_Ueq=1,000'
+cor         = 'r'
+tamanho     = 2
+ordem       = 1
+alpha       = 1
+estilo      = 'dashed'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'VP_CRE_SG_D1_4RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
+lblcoluna   = 'VP_$d_1 = 4R_e$_Ueq=0,809'
+cor         = 'r'
+tamanho     = 2
+ordem       = 1
+alpha       = 1
+estilo      = 'solid'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+#%% #.  CONVERGENCE PROFILES - MODEL EP_VP_CRE_CG_LP
+
+""" ********************************************
+CONVERGENCE PROFILES - MODEL EP_VP_CRE_CG_LP
 ******************************************** """ 
 
 # Formatação do gráfico
 figura      = figura + 1
-titulo      = 'Convergence Profiles - EPVP_CRE_SG_ST'
+titulo      = 'Perfil de convergências - EP_VP_CRE_CG_LP'
+eixox       = r'$x/R_e$'  
+eixoy       = r'$U=-u(r = R_e,\theta = 90^\circ)/R_{e}$ [%]'
+ymin        = ymin_twin_convergence_profile
+ymax        = ymax_twin_convergence_profile
+xmin        = xmin_twin_profile
+xmax        = xmax_twin_profile
+invertx     = True
+inserirx0   = True
+x0          = x0_twin_profile
+suavizar    = suavizar_twin
+
+# parametros para o filtro de suavização
+filterx1    = filterx1_twin_convergence_profile
+filterx2    = filterx2_twin_convergence_profile
+wl          = wl_twin_convergence_profile
+poly        = poly_twin_convergence_profile
+
+modelo      = 'EP_CRE_SG_D1_INF_AXI'
+arquivo     = modelo + '\convergencias.txt'
+ncoluna     = dicncolunalongterm[modelo]
+lblcoluna   = 'EP_túnel isolado_Ueq=0,914'
+cor         = 'k'
+tamanho     = 1.5
+ordem       = 4
+alpha       = 1
+estilo      = 'dashed'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'VP_CRE_SG_D1_INF_AXI'
+arquivo     = modelo + '\convergencias.txt'
+ncoluna     = dicncolunalongterm[modelo]
+lblcoluna   = 'VP_túnel isolado_Ueq=0,784'
+cor         = 'k'
+tamanho     = 1.5
+ordem       = 4
+alpha       = 1
+estilo      = 'solid'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'EP_CRE_CG_D1_16RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
+lblcoluna   = 'EP_$d_1 = 16R_e$_Ueq=0,924'
+cor         = 'orange'
+tamanho     = 2
+ordem       = 3
+alpha       = 1
+estilo      = 'dashed'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'VP_CRE_CG_D1_16RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
+lblcoluna   = 'VP_$d_1 = 16R_e$_Ueq=0,785'
+cor         = 'orange'
+tamanho     = 2
+ordem       = 3
+alpha       = 1
+estilo      = 'solid'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'EP_CRE_CG_D1_8RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
+lblcoluna   = 'EP_$d_1 = 8R_e$_Ueq=0,946'
+cor         = 'g'
+tamanho     = 2
+ordem       = 2
+alpha       = 1
+estilo      = 'dashed'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'VP_CRE_CG_D1_8RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
+lblcoluna   = 'VP_$d_1 = 8R_e$_Ueq=0,799'
+cor         = 'g'
+tamanho     = 2
+ordem       = 2
+alpha       = 1
+estilo      = 'solid'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'EP_CRE_CG_D1_4RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
+lblcoluna   = 'EP_$d_1 = 4R_e$_Ueq=1,000'
+cor         = 'r'
+tamanho     = 2
+ordem       = 1
+alpha       = 1
+estilo      = 'dashed'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'VP_CRE_CG_D1_4RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
+lblcoluna   = 'VP_$d_1 = 4R_e$_Ueq=0,807'
+cor         = 'r'
+tamanho     = 2
+ordem       = 1
+alpha       = 1
+estilo      = 'solid'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+#%% #.  CONVERGENCE PROFILES - MODEL EPVP_CRE_SG_CP
+""" ********************************************
+CONVERGENCE PROFILES - MODEL EPVP_CRE_CG_CP
+******************************************** """ 
+
+# Formatação do gráfico
+figura      = figura + 1
+titulo      = 'Perfil de convergências - EPVP_CRE_SG_CP'
 eixox       = r'$x/R_e$'  
 eixoy       = r'$U=-u(r = R_e,\theta = 90^\circ)/R_{e}$ [%]'
 ymin        = ymin_twin_convergence_profile
@@ -963,7 +1649,7 @@ poly        = poly_twin_convergence_profile
 modelo      = 'EPVP_CRE_SG_D1_INF_AXI'
 arquivo     = modelo + '\convergencias.txt'
 ncoluna     = dicncolunafinalexcavation[modelo]
-lblcoluna   = '$d_1 = \infty$ and without gallery'
+lblcoluna   = 'túnel isolado'
 cor         = 'k'
 tamanho     = 1.5
 ordem       = 4
@@ -1000,7 +1686,7 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EPVP_CRE_SG_D1_8RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunafinalexcavation[modelo]
-lblcoluna   = ' $d_1 = 8R_e$'
+lblcoluna   = '$d_1 = 8R_e$'
 cor         = 'g'
 tamanho     = 2
 ordem       = 2
@@ -1034,14 +1720,14 @@ graficar(arquivo,titulo,eixox,eixoy,
           suavizar,filterx1,filterx2,wl,poly,
           figura)
 
-#%% #.  CONVERGENCE PROFILES - MODEL EPVP_CRE_SG_LT
+#%% #.  CONVERGENCE PROFILES - MODEL EPVP_CRE_SG_LP
 """ ********************************************
-CONVERGENCE PROFILES - MODEL EPVP_CRE_SG_LT
+CONVERGENCE PROFILES - MODEL EPVP_CRE_SG_LP
 ******************************************** """ 
 
 # Formatação do gráfico
 figura      = figura + 1
-titulo      = 'Convergence Profiles - EPVP_CRE_SG_LT'
+titulo      = 'Perfil de convergências - EPVP_CRE_SG_LP'
 eixox       = r'$x/R_e$'  
 eixoy       = r'$U=-u(r = R_e,\theta = 90^\circ)/R_{e}$ [%]'
 ymin        = ymin_twin_convergence_profile
@@ -1062,7 +1748,7 @@ poly        = poly_twin_convergence_profile
 modelo      = 'EPVP_CRE_SG_D1_INF_AXI'
 arquivo     = modelo + '\convergencias.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = '$d_1 = \infty$ and without gallery'
+lblcoluna   = 'túnel isolado'
 cor         = 'k'
 tamanho     = 1.5
 ordem       = 4
@@ -1099,7 +1785,7 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EPVP_CRE_SG_D1_8RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = ' $d_1 = 8R_e$'
+lblcoluna   = '$d_1 = 8R_e$'
 cor         = 'g'
 tamanho     = 2
 ordem       = 2
@@ -1134,14 +1820,14 @@ graficar(arquivo,titulo,eixox,eixoy,
           figura)
 
 
-#%% #.  CONVERGENCE PROFILES - MODEL EPVP_CRE_CG_ST
+#%% #.  CONVERGENCE PROFILES - MODEL EPVP_CRE_CG_CP
 """ ********************************************
-CONVERGENCE PROFILES - MODEL EPVP_CRE_CG_ST
+CONVERGENCE PROFILES - MODEL EPVP_CRE_CG_CP
 ******************************************** """ 
 
 # Formatação do gráfico
 figura      = figura + 1
-titulo      = 'Convergence Profiles - EPVP_CRE_CG_ST'
+titulo      = 'Perfil de convergências - EPVP_CRE_CG_CP'
 eixox       = r'$x/R_e$'  
 eixoy       = r'$U=-u(r = R_e,\theta = 90^\circ)/R_{e}$ [%]'
 ymin        = ymin_twin_convergence_profile
@@ -1162,7 +1848,7 @@ poly        = poly_twin_convergence_profile
 modelo      = 'EPVP_CRE_SG_D1_INF_AXI'
 arquivo     = modelo + '\convergencias.txt'
 ncoluna     = dicncolunafinalexcavation[modelo]
-lblcoluna   = '$d_1 = \infty$ and without gallery'
+lblcoluna   = 'túnel isolado'
 cor         = 'k'
 tamanho     = 1.5
 ordem       = 4
@@ -1199,7 +1885,7 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EPVP_CRE_CG_D1_8RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunafinalexcavation[modelo]
-lblcoluna   = ' $d_1 = 8R_e$'
+lblcoluna   = '$d_1 = 8R_e$'
 cor         = 'g'
 tamanho     = 2
 ordem       = 2
@@ -1233,15 +1919,15 @@ graficar(arquivo,titulo,eixox,eixoy,
           suavizar,filterx1,filterx2,wl,poly,
           figura)
 
-#%% #.  CONVERGENCE PROFILES - MODEL EPVP_CRE_CG_LT
+#%% #.  CONVERGENCE PROFILES - MODEL EPVP_CRE_CG_LP
 
 """ ********************************************
-CONVERGENCE PROFILES - MODEL EPVP_CRE_CG_LT
+CONVERGENCE PROFILES - MODEL EPVP_CRE_CG_LP
 ******************************************** """ 
 
 # Formatação do gráfico
 figura      = figura + 1
-titulo      = 'Convergence Profiles - EPVP_CRE_CG_LT'
+titulo      = 'Perfil de convergências - EPVP_CRE_CG_LP'
 eixox       = r'$x/R_e$'  
 eixoy       = r'$U=-u(r = R_e,\theta = 90^\circ)/R_{e}$ [%]'
 ymin        = ymin_twin_convergence_profile
@@ -1262,7 +1948,7 @@ poly        = poly_twin_convergence_profile
 modelo      = 'EPVP_CRE_SG_D1_INF_AXI'
 arquivo     = modelo + '\convergencias.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = '$d_1 = \infty$ and without gallery'
+lblcoluna   = 'túnel isolado'
 cor         = 'k'
 tamanho     = 1.5
 ordem       = 4
@@ -1299,7 +1985,7 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EPVP_CRE_CG_D1_8RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = ' $d_1 = 8R_e$'
+lblcoluna   = '$d_1 = 8R_e$'
 cor         = 'g'
 tamanho     = 2
 ordem       = 2
@@ -1332,14 +2018,14 @@ graficar(arquivo,titulo,eixox,eixoy,
           inserirx0,x0,
           suavizar,filterx1,filterx2,wl,poly,
           figura)
-#%% #.  CONVERGENCE PROFILES - MODEL EPVP_CRVE_SG_ST
+#%% #.  CONVERGENCE PROFILES - MODEL EPVP_CRVE_SG_CP
 """ ********************************************
-CONVERGENCE PROFILES - MODEL EPVP_CRE_CG_ST
+CONVERGENCE PROFILES - MODEL EPVP_CRE_CG_CP
 ******************************************** """ 
 
 # Formatação do gráfico
 figura      = figura + 1
-titulo      = 'Convergence Profiles - EPVP_CRVE_SG_ST'
+titulo      = 'Perfil de convergências - EPVP_CRVE_SG_CP'
 eixox       = r'$x/R_e$'  
 eixoy       = r'$U=-u(r = R_e,\theta = 90^\circ)/R_{e}$ [%]'
 ymin        = ymin_twin_convergence_profile
@@ -1360,7 +2046,7 @@ poly        = poly_twin_convergence_profile
 modelo      = 'EPVP_CRVE_SG_D1_INF_AXI'
 arquivo     = modelo + '\convergencias.txt'
 ncoluna     = dicncolunafinalexcavation[modelo]
-lblcoluna   = '$d_1 = \infty$ and without gallery'
+lblcoluna   = 'túnel isolado'
 cor         = 'k'
 tamanho     = 1.5
 ordem       = 4
@@ -1397,7 +2083,7 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EPVP_CRVE_SG_D1_8RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunafinalexcavation[modelo]
-lblcoluna   = ' $d_1 = 8R_e$'
+lblcoluna   = '$d_1 = 8R_e$'
 cor         = 'g'
 tamanho     = 2
 ordem       = 2
@@ -1431,14 +2117,14 @@ graficar(arquivo,titulo,eixox,eixoy,
           suavizar,filterx1,filterx2,wl,poly,
           figura)
 
-#%% #.  CONVERGENCE PROFILES - MODEL EPVP_CRVE_SG_LT
+#%% #.  CONVERGENCE PROFILES - MODEL EPVP_CRVE_SG_LP
 """ ********************************************
-CONVERGENCE PROFILES - MODEL EPVP_CRVE_SG_LT
+CONVERGENCE PROFILES - MODEL EPVP_CRVE_SG_LP
 ******************************************** """ 
 
 # Formatação do gráfico
 figura      = figura + 1
-titulo      = 'Convergence Profiles - EPVP_CRVE_SG_LT'
+titulo      = 'Perfil de convergências - EPVP_CRVE_SG_LP'
 eixox       = r'$x/R_e$'  
 eixoy       = r'$U=-u(r = R_e,\theta = 90^\circ)/R_{e}$ [%]'
 ymin        = ymin_twin_convergence_profile
@@ -1459,7 +2145,7 @@ poly        = poly_twin_convergence_profile
 modelo      = 'EPVP_CRVE_SG_D1_INF_AXI'
 arquivo     = modelo + '\convergencias.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = '$d_1 = \infty$ and without gallery'
+lblcoluna   = 'túnel isolado'
 cor         = 'k'
 tamanho     = 1.5
 ordem       = 4
@@ -1496,7 +2182,7 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EPVP_CRVE_SG_D1_8RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = ' $d_1 = 8R_e$'
+lblcoluna   = '$d_1 = 8R_e$'
 cor         = 'g'
 tamanho     = 2
 ordem       = 2
@@ -1530,14 +2216,14 @@ graficar(arquivo,titulo,eixox,eixoy,
           suavizar,filterx1,filterx2,wl,poly,
           figura)
 
-#%% #.  CONVERGENCE PROFILES - MODEL EPVP_CRVE_CG_ST
+#%% #.  CONVERGENCE PROFILES - MODEL EPVP_CRVE_CG_CP
 """ ********************************************
-CONVERGENCE PROFILES - MODEL EPVP_CRE_CG_ST
+CONVERGENCE PROFILES - MODEL EPVP_CRE_CG_CP
 ******************************************** """ 
 
 # Formatação do gráfico
 figura      = figura + 1
-titulo      = 'Convergence Profiles - EPVP_CRVE_CG_ST'
+titulo      = 'Perfil de convergências - EPVP_CRVE_CG_CP'
 eixox       = r'$x/R_e$'  
 eixoy       = r'$U=-u(r = R_e,\theta = 90^\circ)/R_{e}$ [%]'
 ymin        = ymin_twin_convergence_profile
@@ -1558,7 +2244,7 @@ poly        = poly_twin_convergence_profile
 modelo      = 'EPVP_CRVE_SG_D1_INF_AXI'
 arquivo     = modelo + '\convergencias.txt'
 ncoluna     = dicncolunafinalexcavation[modelo]
-lblcoluna   = '$d_1 = \infty$ and without gallery'
+lblcoluna   = 'túnel isolado'
 cor         = 'k'
 tamanho     = 1.5
 ordem       = 4
@@ -1595,7 +2281,7 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EPVP_CRVE_CG_D1_8RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunafinalexcavation[modelo]
-lblcoluna   = ' $d_1 = 8R_e$'
+lblcoluna   = '$d_1 = 8R_e$'
 cor         = 'g'
 tamanho     = 2
 ordem       = 2
@@ -1629,14 +2315,14 @@ graficar(arquivo,titulo,eixox,eixoy,
           suavizar,filterx1,filterx2,wl,poly,
           figura)
 
-#%% #.  CONVERGENCE PROFILES - MODEL EPVP_CRVE_CG_LT
+#%% #.  CONVERGENCE PROFILES - MODEL EPVP_CRVE_CG_LP
 """ ********************************************
-CONVERGENCE PROFILES - MODEL EPVP_CRVE_CG_LT
+CONVERGENCE PROFILES - MODEL EPVP_CRVE_CG_LP
 ******************************************** """ 
 
 # Formatação do gráfico
 figura      = figura + 1
-titulo      = 'Convergence Profiles - EPVP_CRVE_CG_LT'
+titulo      = 'Perfil de convergências - EPVP_CRVE_CG_LP'
 eixox       = r'$x/R_e$'  
 eixoy       = r'$U=-u(r = R_e,\theta = 90^\circ)/R_{e}$ [%]'
 ymin        = ymin_twin_convergence_profile
@@ -1657,7 +2343,7 @@ poly        = poly_twin_convergence_profile
 modelo      = 'EPVP_CRVE_SG_D1_INF_AXI'
 arquivo     = modelo + '\convergencias.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = '$d_1 = \infty$ and without gallery'
+lblcoluna   = 'túnel isolado'
 cor         = 'k'
 tamanho     = 1.5
 ordem       = 4
@@ -1694,7 +2380,7 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EPVP_CRVE_CG_D1_8RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = ' $d_1 = 8R_e$'
+lblcoluna   = '$d_1 = 8R_e$'
 cor         = 'g'
 tamanho     = 2
 ordem       = 2
@@ -1728,6 +2414,2368 @@ graficar(arquivo,titulo,eixox,eixoy,
           suavizar,filterx1,filterx2,wl,poly,
           figura)
 
+#%% #.  CONVERGENCE PROFILES - MODEL VP_EPVP_CRE_CRVE_SG_CP
+""" ********************************************
+CONVERGENCE PROFILES - MODEL VP_EPVP_CRE_CRVE_SG_CP
+******************************************** """ 
+
+# Formatação do gráfico
+figura      = figura+1
+titulo      = 'Perfil de convergências - VP_EPVP_CRE_CRVE_SG_CP'
+eixox       = r'$x/R_e$'  
+eixoy       = r'$U=-u(r = R_e,\theta = 90^\circ)/R_{e}$ [%]'
+ymin        = ymin_twin_convergence_profile
+ymax        = ymax_twin_convergence_profile
+xmin        = xmin_twin_profile
+xmax        = xmax_twin_profile
+invertx     = True
+inserirx0   = True
+x0          = x0_twin_profile
+suavizar    = suavizar_twin
+
+# parametros para o filtro de suavização
+filterx1    = filterx1_twin_convergence_profile
+filterx2    = filterx2_twin_convergence_profile
+wl          = wl_twin_convergence_profile
+poly        = poly_twin_convergence_profile
+
+modelo      = 'VP_CRE_SG_D1_INF_AXI'
+arquivo     = modelo + '\convergencias.txt'
+ncoluna     = dicncolunafinalexcavation[modelo]
+lblcoluna   = 'VP_CRE_túnel isolado_Ueq=0,719'
+cor         = 'k'
+tamanho     = 1.5
+ordem       = 4
+alpha       = 1
+estilo      = 'dashed'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'EPVP_CRE_SG_D1_INF_AXI'
+arquivo     = modelo + '\convergencias.txt'
+ncoluna     = dicncolunafinalexcavation[modelo]
+lblcoluna   = 'EPVP_CRE_túnel isolado_Ueq=0,914'
+cor         = 'k'
+tamanho     = 1.5
+ordem       = 4
+alpha       = 1
+estilo      = 'solid'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'EPVP_CRVE_SG_D1_INF_AXI'
+arquivo     = modelo + '\convergencias.txt'
+ncoluna     = dicncolunafinalexcavation[modelo]
+lblcoluna   = 'EPVP_CRVE_túnel isolado_Ueq=0,969'
+cor         = 'k'
+tamanho     = 1.5
+ordem       = 4
+alpha       = 1
+estilo      = 'dotted'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'VP_CRE_SG_D1_16RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunafinalexcavation[modelo]
+lblcoluna   = 'VP_CRE_$d_1 = 16R_e$_Ueq=0,721'
+cor         = 'orange'
+tamanho     = 2
+ordem       = 3
+alpha       = 1
+estilo      = 'dashed'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'EPVP_CRE_SG_D1_16RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunafinalexcavation[modelo]
+lblcoluna   = 'EPVP_CRE_$d_1 = 16R_e$_Ueq=0,92'
+cor         = 'orange'
+tamanho     = 2
+ordem       = 3
+alpha       = 1
+estilo      = 'solid'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'EPVP_CRVE_SG_D1_16RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunafinalexcavation[modelo]
+lblcoluna   = 'EPVP_CRVE_$d_1 = 16R_e$_Ueq=0,977'
+cor         = 'orange'
+tamanho     = 2
+ordem       = 3
+alpha       = 1
+estilo      = 'dotted'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'VP_CRE_SG_D1_8RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunafinalexcavation[modelo]
+lblcoluna   = 'VP_CRE_$d_1 = 8R_e$_Ueq=0,745'
+cor         = 'g'
+tamanho     = 2
+ordem       = 2
+alpha       = 1
+estilo      = 'dashed'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'EPVP_CRE_SG_D1_8RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunafinalexcavation[modelo]
+lblcoluna   = 'EPVP_CRE_$d_1 = 8R_e$_Ueq=0,941'
+cor         = 'g'
+tamanho     = 2
+ordem       = 2
+alpha       = 1
+estilo      = 'solid'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'EPVP_CRVE_SG_D1_8RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunafinalexcavation[modelo]
+lblcoluna   = 'EPVP_CRVE_$d_1 = 8R_e$_Ueq=0,994'
+cor         = 'g'
+tamanho     = 2
+ordem       = 2
+alpha       = 1
+estilo      = 'dotted'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'VP_CRE_SG_D1_4RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunafinalexcavation[modelo]
+lblcoluna   = 'VP_CRE_$d_1 = 4R_e$_Ueq=0,797'
+cor         = 'r'
+tamanho     = 2
+ordem       = 1
+alpha       = 1
+estilo      = 'dashed'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'EPVP_CRE_SG_D1_4RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunafinalexcavation[modelo]
+lblcoluna   = 'EPVP_CRE_$d_1 = 4R_e$_Ueq=0,998'
+cor         = 'r'
+tamanho     = 2
+ordem       = 1
+alpha       = 1
+estilo      = 'solid'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'EPVP_CRVE_SG_D1_4RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunafinalexcavation[modelo]
+lblcoluna   = 'EPVP_CRVE_$d_1 = 4R_e$_Ueq=1,062'
+cor         = 'r'
+tamanho     = 2
+ordem       = 1
+alpha       = 1
+estilo      = 'dotted'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+#%% #.  CONVERGENCE PROFILES - MODEL VP_EPVP_CRE_CRVE_SG_LP
+""" ********************************************
+CONVERGENCE PROFILES - MODEL VP_EPVP_CRE_CRVE_SG_LP
+******************************************** """ 
+
+# Formatação do gráfico
+figura      = figura+1
+titulo      = 'Perfil de convergências - VP_EPVP_CRE_CRVE_SG_LP'
+eixox       = r'$x/R_e$'  
+eixoy       = r'$U=-u(r = R_e,\theta = 90^\circ)/R_{e}$ [%]'
+ymin        = ymin_twin_convergence_profile
+ymax        = ymax_twin_convergence_profile
+xmin        = xmin_twin_profile
+xmax        = xmax_twin_profile
+invertx     = True
+inserirx0   = True
+x0          = x0_twin_profile
+suavizar    = suavizar_twin
+
+# parametros para o filtro de suavização
+filterx1    = filterx1_twin_convergence_profile
+filterx2    = filterx2_twin_convergence_profile
+wl          = wl_twin_convergence_profile
+poly        = poly_twin_convergence_profile
+
+modelo      = 'VP_CRE_SG_D1_INF_AXI'
+arquivo     = modelo + '\convergencias.txt'
+ncoluna     = dicncolunalongterm[modelo]
+lblcoluna   = 'VP_CRE_túnel isolado_Ueq=0,784'
+cor         = 'k'
+tamanho     = 1.5
+ordem       = 4
+alpha       = 1
+estilo      = 'solid'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'EPVP_CRE_SG_D1_INF_AXI'
+arquivo     = modelo + '\convergencias.txt'
+ncoluna     = dicncolunalongterm[modelo]
+lblcoluna   = 'EPVP_CRE_túnel isolado_Ueq=0,967'
+cor         = 'k'
+tamanho     = 1.5
+ordem       = 4
+alpha       = 1
+estilo      = 'dashed'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'EPVP_CRVE_SG_D1_INF_AXI'
+arquivo     = modelo + '\convergencias.txt'
+ncoluna     = dicncolunalongterm[modelo]
+lblcoluna   = 'EPVP_CRVE_túnel isolado_Ueq=1,183'
+cor         = 'k'
+tamanho     = 1.5
+ordem       = 4
+alpha       = 1
+estilo      = 'dotted'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'VP_CRE_SG_D1_16RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
+lblcoluna   = 'VP_CRE_$d_1 = 16R_e$_Ueq=0,787'
+cor         = 'orange'
+tamanho     = 2
+ordem       = 3
+alpha       = 1
+estilo      = 'solid'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'EPVP_CRE_SG_D1_16RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
+lblcoluna   = 'EPVP_CRE_$d_1 = 16R_e$_Ueq=0,968'
+cor         = 'orange'
+tamanho     = 2
+ordem       = 3
+alpha       = 1
+estilo      = 'dashed'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'EPVP_CRVE_SG_D1_16RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
+lblcoluna   = 'EPVP_CRVE_$d_1 = 16R_e$_Ueq=1,181'
+cor         = 'orange'
+tamanho     = 2
+ordem       = 3
+alpha       = 1
+estilo      = 'dotted'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'VP_CRE_SG_D1_8RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
+lblcoluna   = 'VP_CRE_$d_1 = 8R_e$_Ueq=0,799'
+cor         = 'g'
+tamanho     = 2
+ordem       = 2
+alpha       = 1
+estilo      = 'solid'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'EPVP_CRE_SG_D1_8RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
+lblcoluna   = 'EPVP_CRE_$d_1 = 8R_e$_Ueq=0,972'
+cor         = 'g'
+tamanho     = 2
+ordem       = 2
+alpha       = 1
+estilo      = 'dashed'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'EPVP_CRVE_SG_D1_8RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
+lblcoluna   = 'EPVP_CRVE_$d_1 = 8R_e$_Ueq=1,166'
+cor         = 'g'
+tamanho     = 2
+ordem       = 2
+alpha       = 1
+estilo      = 'dotted'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'VP_CRE_SG_D1_4RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
+lblcoluna   = 'VP_CRE_$d_1 = 4R_e$_Ueq=0,809'
+cor         = 'r'
+tamanho     = 2
+ordem       = 1
+alpha       = 1
+estilo      = 'solid'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'EPVP_CRE_SG_D1_4RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
+lblcoluna   = 'EPVP_CRE_$d_1 = 4R_e$_Ueq=0,985'
+cor         = 'r'
+tamanho     = 2
+ordem       = 1
+alpha       = 1
+estilo      = 'dashed'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'EPVP_CRVE_SG_D1_4RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
+lblcoluna   = 'EPVP_CRVE_$d_1 = 4R_e$_Ueq=1,193'
+cor         = 'r'
+tamanho     = 2
+ordem       = 1
+alpha       = 1
+estilo      = 'dotted'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+#%% #.  CONVERGENCE PROFILES - MODEL VP_EPVP_CRE_CRVE_CG_CP
+""" ********************************************
+CONVERGENCE PROFILES - MODEL VP_EPVP_CRE_CRVE_CG_CP
+******************************************** """ 
+
+# Formatação do gráfico
+figura      = figura+1
+titulo      = 'Perfil de convergências - VP_EPVP_CRE_CRVE_CG_CP'
+eixox       = r'$x/R_e$'  
+eixoy       = r'$U=-u(r = R_e,\theta = 90^\circ)/R_{e}$ [%]'
+ymin        = ymin_twin_convergence_profile
+ymax        = ymax_twin_convergence_profile
+xmin        = xmin_twin_profile
+xmax        = xmax_twin_profile
+invertx     = True
+inserirx0   = True
+x0          = x0_twin_profile
+suavizar    = suavizar_twin
+
+# parametros para o filtro de suavização
+filterx1    = filterx1_twin_convergence_profile
+filterx2    = filterx2_twin_convergence_profile
+wl          = wl_twin_convergence_profile
+poly        = poly_twin_convergence_profile
+
+modelo      = 'VP_CRE_SG_D1_INF_AXI'
+arquivo     = modelo + '\convergencias.txt'
+ncoluna     = dicncolunafinalexcavation[modelo]
+lblcoluna   = 'VP_CRE_túnel isolado_Ueq=0,719'
+cor         = 'k'
+tamanho     = 1.5
+ordem       = 4
+alpha       = 1
+estilo      = 'dashed'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'EPVP_CRE_SG_D1_INF_AXI'
+arquivo     = modelo + '\convergencias.txt'
+ncoluna     = dicncolunafinalexcavation[modelo]
+lblcoluna   = 'EPVP_CRE_túnel isolado_Ueq=0,914'
+cor         = 'k'
+tamanho     = 1.5
+ordem       = 4
+alpha       = 1
+estilo      = 'solid'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'EPVP_CRVE_SG_D1_INF_AXI'
+arquivo     = modelo + '\convergencias.txt'
+ncoluna     = dicncolunafinalexcavation[modelo]
+lblcoluna   = 'EPVP_CRVE_túnel isolado_Ueq=0,969'
+cor         = 'k'
+tamanho     = 1.5
+ordem       = 4
+alpha       = 1
+estilo      = 'dotted'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'VP_CRE_CG_D1_16RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunafinalexcavation[modelo]
+lblcoluna   = 'VP_CRE_$d_1 = 16R_e$_Ueq=0,729'
+cor         = 'orange'
+tamanho     = 2
+ordem       = 3
+alpha       = 1
+estilo      = 'dashed'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'EPVP_CRE_CG_D1_16RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunafinalexcavation[modelo]
+lblcoluna   = 'EPVP_CRE_$d_1 = 16R_e$_Ueq=0,918'
+cor         = 'orange'
+tamanho     = 2
+ordem       = 3
+alpha       = 1
+estilo      = 'solid'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'EPVP_CRVE_CG_D1_16RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunafinalexcavation[modelo]
+lblcoluna   = 'EPVP_CRVE_$d_1 = 16R_e$_Ueq=0,975'
+cor         = 'orange'
+tamanho     = 2
+ordem       = 3
+alpha       = 1
+estilo      = 'dotted'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'VP_CRE_CG_D1_8RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunafinalexcavation[modelo]
+lblcoluna   = 'VP_CRE_$d_1 = 8R_e$_Ueq=0,743'
+cor         = 'g'
+tamanho     = 2
+ordem       = 2
+alpha       = 1
+estilo      = 'dashed'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'EPVP_CRE_CG_D1_8RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunafinalexcavation[modelo]
+lblcoluna   = 'EPVP_CRE_$d_1 = 8R_e$_Ueq=0,937'
+cor         = 'g'
+tamanho     = 2
+ordem       = 2
+alpha       = 1
+estilo      = 'solid'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'EPVP_CRVE_CG_D1_8RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunafinalexcavation[modelo]
+lblcoluna   = 'EPVP_CRVE_$d_1 = 8R_e$_Ueq=0,992'
+cor         = 'g'
+tamanho     = 2
+ordem       = 2
+alpha       = 1
+estilo      = 'dotted'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'VP_CRE_CG_D1_4RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunafinalexcavation[modelo]
+lblcoluna   = 'VP_CRE_$d_1 = 4R_e$_Ueq=0,795'
+cor         = 'r'
+tamanho     = 2
+ordem       = 1
+alpha       = 1
+estilo      = 'dashed'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'EPVP_CRE_CG_D1_4RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunafinalexcavation[modelo]
+lblcoluna   = 'EPVP_CRE_$d_1 = 4R_e$_Ueq=1,000'
+cor         = 'r'
+tamanho     = 2
+ordem       = 1
+alpha       = 1
+estilo      = 'solid'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'EPVP_CRVE_CG_D1_4RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunafinalexcavation[modelo]
+lblcoluna   = 'EPVP_CRVE_$d_1 = 4R_e$_Ueq=1,062'
+cor         = 'r'
+tamanho     = 2
+ordem       = 1
+alpha       = 1
+estilo      = 'dotted'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+#%% #.  CONVERGENCE PROFILES - MODEL VP_EPVP_CRE_CRVE_CG_LP
+""" ********************************************
+CONVERGENCE PROFILES - MODEL VP_EPVP_CRE_CRVE_CG_LP
+******************************************** """ 
+
+# Formatação do gráfico
+figura      = figura+1
+titulo      = 'Perfil de convergências - VP_EPVP_CRE_CRVE_CG_LP'
+eixox       = r'$x/R_e$'  
+eixoy       = r'$U=-u(r = R_e,\theta = 90^\circ)/R_{e}$ [%]'
+ymin        = ymin_twin_convergence_profile
+ymax        = ymax_twin_convergence_profile
+xmin        = xmin_twin_profile
+xmax        = xmax_twin_profile
+invertx     = True
+inserirx0   = True
+x0          = x0_twin_profile
+suavizar    = suavizar_twin
+
+# parametros para o filtro de suavização
+filterx1    = filterx1_twin_convergence_profile
+filterx2    = filterx2_twin_convergence_profile
+wl          = wl_twin_convergence_profile
+poly        = poly_twin_convergence_profile
+
+modelo      = 'VP_CRE_SG_D1_INF_AXI'
+arquivo     = modelo + '\convergencias.txt'
+ncoluna     = dicncolunalongterm[modelo]
+lblcoluna   = 'VP_CRE_túnel isolado_Ueq=0,784'
+cor         = 'k'
+tamanho     = 1.5
+ordem       = 4
+alpha       = 1
+estilo      = 'solid'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'EPVP_CRE_SG_D1_INF_AXI'
+arquivo     = modelo + '\convergencias.txt'
+ncoluna     = dicncolunalongterm[modelo]
+lblcoluna   = 'EPVP_CRE_túnel isolado_Ueq=0,967'
+cor         = 'k'
+tamanho     = 1.5
+ordem       = 4
+alpha       = 1
+estilo      = 'dashed'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'EPVP_CRVE_SG_D1_INF_AXI'
+arquivo     = modelo + '\convergencias.txt'
+ncoluna     = dicncolunalongterm[modelo]
+lblcoluna   = 'EPVP_CRVE_túnel isolado_Ueq=1,183'
+cor         = 'k'
+tamanho     = 1.5
+ordem       = 4
+alpha       = 1
+estilo      = 'dotted'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'VP_CRE_CG_D1_16RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
+lblcoluna   = 'VP_CRE_$d_1 = 16R_e$_Ueq=0,785'
+cor         = 'orange'
+tamanho     = 2
+ordem       = 3
+alpha       = 1
+estilo      = 'solid'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'EPVP_CRE_CG_D1_16RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
+lblcoluna   = 'EPVP_CRE_$d_1 = 16R_e$_Ueq=0,972'
+cor         = 'orange'
+tamanho     = 2
+ordem       = 3
+alpha       = 1
+estilo      = 'dashed'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'EPVP_CRVE_CG_D1_16RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
+lblcoluna   = 'EPVP_CRVE_$d_1 = 16R_e$_Ueq=1,178'
+cor         = 'orange'
+tamanho     = 2
+ordem       = 3
+alpha       = 1
+estilo      = 'dotted'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'VP_CRE_CG_D1_8RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
+lblcoluna   = 'VP_CRE_$d_1 = 8R_e$_Ueq=0,799'
+cor         = 'g'
+tamanho     = 2
+ordem       = 2
+alpha       = 1
+estilo      = 'solid'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'EPVP_CRE_CG_D1_8RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
+lblcoluna   = 'EPVP_CRE_$d_1 = 8R_e$_Ueq=0,971'
+cor         = 'g'
+tamanho     = 2
+ordem       = 2
+alpha       = 1
+estilo      = 'dashed'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'EPVP_CRVE_CG_D1_8RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
+lblcoluna   = 'EPVP_CRVE_$d_1 = 8R_e$_Ueq=1,165'
+cor         = 'g'
+tamanho     = 2
+ordem       = 2
+alpha       = 1
+estilo      = 'dotted'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'VP_CRE_CG_D1_4RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
+lblcoluna   = 'VP_CRE_$d_1 = 4R_e$_Ueq=0,807'
+cor         = 'r'
+tamanho     = 2
+ordem       = 1
+alpha       = 1
+estilo      = 'solid'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'EPVP_CRE_CG_D1_4RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
+lblcoluna   = 'EPVP_CRE_$d_1 = 4R_e$_Ueq=0,978'
+cor         = 'r'
+tamanho     = 2
+ordem       = 1
+alpha       = 1
+estilo      = 'dashed'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'EPVP_CRVE_CG_D1_4RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
+lblcoluna   = 'EPVP_CRVE_$d_1 = 4R_e$_Ueq=1,191'
+cor         = 'r'
+tamanho     = 2
+ordem       = 1
+alpha       = 1
+estilo      = 'dotted'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+#%% #.  CONVERGENCE PROFILES - MODEL EP_EPVP_CRE_CRVE_SG_LP
+""" ********************************************
+CONVERGENCE PROFILES - MODEL EP_EPVP_CRE_CRVE_SG_LP
+******************************************** """ 
+
+# Formatação do gráfico
+figura      = figura+1
+titulo      = 'Perfil de convergências - EP_EPVP_CRE_CRVE_SG_LP'
+eixox       = r'$x/R_e$'  
+eixoy       = r'$U=-u(r = R_e,\theta = 90^\circ)/R_{e}$ [%]'
+ymin        = ymin_twin_convergence_profile
+ymax        = ymax_twin_convergence_profile
+xmin        = xmin_twin_profile
+xmax        = xmax_twin_profile
+invertx     = True
+inserirx0   = True
+x0          = x0_twin_profile
+suavizar    = suavizar_twin
+
+# parametros para o filtro de suavização
+filterx1    = filterx1_twin_convergence_profile
+filterx2    = filterx2_twin_convergence_profile
+wl          = wl_twin_convergence_profile
+poly        = poly_twin_convergence_profile
+
+modelo      = 'EP_CRE_SG_D1_INF_AXI'
+arquivo     = modelo + '\convergencias.txt'
+ncoluna     = dicncolunalongterm[modelo]
+lblcoluna   = 'EP_CRE_túnel isolado'
+cor         = 'k'
+tamanho     = 1.5
+ordem       = 4
+alpha       = 1
+estilo      = 'solid'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'EPVP_CRE_SG_D1_INF_AXI'
+arquivo     = modelo + '\convergencias.txt'
+ncoluna     = dicncolunalongterm[modelo]
+lblcoluna   = 'EPVP_CRE_túnel isolado'
+cor         = 'k'
+tamanho     = 1.5
+ordem       = 4
+alpha       = 1
+estilo      = 'dashed'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'EPVP_CRVE_SG_D1_INF_AXI'
+arquivo     = modelo + '\convergencias.txt'
+ncoluna     = dicncolunalongterm[modelo]
+lblcoluna   = 'EPVP_CRVE_túnel isolado'
+cor         = 'k'
+tamanho     = 1.5
+ordem       = 4
+alpha       = 1
+estilo      = 'dotted'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'EP_CRE_SG_D1_16RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
+lblcoluna   = 'EP_CRE_$d_1 = 16R_e$'
+cor         = 'orange'
+tamanho     = 2
+ordem       = 3
+alpha       = 1
+estilo      = 'solid'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'EPVP_CRE_SG_D1_16RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
+lblcoluna   = 'EPVP_CRE_$d_1 = 16R_e$'
+cor         = 'orange'
+tamanho     = 2
+ordem       = 3
+alpha       = 1
+estilo      = 'dashed'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'EPVP_CRVE_SG_D1_16RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
+lblcoluna   = 'EPVP_CRVE_$d_1 = 16R_e$'
+cor         = 'orange'
+tamanho     = 2
+ordem       = 3
+alpha       = 1
+estilo      = 'dotted'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'EP_CRE_SG_D1_8RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
+lblcoluna   = 'EP_CRE_$d_1 = 8R_e$'
+cor         = 'g'
+tamanho     = 2
+ordem       = 2
+alpha       = 1
+estilo      = 'solid'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'EPVP_CRE_SG_D1_8RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
+lblcoluna   = 'EPVP_CRE_$d_1 = 8R_e$'
+cor         = 'g'
+tamanho     = 2
+ordem       = 2
+alpha       = 1
+estilo      = 'dashed'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'EPVP_CRVE_SG_D1_8RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
+lblcoluna   = 'EPVP_CRVE_$d_1 = 8R_e$'
+cor         = 'g'
+tamanho     = 2
+ordem       = 2
+alpha       = 1
+estilo      = 'dotted'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'EP_CRE_SG_D1_4RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
+lblcoluna   = 'EP_CRE_$d_1 = 4R_e$'
+cor         = 'r'
+tamanho     = 2
+ordem       = 1
+alpha       = 1
+estilo      = 'solid'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'EPVP_CRE_SG_D1_4RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
+lblcoluna   = 'EPVP_CRE_$d_1 = 4R_e$'
+cor         = 'r'
+tamanho     = 2
+ordem       = 1
+alpha       = 1
+estilo      = 'dashed'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'EPVP_CRVE_SG_D1_4RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
+lblcoluna   = 'EPVP_CRVE_$d_1 = 4R_e$'
+cor         = 'r'
+tamanho     = 2
+ordem       = 1
+alpha       = 1
+estilo      = 'dotted'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+#%% #.  CONVERGENCE PROFILES - MODEL EP_EPVP_CRE_CRVE_CG_LP
+""" ********************************************
+CONVERGENCE PROFILES - MODEL EP_EPVP_CRE_CRVE_CG_LP
+******************************************** """ 
+
+# Formatação do gráfico
+figura      = figura+1
+titulo      = 'Perfil de convergências - EP_EPVP_CRE_CRVE_CG_LP'
+eixox       = r'$x/R_e$'  
+eixoy       = r'$U=-u(r = R_e,\theta = 90^\circ)/R_{e}$ [%]'
+ymin        = ymin_twin_convergence_profile
+ymax        = ymax_twin_convergence_profile
+xmin        = xmin_twin_profile
+xmax        = xmax_twin_profile
+invertx     = True
+inserirx0   = True
+x0          = x0_twin_profile
+suavizar    = suavizar_twin
+
+# parametros para o filtro de suavização
+filterx1    = filterx1_twin_convergence_profile
+filterx2    = filterx2_twin_convergence_profile
+wl          = wl_twin_convergence_profile
+poly        = poly_twin_convergence_profile
+
+modelo      = 'EP_CRE_SG_D1_INF_AXI'
+arquivo     = modelo + '\convergencias.txt'
+ncoluna     = dicncolunalongterm[modelo]
+lblcoluna   = 'EP_CRE_túnel isolado'
+cor         = 'k'
+tamanho     = 1.5
+ordem       = 4
+alpha       = 1
+estilo      = 'solid'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'EPVP_CRE_SG_D1_INF_AXI'
+arquivo     = modelo + '\convergencias.txt'
+ncoluna     = dicncolunalongterm[modelo]
+lblcoluna   = 'EPVP_CRE_túnel isolado'
+cor         = 'k'
+tamanho     = 1.5
+ordem       = 4
+alpha       = 1
+estilo      = 'dashed'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'EPVP_CRVE_SG_D1_INF_AXI'
+arquivo     = modelo + '\convergencias.txt'
+ncoluna     = dicncolunalongterm[modelo]
+lblcoluna   = 'EPVP_CRVE_túnel isolado'
+cor         = 'k'
+tamanho     = 1.5
+ordem       = 4
+alpha       = 1
+estilo      = 'dotted'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'EP_CRE_CG_D1_16RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
+lblcoluna   = 'EP_CRE_$d_1 = 16R_e$'
+cor         = 'orange'
+tamanho     = 2
+ordem       = 3
+alpha       = 1
+estilo      = 'solid'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'EPVP_CRE_CG_D1_16RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
+lblcoluna   = 'EPVP_CRE_$d_1 = 16R_e$'
+cor         = 'orange'
+tamanho     = 2
+ordem       = 3
+alpha       = 1
+estilo      = 'dashed'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'EPVP_CRVE_CG_D1_16RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
+lblcoluna   = 'EPVP_CRVE_$d_1 = 16R_e$'
+cor         = 'orange'
+tamanho     = 2
+ordem       = 3
+alpha       = 1
+estilo      = 'dotted'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'EP_CRE_CG_D1_8RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
+lblcoluna   = 'EP_CRE_$d_1 = 8R_e$'
+cor         = 'g'
+tamanho     = 2
+ordem       = 2
+alpha       = 1
+estilo      = 'solid'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'EPVP_CRE_CG_D1_8RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
+lblcoluna   = 'EPVP_CRE_$d_1 = 8R_e$'
+cor         = 'g'
+tamanho     = 2
+ordem       = 2
+alpha       = 1
+estilo      = 'dashed'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'EPVP_CRVE_CG_D1_8RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
+lblcoluna   = 'EPVP_CRVE_$d_1 = 8R_e$'
+cor         = 'g'
+tamanho     = 2
+ordem       = 2
+alpha       = 1
+estilo      = 'dotted'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'EP_CRE_CG_D1_4RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
+lblcoluna   = 'EP_CRE_$d_1 = 4R_e$'
+cor         = 'r'
+tamanho     = 2
+ordem       = 1
+alpha       = 1
+estilo      = 'solid'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'EPVP_CRE_CG_D1_4RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
+lblcoluna   = 'EPVP_CRE_$d_1 = 4R_e$'
+cor         = 'r'
+tamanho     = 2
+ordem       = 1
+alpha       = 1
+estilo      = 'dashed'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'EPVP_CRVE_CG_D1_4RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
+lblcoluna   = 'EPVP_CRVE_$d_1 = 4R_e$'
+cor         = 'r'
+tamanho     = 2
+ordem       = 1
+alpha       = 1
+estilo      = 'dotted'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+#%% #.  CONVERGENCE PROFILES - MODEL EP_CRE_EPVP_CRVE_CG_CP
+""" ********************************************
+CONVERGENCE PROFILES - MODEL EP_CRE_EPVP_CRVE_CG_CP
+******************************************** """ 
+
+# Formatação do gráfico
+figura      = figura+1
+titulo      = 'Perfil de convergências - EP_CRE_EPVP_CRVE_CG_CP'
+eixox       = r'$x/R_e$'  
+eixoy       = r'$U=-u(r = R_e,\theta = 90^\circ)/R_{e}$ [%]'
+ymin        = ymin_twin_convergence_profile
+ymax        = ymax_twin_convergence_profile
+xmin        = xmin_twin_profile
+xmax        = xmax_twin_profile
+invertx     = True
+inserirx0   = True
+x0          = x0_twin_profile
+suavizar    = suavizar_twin
+
+# parametros para o filtro de suavização
+filterx1    = filterx1_twin_convergence_profile
+filterx2    = filterx2_twin_convergence_profile
+wl          = wl_twin_convergence_profile
+poly        = poly_twin_convergence_profile
+
+modelo      = 'EP_CRE_SG_D1_INF_AXI'
+arquivo     = modelo + '\convergencias.txt'
+ncoluna     = dicncolunalongterm[modelo]
+lblcoluna   = 'EP_CRE_túnel isolado'
+cor         = 'k'
+tamanho     = 1.5
+ordem       = 4
+alpha       = 1
+estilo      = 'solid'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'EPVP_CRVE_SG_D1_INF_AXI'
+arquivo     = modelo + '\convergencias.txt'
+ncoluna     = dicncolunafinalexcavation[modelo]
+lblcoluna   = 'EPVP_CRVE_túnel isolado'
+cor         = 'k'
+tamanho     = 1.5
+ordem       = 4
+alpha       = 1
+estilo      = 'dotted'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'EP_CRE_CG_D1_16RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
+lblcoluna   = 'EP_CRE_$d_1 = 16R_e$'
+cor         = 'orange'
+tamanho     = 2
+ordem       = 3
+alpha       = 1
+estilo      = 'solid'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'EPVP_CRVE_CG_D1_16RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunafinalexcavation[modelo]
+lblcoluna   = 'EPVP_CRVE_$d_1 = 16R_e$'
+cor         = 'orange'
+tamanho     = 2
+ordem       = 3
+alpha       = 1
+estilo      = 'dotted'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'EP_CRE_CG_D1_8RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
+lblcoluna   = 'EP_CRE_$d_1 = 8R_e$'
+cor         = 'g'
+tamanho     = 2
+ordem       = 2
+alpha       = 1
+estilo      = 'solid'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'EPVP_CRVE_CG_D1_8RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunafinalexcavation[modelo]
+lblcoluna   = 'EPVP_CRVE_$d_1 = 8R_e$'
+cor         = 'g'
+tamanho     = 2
+ordem       = 2
+alpha       = 1
+estilo      = 'dotted'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'EP_CRE_CG_D1_4RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
+lblcoluna   = 'EP_CRE_$d_1 = 4R_e$'
+cor         = 'r'
+tamanho     = 2
+ordem       = 1
+alpha       = 1
+estilo      = 'solid'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'EPVP_CRVE_CG_D1_4RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunafinalexcavation[modelo]
+lblcoluna   = 'EPVP_CRVE_$d_1 = 4R_e$'
+cor         = 'r'
+tamanho     = 2
+ordem       = 1
+alpha       = 1
+estilo      = 'dotted'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+#%% #.  CONVERGENCE PROFILES - MODEL EP_CRE_EPVP_CRVE_CG_LP
+""" ********************************************
+CONVERGENCE PROFILES - MODEL EP_CRE_EPVP_CRVE_CG_LP
+******************************************** """ 
+
+# Formatação do gráfico
+figura      = figura+1
+titulo      = 'Perfil de convergências - EP_CRE_EPVP_CRVE_CG_LP'
+eixox       = r'$x/R_e$'  
+eixoy       = r'$U=-u(r = R_e,\theta = 90^\circ)/R_{e}$ [%]'
+ymin        = ymin_twin_convergence_profile
+ymax        = ymax_twin_convergence_profile
+xmin        = xmin_twin_profile
+xmax        = xmax_twin_profile
+invertx     = True
+inserirx0   = True
+x0          = x0_twin_profile
+suavizar    = suavizar_twin
+
+# parametros para o filtro de suavização
+filterx1    = filterx1_twin_convergence_profile
+filterx2    = filterx2_twin_convergence_profile
+wl          = wl_twin_convergence_profile
+poly        = poly_twin_convergence_profile
+
+modelo      = 'EP_CRE_SG_D1_INF_AXI'
+arquivo     = modelo + '\convergencias.txt'
+ncoluna     = dicncolunalongterm[modelo]
+lblcoluna   = 'EP_CRE_túnel isolado'
+cor         = 'k'
+tamanho     = 1.5
+ordem       = 4
+alpha       = 1
+estilo      = 'solid'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'EPVP_CRVE_SG_D1_INF_AXI'
+arquivo     = modelo + '\convergencias.txt'
+ncoluna     = dicncolunalongterm[modelo]
+lblcoluna   = 'EPVP_CRVE_túnel isolado'
+cor         = 'k'
+tamanho     = 1.5
+ordem       = 4
+alpha       = 1
+estilo      = 'dotted'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'EP_CRE_CG_D1_16RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
+lblcoluna   = 'EP_CRE_$d_1 = 16R_e$'
+cor         = 'orange'
+tamanho     = 2
+ordem       = 3
+alpha       = 1
+estilo      = 'solid'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'EPVP_CRVE_CG_D1_16RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
+lblcoluna   = 'EPVP_CRVE_$d_1 = 16R_e$'
+cor         = 'orange'
+tamanho     = 2
+ordem       = 3
+alpha       = 1
+estilo      = 'dotted'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'EP_CRE_CG_D1_8RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
+lblcoluna   = 'EP_CRE_$d_1 = 8R_e$'
+cor         = 'g'
+tamanho     = 2
+ordem       = 2
+alpha       = 1
+estilo      = 'solid'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'EPVP_CRVE_CG_D1_8RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
+lblcoluna   = 'EPVP_CRVE_$d_1 = 8R_e$'
+cor         = 'g'
+tamanho     = 2
+ordem       = 2
+alpha       = 1
+estilo      = 'dotted'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'EP_CRE_CG_D1_4RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
+lblcoluna   = 'EP_CRE_$d_1 = 4R_e$'
+cor         = 'r'
+tamanho     = 2
+ordem       = 1
+alpha       = 1
+estilo      = 'solid'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'EPVP_CRVE_CG_D1_4RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
+lblcoluna   = 'EPVP_CRVE_$d_1 = 4R_e$'
+cor         = 'r'
+tamanho     = 2
+ordem       = 1
+alpha       = 1
+estilo      = 'dotted'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+#%% #.  CONVERGENCE PROFILES - MODEL EP_CRE_EPVP_CRVE_CG_CP_LP
+""" ********************************************
+CONVERGENCE PROFILES - MODEL EP_CRE_EPVP_CRVE_CG_CP_LP
+******************************************** """ 
+
+# Formatação do gráfico
+figura      = figura+1
+titulo      = 'Perfil de convergências - EP_CRE_EPVP_CRVE_CG_CP_LP'
+eixox       = r'$x/R_e$'  
+eixoy       = r'$U=-u(r = R_e,\theta = 90^\circ)/R_{e}$ [%]'
+ymin        = ymin_twin_convergence_profile
+ymax        = ymax_twin_convergence_profile
+xmin        = xmin_twin_profile
+xmax        = xmax_twin_profile
+invertx     = True
+inserirx0   = True
+x0          = x0_twin_profile
+suavizar    = suavizar_twin
+
+# parametros para o filtro de suavização
+filterx1    = filterx1_twin_convergence_profile
+filterx2    = filterx2_twin_convergence_profile
+wl          = wl_twin_convergence_profile
+poly        = poly_twin_convergence_profile
+
+modelo      = 'EP_CRE_SG_D1_INF_AXI'
+arquivo     = modelo + '\convergencias.txt'
+ncoluna     = dicncolunalongterm[modelo]
+lblcoluna   = 'EP_CRE_túnel isolado_Ueq=0,9148'
+cor         = 'k'
+tamanho     = 1.5
+ordem       = 4
+alpha       = 1
+estilo      = 'solid'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'EPVP_CRVE_SG_D1_INF_AXI'
+arquivo     = modelo + '\convergencias.txt'
+ncoluna     = dicncolunafinalexcavation[modelo]
+lblcoluna   = 'EPVP_CRVE_CP_túnel isolado_Ueq=0,969'
+cor         = 'k'
+tamanho     = 1.5
+ordem       = 4
+alpha       = 1
+estilo      = 'dotted'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'EPVP_CRVE_SG_D1_INF_AXI'
+arquivo     = modelo + '\convergencias.txt'
+ncoluna     = dicncolunalongterm[modelo]
+lblcoluna   = 'EPVP_CRVE_LP_túnel isolado_Ueq=1,183'
+cor         = 'k'
+tamanho     = 1.5
+ordem       = 4
+alpha       = 1
+estilo      = 'dashed'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'EP_CRE_CG_D1_16RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
+lblcoluna   = 'EP_CRE_$d_1 = 16R_e$_Ueq=0,924'
+cor         = 'orange'
+tamanho     = 2
+ordem       = 3
+alpha       = 1
+estilo      = 'solid'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'EPVP_CRVE_CG_D1_16RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunafinalexcavation[modelo]
+lblcoluna   = 'EPVP_CRVE_CP_$d_1 = 16R_e$_Ueq=0,975'
+cor         = 'orange'
+tamanho     = 2
+ordem       = 3
+alpha       = 1
+estilo      = 'dotted'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'EPVP_CRVE_CG_D1_16RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
+lblcoluna   = 'EPVP_CRVE_LP_$d_1 = 16R_e$_Ueq=1,178'
+cor         = 'orange'
+tamanho     = 2
+ordem       = 3
+alpha       = 1
+estilo      = 'dashed'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'EP_CRE_CG_D1_8RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
+lblcoluna   = 'EP_CRE_$d_1 = 8R_e$_Ueq=0,946'
+cor         = 'g'
+tamanho     = 2
+ordem       = 2
+alpha       = 1
+estilo      = 'solid'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'EPVP_CRVE_CG_D1_8RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunafinalexcavation[modelo]
+lblcoluna   = 'EPVP_CRVE_CP_$d_1 = 8R_e$_Ueq=0,992'
+cor         = 'g'
+tamanho     = 2
+ordem       = 2
+alpha       = 1
+estilo      = 'dotted'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'EPVP_CRVE_CG_D1_8RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
+lblcoluna   = 'EPVP_CRVE_LP_$d_1 = 8R_e$_Ueq=1,165'
+cor         = 'g'
+tamanho     = 2
+ordem       = 2
+alpha       = 1
+estilo      = 'dashed'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'EP_CRE_CG_D1_4RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
+lblcoluna   = 'EP_CRE_$d_1 = 4R_e$_Ueq=1,000'
+cor         = 'r'
+tamanho     = 2
+ordem       = 1
+alpha       = 1
+estilo      = 'solid'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'EPVP_CRVE_CG_D1_4RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunafinalexcavation[modelo]
+lblcoluna   = 'EPVP_CRVE_CP_$d_1 = 4R_e$_Ueq=1,062'
+cor         = 'r'
+tamanho     = 2
+ordem       = 1
+alpha       = 1
+estilo      = 'dotted'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'EPVP_CRVE_CG_D1_4RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
+lblcoluna   = 'EPVP_CRVE_LP_$d_1 = 4R_e$_Ueq=1,191'
+cor         = 'r'
+tamanho     = 2
+ordem       = 1
+alpha       = 1
+estilo      = 'dashed'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+#%% #.  CONVERGENCE PROFILES - MODEL EP_CRE_EPVP_CRVE_SG_CP
+""" ********************************************
+CONVERGENCE PROFILES - MODEL EP_CRE_EPVP_CRVE_SG_CP
+******************************************** """ 
+
+# Formatação do gráfico
+figura      = figura+1
+titulo      = 'Perfil de convergências - EP_CRE_EPVP_CRVE_SG_CP'
+eixox       = r'$x/R_e$'  
+eixoy       = r'$U=-u(r = R_e,\theta = 90^\circ)/R_{e}$ [%]'
+ymin        = ymin_twin_convergence_profile
+ymax        = ymax_twin_convergence_profile
+xmin        = xmin_twin_profile
+xmax        = xmax_twin_profile
+invertx     = True
+inserirx0   = True
+x0          = x0_twin_profile
+suavizar    = suavizar_twin
+
+# parametros para o filtro de suavização
+filterx1    = filterx1_twin_convergence_profile
+filterx2    = filterx2_twin_convergence_profile
+wl          = wl_twin_convergence_profile
+poly        = poly_twin_convergence_profile
+
+modelo      = 'EP_CRE_SG_D1_INF_AXI'
+arquivo     = modelo + '\convergencias.txt'
+ncoluna     = dicncolunalongterm[modelo]
+lblcoluna   = 'EP_CRE_túnel isolado'
+cor         = 'k'
+tamanho     = 1.5
+ordem       = 4
+alpha       = 1
+estilo      = 'solid'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'EPVP_CRVE_SG_D1_INF_AXI'
+arquivo     = modelo + '\convergencias.txt'
+ncoluna     = dicncolunafinalexcavation[modelo]
+lblcoluna   = 'EPVP_CRVE_túnel isolado'
+cor         = 'k'
+tamanho     = 1.5
+ordem       = 4
+alpha       = 1
+estilo      = 'dotted'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'EP_CRE_SG_D1_16RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
+lblcoluna   = 'EP_CRE_$d_1 = 16R_e$'
+cor         = 'orange'
+tamanho     = 2
+ordem       = 3
+alpha       = 1
+estilo      = 'solid'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'EPVP_CRVE_SG_D1_16RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunafinalexcavation[modelo]
+lblcoluna   = 'EPVP_CRVE_$d_1 = 16R_e$'
+cor         = 'orange'
+tamanho     = 2
+ordem       = 3
+alpha       = 1
+estilo      = 'dotted'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'EP_CRE_SG_D1_8RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
+lblcoluna   = 'EP_CRE_$d_1 = 8R_e$'
+cor         = 'g'
+tamanho     = 2
+ordem       = 2
+alpha       = 1
+estilo      = 'solid'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'EPVP_CRVE_SG_D1_8RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunafinalexcavation[modelo]
+lblcoluna   = 'EPVP_CRVE_$d_1 = 8R_e$'
+cor         = 'g'
+tamanho     = 2
+ordem       = 2
+alpha       = 1
+estilo      = 'dotted'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'EP_CRE_SG_D1_4RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
+lblcoluna   = 'EP_CRE_$d_1 = 4R_e$'
+cor         = 'r'
+tamanho     = 2
+ordem       = 1
+alpha       = 1
+estilo      = 'solid'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'EPVP_CRVE_SG_D1_4RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunafinalexcavation[modelo]
+lblcoluna   = 'EPVP_CRVE_$d_1 = 4R_e$'
+cor         = 'r'
+tamanho     = 2
+ordem       = 1
+alpha       = 1
+estilo      = 'dotted'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+#%% #.  CONVERGENCE PROFILES - MODEL EP_CRE_EPVP_CRVE_SG_LP
+""" ********************************************
+CONVERGENCE PROFILES - MODEL EP_CRE_EPVP_CRVE_SG_LP
+******************************************** """ 
+
+# Formatação do gráfico
+figura      = figura+1
+titulo      = 'Perfil de convergências - EP_CRE_EPVP_CRVE_SG_LP'
+eixox       = r'$x/R_e$'  
+eixoy       = r'$U=-u(r = R_e,\theta = 90^\circ)/R_{e}$ [%]'
+ymin        = ymin_twin_convergence_profile
+ymax        = ymax_twin_convergence_profile
+xmin        = xmin_twin_profile
+xmax        = xmax_twin_profile
+invertx     = True
+inserirx0   = True
+x0          = x0_twin_profile
+suavizar    = suavizar_twin
+
+# parametros para o filtro de suavização
+filterx1    = filterx1_twin_convergence_profile
+filterx2    = filterx2_twin_convergence_profile
+wl          = wl_twin_convergence_profile
+poly        = poly_twin_convergence_profile
+
+modelo      = 'EP_CRE_SG_D1_INF_AXI'
+arquivo     = modelo + '\convergencias.txt'
+ncoluna     = dicncolunalongterm[modelo]
+lblcoluna   = 'EP_CRE_túnel isolado'
+cor         = 'k'
+tamanho     = 1.5
+ordem       = 4
+alpha       = 1
+estilo      = 'solid'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'EPVP_CRVE_SG_D1_INF_AXI'
+arquivo     = modelo + '\convergencias.txt'
+ncoluna     = dicncolunalongterm[modelo]
+lblcoluna   = 'EPVP_CRVE_túnel isolado'
+cor         = 'k'
+tamanho     = 1.5
+ordem       = 4
+alpha       = 1
+estilo      = 'dotted'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'EP_CRE_SG_D1_16RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
+lblcoluna   = 'EP_CRE_$d_1 = 16R_e$'
+cor         = 'orange'
+tamanho     = 2
+ordem       = 3
+alpha       = 1
+estilo      = 'solid'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'EPVP_CRVE_SG_D1_16RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
+lblcoluna   = 'EPVP_CRVE_$d_1 = 16R_e$'
+cor         = 'orange'
+tamanho     = 2
+ordem       = 3
+alpha       = 1
+estilo      = 'dotted'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'EP_CRE_SG_D1_8RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
+lblcoluna   = 'EP_CRE_$d_1 = 8R_e$'
+cor         = 'g'
+tamanho     = 2
+ordem       = 2
+alpha       = 1
+estilo      = 'solid'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'EPVP_CRVE_SG_D1_8RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
+lblcoluna   = 'EPVP_CRVE_$d_1 = 8R_e$'
+cor         = 'g'
+tamanho     = 2
+ordem       = 2
+alpha       = 1
+estilo      = 'dotted'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'EP_CRE_SG_D1_4RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
+lblcoluna   = 'EP_CRE_$d_1 = 4R_e$'
+cor         = 'r'
+tamanho     = 2
+ordem       = 1
+alpha       = 1
+estilo      = 'solid'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'EPVP_CRVE_SG_D1_4RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
+lblcoluna   = 'EPVP_CRVE_$d_1 = 4R_e$'
+cor         = 'r'
+tamanho     = 2
+ordem       = 1
+alpha       = 1
+estilo      = 'dotted'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
 
 #%% CONVERGENCE PROFILES - FIXED D1 VARIOUS MODEL
 """ ********************************************
@@ -1735,13 +4783,13 @@ CONVERGENCE PROFILES - FIXED D1 VARIOUS MODEL
 ******************************************** """
 
 
-#%% #. CONVERGENCE PROFILES - CRE_SG_ST - D1=16Re
+#%% #. CONVERGENCE PROFILES - CRE_SG_CP - D1=16Re
 """ ********************************************
-CONVERGENCE PROFILES - CRE_SG_ST - D1=16Re
+CONVERGENCE PROFILES - CRE_SG_CP - D1=16Re
 ******************************************** """ 
 # Formatação do gráfico
 figura      = figura+1
-titulo      = 'Convergence Profiles - CRE_SG_ST - $d_1=16R_e$'
+titulo      = 'Perfil de convergências - CRE_SG_CP - $d_1=16R_e$'
 eixox       = r'$x/R_e$'  
 eixoy       = r'$U=-u(r = R_e,\theta = 90^\circ)/R_{e}$ [%]'
 ymin        = ymin_twin_convergence_profile
@@ -1795,23 +4843,23 @@ graficar(arquivo,titulo,eixox,eixoy,
           suavizar,filterx1,filterx2,wl,poly,
           figura)
 
-# modelo      = 'VP_CRE_SG_D1_16RE_3D'
-# arquivo     = modelo + '\convergencias_90.txt'
-# ncoluna     = dicncolunafinalexcavation[modelo]
-# lblcoluna   = 'VP_CRE'
-# cor         = 'magenta'
-# tamanho     = 2
-# ordem       = 3
-# alpha       = 1
-# estilo      = 'solid'
-# graficar(arquivo,titulo,eixox,eixoy,
-#           xmin,xmax,ymin,ymax,
-#           ncoluna,lblcoluna,
-#           cor,tamanho,ordem,alpha,estilo,
-#           invertx,
-#           inserirx0,x0,
-#           suavizar,filterx1,filterx2,wl,poly,
-#           figura)
+modelo      = 'VP_CRE_SG_D1_16RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunafinalexcavation[modelo]
+lblcoluna   = 'VP_CRE'
+cor         = 'magenta'
+tamanho     = 2
+ordem       = 3
+alpha       = 1
+estilo      = 'solid'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
 
 modelo      = 'EPVP_CRE_SG_D1_16RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
@@ -1850,13 +4898,13 @@ graficar(arquivo,titulo,eixox,eixoy,
           figura)
 
 
-#%% #. CONVERGENCE PROFILES - CRE_SG_LT - D1=16Re
+#%% #. CONVERGENCE PROFILES - CRE_SG_LP - D1=16Re
 """ ********************************************
-CONVERGENCE PROFILES - CRE_CG_LT - D1=16Re
+CONVERGENCE PROFILES - CRE_CG_LP - D1=16Re
 ******************************************** """ 
 # Formatação do gráfico
 figura      = figura+1
-titulo      = 'Convergence Profiles - CRE_SG_LT - $d_1=16R_e$'
+titulo      = 'Perfil de convergências - CRE_SG_LP - $d_1=16R_e$'
 eixox       = r'$x/R_e$'  
 eixoy       = r'$U=-u(r = R_e,\theta = 90^\circ)/R_{e}$ [%]'
 ymin        = ymin_twin_convergence_profile
@@ -1910,23 +4958,23 @@ graficar(arquivo,titulo,eixox,eixoy,
           suavizar,filterx1,filterx2,wl,poly,
           figura)
 
-# modelo      = 'VP_CRE_SG_D1_16RE_3D'
-# arquivo     = modelo + '\convergencias_90.txt'
-# ncoluna     = dicncolunalongterm[modelo]
-# lblcoluna   = 'VP_CRE'
-# cor         = 'magenta'
-# tamanho     = 2
-# ordem       = 3
-# alpha       = 1
-# estilo      = 'solid'
-# graficar(arquivo,titulo,eixox,eixoy,
-#           xmin,xmax,ymin,ymax,
-#           ncoluna,lblcoluna,
-#           cor,tamanho,ordem,alpha,estilo,
-#           invertx,
-#           inserirx0,x0,
-#           suavizar,filterx1,filterx2,wl,poly,
-#           figura)
+modelo      = 'VP_CRE_SG_D1_16RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
+lblcoluna   = 'VP_CRE'
+cor         = 'magenta'
+tamanho     = 2
+ordem       = 3
+alpha       = 1
+estilo      = 'solid'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
 
 modelo      = 'EPVP_CRE_SG_D1_16RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
@@ -1964,14 +5012,181 @@ graficar(arquivo,titulo,eixox,eixoy,
           suavizar,filterx1,filterx2,wl,poly,
           figura)
 
-
-#%% #. CONVERGENCE PROFILES - CRE_CG_ST - D1=16Re
+#%% #. CONVERGENCE PROFILES - SG_CP_LP - D1=16Re
 """ ********************************************
-CONVERGENCE PROFILES - CRE_CG_ST - D1=16Re
+CONVERGENCE PROFILES - SG_CP_LP - D1=16Re
 ******************************************** """ 
 # Formatação do gráfico
 figura      = figura+1
-titulo      = 'Convergence Profiles - CRE_CG_ST - $d_1=16R_e$'
+titulo      = 'Perfil de convergências - SG_CP_LP - $d_1=16R_e$'
+eixox       = r'$x/R_e$'  
+eixoy       = r'$U=-u(r = R_e,\theta = 90^\circ)/R_{e}$ [%]'
+ymin        = ymin_twin_convergence_profile
+ymax        = ymax_twin_convergence_profile
+xmin        = xmin_twin_profile
+xmax        = xmax_twin_profile
+invertx     = True
+inserirx0   = True
+x0          = x0_twin_profile
+suavizar    = suavizar_twin
+
+# parametros para o filtro de suavização
+filterx1    = filterx1_twin_convergence_profile
+filterx2    = filterx2_twin_convergence_profile
+wl          = wl_twin_convergence_profile
+poly        = poly_twin_convergence_profile
+
+# modelo      = 'E_CRE_SG_D1_16RE_3D'
+# arquivo     = modelo + '\convergencias_90.txt'
+# ncoluna     = dicncolunalongterm[modelo]
+# lblcoluna   = 'E_CRE'
+# cor         = 'b'
+# tamanho     = 2
+# ordem       = 3
+# alpha       = 1
+# estilo      = 'solid'
+# graficar(arquivo,titulo,eixox,eixoy,
+#           xmin,xmax,ymin,ymax,
+#           ncoluna,lblcoluna,
+#           cor,tamanho,ordem,alpha,estilo,
+#           invertx,
+#           inserirx0,x0,
+#           suavizar,filterx1,filterx2,wl,poly,
+#           figura)
+
+modelo      = 'VP_CRE_SG_D1_16RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunafinalexcavation[modelo]
+lblcoluna   = 'VP_CRE_CP_Ueq=0,721'
+cor         = 'magenta'
+tamanho     = 2
+ordem       = 3
+alpha       = 1
+estilo      = 'solid'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'VP_CRE_SG_D1_16RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
+lblcoluna   = 'VP_CRE_LP_Ueq=0,787'
+cor         = 'magenta'
+tamanho     = 2
+ordem       = 3
+alpha       = 1
+estilo      = 'dashed'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'EPVP_CRE_SG_D1_16RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunafinalexcavation[modelo]
+lblcoluna   = 'EPVP_CRE_CP_Ueq=0,92'
+cor         = 'g'
+tamanho     = 2
+ordem       = 3
+alpha       = 1
+estilo      = 'solid'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'EPVP_CRE_SG_D1_16RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
+lblcoluna   = 'EPVP_CRE_LP_Ueq=0,968'
+cor         = 'g'
+tamanho     = 2
+ordem       = 3
+alpha       = 1
+estilo      = 'dashed'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'EPVP_CRVE_SG_D1_16RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunafinalexcavation[modelo]
+lblcoluna   = 'EPVP_CRVE_CP_Ueq=0,977'
+cor         = 'r'
+tamanho     = 2
+ordem       = 3
+alpha       = 1
+estilo      = 'solid'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'EPVP_CRVE_SG_D1_16RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
+lblcoluna   = 'EPVP_CRVE_LP_Ueq=1,181'
+cor         = 'r'
+tamanho     = 2
+ordem       = 3
+alpha       = 1
+estilo      = 'dashed'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'EP_CRE_SG_D1_16RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
+lblcoluna   = 'EP_CRE_Ueq=0,921'
+cor         = 'orange'
+tamanho     = 2
+ordem       = 3
+alpha       = 1
+estilo      = 'dashed'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+#%% #. CONVERGENCE PROFILES - CRE_CG_CP - D1=16Re
+""" ********************************************
+CONVERGENCE PROFILES - CRE_CG_CP - D1=16Re
+******************************************** """ 
+# Formatação do gráfico
+figura      = figura+1
+titulo      = 'Perfil de convergências - CRE_CG_CP - $d_1=16R_e$'
 eixox       = r'$x/R_e$'  
 eixoy       = r'$U=-u(r = R_e,\theta = 90^\circ)/R_{e}$ [%]'
 ymin        = ymin_twin_convergence_profile
@@ -2080,13 +5295,13 @@ graficar(arquivo,titulo,eixox,eixoy,
           figura)
 
 
-#%% #. CONVERGENCE PROFILES - CRE_CG_LT - D1=16Re
+#%% #. CONVERGENCE PROFILES - CRE_CG_LP - D1=16Re
 """ ********************************************
-CONVERGENCE PROFILES - CRE_CG_LT - D1=16Re
+CONVERGENCE PROFILES - CRE_CG_LP - D1=16Re
 ******************************************** """ 
 # Formatação do gráfico
 figura      = figura+1
-titulo      = 'Convergence Profiles - CRE_CG_LT - $d_1=16R_e$'
+titulo      = 'Perfil de convergências - CRE_CG_LP - $d_1=16R_e$'
 eixox       = r'$x/R_e$'  
 eixoy       = r'$U=-u(r = R_e,\theta = 90^\circ)/R_{e}$ [%]'
 ymin        = ymin_twin_convergence_profile
@@ -2194,14 +5409,181 @@ graficar(arquivo,titulo,eixox,eixoy,
           suavizar,filterx1,filterx2,wl,poly,
           figura)
 
-
-#%% #. CONVERGENCE PROFILES - CRE_SG_ST - D1=8Re
+#%% #. CONVERGENCE PROFILES - CG_CP_LP - D1=16Re
 """ ********************************************
-CONVERGENCE PROFILES - CRE_SG_ST - D1=8Re
+CONVERGENCE PROFILES - CG_CP_LP - D1=16Re
 ******************************************** """ 
 # Formatação do gráfico
 figura      = figura+1
-titulo      = 'Convergence Profiles - CRE_SG_ST - $d_1=8R_e$'
+titulo      = 'Perfil de convergências - CG_CP_LP - $d_1=16R_e$'
+eixox       = r'$x/R_e$'  
+eixoy       = r'$U=-u(r = R_e,\theta = 90^\circ)/R_{e}$ [%]'
+ymin        = ymin_twin_convergence_profile
+ymax        = ymax_twin_convergence_profile
+xmin        = xmin_twin_profile
+xmax        = xmax_twin_profile
+invertx     = True
+inserirx0   = True
+x0          = x0_twin_profile
+suavizar    = suavizar_twin
+
+# parametros para o filtro de suavização
+filterx1    = filterx1_twin_convergence_profile
+filterx2    = filterx2_twin_convergence_profile
+wl          = wl_twin_convergence_profile
+poly        = poly_twin_convergence_profile
+
+modelo      = 'VP_CRE_CG_D1_16RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunafinalexcavation[modelo]
+lblcoluna   = 'VP_CRE_CP_Ueq=0,729'
+cor         = 'magenta'
+tamanho     = 2
+ordem       = 3
+alpha       = 1
+estilo      = 'solid'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'VP_CRE_CG_D1_16RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
+lblcoluna   = 'VP_CRE_LP_Ueq=0,785'
+cor         = 'magenta'
+tamanho     = 2
+ordem       = 3
+alpha       = 1
+estilo      = 'dashed'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'EPVP_CRE_CG_D1_16RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunafinalexcavation[modelo]
+lblcoluna   = 'EPVP_CRE_CP_Ueq=0,918'
+cor         = 'g'
+tamanho     = 2
+ordem       = 3
+alpha       = 1
+estilo      = 'solid'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'EPVP_CRE_CG_D1_16RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
+lblcoluna   = 'EPVP_CRE_LP_Ueq=0,972'
+cor         = 'g'
+tamanho     = 2
+ordem       = 3
+alpha       = 1
+estilo      = 'dashed'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'EPVP_CRVE_CG_D1_16RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunafinalexcavation[modelo]
+lblcoluna   = 'EPVP_CRVE_CP_Ueq=0,975'
+cor         = 'r'
+tamanho     = 2
+ordem       = 3
+alpha       = 1
+estilo      = 'solid'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'EPVP_CRVE_CG_D1_16RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
+lblcoluna   = 'EPVP_CRVE_LP_Ueq=1,178'
+cor         = 'r'
+tamanho     = 2
+ordem       = 3
+alpha       = 1
+estilo      = 'dashed'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'EP_CRE_CG_D1_16RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
+lblcoluna   = 'EP_CRE_Ueq=0,924'
+cor         = 'orange'
+tamanho     = 2
+ordem       = 3
+alpha       = 1
+estilo      = 'dashed'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'E_CRE_CG_D1_16RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
+lblcoluna   = 'E_CRE_Ueq=0,724'
+cor         = 'b'
+tamanho     = 2
+ordem       = 3
+alpha       = 1
+estilo      = 'dashed'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+#%% #. CONVERGENCE PROFILES - CRE_SG_CP - D1=8Re
+""" ********************************************
+CONVERGENCE PROFILES - CRE_SG_CP - D1=8Re
+******************************************** """ 
+# Formatação do gráfico
+figura      = figura+1
+titulo      = 'Perfil de convergências - CRE_SG_CP - $d_1=8R_e$'
 eixox       = r'$x/R_e$'  
 eixoy       = r'$U=-u(r = R_e,\theta = 90^\circ)/R_{e}$ [%]'
 ymin        = ymin_twin_convergence_profile
@@ -2255,23 +5637,23 @@ graficar(arquivo,titulo,eixox,eixoy,
           suavizar,filterx1,filterx2,wl,poly,
           figura)
 
-# modelo      = 'VP_CRE_SG_D1_8RE_3D'
-# arquivo     = modelo + '\convergencias_90.txt'
-# ncoluna     = dicncolunafinalexcavation[modelo]
-# lblcoluna   = 'VP_CRE'
-# cor         = 'magenta'
-# tamanho     = 2
-# ordem       = 3
-# alpha       = 1
-# estilo      = 'solid'
-# graficar(arquivo,titulo,eixox,eixoy,
-#           xmin,xmax,ymin,ymax,
-#           ncoluna,lblcoluna,
-#           cor,tamanho,ordem,alpha,estilo,
-#           invertx,
-#           inserirx0,x0,
-#           suavizar,filterx1,filterx2,wl,poly,
-#           figura)
+modelo      = 'VP_CRE_SG_D1_8RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunafinalexcavation[modelo]
+lblcoluna   = 'VP_CRE'
+cor         = 'magenta'
+tamanho     = 2
+ordem       = 3
+alpha       = 1
+estilo      = 'solid'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
 
 modelo      = 'EPVP_CRE_SG_D1_8RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
@@ -2310,13 +5692,13 @@ graficar(arquivo,titulo,eixox,eixoy,
           figura)
 
 
-#%% #. CONVERGENCE PROFILES - CRE_SG_LT - D1=8Re
+#%% #. CONVERGENCE PROFILES - CRE_SG_LP - D1=8Re
 """ ********************************************
-CONVERGENCE PROFILES - CRE_CG_LT - D1=8Re
+CONVERGENCE PROFILES - CRE_CG_LP - D1=8Re
 ******************************************** """ 
 # Formatação do gráfico
 figura      = figura+1
-titulo      = 'Convergence Profiles - CRE_SG_LT - $d_1=8R_e$'
+titulo      = 'Perfil de convergências - CRE_SG_LP - $d_1=8R_e$'
 eixox       = r'$x/R_e$'  
 eixoy       = r'$U=-u(r = R_e,\theta = 90^\circ)/R_{e}$ [%]'
 ymin        = ymin_twin_convergence_profile
@@ -2370,23 +5752,23 @@ graficar(arquivo,titulo,eixox,eixoy,
           suavizar,filterx1,filterx2,wl,poly,
           figura)
 
-# modelo      = 'VP_CRE_SG_D1_8RE_3D'
-# arquivo     = modelo + '\convergencias_90.txt'
-# ncoluna     = dicncolunalongterm[modelo]
-# lblcoluna   = 'VP_CRE'
-# cor         = 'magenta'
-# tamanho     = 2
-# ordem       = 3
-# alpha       = 1
-# estilo      = 'solid'
-# graficar(arquivo,titulo,eixox,eixoy,
-#           xmin,xmax,ymin,ymax,
-#           ncoluna,lblcoluna,
-#           cor,tamanho,ordem,alpha,estilo,
-#           invertx,
-#           inserirx0,x0,
-#           suavizar,filterx1,filterx2,wl,poly,
-#           figura)
+modelo      = 'VP_CRE_SG_D1_8RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
+lblcoluna   = 'VP_CRE'
+cor         = 'magenta'
+tamanho     = 2
+ordem       = 3
+alpha       = 1
+estilo      = 'solid'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
 
 modelo      = 'EPVP_CRE_SG_D1_8RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
@@ -2424,14 +5806,181 @@ graficar(arquivo,titulo,eixox,eixoy,
           suavizar,filterx1,filterx2,wl,poly,
           figura)
 
-
-#%% #. CONVERGENCE PROFILES - CRE_CG_ST - D1=8Re
+#%% #. CONVERGENCE PROFILES - SG_CP_LP - D1=8Re
 """ ********************************************
-CONVERGENCE PROFILES - CRE_CG_ST - D1=8Re
+CONVERGENCE PROFILES - SG_CP_LP - D1=8Re
 ******************************************** """ 
 # Formatação do gráfico
 figura      = figura+1
-titulo      = 'Convergence Profiles - CRE_CG_ST - $d_1=8R_e$'
+titulo      = 'Perfil de convergências - SG_CP_LP - $d_1=8R_e$'
+eixox       = r'$x/R_e$'  
+eixoy       = r'$U=-u(r = R_e,\theta = 90^\circ)/R_{e}$ [%]'
+ymin        = ymin_twin_convergence_profile
+ymax        = ymax_twin_convergence_profile
+xmin        = xmin_twin_profile
+xmax        = xmax_twin_profile
+invertx     = True
+inserirx0   = True
+x0          = x0_twin_profile
+suavizar    = suavizar_twin
+
+# parametros para o filtro de suavização
+filterx1    = filterx1_twin_convergence_profile
+filterx2    = filterx2_twin_convergence_profile
+wl          = wl_twin_convergence_profile
+poly        = poly_twin_convergence_profile
+
+# modelo      = 'E_CRE_SG_D1_8RE_3D'
+# arquivo     = modelo + '\convergencias_90.txt'
+# ncoluna     = dicncolunalongterm[modelo]
+# lblcoluna   = 'E_CRE'
+# cor         = 'b'
+# tamanho     = 2
+# ordem       = 3
+# alpha       = 1
+# estilo      = 'solid'
+# graficar(arquivo,titulo,eixox,eixoy,
+#           xmin,xmax,ymin,ymax,
+#           ncoluna,lblcoluna,
+#           cor,tamanho,ordem,alpha,estilo,
+#           invertx,
+#           inserirx0,x0,
+#           suavizar,filterx1,filterx2,wl,poly,
+#           figura)
+
+modelo      = 'VP_CRE_SG_D1_8RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunafinalexcavation[modelo]
+lblcoluna   = 'VP_CRE_CP_Ueq=0,745'
+cor         = 'magenta'
+tamanho     = 2
+ordem       = 3
+alpha       = 1
+estilo      = 'solid'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'VP_CRE_SG_D1_8RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
+lblcoluna   = 'VP_CRE_LP_Ueq=0,799'
+cor         = 'magenta'
+tamanho     = 2
+ordem       = 3
+alpha       = 1
+estilo      = 'dashed'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'EPVP_CRE_SG_D1_8RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunafinalexcavation[modelo]
+lblcoluna   = 'EPVP_CRE_CP_Ueq=0,941'
+cor         = 'g'
+tamanho     = 2
+ordem       = 3
+alpha       = 1
+estilo      = 'solid'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'EPVP_CRE_SG_D1_8RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
+lblcoluna   = 'EPVP_CRE_LP_Ueq=0,972'
+cor         = 'g'
+tamanho     = 2
+ordem       = 3
+alpha       = 1
+estilo      = 'dashed'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'EPVP_CRVE_SG_D1_8RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunafinalexcavation[modelo]
+lblcoluna   = 'EPVP_CRVE_CP_Ueq=0,994'
+cor         = 'r'
+tamanho     = 2
+ordem       = 3
+alpha       = 1
+estilo      = 'solid'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'EPVP_CRVE_SG_D1_8RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
+lblcoluna   = 'EPVP_CRVE_LP_Ueq=1,166'
+cor         = 'r'
+tamanho     = 2
+ordem       = 3
+alpha       = 1
+estilo      = 'dashed'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'EP_CRE_SG_D1_8RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
+lblcoluna   = 'EP_CRE_Ueq=0,935'
+cor         = 'orange'
+tamanho     = 2
+ordem       = 3
+alpha       = 1
+estilo      = 'dashed'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+#%% #. CONVERGENCE PROFILES - CRE_CG_CP - D1=8Re
+""" ********************************************
+CONVERGENCE PROFILES - CRE_CG_CP - D1=8Re
+******************************************** """ 
+# Formatação do gráfico
+figura      = figura+1
+titulo      = 'Perfil de convergências - CRE_CG_CP - $d_1=8R_e$'
 eixox       = r'$x/R_e$'  
 eixoy       = r'$U=-u(r = R_e,\theta = 90^\circ)/R_{e}$ [%]'
 ymin        = ymin_twin_convergence_profile
@@ -2540,13 +6089,13 @@ graficar(arquivo,titulo,eixox,eixoy,
           figura)
 
 
-#%% #. CONVERGENCE PROFILES - CRE_CG_LT - D1=8Re
+#%% #. CONVERGENCE PROFILES - CRE_CG_LP - D1=8Re
 """ ********************************************
-CONVERGENCE PROFILES - CRE_CG_LT - D1=8Re
+CONVERGENCE PROFILES - CRE_CG_LP - D1=8Re
 ******************************************** """ 
 # Formatação do gráfico
 figura      = figura+1
-titulo      = 'Convergence Profiles - CRE_CG_LT - $d_1=8R_e$'
+titulo      = 'Perfil de convergências - CRE_CG_LP - $d_1=8R_e$'
 eixox       = r'$x/R_e$'  
 eixoy       = r'$U=-u(r = R_e,\theta = 90^\circ)/R_{e}$ [%]'
 ymin        = ymin_twin_convergence_profile
@@ -2654,14 +6203,181 @@ graficar(arquivo,titulo,eixox,eixoy,
           suavizar,filterx1,filterx2,wl,poly,
           figura)
 
-
-#%% #. CONVERGENCE PROFILES - CRE_SG_ST - D1=4Re
+#%% #. CONVERGENCE PROFILES - CG_CP_LP - D1=8Re
 """ ********************************************
-CONVERGENCE PROFILES - CRE_SG_ST - D1=4Re
+CONVERGENCE PROFILES - CG_CP_LP - D1=8Re
 ******************************************** """ 
 # Formatação do gráfico
 figura      = figura+1
-titulo      = 'Convergence Profiles - CRE_SG_ST - $d_1=4R_e$'
+titulo      = 'Perfil de convergências - CG_CP_LP - $d_1=8R_e$'
+eixox       = r'$x/R_e$'  
+eixoy       = r'$U=-u(r = R_e,\theta = 90^\circ)/R_{e}$ [%]'
+ymin        = ymin_twin_convergence_profile
+ymax        = ymax_twin_convergence_profile
+xmin        = xmin_twin_profile
+xmax        = xmax_twin_profile
+invertx     = True
+inserirx0   = True
+x0          = x0_twin_profile
+suavizar    = suavizar_twin
+
+# parametros para o filtro de suavização
+filterx1    = filterx1_twin_convergence_profile
+filterx2    = filterx2_twin_convergence_profile
+wl          = wl_twin_convergence_profile
+poly        = poly_twin_convergence_profile
+
+modelo      = 'VP_CRE_CG_D1_8RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunafinalexcavation[modelo]
+lblcoluna   = 'VP_CRE_CP_Ueq=0,743'
+cor         = 'magenta'
+tamanho     = 2
+ordem       = 3
+alpha       = 1
+estilo      = 'solid'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'VP_CRE_CG_D1_8RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
+lblcoluna   = 'VP_CRE_LP_Ueq=0,799'
+cor         = 'magenta'
+tamanho     = 2
+ordem       = 3
+alpha       = 1
+estilo      = 'dashed'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'EPVP_CRE_CG_D1_8RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunafinalexcavation[modelo]
+lblcoluna   = 'EPVP_CRE_CP_Ueq=0,937'
+cor         = 'g'
+tamanho     = 2
+ordem       = 3
+alpha       = 1
+estilo      = 'solid'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'EPVP_CRE_CG_D1_8RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
+lblcoluna   = 'EPVP_CRE_LP_Ueq=0,971'
+cor         = 'g'
+tamanho     = 2
+ordem       = 3
+alpha       = 1
+estilo      = 'dashed'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'EPVP_CRVE_CG_D1_8RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunafinalexcavation[modelo]
+lblcoluna   = 'EPVP_CRVE_CP_Ueq=0,992'
+cor         = 'r'
+tamanho     = 2
+ordem       = 3
+alpha       = 1
+estilo      = 'solid'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'EPVP_CRVE_CG_D1_8RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
+lblcoluna   = 'EPVP_CRVE_LP_Ueq=1,165'
+cor         = 'r'
+tamanho     = 2
+ordem       = 3
+alpha       = 1
+estilo      = 'dashed'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'EP_CRE_CG_D1_8RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
+lblcoluna   = 'EP_CRE_Ueq=0,946'
+cor         = 'orange'
+tamanho     = 2
+ordem       = 3
+alpha       = 1
+estilo      = 'dashed'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'E_CRE_CG_D1_8RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
+lblcoluna   = 'E_CRE_Ueq=0,740'
+cor         = 'b'
+tamanho     = 2
+ordem       = 3
+alpha       = 1
+estilo      = 'dashed'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+#%% #. CONVERGENCE PROFILES - CRE_SG_CP - D1=4Re
+""" ********************************************
+CONVERGENCE PROFILES - CRE_SG_CP - D1=4Re
+******************************************** """ 
+# Formatação do gráfico
+figura      = figura+1
+titulo      = 'Perfil de convergências - CRE_SG_CP - $d_1=4R_e$'
 eixox       = r'$x/R_e$'  
 eixoy       = r'$U=-u(r = R_e,\theta = 90^\circ)/R_{e}$ [%]'
 ymin        = ymin_twin_convergence_profile
@@ -2715,23 +6431,23 @@ graficar(arquivo,titulo,eixox,eixoy,
           suavizar,filterx1,filterx2,wl,poly,
           figura)
 
-# modelo      = 'VP_CRE_SG_D1_4RE_3D'
-# arquivo     = modelo + '\convergencias_90.txt'
-# ncoluna     = dicncolunafinalexcavation[modelo]
-# lblcoluna   = 'VP_CRE'
-# cor         = 'magenta'
-# tamanho     = 2
-# ordem       = 3
-# alpha       = 1
-# estilo      = 'solid'
-# graficar(arquivo,titulo,eixox,eixoy,
-#           xmin,xmax,ymin,ymax,
-#           ncoluna,lblcoluna,
-#           cor,tamanho,ordem,alpha,estilo,
-#           invertx,
-#           inserirx0,x0,
-#           suavizar,filterx1,filterx2,wl,poly,
-#           figura)
+modelo      = 'VP_CRE_SG_D1_4RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunafinalexcavation[modelo]
+lblcoluna   = 'VP_CRE'
+cor         = 'magenta'
+tamanho     = 2
+ordem       = 3
+alpha       = 1
+estilo      = 'solid'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
 
 modelo      = 'EPVP_CRE_SG_D1_4RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
@@ -2770,13 +6486,13 @@ graficar(arquivo,titulo,eixox,eixoy,
           figura)
 
 
-#%% #. CONVERGENCE PROFILES - CRE_SG_LT - D1=4Re
+#%% #. CONVERGENCE PROFILES - CRE_SG_LP - D1=4Re
 """ ********************************************
-CONVERGENCE PROFILES - CRE_CG_LT - D1=4Re
+CONVERGENCE PROFILES - CRE_CG_LP - D1=4Re
 ******************************************** """ 
 # Formatação do gráfico
 figura      = figura+1
-titulo      = 'Convergence Profiles - CRE_SG_LT - $d_1=4R_e$'
+titulo      = 'Perfil de convergências - CRE_SG_LP - $d_1=4R_e$'
 eixox       = r'$x/R_e$'  
 eixoy       = r'$U=-u(r = R_e,\theta = 90^\circ)/R_{e}$ [%]'
 ymin        = ymin_twin_convergence_profile
@@ -2830,23 +6546,23 @@ graficar(arquivo,titulo,eixox,eixoy,
           suavizar,filterx1,filterx2,wl,poly,
           figura)
 
-# modelo      = 'VP_CRE_SG_D1_4RE_3D'
-# arquivo     = modelo + '\convergencias_90.txt'
-# ncoluna     = dicncolunalongterm[modelo]
-# lblcoluna   = 'VP_CRE'
-# cor         = 'magenta'
-# tamanho     = 2
-# ordem       = 3
-# alpha       = 1
-# estilo      = 'solid'
-# graficar(arquivo,titulo,eixox,eixoy,
-#           xmin,xmax,ymin,ymax,
-#           ncoluna,lblcoluna,
-#           cor,tamanho,ordem,alpha,estilo,
-#           invertx,
-#           inserirx0,x0,
-#           suavizar,filterx1,filterx2,wl,poly,
-#           figura)
+modelo      = 'VP_CRE_SG_D1_4RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
+lblcoluna   = 'VP_CRE'
+cor         = 'magenta'
+tamanho     = 2
+ordem       = 3
+alpha       = 1
+estilo      = 'solid'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
 
 modelo      = 'EPVP_CRE_SG_D1_4RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
@@ -2884,14 +6600,181 @@ graficar(arquivo,titulo,eixox,eixoy,
           suavizar,filterx1,filterx2,wl,poly,
           figura)
 
-
-#%% #. CONVERGENCE PROFILES - CRE_CG_ST - D1=4Re
+#%% #. CONVERGENCE PROFILES - SG_CP_LP - D1=4Re
 """ ********************************************
-CONVERGENCE PROFILES - CRE_CG_ST - D1=4Re
+CONVERGENCE PROFILES - SG_CP_LP - D1=4Re
 ******************************************** """ 
 # Formatação do gráfico
 figura      = figura+1
-titulo      = 'Convergence Profiles - CRE_CG_ST - $d_1=4R_e$'
+titulo      = 'Perfil de convergências - SG_CP_LP - $d_1=4R_e$'
+eixox       = r'$x/R_e$'  
+eixoy       = r'$U=-u(r = R_e,\theta = 90^\circ)/R_{e}$ [%]'
+ymin        = ymin_twin_convergence_profile
+ymax        = ymax_twin_convergence_profile
+xmin        = xmin_twin_profile
+xmax        = xmax_twin_profile
+invertx     = True
+inserirx0   = True
+x0          = x0_twin_profile
+suavizar    = suavizar_twin
+
+# parametros para o filtro de suavização
+filterx1    = filterx1_twin_convergence_profile
+filterx2    = filterx2_twin_convergence_profile
+wl          = wl_twin_convergence_profile
+poly        = poly_twin_convergence_profile
+
+# modelo      = 'E_CRE_SG_D1_4RE_3D'
+# arquivo     = modelo + '\convergencias_90.txt'
+# ncoluna     = dicncolunalongterm[modelo]
+# lblcoluna   = 'E_CRE'
+# cor         = 'b'
+# tamanho     = 2
+# ordem       = 3
+# alpha       = 1
+# estilo      = 'solid'
+# graficar(arquivo,titulo,eixox,eixoy,
+#           xmin,xmax,ymin,ymax,
+#           ncoluna,lblcoluna,
+#           cor,tamanho,ordem,alpha,estilo,
+#           invertx,
+#           inserirx0,x0,
+#           suavizar,filterx1,filterx2,wl,poly,
+#           figura)
+
+modelo      = 'VP_CRE_SG_D1_4RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunafinalexcavation[modelo]
+lblcoluna   = 'VP_CRE_CP_Ueq=0,797'
+cor         = 'magenta'
+tamanho     = 2
+ordem       = 3
+alpha       = 1
+estilo      = 'solid'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'VP_CRE_SG_D1_4RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
+lblcoluna   = 'VP_CRE_LP_Ueq=0,809'
+cor         = 'magenta'
+tamanho     = 2
+ordem       = 3
+alpha       = 1
+estilo      = 'dashed'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'EPVP_CRE_SG_D1_4RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunafinalexcavation[modelo]
+lblcoluna   = 'EPVP_CRE_CP_Ueq=0,998'
+cor         = 'g'
+tamanho     = 2
+ordem       = 3
+alpha       = 1
+estilo      = 'solid'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'EPVP_CRE_SG_D1_4RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
+lblcoluna   = 'EPVP_CRE_LP_Ueq=0,985'
+cor         = 'g'
+tamanho     = 2
+ordem       = 3
+alpha       = 1
+estilo      = 'dashed'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'EPVP_CRVE_SG_D1_4RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunafinalexcavation[modelo]
+lblcoluna   = 'EPVP_CRVE_CP_Ueq=1,062'
+cor         = 'r'
+tamanho     = 2
+ordem       = 3
+alpha       = 1
+estilo      = 'solid'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'EPVP_CRVE_SG_D1_4RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
+lblcoluna   = 'EPVP_CRVE_LP_Ueq=1,193'
+cor         = 'r'
+tamanho     = 2
+ordem       = 3
+alpha       = 1
+estilo      = 'dashed'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'EP_CRE_SG_D1_4RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
+lblcoluna   = 'EP_CRE_Ueq=1,000'
+cor         = 'orange'
+tamanho     = 2
+ordem       = 3
+alpha       = 1
+estilo      = 'dashed'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+#%% #. CONVERGENCE PROFILES - CRE_CG_CP - D1=4Re
+""" ********************************************
+CONVERGENCE PROFILES - CRE_CG_CP - D1=4Re
+******************************************** """ 
+# Formatação do gráfico
+figura      = figura+1
+titulo      = 'Perfil de convergências - CRE_CG_CP - $d_1=4R_e$'
 eixox       = r'$x/R_e$'  
 eixoy       = r'$U=-u(r = R_e,\theta = 90^\circ)/R_{e}$ [%]'
 ymin        = ymin_twin_convergence_profile
@@ -3000,13 +6883,13 @@ graficar(arquivo,titulo,eixox,eixoy,
           figura)
 
 
-#%% #. CONVERGENCE PROFILES - CRE_CG_LT - D1=4Re
+#%% #. CONVERGENCE PROFILES - CRE_CG_LP - D1=4Re
 """ ********************************************
-CONVERGENCE PROFILES - CRE_CG_LT - D1=4Re
+CONVERGENCE PROFILES - CRE_CG_LP - D1=4Re
 ******************************************** """ 
 # Formatação do gráfico
 figura      = figura+1
-titulo      = 'Convergence Profiles - CRE_CG_LT - $d_1=4R_e$'
+titulo      = 'Perfil de convergências - CRE_CG_LP - $d_1=4R_e$'
 eixox       = r'$x/R_e$'  
 eixoy       = r'$U=-u(r = R_e,\theta = 90^\circ)/R_{e}$ [%]'
 ymin        = ymin_twin_convergence_profile
@@ -3105,6 +6988,174 @@ tamanho     = 2
 ordem       = 3
 alpha       = 1
 estilo      = 'solid'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+#%% #. CONVERGENCE PROFILES - CG_CP_LP - D1=4Re
+""" ********************************************
+CONVERGENCE PROFILES - CG_CP_LP - D1=4Re
+******************************************** """ 
+# Formatação do gráfico
+figura      = figura+1
+titulo      = 'Perfil de convergências - CG_CP_LP - $d_1=4R_e$'
+eixox       = r'$x/R_e$'  
+eixoy       = r'$U=-u(r = R_e,\theta = 90^\circ)/R_{e}$ [%]'
+ymin        = ymin_twin_convergence_profile
+ymax        = ymax_twin_convergence_profile
+xmin        = xmin_twin_profile
+xmax        = xmax_twin_profile
+invertx     = True
+inserirx0   = True
+x0          = x0_twin_profile
+suavizar    = suavizar_twin
+
+# parametros para o filtro de suavização
+filterx1    = filterx1_twin_convergence_profile
+filterx2    = filterx2_twin_convergence_profile
+wl          = wl_twin_convergence_profile
+poly        = poly_twin_convergence_profile
+
+modelo      = 'VP_CRE_CG_D1_4RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunafinalexcavation[modelo]
+lblcoluna   = 'VP_CRE_CP_Ueq=0,795'
+cor         = 'magenta'
+tamanho     = 2
+ordem       = 3
+alpha       = 1
+estilo      = 'solid'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'VP_CRE_CG_D1_4RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
+lblcoluna   = 'VP_CRE_LP_Ueq=0,807'
+cor         = 'magenta'
+tamanho     = 2
+ordem       = 3
+alpha       = 1
+estilo      = 'dashed'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'EPVP_CRE_CG_D1_4RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunafinalexcavation[modelo]
+lblcoluna   = 'EPVP_CRE_CP_Ueq=1,000'
+cor         = 'g'
+tamanho     = 2
+ordem       = 3
+alpha       = 1
+estilo      = 'solid'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'EPVP_CRE_CG_D1_4RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
+lblcoluna   = 'EPVP_CRE_LP_Ueq=0,978'
+cor         = 'g'
+tamanho     = 2
+ordem       = 3
+alpha       = 1
+estilo      = 'dashed'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'EPVP_CRVE_CG_D1_4RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunafinalexcavation[modelo]
+lblcoluna   = 'EPVP_CRVE_CP_Ueq=1,062'
+cor         = 'r'
+tamanho     = 2
+ordem       = 3
+alpha       = 1
+estilo      = 'solid'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'EPVP_CRVE_CG_D1_4RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
+lblcoluna   = 'EPVP_CRVE_LP_Ueq=1,191'
+cor         = 'r'
+tamanho     = 2
+ordem       = 3
+alpha       = 1
+estilo      = 'dashed'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'EP_CRE_CG_D1_4RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
+lblcoluna   = 'EP_CRE_Ueq=1,000'
+cor         = 'orange'
+tamanho     = 2
+ordem       = 3
+alpha       = 1
+estilo      = 'dashed'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'E_CRE_CG_D1_4RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
+lblcoluna   = 'E_CRE_Ueq=0,793'
+cor         = 'b'
+tamanho     = 2
+ordem       = 3
+alpha       = 1
+estilo      = 'dashed'
 graficar(arquivo,titulo,eixox,eixoy,
           xmin,xmax,ymin,ymax,
           ncoluna,lblcoluna,
