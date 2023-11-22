@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.12) (preloaded format=pdflatex 2023.1.18)  21 NOV 2023 21:38
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.12) (preloaded format=pdflatex 2023.1.18)  22 NOV 2023 15:41
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -919,20 +919,20 @@ Package pdftex.def Info: FIG2.pdf  used on input line 230.
 <FIG3.pdf, id=37, 341.08398pt x 213.32077pt>
 File: FIG3.pdf Graphic file (type pdf)
 <use FIG3.pdf>
-Package pdftex.def Info: FIG3.pdf  used on input line 271.
+Package pdftex.def Info: FIG3.pdf  used on input line 269.
 (pdftex.def)             Requested size: 272.86755pt x 170.65683pt.
  [2
 pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) ha
 s been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.275 
+l.273 
        <./FIG2.pdf>] [3
 pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) ha
 s been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.299 
+l.297 
        <./FIG3.pdf>] (cas-sc-template.bbl) [4] (cas-sc-template.aux)
 
 LaTeX Warning: There were multiply-defined labels.
@@ -941,37 +941,33 @@ Package rerunfilecheck Info: File `cas-sc-template.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 16754 strings out of 476404
- 257949 string characters out of 2789524
+ 16753 strings out of 476404
+ 257937 string characters out of 2789524
  1869324 words of memory out of 3000000
  36776 multiletter control sequences out of 15000+600000
  617872 words of font info for 169 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  90i,16n,90p,834b,477s stack positions out of 10000i,1000n,20000p,200000b,80000s
-
-pdfTeX warning (dest): name{equation.3.7} has been referenced but does not exis
-t, replaced by a fixed one
-
-{C:/Users/augus/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/cm-super/cm-super
--t1.enc}{C:/Users/augus/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/stix/stix
--t1.enc}{C:/Users/augus/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/stix/stix
--ts1.enc}<C:/Users/augus/AppData/Local/Programs/MiKTeX/fonts/type1/public/stix/
-STIXGeneral-Bold.pfb><C:/Users/augus/AppData/Local/Programs/MiKTeX/fonts/type1/
-public/stix/STIXGeneral-Italic.pfb><C:/Users/augus/AppData/Local/Programs/MiKTe
-X/fonts/type1/public/stix/STIXGeneral-Regular.pfb><C:/Users/augus/AppData/Local
-/Programs/MiKTeX/fonts/type1/public/cm-super/sfss0900.pfb><C:/Users/augus/AppDa
-ta/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sfsx0900.pfb><C:/Users/aug
-us/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sftt0800.pfb><C:/U
-sers/augus/AppData/Local/Programs/MiKTeX/fonts/type1/public/stix/stix-mathex.pf
-b><C:/Users/augus/AppData/Local/Programs/MiKTeX/fonts/type1/public/stix/stix-ma
-thit-bold.pfb><C:/Users/augus/AppData/Local/Programs/MiKTeX/fonts/type1/public/
-stix/stix-mathit.pfb><C:/Users/augus/AppData/Local/Programs/MiKTeX/fonts/type1/
-public/stix/stix-mathrm-bold.pfb><C:/Users/augus/AppData/Local/Programs/MiKTeX/
-fonts/type1/public/stix/stix-mathrm.pfb><C:/Users/augus/AppData/Local/Programs/
-MiKTeX/fonts/type1/public/stix/stix-mathsf.pfb>
-Output written on cas-sc-template.pdf (5 pages, 328214 bytes).
+{C:/Users/augus/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/cm-super/cm-sup
+er-t1.enc}{C:/Users/augus/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/stix/st
+ix-t1.enc}{C:/Users/augus/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/stix/st
+ix-ts1.enc}<C:/Users/augus/AppData/Local/Programs/MiKTeX/fonts/type1/public/sti
+x/STIXGeneral-Bold.pfb><C:/Users/augus/AppData/Local/Programs/MiKTeX/fonts/type
+1/public/stix/STIXGeneral-Italic.pfb><C:/Users/augus/AppData/Local/Programs/MiK
+TeX/fonts/type1/public/stix/STIXGeneral-Regular.pfb><C:/Users/augus/AppData/Loc
+al/Programs/MiKTeX/fonts/type1/public/cm-super/sfss0900.pfb><C:/Users/augus/App
+Data/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sfsx0900.pfb><C:/Users/a
+ugus/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sftt0800.pfb><C:
+/Users/augus/AppData/Local/Programs/MiKTeX/fonts/type1/public/stix/stix-mathex.
+pfb><C:/Users/augus/AppData/Local/Programs/MiKTeX/fonts/type1/public/stix/stix-
+mathit-bold.pfb><C:/Users/augus/AppData/Local/Programs/MiKTeX/fonts/type1/publi
+c/stix/stix-mathit.pfb><C:/Users/augus/AppData/Local/Programs/MiKTeX/fonts/type
+1/public/stix/stix-mathrm-bold.pfb><C:/Users/augus/AppData/Local/Programs/MiKTe
+X/fonts/type1/public/stix/stix-mathrm.pfb><C:/Users/augus/AppData/Local/Program
+s/MiKTeX/fonts/type1/public/stix/stix-mathsf.pfb>
+Output written on cas-sc-template.pdf (5 pages, 328152 bytes).
 PDF statistics:
- 205 PDF objects out of 1000 (max. 8388607)
- 43 named destinations out of 1000 (max. 500000)
+ 203 PDF objects out of 1000 (max. 8388607)
+ 42 named destinations out of 1000 (max. 500000)
  21 words of extra memory for PDF output out of 10000 (max. 10000000)
 
