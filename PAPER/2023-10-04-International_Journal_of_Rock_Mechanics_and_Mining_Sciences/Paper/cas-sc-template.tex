@@ -193,11 +193,8 @@ Additionaly, the rheological behavior of the rockmass and lining plays a crucial
 Indicar os objectivos do trabalho e fornecer um contexto adequado, evitando uma pesquisa bibliográfica
 ou um resumo dos resultados.
 
-\section{Material and Methods}\label{}
 
-Fornecer pormenores suficientes para que o trabalho possa ser reproduzido por um investigador independente. Os métodos que já tenham sido publicados devem ser resumidos e indicados por uma referência. Se citar diretamente de um método previamente publicado, use aspas e cite também a fonte. Quaisquer modificações dos métodos existentes também devem ser descritas. 
-
-\subsection{Problem description and assumptions}\label{}
+\section{Problem description and assumptions}\label{}
 
 %The results of this study apply only when the following hypotheses are satisfied:
 
@@ -220,7 +217,7 @@ Fornecer pormenores suficientes para que o trabalho possa ser reproduzido por um
 %	
 %\end{enumerate}	
 
-\subsection{Constitutive Model of the Rock Mass}\label{}
+\section{Constitutive Model of the Rock Mass}\label{}
 
 An elastoplastic-viscoplastic model was implemented in ANSYS using the UPF/USERMAT customization tool to simulate rock mass.  This model concern a serial association of the plastic and viscoplastic constitutive models, i.e., $\dstrain = \dstraine + \dstrainp + \dstrainv$, which leads to the following linear constitutive relationship:
 \begin{equation} \label{eq_constitutive_relationship_epvp}
@@ -278,7 +275,7 @@ An aspect of the coupled model, utilizing the Drucker-Prager criteria $f$ and $f
 
 Futher details of this model, validations and application of in single tunnels can be found at [\citenum{quevedo2022b}] and the details of the algorithm implemented in FORNTRAN in the USERMAT subroutine, is given in [\citenum{quevedo2022thesis}].
 
-\subsection{Constitutive Model of the Lining}\label{}
+\section{Constitutive Model of the Lining}\label{}
 
 We implemented a viscoelastic model in ANSYS using the UPF/USERMAT customization feature [\citenum{ANSYS:2013b}]. The model simulates concrete creep through a Generalized Kelvin chain, based on Bažant and Prasannan's Solidification Theory [\citenum{bazant:1989a,bazant:1989b}], with parameter adjustments performed using the CEB-FIP MC90 formulation. The CEB-FIP MC90 formulation [\citenum{CEB:1993}] determines the shrinkage component. 
 
@@ -303,7 +300,7 @@ in which, according to Bažant and Prasannan [\citenum{bazant:1989a,bazant:1989b
 Futher details of this model, validations and application of in single tunnels can be found at [\citenum{quevedo2022}] and the details of the algorithm implemented in FORNTRAN in the USERMAT subroutine, is given in [\citenum{quevedo2017comportamento}].
 
 
-\subsection{Description of numerical model}\label{}
+\section{Description of numerical model}\label{}
 
 \section{Verification with analytical solutions}\label{}
 
