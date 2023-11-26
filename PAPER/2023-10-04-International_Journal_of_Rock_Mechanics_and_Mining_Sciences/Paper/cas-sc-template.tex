@@ -301,7 +301,7 @@ Details of this model, including validations and its application in single tunne
 
 \section{Numerical model}\label{}
 
-The spatial discretization of the domain corresponds to a mesh with trilinear hexahedral elements (SOLID 185), except in the gallery region, which uses higher-order tetrahedral elements (SOLID186). Fig.~\ref{Mesh1} shows the mesh, geometric parameters, and boundary conditions for the domain problem. In this figure, $d_1$ is the distance between longitudinal tunnel axes, $R_i$ longitudinal tunnel cross-section radius, $L_2$ total excavated length, $d_3$ domain height, $L_1$ length of the unexcavated region, $L_3$, $L_p$ step length of the excavation process, $d_2$ position of the gallery along the longitudinal tunnel.
+The spatial discretization of the domain corresponds to a mesh with trilinear hexahedral elements (SOLID 185), except in the gallery region, which uses higher-order tetrahedral elements (SOLID186). Fig.~\ref{Mesh1} shows the mesh, geometric parameters, and boundary conditions for the domain problem. In this figure, $d_1$ is the distance between longitudinal tunnel axes, $R_i$ longitudinal tunnel cross-section radius, $L_2$ total excavated length, $d_3$ domain height, $L_1$ length of the unexcavated region, $L_3$, $L_p$ step length of the excavation process, $d_2$ position of the gallery along the longitudinal tunnel. We considered front, side, and bottom symmetry to reduce computational cost. In conjunction with boundary pressure $p$, we apply the initial stress condition $\sigma_0$ at all integration points to simulate the initial state of an undisturbed rock mass, i.e., a zero deformation field before excavation begins. We checked the vertical distortion of the elements away from the tunnel influence zone to reduce the number of elements in this area. Due to the low deformation gradient in this region away from the tunnel wall, the elements in this area can be significantly larger than in others. 
 
 \begin{figure}
 	\centering
@@ -311,9 +311,38 @@ The spatial discretization of the domain corresponds to a mesh with trilinear he
 \end{figure}
 
 
-We considered front, side, and bottom symmetry to reduce computational cost. In conjunction with boundary pressure $p$, we apply the initial stress condition $\sigma_0$ at all integration points to simulate the initial state of an undisturbed rock mass, i.e., a zero deformation field before excavation begins. We checked the vertical distortion of the elements away from the tunnel influence zone to reduce the number of elements in this area. Due to the low deformation gradient in this region away from the tunnel wall, the elements in this area can be significantly larger than in others. 
+Fig.~\ref{Mesh2} shows the mesh at the cross-section of the longitudinal tunnel, with $e$ representing the thickness of the lining. This article investigates the impact of the spacing $d_1$ between twin tunnels. Fig.~\ref{Mesh3} and Fig.~\ref{Mesh4} illustrate the spatial discretization at the region of the gallery with the longitudinal tunnel, with the spacing $d_1 = 16R_i, 8R_i$ and $4R_i$.
 
-The construction process involves the activation and deactivation of elements, with a substantial reduction in the stiffness of the excavated element and the adoption of the constitutive law for lining elements. Consequently, during excavation, the rock mass elements under the tunnel are deactivated, while the lining elements activate at a distance $d_0$ from the excavation face (unlined length). In each excavation step, we execute the solution, and time advances based on the expression $t_p=L_p/V_p$, where $L_p$ represents the length of the excavation step, and $V_p$ is the speed of the excavation face. Figure 4 shows a schematic of the excavation process.
+\begin{figure}
+	\centering
+	\includegraphics[scale=0.8]{Mesh2.pdf}
+	\caption{Detail 1 - Mesh in longitudinal tunnel cross-section with spacing $d_1=4R_i$}
+	\label{Mesh2}
+\end{figure}
+
+
+\begin{figure}
+	\centering
+	\includegraphics[scale=0.8]{Mesh3.pdf}
+	\caption{Detail 2 - Side view of the mesh in gallery region with $d_1=16R_i$, $d_1=8R_i$ and $d_1=4R_i$}
+	\label{Mesh3}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\includegraphics[scale=0.8]{Mesh4.pdf}
+	\caption{Detail 3 - Bottom view  of the mesh in gallery region with $d_1=16R_i$, $d_1=8R_i$ and $d_1=4R_i$}
+	\label{Mesh4}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\includegraphics[scale=0.6]{Mesh5.pdf}
+	\caption{Detail 4 - Isometric view of the portion of the mesh in gallery region $d_1=16R_i$, $d_1=8R_i$ and $d_1=4R_i$}
+	\label{Mesh5}
+\end{figure}
+
+The construction process involves the activation and deactivation of elements, with a substantial reduction in the stiffness of the excavated element and the adoption of the constitutive law for lining elements. Consequently, during excavation, the rock mass elements under the tunnel are deactivated, while the lining elements activate at a distance $d_0$ from the excavation face (unlined length). In each excavation step, we execute the solution, and time advances based on the expression $t_p=L_p/V_p$, where $L_p$ represents the length of the excavation step, and $V_p$ is the speed of the excavation face. Figure 4 shows a schematic of the excavation process where $n_p$ is the number of steps excavation.
 
 \begin{figure}
 	\centering
