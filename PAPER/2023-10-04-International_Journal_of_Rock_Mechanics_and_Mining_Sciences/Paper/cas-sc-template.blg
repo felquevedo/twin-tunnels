@@ -6,47 +6,47 @@ The style file: cas-model2-names.bst
 Reallocating 'name_of_file' (item size: 1) to 9 items.
 Database file #1: cas-refs.bib
 Warning--entry type for "quevedo2022thesis" isn't style-file defined
---line 82 of file cas-refs.bib
+--line 211 of file cas-refs.bib
 Reallocating 'singl_function' (item size: 4) to 100 items.
-You've used 9 entries,
+You've used 12 entries,
             2990 wiz_defined-function locations,
-            789 strings with 7901 characters,
-and the built_in function-call counts, 4655 in all, are:
-= -- 364
-> -- 128
-< -- 6
-+ -- 53
-- -- 42
-* -- 440
-:= -- 693
-add.period$ -- 28
-call.type$ -- 9
-change.case$ -- 57
-chr.to.int$ -- 7
-cite$ -- 9
-duplicate$ -- 388
-empty$ -- 376
-format.name$ -- 62
-if$ -- 868
+            817 strings with 8788 characters,
+and the built_in function-call counts, 6747 in all, are:
+= -- 531
+> -- 206
+< -- 7
++ -- 85
+- -- 69
+* -- 681
+:= -- 994
+add.period$ -- 42
+call.type$ -- 12
+change.case$ -- 81
+chr.to.int$ -- 10
+cite$ -- 12
+duplicate$ -- 541
+empty$ -- 525
+format.name$ -- 100
+if$ -- 1256
 int.to.chr$ -- 3
 int.to.str$ -- 1
-missing$ -- 64
-newline$ -- 61
-num.names$ -- 32
-pop$ -- 151
+missing$ -- 94
+newline$ -- 81
+num.names$ -- 44
+pop$ -- 195
 preamble$ -- 1
-purify$ -- 51
+purify$ -- 72
 quote$ -- 0
-skip$ -- 118
+skip$ -- 162
 stack$ -- 0
-substring$ -- 161
-swap$ -- 232
+substring$ -- 251
+swap$ -- 349
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 81
+type$ -- 108
 warning$ -- 0
-while$ -- 28
+while$ -- 41
 width$ -- 0
-write$ -- 141
+write$ -- 193
 (There was 1 warning)

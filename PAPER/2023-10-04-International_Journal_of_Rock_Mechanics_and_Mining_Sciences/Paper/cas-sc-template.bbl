@@ -1,4 +1,4 @@
-\begin{thebibliography}{9}
+\begin{thebibliography}{12}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \providecommand{\url}[1]{\texttt{#1}}
 \providecommand{\href}[2]{#2}
@@ -24,6 +24,8 @@ ANSYS, \bibinfo{year}{2013}.
   Formulation}.
 \newblock \bibinfo{journal}{Journal of engineering mechanics}
   \bibinfo{volume}{115}, \bibinfo{pages}{1691--1703}.
+\newblock
+  \DOIprefix\doi{https://doi.org/10.1061/(ASCE)0733-9399(1989)115:8(1691)}.
 %Type = Article
 \bibitem[{Ba{\v{z}}ant and Prasannan(1989b)}]{bazant:1989b}
 \bibinfo{author}{Ba{\v{z}}ant, Z.P.}, \bibinfo{author}{Prasannan, S.},
@@ -32,6 +34,8 @@ ANSYS, \bibinfo{year}{2013}.
   Verification and application}.
 \newblock \bibinfo{journal}{Journal of engineering mechanics}
   \bibinfo{volume}{115}, \bibinfo{pages}{1704--1725}.
+\newblock
+  \DOIprefix\doi{https://doi.org/10.1061/(ASCE)0733-9399(1989)115:8(1704)}.
 %Type = Phdthesis
 \bibitem[{Bernaud(1991)}]{bernaud1991}
 \bibinfo{author}{Bernaud, D.}, \bibinfo{year}{1991}.
@@ -45,6 +49,24 @@ ANSYS, \bibinfo{year}{2013}.
 \newblock \bibinfo{title}{CEB-FIP model code 1990: Design code}.
 \newblock \bibinfo{organization}{Comité Euro International du Béton and
   Fédération Internationale de la Précontrainte (CEB-FIP)}.
+%Type = Article
+\bibitem[{Guo et~al.(2021)Guo, Liu and Zhu}]{GUO2021}
+\bibinfo{author}{Guo, Z.}, \bibinfo{author}{Liu, X.}, \bibinfo{author}{Zhu,
+  Z.}, \bibinfo{year}{2021}.
+\newblock \bibinfo{title}{An elastic solution for twin circular tunnels’
+  stress in hydrostatic stress field}.
+\newblock \bibinfo{journal}{Geotechnical and Geological Engineering}
+  \bibinfo{volume}{39}, \bibinfo{pages}{1--11}.
+\newblock \DOIprefix\doi{10.1007/s10706-021-01756-5}.
+%Type = Article
+\bibitem[{Ma et~al.(2020)Ma, Lu, Zeng and Cai}]{MA2020}
+\bibinfo{author}{Ma, Y.}, \bibinfo{author}{Lu, A.}, \bibinfo{author}{Zeng, X.},
+  \bibinfo{author}{Cai, H.}, \bibinfo{year}{2020}.
+\newblock \bibinfo{title}{Analytical solution for determining the plastic zones
+  around twin circular tunnels excavated at great depth}.
+\newblock \bibinfo{journal}{International Journal of Rock Mechanics and Mining
+  Sciences} \bibinfo{volume}{136}, \bibinfo{pages}{104475}.
+\newblock \DOIprefix\doi{https://doi.org/10.1016/j.ijrmms.2020.104475}.
 %Type = Masterthesis
 \bibitem[{Quevedo(2017)}]{quevedo2017comportamento}
 \bibinfo{author}{Quevedo, F.P.M.}, \bibinfo{year}{2017}.
@@ -76,5 +98,14 @@ ANSYS, \bibinfo{year}{2013}.
 \newblock \bibinfo{journal}{International Journal of Geomechanics}
   \bibinfo{volume}{22}.
 \newblock \DOIprefix\doi{10.1061/(ASCE)GM.1943-5622.0002512}.
+%Type = Article
+\bibitem[{Zienkiewicz and Cormeau(1974)}]{zienkiewicz1974visco}
+\bibinfo{author}{Zienkiewicz, O.}, \bibinfo{author}{Cormeau, I.},
+  \bibinfo{year}{1974}.
+\newblock \bibinfo{title}{Visco-plasticity—plasticity and creep in elastic
+  solids—a unified numerical solution approach}.
+\newblock \bibinfo{journal}{International Journal for Numerical Methods in
+  Engineering} \bibinfo{volume}{8}, \bibinfo{pages}{821--845}.
+\newblock \DOIprefix\doi{https://doi.org/10.1002/nme.v8:4}.
 
 \end{thebibliography}
