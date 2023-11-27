@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.12) (preloaded format=pdflatex 2021.1.7)  25 NOV 2023 22:19
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.12) (preloaded format=pdflatex 2021.1.7)  26 NOV 2023 20:33
 entering extended mode
 **./cas-sc-template.tex
 (cas-sc-template.tex
@@ -626,8 +626,11 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \@float@everytoks=\toks32
 \@floatcapt=\box62
 )
+(C:\Users\fel_q\AppData\Roaming\MiKTeX\tex/latex/placeins\placeins.sty
+Package: placeins 2005/04/18  v 2.2
+)
 LaTeX Font Info:    Trying to load font information for T1+stix on input line 3
-4.
+5.
 
 (C:\Users\fel_q\AppData\Roaming\MiKTeX\tex/latex/stix\t1stix.fd
 File: t1stix.fd 2015/04/17 v1.1.2-latex STIX T1 font definitions
@@ -672,43 +675,40 @@ LaTeX Warning: Label `' multiply defined.
 
 LaTeX Warning: Label `' multiply defined.
 
-
-LaTeX Warning: Label `Mesh1' multiply defined.
-
 )
 \openout1 = `cas-sc-template.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for LS1/stix/m/n on input line 34.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for LS1/stix/m/n on input line 35.
 LaTeX Font Info:    Trying to load font information for LS1+stix on input line 
-34.
+35.
  (C:\Users\fel_q\AppData\Roaming\MiKTeX\tex/latex/stix\ls1stix.fd
 File: ls1stix.fd 2015/04/17 v1.1.2-latex STIX LS1 font definitions
 )
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for LS2/stix/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for LS2/stix/m/n on input line 35.
 LaTeX Font Info:    Trying to load font information for LS2+stix on input line 
-34.
+35.
 
 (C:\Users\fel_q\AppData\Roaming\MiKTeX\tex/latex/stix\ls2stix.fd
 File: ls2stix.fd 2015/04/17 v1.1.2-latex STIX LS2 font definitions
 )
-LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    ... okay on input line 35.
 
 ("C:\Program Files\MiKTeX\tex/context/base/mkii\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -728,7 +728,7 @@ Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 85.
 )
-Package hyperref Info: Link coloring ON on input line 34.
+Package hyperref Info: Link coloring ON on input line 35.
 
 ("C:\Program Files\MiKTeX\tex/latex/hyperref\nameref.sty"
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
@@ -742,9 +742,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count328
 )
-LaTeX Info: Redefining \ref on input line 34.
-LaTeX Info: Redefining \pageref on input line 34.
-LaTeX Info: Redefining \nameref on input line 34.
+LaTeX Info: Redefining \ref on input line 35.
+LaTeX Info: Redefining \pageref on input line 35.
+LaTeX Info: Redefining \nameref on input line 35.
  (cas-sc-template.out) (cas-sc-template.out)
 \@outlinefile=\write3
 \openout3 = `cas-sc-template.out'.
@@ -788,102 +788,102 @@ LaTeX Info: Redefining \nameref on input line 34.
 \openout4 = `cas-sc-template.abs'.
 
 LaTeX Font Info:    Trying to load font information for TS1+stix on input line 
-170.
+171.
 (C:\Users\fel_q\AppData\Roaming\MiKTeX\tex/latex/stix\ts1stix.fd
 File: ts1stix.fd 2015/04/17 v1.1.2-latex STIX TS1 font definitions
 ) [0
 
 {C:/Users/fel_q/AppData/Local/MiKTeX/pdftex/config/pdftex.map}]
 LaTeX Font Info:    Trying to load font information for LS1+stixscr on input li
-ne 180.
+ne 181.
 
 (C:\Users\fel_q\AppData\Roaming\MiKTeX\tex/latex/stix\ls1stixscr.fd
 File: ls1stixscr.fd 2015/04/17 v1.1.2-latex STIX script LS1 font definitions
 )
 LaTeX Font Info:    Trying to load font information for LS2+stixex on input lin
-e 180.
+e 181.
 
 (C:\Users\fel_q\AppData\Roaming\MiKTeX\tex/latex/stix\ls2stixex.fd
 File: ls2stixex.fd 2015/04/17 v1.1.2-latex STIX extentions LS2 font definitions
 
 )
-LaTeX Font Info:    Trying to load font information for U+msa on input line 180
+LaTeX Font Info:    Trying to load font information for U+msa on input line 181
 .
 
 ("C:\Program Files\MiKTeX\tex/latex/amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 180
+LaTeX Font Info:    Trying to load font information for U+msb on input line 181
 .
 
 ("C:\Program Files\MiKTeX\tex/latex/amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Trying to load font information for LS1+stixfrak on input l
-ine 180.
+ine 181.
 
 (C:\Users\fel_q\AppData\Roaming\MiKTeX\tex/latex/stix\ls1stixfrak.fd
 File: ls1stixfrak.fd 2015/04/17 v1.1.2-latex STIX fraktur LS1 font definitions
 )
 LaTeX Font Info:    Trying to load font information for LS1+stixbb on input lin
-e 180.
+e 181.
 
 (C:\Users\fel_q\AppData\Roaming\MiKTeX\tex/latex/stix\ls1stixbb.fd
 File: ls1stixbb.fd 2015/04/17 v1.1.2-latex STIX blackboard LS1 font definitions
 
 )
 LaTeX Font Info:    Trying to load font information for LS2+stixcal on input li
-ne 180.
+ne 181.
 
 (C:\Users\fel_q\AppData\Roaming\MiKTeX\tex/latex/stix\ls2stixcal.fd
 File: ls2stixcal.fd 2015/04/17 v1.1.2-latex STIX calligraphic LS2 font definiti
 ons
 )
 LaTeX Font Info:    Trying to load font information for LS1+stixsf on input lin
-e 180.
+e 181.
 
 (C:\Users\fel_q\AppData\Roaming\MiKTeX\tex/latex/stix\ls1stixsf.fd
 File: ls1stixsf.fd 2015/04/17 v1.1.2-latex STIX sans-serif LS1 font definitions
 
 )
 LaTeX Font Info:    Trying to load font information for LS2+stixtt on input lin
-e 180.
+e 181.
 
 (C:\Users\fel_q\AppData\Roaming\MiKTeX\tex/latex/stix\ls2stixtt.fd
 File: ls2stixtt.fd 2015/04/17 v1.1.2-latex STIX typewriter LS2 font definitions
 
 )
-Overfull \hbox (117.0831pt too wide) detected at line 180
+Overfull \hbox (117.0831pt too wide) detected at line 181
 []
  []
 
 (cas-sc-template.abs)
 
-Package hyperref Warning: Ignoring empty anchor on input line 180.
+Package hyperref Warning: Ignoring empty anchor on input line 181.
 
 
-Package hyperref Warning: Ignoring empty anchor on input line 180.
+Package hyperref Warning: Ignoring empty anchor on input line 181.
 
 <thumbnails/cas-email.jpeg, id=11, 225.84375pt x 225.84375pt>
 File: thumbnails/cas-email.jpeg Graphic file (type jpg)
 <use thumbnails/cas-email.jpeg>
-Package pdftex.def Info: thumbnails/cas-email.jpeg  used on input line 180.
+Package pdftex.def Info: thumbnails/cas-email.jpeg  used on input line 181.
 (pdftex.def)             Requested size: 7.99838pt x 8.0pt.
 LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 1
-80.
+81.
 ("C:\Program Files\MiKTeX\tex/latex/base\t1cmtt.fd"
 File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
 
-Package hyperref Warning: Ignoring empty anchor on input line 180.
+Package hyperref Warning: Ignoring empty anchor on input line 181.
 
 <thumbnails/cas-url.jpeg, id=12, 225.84375pt x 225.84375pt>
 File: thumbnails/cas-url.jpeg Graphic file (type jpg)
 <use thumbnails/cas-url.jpeg>
-Package pdftex.def Info: thumbnails/cas-url.jpeg  used on input line 180.
+Package pdftex.def Info: thumbnails/cas-url.jpeg  used on input line 181.
 (pdftex.def)             Requested size: 7.99838pt x 8.0pt.
 
-Package hyperref Warning: Ignoring empty anchor on input line 180.
+Package hyperref Warning: Ignoring empty anchor on input line 181.
 
 LaTeX Font Info:    Trying to load font information for T1+cmss on input line 2
 29.
@@ -893,101 +893,135 @@ File: t1cmss.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 <Rheological representation.pdf, id=19, 327.8541pt x 170.6047pt>
 File: Rheological representation.pdf Graphic file (type pdf)
 <use Rheological representation.pdf>
-Package pdftex.def Info: Rheological representation.pdf  used on input line 230
+Package pdftex.def Info: Rheological representation.pdf  used on input line 231
 .
 (pdftex.def)             Requested size: 327.85329pt x 170.60428pt.
- [1 <./thumbnails/cas-email.jpeg> <./thumbnails/cas-url.jpeg>]
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[1 <./thumbnails/cas-email.jpeg> <./thumbnails/cas-url.jpeg>]
 <Elastic-plastic-viscoplastic domains.pdf, id=39, 341.08398pt x 213.32077pt>
 File: Elastic-plastic-viscoplastic domains.pdf Graphic file (type pdf)
 <use Elastic-plastic-viscoplastic domains.pdf>
 Package pdftex.def Info: Elastic-plastic-viscoplastic domains.pdf  used on inpu
-t line 269.
+t line 270.
 (pdftex.def)             Requested size: 272.86755pt x 170.65683pt.
  [2pdfTeX warning (ext4): destination with the same identifier (name{figure.1})
  has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.273 
+l.274 
        <./Rheological representation.pdf>] [3pdfTeX warning (ext4): destination
  with the same identifier (name{figure.2}) has been already used, duplicate ign
 ored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.297 
+l.298 
        <./Elastic-plastic-viscoplastic domains.pdf>]
-<Mesh1.pdf, id=121, 677.70567pt x 531.0825pt>
+<Mesh1.pdf, id=122, 677.70567pt x 531.0825pt>
 File: Mesh1.pdf Graphic file (type pdf)
 <use Mesh1.pdf>
-Package pdftex.def Info: Mesh1.pdf  used on input line 308.
+Package pdftex.def Info: Mesh1.pdf  used on input line 309.
 (pdftex.def)             Requested size: 338.852pt x 265.54059pt.
-<Mesh2.pdf, id=125, 256.06958pt x 205.54703pt>
+<Mesh2.pdf, id=124, 287.37585pt x 205.54703pt>
 File: Mesh2.pdf Graphic file (type pdf)
 <use Mesh2.pdf>
 Package pdftex.def Info: Mesh2.pdf  used on input line 318.
-(pdftex.def)             Requested size: 204.85593pt x 164.43782pt.
-<Mesh3.pdf, id=126, 545.45775pt x 272.95102pt>
+(pdftex.def)             Requested size: 229.90099pt x 164.43782pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[4pdfTeX warning (ext4): destination with the same identifier (name{figure.3}) 
+has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  
+l.322 \FloatBarrier
+                    <./Mesh1.pdf>]
+<Mesh3.pdf, id=146, 545.45775pt x 272.95102pt>
 File: Mesh3.pdf Graphic file (type pdf)
 <use Mesh3.pdf>
 Package pdftex.def Info: Mesh3.pdf  used on input line 326.
 (pdftex.def)             Requested size: 436.36678pt x 218.3611pt.
-<Mesh4.pdf, id=127, 487.13475pt x 437.75934pt>
+<Mesh4.pdf, id=147, 487.13475pt x 437.75934pt>
 File: Mesh4.pdf Graphic file (type pdf)
 <use Mesh4.pdf>
-Package pdftex.def Info: Mesh4.pdf  used on input line 333.
-(pdftex.def)             Requested size: 389.70831pt x 350.20793pt.
-<Mesh5.pdf, id=128, 447.82513pt x 433.35599pt>
+Package pdftex.def Info: Mesh4.pdf  used on input line 332.
+(pdftex.def)             Requested size: 292.2831pt x 262.65762pt.
+<Mesh5.pdf, id=148, 447.82513pt x 433.35599pt>
 File: Mesh5.pdf Graphic file (type pdf)
 <use Mesh5.pdf>
-Package pdftex.def Info: Mesh5.pdf  used on input line 340.
+Package pdftex.def Info: Mesh5.pdf  used on input line 338.
 (pdftex.def)             Requested size: 268.69714pt x 260.0156pt.
- [4pdfTeX warning (ext4): destination with the same identifier (name{figure.3})
- has been already used, duplicate ignored
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[5pdfTeX warning (ext4): destination with the same identifier (name{figure.4}) 
+has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.346 
-       <./Mesh1.pdf>]
-<Diagram of excavations.pdf, id=150, 326.31583pt x 150.96735pt>
-File: Diagram of excavations.pdf Graphic file (type pdf)
-<use Diagram of excavations.pdf>
-Package pdftex.def Info: Diagram of excavations.pdf  used on input line 349.
-(pdftex.def)             Requested size: 424.21051pt x 196.25752pt.
- [5pdfTeX warning (ext4): destination with the same identifier (name{figure.4})
- has been already used, duplicate ignored
+l.342 \FloatBarrier
+                   pdfTeX warning (ext4): destination with the same identifier 
+(name{figure.5}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.375 \section
-              {Appendices}\label{}pdfTeX warning (ext4): destination with the s
-ame identifier (name{figure.5}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  
-l.375 \section
-              {Appendices}\label{} <./Mesh2.pdf> <./Mesh3.pdf
+l.342 \FloatBarrier
+                    <./Mesh2.pdf> <./Mesh3.pdf
 
 pdfTeX warning: pdflatex.exe (file ./Mesh3.pdf): PDF inclusion: multiple pdfs w
 ith page group included in a single page
->] (cas-sc-template.bbl [6pdfTeX warning (ext4): destination with the same iden
-tifier (name{figure.6}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  
-l.36 \bibitem[{Bernaud(1991)}]{bernaud1991}
-                                            <./Mesh4.pdf>] [7pdfTeX warning (ex
-t4): destination with the same identifier (name{figure.7}) has been already use
-d, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  
-l.71 ...2b)Quevedo, Bernaud and S.}]{quevedo2022b}
-                                                  pdfTeX warning (ext4): destin
-ation with the same identifier (name{figure.8}) has been already used, duplicat
-e ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  
-l.71 ...2b)Quevedo, Bernaud and S.}]{quevedo2022b}
-                                                   <./Mesh5.pdf> <./Diagram of 
-excavations.pdf
+>]
+<Mesh6.pdf, id=189, 459.33456pt x 498.24783pt>
+File: Mesh6.pdf Graphic file (type pdf)
+<use Mesh6.pdf>
+Package pdftex.def Info: Mesh6.pdf  used on input line 348.
+(pdftex.def)             Requested size: 275.60286pt x 298.951pt.
 
-pdfTeX warning: pdflatex.exe (file ./Diagram of excavations.pdf): PDF inclusion
-: multiple pdfs with page group included in a single page
->]) [8] (cas-sc-template.aux)
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[6pdfTeX warning (ext4): destination with the same identifier (name{figure.6}) 
+has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  
+l.351 \end{figure}
+                  pdfTeX warning (ext4): destination with the same identifier (
+name{figure.7}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  
+l.351 \end{figure}
+                   <./Mesh4.pdf> <./Mesh5.pdf
+
+pdfTeX warning: pdflatex.exe (file ./Mesh5.pdf): PDF inclusion: multiple pdfs w
+ith page group included in a single page
+>]
+<Diagram of excavations.pdf, id=230, 326.31583pt x 150.96735pt>
+File: Diagram of excavations.pdf Graphic file (type pdf)
+<use Diagram of excavations.pdf>
+Package pdftex.def Info: Diagram of excavations.pdf  used on input line 357.
+(pdftex.def)             Requested size: 424.21051pt x 196.25752pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[7pdfTeX warning (ext4): destination with the same identifier (name{figure.8}) 
+has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  
+l.361 \FloatBarrier
+                    <./Mesh6.pdf>] (cas-sc-template.bbl [8pdfTeX warning (ext4)
+: destination with the same identifier (name{figure.9}) has been already used, 
+duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  
+l.71 ...2b)Quevedo, Bernaud and S.}]{quevedo2022b}
+                                                   <./Diagram of excavations.pd
+f>]) [9] (cas-sc-template.aux)
 Package rerunfilecheck Info: File `cas-sc-template.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 
@@ -996,13 +1030,13 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 13283 strings out of 479697
- 190853 string characters out of 2877010
- 489420 words of memory out of 3000000
- 30035 multiletter control sequences out of 15000+200000
+ 13310 strings out of 479697
+ 191376 string characters out of 2877010
+ 489752 words of memory out of 3000000
+ 30055 multiletter control sequences out of 15000+200000
  515855 words of font info for 178 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 80i,16n,85p,1260b,480s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 80i,16n,85p,1167b,480s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/fel_q/AppData/Roaming/MiKTeX/fonts/enc/dvips/cm-super/cm-super-t1.e
 nc}{C:/Users/fel_q/AppData/Roaming/MiKTeX/fonts/enc/dvips/stix/stix-t1.enc}{C:/
 Users/fel_q/AppData/Roaming/MiKTeX/fonts/enc/dvips/stix/stix-ts1.enc}<C:/Users/
@@ -1013,15 +1047,16 @@ gular.pfb><C:/Users/fel_q/AppData/Roaming/MiKTeX/fonts/type1/public/cm-super/sf
 ss0900.pfb><C:/Users/fel_q/AppData/Roaming/MiKTeX/fonts/type1/public/cm-super/s
 fsx0900.pfb><C:/Users/fel_q/AppData/Roaming/MiKTeX/fonts/type1/public/cm-super/
 sftt0800.pfb><C:/Users/fel_q/AppData/Roaming/MiKTeX/fonts/type1/public/stix/sti
-x-mathex.pfb><C:/Users/fel_q/AppData/Roaming/MiKTeX/fonts/type1/public/stix/sti
-x-mathit-bold.pfb><C:/Users/fel_q/AppData/Roaming/MiKTeX/fonts/type1/public/sti
-x/stix-mathit.pfb><C:/Users/fel_q/AppData/Roaming/MiKTeX/fonts/type1/public/sti
-x/stix-mathrm-bold.pfb><C:/Users/fel_q/AppData/Roaming/MiKTeX/fonts/type1/publi
-c/stix/stix-mathrm.pfb><C:/Users/fel_q/AppData/Roaming/MiKTeX/fonts/type1/publi
-c/stix/stix-mathsf.pfb>
-Output written on cas-sc-template.pdf (9 pages, 785188 bytes).
+x-mathcal.pfb><C:/Users/fel_q/AppData/Roaming/MiKTeX/fonts/type1/public/stix/st
+ix-mathex.pfb><C:/Users/fel_q/AppData/Roaming/MiKTeX/fonts/type1/public/stix/st
+ix-mathit-bold.pfb><C:/Users/fel_q/AppData/Roaming/MiKTeX/fonts/type1/public/st
+ix/stix-mathit.pfb><C:/Users/fel_q/AppData/Roaming/MiKTeX/fonts/type1/public/st
+ix/stix-mathrm-bold.pfb><C:/Users/fel_q/AppData/Roaming/MiKTeX/fonts/type1/publ
+ic/stix/stix-mathrm.pfb><C:/Users/fel_q/AppData/Roaming/MiKTeX/fonts/type1/publ
+ic/stix/stix-mathsf.pfb>
+Output written on cas-sc-template.pdf (10 pages, 1102898 bytes).
 PDF statistics:
- 309 PDF objects out of 1000 (max. 8388607)
- 52 named destinations out of 1000 (max. 500000)
- 51 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 344 PDF objects out of 1000 (max. 8388607)
+ 54 named destinations out of 1000 (max. 500000)
+ 56 words of extra memory for PDF output out of 10000 (max. 10000000)
 

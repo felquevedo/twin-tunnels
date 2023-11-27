@@ -25,6 +25,7 @@
 
 %Package to Figure
 \usepackage{float}	% permite posicionar a figura entre parágrafos usando H
+\usepackage{placeins}
 
 %Author macros
 \def\tsc#1{\csdef{#1}{\textsc{\lowercase{#1}}\xspace}}
@@ -223,9 +224,9 @@ An elastoplastic-viscoplastic constitutive model was implemented in ANSYS using 
 \begin{equation} \label{eq_constitutive_relationship_epvp}
 	\dstress = \Dll : \dstraine = \Dll : (\dstrain - \dstrainp - \dstrainv),\;
 \end{equation}
-where $\dstraine$, $\dstrainp$ and $\dstrainv$, represent the elastic, plastic and viscoplastic strain rate, respectively. The one-dimensional representation in Fig.~\ref{reological_scheme} shows this association. 
+where $\dstraine$, $\dstrainp$ and $\dstrainv$, represent the elastic, plastic and viscoplastic strain rate, respectively and $\Dll$ denote the fourth-order isotropic elastic linear constitutive tensor. The one-dimensional representation in Fig.~\ref{reological_scheme} shows this association. 
 
-\begin{figure}
+\begin{figure}[h!]
 	\centering
 	\includegraphics[scale=1]{Rheological representation.pdf}
 	\caption{Rheological representation of the elastoplastic-viscoplastic model.}
@@ -250,7 +251,7 @@ The plastic flow rule is given by:
 	\dot \strainp = \left\{ 
 	\begin{array}{ll} 
 		\dot \lambda \dfrac{\partial g}{\partial \stress} &  \text{for } f > 0 \\ 
-		\zerol, & \text{for } f < 0 \\
+		\zerol, & \text{for } f \le 0 \\
 	\end{array}\right.,
 \end{equation}
 where $\dot \lambda$ is the plasticity multiplier and $g$ is a potencial flow analogous to $f$ to simulate the volume dilatation during the evolution of plastic deformations. However, for this analysis, was used associated plasticity, i.e., $g=f$. The plastic multiplier is obtained through the consistency condition $\dot f = 0$. Numerical details of this implementation can be found in [\citenum{quevedo2022b}]. For viscoplastic flow rule we have,
@@ -258,13 +259,13 @@ where $\dot \lambda$ is the plasticity multiplier and $g$ is a potencial flow an
 	\label{eq_viscoplastic_flow}
 	\dstrainv = \dot \lambda^{vp} \dfrac{\partial f^{vp}}{\partial \stress}
 \end{equation}
-In contrast to the plastic multiplier, the viscoplastic multiplier is independent of a consistency condition. As a result, its expression is explicit. For this study, we utilize the Perzyna model as follows:
+In contrast to the plastic multiplier, the viscoplastic multiplier $\lambda^{vp}$ is independent of a consistency condition. As a result, its expression is explicit. For this study, we utilize the Perzyna model as follows:
 \begin{equation} \label{eq_perzyna_model}
 	\dot \lambda^{vp} = \dfrac{\Phi(\stress,q^{vp})}{\eta}~~~\text{and}~~~\Phi = \left\langle  \dfrac{f^{vp}(\stress,q^{vp})}{f_0} \right\rangle^n, \,
 \end{equation} where $\Phi$ is the overstress function, $\eta$ is the dynamic viscosity constant, $n$ is the dimensionless parameter that gives the form of the power law, $f_0$ a parameter conveniently adopted and $\left\langle * \right\rangle$ is the McCauley function which is $0$ when $* <0$ , i.e. viscoplastic flow will only occur when the overstress function is positive.
 
-In this coupled model, when $\phi=\phi^{vp}$, cohesion entirely controls the evolution of local mechanical fields. Specifically, when  $c \rightarrow \infty$ and $c^{vp} \rightarrow \infty$, the system achieves a purely elastic solution. The solution becomes purely elastoviscoplastic with $c \rightarrow \infty$, while a pure elastoplastic solution emerges with $c^{vp} \rightarrow \infty$. In this study's coupled analysis, we have adopted $c^{vp} < c$, allowing the viscoplastic domain to occur independently of plasticity. However, in the presence of plasticity, viscous effects become inevitable. Fig.~\ref{epvpdomains} illustrates these domains in principal stress space.
-\begin{figure}
+In this coupled model, when $\phi=\phi^{vp}$, cohesion entirely controls the evolution of local mechanical fields. Specifically, when  $c \rightarrow \infty$ and $c^{vp} \rightarrow \infty$, the system achieves a purely elastic solution. The solution becomes purely elastoviscoplastic with $c \rightarrow \infty$, while a pure elastoplastic solution emerges with $c^{vp} \rightarrow \infty$. In this study's coupled analysis, we have adopted $c^{vp} < c$, allowing the viscoplastic domain to occur without plasticity. However, in the presence of plasticity, viscous effects become inevitable. Fig.~\ref{epvpdomains} illustrates these domains in principal stress space.
+\begin{figure}[h!]
 	\centering
 	\includegraphics[scale=0.8]{Elastic-plastic-viscoplastic domains.pdf}
 	\caption{Elastoplastic-viscoplastic domains.}
@@ -301,56 +302,63 @@ Details of this model, including validations and its application in single tunne
 
 \section{Numerical model}\label{}
 
-The spatial discretization of the domain corresponds to a mesh with trilinear hexahedral elements (SOLID 185), except in the gallery region, which uses higher-order tetrahedral elements (SOLID186). Fig.~\ref{Mesh1} shows the mesh, geometric parameters, and boundary conditions for the domain problem. In this figure, $d_1$ is the distance between longitudinal tunnel axes, $R_i$ longitudinal tunnel cross-section radius, $L_2$ total excavated length, $d_3$ domain height, $L_1$ length of the unexcavated region, $L_3$, $L_p$ step length of the excavation process, $d_2$ position of the gallery along the longitudinal tunnel. We considered front, side, and bottom symmetry to reduce computational cost. In conjunction with boundary pressure $p$, we apply the initial stress condition $\sigma_0$ at all integration points to simulate the initial state of an undisturbed rock mass, i.e., a zero deformation field before excavation begins. We checked the vertical distortion of the elements away from the tunnel influence zone to reduce the number of elements in this area. Due to the low deformation gradient in this region away from the tunnel wall, the elements in this area can be significantly larger than in others. 
+The spatial discretization of the domain corresponds to a mesh with trilinear hexahedral elements (SOLID 185), except in the gallery region, which uses higher-order tetrahedral elements (SOLID186). Fig.~\ref{Mesh1} shows the mesh, geometric parameters, and boundary conditions for the domain problem. In this figure, $d_1$ is the distance between longitudinal tunnel axes, $R_i$ longitudinal tunnel cross-section radius, $L_2$ total excavated length, $d_3$ domain height, $L_1$ length of the unexcavated region, $L_3$ transversal length of the domain, $L_p$ step length of the excavation process, $d_2$ position of the gallery along the longitudinal tunnel. We considered front, side, and bottom symmetry to reduce computational cost. In conjunction with boundary pressure $p$, we apply the initial stress condition $\stress_0 = -p\onell$ at all integration points to simulate the initial state of an undisturbed rock mass. 
 
-\begin{figure}
+\begin{figure}[h!]
 	\centering
 	\includegraphics[scale=0.5]{Mesh1.pdf}
 	\caption{Mesh, dimensions and boundary conditions of the 3D twin tunnel domain}
 	\label{Mesh1}
 \end{figure}
 
+We divided the mesh into two regions: one near the tunnel (light gray), which we refined more, and a region farther away (dark gray). We increased the distortion ratio of elements in the dark gray zone to minimize the number of elements in that region. Due to the low deformation gradient away from the tunnel wall, elements in this area can be considerably larger than in other regions. Fig.~\ref{Mesh2} shows the mesh at the cross-section of the longitudinal tunnel, with $e$ representing the thickness of the lining.
 
-Fig.~\ref{Mesh2} shows the mesh at the cross-section of the longitudinal tunnel, with $e$ representing the thickness of the lining. This article investigates the impact of the spacing $d_1$ between twin tunnels. Fig.~\ref{Mesh3} and Fig.~\ref{Mesh4} illustrate the spatial discretization at the region of the gallery with the longitudinal tunnel, with the spacing $d_1 = 16R_i, 8R_i$ and $4R_i$.
-
-\begin{figure}
+\begin{figure}[h!]
 	\centering
 	\includegraphics[scale=0.8]{Mesh2.pdf}
 	\caption{Detail 1 - Mesh in longitudinal tunnel cross-section with spacing $d_1=4R_i$}
 	\label{Mesh2}
 \end{figure}
-
-
-\begin{figure}
+\FloatBarrier
+One of the aspects investigated in this work is the influence of the spacing $d_1$ between longitudinal tunnels of the twin tunnel. Fig.~\ref{Mesh3} and Fig.~\ref{Mesh4} illustrate the spatial discretization in the gallery region and its connection with the longitudinal tunnel considering spacings $d_1 = 16R_i, 8R_i$ and $4R_i$, respectively. The dimensions $d_5$ and $d_1$ define the size of the transition region comprising tetrahedral elements between the gallery and the rest of the domain. Fig.~\ref{Mesh5} shows part of this transition region.
+\begin{figure}[h!]
 	\centering
 	\includegraphics[scale=0.8]{Mesh3.pdf}
 	\caption{Detail 2 - Side view of the mesh in gallery region with $d_1=16R_i$, $d_1=8R_i$ and $d_1=4R_i$}
 	\label{Mesh3}
 \end{figure}
-
-\begin{figure}
+\begin{figure}[h!]
 	\centering
-	\includegraphics[scale=0.8]{Mesh4.pdf}
+	\includegraphics[scale=0.6]{Mesh4.pdf}
 	\caption{Detail 3 - Bottom view  of the mesh in gallery region with $d_1=16R_i$, $d_1=8R_i$ and $d_1=4R_i$}
 	\label{Mesh4}
 \end{figure}
-
-\begin{figure}
+\begin{figure}[h!]
 	\centering
 	\includegraphics[scale=0.6]{Mesh5.pdf}
 	\caption{Detail 4 - Isometric view of the portion of the mesh in gallery region $d_1=16R_i$, $d_1=8R_i$ and $d_1=4R_i$}
 	\label{Mesh5}
 \end{figure}
+\FloatBarrier
 
-The construction process involves the activation and deactivation of elements, with a substantial reduction in the stiffness of the excavated element and the adoption of the constitutive law for lining elements. Consequently, during excavation, the rock mass elements under the tunnel are deactivated, while the lining elements activate at a distance $d_0$ from the excavation face (unlined length). In each excavation step, we execute the solution, and time advances based on the expression $t_p=L_p/V_p$, where $L_p$ represents the length of the excavation step, and $V_p$ is the speed of the excavation face. Figure 4 shows a schematic of the excavation process where $n_p$ is the number of steps excavation.
+Fig.~\ref{Mesh6} illustrates the lining mesh, showing the use of tetrahedral elements both in the gallery and at the junction with the longitudinal tunnel. It is crucial to ensure that the boundaries of these tetrahedral elements remain within the length of the excavation step.
 
-\begin{figure}
+\begin{figure}[h!]
+	\centering
+	\includegraphics[scale=0.6]{Mesh6.pdf}
+	\caption{Isometric view of the lining at the intersection for $d_1=16R_i$, $d_1=8R_i$ and $d_1=4R_i$ - expansion of symmetry in the $xz$ plane}
+	\label{Mesh6}
+\end{figure}
+\FloatBarrier
+The construction process is simulated through the deactivating and activating method, i.e., in each step of excavation, reducing the stiffness of the excavated element (1E-8) and active the lining elements at a distance $d_0$ from the excavation face (unlined length). With each excavation step, we execute the solution, and time advances based on the expression $t_p=L_p/V_p$, where $L_p$ represents the length of the excavation step, and $V_p$ is the speed of the excavation face. Fig.~\ref{Diagram of excavations} illustrates a schematic of the excavation process where $n_p$ is the number of excavation steps. In this Figure, $n_{pig}$ represents the number of steps excavated in the longitudinal tunnel that starts gallery excavation. Once reaching this step, we pause the excavation of the longitudinal tunnel, and the gallery excavation begins. In the gallery section, $L_{p_1}$ is the step length of the gallery excavation, $V_{p_1}$ is the speed of the gallery excavation, and $d_{0_1}$ is the unlined length of the gallery. After completing the gallery excavation, the longitudinal tunnel excavation resumes.
+
+\begin{figure}[h!]
 	\centering
 	\includegraphics[scale=1.3]{Diagram of excavations.pdf}
 	\caption{Schematic of the excavation process}
-	\label{Mesh1}
+	\label{Diagram of excavations}
 \end{figure}
-
+\FloatBarrier
 
 \section{Comparision with analytical solutions}\label{}
 
