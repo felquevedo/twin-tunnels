@@ -195,7 +195,27 @@ Indicar os objectivos do trabalho e fornecer um contexto adequado, evitando uma 
 ou um resumo dos resultados.
 
 
-\section{Statement of problem and fundamental assumptions}\label{}
+\section{Fundamental assumptions}\label{}
+
+Despite the generality of the models, we employ some delimitations in this work:
+
+\begin{enumerate}[(a)]
+
+\item It is assumed only deep tunnels, neglecting surface influences such as deformations caused by surface loads and settlements arising from the excavation process;
+
+\item Although the inherent complexity of the rock mass's behavior, is influenced by spatially varying properties, this study opts for a simplified representation: a homogeneous and isotropic medium. While the rock mass may exhibit discontinuities, we simplify its overall behavior by treating it as a continuous medium. Consequently, the rock mass is considered single-phase and phenomenologically modeled using an elastoplastic-viscoplastic rheological law to capture instantaneous and long-term responses. This approach excludes considerations of other factors, such as temperature gradients, water flow, and pore mechanics;
+
+\item Despite the complexity of the internal stress state of a massif, due, for example, to the discontinuities, anisotropy, and heterogeneity of the materials, equal vertical and horizontal stresses will be used, thus dealing with a geostatic-hydrostatic initial stress state.
+
+\item Twin tunnels are typically constructed with a time lag between the excavation fronts. In this work, we will excavate synchronously, employing symmetry conditions to reduce computer processing time.
+
+\item It is common to design twin tunnels with a time lag between the excavation fronts. In this work, we will perform synchronous excavation, using symmetry conditions to minimize computer processing time.
+
+\item In contrast to the variable conditions present in tunnel construction, where the excavation speed and lining installation fluctuate during the construction process, we adopt a constant speed for full, flat, and vertical excavation with homogeneous concrete lining with constant thickness. It's considered a constant humidity and temperature in the concrete lining.
+
+\item We will not consider dynamic excitations (involving earthquakes and explosions, for example) and inertial terms (density and acceleration). In other words, the evolution of deformations occurs in a quasi-static manner. We also adopt the hypothesis of small perturbations.
+
+\end{enumerate}
 
 %The results of this study apply only when the following hypotheses are satisfied:
 
@@ -225,7 +245,6 @@ An elastoplastic-viscoplastic constitutive model was implemented in ANSYS using 
 	\dstress = \Dll : \dstraine = \Dll : (\dstrain - \dstrainp - \dstrainv),\;
 \end{equation}
 where $\dstraine$, $\dstrainp$ and $\dstrainv$, represent the elastic, plastic and viscoplastic strain rate, respectively and $\Dll$ denote the fourth-order isotropic elastic linear constitutive tensor. The one-dimensional representation in Fig.~\ref{reological_scheme} shows this association. 
-
 \begin{figure}[h!]
 	\centering
 	\includegraphics[scale=1]{Rheological representation.pdf}
@@ -244,7 +263,6 @@ which $I_1$ is the first invariant of the stress tensor, $J_2$ the second invari
 	q(\alpha) = 2\sqrt{k}~c(\alpha),
 \end{equation}
 where $k = (1+\sin{\phi})/(1-\sin{\phi})$. The internal variable $\alpha$ is the equivalent plastic strain $\straineqp$ used to simulate strain hardening/softening phenomena. However, for this study, we adopt perfect plasticity, meaning that c is a constant. For the viscoplasticity surface $f^{vp}$ the same surface is empolyed, but with $\phi^{vp}$ in $\beta_1$ and $\beta_2$, and $q^{vp} = 2\sqrt{k^{vp}}-c^{vp}$ where $k^{vp} = (1+\sin{\phi^{vp}})/(1-\sin{\phi^{vp}})$ and $c^{vp}$ is a constant, i.e., perfect viscoplasticity. 
-
 The plastic flow rule is given by:
 \begin{equation}
 	\label{eq_plastic_flow}
@@ -302,6 +320,14 @@ Details of this model, including validations and its application in single tunne
 
 \section{Spatial and time discretization of the domain}\label{}
 
+The problem domain $\Omega$ consists of a twin deep tunnel with a cross gallery, as shown in Fig.~\ref{domain}.
+\begin{figure}[h!]
+	\centering
+	\includegraphics[scale=1]{Domain.pdf}
+	\caption{Problem domain}
+	\label{domain}
+\end{figure}
+\FloatBarrier
 The spatial discretization of the domain corresponds to a mesh with trilinear hexahedral elements (SOLID 185, 8 nodes), except in the gallery region, which uses higher-order tetrahedral elements (SOLID186, 10 nodes). Fig.~\ref{Mesh1} shows the mesh, geometric parameters, and boundary conditions for the domain problem. We considered front, side, and bottom symmetry to reduce computational cost. In this discretization, $d_1$ is the distance between longitudinal tunnel axes, $R_i$ longitudinal tunnel cross-section radius, $L_2$ total excavated length, $d_3$ domain height, $L_1$ length of the unexcavated region, $L_3$ transversal length of the domain, $L_p$ step length of the excavation process, $d_2$ position of the gallery along the longitudinal tunnel. In conjunction with boundary pressure $p$, we apply the initial stress condition $\stress_0 = -p\onell$ at all integration points to simulate the initial state of an undisturbed rock mass. 
 
 \begin{figure}[h!]
@@ -340,7 +366,7 @@ One of the aspects investigated in this work is the influence of the spacing $d_
 	\label{Mesh5}
 \end{figure}
 \FloatBarrier
-Fig.~\ref{Mesh6} shows the mesh of the lining at the junction of the gallery and the longitudinal tunnel for d1 = X, Y, and Z. One noteworthy characteristic of this mesh is that it confines the tetrahedral elements within the contour of every excavation step.
+Fig.~\ref{Mesh6} shows the mesh of the lining at the junction of the gallery and the longitudinal tunnel for $d1 = 4R_i, 8R_i,$ and $16R_i$. One noteworthy characteristic of this mesh is that it confines the tetrahedral elements within the contour of every excavation step.
 \begin{figure}[h!]
 	\centering
 	\includegraphics[scale=0.6]{Mesh6.pdf}
@@ -406,9 +432,17 @@ After tunnel excavation, in time-dependent constitutive models, time continues t
 
 \section{Comparision with analytical solutions in twin tunnel}\label{}
 
-To examine mesh convergence and validate the numerical model, we compared the numerical solution with the elastic and elastoplastic analytical solution in the plane state of deformations for twin tunnels by [\citenum{GUO2021}] and [\citenum{MA2020}], respectively.
+To examine mesh convergence and validate the numerical model, we compared the numerical solution with the elastic and elastoplastic analytical solution in the plane state of deformations for twin tunnels. Guo et al. [\citenum{GUO2021}] develop an elastic analytical solution for the stress field around twin circular tunnels with hydrostatic pressure using the complex variable and the superposition principle. The Fig.~\ref{GUO_FIG1} shows the tangential stress distribution around the tunnel's boundary in this analytical solution with the numerical solution considering  $R_i = 4$ m, $E = 500$ MPa, $\nu =$ 0.23, $d_1 = 2R_i$, $p = 2.2$ MPa.
 
-Ma et. al. [\citenum{MA2020}] developed an analytical solution for a perfectly plastic constitutive model with a Mohr-Coulomb surface. One of the results was the contour of the plastic zone for several conditions. Fig.~\ref{MA_FIG1} shows the comparison between the numerical model solution (taken from a section away from the excavation face) and the analytical solution. For these analysis, Young's modulus $E=20$ GPa and Poisson's ratio $\nu = 0.3$.
+\begin{figure}[h!]
+	\centering
+	\includegraphics[scale=1]{GUO_FIG1.pdf}
+	\caption{Verification of numerical results of orthoradial stresses with the analytical solution}
+	\label{GUO_FIG1}
+\end{figure}
+\FloatBarrier
+
+Ma et. al. [\citenum{MA2020}] developed an analytical solution for a perfectly plastic constitutive model with a Mohr-Coulomb surface. One of the results was the contour of the plastic zone for several conditions. Fig.~\ref{MA_FIG1} shows the comparison between the numerical model solution (taken from a section away from the excavation face) and the analytical solution. For these analysis, $R_i = 1$ m, Young's modulus $E=20$ GPa and Poisson's ratio $\nu = 0.3$.
 
 \begin{figure}[h!]
 	\centering
@@ -418,7 +452,7 @@ Ma et. al. [\citenum{MA2020}] developed an analytical solution for a perfectly p
 \end{figure}
 \FloatBarrier
 
-Fig.~\ref{MA_FIG2} displays the magnitude of displacements, radial, orthoradial, and z-direction stresses at the element level  for the case with $c=5$ MPa, $d_1=5$ m, $\sigma_x = \sigma_y = 30$ MPa. The smoothness observed in the solution between the elements indicates satisfactory discretization.
+Fig.~\ref{MA_FIG2} displays the magnitude of displacements, radial, orthoradial, and z-direction stresses at the element level  for the case with $c=5$ MPa, $d_1=5$ m, $\sigma_x = \sigma_y = 30$ MPa. We adopted a case without excavating the gallery to assess the quality of the mesh. The smoothness observed in the solution between the elements indicates satisfactory discretization.
 
 \begin{figure}[h!]
 	\centering
