@@ -328,7 +328,7 @@ The problem domain $\Omega$ consists of a twin deep tunnel with a cross gallery,
 	\label{domain}
 \end{figure}
 \FloatBarrier
-The spatial discretization of the domain corresponds to a mesh with trilinear hexahedral elements (SOLID 185, 8 nodes), except in the gallery region, which uses higher-order tetrahedral elements (SOLID186, 10 nodes). Fig.~\ref{Mesh1} shows the mesh, geometric parameters, and boundary conditions for the domain problem. We considered front, side, and bottom symmetry to reduce computational cost. In this discretization, $d_1$ is the distance between longitudinal tunnel axes, $R_i$ longitudinal tunnel cross-section radius, $L_2$ total excavated length, $d_3$ domain height, $L_1$ length of the unexcavated region, $L_3$ transversal length of the domain, $L_p$ step length of the excavation process, $d_2$ position of the gallery along the longitudinal tunnel. In conjunction with boundary pressure $p$, we apply the initial stress condition $\stress_0 = -p\onell$ at all integration points to simulate the initial state of an undisturbed rock mass. 
+The spatial discretization of the domain $\Omega$ corresponds to a mesh with trilinear hexahedral elements (SOLID 185, 8 nodes), except in the gallery region, which uses higher-order tetrahedral elements (SOLID186, 10 nodes). Fig.~\ref{Mesh1} shows the mesh, geometric parameters, and boundary conditions for the domain problem. We considered front, side, and bottom symmetry to reduce computational cost. In this discretization, $d_1$ is the distance between longitudinal tunnel axes, $R_i$ longitudinal tunnel cross-section radius, $L_2$ total excavated length, $d_3$ domain height, $L_1$ length of the unexcavated region, $L_3$ transversal length of the domain, $L_p$ step length of the excavation process, $d_2$ position of the gallery along the longitudinal tunnel. In conjunction with boundary pressure $p$, we apply the initial stress condition $\stress_0 = -p\onell$ at all integration points to simulate the initial state of an undisturbed rock mass. 
 
 \begin{figure}[h!]
 	\centering
@@ -464,7 +464,82 @@ Fig.~\ref{MA_FIG2} displays the magnitude of displacements, radial, orthoradial,
 
 \section{Numerical Results and Discussion}\label{}
 
-Resultados devem ser claros e concisos
+To develop the parametric analyses, we utilized the constitutive parameters of the rock mass as outlined in Piepi [\citenum{piepi1995}], and for the lining, we employed typical values for ordinary reinforced concrete. These parameters are shown in Table~\ref{table2}.
+\begin{table}
+	\caption{Constitutive parameters used in the parametric analysis}
+	\label{table2}
+	\centering
+	%\small
+	\renewcommand{\arraystretch}{1.25}
+	\begin{tabular}{c c c c}
+		\hline
+		\multicolumn{1}{c}{PARAMETERS} &
+		\multicolumn{1}{c}{SYMBOL} &
+		\multicolumn{1}{c}{UNIT} &
+		\multicolumn{1}{c}{VALUES} \\
+		\hline
+		\multicolumn{4}{c}{Constitutive model of rock mass} \\
+		\hline
+		Young's modulus & $E$ & MPa & 1500 \\
+		Poisson's ratio & $\nu$ & adm & 0.498 \\
+		Plastic cohesion & $c$ & MPa & 4$\sqrt{3}/2$ \\
+		Plastic friction angle & $\phi$ & $^{\circ}$ & 0 \\
+		Viscoplastic Cohesion & $c_{vp}$ & MPa & 2$\sqrt{3}/2$ \\
+		Viscoplastic friction angle & $\phi_{vp}$ & $^{\circ}$ & $\phi$ \\
+		Power law parameter & $n$ & adm & 1 \\
+		Reference parameter & $f_0$ & MPa & 1 \\
+		Viscosity coefficient & $\eta$ & day & 40000 \\
+		\hline
+		\multicolumn{4}{c}{Constitutive model of lining} \\
+		\hline
+		
+		Compressive strength & $f_{ck}$ & MPa & 20 \\
+		Young's modulus at 28 days & $E_{c_{28}}$ & MPa & $30303$ \\
+		Poisson's ratio & $\nu$ & adm & 0.3 \\
+		
+		Coefficient which depends on the type of cement & $s$ & adm & 0.2 \\
+		Relative humidity of ambient environment & $RH$ & \% & 70 \\
+		Fictitious thickness (longitudinal tunnel) & $h_f$ & cm & 0.2111 \\
+		Fictitious thickness (transverse gallery) & $h_f$ & cm & 0.2176 \\
+		Drying time of the concrete & $t_s$ & days & 7 \\
+		Coefficient in shrinkage which depends on the type of cement & $\beta_{sc}$ & adm & 8 \\
+		Temperature & $T$ & $^\circ$C & 20$^\circ$ \\
+		Age of concrete at loading & $t_0$ & days & 1 \\
+		\hline
+	\end{tabular}
+	\normalsize
+\end{table}
+\FloatBarrier
+In presenting the results, $U_{eq}$ denotes the equilibrium convergence value at the convergence profile outside the region of influence of the excavation face and the gallery. When the gallery is present, the highest convergence value, $U_{peak}$ is highlighted at the gallery position. In addition, it is necessary to highlight some important points:
+
+\begin{itemize}[]
+	
+	\item \textbf{Observation 1}: All the results presented in the following analyses pertain to the point located at the top of the tunnel section (crown), and we will monitor its convergence throughout the excavation process. Fig.~\ref{Ovalization effect and monitoring point} presents this point. Likewise, we will only analyze the convergence of the point located at the crown of the gallery. 
+
+	\item \textbf{Observation 2}: Under material isotropy and initial stress state, the symmetry of the tunnel wall is preserved throughout the excavation process. Thus, the deformed tunnel wall remains circular. On the other hand, one of the effects of the mutual interaction induced by the proximity of the tunnels is the loss of symmetry of the deformed tunnel wall, as illustrated in Fig.~\ref{Ovalization effect and monitoring point}. In this context, the point chosen to follow the convergences (on the crown) is not representative of the entire deformation of the tunnel wall. 
+	
+	\item \textbf{Observation 3}: Referring to the material properties shown in Table~\ref{table2}, the value adopted for plastic cohesion ($c$) is higher than the value for viscoplastic cohesion ($c_{vp}$): $c$ > $c_{vp}$. This implies that in the regime of irreversible deformations, the viscoplasticity of the material will be activated first. Throughout the excavation process, viscoplastic deformations will appear without plasticization of the massif. The generic configurations of the deformation zones of the massif throughout the excavation process are illustrated in Fig.~\ref{zones}.
+	
+\end{itemize}
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[scale=0.6]{Ovalization effect and monitoring point.pdf}
+	\caption{Monitoring point and ovalization effect}
+	\label{Ovalization effect and monitoring point}
+\end{figure}
+\FloatBarrier
+
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[scale=0.6]{zones.pdf}
+	\caption{Configurations for the zones with irreversible deformations in the rock mass}
+	\label{zones}
+\end{figure}
+\FloatBarrier
+
+
 
 \subsection{Influência do afastamento entre os túneis}\label{}
 

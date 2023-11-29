@@ -1,4 +1,4 @@
-\begin{thebibliography}{12}
+\begin{thebibliography}{13}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \providecommand{\url}[1]{\texttt{#1}}
 \providecommand{\href}[2]{#2}
@@ -67,6 +67,13 @@ ANSYS, \bibinfo{year}{2013}.
 \newblock \bibinfo{journal}{International Journal of Rock Mechanics and Mining
   Sciences} \bibinfo{volume}{136}, \bibinfo{pages}{104475}.
 \newblock \DOIprefix\doi{https://doi.org/10.1016/j.ijrmms.2020.104475}.
+%Type = Phdthesis
+\bibitem[{Piepi(1995)}]{piepi1995}
+\bibinfo{author}{Piepi, G.T.}, \bibinfo{year}{1995}.
+\newblock \bibinfo{title}{Comportement viscoplastique avec rupture des argiles
+  raides. Applications aux ouvrages souterrains}.
+\newblock Ph.D. thesis. Ecole Nationale des Ponts et Chauss{\'e}es.
+  \bibinfo{address}{Paris, French}.
 %Type = Masterthesis
 \bibitem[{Quevedo(2017)}]{quevedo2017comportamento}
 \bibinfo{author}{Quevedo, F.P.M.}, \bibinfo{year}{2017}.

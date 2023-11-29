@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.12) (preloaded format=pdflatex 2023.1.18)  28 NOV 2023 17:21
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.12) (preloaded format=pdflatex 2023.1.18)  29 NOV 2023 16:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1104,14 +1104,54 @@ as been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
 l.463 \FloatBarrier
-                    <./MA_FIG1.pdf>] (cas-sc-template.bbl [12
+                    <./MA_FIG1.pdf>] [12
 pdfTeX warning (ext4): destination with the same identifier (name{figure.13}) h
 as been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.30 ...}}ant and Prasannan(1989b)}]{bazant:1989b}
-                                                   <./MA_FIG2.pdf>]) [13]
-(cas-sc-template.aux)
+l.512 \FloatBarrier
+                    <./MA_FIG2.pdf>]
+<Ovalization effect and monitoring point.pdf, id=2469, 348.60286pt x 411.73349p
+t>
+File: Ovalization effect and monitoring point.pdf Graphic file (type pdf)
+<use Ovalization effect and monitoring point.pdf>
+Package pdftex.def Info: Ovalization effect and monitoring point.pdf  used on i
+nput line 527.
+(pdftex.def)             Requested size: 209.16333pt x 247.04199pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[13
+pdfTeX warning (ext4): destination with the same identifier (name{table.2}) has
+ been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.531 \FloatBarrier
+                   ]
+<zones.pdf, id=2477, 521.77295pt x 320.23767pt>
+File: zones.pdf Graphic file (type pdf)
+<use zones.pdf>
+Package pdftex.def Info: zones.pdf  used on input line 536.
+(pdftex.def)             Requested size: 313.06618pt x 192.14407pt.
+ (cas-sc-template.bbl [14
+pdfTeX warning (ext4): destination with the same identifier (name{figure.14}) h
+as been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.1 \begin{thebibliography}{13}
+                               
+pdfTeX warning (ext4): destination with the same identifier (name{figure.15}) h
+as been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.1 \begin{thebibliography}{13}
+                                <./Ovalization effect and monitoring point.pdf>
+ <./zones.pdf
+
+pdfTeX warning: pdflatex.exe (file ./zones.pdf): PDF inclusion: multiple pdfs w
+ith page group included in a single page
+>]) [15] (cas-sc-template.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
@@ -1119,13 +1159,13 @@ Package rerunfilecheck Info: File `cas-sc-template.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 16932 strings out of 476404
- 261445 string characters out of 2789524
- 1867324 words of memory out of 3000000
- 36908 multiletter control sequences out of 15000+600000
- 624712 words of font info for 183 fonts, out of 8000000 for 9000
+ 16960 strings out of 476404
+ 262107 string characters out of 2789524
+ 1871324 words of memory out of 3000000
+ 36928 multiletter control sequences out of 15000+600000
+ 627441 words of font info for 184 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 90i,17n,90p,1296b,582s stack positions out of 10000i,1000n,20000p,200000b,80000s
+ 90i,17n,90p,1296b,545s stack positions out of 10000i,1000n,20000p,200000b,80000s
 
 pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist
 , replaced by a fixed one
@@ -1148,10 +1188,11 @@ lic/stix/stix-mathit-bold.pfb><C:/Users/augus/AppData/Local/Programs/MiKTeX/fon
 ts/type1/public/stix/stix-mathit.pfb><C:/Users/augus/AppData/Local/Programs/MiK
 TeX/fonts/type1/public/stix/stix-mathrm-bold.pfb><C:/Users/augus/AppData/Local/
 Programs/MiKTeX/fonts/type1/public/stix/stix-mathrm.pfb><C:/Users/augus/AppData
-/Local/Programs/MiKTeX/fonts/type1/public/stix/stix-mathsf.pfb>
-Output written on cas-sc-template.pdf (14 pages, 3580579 bytes).
+/Local/Programs/MiKTeX/fonts/type1/public/stix/stix-mathscr.pfb><C:/Users/augus
+/AppData/Local/Programs/MiKTeX/fonts/type1/public/stix/stix-mathsf.pfb>
+Output written on cas-sc-template.pdf (16 pages, 3667217 bytes).
 PDF statistics:
- 2561 PDF objects out of 2984 (max. 8388607)
- 74 named destinations out of 1000 (max. 500000)
- 76 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2681 PDF objects out of 2984 (max. 8388607)
+ 80 named destinations out of 1000 (max. 500000)
+ 86 words of extra memory for PDF output out of 10000 (max. 10000000)
 
