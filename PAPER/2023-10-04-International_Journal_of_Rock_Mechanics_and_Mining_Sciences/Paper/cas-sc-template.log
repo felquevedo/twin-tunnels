@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.12) (preloaded format=pdflatex 2023.1.18)  29 NOV 2023 19:23
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.12) (preloaded format=pdflatex 2023.1.18)  30 NOV 2023 19:28
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -698,9 +698,6 @@ LaTeX Warning: Label `' multiply defined.
 
 LaTeX Warning: Label `' multiply defined.
 
-
-LaTeX Warning: Label `' multiply defined.
-
 )
 \openout1 = `cas-sc-template.aux'.
 
@@ -808,349 +805,366 @@ Package hyperref Info: Link coloring ON on input line 35.
 \verbatim@out=\write4
 \openout4 = `cas-sc-template.abs'.
 
+<Domain.pdf, id=3, 411.10066pt x 129.6322pt>
+File: Domain.pdf Graphic file (type pdf)
+<use Domain.pdf>
+Package pdftex.def Info: Domain.pdf  used on input line 171.
+(pdftex.def)             Requested size: 411.09966pt x 129.63188pt.
 LaTeX Font Info:    Trying to load font information for TS1+stix on input line 
-171.
+176.
 (C:\Users\augus\AppData\Local\Programs\MiKTeX\tex/latex/stix\ts1stix.fd
 File: ts1stix.fd 2015/04/17 v1.1.2-latex STIX TS1 font definitions
 )
 [0
 
-{C:/Users/augus/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
+{C:/Users/augus/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map} <./Domain.pdf
+>]
+pdfTeX warning (ext4): destination with the same identifier (name{page.0}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.186 \maketitle
+                 [0]
 LaTeX Font Info:    Trying to load font information for LS1+stixscr on input li
-ne 181.
+ne 186.
 
 (C:\Users\augus\AppData\Local\Programs\MiKTeX\tex/latex/stix\ls1stixscr.fd
 File: ls1stixscr.fd 2015/04/17 v1.1.2-latex STIX script LS1 font definitions
 )
 LaTeX Font Info:    Trying to load font information for LS2+stixex on input lin
-e 181.
+e 186.
 
 (C:\Users\augus\AppData\Local\Programs\MiKTeX\tex/latex/stix\ls2stixex.fd
 File: ls2stixex.fd 2015/04/17 v1.1.2-latex STIX extentions LS2 font definitions
 
 )
-LaTeX Font Info:    Trying to load font information for U+msa on input line 181
+LaTeX Font Info:    Trying to load font information for U+msa on input line 186
 .
 
 (C:\Users\augus\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 181
+LaTeX Font Info:    Trying to load font information for U+msb on input line 186
 .
 
 (C:\Users\augus\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Trying to load font information for LS1+stixfrak on input l
-ine 181.
+ine 186.
 
 (C:\Users\augus\AppData\Local\Programs\MiKTeX\tex/latex/stix\ls1stixfrak.fd
 File: ls1stixfrak.fd 2015/04/17 v1.1.2-latex STIX fraktur LS1 font definitions
 )
 LaTeX Font Info:    Trying to load font information for LS1+stixbb on input lin
-e 181.
+e 186.
 
 (C:\Users\augus\AppData\Local\Programs\MiKTeX\tex/latex/stix\ls1stixbb.fd
 File: ls1stixbb.fd 2015/04/17 v1.1.2-latex STIX blackboard LS1 font definitions
 
 )
 LaTeX Font Info:    Trying to load font information for LS2+stixcal on input li
-ne 181.
+ne 186.
 
 (C:\Users\augus\AppData\Local\Programs\MiKTeX\tex/latex/stix\ls2stixcal.fd
 File: ls2stixcal.fd 2015/04/17 v1.1.2-latex STIX calligraphic LS2 font definiti
 ons
 )
 LaTeX Font Info:    Trying to load font information for LS1+stixsf on input lin
-e 181.
+e 186.
 
 (C:\Users\augus\AppData\Local\Programs\MiKTeX\tex/latex/stix\ls1stixsf.fd
 File: ls1stixsf.fd 2015/04/17 v1.1.2-latex STIX sans-serif LS1 font definitions
 
 )
 LaTeX Font Info:    Trying to load font information for LS2+stixtt on input lin
-e 181.
+e 186.
 
 (C:\Users\augus\AppData\Local\Programs\MiKTeX\tex/latex/stix\ls2stixtt.fd
 File: ls2stixtt.fd 2015/04/17 v1.1.2-latex STIX typewriter LS2 font definitions
 
 )
-Overfull \hbox (117.0831pt too wide) detected at line 181
+Overfull \hbox (117.0831pt too wide) detected at line 186
 []
  []
 
 (cas-sc-template.abs)
 
-Package hyperref Warning: Ignoring empty anchor on input line 181.
+Package hyperref Warning: Ignoring empty anchor on input line 186.
 
 
-Package hyperref Warning: Ignoring empty anchor on input line 181.
+Package hyperref Warning: Ignoring empty anchor on input line 186.
 
-<thumbnails/cas-email.jpeg, id=11, 225.84375pt x 225.84375pt>
+<thumbnails/cas-email.jpeg, id=61, 225.84375pt x 225.84375pt>
 File: thumbnails/cas-email.jpeg Graphic file (type jpg)
 <use thumbnails/cas-email.jpeg>
-Package pdftex.def Info: thumbnails/cas-email.jpeg  used on input line 181.
+Package pdftex.def Info: thumbnails/cas-email.jpeg  used on input line 186.
 (pdftex.def)             Requested size: 7.99838pt x 8.0pt.
 LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 1
-81.
+86.
 (C:\Users\augus\AppData\Local\Programs\MiKTeX\tex/latex/base\t1cmtt.fd
 File: t1cmtt.fd 2022/07/10 v2.5l Standard LaTeX font definitions
 )
 
-Package hyperref Warning: Ignoring empty anchor on input line 181.
+Package hyperref Warning: Ignoring empty anchor on input line 186.
 
-<thumbnails/cas-url.jpeg, id=12, 225.84375pt x 225.84375pt>
+<thumbnails/cas-url.jpeg, id=62, 225.84375pt x 225.84375pt>
 File: thumbnails/cas-url.jpeg Graphic file (type jpg)
 <use thumbnails/cas-url.jpeg>
-Package pdftex.def Info: thumbnails/cas-url.jpeg  used on input line 181.
+Package pdftex.def Info: thumbnails/cas-url.jpeg  used on input line 186.
 (pdftex.def)             Requested size: 7.99838pt x 8.0pt.
 
-Package hyperref Warning: Ignoring empty anchor on input line 181.
+Package hyperref Warning: Ignoring empty anchor on input line 186.
 
-LaTeX Font Info:    Trying to load font information for T1+cmss on input line 2
-24.
+LaTeX Font Info:    Trying to load font information for T1+cmss on input line 1
+96.
 (C:\Users\augus\AppData\Local\Programs\MiKTeX\tex/latex/base\t1cmss.fd
 File: t1cmss.fd 2022/07/10 v2.5l Standard LaTeX font definitions
 )
-[1 <./thumbnails/cas-email.jpeg> <./thumbnails/cas-url.jpeg>]
-<Rheological representation.pdf, id=38, 327.8541pt x 170.6047pt>
+[1 <./thumbnails/cas-email.jpeg> <./thumbnails/cas-url.jpeg>] [2]
+<Rheological representation.pdf, id=113, 327.8541pt x 170.6047pt>
 File: Rheological representation.pdf Graphic file (type pdf)
 <use Rheological representation.pdf>
-Package pdftex.def Info: Rheological representation.pdf  used on input line 260
+Package pdftex.def Info: Rheological representation.pdf  used on input line 277
 .
 (pdftex.def)             Requested size: 327.85329pt x 170.60428pt.
- [2
+ [3
 pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) ha
 s been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.284 \end{equation}
+l.301 \end{equation}
                      <./Rheological representation.pdf>]
-<Elastic-plastic-viscoplastic domains.pdf, id=65, 341.08398pt x 213.32077pt>
+<Elastic-plastic-viscoplastic domains.pdf, id=141, 341.08398pt x 213.32077pt>
 File: Elastic-plastic-viscoplastic domains.pdf Graphic file (type pdf)
 <use Elastic-plastic-viscoplastic domains.pdf>
 Package pdftex.def Info: Elastic-plastic-viscoplastic domains.pdf  used on inpu
-t line 298.
+t line 315.
 (pdftex.def)             Requested size: 272.86755pt x 170.65683pt.
- [3
+ [4
 pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) ha
 s been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.314 \begin{equation}
-                       \label{eq:9} <./Elastic-plastic-viscoplastic domains.pdf
->]
-<Domain.pdf, id=130, 411.10066pt x 129.6322pt>
+l.329 \end{equation}
+                     <./Elastic-plastic-viscoplastic domains.pdf>]
 File: Domain.pdf Graphic file (type pdf)
 <use Domain.pdf>
-Package pdftex.def Info: Domain.pdf  used on input line 336.
+Package pdftex.def Info: Domain.pdf  used on input line 353.
 (pdftex.def)             Requested size: 411.09966pt x 129.63188pt.
-<Mesh1.pdf, id=132, 677.70567pt x 531.0825pt>
+<Mesh1.pdf, id=204, 677.70567pt x 531.0825pt>
 File: Mesh1.pdf Graphic file (type pdf)
 <use Mesh1.pdf>
-Package pdftex.def Info: Mesh1.pdf  used on input line 345.
+Package pdftex.def Info: Mesh1.pdf  used on input line 362.
 (pdftex.def)             Requested size: 338.852pt x 265.54059pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[4
+ [5
 pdfTeX warning (ext4): destination with the same identifier (name{figure.3}) ha
 s been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.351 
-       <./Domain.pdf>]
-<Mesh2.pdf, id=193, 287.37585pt x 205.54703pt>
+l.365 \end{figure}
+                  ]
+<Mesh2.pdf, id=223, 287.37585pt x 205.54703pt>
 File: Mesh2.pdf Graphic file (type pdf)
 <use Mesh2.pdf>
-Package pdftex.def Info: Mesh2.pdf  used on input line 354.
+Package pdftex.def Info: Mesh2.pdf  used on input line 371.
 (pdftex.def)             Requested size: 229.90099pt x 164.43782pt.
-<Mesh3.pdf, id=197, 545.45775pt x 272.95102pt>
-File: Mesh3.pdf Graphic file (type pdf)
-<use Mesh3.pdf>
-Package pdftex.def Info: Mesh3.pdf  used on input line 362.
-(pdftex.def)             Requested size: 436.36678pt x 218.3611pt.
-<Mesh4.pdf, id=198, 487.13475pt x 437.75934pt>
-File: Mesh4.pdf Graphic file (type pdf)
-<use Mesh4.pdf>
-Package pdftex.def Info: Mesh4.pdf  used on input line 368.
-(pdftex.def)             Requested size: 292.2831pt x 262.65762pt.
-<Mesh5.pdf, id=199, 447.82513pt x 433.35599pt>
-File: Mesh5.pdf Graphic file (type pdf)
-<use Mesh5.pdf>
-Package pdftex.def Info: Mesh5.pdf  used on input line 374.
-(pdftex.def)             Requested size: 268.69714pt x 260.0156pt.
- [5
-pdfTeX warning (ext4): destination with the same identifier (name{figure.4}) ha
-s been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.378 \FloatBarrier
-                   
-pdfTeX warning (ext4): destination with the same identifier (name{figure.5}) ha
-s been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.378 \FloatBarrier
-                    <./Mesh1.pdf> <./Mesh2.pdf
-
-pdfTeX warning: pdflatex.exe (file ./Mesh2.pdf): PDF inclusion: multiple pdfs w
-ith page group included in a single page
->]
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [6
-pdfTeX warning (ext4): destination with the same identifier (name{figure.6}) ha
+pdfTeX warning (ext4): destination with the same identifier (name{figure.4}) ha
 s been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.378 \FloatBarrier
-                    <./Mesh3.pdf>]
-<Mesh6.pdf, id=255, 459.33456pt x 498.24783pt>
-File: Mesh6.pdf Graphic file (type pdf)
-<use Mesh6.pdf>
-Package pdftex.def Info: Mesh6.pdf  used on input line 382.
-(pdftex.def)             Requested size: 275.60286pt x 298.951pt.
+l.375 \FloatBarrier
+                    <./Mesh1.pdf>]
+<Mesh3.pdf, id=241, 545.45775pt x 272.95102pt>
+File: Mesh3.pdf Graphic file (type pdf)
+<use Mesh3.pdf>
+Package pdftex.def Info: Mesh3.pdf  used on input line 379.
+(pdftex.def)             Requested size: 436.36678pt x 218.3611pt.
+<Mesh4.pdf, id=242, 487.13475pt x 437.75934pt>
+File: Mesh4.pdf Graphic file (type pdf)
+<use Mesh4.pdf>
+Package pdftex.def Info: Mesh4.pdf  used on input line 385.
+(pdftex.def)             Requested size: 292.2831pt x 262.65762pt.
+<Mesh5.pdf, id=243, 447.82513pt x 433.35599pt>
+File: Mesh5.pdf Graphic file (type pdf)
+<use Mesh5.pdf>
+Package pdftex.def Info: Mesh5.pdf  used on input line 391.
+(pdftex.def)             Requested size: 268.69714pt x 260.0156pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [7
-pdfTeX warning (ext4): destination with the same identifier (name{figure.7}) ha
+pdfTeX warning (ext4): destination with the same identifier (name{figure.5}) ha
 s been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.386 \FloatBarrier
+l.395 \FloatBarrier
                    
-pdfTeX warning (ext4): destination with the same identifier (name{figure.8}) ha
+pdfTeX warning (ext4): destination with the same identifier (name{figure.6}) ha
 s been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.386 \FloatBarrier
-                    <./Mesh4.pdf> <./Mesh5.pdf
+l.395 \FloatBarrier
+                    <./Mesh2.pdf> <./Mesh3.pdf
 
-pdfTeX warning: pdflatex.exe (file ./Mesh5.pdf): PDF inclusion: multiple pdfs w
+pdfTeX warning: pdflatex.exe (file ./Mesh3.pdf): PDF inclusion: multiple pdfs w
 ith page group included in a single page
 >]
-<Diagram of excavations.pdf, id=296, 326.31583pt x 150.96735pt>
-File: Diagram of excavations.pdf Graphic file (type pdf)
-<use Diagram of excavations.pdf>
-Package pdftex.def Info: Diagram of excavations.pdf  used on input line 390.
-(pdftex.def)             Requested size: 424.21051pt x 196.25752pt.
+<Mesh6.pdf, id=284, 459.33456pt x 498.24783pt>
+File: Mesh6.pdf Graphic file (type pdf)
+<use Mesh6.pdf>
+Package pdftex.def Info: Mesh6.pdf  used on input line 399.
+(pdftex.def)             Requested size: 275.60286pt x 298.951pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [8
+pdfTeX warning (ext4): destination with the same identifier (name{figure.7}) ha
+s been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.403 \FloatBarrier
+                   
+pdfTeX warning (ext4): destination with the same identifier (name{figure.8}) ha
+s been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.403 \FloatBarrier
+                    <./Mesh4.pdf> <./Mesh5.pdf
+
+pdfTeX warning: pdflatex.exe (file ./Mesh5.pdf): PDF inclusion: multiple pdfs w
+ith page group included in a single page
+>]
+<Diagram of excavations.pdf, id=325, 326.31583pt x 150.96735pt>
+File: Diagram of excavations.pdf Graphic file (type pdf)
+<use Diagram of excavations.pdf>
+Package pdftex.def Info: Diagram of excavations.pdf  used on input line 407.
+(pdftex.def)             Requested size: 424.21051pt x 196.25752pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[9
 pdfTeX warning (ext4): destination with the same identifier (name{figure.9}) ha
 s been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.394 \FloatBarrier
-                    <./Mesh6.pdf>] [9
+l.411 \FloatBarrier
+                    <./Mesh6.pdf>] [10
 pdfTeX warning (ext4): destination with the same identifier (name{figure.10}) h
 as been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.437 \FloatBarrier
+l.454 \FloatBarrier
                    
 pdfTeX warning (ext4): destination with the same identifier (name{table.1}) has
  been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.437 \FloatBarrier
+l.454 \FloatBarrier
                     <./Diagram of excavations.pdf>]
-<GUO_FIG1.pdf, id=343, 282.92361pt x 174.32298pt>
+<GUO_FIG1.pdf, id=372, 282.92361pt x 174.32298pt>
 File: GUO_FIG1.pdf Graphic file (type pdf)
 <use GUO_FIG1.pdf>
-Package pdftex.def Info: GUO_FIG1.pdf  used on input line 449.
+Package pdftex.def Info: GUO_FIG1.pdf  used on input line 466.
 (pdftex.def)             Requested size: 282.92291pt x 174.32254pt.
-<MA_FIG1.pdf, id=346, 661.36618pt x 395.6265pt>
+<MA_FIG1.pdf, id=375, 661.36618pt x 395.6265pt>
 File: MA_FIG1.pdf Graphic file (type pdf)
 <use MA_FIG1.pdf>
-Package pdftex.def Info: MA_FIG1.pdf  used on input line 459.
+Package pdftex.def Info: MA_FIG1.pdf  used on input line 476.
 (pdftex.def)             Requested size: 462.95317pt x 276.93665pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[10
+[11
 
 
 pdfTeX warning (ext4): destination with the same identifier (name{figure.11}) h
 as been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.463 \FloatBarrier
+l.480 \FloatBarrier
                     <./GUO_FIG1.pdf>]
-<MA_FIG2.pdf, id=381, 328.27051pt x 319.20543pt>
+<MA_FIG2.pdf, id=409, 328.27051pt x 319.20543pt>
 File: MA_FIG2.pdf Graphic file (type pdf)
 <use MA_FIG2.pdf>
-Package pdftex.def Info: MA_FIG2.pdf  used on input line 469.
+Package pdftex.def Info: MA_FIG2.pdf  used on input line 486.
 (pdftex.def)             Requested size: 328.2697pt x 319.20464pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[11
+[12
 pdfTeX warning (ext4): destination with the same identifier (name{figure.12}) h
 as been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.473 \FloatBarrier
-                    <./MA_FIG1.pdf>] [12
+l.490 \FloatBarrier
+                    <./MA_FIG1.pdf>] [13
 pdfTeX warning (ext4): destination with the same identifier (name{figure.13}) h
 as been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.522 \FloatBarrier
+l.539 \FloatBarrier
                     <./MA_FIG2.pdf>]
-<Ovalization effect and monitoring point.pdf, id=2474, 348.60286pt x 411.73349p
+<Ovalization effect and monitoring point.pdf, id=2502, 348.60286pt x 411.73349p
 t>
 File: Ovalization effect and monitoring point.pdf Graphic file (type pdf)
 <use Ovalization effect and monitoring point.pdf>
 Package pdftex.def Info: Ovalization effect and monitoring point.pdf  used on i
-nput line 537.
+nput line 554.
 (pdftex.def)             Requested size: 209.16333pt x 247.04199pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[13
+[14
 pdfTeX warning (ext4): destination with the same identifier (name{table.2}) has
  been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.541 \FloatBarrier
+l.558 \FloatBarrier
                    ]
-<zones.pdf, id=2482, 521.77295pt x 320.23767pt>
+<zones.pdf, id=2510, 521.77295pt x 320.23767pt>
 File: zones.pdf Graphic file (type pdf)
 <use zones.pdf>
-Package pdftex.def Info: zones.pdf  used on input line 546.
+Package pdftex.def Info: zones.pdf  used on input line 563.
 (pdftex.def)             Requested size: 313.06618pt x 192.14407pt.
- (cas-sc-template.bbl [14
+ [15
 pdfTeX warning (ext4): destination with the same identifier (name{figure.14}) h
 as been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.1 \begin{thebibliography}{16}
-                               
+l.596 \FloatBarrier
+                   
 pdfTeX warning (ext4): destination with the same identifier (name{figure.15}) h
 as been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.1 \begin{thebibliography}{16}
-                                <./Ovalization effect and monitoring point.pdf>
- <./zones.pdf
+l.596 \FloatBarrier
+                    <./Ovalization effect and monitoring point.pdf> <./zones.pd
+f
 
 pdfTeX warning: pdflatex.exe (file ./zones.pdf): PDF inclusion: multiple pdfs w
 ith page group included in a single page
->]) [15] (cas-sc-template.aux)
+>] (cas-sc-template.bbl [16
+pdfTeX warning (ext4): destination with the same identifier (name{table.3}) has
+ been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.80 ...hortis and Kavvadas(2023a)}]{chortis2023a}
+                                                  ]) [17] (cas-sc-template.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
@@ -1158,13 +1172,13 @@ Package rerunfilecheck Info: File `cas-sc-template.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 16974 strings out of 476404
- 262381 string characters out of 2789524
+ 16998 strings out of 476404
+ 262773 string characters out of 2789524
  1871324 words of memory out of 3000000
- 36940 multiletter control sequences out of 15000+600000
+ 36958 multiletter control sequences out of 15000+600000
  624676 words of font info for 183 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 90i,17n,90p,1296b,540s stack positions out of 10000i,1000n,20000p,200000b,80000s
+ 90i,17n,90p,1931b,595s stack positions out of 10000i,1000n,20000p,200000b,80000s
 
 pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist
 , replaced by a fixed one
@@ -1189,9 +1203,9 @@ TeX/fonts/type1/public/stix/stix-mathrm-bold.pfb><C:/Users/augus/AppData/Local/
 Programs/MiKTeX/fonts/type1/public/stix/stix-mathrm.pfb><C:/Users/augus/AppData
 /Local/Programs/MiKTeX/fonts/type1/public/stix/stix-mathscr.pfb><C:/Users/augus
 /AppData/Local/Programs/MiKTeX/fonts/type1/public/stix/stix-mathsf.pfb>
-Output written on cas-sc-template.pdf (16 pages, 3668405 bytes).
+Output written on cas-sc-template.pdf (19 pages, 3682387 bytes).
 PDF statistics:
- 2687 PDF objects out of 2984 (max. 8388607)
- 82 named destinations out of 1000 (max. 500000)
+ 2724 PDF objects out of 2984 (max. 8388607)
+ 88 named destinations out of 1000 (max. 500000)
  86 words of extra memory for PDF output out of 10000 (max. 10000000)
 

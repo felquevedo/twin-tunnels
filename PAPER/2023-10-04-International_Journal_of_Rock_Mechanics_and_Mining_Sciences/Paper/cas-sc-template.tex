@@ -157,14 +157,19 @@
 
 % Here goes the abstract
 \begin{abstract}
-This paper aims to demonstrate the long-term implications of the rheological constitutive behavior of rock mass and concrete lining in the convergence of the intersection area of twin tunnel galleries using a three-dimensional numerical analysis based on the finite-element method. A Drucker-Prager-Perzyna elastoplastic-viscoplastic constitutive law represents the rock mass and, for the lining, an elastic and viscoelastic law. The deactivation-activation methods simulate the excavation process. Comparisons of convergence reveal that the viscous effects of the rock mass and the lining significantly influence the peak convergence within the intersection zone, resulting in differences of approximately 10\% in convergence values.
+This paper aims to demonstrate the long-term implications of the rheological constitutive behavior of rock mass and concrete lining in the convergence profile of the twin tunnels with transverse galleries using a three-dimensional numerical analysis based on the finite-element method. Various constitutive models are considered for the rock mass, including elastic, elastoplastic, viscoplastic, and elastoplastic-viscoplastic. The definition of plasticity incorporates a Drucker-Prager yield surface and an associated flow rule without hardening or softening. Viscoplasticity is based on the Perzyna model, also using a Drucker-Prager flow surface. For the lining, elastic and viscoelastic constitutive models are adopted. The viscoelastic behavior is defined by a Generalized Kelvin rheological model, formulated based on the Solidification Theory of Bazand and Prassanann, with parameters given by CEB-FIP MC90 formulations. The deactivation-activation method simulate the excavation process. The numerical model is verified using comparisons with analytical solutions in elasticity and elastoplasticity for twin tunnels without a gallery developed by other authors. The mutual interaction between the longitudinal tunnels through parametric analyses is investigated, emphasizing the impact of the concrete lining stiffness on tunnel convergences. The interaction is particularly significant for longitudinal tunnels, especially when they are spaced at four radius. With a transverse gallery and considering the lining, we observe a highly localized influence in twin tunnels, extending up to four radius on each side of the gallery axis. Comparisons of convergence reveal that the viscous effects of the rock mass and the lining significantly influence the peak convergence within the intersection zone, resulting in differences of approximately 10\% in convergence values.
+
+
+%This paper aims to demonstrate the long-term implications of the rheological constitutive behavior of rock mass and concrete lining in the convergence of the intersection area of twin tunnel galleries using a three-dimensional numerical analysis based on the finite-element method. A Drucker-Prager-Perzyna elasto-plastic-viscoplastic constitutive law represents the rock mass and, for the lining, an elastic and viscoelastic law. The deactivation-activation methods simulate the excavation process. The numerical model is verified using comparisons with analytical solutions in elasticity and elastoplasticity for twin tunnels without a gallery developed by other authors. 
+
+%Comparisons of convergence reveal that the viscous effects of the rock mass and the lining significantly influence the peak convergence within the intersection zone, resulting in differences of approximately 10\% in convergence values.
 %É necessário um resumo conciso e factual. O resumo deve indicar sucintamente o objetivo da investigação, os principais resultados e as principais conclusões. O resumo é frequentemente apresentado separadamente do artigo, pelo que deve ser autónomo. Por esta razão, as referências devem ser evitadas, mas se forem essenciais, devem citar-se o(s) autor(es) e o(s) ano(s). Além disso, devem ser evitadas abreviaturas não padronizadas ou pouco comuns, mas se forem essenciais, devem ser definidas na primeira menção no próprio resumo. Os artigos com "Sugestões de Métodos" não devem conter resumos.
 \end{abstract}
 
 % Use if graphical abstract is present
-%\begin{graphicalabstract}
-%\includegraphics{}
-%\end{graphicalabstract}
+\begin{graphicalabstract}
+\includegraphics[scale=1]{Domain.pdf}
+\end{graphicalabstract}
 
 % Research highlights
 \begin{highlights}
@@ -182,15 +187,27 @@ twin tunnels \sep transverse gallery \sep constitutive models \sep finite elemen
 
 \section{Introduction}\label{}
 
-Many design methods often focus on single tunnels, but twin tunnels are a common occurrence. The interaction between tunnels can be significant, especially when the spacing between them is minimal. Additionally, many twin tunnels incorporate transverse galleries, introducing a localized effect on displacements and stresses. Additionaly, the rheological behavior of the rockmass and lining plays a crucial role in how stress and displacements fields evolve over time.
+Many design methods often focus on single tunnels, but twin tunnels are a common occurrence. The interaction between tunnels can be significant, especially when the spacing between them is minimal. Additionally, many twin tunnels incorporate transverse galleries, introducing a localized effect on displacements and stresses. Also, the rheological behavior of the rockmass and lining plays a crucial role in how stress and displacements fields evolve over time. Some recent studies on deep twin tunnels can be found at [\citenum{Spyridis2015}, \citenum{Chen2019}, \citenum{Fortsakis2021}, \citenum{chortis2021a},\citenum{chortis2021b}, \citenum{GUO2021}, \citenum{chortis2023a}, \citenum{chortis2023b}].
 
-Some recent studies on deep twin tunnels can be found at [\citenum{Fortsakis2021}, \citenum{Spyridis2015}, \citenum{chortis2021}]
+Chortis and Kavvadas [\citenum{chortis2021a}] considered the calculation of the axial forces acting on the primary support in the intersection zone before, during, and after the construction of a transverse tunnel linking twin tunnels. The results of the analysis indicated that the zone of influence extends approximately two diameters from the main tunnel to each side from the center of the intersection and that the interaction effects are practically eliminated when they exceed this delimited zone of influence. 
 
+In another study, Chortis and Kavvadas [\citenum{chortis2021b}] carried out parametric 3D finite element analyses to verify the interaction between deep twin tunnel, with circular and non-circular section, supported by a shotcrete lining, considering the rock mass with linear elastic behavior, perfectly plastic, with Mohr-Coulumb failure criteria, and the elastic linear lining. The study investigates the axial forces that develop in the primary lining of the twin tunnels as a function of the main geometric and geomaterial parameters, but without considering the potential time-dependent deformations (creep effect) that occur in some types of rock masses.
 
+Chen et al. [\citenum{Chen2019}], through analytical solutions in elasticity using complex variables, Fourier transformation, and the alternating Schwarz method, demonstrate that the mutual interaction between twin tunnels disappears if the spacing between the tunnels is greater than six times the tunnel radius. The lining effectively reduces the stress concentration, especially at high lateral stress coefficients.
 
+Guo et al. [\citenum{GUO2021}] develop an elastic analytical solution for the stress field around twin circular tunnels with hydrostatic pressure using the complex variable and the superposition principle. They found that stress concentration in tunnel wall increased as the distance between the parallel tunnels and the pressure on the support decreased.
 
+Ma et al. [\citenum{MA2020}] proposed an analytical method, verified by a numerical solution using FLAC3D software for determining the plasticization zones around deep circular twin tunnels without linings, restricting themselves where there is no overlap between the two plastic zones. In this case, they adopted the perfectly plastic elastic constitutive model for the homogeneous and isotropic mass, with the Mohr-Coulomb criterion for the flow surface. They also carried out parametric studies to understand the influence of the distance between the twin tunnels, cohesion, the angle of internal friction, and the vertical and horizontal stresses acting on the shape and depth of the plastic zones. They recognizing the plastic zone around the tunnel provides a relevant theoretical basis for defining and designing the support. In addition, they mention that an excessive plastic zone significantly affects the stability and functionality of a tunnel. Therefore, the delimitation of the plastic zone around tunnels is of great importance for the development of projects.
 
-The aim of this study is to investigate the influence of some of the main parameters of deep concrete-lined tunnels in long-term convergence.
+Using parametric three-dimensional numerical analyses, Chortis and Kavvadas [\citenum{chortis2023a}, \citenum{chortis2023b}] investigated the effect of building a transverse tunnel that intersected deep twin tunnels perpendicularly, focusing the study on the axial forces and the circumferential and longitudinal bending moments acting on the primary support of the intersection regions, respectively. According to the authors, the potential interaction between deep twin tunnels lined with shotcrete must be taken into account, especially when the distance between them is less than or equal to twice their diameter.
+
+According to Fortsakis [\citenum{Fortsakis2021}], in a realistic construction context, twin tunnels are excavated and supported with a delay, so that the second tunnel is usually built after the first one has advanced enough to maintain a longitudinal separation distance between the faces. The advance of the subsequent tunnel mobilizes the redistribution of stresses and deformations in the zone between the tunnels, resulting in additional loading of the preceding tunnel.
+
+As for transverse tunnels, these are generally built far enough behind the advanced face of the main tunnel to ensure that their excavation has virtually no effect during the construction of the junction tunnel [\citenum{chortis2021a}]. The interaction at the intersection, between the main tunnel and the transverse tunnel, significantly modifies the stress state of the primary support and that of the surrounding rock mass in these areas, compared to that of the singular tunnel, making three-dimensional finite element analyses essential for developing a realistic and safe design for tunnel junctions [\citenum{Spyridis2015}].
+
+During the construction of the transverse tunnel, the surrounding rock mass is subjected to a redistribution of stresses, causing an additional load on the main tunnel, precisely in the intersection zone. If these additional loads exceed the load capacity of the primary support of the main tunnel, a potentially unstable region can develop, leading to failure, especially in adverse geotechnical conditions [\citenum{chortis2021a}].
+
+The long-term effect has been investigated for single tunnels, but little research has been done on twin tunnels, especially with a gallery. Therefore, in this work, the aim is to investigate the influence of the distance between the tunnels and the effect that the gallery has on the long-term convergence profile of deep-lined twin tunnels, considering various constitutive laws for the rock mass and the lining.
 
 
 
@@ -474,7 +491,7 @@ Fig.~\ref{MA_FIG2} displays the magnitude of displacements, radial, orthoradial,
 
 \section{Numerical Results and Discussion}\label{}
 
-To develop the parametric analyses, we utilized the constitutive parameters of the rock mass as outlined in Piepi [\citenum{piepi1995}], and for the lining, we employed typical values for ordinary reinforced concrete. These parameters are shown in Table~\ref{table2}.
+To develop the parametric analyses, we utilized the constitutive parameters of the rock mass as outlined in Piepi [\citenum{piepi1995}], and for the lining, we employed typical values for ordinary reinforced concrete. These parameters are shown in Table~\ref{table2}. In these analyses, an isotropic initial stress state of 9MPa is considered, and the excavation speed is 12.5m/day [\citenum{piepi1995}].
 \begin{table}
 	\caption{Constitutive parameters used in the parametric analysis}
 	\label{table2}
@@ -549,7 +566,44 @@ In presenting the results, $U_{eq}$ denotes the equilibrium convergence value at
 \end{figure}
 \FloatBarrier
 
+Table~\ref{table3} presents the abbreviation to read the title and legend of the results.
 
+\begin{table}
+	\caption{Abbreviation to the title and legend of the results}
+	\label{table3}
+	\centering
+	%\small
+	\renewcommand{\arraystretch}{1.25}
+	\begin{tabular}{c c}
+		\hline
+		\multicolumn{1}{c}{DESCRIPTION} &
+		\multicolumn{1}{c}{ABBREVIATION} \\
+		\hline
+		Elastic rock mass & E \\
+		Elastoplastic rock mass & EP \\
+		Elastoviscoplastic rock mass & VP \\
+		Elasto-Plastic-Viscoplastic rock mass & EPVP \\
+		Elastic lining & EL \\
+		Viscoelastic lining & VEL \\
+		Long-term & LT \\
+		Final excavation (Short-term) & ST \\
+		With Gallery & WG \\
+		Not Gallery & NG \\			
+		\hline
+	\end{tabular}
+	\normalsize
+\end{table}
+\FloatBarrier
+
+Figures X, Y, and Z show the convergence profiles of the twin tunnels with gallery for all the constitutive models of the massif (E - blue, EP - yellow, VP - pink, EPVP - red) and the lining (EL and VEL) in the short term (full line) and the long term (dashed line), for $d_1 = 4R_i, 8Ri$ and $16R_i$ respectively.
+
+WGSTLT-D14RE
+WGSTLT-D18RE
+WGSTLT-D116RE
+
+In all these results, there is an equivalence between the convergence profiles of the E-EL model (blue dashed line) and the VP-EL in the ST (magenta dashed line), probably due to the high excavation speed. The rapid process of excavation and installation of the lining limits the time for the viscous effects to manifest themselves, also taking into account the restriction imposed by the stiffness of the lining.
+
+In the ST (short term), the EPVP-EL model (green solid line) is equivalent to the EP-EL (yellow dashed line) because, although plasticization around the section has already occurred due to excavation, the viscous effects have not yet evolved considerably due to the short time variation between the start of excavation and the end of the excavation process. After the long term, convergence occurs (green dashed line). However, when the rheological effect of the lining is present, the profile continues to evolve considerably over the long term EPVP-VEL (red dashed line).
 
 \subsection{Influência do afastamento entre os túneis}\label{}
 
@@ -565,10 +619,10 @@ In presenting the results, $U_{eq}$ denotes the equilibrium convergence value at
 
 As principais conclusões do estudo podem ser apresentadas numa breve secção de Conclusões, que pode ser autónoma ou constituir uma subsecção de uma secção de Discussão ou de Resultados e Discussão.
 
-\section{Appendices}\label{}
+%\section{Appendices}\label{}
 
-Se houver mais do que um apêndice, estes devem ser identificados como A, B, etc. As fórmulas e equações dos apêndices devem ser numeradas separadamente: Eq. (A.1), Eq. (A.2), etc.; num apêndice seguinte,
-Eq. (B.1) e assim por diante. O mesmo se aplica aos quadros e figuras: Tabe a A.1; Fig. A.1, etc.
+%Se houver mais do que um apêndice, estes devem ser identificados como A, B, etc. As fórmulas e equações dos apêndices devem ser numeradas separadamente: Eq. (A.1), Eq. (A.2), etc.; num apêndice seguinte,
+%Eq. (B.1) e assim por diante. O mesmo se aplica aos quadros e figuras: Tabe a A.1; Fig. A.1, etc.
 
 % Main text
 %\section{}\label{}

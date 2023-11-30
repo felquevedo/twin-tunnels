@@ -1,4 +1,4 @@
-\begin{thebibliography}{16}
+\begin{thebibliography}{20}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \providecommand{\url}[1]{\texttt{#1}}
 \providecommand{\href}[2]{#2}
@@ -50,13 +50,50 @@ ANSYS, \bibinfo{year}{2013}.
 \newblock \bibinfo{organization}{Comité Euro International du Béton and
   Fédération Internationale de la Précontrainte (CEB-FIP)}.
 %Type = Article
-\bibitem[{Chortis and Kavvadas(2021)}]{chortis2021}
+\bibitem[{Chen et~al.(2019)Chen, Lin and Li}]{Chen2019}
+\bibinfo{author}{Chen, F.}, \bibinfo{author}{Lin, L.b.}, \bibinfo{author}{Li,
+  D.}, \bibinfo{year}{2019}.
+\newblock \bibinfo{title}{Analytic solutions for twin tunneling at great depth
+  considering liner installation and mutual interaction between geomaterial and
+  liners}.
+\newblock \bibinfo{journal}{Applied Mathematical Modelling}
+  \bibinfo{volume}{73}.
+\newblock \DOIprefix\doi{10.1016/j.apm.2019.04.026}.
+%Type = Article
+\bibitem[{Chortis and Kavvadas(2021a)}]{chortis2021a}
 \bibinfo{author}{Chortis, F.}, \bibinfo{author}{Kavvadas, M.},
-  \bibinfo{year}{2021}.
+  \bibinfo{year}{2021}a.
 \newblock \bibinfo{title}{Three-dimensional numerical analyses of perpendicular
   tunnel intersections}.
 \newblock \bibinfo{journal}{Geotechnical and Geological Engineering}
   \bibinfo{volume}{39}, \bibinfo{pages}{1771--1793}.
+%Type = Article
+\bibitem[{Chortis and Kavvadas(2021b)}]{chortis2021b}
+\bibinfo{author}{Chortis, F.}, \bibinfo{author}{Kavvadas, M.},
+  \bibinfo{year}{2021}b.
+\newblock \bibinfo{title}{Three-dimensional numerical investigation of the
+  interaction between twin tunnels}.
+\newblock \bibinfo{journal}{Geotechnical and Geological Engineering}
+  \bibinfo{volume}{39}, \bibinfo{pages}{5559--5585}.
+\newblock \DOIprefix\doi{https://doi.org/10.1007/s10706-021-01845-5}.
+%Type = Incollection
+\bibitem[{Chortis and Kavvadas(2023a)}]{chortis2023a}
+\bibinfo{author}{Chortis, F.}, \bibinfo{author}{Kavvadas, M.},
+  \bibinfo{year}{2023}a.
+\newblock \bibinfo{title}{3d numerical investigation of the axial forces acting
+  on tunnel junctions constructed in fractured/weathered to very blocky
+  rockmass}, in: \bibinfo{booktitle}{Expanding Underground-Knowledge and
+  Passion to Make a Positive Impact on the World}. \bibinfo{publisher}{CRC
+  Press}, pp. \bibinfo{pages}{1574--1582}.
+%Type = Incollection
+\bibitem[{Chortis and Kavvadas(2023b)}]{chortis2023b}
+\bibinfo{author}{Chortis, F.}, \bibinfo{author}{Kavvadas, M.},
+  \bibinfo{year}{2023}b.
+\newblock \bibinfo{title}{3d numerical investigation of the bending moments
+  acting on tunnel junctions constructed in fractured/weathered to very blocky
+  rockmass}, in: \bibinfo{booktitle}{Expanding Underground-Knowledge and
+  Passion to Make a Positive Impact on the World}. \bibinfo{publisher}{CRC
+  Press}, pp. \bibinfo{pages}{1583--1591}.
 %Type = Inproceedings
 \bibitem[{Fortsakis et~al.(2012)Fortsakis, Bekri, Prountzopoulos and
   Marinos}]{Fortsakis2021}
