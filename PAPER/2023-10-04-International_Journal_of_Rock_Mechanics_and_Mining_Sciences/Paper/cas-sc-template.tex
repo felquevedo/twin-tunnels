@@ -38,14 +38,13 @@
 \def\textpagefraction{.001}
 
 % Short title
-\shorttitle{Twin tunnels with galleries using plastic and viscous models}    
+\shorttitle{Numerical analysis of the rock deformation in twin tunnels with transverse galleries}    
 
 % Short author
 \shortauthors{Quevedo et al.}  
 
 % Main title of the paper
-\title [mode = title]{Numerical analysis of the twin tunnels with transverse galleries using plastic and viscous 
-	constitutive models for rockmass and lining}  
+\title [mode = title]{Numerical analysis of the rock deformation in twin tunnels with transverse galleries considering plasticity and time-dependent constitutive models}  
 
 % First author
 \author[1]{Quevedo, F. P. M.}[style = chinese, orcid = 0000-0003-4171-1696]
@@ -56,7 +55,7 @@
 
 % Second author
 \author[1]{Colombo, C. A. M. M.}[style=chinese, orcid=0000-0000-0000-0000]
-\ead{carlos.colombo@ufrgs.br}
+\ead{ca-colombo@hotmail.com}
 \ead[url]{http://lattes.cnpq.br/4919388217690564}
 
 % Third author
@@ -157,7 +156,7 @@
 
 % Here goes the abstract
 \begin{abstract}
-This paper aims to demonstrate the long-term implications of the rheological constitutive behavior of rock mass and concrete lining in the convergence profile of the twin tunnels with transverse galleries using a three-dimensional numerical analysis based on the finite-element method. Various constitutive models are considered for the rock mass, including elastic, elastoplastic, viscoplastic, and elastoplastic-viscoplastic. The definition of plasticity incorporates a Drucker-Prager yield surface and an associated flow rule without hardening or softening. Viscoplasticity is based on the Perzyna model, also using a Drucker-Prager flow surface. For the lining, elastic and viscoelastic constitutive models are adopted. The viscoelastic behavior is defined by a Generalized Kelvin rheological model, formulated based on the Solidification Theory of Bazand and Prassanann, with parameters given by CEB-FIP MC90 formulations. The deactivation-activation method simulate the excavation process. The numerical model is verified using comparisons with analytical solutions in elasticity and elastoplasticity for twin tunnels developed by other authors without the gallery. The mutual interaction between the longitudinal tunnels through parametric analyses is investigated, emphasizing the impact of the concrete lining stiffness on tunnel convergences. The interaction is particularly significant for longitudinal tunnels, especially when they are spaced at four radius. With a transverse gallery and considering the lining, we observe a highly localized influence in twin tunnels, extending up to four radius on each side of the gallery axis. With the parameters adopted, comparing the convergence of an isolated tunnel with the case of twin tunnels four radius apart with lining and viscous rock mass, differences of up to 10\% in the convergence of the crown in short-term and up to 3\% in long-term.
+Resorting a three-dimensional finite element analysis, this paper investigates the instantaneous and long-term implications induced by the time-dependent constitutive behavior of constituents on the convergence profile of twin tunnels linked with transverse galleries. Several constitutive models for rock mass mechanical behavior are examined at the material level, encompassing elastoplasticity, viscoplasticity, or coupled elastoplasticity-viscoplasticity frameworks. Plasticity state equations are based on a Drucker-Prager yield surface with an associated flow rule, while the viscoplasticity formulation relies on the Perzyna model with a Drucker-Prager flow surface. Tunnel lining behavior is modeled using either elastic or viscoelastic constitutive models. The viscoelastic behavior is described by a Generalized Kelvin rheological model based on Bazant and Prassanann's Solidification Theory, with model parameters derived from CEB-FIP MC90 formulations. From a computational viewpoint, the deactivation-activation method is employed to simulate the excavation process and lining installation. The accuracy of finite element predictions is assessed through comparisons with available analytical solutions formulated in a simplified setting for the twin tunnels' configuration. A parametric study delves into the mutual interaction induced by tunnels proximity, emphasizing the crucial role of concrete lining stiffness in twin tunnels' deformation. Numerical simulations indicate a highly localized influence of a transverse gallery on twin tunnels deformation, extending up to four radii from each side of the gallery axis. Finally, the paper investigates the effects of twin tunnels proximity and those induced by an interconnecting gallery on the instantaneous and long-term convergence of tunnels, contrasting these outcomes with the convergence of a single tunnel.
 
 
 %This paper aims to demonstrate the long-term implications of the rheological constitutive behavior of rock mass and concrete lining in the convergence of the intersection area of twin tunnel galleries using a three-dimensional numerical analysis based on the finite-element method. A Drucker-Prager-Perzyna elasto-plastic-viscoplastic constitutive law represents the rock mass and, for the lining, an elastic and viscoelastic law. The deactivation-activation methods simulate the excavation process. The numerical model is verified using comparisons with analytical solutions in elasticity and elastoplasticity for twin tunnels without a gallery developed by other authors. 
@@ -174,15 +173,16 @@ This paper aims to demonstrate the long-term implications of the rheological con
 % Research highlights
 \begin{highlights}
 	\item The stiffness of the lining restricting viscous effects in the interaction of tunnels
-	\item Interaction between the tunnels becomes significant at a span distance of 4 radius
+	\item Interaction between the tunnels becomes significant at a span distance of 4 radii
 	\item The viscous of the concrete lining can be important in the tunnel convergence
-	\item The effect of the gallery extends into the tunnel up to 4 radius from its axis
+	\item The effect of the gallery extends into the tunnel up to 4 radii from its axis
 	\item The proximity of the tunnels induces the ovalization of the tunnel wall 
 \end{highlights}
 
 % Keywords
 \begin{keywords}
-twin tunnels \sep transverse gallery \sep constitutive models \sep finite element method
+twin tunnels \sep transverse gallery \sep elastoplasticity-viscoplasticity coupling
+\sep viscoelastic lining \sep finite element method
 \end{keywords}
 
 \maketitle
@@ -357,7 +357,7 @@ The problem domain $\Omega$ consists of a twin deep tunnel with a cross gallery,
 	\label{domain}
 \end{figure}
 \FloatBarrier
-The spatial discretization of the domain $\Omega$ corresponds to a mesh with trilinear hexahedral elements (SOLID 185, 8 nodes), except in the gallery region, which uses higher-order tetrahedral elements (SOLID186, 10 nodes). Fig.~\ref{Mesh1} shows the mesh, geometric parameters, and boundary conditions for the domain problem. We considered front, side, and bottom symmetry to reduce computational cost. In this discretization, $d_1$ is the distance between longitudinal tunnel axes, $R_i$ longitudinal tunnel cross-section radius, $L_2$ total excavated length, $d_3$ domain height, $L_1$ length of the unexcavated region, $L_3$ transversal length of the domain, $L_p$ step length of the excavation process, $d_2$ position of the gallery along the longitudinal tunnel. In conjunction with boundary pressure $p$, we apply the initial stress condition $\stress_0 = -p\onell$ at all integration points to simulate the initial state of an undisturbed rock mass. 
+The spatial discretization of the domain $\Omega$ corresponds to a mesh with trilinear hexahedral elements (SOLID 185, 8 nodes), except in the gallery region, which uses higher-order tetrahedral elements (SOLID186, 10 nodes). Fig.~\ref{Mesh1} shows the mesh, geometric parameters, and boundary conditions for the domain problem. We considered front, side, and bottom symmetry to reduce computational cost. In this discretization, $d_1$ is the distance between longitudinal tunnel axes, $R_i$ radius of the longitudinal tunnel, $L_2$ total excavated length, $d_3$ domain height, $L_1$ length of the unexcavated region, $L_3$ transversal length of the domain, $L_p$ step length of the excavation process, $d_2$ position of the gallery along the longitudinal tunnel. In conjunction with boundary pressure $p$, we apply the initial stress condition $\stress_0 = -p\onell$ at all integration points to simulate the initial state of an undisturbed rock mass. 
 
 \begin{figure}[h!]
 	\centering
@@ -426,7 +426,7 @@ The construction process is simulated through the deactivating and activating me
 		\hline
 		\multicolumn{4}{c}{Longitudinal tunnels} \\
 		\hline
-		Longitudinal tunnel cross-section radius & $R_i$ & m & 1 \\
+		Radius of the longitudinal tunnel & $R_i$ & m & 1 \\
 		Thickness of the lining & $e$ & m & $0.1R_i$ \\
 		Step length of the excavation process & $L_p$ & m & $1/3R_i$ \\
 		Unlined length & $d_0$ & m & $2L_p$ \\
@@ -435,7 +435,7 @@ The construction process is simulated through the deactivating and activating me
 		\hline
 		\multicolumn{4}{c}{Gallery} \\
 		\hline
-		Gallery cross-section radius & $R_{i_1}$ & m & $2L_p$ \\
+		Radius of the gallery & $R_{i_1}$ & m & $2L_p$ \\
 		Thickness of the lining & $e_1$ & m & $0.1R_i$ \\
 		Step length of the excavation process \footnote{1} & $L_{p_1}$ & m & $0.3R_{i_1} ~0.3214R_{i_1} ~0.3387R_{i_1}$ \\
 		Unlined length & $d_{0_1}$ & m & $2L_{p_1}$ \\
@@ -459,7 +459,7 @@ During tunnel construction, we determine the initial time increment for solution
 After tunnel excavation, in time-dependent constitutive models, time continues to progress to capture long-term viscous effects. In this stage, each time step lasts 100 days, with an initial increment of 50 days. This increase, compared to the excavation time increments, is facilitated by the semi-implicit scheme in the viscoplasticity solution. The explicit scheme, as indicated in [\citenum{zienkiewicz1974visco}], requires a smaller time increment to the precision of the solution.
 
 
-\section{Comparision with analytical solutions in twin tunnel}\label{}
+\section{Comparision with analytical solutions}\label{}
 
 To examine mesh convergence and validate the numerical model, we compared the numerical solution with the elastic and elastoplastic analytical solution in the plane state of deformations for twin tunnels. Guo et al. [\citenum{GUO2021}] develop an elastic analytical solution for the stress field around twin circular tunnels with hydrostatic pressure using the complex variable and the superposition principle. The Fig.~\ref{GUO_FIG1} shows the tangential stress distribution around the tunnel's boundary in this analytical solution with the numerical solution considering  $R_i = 4$ m, $E = 500$ MPa, $\nu =$ 0.23, $d_1 = 2R_i$, $p = 2.2$ MPa.
 

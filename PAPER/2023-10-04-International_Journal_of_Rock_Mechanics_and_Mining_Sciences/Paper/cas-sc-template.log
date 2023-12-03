@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.12) (preloaded format=pdflatex 2021.1.7)  1 DEC 2023 19:10
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.12) (preloaded format=pdflatex 2021.1.7)  2 DEC 2023 21:44
 entering extended mode
 **./cas-sc-template.tex
 (cas-sc-template.tex
@@ -772,13 +772,18 @@ LaTeX Info: Redefining \nameref on input line 35.
 <Domain.pdf, id=3, 411.10066pt x 129.6322pt>
 File: Domain.pdf Graphic file (type pdf)
 <use Domain.pdf>
-Package pdftex.def Info: Domain.pdf  used on input line 171.
+Package pdftex.def Info: Domain.pdf  used on input line 170.
 (pdftex.def)             Requested size: 411.09966pt x 129.63188pt.
 LaTeX Font Info:    Trying to load font information for TS1+stix on input line 
-176.
+175.
 (C:\Users\fel_q\AppData\Roaming\MiKTeX\tex/latex/stix\ts1stix.fd
 File: ts1stix.fd 2015/04/17 v1.1.2-latex STIX TS1 font definitions
-) [0
+)
+Underfull \hbox (badness 8113) in paragraph at lines 184--185
+[]\T1/stix/m/n/8 elastoplasticity-viscoplasticity cou-
+ []
+
+[0
 
 {C:/Users/fel_q/AppData/Local/MiKTeX/pdftex/config/pdftex.map} <./Domain.pdf>]p
 dfTeX warning (ext4): destination with the same identifier (name{page.0}) has b
@@ -879,7 +884,7 @@ Package pdftex.def Info: thumbnails/cas-url.jpeg  used on input line 188.
 Package hyperref Warning: Ignoring empty anchor on input line 188.
 
 LaTeX Font Info:    Trying to load font information for T1+cmss on input line 1
-97.
+98.
 ("C:\Program Files\MiKTeX\tex/latex/base\t1cmss.fd"
 File: t1cmss.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 ) [1 <./thumbnails/cas-email.jpeg> <./thumbnails/cas-url.jpeg>] [2]
@@ -893,8 +898,8 @@ Package pdftex.def Info: Rheological representation.pdf  used on input line 279
  has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.296 \begin{equation}
-                       <./Rheological representation.pdf>]
+l.303 \end{equation}
+                     <./Rheological representation.pdf>]
 <Elastic-plastic-viscoplastic domains.pdf, id=141, 341.08398pt x 213.32077pt>
 File: Elastic-plastic-viscoplastic domains.pdf Graphic file (type pdf)
 <use Elastic-plastic-viscoplastic domains.pdf>
@@ -905,9 +910,8 @@ t line 317.
  has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.328 I
-       n this model, the constitutive relationship between stress and strain is
- <./Elastic-plastic-viscoplastic domains.pdf>]
+l.331 \end{equation}
+                     <./Elastic-plastic-viscoplastic domains.pdf>]
 File: Domain.pdf Graphic file (type pdf)
 <use Domain.pdf>
 Package pdftex.def Info: Domain.pdf  used on input line 355.
@@ -1336,11 +1340,11 @@ LaTeX Warning: There were multiply-defined labels.
 Here is how much of TeX's memory you used:
  13546 strings out of 479697
  197808 string characters out of 2877010
- 503894 words of memory out of 3000000
+ 504011 words of memory out of 3000000
  30219 multiletter control sequences out of 15000+200000
  513090 words of font info for 177 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 80i,17n,85p,1940b,485s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 80i,17n,85p,1916b,485s stack positions out of 5000i,500n,10000p,200000b,50000s
 pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exi
 st, replaced by a fixed one
 
@@ -1363,7 +1367,7 @@ x/stix-mathrm-bold.pfb><C:/Users/fel_q/AppData/Roaming/MiKTeX/fonts/type1/publi
 c/stix/stix-mathrm.pfb><C:/Users/fel_q/AppData/Roaming/MiKTeX/fonts/type1/publi
 c/stix/stix-mathscr.pfb><C:/Users/fel_q/AppData/Roaming/MiKTeX/fonts/type1/publ
 ic/stix/stix-mathsf.pfb>
-Output written on cas-sc-template.pdf (30 pages, 5795638 bytes).
+Output written on cas-sc-template.pdf (30 pages, 5796441 bytes).
 PDF statistics:
  2970 PDF objects out of 2984 (max. 8388607)
  107 named destinations out of 1000 (max. 500000)
