@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.12) (preloaded format=pdflatex 2021.1.7)  2 DEC 2023 21:44
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.12) (preloaded format=pdflatex 2021.1.7)  3 DEC 2023 00:00
 entering extended mode
 **./cas-sc-template.tex
 (cas-sc-template.tex
@@ -618,19 +618,11 @@ Package: natbib 2010/09/13 8.31b (PWD, AO)
 LaTeX Info: Redefining \cite on input line 694.
 \c@NAT@ctr=\count320
 )
-(C:\Users\fel_q\AppData\Roaming\MiKTeX\tex/latex/float\float.sty
-Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count321
-\float@exts=\toks31
-\float@box=\box61
-\@float@everytoks=\toks32
-\@floatcapt=\box62
-)
 (C:\Users\fel_q\AppData\Roaming\MiKTeX\tex/latex/placeins\placeins.sty
 Package: placeins 2005/04/18  v 2.2
 )
 LaTeX Font Info:    Trying to load font information for T1+stix on input line 3
-5.
+4.
 
 (C:\Users\fel_q\AppData\Roaming\MiKTeX\tex/latex/stix\t1stix.fd
 File: t1stix.fd 2015/04/17 v1.1.2-latex STIX T1 font definitions
@@ -660,57 +652,57 @@ LaTeX Warning: Label `' multiply defined.
 )
 \openout1 = `cas-sc-template.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for LS1/stix/m/n on input line 35.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for LS1/stix/m/n on input line 34.
 LaTeX Font Info:    Trying to load font information for LS1+stix on input line 
-35.
+34.
  (C:\Users\fel_q\AppData\Roaming\MiKTeX\tex/latex/stix\ls1stix.fd
 File: ls1stix.fd 2015/04/17 v1.1.2-latex STIX LS1 font definitions
 )
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for LS2/stix/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for LS2/stix/m/n on input line 34.
 LaTeX Font Info:    Trying to load font information for LS2+stix on input line 
-35.
+34.
 
 (C:\Users\fel_q\AppData\Roaming\MiKTeX\tex/latex/stix\ls2stix.fd
 File: ls2stix.fd 2015/04/17 v1.1.2-latex STIX LS2 font definitions
 )
-LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    ... okay on input line 34.
 
 ("C:\Program Files\MiKTeX\tex/context/base/mkii\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count322
+\scratchcounter=\count321
 \scratchdimen=\dimen262
-\scratchbox=\box63
-\nofMPsegments=\count323
-\nofMParguments=\count324
-\everyMPshowfont=\toks33
-\MPscratchCnt=\count325
+\scratchbox=\box61
+\nofMPsegments=\count322
+\nofMParguments=\count323
+\everyMPshowfont=\toks31
+\MPscratchCnt=\count324
 \MPscratchDim=\dimen263
-\MPnumerator=\count326
-\makeMPintoPDFobject=\count327
-\everyMPtoPDFconversion=\toks34
+\MPnumerator=\count325
+\makeMPintoPDFobject=\count326
+\everyMPtoPDFconversion=\toks32
 ) ("C:\Program Files\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty"
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 85.
 )
-Package hyperref Info: Link coloring ON on input line 35.
+Package hyperref Info: Link coloring ON on input line 34.
 
 ("C:\Program Files\MiKTeX\tex/latex/hyperref\nameref.sty"
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
@@ -722,11 +714,11 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 g.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count328
+\c@section@level=\count327
 )
-LaTeX Info: Redefining \ref on input line 35.
-LaTeX Info: Redefining \pageref on input line 35.
-LaTeX Info: Redefining \nameref on input line 35.
+LaTeX Info: Redefining \ref on input line 34.
+LaTeX Info: Redefining \pageref on input line 34.
+LaTeX Info: Redefining \nameref on input line 34.
  (cas-sc-template.out) (cas-sc-template.out)
 \@outlinefile=\write3
 \openout3 = `cas-sc-template.out'.
@@ -769,274 +761,216 @@ LaTeX Info: Redefining \nameref on input line 35.
 \verbatim@out=\write4
 \openout4 = `cas-sc-template.abs'.
 
-<Domain.pdf, id=3, 411.10066pt x 129.6322pt>
-File: Domain.pdf Graphic file (type pdf)
-<use Domain.pdf>
-Package pdftex.def Info: Domain.pdf  used on input line 170.
-(pdftex.def)             Requested size: 411.09966pt x 129.63188pt.
+<graphical_abstract.pdf, id=3, 404.89905pt x 299.4921pt>
+File: graphical_abstract.pdf Graphic file (type pdf)
+<use graphical_abstract.pdf>
+Package pdftex.def Info: graphical_abstract.pdf  used on input line 109.
+(pdftex.def)             Requested size: 404.89804pt x 299.49136pt.
 LaTeX Font Info:    Trying to load font information for TS1+stix on input line 
-175.
+114.
 (C:\Users\fel_q\AppData\Roaming\MiKTeX\tex/latex/stix\ts1stix.fd
 File: ts1stix.fd 2015/04/17 v1.1.2-latex STIX TS1 font definitions
 )
-Underfull \hbox (badness 8113) in paragraph at lines 184--185
+Underfull \hbox (badness 8113) in paragraph at lines 123--124
 []\T1/stix/m/n/8 elastoplasticity-viscoplasticity cou-
  []
 
 [0
 
-{C:/Users/fel_q/AppData/Local/MiKTeX/pdftex/config/pdftex.map} <./Domain.pdf>]p
-dfTeX warning (ext4): destination with the same identifier (name{page.0}) has b
-een already used, duplicate ignored
+{C:/Users/fel_q/AppData/Local/MiKTeX/pdftex/config/pdftex.map} <./graphical_abs
+tract.pdf>]pdfTeX warning (ext4): destination with the same identifier (name{pa
+ge.0}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.188 \maketitle
+l.127 \maketitle
                  [0]
 LaTeX Font Info:    Trying to load font information for LS1+stixscr on input li
-ne 188.
+ne 127.
 
 (C:\Users\fel_q\AppData\Roaming\MiKTeX\tex/latex/stix\ls1stixscr.fd
 File: ls1stixscr.fd 2015/04/17 v1.1.2-latex STIX script LS1 font definitions
 )
 LaTeX Font Info:    Trying to load font information for LS2+stixex on input lin
-e 188.
+e 127.
 
 (C:\Users\fel_q\AppData\Roaming\MiKTeX\tex/latex/stix\ls2stixex.fd
 File: ls2stixex.fd 2015/04/17 v1.1.2-latex STIX extentions LS2 font definitions
 
 )
-LaTeX Font Info:    Trying to load font information for U+msa on input line 188
+LaTeX Font Info:    Trying to load font information for U+msa on input line 127
 .
 
 ("C:\Program Files\MiKTeX\tex/latex/amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 188
+LaTeX Font Info:    Trying to load font information for U+msb on input line 127
 .
 
 ("C:\Program Files\MiKTeX\tex/latex/amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Trying to load font information for LS1+stixfrak on input l
-ine 188.
+ine 127.
 
 (C:\Users\fel_q\AppData\Roaming\MiKTeX\tex/latex/stix\ls1stixfrak.fd
 File: ls1stixfrak.fd 2015/04/17 v1.1.2-latex STIX fraktur LS1 font definitions
 )
 LaTeX Font Info:    Trying to load font information for LS1+stixbb on input lin
-e 188.
+e 127.
 
 (C:\Users\fel_q\AppData\Roaming\MiKTeX\tex/latex/stix\ls1stixbb.fd
 File: ls1stixbb.fd 2015/04/17 v1.1.2-latex STIX blackboard LS1 font definitions
 
 )
 LaTeX Font Info:    Trying to load font information for LS2+stixcal on input li
-ne 188.
+ne 127.
 
 (C:\Users\fel_q\AppData\Roaming\MiKTeX\tex/latex/stix\ls2stixcal.fd
 File: ls2stixcal.fd 2015/04/17 v1.1.2-latex STIX calligraphic LS2 font definiti
 ons
 )
 LaTeX Font Info:    Trying to load font information for LS1+stixsf on input lin
-e 188.
+e 127.
 
 (C:\Users\fel_q\AppData\Roaming\MiKTeX\tex/latex/stix\ls1stixsf.fd
 File: ls1stixsf.fd 2015/04/17 v1.1.2-latex STIX sans-serif LS1 font definitions
 
 )
 LaTeX Font Info:    Trying to load font information for LS2+stixtt on input lin
-e 188.
+e 127.
 
 (C:\Users\fel_q\AppData\Roaming\MiKTeX\tex/latex/stix\ls2stixtt.fd
 File: ls2stixtt.fd 2015/04/17 v1.1.2-latex STIX typewriter LS2 font definitions
 
 )
-Overfull \hbox (117.0831pt too wide) detected at line 188
+Overfull \hbox (117.0831pt too wide) detected at line 127
 []
  []
 
 (cas-sc-template.abs)
 
-Package hyperref Warning: Ignoring empty anchor on input line 188.
+Package hyperref Warning: Ignoring empty anchor on input line 127.
 
 
-Package hyperref Warning: Ignoring empty anchor on input line 188.
+Package hyperref Warning: Ignoring empty anchor on input line 127.
 
-<thumbnails/cas-email.jpeg, id=61, 225.84375pt x 225.84375pt>
+<thumbnails/cas-email.jpeg, id=44, 225.84375pt x 225.84375pt>
 File: thumbnails/cas-email.jpeg Graphic file (type jpg)
 <use thumbnails/cas-email.jpeg>
-Package pdftex.def Info: thumbnails/cas-email.jpeg  used on input line 188.
+Package pdftex.def Info: thumbnails/cas-email.jpeg  used on input line 127.
 (pdftex.def)             Requested size: 7.99838pt x 8.0pt.
 LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 1
-88.
+27.
 ("C:\Program Files\MiKTeX\tex/latex/base\t1cmtt.fd"
 File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
 
-Package hyperref Warning: Ignoring empty anchor on input line 188.
+Package hyperref Warning: Ignoring empty anchor on input line 127.
 
-<thumbnails/cas-url.jpeg, id=62, 225.84375pt x 225.84375pt>
+<thumbnails/cas-url.jpeg, id=45, 225.84375pt x 225.84375pt>
 File: thumbnails/cas-url.jpeg Graphic file (type jpg)
 <use thumbnails/cas-url.jpeg>
-Package pdftex.def Info: thumbnails/cas-url.jpeg  used on input line 188.
+Package pdftex.def Info: thumbnails/cas-url.jpeg  used on input line 127.
 (pdftex.def)             Requested size: 7.99838pt x 8.0pt.
 
-Package hyperref Warning: Ignoring empty anchor on input line 188.
+Package hyperref Warning: Ignoring empty anchor on input line 127.
 
 LaTeX Font Info:    Trying to load font information for T1+cmss on input line 1
-98.
+37.
 ("C:\Program Files\MiKTeX\tex/latex/base\t1cmss.fd"
 File: t1cmss.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 ) [1 <./thumbnails/cas-email.jpeg> <./thumbnails/cas-url.jpeg>] [2]
-<Rheological representation.pdf, id=113, 327.8541pt x 170.6047pt>
+<Rheological representation.pdf, id=96, 327.8541pt x 170.6047pt>
 File: Rheological representation.pdf Graphic file (type pdf)
 <use Rheological representation.pdf>
-Package pdftex.def Info: Rheological representation.pdf  used on input line 279
+Package pdftex.def Info: Rheological representation.pdf  used on input line 180
 .
 (pdftex.def)             Requested size: 327.85329pt x 170.60428pt.
- [3pdfTeX warning (ext4): destination with the same identifier (name{figure.1})
- has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  
-l.303 \end{equation}
-                     <./Rheological representation.pdf>]
-<Elastic-plastic-viscoplastic domains.pdf, id=141, 341.08398pt x 213.32077pt>
+ [3 <./Rheological representation.pdf>]
+<Elastic-plastic-viscoplastic domains.pdf, id=124, 341.08398pt x 213.32077pt>
 File: Elastic-plastic-viscoplastic domains.pdf Graphic file (type pdf)
 <use Elastic-plastic-viscoplastic domains.pdf>
 Package pdftex.def Info: Elastic-plastic-viscoplastic domains.pdf  used on inpu
-t line 317.
+t line 218.
 (pdftex.def)             Requested size: 272.86755pt x 170.65683pt.
- [4pdfTeX warning (ext4): destination with the same identifier (name{figure.2})
- has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  
-l.331 \end{equation}
-                     <./Elastic-plastic-viscoplastic domains.pdf>]
+
+[4 <./Elastic-plastic-viscoplastic domains.pdf>]
+<Domain.pdf, id=186, 411.10066pt x 129.6322pt>
 File: Domain.pdf Graphic file (type pdf)
 <use Domain.pdf>
-Package pdftex.def Info: Domain.pdf  used on input line 355.
+Package pdftex.def Info: Domain.pdf  used on input line 254.
 (pdftex.def)             Requested size: 411.09966pt x 129.63188pt.
-<Mesh1.pdf, id=204, 677.70567pt x 531.0825pt>
+<Mesh1.pdf, id=188, 677.70567pt x 531.0825pt>
 File: Mesh1.pdf Graphic file (type pdf)
 <use Mesh1.pdf>
-Package pdftex.def Info: Mesh1.pdf  used on input line 364.
+Package pdftex.def Info: Mesh1.pdf  used on input line 262.
 (pdftex.def)             Requested size: 338.852pt x 265.54059pt.
- [5pdfTeX warning (ext4): destination with the same identifier (name{figure.3})
- has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  
-l.367 \end{figure}
-                  ]
-<Mesh2.pdf, id=223, 287.37585pt x 205.54703pt>
+<Mesh2.pdf, id=190, 287.37585pt x 205.54703pt>
 File: Mesh2.pdf Graphic file (type pdf)
 <use Mesh2.pdf>
-Package pdftex.def Info: Mesh2.pdf  used on input line 373.
+Package pdftex.def Info: Mesh2.pdf  used on input line 269.
 (pdftex.def)             Requested size: 229.90099pt x 164.43782pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[6pdfTeX warning (ext4): destination with the same identifier (name{figure.4}) 
-has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  
-l.377 \FloatBarrier
-                    <./Mesh1.pdf>]
-<Mesh3.pdf, id=241, 545.45775pt x 272.95102pt>
+ [5 <./Domain.pdf>]
+<Mesh3.pdf, id=257, 545.45775pt x 272.95102pt>
 File: Mesh3.pdf Graphic file (type pdf)
 <use Mesh3.pdf>
-Package pdftex.def Info: Mesh3.pdf  used on input line 381.
+Package pdftex.def Info: Mesh3.pdf  used on input line 277.
 (pdftex.def)             Requested size: 436.36678pt x 218.3611pt.
-<Mesh4.pdf, id=242, 487.13475pt x 437.75934pt>
+<Mesh4.pdf, id=258, 487.13475pt x 437.75934pt>
 File: Mesh4.pdf Graphic file (type pdf)
 <use Mesh4.pdf>
-Package pdftex.def Info: Mesh4.pdf  used on input line 387.
+Package pdftex.def Info: Mesh4.pdf  used on input line 283.
 (pdftex.def)             Requested size: 292.2831pt x 262.65762pt.
-<Mesh5.pdf, id=243, 447.82513pt x 433.35599pt>
+<Mesh5.pdf, id=259, 447.82513pt x 433.35599pt>
 File: Mesh5.pdf Graphic file (type pdf)
 <use Mesh5.pdf>
-Package pdftex.def Info: Mesh5.pdf  used on input line 393.
+Package pdftex.def Info: Mesh5.pdf  used on input line 289.
 (pdftex.def)             Requested size: 268.69714pt x 260.0156pt.
+ [6 <./Mesh1.pdf> <./Mesh2.pdf
 
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[7pdfTeX warning (ext4): destination with the same identifier (name{figure.5}) 
-has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  
-l.397 \FloatBarrier
-                   pdfTeX warning (ext4): destination with the same identifier 
-(name{figure.6}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  
-l.397 \FloatBarrier
-                    <./Mesh2.pdf> <./Mesh3.pdf
-
-pdfTeX warning: pdflatex.exe (file ./Mesh3.pdf): PDF inclusion: multiple pdfs w
+pdfTeX warning: pdflatex.exe (file ./Mesh2.pdf): PDF inclusion: multiple pdfs w
 ith page group included in a single page
 >]
-<Mesh6.pdf, id=284, 459.33456pt x 498.24783pt>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[7 <./Mesh3.pdf>]
+<Mesh6.pdf, id=314, 459.33456pt x 498.24783pt>
 File: Mesh6.pdf Graphic file (type pdf)
 <use Mesh6.pdf>
-Package pdftex.def Info: Mesh6.pdf  used on input line 401.
+Package pdftex.def Info: Mesh6.pdf  used on input line 297.
 (pdftex.def)             Requested size: 275.60286pt x 298.951pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[8pdfTeX warning (ext4): destination with the same identifier (name{figure.7}) 
-has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  
-l.405 \FloatBarrier
-                   pdfTeX warning (ext4): destination with the same identifier 
-(name{figure.8}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  
-l.405 \FloatBarrier
-                    <./Mesh4.pdf> <./Mesh5.pdf
+[8 <./Mesh4.pdf> <./Mesh5.pdf
 
 pdfTeX warning: pdflatex.exe (file ./Mesh5.pdf): PDF inclusion: multiple pdfs w
 ith page group included in a single page
 >]
-<Diagram of excavations.pdf, id=325, 326.31583pt x 150.96735pt>
+<Diagram of excavations.pdf, id=355, 326.31583pt x 150.96735pt>
 File: Diagram of excavations.pdf Graphic file (type pdf)
 <use Diagram of excavations.pdf>
-Package pdftex.def Info: Diagram of excavations.pdf  used on input line 409.
+Package pdftex.def Info: Diagram of excavations.pdf  used on input line 305.
 (pdftex.def)             Requested size: 424.21051pt x 196.25752pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[9pdfTeX warning (ext4): destination with the same identifier (name{figure.9}) 
-has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  
-l.413 \FloatBarrier
-                    <./Mesh6.pdf>] [10pdfTeX warning (ext4): destination with t
-he same identifier (name{figure.10}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  
-l.456 \FloatBarrier
-                   pdfTeX warning (ext4): destination with the same identifier 
-(name{table.1}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  
-l.456 \FloatBarrier
-                    <./Diagram of excavations.pdf>]
-<GUO_FIG1.pdf, id=372, 282.92361pt x 174.32298pt>
+[9 <./Mesh6.pdf>] [10 <./Diagram of excavations.pdf>]
+<GUO_FIG1.pdf, id=402, 282.92361pt x 174.32298pt>
 File: GUO_FIG1.pdf Graphic file (type pdf)
 <use GUO_FIG1.pdf>
-Package pdftex.def Info: GUO_FIG1.pdf  used on input line 468.
+Package pdftex.def Info: GUO_FIG1.pdf  used on input line 362.
 (pdftex.def)             Requested size: 282.92291pt x 174.32254pt.
-<MA_FIG1.pdf, id=375, 661.36618pt x 395.6265pt>
+<MA_FIG1.pdf, id=405, 661.36618pt x 395.6265pt>
 File: MA_FIG1.pdf Graphic file (type pdf)
 <use MA_FIG1.pdf>
-Package pdftex.def Info: MA_FIG1.pdf  used on input line 478.
+Package pdftex.def Info: MA_FIG1.pdf  used on input line 371.
 (pdftex.def)             Requested size: 462.95317pt x 276.93665pt.
 
 
@@ -1044,291 +978,184 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [11
 
-pdfTeX warning (ext4): destination with the same identifier (name{figure.11}) h
-as been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  
-l.482 \FloatBarrier
-                    <./GUO_FIG1.pdf>]
-<MA_FIG2.pdf, id=409, 328.27051pt x 319.20543pt>
+ <./GUO_FIG1.pdf>]
+<MA_FIG2.pdf, id=439, 328.27051pt x 319.20543pt>
 File: MA_FIG2.pdf Graphic file (type pdf)
 <use MA_FIG2.pdf>
-Package pdftex.def Info: MA_FIG2.pdf  used on input line 488.
+Package pdftex.def Info: MA_FIG2.pdf  used on input line 381.
 (pdftex.def)             Requested size: 328.2697pt x 319.20464pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[12pdfTeX warning (ext4): destination with the same identifier (name{figure.12}
-) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  
-l.492 \FloatBarrier
-                    <./MA_FIG1.pdf>] [13pdfTeX warning (ext4): destination with
- the same identifier (name{figure.13}) has been already used, duplicate ignored
-
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  
-l.541 \FloatBarrier
-                    <./MA_FIG2.pdf>]
-<Ovalization effect and monitoring point.pdf, id=2502, 348.60286pt x 411.73349p
+[12 <./MA_FIG1.pdf>] [13 <./MA_FIG2.pdf>]
+<Ovalization effect and monitoring point.pdf, id=2532, 348.60286pt x 411.73349p
 t>
 File: Ovalization effect and monitoring point.pdf Graphic file (type pdf)
 <use Ovalization effect and monitoring point.pdf>
 Package pdftex.def Info: Ovalization effect and monitoring point.pdf  used on i
-nput line 556.
+nput line 443.
 (pdftex.def)             Requested size: 209.16333pt x 247.04199pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[14pdfTeX warning (ext4): destination with the same identifier (name{table.2}) 
-has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  
-l.560 \FloatBarrier
-                   ]
-<zones.pdf, id=2510, 521.77295pt x 320.23767pt>
+[14]
+<zones.pdf, id=2540, 521.77295pt x 320.23767pt>
 File: zones.pdf Graphic file (type pdf)
 <use zones.pdf>
-Package pdftex.def Info: zones.pdf  used on input line 565.
+Package pdftex.def Info: zones.pdf  used on input line 450.
 (pdftex.def)             Requested size: 313.06618pt x 192.14407pt.
- [15pdfTeX warning (ext4): destination with the same identifier (name{figure.14
-}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  
-l.599 \FloatBarrier
-                   pdfTeX warning (ext4): destination with the same identifier 
-(name{figure.15}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  
-l.599 \FloatBarrier
-                    <./Ovalization effect and monitoring point.pdf> <./zones.pd
-f
+ [15 <./Ovalization effect and monitoring point.pdf> <./zones.pdf
 
 pdfTeX warning: pdflatex.exe (file ./zones.pdf): PDF inclusion: multiple pdfs w
 ith page group included in a single page
 >]
-<Convergence Profiles - WG_ST_LT - $d_1=16R_i$.pdf, id=2614, 840.13875pt x 487.
+<Convergence Profiles - WG_ST_LT - $d_1=16R_i$.pdf, id=2644, 840.13875pt x 487.
 22025pt>
 File: Convergence Profiles - WG_ST_LT - $d_1=16R_i$.pdf Graphic file (type pdf)
 
 <use Convergence Profiles - WG_ST_LT - $d_1=16R_i$.pdf>
 Package pdftex.def Info: Convergence Profiles - WG_ST_LT - $d_1=16R_i$.pdf  use
-d on input line 605.
+d on input line 486.
 (pdftex.def)             Requested size: 420.06834pt x 243.60953pt.
-<Convergence Profiles - WG_ST_LT - $d_1=8R_i$.pdf, id=2615, 838.93423pt x 487.2
+<Convergence Profiles - WG_ST_LT - $d_1=8R_i$.pdf, id=2645, 838.93423pt x 487.2
 2025pt>
 File: Convergence Profiles - WG_ST_LT - $d_1=8R_i$.pdf Graphic file (type pdf)
 <use Convergence Profiles - WG_ST_LT - $d_1=8R_i$.pdf>
 Package pdftex.def Info: Convergence Profiles - WG_ST_LT - $d_1=8R_i$.pdf  used
- on input line 613.
+ on input line 493.
 (pdftex.def)             Requested size: 419.4661pt x 243.60953pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[16pdfTeX warning (ext4): destination with the same identifier (name{table.3}) 
-has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  
-l.617 \FloatBarrier
-                   pdfTeX warning (ext4): destination with the same identifier 
-(name{figure.16}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  
-l.617 \FloatBarrier
-                    <./Convergence Profiles - WG_ST_LT - $d_1=16R_i$.pdf>]
-<Convergence Profiles - WG_ST_LT - $d_1=4R_i$.pdf, id=2633, 837.1275pt x 485.41
+[16 <./Convergence Profiles - WG_ST_LT - $d_1=16R_i$.pdf>]
+<Convergence Profiles - WG_ST_LT - $d_1=4R_i$.pdf, id=2663, 837.1275pt x 485.41
 351pt>
 File: Convergence Profiles - WG_ST_LT - $d_1=4R_i$.pdf Graphic file (type pdf)
 <use Convergence Profiles - WG_ST_LT - $d_1=4R_i$.pdf>
 Package pdftex.def Info: Convergence Profiles - WG_ST_LT - $d_1=4R_i$.pdf  used
- on input line 621.
+ on input line 500.
 (pdftex.def)             Requested size: 418.56273pt x 242.70616pt.
-
-[17pdfTeX warning (ext4): destination with the same identifier (name{figure.17}
-) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  
-l.630 
-      pdfTeX warning (ext4): destination with the same identifier (name{figure.
-18}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  
-l.630 
-       <./Convergence Profiles - WG_ST_LT - $d_1=8R_i$.pdf> <./Convergence Prof
-iles - WG_ST_LT - $d_1=4R_i$.pdf
+ [17 <./Convergence Profiles - WG_ST_LT - $d_1=8R_i$.pdf> <./Convergence Profil
+es - WG_ST_LT - $d_1=4R_i$.pdf
 
 pdfTeX warning: pdflatex.exe (file ./Convergence Profiles - WG_ST_LT - $d_1=4R_
 i$.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 
 >]
-<ovalization.pdf, id=2659, 748.71045pt x 832.81702pt>
+<ovalization.pdf, id=2689, 748.71045pt x 832.81702pt>
 File: ovalization.pdf Graphic file (type pdf)
 <use ovalization.pdf>
-Package pdftex.def Info: ovalization.pdf  used on input line 639.
+Package pdftex.def Info: ovalization.pdf  used on input line 516.
 (pdftex.def)             Requested size: 374.35431pt x 416.40749pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [18]
-<Convergence Profiles - VP_EPVP_EL_VEL_WG_LT.pdf, id=2666, 633.56702pt x 513.71
+<Convergence Profiles - VP_EPVP_EL_VEL_WG_LT.pdf, id=2696, 633.56702pt x 513.71
 927pt>
 File: Convergence Profiles - VP_EPVP_EL_VEL_WG_LT.pdf Graphic file (type pdf)
 <use Convergence Profiles - VP_EPVP_EL_VEL_WG_LT.pdf>
 Package pdftex.def Info: Convergence Profiles - VP_EPVP_EL_VEL_WG_LT.pdf  used 
-on input line 649.
+on input line 524.
 (pdftex.def)             Requested size: 380.14314pt x 308.23393pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[19pdfTeX warning (ext4): destination with the same identifier (name{figure.19}
-) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  
-l.653 \FloatBarrier
-                    <./ovalization.pdf>]
-<Convergence Profiles - EP_EL_EPVP_VEL_WG_ST_LT.pdf, id=2742, 634.16924pt x 513
+[19 <./ovalization.pdf>]
+<Convergence Profiles - EP_EL_EPVP_VEL_WG_ST_LT.pdf, id=2772, 634.16924pt x 513
 .11699pt>
 File: Convergence Profiles - EP_EL_EPVP_VEL_WG_ST_LT.pdf Graphic file (type pdf
 )
 <use Convergence Profiles - EP_EL_EPVP_VEL_WG_ST_LT.pdf>
 Package pdftex.def Info: Convergence Profiles - EP_EL_EPVP_VEL_WG_ST_LT.pdf  us
-ed on input line 663.
+ed on input line 536.
 (pdftex.def)             Requested size: 380.50447pt x 307.87257pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[20pdfTeX warning (ext4): destination with the same identifier (name{figure.20}
-) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  
-l.667 \FloatBarrier
-                    <./Convergence Profiles - VP_EPVP_EL_VEL_WG_LT.pdf>]
-<Convergence Profiles - EP_d1_16Ri.pdf, id=2760, 846.76353pt x 514.92375pt>
+[20 <./Convergence Profiles - VP_EPVP_EL_VEL_WG_LT.pdf>]
+<Convergence Profiles - EP_d1_16Ri.pdf, id=2790, 846.76353pt x 514.92375pt>
 File: Convergence Profiles - EP_d1_16Ri.pdf Graphic file (type pdf)
 <use Convergence Profiles - EP_d1_16Ri.pdf>
 Package pdftex.def Info: Convergence Profiles - EP_d1_16Ri.pdf  used on input l
-ine 675.
+ine 546.
 (pdftex.def)             Requested size: 423.38072pt x 257.46124pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[21pdfTeX warning (ext4): destination with the same identifier (name{figure.21}
-) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  
-l.679 \FloatBarrier
-                    <./Convergence Profiles - EP_EL_EPVP_VEL_WG_ST_LT.pdf>]
-<Convergence Profiles - EP_d1_4Ri.pdf, id=2777, 846.76353pt x 512.51476pt>
+[21 <./Convergence Profiles - EP_EL_EPVP_VEL_WG_ST_LT.pdf>]
+<Convergence Profiles - EP_d1_4Ri.pdf, id=2807, 846.76353pt x 512.51476pt>
 File: Convergence Profiles - EP_d1_4Ri.pdf Graphic file (type pdf)
 <use Convergence Profiles - EP_d1_4Ri.pdf>
 Package pdftex.def Info: Convergence Profiles - EP_d1_4Ri.pdf  used on input li
-ne 683.
+ne 553.
 (pdftex.def)             Requested size: 423.38072pt x 256.25674pt.
-
-[22pdfTeX warning (ext4): destination with the same identifier (name{figure.22}
-) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  
-l.691 W
-       hen $d_1 = 16R_i$ between the twin tunnels (blue and yellow lines), t...
-pdfTeX warning (ext4): destination with the same identifier (name{figure.23}) h
-as been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  
-l.691 W
-       hen $d_1 = 16R_i$ between the twin tunnels (blue and yellow lines), t...
- <./Convergence Profiles - EP_d1_16Ri.pdf> <./Convergence Profiles - EP_d1_4Ri.
-pdf
+ [22 <./Convergence Profiles - EP_d1_16Ri.pdf> <./Convergence Profiles - EP_d1_
+4Ri.pdf
 
 pdfTeX warning: pdflatex.exe (file ./Convergence Profiles - EP_d1_4Ri.pdf): PDF
  inclusion: multiple pdfs with page group included in a single page
 >]
-<Convergence Profiles - EPVP_VEL_d1_16Ri.pdf, id=2803, 902.17049pt x 505.28775p
+<Convergence Profiles - EPVP_VEL_d1_16Ri.pdf, id=2833, 902.17049pt x 505.28775p
 t>
 File: Convergence Profiles - EPVP_VEL_d1_16Ri.pdf Graphic file (type pdf)
 <use Convergence Profiles - EPVP_VEL_d1_16Ri.pdf>
 Package pdftex.def Info: Convergence Profiles - EPVP_VEL_d1_16Ri.pdf  used on i
-nput line 701.
+nput line 569.
 (pdftex.def)             Requested size: 451.08414pt x 252.64325pt.
-<Convergence Profiles - EPVP_VEL_d1_4Ri.pdf, id=2804, 901.56827pt x 504.68552pt
+<Convergence Profiles - EPVP_VEL_d1_4Ri.pdf, id=2834, 901.56827pt x 504.68552pt
 >
 File: Convergence Profiles - EPVP_VEL_d1_4Ri.pdf Graphic file (type pdf)
 <use Convergence Profiles - EPVP_VEL_d1_4Ri.pdf>
 Package pdftex.def Info: Convergence Profiles - EPVP_VEL_d1_4Ri.pdf  used on in
-put line 709.
+put line 576.
 (pdftex.def)             Requested size: 450.78304pt x 252.34213pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[23pdfTeX warning (ext4): destination with the same identifier (name{figure.24}
-) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  
-l.713 \FloatBarrier
-                    <./Convergence Profiles - EPVP_VEL_d1_16Ri.pdf>]
-<Convergence Profiles - EPVP_EL_VEL_d1_16Ri.pdf, id=2824, 902.17049pt x 514.321
+[23 <./Convergence Profiles - EPVP_VEL_d1_16Ri.pdf>]
+<Convergence Profiles - EPVP_EL_VEL_d1_16Ri.pdf, id=2854, 902.17049pt x 514.321
 52pt>
 File: Convergence Profiles - EPVP_EL_VEL_d1_16Ri.pdf Graphic file (type pdf)
 <use Convergence Profiles - EPVP_EL_VEL_d1_16Ri.pdf>
 Package pdftex.def Info: Convergence Profiles - EPVP_EL_VEL_d1_16Ri.pdf  used o
-n input line 725.
+n input line 590.
 (pdftex.def)             Requested size: 451.08414pt x 257.16013pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[24pdfTeX warning (ext4): destination with the same identifier (name{figure.25}
-) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  
-l.729 \FloatBarrier
-                    <./Convergence Profiles - EPVP_VEL_d1_4Ri.pdf>]
-<Convergence Profiles - EPVP_EL_VEL_d1_4Ri.pdf, id=2841, 901.56827pt x 514.3215
+[24 <./Convergence Profiles - EPVP_VEL_d1_4Ri.pdf>]
+<Convergence Profiles - EPVP_EL_VEL_d1_4Ri.pdf, id=2871, 901.56827pt x 514.3215
 2pt>
 File: Convergence Profiles - EPVP_EL_VEL_d1_4Ri.pdf Graphic file (type pdf)
 <use Convergence Profiles - EPVP_EL_VEL_d1_4Ri.pdf>
 Package pdftex.def Info: Convergence Profiles - EPVP_EL_VEL_d1_4Ri.pdf  used on
- input line 733.
+ input line 597.
 (pdftex.def)             Requested size: 450.78304pt x 257.16013pt.
- [25pdfTeX warning (ext4): destination with the same identifier (name{figure.26
-}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  
-l.740 
-      pdfTeX warning (ext4): destination with the same identifier (name{figure.
-27}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  
-l.740 
-       <./Convergence Profiles - EPVP_EL_VEL_d1_16Ri.pdf> <./Convergence Profil
-es - EPVP_EL_VEL_d1_4Ri.pdf
+ [25 <./Convergence Profiles - EPVP_EL_VEL_d1_16Ri.pdf> <./Convergence Profiles
+ - EPVP_EL_VEL_d1_4Ri.pdf
 
 pdfTeX warning: pdflatex.exe (file ./Convergence Profiles - EPVP_EL_VEL_d1_4Ri.
 pdf): PDF inclusion: multiple pdfs with page group included in a single page
 >]
-<Convergence Profiles - EP_EPVP_NG_LT_single tunnel.pdf, id=2866, 787.74298pt x
+<Convergence Profiles - EP_EPVP_NG_LT_single tunnel.pdf, id=2896, 787.74298pt x
  513.71927pt>
 File: Convergence Profiles - EP_EPVP_NG_LT_single tunnel.pdf Graphic file (type
  pdf)
 <use Convergence Profiles - EP_EPVP_NG_LT_single tunnel.pdf>
 Package pdftex.def Info: Convergence Profiles - EP_EPVP_NG_LT_single tunnel.pdf
-  used on input line 751.
+  used on input line 613.
 (pdftex.def)             Requested size: 393.87051pt x 256.859pt.
- [26pdfTeX warning (ext4): destination with the same identifier (name{figure.28
-}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  
-l.773 A
-       dditionally, the effect of the interaction between longitudinal tunne...
- <./Convergence Profiles - EP_EPVP_NG_LT_single tunnel.pdf>]
+ [26 <./Convergence Profiles - EP_EPVP_NG_LT_single tunnel.pdf>]
 (cas-sc-template.bbl [27]) [28] (cas-sc-template.aux)
 Package rerunfilecheck Info: File `cas-sc-template.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
@@ -1338,10 +1165,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 13546 strings out of 479697
- 197808 string characters out of 2877010
- 504011 words of memory out of 3000000
- 30219 multiletter control sequences out of 15000+200000
+ 13496 strings out of 479697
+ 197207 string characters out of 2877010
+ 502906 words of memory out of 3000000
+ 30172 multiletter control sequences out of 15000+200000
  513090 words of font info for 177 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  80i,17n,85p,1916b,485s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1367,9 +1194,9 @@ x/stix-mathrm-bold.pfb><C:/Users/fel_q/AppData/Roaming/MiKTeX/fonts/type1/publi
 c/stix/stix-mathrm.pfb><C:/Users/fel_q/AppData/Roaming/MiKTeX/fonts/type1/publi
 c/stix/stix-mathscr.pfb><C:/Users/fel_q/AppData/Roaming/MiKTeX/fonts/type1/publ
 ic/stix/stix-mathsf.pfb>
-Output written on cas-sc-template.pdf (30 pages, 5796441 bytes).
+Output written on cas-sc-template.pdf (30 pages, 5925292 bytes).
 PDF statistics:
- 2970 PDF objects out of 2984 (max. 8388607)
+ 3004 PDF objects out of 3580 (max. 8388607)
  107 named destinations out of 1000 (max. 500000)
- 151 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 156 words of extra memory for PDF output out of 10000 (max. 10000000)
 

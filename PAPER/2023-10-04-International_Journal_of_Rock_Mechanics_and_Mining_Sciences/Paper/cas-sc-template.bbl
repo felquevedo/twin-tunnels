@@ -43,6 +43,7 @@ ANSYS, \bibinfo{year}{2013}.
   approches exp{\'e}rimentale et num{\'e}rique}.
 \newblock Ph.D. thesis. Ecole Nationale des Ponts et Chauss{\'e}es.
   \bibinfo{address}{Paris, French}.
+\newblock \URLprefix \url{https://theses.hal.science/tel-00529719/}.
 %Type = Manual
 \bibitem[{CEB-FIP(1993)}]{CEB:1993}
 \bibinfo{author}{CEB-FIP}, \bibinfo{year}{1993}.
@@ -128,6 +129,7 @@ ANSYS, \bibinfo{year}{2013}.
   raides. Applications aux ouvrages souterrains}.
 \newblock Ph.D. thesis. Ecole Nationale des Ponts et Chauss{\'e}es.
   \bibinfo{address}{Paris, French}.
+\newblock \URLprefix \url{https://pastel.hal.science/tel-00523616/document}.
 %Type = Masterthesis
 \bibitem[{Quevedo(2017)}]{quevedo2017comportamento}
 \bibinfo{author}{Quevedo, F.P.M.}, \bibinfo{year}{2017}.
@@ -135,12 +137,14 @@ ANSYS, \bibinfo{year}{2013}.
   revestidos com concreto: modelo em elementos finitos}.
 \newblock \bibinfo{type}{M.{S}. thesis}. Federal University of Rio Grande do
   Sul. \bibinfo{address}{Porto Alegre, Brazil}.
+\newblock \URLprefix \url{https://lume.ufrgs.br/handle/10183/163886}.
 %Type = Misc
 \bibitem[{Quevedo(2021)}]{quevedo2022thesis}
 \bibinfo{author}{Quevedo, F.P.M.}, \bibinfo{year}{2021}.
 \newblock \bibinfo{title}{An{\'a}lise computacional das deformações em
   t{\'u}neis profundos considerando o acoplamento
   plasticidade-viscoplasticidade}.
+\newblock \URLprefix \url{https://lume.ufrgs.br/handle/10183/239617}.
 %Type = Article
 \bibitem[{Quevedo et~al.(2022a)Quevedo, Bernaud and Campos~Filho}]{quevedo2022}
 \bibinfo{author}{Quevedo, F.P.M.}, \bibinfo{author}{Bernaud, D.},

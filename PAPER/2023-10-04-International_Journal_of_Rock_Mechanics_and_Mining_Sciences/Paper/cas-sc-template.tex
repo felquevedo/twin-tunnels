@@ -23,8 +23,7 @@
 % Packages
 \usepackage[authoryear,longnamesfirst]{natbib}
 
-%Package to Figure
-\usepackage{float}	% permite posicionar a figura entre parágrafos usando H
+%Package to hold figure in position
 \usepackage{placeins}
 
 %Author macros
@@ -54,7 +53,7 @@
 \ead[url]{https://www.researchgate.net/profile/Felipe-Pinto-Da-Motta-Quevedo}
 
 % Second author
-\author[1]{Colombo, C. A. M. M.}[style=chinese, orcid=0000-0000-0000-0000]
+\author[1]{Colombo, C. A. M. M.}[style=chinese]
 \ead{ca-colombo@hotmail.com}
 \ead[url]{http://lattes.cnpq.br/4919388217690564}
 
@@ -66,7 +65,7 @@
 % Four author
 \author[1]{Maghous, S.}[style=chinese, orcid=0000-0002-1123-3411]
 \ead{samir.maghous@ufrgs.br}
-\ead[url]{http://lattes.cnpq.br/6305244914209829}
+\ead[url]{https://www.researchgate.net/profile/Samir-Maghous}
 
 % Afilliation
 \affiliation[1]{organization={Federal University of Rio Grande do Sul},
@@ -77,97 +76,37 @@
 	country={Brazil}}
 
 % Mathematical Symbols
-%\newcommand{\All}{\boldsymbol A}
-%\newcommand{\al}{\boldsymbol a}
-%\newcommand{\bl}{\boldsymbol b}
-%\newcommand{\Bll}{\boldsymbol B}
-%\newcommand{\dfds}{\boldsymbol{f_\sigma}}
-%\newcommand{\dfdq}{{f_q}}
 \newcommand{\dgds}{\boldsymbol{g_\sigma}}
-%\newcommand{\dPhidsl}{\boldsymbol{\Phi_{_\sigma}}}
-%\newcommand{\dPhidql}{\boldsymbol{\Phi_{_q}}}
 \newcommand{\Dll}{\boldsymbol{D}}
 \newcommand{\Dllmod}{\boldsymbol{D^{*}}}
 \newcommand{\Dllepvp}{\boldsymbol{D}^{epvp}}
-%\newcommand{\Dsdep}{\boldsymbol{D}^{ep}}
-%\newcommand{\Dsdev}{\boldsymbol{D}^{vp}}
-%\newcommand{\Dsdepev}{\boldsymbol{D}^{epvp}}
 \newcommand{\dstrain}{\boldsymbol{\dot{\varepsilon}}}
 \newcommand{\dstraine}{\boldsymbol{\dot{\varepsilon}}^{e}}
 \newcommand{\dstrainp}{\boldsymbol{\dot{\varepsilon}}^{p}}
 \newcommand{\dstrainv}{\boldsymbol{\dot{\varepsilon}}^{vp}}
-%
 \newcommand{\straineqp}{\bar \varepsilon^p}
 \newcommand{\dstrainsh}{\boldsymbol{\dot{\varepsilon}}^{sh}}
 \newcommand{\dstraincr}{\boldsymbol{\dot{\varepsilon}}^{cr}}
-%
 \newcommand{\dstress}{\boldsymbol{\dot{\sigma}}}
-%\newcommand{\Fl}{\boldsymbol{F}}
-%\newcommand{\fvp}{f^{vp}}
-%\newcommand{\gvp}{g^{vp}}
-%\newcommand{\gllum}{\boldsymbol {g_{_1}}}
-%\newcommand{\glldois}{\boldsymbol {g_{_2}}}
-%\newcommand{\glltres}{\boldsymbol {g_{_3}}}
-%\newcommand{\hl}{{h_q}}
-%\newcommand{\Kll}{\boldsymbol K}
-%\newcommand{\Nll}{\boldsymbol N}
 \newcommand{\onell}{\boldsymbol{1}}
-%\newcommand{\onellll}{\boldsymbol{I}}
-%\newcommand{\Rl}{\boldsymbol{R}}
-%\newcommand{\sll}{\boldsymbol{s}}
 \newcommand{\strain}{\boldsymbol{\varepsilon}}
+\newcommand{\straincr}{\boldsymbol{\varepsilon}^{cr}}
 \newcommand{\straine}{\boldsymbol{\varepsilon}^{e}}
 \newcommand{\strainp}{\boldsymbol{\varepsilon}^{p}}
-\newcommand{\strainvp}{\boldsymbol{\varepsilon}^{vp}}
-%\newcommand{\strainpeq}{\bar \varepsilon^p}
-%\newcommand{\strainvpeq}{\bar \varepsilon^{vp}}
-\newcommand{\stress}{\boldsymbol{\sigma}}
-%\newcommand{\ul}{\boldsymbol u}
-\newcommand{\zerol}{\boldsymbol 0}
-%%
-%%
-%% Mathematical Symbols
-%\newcommand{\deviator}{\boldsymbol{s}}
-%\newcommand{\Disoliel}{\boldsymbol{D}}
-%\newcommand{\Disolielmod}{\boldsymbol{D^{*}}}
-%
-%\newcommand{\dstraineq}{\dot{\bar{\varepsilon}}}
-%
-%\newcommand{\dstrainvp}{\boldsymbol{\dot{\varepsilon}}^{vp}}
-%
-%\newcommand{\flowtensorf}{\frac{\partial\fvp}{\partial\stress}}
-%\newcommand{\flowtensorg}{\frac{\partial\gvp}{\partial\stress}}
-%\newcommand{\fo}{f_0}
-%
-%\newcommand{\Jtwo}{J_{2}}
-%\newcommand{\onefour}{\boldsymbol{I}}
-%\newcommand{\qvp}{\boldsymbol{q}^{vp}}
-%\newcommand{\sphericaltensor}{\boldsymbol{1}\otimes\boldsymbol{1}}
-%
-\newcommand{\straincr}{\boldsymbol{\varepsilon}^{cr}}
-%
 \newcommand{\strainsh}{\boldsymbol{\varepsilon}^{sh}}
 \newcommand{\strainshCEB}{\varepsilon_{sh}}
-%
-%\newcommand{\stresseq}{\bar{\sigma}}
-%\newcommand{\stressy}{\sigma_{y}}
-%\newcommand{\unitarytensor}{\boldsymbol{1}}
-%\newcommand{\young}{E}
+\newcommand{\strainvp}{\boldsymbol{\varepsilon}^{vp}}
+\newcommand{\stress}{\boldsymbol{\sigma}}
+\newcommand{\zerol}{\boldsymbol 0}
 
 % Here goes the abstract
 \begin{abstract}
 Resorting a three-dimensional finite element analysis, this paper investigates the instantaneous and long-term implications induced by the time-dependent constitutive behavior of constituents on the convergence profile of twin tunnels linked with transverse galleries. Several constitutive models for rock mass mechanical behavior are examined at the material level, encompassing elastoplasticity, viscoplasticity, or coupled elastoplasticity-viscoplasticity frameworks. Plasticity state equations are based on a Drucker-Prager yield surface with an associated flow rule, while the viscoplasticity formulation relies on the Perzyna model with a Drucker-Prager flow surface. Tunnel lining behavior is modeled using either elastic or viscoelastic constitutive models. The viscoelastic behavior is described by a Generalized Kelvin rheological model based on Bazant and Prassanann's Solidification Theory, with model parameters derived from CEB-FIP MC90 formulations. From a computational viewpoint, the deactivation-activation method is employed to simulate the excavation process and lining installation. The accuracy of finite element predictions is assessed through comparisons with available analytical solutions formulated in a simplified setting for the twin tunnels' configuration. A parametric study delves into the mutual interaction induced by tunnels proximity, emphasizing the crucial role of concrete lining stiffness in twin tunnels' deformation. Numerical simulations indicate a highly localized influence of a transverse gallery on twin tunnels deformation, extending up to four radii from each side of the gallery axis. Finally, the paper investigates the effects of twin tunnels proximity and those induced by an interconnecting gallery on the instantaneous and long-term convergence of tunnels, contrasting these outcomes with the convergence of a single tunnel.
-
-
-%This paper aims to demonstrate the long-term implications of the rheological constitutive behavior of rock mass and concrete lining in the convergence of the intersection area of twin tunnel galleries using a three-dimensional numerical analysis based on the finite-element method. A Drucker-Prager-Perzyna elasto-plastic-viscoplastic constitutive law represents the rock mass and, for the lining, an elastic and viscoelastic law. The deactivation-activation methods simulate the excavation process. The numerical model is verified using comparisons with analytical solutions in elasticity and elastoplasticity for twin tunnels without a gallery developed by other authors. 
-
-%Comparisons of convergence reveal that the viscous effects of the rock mass and the lining significantly influence the peak convergence within the intersection zone, resulting in differences of approximately 10\% in convergence values.
-%É necessário um resumo conciso e factual. O resumo deve indicar sucintamente o objetivo da investigação, os principais resultados e as principais conclusões. O resumo é frequentemente apresentado separadamente do artigo, pelo que deve ser autónomo. Por esta razão, as referências devem ser evitadas, mas se forem essenciais, devem citar-se o(s) autor(es) e o(s) ano(s). Além disso, devem ser evitadas abreviaturas não padronizadas ou pouco comuns, mas se forem essenciais, devem ser definidas na primeira menção no próprio resumo. Os artigos com "Sugestões de Métodos" não devem conter resumos.
 \end{abstract}
 
 % Use if graphical abstract is present
 \begin{graphicalabstract}
-\includegraphics[scale=1]{Domain.pdf}
+	\includegraphics[scale=1]{graphical_abstract.pdf}
 \end{graphicalabstract}
 
 % Research highlights
@@ -211,61 +150,23 @@ During the construction of the transverse tunnel, the surrounding rock mass is s
 
 The long-term effect has been investigated for single tunnels, but little research has been done on twin tunnels, especially with a gallery. Therefore, in this work, the aim is to investigate the influence of the distance between the tunnels and the effect that the gallery has on the long-term convergence profile of deep-lined twin tunnels, considering various constitutive laws for the rock mass and the lining.
 
-
-
-
-%The structural design of deep twin tunnels involves estimating cross-section convergence, lining pressure, and the size of the plastic zone within the rock mass caused by the excavation process. The final convergence and stress field around the tunnel depend on \textit{in situ} initial stresses, cross-section geometry, and the coupling between the lining and the rock mass during construction. Unlinke a single tunnel, the proximity between twin tunnels break the symmetry of deformations in tunnel wall. Many twin tunnels have transverse galleries that serve as emergency routes. These galleries will introduce a local effect on the convergence profile of the longitudinal tunnel. 
-
-%Additionaly, the rheological behavior of the rockmass and lining plays a crucial role in how stress and displacements fields evolve over time.
-
-%Many studies have proposed viscous constitutive models for the rock mass. Some of these models use instantaneous linear elastic behavior. However, more and more studies have analyzed the impact of instantaneous elastoplastic behavior with viscous long-term components [\citenum{rousset1988}, \citenum{piepi1995}, \citenum{Purwodihardjo2003}, \citenum{Kleine2007}, \citenum{Shafiqu2008}, \citenum{Barla2010}, \citenum{souley2011}, \citenum{Manh2015}]. Incorporating elastoplastic behavior has a more apropriate representation of rock mass since the stress state can reach plasticity during excavation. These coupled models are better in regions with high-stress deviations where plasticity-induced stress redistribution will impact the viscous component.
-
-%Despite these developments, there are few studies about the interaction of the rheological behavior of the lining with viscous rock mass [\citenum{pottler1990}, \citenum{meschke1996}, \citenum{mavsin2009}, \citenum{NEUNER2021}]. Thus, the aim of this study is to investigate the influence of some of the main parameters of deep concrete-lined tunnels in long-term convergence.
-
-
-%Indicar os objectivos do trabalho e fornecer um contexto adequado, evitando uma pesquisa bibliográfica ou um resumo dos resultados.
-
-
 \section{Fundamental assumptions}\label{}
 
 Despite the generality of the models, we employ some delimitations in this work:
 
 \begin{enumerate}[(a)]
+	\item It is assumed only deep tunnels, neglecting surface influences such as deformations caused by surface loads and settlements arising from the excavation process;
 
-\item It is assumed only deep tunnels, neglecting surface influences such as deformations caused by surface loads and settlements arising from the excavation process;
+	\item Although the inherent complexity of the rock mass's behavior, is influenced by spatially varying properties, this study opts for a simplified representation: a homogeneous and isotropic medium. While the rock mass may exhibit discontinuities, we simplify its overall behavior by treating it as a continuous medium. Consequently, the rock mass is considered single-phase and phenomenologically modeled using an elastoplastic-viscoplastic rheological law to capture instantaneous and long-term responses. This approach excludes considerations of other factors, such as temperature gradients, water flow, and pore mechanics;
 
-\item Although the inherent complexity of the rock mass's behavior, is influenced by spatially varying properties, this study opts for a simplified representation: a homogeneous and isotropic medium. While the rock mass may exhibit discontinuities, we simplify its overall behavior by treating it as a continuous medium. Consequently, the rock mass is considered single-phase and phenomenologically modeled using an elastoplastic-viscoplastic rheological law to capture instantaneous and long-term responses. This approach excludes considerations of other factors, such as temperature gradients, water flow, and pore mechanics;
+	\item Despite the complexity of the internal stress state of the rock mass, due, for example, to the discontinuities, anisotropy, and heterogeneity of the materials, equal vertical and horizontal stresses will be used, thus dealing with a geostatic-hydrostatic initial stress state.
 
-\item Despite the complexity of the internal stress state of the rock mass, due, for example, to the discontinuities, anisotropy, and heterogeneity of the materials, equal vertical and horizontal stresses will be used, thus dealing with a geostatic-hydrostatic initial stress state.
+	\item It is common to design twin tunnels with a time lag between the excavation fronts. In this work, we will perform synchronous excavation, using symmetry conditions to minimize computer processing time.
 
-\item It is common to design twin tunnels with a time lag between the excavation fronts. In this work, we will perform synchronous excavation, using symmetry conditions to minimize computer processing time.
+	\item In contrast to the variable conditions present in tunnel construction, where the excavation speed and lining installation fluctuate during the construction process, we adopt a constant speed for full, flat, and vertical excavation with homogeneous concrete lining with constant thickness. It's considered a constant humidity and temperature in the concrete lining.
 
-\item In contrast to the variable conditions present in tunnel construction, where the excavation speed and lining installation fluctuate during the construction process, we adopt a constant speed for full, flat, and vertical excavation with homogeneous concrete lining with constant thickness. It's considered a constant humidity and temperature in the concrete lining.
-
-\item We will not consider dynamic excitations (involving earthquakes and explosions, for example) and inertial terms (density and acceleration). In other words, the evolution of deformations occurs in a quasi-static manner. We also adopt the hypothesis of small perturbations.
-
+	\item We will not consider dynamic excitations (involving earthquakes and explosions, for example) and inertial terms (density and acceleration). In other words, the evolution of deformations occurs in a quasi-static manner. We also adopt the hypothesis of small perturbations.
 \end{enumerate}
-
-%The results of this study apply only when the following hypotheses are satisfied:
-
-%\begin{enumerate}[(a)]
-
-%\item tunnel with circular cross section;
-%\item full, flat, and vertical excavation face without using presupport
-%techniques;
-%\item constant excavation speed;
-%\item homogeneous concrete lining with constant section;
-%\item initial state of hydrostatic radial stresses and constant normal
-%stress equal to the radial stresses along the depth;
-%\item the rock mass must have a perfect viscoplastic behavior, independent of hydrostatic stresses;
-%\item constant humidity and temperature in the concrete lining during
-%the creep evolution;
-%\item perfect adhesion (rigid contact) between lining and rock mass
-%interface;
-%\item concrete lining stress level below 40\% of the average compressive strength; this is limited so that the superposition principle of
-%the CEB-FIP MC90 creep model remains valid.
-%	
-%\end{enumerate}	
 
 \section{Constitutive Model of the Rock Material}\label{}
 
@@ -343,9 +244,7 @@ where $t_{s}$ represents the concrete curing time, and $\Delta \strainshCEB$ is 
 \end{equation}
 in which, according to Bažant and Prasannan [\citenum{bazant:1989a,bazant:1989b}], $E_0$  is the modulus of elasticity of the concrete aggregates and microscopic particles of the cement paste, $\gamma_c(t-t_0)$ is the microviscoelastic deformation of the volume fraction of solidified concrete $v(t)$, $\eta(t)$ is the apparent macroscopic viscosity and, according to CEB-FIP MC90 [\citenum{CEB:1993}], $E_c(t_0)$ is the tangent elastic modulus of the concrete at the instant of loading application $t_0$, $\beta_c(t-t_0)$  is a coefficient that depends on the loading age $t-t_0$ , $\phi_0$ is a coefficient that depends on the age of the concrete at the instant of loading application and $E_{ci}$  the tangent elasticity modulus of the concrete at the age of 28 day.
 
-
 Details of this model, including validations and its application in single tunnel, are in [\citenum{quevedo2022}]. See [\citenum{quevedo2017comportamento}] for the algorithm details implemented in FORTRAN within the USERMAT subroutine.
-
 
 \section{Spatial and time discretization of the domain}\label{}
 
@@ -358,16 +257,13 @@ The problem domain $\Omega$ consists of a twin deep tunnel with a cross gallery,
 \end{figure}
 \FloatBarrier
 The spatial discretization of the domain $\Omega$ corresponds to a mesh with trilinear hexahedral elements (SOLID 185, 8 nodes), except in the gallery region, which uses higher-order tetrahedral elements (SOLID186, 10 nodes). Fig.~\ref{Mesh1} shows the mesh, geometric parameters, and boundary conditions for the domain problem. We considered front, side, and bottom symmetry to reduce computational cost. In this discretization, $d_1$ is the distance between longitudinal tunnel axes, $R_i$ radius of the longitudinal tunnel, $L_2$ total excavated length, $d_3$ domain height, $L_1$ length of the unexcavated region, $L_3$ transversal length of the domain, $L_p$ step length of the excavation process, $d_2$ position of the gallery along the longitudinal tunnel. In conjunction with boundary pressure $p$, we apply the initial stress condition $\stress_0 = -p\onell$ at all integration points to simulate the initial state of an undisturbed rock mass. 
-
 \begin{figure}[h!]
 	\centering
 	\includegraphics[scale=0.5]{Mesh1.pdf}
 	\caption{Mesh, dimensions and boundary conditions of the 3D twin tunnel domain}
 	\label{Mesh1}
 \end{figure}
-
 We divided the mesh into two regions: one near the tunnel (light gray), which we refined more, and a region farther away (dark gray), which we increased the aspect ratio to minimize the number of elements in that region. Due to the low deformation gradient away from the tunnel wall, elements in this area can be considerably larger than in other regions. Fig.~\ref{Mesh2} presents the mesh at the cross-section of the longitudinal tunnel, with $e$ representing the thickness of the lining.
-
 \begin{figure}[h!]
 	\centering
 	\includegraphics[scale=0.8]{Mesh2.pdf}
@@ -458,11 +354,9 @@ During tunnel construction, we determine the initial time increment for solution
 
 After tunnel excavation, in time-dependent constitutive models, time continues to progress to capture long-term viscous effects. In this stage, each time step lasts 100 days, with an initial increment of 50 days. This increase, compared to the excavation time increments, is facilitated by the semi-implicit scheme in the viscoplasticity solution. The explicit scheme, as indicated in [\citenum{zienkiewicz1974visco}], requires a smaller time increment to the precision of the solution.
 
-
 \section{Comparision with analytical solutions}\label{}
 
 To examine mesh convergence and validate the numerical model, we compared the numerical solution with the elastic and elastoplastic analytical solution in the plane state of deformations for twin tunnels. Guo et al. [\citenum{GUO2021}] develop an elastic analytical solution for the stress field around twin circular tunnels with hydrostatic pressure using the complex variable and the superposition principle. The Fig.~\ref{GUO_FIG1} shows the tangential stress distribution around the tunnel's boundary in this analytical solution with the numerical solution considering  $R_i = 4$ m, $E = 500$ MPa, $\nu =$ 0.23, $d_1 = 2R_i$, $p = 2.2$ MPa.
-
 \begin{figure}[h!]
 	\centering
 	\includegraphics[scale=1]{GUO_FIG1.pdf}
@@ -470,7 +364,6 @@ To examine mesh convergence and validate the numerical model, we compared the nu
 	\label{GUO_FIG1}
 \end{figure}
 \FloatBarrier
-
 Ma et. al. [\citenum{MA2020}] developed an analytical solution for a perfectly plastic constitutive model with a Mohr-Coulomb surface. One of the results was the contour of the plastic zone for several conditions. Fig.~\ref{MA_FIG1} shows the comparison between the numerical model solution (taken from a section away from the excavation face) and the analytical solution. For these analysis, $R_i = 1$ m, Young's modulus $E=20$ GPa and Poisson's ratio $\nu = 0.3$.
 
 \begin{figure}[h!]
@@ -493,7 +386,7 @@ Fig.~\ref{MA_FIG2} displays the magnitude of displacements, radial, orthoradial,
 
 \section{Numerical Results and Discussion}\label{}
 
-To develop the parametric analyses, we utilized the constitutive parameters of the rock mass as outlined in Piepi [\citenum{piepi1995}], and for the lining, we employed typical values for ordinary reinforced concrete. These parameters are shown in Table~\ref{table2}. In these analyses, an isotropic initial stress state of 9MPa is considered, and the excavation speed is 12.5m/day [\citenum{piepi1995}].
+To develop the parametric analyses, we utilized the constitutive parameters of the rock mass as outlined in Piepi [\citenum{piepi1995}], and for the lining, we employed typical values for ordinary reinforced concrete. These parameters are shown in Table~\ref{table2}. In these analyses, an isotropic initial stress state of 9 MPa is considered, and the excavation speed is 12.5 m/day [\citenum{piepi1995}].
 \begin{table}
 	\caption{Constitutive parameters used in the parametric analysis}
 	\label{table2}
@@ -540,17 +433,11 @@ To develop the parametric analyses, we utilized the constitutive parameters of t
 \end{table}
 \FloatBarrier
 In presenting the results, $U_{eq}$ denotes the equilibrium convergence value at the convergence profile outside the region of influence of the excavation face and the gallery. When the gallery is present, the highest convergence value, $U_{peak}$ is highlighted at the gallery position. In addition, it is necessary to highlight some important points:
-
 \begin{itemize}[]
-	
 	\item \textbf{Observation 1}: All the results presented in the following analyses pertain to the point located at the top of the tunnel section (crown), and we will monitor its convergence throughout the excavation process. Fig.~\ref{Ovalization effect and monitoring point} presents this point. Likewise, we will only analyze the convergence of the point located at the crown of the gallery. 
-
 	\item \textbf{Observation 2}: Under material isotropy and initial stress state, the symmetry of the tunnel wall is preserved throughout the excavation process. Thus, the deformed tunnel wall remains circular. On the other hand, one of the effects of the mutual interaction induced by the proximity of the tunnels is the loss of symmetry of the deformed tunnel wall, as illustrated in Fig.~\ref{Ovalization effect and monitoring point}. In this context, the point chosen to follow the convergences (on the crown) is not representative of the entire deformation of the tunnel wall. 
-	
 	\item \textbf{Observation 3}: Referring to the material properties shown in Table~\ref{table2}, the value adopted for plastic cohesion ($c$) is higher than the value for viscoplastic cohesion ($c_{vp}$): $c$ > $c_{vp}$. This implies that in the regime of irreversible deformations, the viscoplasticity of the material will be activated first. Throughout the excavation process, viscoplastic deformations will appear without plasticization of the massif. The generic configurations of the deformation zones of the massif throughout the excavation process are illustrated in Fig.~\ref{zones}.
-	
 \end{itemize}
-
 \begin{figure}[h!]
 	\centering
 	\includegraphics[scale=0.6]{Ovalization effect and monitoring point.pdf}
@@ -558,8 +445,6 @@ In presenting the results, $U_{eq}$ denotes the equilibrium convergence value at
 	\label{Ovalization effect and monitoring point}
 \end{figure}
 \FloatBarrier
-
-
 \begin{figure}[h!]
 	\centering
 	\includegraphics[scale=0.6]{zones.pdf}
@@ -567,9 +452,7 @@ In presenting the results, $U_{eq}$ denotes the equilibrium convergence value at
 	\label{zones}
 \end{figure}
 \FloatBarrier
-
 Table~\ref{table3} presents the abbreviation to read the title and legend of the results.
-
 \begin{table}
 	\caption{Abbreviation to the title and legend of the results}
 	\label{table3}
@@ -597,9 +480,7 @@ Table~\ref{table3} presents the abbreviation to read the title and legend of the
 	\normalsize
 \end{table}
 \FloatBarrier
-
 Figs.~\ref{WG-ST-LT-D1-16RI}, \ref{WG-ST-LT-D1-8RI}, and \ref{WG-ST-LT-D1-4RI} show the convergence profiles of the twin tunnels with gallery (WG) for all the constitutive models of the rock mass (E - blue, EP - yellow, VP - magenta, EPVP - red) and the lining (EL and VEL) in the short-term (solid lines) and the long-term (dashed lines), for $d_1 = 16R_i, 8Ri$ and $4R_i$ respectively.
-
 \begin{figure}[h!]
 	\centering
 	\includegraphics[scale=0.5]{Convergence Profiles - WG_ST_LT - $d_1=16R_i$.pdf}
@@ -607,7 +488,6 @@ Figs.~\ref{WG-ST-LT-D1-16RI}, \ref{WG-ST-LT-D1-8RI}, and \ref{WG-ST-LT-D1-4RI} s
 	\label{WG-ST-LT-D1-16RI}
 \end{figure}
 \FloatBarrier
-
 \begin{figure}[h!]
 	\centering
 	\includegraphics[scale=0.5]{Convergence Profiles - WG_ST_LT - $d_1=8R_i$.pdf}
@@ -615,7 +495,6 @@ Figs.~\ref{WG-ST-LT-D1-16RI}, \ref{WG-ST-LT-D1-8RI}, and \ref{WG-ST-LT-D1-4RI} s
 	\label{WG-ST-LT-D1-8RI}
 \end{figure}
 \FloatBarrier
-
 \begin{figure}[h!]
 	\centering
 	\includegraphics[scale=0.5]{Convergence Profiles - WG_ST_LT - $d_1=4R_i$.pdf}
@@ -623,7 +502,6 @@ Figs.~\ref{WG-ST-LT-D1-16RI}, \ref{WG-ST-LT-D1-8RI}, and \ref{WG-ST-LT-D1-4RI} s
 	\label{WG-ST-LT-D1-4RI}
 \end{figure}
 \FloatBarrier
-
 In all $d_1$ distances, the convergence profiles of the E-EL model (blue dashed line) and the VP-EL (magenta solid line) in the short-term (ST) are equivalent, probably due to the high excavation speed. The high speed of the excavation and installation of the lining limits the time for the viscous effects to manifest themselves also taking into account the restriction imposed by the stiffness of the lining.
 
 In the short-term (ST), the EPVP-EL model (green solid line) is equivalent to the EP-EL (yellow dashed line) because, although plasticization around the section has already occurred due to excavation, the viscous effects have not yet evolved considerably due to the short time variation between the start of excavation and the end of the excavation process. After the long-term convergence occurs (green dashed line) are a difference. However, when the rheological effect of the lining is present, the profile continues to evolve considerably over the long-term, for example, EPVP-VEL (red solid and dashed line).
@@ -633,7 +511,6 @@ It's worth noting that the stiffness of the elastic lining significantly impedes
 Another noteworthy aspect is that the EPVP-VEL model with $d_1 = 16R_i$ (red dashed line) experiences a reduction in $U_{eq}$ convergence after 15 excavation steps ($n_{pig}$) following the gallery. This phenomenon is due to the evolving viscous effects of the already-excavated longitudinal tunnel during the gallery excavation. This effect becomes more pronounced with $d_1 = 16R_i$. When the gallery is smaller ($d_1 = 8R_i$ and $4R_i$), the time elapsed is shorter, and this effect is less pronounced.
 
 Note another aspect: the EPVP-EL-LT (green solid line) model converges slightly lower than the EVP-EL-ST (green dashed line) model with $d_1 = 4R_i$. The ovalization effect is responsible for the crown's convergence decreasing over time. However, another point in the section experiences an increase in convergence. Fig.~\ref{ovalization} illustrates this effect away from the gallery region with a single tunnel reference.
-
 \begin{figure}[h!]
 	\centering
 	\includegraphics[scale=0.5]{ovalization.pdf}
@@ -641,9 +518,7 @@ Note another aspect: the EPVP-EL-LT (green solid line) model converges slightly 
 	\label{ovalization}
 \end{figure}
 \FloatBarrier
-
 Fig.~\ref{VP-EL-EPVP-VEL-WG-LT} compares the convergence profiles of the viscoplastic rock mass (VP) with elastic lining (EL) models (solid lines) with the elasto-plastic-viscoplastic rock mass (EPVP) with elastic (EL) and viscoelastic lining (VEL) models in the long-term (LT) (dashed lines and dot lines, respectively). As a reference, it also shows the results for a single tunnel (black lines).
-
 \begin{figure}[h!]
 	\centering
 	\includegraphics[scale=0.6]{Convergence Profiles - VP_EPVP_EL_VEL_WG_LT.pdf}
@@ -651,13 +526,11 @@ Fig.~\ref{VP-EL-EPVP-VEL-WG-LT} compares the convergence profiles of the viscopl
 	\label{VP-EL-EPVP-VEL-WG-LT}
 \end{figure}
 \FloatBarrier
-
 Figure \ref{VP-EL-EPVP-VEL-WG-LT} shows a slight increase in the peak value of convergence $U_{peak}$ for the EPVP-VEL model when comparing $d_1 = 16R_i$ (dotted yellow line) and $d_1 = 8R_i$ (dotted green line). In the case of $d_1 = 8R_i$, the proximity of the tunnel compensates the convergence difference due the gallery excavation eplapsed time between $d_1 = 8R_i$ and $16 R_i$. However, when $d_1 = 4R_i$ (dotted red line) the effect of the gallery is more pronounced due to the interaction between the proximity of the twin tunnels and the viscous effect. 
 
 Moreover, one can observe a more pronounced effect in the section before the gallery, specifically at the plateau of the convergence profile, in the EPVP-VEL model for $d_1 = 8R_i$ and $d_1 = 16R_i$ (green and yellow dotted lines). This effect is due to the viscoelastic behavior of the lining and elapsed time to excavate the gallery. Unlike the highly rigid elastic lining, the viscoelastic lining allows the convergence to evolve during the excavation of the gallery. Consequently, the values of convergences before the gallery tend to be higher than after the gallery.
 
 Fig.~\ref{EP-EL-EPVP-VEL-WG-ST-LT} compares the convergence profiles of the elastoplastic rock mass (EP) and elastic lining (EL) models (solid lines) with the elasto-plastic-viscoplastic rock mass (EPVP) and viscoelastic lining (VEL) models in the short-term (ST) (dot lines) and long-term (LT) (dahed lines). As a reference, it also shows the results for a single tunnel (black lines).
-
 \begin{figure}[h!]
 	\centering
 	\includegraphics[scale=0.6]{Convergence Profiles - EP_EL_EPVP_VEL_WG_ST_LT.pdf}
@@ -665,11 +538,9 @@ Fig.~\ref{EP-EL-EPVP-VEL-WG-ST-LT} compares the convergence profiles of the elas
 	\label{EP-EL-EPVP-VEL-WG-ST-LT}
 \end{figure}
 \FloatBarrier
-
 This Figure shows the crucial effect of the viscoelastic lining to the convergence profile of the tunnels. In the short term (ST), the elastoplastic-viscoplastic rock mass (EPVP) with viscoelastic lining (VEL) (dotted lines) shows superior convergences compared to the elastoplastic (EP) model with elastic lining (EL) (solid lines). Because the young age of the viscoelastic lining (VEL) has a lower modulus of elasticity, resulting in lower stiffness. Therefore, compared to the elastic lining (EL), the lower initial value of the modulus of elasticity contributes more to the development of convergence. In the long term (LT), even though the viscoelastic lining (VEL) (dashed lindes) has a higher stiffness due to a aging of lining, the viscous effects over time result in a significantly more discrepant convergence profile compared to the elastoplastic model (EP) with elastic lining (EL) (solid lines). There is a noticeable increase in the magnitude of $U_{peak}$ between the short term and the long term at the gallery position, highlighting the influence of the viscoelastic lining.
 
 To study the effect of the lining, Fig.~\ref{EP_d1_16Ri} and \ref{EP_d1_4Ri} show the elastoplastic rock mass (EP) under various conditions: without lining (NL), with a moderately stiff elastic lining ($K_c = 1027$ MPa), and with a highly stiff lining ($K_c = 3660$ MPa) with (WG) and without gallary (NG).
-
 \begin{figure}[h!]
 	\centering
 	\includegraphics[scale=0.5]{Convergence Profiles - EP_d1_16Ri.pdf}
@@ -677,7 +548,6 @@ To study the effect of the lining, Fig.~\ref{EP_d1_16Ri} and \ref{EP_d1_4Ri} sho
 	\label{EP_d1_16Ri}
 \end{figure}
 \FloatBarrier
-
 \begin{figure}[h!]
 	\centering
 	\includegraphics[scale=0.5]{Convergence Profiles - EP_d1_4Ri.pdf}
@@ -685,7 +555,6 @@ To study the effect of the lining, Fig.~\ref{EP_d1_16Ri} and \ref{EP_d1_4Ri} sho
 	\label{EP_d1_4Ri}
 \end{figure}
 \FloatBarrier
-
 For the single tunnel, a high stiffness lining (black solid line) decreases convergence by approximately 35\% compared to the unlined model (black dashed line). Conversely, a moderately stiff lining (black dotted line) increases convergence by 12\% compared to the rigid lining. 
 
 When $d_1 = 16R_i$ between the twin tunnels (blue and yellow lines), the results of $U_{eq}$ are similar to the isolated tunnel (black line). However, with a distance reduced to $d_1 = 4R_i$, the interaction between the tunnels becomes significant. A smaller $d_1$, the high stiffness lining (solid yellow and blue lines) can restrict convergence by up to 46\% of the unlined (dashed yellow and blue lines) convergence. A moderate stiffness lining (dotted lines) leads to an increase of up to 16\% in convergence compared to the high stiffness lining (solid lines).
@@ -695,7 +564,6 @@ When comparing results between twin lined tunnels with spacings of $16R_i$ and $
 When analyzing the convergence $U_{peak}$ at the point where the gallery meets the longitudinal tunnel, there is an increase of 16\% when using an moderate stiffness elastic lining (dotted blue line) compared to a high stiffness lining (solid blue line). However, when analyzing the difference between the $U_{eq}$ and $U_{peak}$, there is a difference of up to 12\% for the high stiffness elastic lining (solid blue line to $4R_i$ and $16R_i$) and up to 13\% for the moderate stiffness elastic lining (dotted blue line to $4R_i$ and $16R_i$) for $d_1=4R_i$.
 
 Applying the same type of previously analysis, we examine the elasto-plastic-viscoplastic model for the rock mass (EPVP), considering the presence of a viscoelastic lining (VEL) (Figs.~\ref{EPVP_VEL_d1_16Ri} and ~\ref{EPVP_VEL_d1_4Ri}). This analysis aims to comprehend the influence of the lining's stiffness, particularly when the twin tunnels are nearby. The results reveal that, once again, the convergence profile under these conditions, with a distance of $16R_i$ between the tunnels, closely resembles that of an isolated tunnel. Differences are on the order of 1.8\% for a moderately stiff lining and 0.8\% for a highly stiff lining.
-
 \begin{figure}[h!]
 	\centering
 	\includegraphics[scale=0.5]{Convergence Profiles - EPVP_VEL_d1_16Ri.pdf}
@@ -703,7 +571,6 @@ Applying the same type of previously analysis, we examine the elasto-plastic-vis
 	\label{EPVP_VEL_d1_16Ri}
 \end{figure}
 \FloatBarrier
-
 \begin{figure}[h!]
 	\centering
 	\includegraphics[scale=0.5]{Convergence Profiles - EPVP_VEL_d1_4Ri.pdf}
@@ -711,7 +578,6 @@ Applying the same type of previously analysis, we examine the elasto-plastic-vis
 	\label{EPVP_VEL_d1_4Ri}
 \end{figure}
 \FloatBarrier
-
 In the case of $d_1=4R_i$, when a high stiffness lining is applied (blue and yellow solid lines), there is practically no difference compared to the isolated tunnel (black solid line). This occurs because the high rigidity of the lining blocks convergence in the interaction between the tunnels. However, when using a moderately stiff lining (blue and yellow dashed lines), there is a difference of approximately 3\% in the convergence $U_{eq}$ compared to the single tunnel (black dashed line).
 
 When comparing the results for $d_1 = 16R_i$ and $4R_i$, considering each lining separately, there is a difference of 0.8\% when there is a high stiffness lining (solid yellow and blue lines to $16R_i$ and $4R_i$) and 4.8\% for a moderate stiffness lining (dashed yellow and blue lines to $16R_i$ and $4R_i$). Thus, once again, the importance of the stiffness of the lining when associated with the distance between the twin tunnels.
@@ -719,7 +585,6 @@ When comparing the results for $d_1 = 16R_i$ and $4R_i$, considering each lining
 When analyzing the convergence $U_{peak}$ at the point where the gallery meets the longitudinal tunnel, there is an increase of 47\% for $d_1=4R_i$ when using an moderate stiffness lining (dashed blue line) compared to a high stiffness lining (solid blue line). However, when analyzing the difference between the $U_{eq}$ and $U_{peak}$, there is a difference of up to 18\% for the high stiffness elastic lining (solid blue line) and up to 15\% for the moderate stiffness lining (dashed blue line) for $d_1=4R_i$.
 
 The following results (Figs.~\ref{EPVP_EL_VEL_d1_16Ri} and ~\ref{EPVP_EL_VEL_d1_4Ri}) compare the elastic (EL) and viscoelastic (VEL) lining with high and moderate stiffness, considering the elastoplastic-viscoplastic (EPVP) model for the rock mass. 
-
 \begin{figure}[h!]
 	\centering
 	\includegraphics[scale=0.5]{Convergence Profiles - EPVP_EL_VEL_d1_16Ri.pdf}
@@ -727,7 +592,6 @@ The following results (Figs.~\ref{EPVP_EL_VEL_d1_16Ri} and ~\ref{EPVP_EL_VEL_d1_
 	\label{EPVP_EL_VEL_d1_16Ri}
 \end{figure}
 \FloatBarrier
-
 \begin{figure}[h!]
 	\centering
 	\includegraphics[scale=0.5]{Convergence Profiles - EPVP_EL_VEL_d1_4Ri.pdf}
@@ -735,7 +599,6 @@ The following results (Figs.~\ref{EPVP_EL_VEL_d1_16Ri} and ~\ref{EPVP_EL_VEL_d1_
 	\label{EPVP_EL_VEL_d1_4Ri}
 \end{figure}
 \FloatBarrier
-
 For $d_1=16R_i$, the significant difference in $U_{eq}$ compared to the isolated tunnel (dotted black line) occurs when considering the moderate stiffness viscoelastic lining (dotted blue line), with approximately 1.8\%. In contrast, for $d_1=4R_i$, the differences are 4\% and 3\% for the elastic (dashed lines) and viscoelastic (dotted lines) linings with moderate stiffness, respectively.
 
 When adopting the high stiffness elastic lining as a reference (solid lines), for $d_1 = 16R_i$, the differences increase to 27\% and 78\% when comparing the elastic (dashed lines) and viscoelastic (dotted lines) lining with moderate stiffness, respectively, and to 31\% and 81\% in the case of $d_1=4R_i$.
@@ -745,7 +608,6 @@ When analyzing the convergence at the peak $U_{peak}$, which corresponds to the 
 However, when analyzing the difference between the $U_{eq}$ and $U_{peak}$, there is a difference of up to 18\% for the moderate stiffness elastic lining (dashed blue line) and up to 15\% for the moderate stiffness viscoelastic lining (dotted blue line) for $d_1=4R_i$.
 
 Finally, Fig.~\ref{EP_EPVP_NG_LT_single tunnel} a comparison between the lining elastic and viscoelastic, considering high and moderate stiffness, and between the elastoplastic and elastoplastic-viscoelastic models for the rock mass. We adopt the condition of an isolated tunnel, starting from the reference value of the elastoplastic rock mass with high stiffness elastic lining. 
-
 \begin{figure}[h!]
 	\centering
 	\includegraphics[scale=0.5]{Convergence Profiles - EP_EPVP_NG_LT_single tunnel.pdf}
@@ -753,18 +615,7 @@ Finally, Fig.~\ref{EP_EPVP_NG_LT_single tunnel} a comparison between the lining 
 	\label{EP_EPVP_NG_LT_single tunnel}
 \end{figure}
 \FloatBarrier
-
 Taking as a reference the elastoplastic model with a highly stiffness elastic lining (solid black line) we observed a difference of 12\% and 53.5\%, respectively, in the cases of the elastoplastic rock mass with an elastic lining of moderate stiffness (dotted black) and without a lining (dashed black line). We also identified a difference of 5.5\%, 33.5\%, and 748\% when using the elastoplastic-viscoplastic model for the rock mass with an elastic lining of high stiffness (solid red line), moderate stiffness (dotted red line), and no lining (dashed red line). In addition, we found a difference of 28\% and 87.5\% when comparing the elastoplastic-viscoplastic model for the rock mass and the viscoelastic model for the high stiffness (solid blue line) and moderate stiffness lining (dotted blue line), respectively.
-
-%\subsection{Influência do afastamento entre os túneis}\label{}
-
-%\subsection{A influência da rigidez do revestimento}\label{}
-
-%\subsection{A influência da presença da galeria no túnel longitudinal}\label{}
-
-%\subsection{Abrangencia da região de influência da galeria}\label{}
-
-%\subsection{A influência dos modelos que envolve efeitos diferidos}\label{}
 
 \section{Conclusions}\label{}
 
@@ -782,75 +633,6 @@ Concerning the EPVP-VEL model, specifically with distances of 16 and 8 radii bet
 
 However, concerning the existence of a transverse gallery and adopting the constitutive parameters while considering the presence of lining, its influence is highly localized, spanning approximately four radii on each side from its axis. Consequently, there is no significant impact on the remaining convergence profile of the tunnels, except for the model with viscoelastic lining, where lower convergences occur after the gallery. 
 
-%As principais conclusões do estudo podem ser apresentadas numa breve secção de Conclusões, que pode ser autónoma ou constituir uma subsecção de uma secção de Discussão ou de Resultados e Discussão.
-
-%\section{Appendices}\label{}
-
-%Se houver mais do que um apêndice, estes devem ser identificados como A, B, etc. As fórmulas e equações dos apêndices devem ser numeradas separadamente: Eq. (A.1), Eq. (A.2), etc.; num apêndice seguinte,
-%Eq. (B.1) e assim por diante. O mesmo se aplica aos quadros e figuras: Tabe a A.1; Fig. A.1, etc.
-
-% Main text
-%\section{}\label{}
-
-% Numbered list
-% Use the style of numbering in square brackets.
-% If nothing is used, default style will be taken.
-%\begin{enumerate}[a)]
-%\item 
-%\item 
-%\item 
-%\end{enumerate}  
-
-% Unnumbered list
-%\begin{itemize}
-%\item 
-%\item 
-%\item 
-%\end{itemize}  
-
-% Description list
-%\begin{description}
-%\item[]
-%\item[] 
-%\item[] 
-%\end{description}  
-
-% Figure
-%\begin{figure}[<options>]
-%	\centering
-%		\includegraphics[<options>]{}
-%	  \caption{}\label{fig1}
-%\end{figure}
-%
-%
-%\begin{table}[<options>]
-%\caption{}\label{tbl1}
-%\begin{tabular*}{\tblwidth}{@{}LL@{}}
-%\toprule
-%  &  \\ % Table header row
-%\midrule
-% & \\
-% & \\
-% & \\
-% & \\
-%\bottomrule
-%\end{tabular*}
-%\end{table}
-
-% Uncomment and use as the case may be
-%\begin{theorem} 
-%\end{theorem}
-
-% Uncomment and use as the case may be
-%\begin{lemma} 
-%\end{lemma}
-
-%% The Appendices part is started with the command \appendix;
-%% appendix sections are then done as normal sections
-%% \appendix
-
-%\section{}\label{}
-%
 %% To print the credit authorship contribution details
 %\printcredits
 %
