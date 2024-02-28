@@ -148,7 +148,9 @@ As for transverse tunnels, these are generally built far enough behind the advan
 
 During the construction of the transverse tunnel, the surrounding rock mass is subjected to a redistribution of stresses, causing an additional load on the main tunnel, precisely in the intersection zone. If these additional loads exceed the load capacity of the primary support of the main tunnel, a potentially unstable region can develop, leading to failure, especially in adverse geotechnical conditions [\citenum{chortis2021a}].
 
-While convergence evolution in single tunnels is well-researched, studies on twin tunnels, especially concerning the connection region of the transverse gallery, are scarce. Additionally, the lining is commonly assumed to be linearly elastic. Therefore, this study aims to explore the influence of tunnel spacing and the gallery on the long-term convergence profile of twin tunnels. It employs coupled laws (elastoplastic-viscoplastic) for the rock mass and considers viscoelastic behavior for the lining. The analysis includes three-dimensional interaction, incorporating the construction process.
+While convergence evolution in single tunnels is well-researched, studies on twin tunnels, especially concerning the connection region of the transverse gallery, are scarce. Additionally, the lining is commonly assumed to be linearly elastic. Therefore, this study aims to explore the influence of tunnel spacing and the gallery on the long-term convergence profile of twin tunnels. It employs coupled laws (elastoplastic-viscoplastic) for the rock mass and considers viscoelastic behavior for the lining. The analysis includes three-dimensional interaction, incorporating the construction process. The domain is constructed parametrically using ANSYS Parametric Design Language (APDL) and the constitutive models are implemented into the same software utilizing the USERMAT customization tool. To ensure mesh convergence and numerical validity, the model undergoes examination through comparison with two analytical solutions for twin tunnels in a plane strain state.
+
+
 
 \section{Fundamental assumptions}\label{}
 
@@ -168,6 +170,8 @@ The main assumptions of the constitutive and computational modeling, as well as 
 	\item In contrast to the conditions present in tunnel construction, where the excavation and lining installation speed may change, we adopt a constant speed for a vertical excavation face with constant thickness concrete lining.
 	
 	\item The viscoelastic behavior of concrete can be influenced by temperature and humidity. However, in this study, temperature and humidity will be treated as constants.
+	
+	\item A friction model can be used to analyze the interaction between the lining and the rock mass. However, in this study, the interface is modeled rigidly (both elements of the rock mass and the lining share their nodes).
 
 	\item We will not consider dynamic excitations (involving earthquakes and explosions, for example) and inertial terms (density and acceleration). In other words, the evolution of deformations occurs in a quasi-static manner. We also adopt the hypothesis of small displacements.
 \end{enumerate}
