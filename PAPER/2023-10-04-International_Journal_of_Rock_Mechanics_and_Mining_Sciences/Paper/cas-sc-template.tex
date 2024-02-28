@@ -210,17 +210,17 @@ The plastic flow rule is given by:
 		\zerol, & \text{for } f \le 0 \\
 	\end{array}\right.,
 \end{equation}
-where $\dot \lambda$ is the plasticity multiplier and $g$ is a potencial flow analogous to $f$ to simulate the volume dilatation during the evolution of plastic deformations. However, for this analysis, was used associated plasticity, i.e., $g=f$. The plastic multiplier is obtained through the consistency condition $\dot f = 0$. Numerical details of this implementation can be found in [\citenum{quevedo2022b}]. For viscoplastic flow rule we have,
+where $\dot \lambda$ is the plasticity multiplier and $g$ is a potential flow function analogous to $f$ used to simulate the volume dilatation during the evolution of plastic deformations. However, for this analysis, was used associated plasticity, i.e., $g=f$. The plastic multiplier is obtained through the consistency condition $\dot f = 0$. Numerical details of this implementation can be found in [\citenum{quevedo2022b}]. For viscoplastic flow rule we have,
 \begin{equation}
 	\label{eq_viscoplastic_flow}
 	\dstrainv = \dot \lambda^{vp} \dfrac{\partial f^{vp}}{\partial \stress}
 \end{equation}
-In contrast to the plastic multiplier, the viscoplastic multiplier $\lambda^{vp}$ is independent of a consistency condition. As a result, its expression is explicit. For this study, we utilize the Perzyna model as follows:
+In contrast to the plastic multiplier, the viscoplastic multiplier $\lambda^{vp}$ is independent of a consistency condition. As a result, its expression is explicit. For this study, we utilize the Perzyna model [\citenum{perzyna1966}] as follows:
 \begin{equation} \label{eq_perzyna_model}
 	\dot \lambda^{vp} = \dfrac{\Phi(\stress,q^{vp})}{\eta}~~~\text{and}~~~\Phi = \left\langle  \dfrac{f^{vp}(\stress,q^{vp})}{f_0} \right\rangle^n, \,
 \end{equation} where $\Phi$ is the overstress function, $\eta$ is the dynamic viscosity constant, $n$ is the dimensionless parameter that gives the form of the power law, $f_0$ a parameter conveniently adopted and $\left\langle * \right\rangle$ is the McCauley function which is $0$ when $* <0$ , i.e. viscoplastic flow will only occur when the overstress function is positive.
 
-In this coupled model, when $\phi=\phi^{vp}$, cohesion entirely controls the evolution of local mechanical fields. Specifically, when  $c \rightarrow \infty$ and $c^{vp} \rightarrow \infty$, the system achieves a purely elastic solution. The solution becomes purely elastoviscoplastic with $c \rightarrow \infty$, while a pure elastoplastic solution emerges with $c^{vp} \rightarrow \infty$. In this study's coupled analysis, we have adopted $c^{vp} < c$, allowing the viscoplastic domain to occur without plasticity. However, in the presence of plasticity, viscous effects become inevitable. Fig.~\ref{epvpdomains} illustrates these domains in principal stress space.
+In this coupled model, when $\phi=\phi^{vp}$, cohesion entirely controls the evolution of local mechanical fields. Specifically, when  $c \rightarrow \infty$ and $c^{vp} \rightarrow \infty$, the system achieves a purely elastic solution. The solution becomes purely elastoviscoplastic with $c \rightarrow \infty$, while a pure elastoplastic solution emerges with $c^{vp} \rightarrow \infty$. In coupled analysis, we have adopted $c^{vp} < c$, allowing the viscoplastic domain to occur without plasticity. However, in the presence of plasticity, viscous effects become inevitable. Fig.~\ref{epvpdomains} illustrates these domains in principal stress space.
 \begin{figure}[h!]
 	\centering
 	\includegraphics[scale=0.8]{Elastic-plastic-viscoplastic domains.pdf}
@@ -232,7 +232,7 @@ Details of this model, including validations and its application in single tunne
 
 \section{Constitutive Model of the Lining}\label{}
 
-We implemented a viscoelastic model in ANSYS using the UPF/USERMAT customization feature [\citenum{ANSYS:2013b}]. The model simulates concrete creep through a Generalized Kelvin chain, based on Bažant and Prasannan's Solidification Theory [\citenum{bazant:1989a,bazant:1989b}], with parameter adjustments performed using the CEB-FIP MC90 formulation. The CEB-FIP MC90 formulation also [\citenum{CEB:1993}] determines the shrinkage component. 
+We implemented a viscoelastic model in ANSYS using the UPF/USERMAT customization feature [\citenum{ANSYS:2013b}]. The model simulates concrete creep through a Generalized Kelvin chain, based on Bažant and Prasannan's Solidification Theory [\citenum{bazant:1989a,bazant:1989b}], with parameter adjustments performed using the CEB-FIP MC90 formulation present in [\citenum{CEB:1993}]. The CEB-FIP MC90 formulation also determines the shrinkage component. 
 
 In this model, the constitutive relationship between stress and strain is 
 \begin{equation} \label{eq:8}
@@ -264,7 +264,9 @@ The problem domain $\Omega$ consists of a twin deep tunnel with a cross gallery,
 	\label{domain}
 \end{figure}
 \FloatBarrier
-The spatial discretization of the domain $\Omega$ corresponds to a mesh with trilinear hexahedral elements (SOLID 185, 8 nodes), except in the gallery region, which uses higher-order tetrahedral elements (SOLID186, 10 nodes). Fig.~\ref{Mesh1} shows the mesh, geometric parameters, and boundary conditions for the domain problem. We considered front, side, and bottom symmetry to reduce computational cost. In this discretization, $d_1$ is the distance between longitudinal tunnel axes, $R_i$ radius of the longitudinal tunnel, $L_2$ total excavated length, $d_3$ domain height, $L_1$ length of the unexcavated region, $L_3$ transversal length of the domain, $L_p$ step length of the excavation process, $d_2$ position of the gallery along the longitudinal tunnel. In conjunction with boundary pressure $p$, we apply the initial stress condition $\stress_0 = -p\onell$ at all integration points to simulate the initial state of an undisturbed rock mass. 
+
+
+This domain is parameterized based on the radius of the longitudinal tunnel $R_i$. The geometric parameters and boundary conditions for the domain problem are shown in Fig.~\ref{Mesh1}. We considered front, side, and bottom symmetry to reduce computational cost. In this domain, $d_1$ is the distance between longitudinal tunnel axes, $L_2$ total excavated length, $d_3$ domain height, $L_1$ length of the unexcavated region, $L_3$ transversal length of the domain, $L_p$ step length of the excavation process, $d_2$ position of the gallery along the longitudinal tunnel. In conjunction with boundary pressure $p$, we apply the initial stress condition $\stress_0 = -p\onell$ at all integration points to simulate the initial state of an undisturbed rock mass. The spatial discretization in Fig.~\ref{Mesh1} corresponds to a mesh with trilinear hexahedral elements (SOLID 185, 8 nodes), except in the gallery region, which uses higher-order tetrahedral elements (SOLID186, 10 nodes). 
 \begin{figure}[h!]
 	\centering
 	\includegraphics[scale=0.5]{Mesh1.pdf}
@@ -279,7 +281,7 @@ We divided the mesh into two regions: one near the tunnel (light gray), which we
 	\label{Mesh2}
 \end{figure}
 \FloatBarrier
-One of the aspects investigated in this work is the influence of the spacing $d_1$ between longitudinal tunnels of the twin tunnel. Fig.~\ref{Mesh3} and Fig.~\ref{Mesh4} illustrate the spatial discretization in the gallery region and its connection with the longitudinal tunnel considering spacings $d_1 = 16R_i, 8R_i$ and $4R_i$, respectively. We adopt the radius of the gallery as $2/3R_i$, and its lining has the same thickness as the longitudinal tunnel. The dimensions $d_5$ and $d_1$ define the size of the transition region comprising tetrahedral elements between the gallery and the rest of the domain. Fig.~\ref{Mesh5} shows half of this transition region inside the rock mass.
+One of the aspects investigated in this work is the influence of the spacing $d_1$ in the convergence of the twin tunnel. Fig.~\ref{Mesh3} and Fig.~\ref{Mesh4} illustrate the spatial discretization in the gallery region and its connection with the longitudinal tunnel considering spacings $d_1 = 16R_i, 8R_i$ and $4R_i$, respectively. We adopt the radius of the gallery as $2/3R_i$, and its lining has the same thickness as the longitudinal tunnel. The dimensions $d_5$ and $d_1$ define the size of the transition region comprising tetrahedral elements between the gallery and the rest of the domain. Fig.~\ref{Mesh5} shows half of this transition region inside the rock mass.
 \begin{figure}[h!]
 	\centering
 	\includegraphics[scale=0.8]{Mesh3.pdf}

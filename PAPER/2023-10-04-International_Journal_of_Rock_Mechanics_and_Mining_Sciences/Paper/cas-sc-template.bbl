@@ -1,4 +1,4 @@
-\begin{thebibliography}{20}
+\begin{thebibliography}{21}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \providecommand{\url}[1]{\texttt{#1}}
 \providecommand{\href}[2]{#2}
@@ -122,6 +122,13 @@ ANSYS, \bibinfo{year}{2013}.
 \newblock \bibinfo{journal}{International Journal of Rock Mechanics and Mining
   Sciences} \bibinfo{volume}{136}, \bibinfo{pages}{104475}.
 \newblock \DOIprefix\doi{https://doi.org/10.1016/j.ijrmms.2020.104475}.
+%Type = Incollection
+\bibitem[{Perzyna(1966)}]{perzyna1966}
+\bibinfo{author}{Perzyna, P.}, \bibinfo{year}{1966}.
+\newblock \bibinfo{title}{Fundamental problems in viscoplasticity}, in:
+  \bibinfo{booktitle}{Advances in applied mechanics}.
+  \bibinfo{publisher}{Elsevier}. volume~\bibinfo{volume}{9}, pp.
+  \bibinfo{pages}{243--377}.
 %Type = Phdthesis
 \bibitem[{Piepi(1995)}]{piepi1995}
 \bibinfo{author}{Piepi, G.T.}, \bibinfo{year}{1995}.

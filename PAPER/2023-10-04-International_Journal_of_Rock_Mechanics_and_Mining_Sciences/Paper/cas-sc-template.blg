@@ -5,58 +5,58 @@ Reallocating 'name_of_file' (item size: 1) to 17 items.
 The style file: cas-model2-names.bst
 Reallocating 'name_of_file' (item size: 1) to 9 items.
 Database file #1: cas-refs.bib
-I was expecting a `,' or a `}'---line 19 of file cas-refs.bib
+I was expecting a `,' or a `}'---line 37 of file cas-refs.bib
  :  
  :  DOI   = {http://dx.doi.org/10.4417/IJGCH-02-01-03},
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 83 of file cas-refs.bib
+I was expecting a `,' or a `}'---line 165 of file cas-refs.bib
  :  
  :  doi  ={https://doi.org/10.1007/s10706-020-01587-w}
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
 Warning--entry type for "quevedo2022thesis" isn't style-file defined
---line 164 of file cas-refs.bib
+--line 347 of file cas-refs.bib
 Reallocating 'singl_function' (item size: 4) to 100 items.
-You've used 20 entries,
+You've used 21 entries,
             2990 wiz_defined-function locations,
-            869 strings with 10468 characters,
-and the built_in function-call counts, 12261 in all, are:
-= -- 998
-> -- 366
-< -- 16
-+ -- 149
-- -- 123
-* -- 1248
-:= -- 1757
-add.period$ -- 70
-call.type$ -- 20
-change.case$ -- 138
-chr.to.int$ -- 16
-cite$ -- 20
-duplicate$ -- 970
-empty$ -- 956
-format.name$ -- 186
-if$ -- 2343
+            877 strings with 10582 characters,
+and the built_in function-call counts, 13005 in all, are:
+= -- 1062
+> -- 376
+< -- 19
++ -- 153
+- -- 126
+* -- 1312
+:= -- 1849
+add.period$ -- 72
+call.type$ -- 21
+change.case$ -- 144
+chr.to.int$ -- 17
+cite$ -- 21
+duplicate$ -- 1036
+empty$ -- 1026
+format.name$ -- 190
+if$ -- 2503
 int.to.chr$ -- 5
 int.to.str$ -- 1
-missing$ -- 165
-newline$ -- 125
-num.names$ -- 76
-pop$ -- 339
+missing$ -- 175
+newline$ -- 129
+num.names$ -- 80
+pop$ -- 362
 preamble$ -- 1
-purify$ -- 122
+purify$ -- 127
 quote$ -- 0
-skip$ -- 312
+skip$ -- 341
 stack$ -- 0
-substring$ -- 514
-swap$ -- 645
-text.length$ -- 3
+substring$ -- 557
+swap$ -- 688
+text.length$ -- 5
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 180
+type$ -- 189
 warning$ -- 0
-while$ -- 78
+while$ -- 84
 width$ -- 0
-write$ -- 319
+write$ -- 334
 (There were 2 error messages)
