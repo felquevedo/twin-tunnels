@@ -266,7 +266,7 @@ The problem domain $\Omega$ consists of a twin deep tunnel with a cross gallery,
 \FloatBarrier
 
 
-This domain is parameterized based on the radius of the longitudinal tunnel $R_i$. The geometric parameters and boundary conditions for the domain problem are shown in Fig.~\ref{Mesh1}. We considered front, side, and bottom symmetry to reduce computational cost. In this domain, $d_1$ is the distance between longitudinal tunnel axes, $L_2$ total excavated length, $d_3$ domain height, $L_1$ length of the unexcavated region, $L_3$ transversal length of the domain, $L_p$ step length of the excavation process, $d_2$ position of the gallery along the longitudinal tunnel. In conjunction with boundary pressure $\sigma_x, \sigma_y$ and $\sigma_z$, we apply the initial stress condition $\stress_0$ at all integration points to simulate the initial state of the rock mass. The spatial discretization in Fig.~\ref{Mesh1} corresponds to a mesh with trilinear hexahedral elements (SOLID 185, 8 nodes), except in the gallery region, which uses higher-order tetrahedral elements (SOLID186, 10 nodes). 
+This domain is parameterized based on the radius of the longitudinal tunnel $R_i$. The geometric parameters and boundary conditions for the domain problem are shown in Fig.~\ref{Mesh1}. We considered front, side, and bottom symmetry to reduce computational cost. In this domain, $d_1$ is the distance between longitudinal tunnel axes, $L_2$ total excavated length, $d_3$ domain height, $L_1$ length of the unexcavated region, $L_3$ transversal length of the domain, $L_p$ step length of the excavation process, $d_2$ position of the gallery along the longitudinal tunnel. In conjunction with boundary pressure $\sigma_x, \sigma_y$ and $\sigma_z$, we apply the initial stress condition $\stress_0 = -\sigma_x \boldsymbol{e}_x \otimes \boldsymbol{e}_x -\sigma_y \boldsymbol{e}_y \otimes \boldsymbol{e}_y -\sigma_z \boldsymbol{e}_z \otimes \boldsymbol{e}_z$ at all integration points to simulate the initial state of the rock mass. The spatial discretization in Fig.~\ref{Mesh1} corresponds to a mesh with trilinear hexahedral elements (SOLID 185, 8 nodes), except in the gallery region, which uses higher-order tetrahedral elements (SOLID186, 10 nodes). 
 \begin{figure}[h!]
 	\centering
 	\includegraphics[scale=0.5]{Mesh1.pdf}
@@ -281,7 +281,7 @@ We divided the mesh into two regions: one near the tunnel (light gray), which we
 	\label{Mesh2}
 \end{figure}
 \FloatBarrier
-One of the aspects investigated in this work is the influence of the spacing $d_1$ in the convergence of the twin tunnel. Fig.~\ref{Mesh3} and Fig.~\ref{Mesh4} illustrate the spatial discretization in the gallery region and its connection with the longitudinal tunnel considering spacings $d_1 = 16R_i, 8R_i$ and $4R_i$, respectively. We adopt the radius of the gallery as $2/3R_i$, and its lining has the same thickness as the longitudinal tunnel. The dimensions $d_5$ and $d_1$ define the size of the transition region comprising tetrahedral elements between the gallery and the rest of the domain. Fig.~\ref{Mesh5} shows half of this transition region inside the rock mass.
+One of the aspects investigated in this work is the influence of the spacing $d_1$ in the convergence of the twin tunnel. Fig.~\ref{Mesh3} and Fig.~\ref{Mesh4} illustrate the spatial discretization in the gallery region and its connection with the longitudinal tunnel considering spacings $d_1 = 16R_i, 8R_i$ and $4R_i$, respectively. We adopt the radius of the gallery as $2/3R_i$, and its lining has the same material and thickness as the longitudinal tunnel. The dimensions $d_5$ and $d_1$ define the size of the transition region comprising tetrahedral elements between the gallery and the rest of the domain. Fig.~\ref{Mesh5} shows half of this transition region inside the rock mass.
 \begin{figure}[h!]
 	\centering
 	\includegraphics[scale=0.8]{Mesh3.pdf}
@@ -332,7 +332,7 @@ The construction process is simulated through the deactivating and activating me
 		\hline
 		\multicolumn{4}{c}{Longitudinal tunnels} \\
 		\hline
-		Radius of the longitudinal tunnel & $R_i$ & m & 1 \\
+		Radius of the longitudinal tunnel & $R_i$ & m & $R_i$ \\
 		Thickness of the lining & $e$ & m & $0.1R_i$ \\
 		Step length of the excavation process & $L_p$ & m & $1/3R_i$ \\
 		Unlined length & $d_0$ & m & $2L_p$ \\
@@ -341,7 +341,7 @@ The construction process is simulated through the deactivating and activating me
 		\hline
 		\multicolumn{4}{c}{Gallery} \\
 		\hline
-		Radius of the gallery & $R_{i_1}$ & m & $2L_p$ \\
+		Radius of the gallery & $R_{i_1}$ & m & $2/3R_i$ \\
 		Thickness of the lining & $e_1$ & m & $0.1R_i$ \\
 		Step length of the excavation process \footnote{1} & $L_{p_1}$ & m & $0.3R_{i_1} ~0.3214R_{i_1} ~0.3387R_{i_1}$ \\
 		Unlined length & $d_{0_1}$ & m & $2L_{p_1}$ \\
@@ -366,7 +366,7 @@ After tunnel excavation, in time-dependent constitutive models, time continues t
 
 \section{Comparision with analytical solutions}\label{}
 
-To examine mesh convergence and validate the numerical model, we compared the numerical solution with the elastic and elastoplastic analytical solution in the plane state of deformations for twin tunnels. Guo et al. [\citenum{GUO2021}] develop an elastic analytical solution for the stress field around twin circular tunnels with hydrostatic pressure using the complex variable and the superposition principle. The Fig.~\ref{GUO_FIG1} shows the tangential stress distribution around the tunnel's boundary in this analytical solution with the numerical solution considering  $R_i = 4$ m, $E = 500$ MPa, $\nu =$ 0.23, $d_1 = 2R_i$, $p = 2.2$ MPa.
+To examine mesh convergence and validate the numerical model, we compared the numerical solution with the elastic and elastoplastic analytical solution in the plane state of deformations for twin tunnels. Guo et al. [\citenum{GUO2021}] develop an elastic analytical solution for the stress field around twin circular tunnels with hydrostatic pressure using the complex variable and the superposition principle. The Fig.~\ref{GUO_FIG1} shows the tangential stress distribution around the tunnel's boundary in this analytical solution with the numerical solution considering  $R_i = 4$ m, $E = 500$ MPa, $\nu =$ 0.23, $d_1 = 2R_i$, $\sigma_x = \sigma_y  = \sigma_z = 2.2$ MPa.
 \begin{figure}[h!]
 	\centering
 	\includegraphics[scale=1]{GUO_FIG1.pdf}
@@ -384,7 +384,7 @@ Ma et. al. [\citenum{MA2020}] developed an analytical solution for a perfectly p
 \end{figure}
 \FloatBarrier
 
-Fig.~\ref{MA_FIG2} displays the magnitude of displacements, radial, orthoradial, and z-direction stresses at the element level  for the case with $c=5$ MPa, $d_1=5$ m, $\sigma_x = \sigma_y = 30$ MPa. We adopted a case without excavating the gallery to assess the quality of the mesh. The smoothness observed in the solution between the elements indicates satisfactory discretization.
+Fig.~\ref{MA_FIG2} displays the magnitude of displacements, radial, orthoradial, and z-direction stresses at the element level  for the case with $c=5$ MPa, $d_1=5$ m, $\sigma_x = \sigma_y = \sigma_z = 30$ MPa. We adopted a case without excavating the gallery to assess the quality of the mesh. The smoothness observed in the solution between the elements indicates satisfactory discretization.
 
 \begin{figure}[h!]
 	\centering
@@ -396,7 +396,7 @@ Fig.~\ref{MA_FIG2} displays the magnitude of displacements, radial, orthoradial,
 
 \section{Numerical Results and Discussion}\label{}
 
-To develop the parametric analyses, we utilized the constitutive parameters of the rock mass as outlined in Piepi [\citenum{piepi1995}], and for the lining, we employed typical values for ordinary reinforced concrete. These parameters are shown in Table~\ref{table2}. In these analyses, an isotropic initial stress state of 9 MPa is considered, and the excavation speed is 12.5 m/day [\citenum{piepi1995}].
+To develop the parametric analyses, we utilized the constitutive parameters of the Callovo-Oxfordian clay rock mass as outlined in Piepi [\citenum{piepi1995}], and for the lining, we employed typical values for ordinary reinforced concrete. These parameters are shown in Table~\ref{table2}. In these analyses the excavation speed is 12.5 m/day.
 \begin{table}
 	\caption{Constitutive parameters used in the parametric analysis}
 	\label{table2}
@@ -412,11 +412,12 @@ To develop the parametric analyses, we utilized the constitutive parameters of t
 		\hline
 		\multicolumn{4}{c}{Constitutive model of rock mass} \\
 		\hline
+		Initial stress state (isotropic) & $\sigma_x, \sigma_y, \sigma_z$ & MPa & 9 \\
 		Young's modulus & $E$ & MPa & 1500 \\
 		Poisson's ratio & $\nu$ & adm & 0.498 \\
 		Plastic cohesion & $c$ & MPa & 4$\sqrt{3}/2$ \\
 		Plastic friction angle & $\phi$ & $^{\circ}$ & 0 \\
-		Viscoplastic Cohesion & $c_{vp}$ & MPa & 2$\sqrt{3}/2$ \\
+		Viscoplastic cohesion & $c_{vp}$ & MPa & 2$\sqrt{3}/2$ \\
 		Viscoplastic friction angle & $\phi_{vp}$ & $^{\circ}$ & $\phi$ \\
 		Power law parameter & $n$ & adm & 1 \\
 		Reference parameter & $f_0$ & MPa & 1 \\
@@ -432,7 +433,7 @@ To develop the parametric analyses, we utilized the constitutive parameters of t
 		Coefficient which depends on the type of cement & $s$ & adm & 0.2 \\
 		Relative humidity of ambient environment & $RH$ & \% & 70 \\
 		Fictitious thickness (longitudinal tunnel) & $h_f$ & cm & 0.2111 \\
-		Fictitious thickness (transverse gallery) & $h_f$ & cm & 0.2176 \\
+		Fictitious thickness (transverse gallery) & $h_{f_1}$ & cm & 0.2176 \\
 		Drying time of the concrete & $t_s$ & days & 7 \\
 		Coefficient in shrinkage which depends on the type of cement & $\beta_{sc}$ & adm & 8 \\
 		Temperature & $T$ & $^\circ$C & 20$^\circ$ \\
