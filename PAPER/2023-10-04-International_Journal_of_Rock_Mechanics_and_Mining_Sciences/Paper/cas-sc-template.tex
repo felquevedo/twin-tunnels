@@ -138,7 +138,7 @@ Chen et al. [\citenum{Chen2019}], through analytical solutions in elasticity usi
 
 Guo et al. [\citenum{GUO2021}] develop an elastic analytical solution for the stress field around twin circular tunnels with hydrostatic pressure using the complex variable and the superposition principle. They found that stress concentration in tunnel wall increased as the distance between the parallel tunnels decreased and the supporting pressure leads to the radial stress increasing and the tangential stress decreasing.
 
-Ma et al. [\citenum{MA2020}] proposed an analytical method, verified by a numerical solution using FLAC3D software for determining the plastic zones around deep circular twin tunnels without linings, restricting themselves where there is no overlap between the two plastic zones. In this case, the authors adopted the elastoplastic perfectly constitutive model for the homogeneous and isotropic rock mass, with the Mohr-Coulomb criterion. Also carried out parametric studies to understand the influence of the distance between the twin tunnels, cohesion, the angle of internal friction, and the vertical and horizontal initial stresses acting on the shape and depth of the plastic zones. These authors stated the plastic zone around the tunnel provides a relevant theoretical basis for defining and designing the support. In addition, they mention that an excessive plastic zone significantly affects the stability and functionality of a tunnel. Therefore, the delimitation of the plastic zone around tunnels is of great importance for the development of projects.
+Ma et al. [\citenum{MA2020}] proposed an analytical method, verified by a numerical solution using FLAC3D software for determining the plastic zones around deep circular twin tunnels without linings, restricting themselves where there is no overlap between the two plastic zones. In this case, the authors adopted the elastoplastic perfectly constitutive model for the homogeneous and isotropic rock mass, with the Mohr-Coulomb criterion. Also carried out parametric studies to understand the influence of the distance between the twin tunnels, cohesion, the angle of internal friction, and the vertical and horizontal initial stresses acting on the shape and depth of the plastic zones. These authors stated that the plastic zone around the tunnel provides a relevant theoretical basis for defining and designing the support. In that respect, an excessive plastic zone would significantly affect the stability and functionality of a tunnel. Reducing the extension of the plastic zone around tunnels is, therefore, of great importance in engineering tunnel design projects.
 
 Using parametric three-dimensional numerical analyses, Chortis and Kavvadas [\citenum{chortis2023a}, \citenum{chortis2023b}] investigated the effect of building a transverse tunnel that intersected deep twin tunnels perpendicularly, focusing the study on the axial forces and the circumferential and longitudinal bending moments acting on the primary support of the intersection regions, respectively. According to the authors, the potential interaction between deep twin tunnels lined with shotcrete must be taken into account, especially when the distance between them is less than or equal to twice their diameter.
 
@@ -148,41 +148,44 @@ As for transverse tunnels, these are generally built far enough behind the advan
 
 During the construction of the transverse tunnel, the surrounding rock mass is subjected to a redistribution of stresses, causing an additional load on the main tunnel, precisely in the intersection zone. If these additional loads exceed the load capacity of the primary support of the main tunnel, a potentially unstable region can develop, leading to failure, especially in adverse geotechnical conditions [\citenum{chortis2021a}].
 
-While convergence evolution in single tunnels is well-researched, studies on twin tunnels, especially concerning the connection region of the transverse gallery, are scarce. Additionally, the lining is commonly assumed to be linearly elastic. Therefore, this study aims to explore the influence of tunnel spacing and the gallery on the long-term convergence profile of twin tunnels. It employs coupled laws (elastoplastic-viscoplastic) for the rock mass and considers viscoelastic behavior for the lining. The analysis includes three-dimensional interaction, incorporating the construction process. The domain is constructed parametrically using ANSYS Parametric Design Language (APDL) and the constitutive models are implemented into the same software utilizing the USERMAT customization tool. To ensure mesh convergence and numerical validity, the model undergoes examination through comparison with two analytical solutions for twin tunnels in a plane strain state.
+While the simulation of tunnel convergence in single tunnels has been widely investigated and reported in published literature, few works have addressed the computational evaluation of deformation in twin tunnels. Less attention has been dedicated to assessing the mutual mechanical interaction induced by the excavation of the transverse gallery connecting the twin tunnels. 
 
-
+In this context, the main contributions of this paper may be summarized at both the material and tunnel analysis levels. At the material level, the constitutive state equations of the rock mass are formulated within the framework of coupled plasticity-viscoplasticity, which is relevant for clayey rocks. Such a framework allows capturing the irreversible instantaneous tunnel response (plasticity) as well as the delayed irreversible response (viscoplasticity).  As regards the mechanical behavior of concrete material defining the lining, which is classically modeled through linear elastic relationships, the present analysis considers an aging viscoelastic rheological model relying upon the Bažant and Prasannan Solidification theory [\citenum{bazant:1989a,bazant:1989b}]. At the structure analysis level, the simulation of deformation in the highly interacting material system components (namely, rock mass and lining), resulting from the excavation process of twin tunnels and transverse gallery, is handled using finite element simulations performed in a three-dimensional setting. From the computational viewpoint, the constitutive models formulated for the rock mass and lining constituent are implemented into the same software utilizing the USERMAT customization tool of ANSYS standard software, together with the related numerical integration schemes.  In this context, the finite element analysis specifically investigates the three-dimensional interaction induced by the construction process, twin tunnels proximity, and the presence of the transverse gallery. 
 
 \section{Fundamental assumptions}\label{}
 
-The main assumptions of the constitutive and computational modeling, as well as related limitations, are summarized as follows:
+The basic assumptions of the constitutive and computational modeling, as well as related limitations, are summarized as follows:
 
 \begin{enumerate}[(a)]
-	\item Only the configuration of deep tunnels is considered, thus neglecting deformations caused by surface loads and settlements arising from the excavation process;
+	\item Only the configuration of deep tunnels shall be considered in the subsequent analysis, thus neglecting deformations caused by surface loads and settlements arising from the excavation process;
 
-	\item Although the natural complexity of the rock masses, this study assumes a homogeneous and isotropic medium. Even for jointed rock mass, this assumption is valid during homogenization if the Representative Elementary Volume (REV) is large enough in relation to the cracks and small enough compared to the tunnel.  
+	\item Although material heterogeneity and behavior anisotropy are inherent features of soils and rocks, the rock mass is modeled throughout the paper as a homogeneous and isotropic continuous medium. At the scale adopted for tunnel modeling (macroscopic scale), this assumption means in particular that the possible micro-heterogeneities, such isotropic distributions of joints or cracks present at the finer scale, are accounted for in the homogenized behavior by means of a preliminary homogenization process (e.g., [\citenum{nemat1993}, \citenum{deude2002}, \citenum{deBuhan2002}, \citenum{Marmier2007}, \citenum{Aguiar2023}]). Clearly enough, the framework of continuum modeling adopted in the paper would reveal questionable when the rock mass is cut by a few macro-scale fracture joints;  
 	
-	\item The rock mass is phenomenologically modeled using an elastoplastic-viscoplastic rheological law to capture instantaneous and long-term responses. This approach excludes  temperature gradients, water flow, and pore mechanics behavior;
+	\item The rock mass is phenomenologically modeled using an elastoplastic-viscoplastic rheological law to capture instantaneous and long-term responses. This approach disregards the aspect connected temperature gradients, water flow, and poromechanics coupling;
 
-	\item Despite the complexity of the internal stress state of the rock mass, due to its geological history, this study assumes a isotropic stress initial state. 
+	\item Despite the complexity of the stress distribution prevailing in the rock mass before the process of tunnel excavation, which is mainly affected by the geological history, the present study assumes a geostatic initial stress reflected by an isotropic state of stress.
 
-	\item Twin tunnels are often designed with a time gap between excavation fronts. In this study, we assume synchronous excavation to account for symmetry conditions.
+	\item Twin tunnels are often designed considering a time gap between excavation fronts. However, the finite element simulations assume synchronous excavation steps to ensure symmetry conditions.
 
-	\item In contrast to the conditions present in tunnel construction, where the excavation and lining installation speed may change, we adopt a constant speed for a vertical excavation face with constant thickness concrete lining.
+	\item The simulation excavation processes are curried out assuming a constant tunnel advancement rate (i.e., constant excavation speed), together with a constant thickness of concrete lining.
 	
-	\item The viscoelastic behavior of concrete can be influenced by temperature and humidity. However, in this study, temperature and humidity will be treated as constants.
+	\item Effects of temperature and humidity that may affect the viscoelastic behaviour of concrete lining are disregarded.
 	
-	\item A friction model can be used to analyze the interaction between the lining and the rock mass. However, in this study, the interface is modeled rigidly (both elements of the rock mass and the lining share their nodes).
+	\item Perfect bonding is assumed at the interface between concrete lining and the rock mas.
 
-	\item We will not consider dynamic excitations (involving earthquakes and explosions, for example) and inertial terms (density and acceleration). In other words, the evolution of deformations occurs in a quasi-static manner. We also adopt the hypothesis of small displacements.
+	\item The framework of infinitesimal strain analysis, together with quasi-static evolutions, is adopted in the paper. In particular, dynamic excitations and related inertial forces, such as those induced, for instance, by earthquakes or explosions, shall not be considered in the numerical analysis.
+	
 \end{enumerate}
 
 \section{Constitutive Model of the Rock Material}\label{}
 
-An elastoplastic-viscoplastic constitutive model was implemented in ANSYS using the UPF/USERMAT customization tool [\citenum{ANSYS:2013b}] to simulate rock mass.  This model is a serial association of the plastic and viscoplastic constitutive models, i.e., the total strain $\dstrain = \dstraine + \dstrainp + \dstrainv$, which leads to the following linear constitutive relationship:
+
+
+An elastoplastic-viscoplastic constitutive model is formulated and implemented in ANSYS using the UPF/USERMAT customization tool [\citenum{ANSYS:2013b}] to simulate the rock mass. This model assumes importance when conventional models like elastoplasticity or viscoplasticity are inadequate in describing material behavior. This is particularly important in clay rock mass such as those illustrated by Rousset for radioactive waste repositories [\citenum{rousset1988}]. Viscoplasticity models are unable to account the instantaneous plasticization that may arise during tunnel excavation. On the other hand, elastoplastic models fail to capture the temporal evolution of deformations. The elastoplastic-viscoplastic model is formulated based on a serial association of the elastoplastic and viscoplastic constitutive models. The local strain rate $\dstrain$ is split into three contributions $\dstrain = \dstraine + \dstrainp + \dstrainv$, and the constitutive relationships are therefore expressed as:
 \begin{equation} \label{eq_constitutive_relationship_epvp}
 	\dstress = \Dll : \dstraine = \Dll : (\dstrain - \dstrainp - \dstrainv),\;
 \end{equation}
-where $\dstraine$, $\dstrainp$ and $\dstrainv$, represent the elastic, plastic and viscoplastic strain rate, respectively and $\Dll$ denote the fourth-order isotropic elastic linear constitutive tensor. The one-dimensional representation in Fig.~\ref{reological_scheme} shows this association. 
+where $\dstress$ denotes the rate of the local Cauchy stress tensor and $\dstraine$, $\dstrainp$, $\dstrainv$, represent the elastic, plastic and viscoplastic strain rate, respectively and $\Dll$ denote the fourth-order isotropic elastic linear constitutive tensor. The one-dimensional representation in Fig.~\ref{reological_scheme} shows this association. 
 \begin{figure}[h!]
 	\centering
 	\includegraphics[scale=1]{Rheological representation.pdf}
@@ -232,7 +235,7 @@ Details of this model, including validations and its application in single tunne
 
 \section{Constitutive Model of the Lining}\label{}
 
-We implemented a viscoelastic model in ANSYS using the UPF/USERMAT customization feature [\citenum{ANSYS:2013b}]. The model simulates concrete creep through a Generalized Kelvin chain, based on Bažant and Prasannan's Solidification Theory [\citenum{bazant:1989a,bazant:1989b}], with parameter adjustments performed using the CEB-FIP MC90 formulation present in [\citenum{CEB:1993}]. The CEB-FIP MC90 formulation also determines the shrinkage component. 
+We implemented a viscoelastic model in ANSYS using the UPF/USERMAT customization feature [\citenum{ANSYS:2013b}]. The model simulates concrete creep through a Generalized Kelvin chain, based on Bažant and Prasannan's Solidification Theory [\citenum{bazant:1989a},  \citenum{bazant:1989b}], with parameter adjustments performed using the CEB-FIP MC90 formulation present in [\citenum{CEB:1993}]. The CEB-FIP MC90 formulation also determines the shrinkage component. 
 
 In this model, the constitutive relationship between stress and strain is 
 \begin{equation} \label{eq:8}

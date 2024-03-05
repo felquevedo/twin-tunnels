@@ -1,4 +1,4 @@
-\begin{thebibliography}{21}
+\begin{thebibliography}{27}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \providecommand{\url}[1]{\texttt{#1}}
 \providecommand{\href}[2]{#2}
@@ -11,6 +11,15 @@
 \providecommand{\Pubmed}[1]{\href{pmid:#1}{\path{#1}}}
 \providecommand{\bibinfo}[2]{#2}
 \ifx\xfnm\relax \def\xfnm[#1]{\unskip,\space#1}\fi
+%Type = Article
+\bibitem[{Aguiar and Maghous(2023)}]{Aguiar2023}
+\bibinfo{author}{Aguiar, C.B.}, \bibinfo{author}{Maghous, S.},
+  \bibinfo{year}{2023}.
+\newblock \bibinfo{title}{A micromechanics-based approach to damage propagation
+  criterion in viscoelastic fractured materials regarded as homogenized media}.
+\newblock \bibinfo{journal}{International Journal for Numerical and Analytical
+  Methods in Geomechanics} \bibinfo{volume}{47}, \bibinfo{pages}{936--971}.
+\newblock \DOIprefix\doi{https://doi.org/10.1002/nag.3500}.
 %Type = Manual
 \bibitem[{ANSYS()}]{ANSYS:2013b}
 ANSYS, \bibinfo{year}{2013}.
@@ -44,6 +53,17 @@ ANSYS, \bibinfo{year}{2013}.
 \newblock Ph.D. thesis. Ecole Nationale des Ponts et Chauss{\'e}es.
   \bibinfo{address}{Paris, French}.
 \newblock \URLprefix \url{https://theses.hal.science/tel-00529719/}.
+%Type = Article
+\bibitem[{de~Buhan et~al.(2002)de~Buhan, Fréard, Garnier and
+  Maghous}]{deBuhan2002}
+\bibinfo{author}{de~Buhan, P.}, \bibinfo{author}{Fréard, J.},
+  \bibinfo{author}{Garnier, D.}, \bibinfo{author}{Maghous, S.},
+  \bibinfo{year}{2002}.
+\newblock \bibinfo{title}{Failure properties of fractured rock masses as
+  anisotropic homogenized media}.
+\newblock \bibinfo{journal}{Journal of Engineering Mechanics}
+  \bibinfo{volume}{128}, \bibinfo{pages}{869--875}.
+\newblock \DOIprefix\doi{10.1061/(ASCE)0733-9399(2002)128:8(869)}.
 %Type = Manual
 \bibitem[{CEB-FIP(1993)}]{CEB:1993}
 \bibinfo{author}{CEB-FIP}, \bibinfo{year}{1993}.
@@ -95,6 +115,16 @@ ANSYS, \bibinfo{year}{2013}.
   rockmass}, in: \bibinfo{booktitle}{Expanding Underground-Knowledge and
   Passion to Make a Positive Impact on the World}. \bibinfo{publisher}{CRC
   Press}, pp. \bibinfo{pages}{1583--1591}.
+%Type = Article
+\bibitem[{Deudé et~al.(2002)Deudé, Dormieux, Kondo and Maghous}]{deude2002}
+\bibinfo{author}{Deudé, V.}, \bibinfo{author}{Dormieux, L.},
+  \bibinfo{author}{Kondo, D.}, \bibinfo{author}{Maghous, S.},
+  \bibinfo{year}{2002}.
+\newblock \bibinfo{title}{Micromechanical approach to nonlinear poroelasticity:
+  Application to cracked rocks}.
+\newblock \bibinfo{journal}{Journal of Engineering Mechanics}
+  \bibinfo{volume}{128}, \bibinfo{pages}{848--855}.
+\newblock \DOIprefix\doi{10.1061/(ASCE)0733-9399(2002)128:8(848)}.
 %Type = Inproceedings
 \bibitem[{Fortsakis et~al.(2012)Fortsakis, Bekri, Prountzopoulos and
   Marinos}]{Fortsakis2021}
@@ -122,6 +152,22 @@ ANSYS, \bibinfo{year}{2013}.
 \newblock \bibinfo{journal}{International Journal of Rock Mechanics and Mining
   Sciences} \bibinfo{volume}{136}, \bibinfo{pages}{104475}.
 \newblock \DOIprefix\doi{https://doi.org/10.1016/j.ijrmms.2020.104475}.
+%Type = Article
+\bibitem[{Marmier et~al.(2007)Marmier, Jeannin and Barthélémy}]{Marmier2007}
+\bibinfo{author}{Marmier, R.}, \bibinfo{author}{Jeannin, L.},
+  \bibinfo{author}{Barthélémy, J.F.}, \bibinfo{year}{2007}.
+\newblock \bibinfo{title}{Homogenized constitutive laws for rocks with
+  elastoplastic fractures}.
+\newblock \bibinfo{journal}{International Journal for Numerical and Analytical
+  Methods in Geomechanics} \bibinfo{volume}{31}, \bibinfo{pages}{1217--1237}.
+\newblock \DOIprefix\doi{https://doi.org/10.1002/nag.595}.
+%Type = Book
+\bibitem[{Nemat-Nasser and Hori(1993)}]{nemat1993}
+\bibinfo{author}{Nemat-Nasser, S.}, \bibinfo{author}{Hori, M.},
+  \bibinfo{year}{1993}.
+\newblock \bibinfo{title}{Micromechanics: overall properties of heterogeneous
+  materials}.
+\newblock \bibinfo{publisher}{North-Holland}.
 %Type = Incollection
 \bibitem[{Perzyna(1966)}]{perzyna1966}
 \bibinfo{author}{Perzyna, P.}, \bibinfo{year}{1966}.
@@ -170,6 +216,14 @@ ANSYS, \bibinfo{year}{2013}.
 \newblock \bibinfo{journal}{International Journal of Geomechanics}
   \bibinfo{volume}{22}.
 \newblock \DOIprefix\doi{10.1061/(ASCE)GM.1943-5622.0002512}.
+%Type = Phdthesis
+\bibitem[{Rousset(1988)}]{rousset1988}
+\bibinfo{author}{Rousset, G.}, \bibinfo{year}{1988}.
+\newblock \bibinfo{title}{Comportement mecanique des argiles profondes:
+  Application au stockage de d{\'e}chets radioactifts}.
+\newblock Ph.D. thesis. Ecole Nationale des Ponts et Chauss{\'e}es.
+  \bibinfo{address}{Paris, French}.
+\newblock \URLprefix \url{https://theses.hal.science/tel-00529719/}.
 %Type = Article
 \bibitem[{Spyridis and Bergmeister(2015)}]{Spyridis2015}
 \bibinfo{author}{Spyridis, P.}, \bibinfo{author}{Bergmeister, K.},

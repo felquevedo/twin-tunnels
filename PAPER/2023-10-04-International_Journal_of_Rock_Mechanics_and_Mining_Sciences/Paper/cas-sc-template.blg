@@ -5,58 +5,58 @@ Reallocating 'name_of_file' (item size: 1) to 17 items.
 The style file: cas-model2-names.bst
 Reallocating 'name_of_file' (item size: 1) to 9 items.
 Database file #1: cas-refs.bib
-I was expecting a `,' or a `}'---line 37 of file cas-refs.bib
+I was expecting a `,' or a `}'---line 61 of file cas-refs.bib
  :  
  :  DOI   = {http://dx.doi.org/10.4417/IJGCH-02-01-03},
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 165 of file cas-refs.bib
+I was expecting a `,' or a `}'---line 231 of file cas-refs.bib
  :  
  :  doi  ={https://doi.org/10.1007/s10706-020-01587-w}
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
 Warning--entry type for "quevedo2022thesis" isn't style-file defined
---line 347 of file cas-refs.bib
+--line 473 of file cas-refs.bib
 Reallocating 'singl_function' (item size: 4) to 100 items.
-You've used 21 entries,
+You've used 27 entries,
             2990 wiz_defined-function locations,
-            877 strings with 10582 characters,
-and the built_in function-call counts, 13005 in all, are:
-= -- 1062
-> -- 376
-< -- 19
-+ -- 153
-- -- 126
-* -- 1312
-:= -- 1849
-add.period$ -- 72
-call.type$ -- 21
-change.case$ -- 144
-chr.to.int$ -- 17
-cite$ -- 21
-duplicate$ -- 1036
-empty$ -- 1026
-format.name$ -- 190
-if$ -- 2503
+            916 strings with 11743 characters,
+and the built_in function-call counts, 16843 in all, are:
+= -- 1357
+> -- 516
+< -- 22
++ -- 209
+- -- 174
+* -- 1728
+:= -- 2409
+add.period$ -- 95
+call.type$ -- 27
+change.case$ -- 188
+chr.to.int$ -- 23
+cite$ -- 27
+duplicate$ -- 1325
+empty$ -- 1316
+format.name$ -- 258
+if$ -- 3224
 int.to.chr$ -- 5
 int.to.str$ -- 1
-missing$ -- 175
-newline$ -- 129
-num.names$ -- 80
-pop$ -- 362
+missing$ -- 230
+newline$ -- 164
+num.names$ -- 104
+pop$ -- 463
 preamble$ -- 1
-purify$ -- 127
+purify$ -- 167
 quote$ -- 0
-skip$ -- 341
+skip$ -- 426
 stack$ -- 0
-substring$ -- 557
-swap$ -- 688
+substring$ -- 715
+swap$ -- 890
 text.length$ -- 5
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 189
+type$ -- 240
 warning$ -- 0
-while$ -- 84
+while$ -- 106
 width$ -- 0
-write$ -- 334
+write$ -- 428
 (There were 2 error messages)
