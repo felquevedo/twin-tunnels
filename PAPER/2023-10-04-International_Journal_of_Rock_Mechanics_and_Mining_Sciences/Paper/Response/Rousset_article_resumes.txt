@@ -1,0 +1,22 @@
+- Modelos viscoplásticos incluindo o comportamento da deformação para interpretar a falha retardada apresentam boa concordância com a resposta de longo prazo da escavação revestida.
+
+- No entanto, esses modelos parecem ser inadequados para estudar a influência de eventos de curto prazo (fases de escavação e colocação do revestimento) na estabilidade final do túnel.
+
+- Esses modelos não acoplados sugerem que a pressão final depende principalmente da taxa da convergência no momento em que ocorre o contato do revestimento com o maciço.
+
+- Isso não é suficiente.
+
+- De fato, durante os estágios primários da escavação, o maciço rochoso circundante é submetido a cargas severas e altas taxas de deformação, que podem levar a falhas incontroláveis perto da parede do túnel.
+
+- Na prática o suporte primário de armaduras, concreto projetado ou anéis e arcos deslisáveis vizam levar em conta esse fenômeno.
+
+- Portanto, nesses casos é necessário considerar a resistência de curto prazo do material.
+
+- Por isso eles propõe um modelo reológico que inclui a viscoplasticidade para representar o comportamento tardio e a plasticidade instantânea com amolecimento da deformação para descrever a falha de curto prazo.
+
+
+Durante os estágios primários de escavação, o maciço rochoso circundante é submetido a caregas severeas e altas taxas de deformação, que podem levar a falhas perto da parede do túnel.
+
+
+
+Para muitos problemas em argilas profundas, o fenômeno dependente do tempo é significativo. Esse é o caso, por exemplo, do laboratório de Mol na Belgica. Contudo, modelos unicamente viscoplásticos não consideram a falha que pode ocorrer nos primeiros estágios de escavação. De fato, nessa fase, o maciço é submetido a cargas severas e altas taxas de deformação. Nesse caso, o acoplamento da plasticidade permite 
