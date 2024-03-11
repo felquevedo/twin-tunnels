@@ -14,6 +14,10 @@
 
 - Por isso eles propõe um modelo reológico que inclui a viscoplasticidade para representar o comportamento tardio e a plasticidade instantânea com amolecimento da deformação para descrever a falha de curto prazo.
 
+- Argilas com baixo teor de água
+
+
+
 
 Durante os estágios primários de escavação, o maciço rochoso circundante é submetido a caregas severeas e altas taxas de deformação, que podem levar a falhas perto da parede do túnel.
 
