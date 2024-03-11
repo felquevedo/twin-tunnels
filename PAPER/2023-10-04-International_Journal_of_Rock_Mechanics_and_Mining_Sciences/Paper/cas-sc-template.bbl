@@ -50,8 +50,8 @@ ANSYS, \bibinfo{year}{2013}.
 \bibinfo{author}{Bernaud, D.}, \bibinfo{year}{1991}.
 \newblock \bibinfo{title}{Tunnels profonds dans les milieux viscoplastiques:
   approches exp{\'e}rimentale et num{\'e}rique}.
-\newblock Ph.D. thesis. Ecole Nationale des Ponts et Chauss{\'e}es.
-  \bibinfo{address}{Paris, French}.
+\newblock \bibinfo{type}{Ph.{D}. {T}hesis (in french)}. Ecole Nationale des
+  Ponts et Chauss{\'e}es. \bibinfo{address}{Paris, France}.
 \newblock \URLprefix \url{https://theses.hal.science/tel-00529719/}.
 %Type = Inproceedings
 \bibitem[{Bernaud and Rousset(1993)}]{Bernaud1993}
@@ -205,41 +205,43 @@ ANSYS, \bibinfo{year}{2013}.
 \newblock \bibinfo{title}{Comportement viscoplastique avec rupture des argiles
   raides. Applications aux ouvrages souterrains}.
 \newblock Ph.D. thesis. Ecole Nationale des Ponts et Chauss{\'e}es.
-  \bibinfo{address}{Paris, French}.
+  \bibinfo{address}{Paris, France}.
 \newblock \URLprefix \url{https://pastel.hal.science/tel-00523616/document}.
-%Type = Masterthesis
-\bibitem[{Quevedo(2017)}]{quevedo2017comportamento}
-\bibinfo{author}{Quevedo, F.P.M.}, \bibinfo{year}{2017}.
-\newblock \bibinfo{title}{Comportamento a longo prazo de t{\'u}neis profundos
-  revestidos com concreto: modelo em elementos finitos}.
-\newblock \bibinfo{type}{M.{S}. thesis}. Federal University of Rio Grande do
-  Sul. \bibinfo{address}{Porto Alegre, Brazil}.
-\newblock \URLprefix \url{https://lume.ufrgs.br/handle/10183/163886}.
-%Type = Misc
-\bibitem[{Quevedo(2021)}]{quevedo2022thesis}
-\bibinfo{author}{Quevedo, F.P.M.}, \bibinfo{year}{2021}.
-\newblock \bibinfo{title}{An{\'a}lise computacional das deformações em
-  t{\'u}neis profundos considerando o acoplamento
-  plasticidade-viscoplasticidade}.
-\newblock \URLprefix \url{https://lume.ufrgs.br/handle/10183/239617}.
 %Type = Article
-\bibitem[{Quevedo et~al.(2022a)Quevedo, Bernaud and Campos~Filho}]{quevedo2022}
-\bibinfo{author}{Quevedo, F.P.M.}, \bibinfo{author}{Bernaud, D.},
-  \bibinfo{author}{Campos~Filho, A.}, \bibinfo{year}{2022}a.
-\newblock \bibinfo{title}{Numerical analysis of deep tunnels in viscoplastic
-  rock mass considering the creep and shrinkage of the concrete lining}.
-\newblock \bibinfo{journal}{International Journal of Geomechanics}
-  \bibinfo{volume}{22}.
-\newblock \DOIprefix\doi{10.1061/(ASCE)GM.1943-5622.0002282}.
-%Type = Article
-\bibitem[{Quevedo et~al.(2022b)Quevedo, Bernaud and S.}]{quevedo2022b}
-\bibinfo{author}{Quevedo, F.P.M.}, \bibinfo{author}{Bernaud, D.},
-  \bibinfo{author}{S., M.}, \bibinfo{year}{2022}b.
+\bibitem[{Quevedo and S.(2022)}]{quevedo2022b}
+\bibinfo{author}{Quevedo, F. P.~M., B.D.}, \bibinfo{author}{S., M.},
+  \bibinfo{year}{2022}.
 \newblock \bibinfo{title}{Numerical integration scheme for coupled
   elastoplastic–viscoplastic constitutive law for tunnels}.
 \newblock \bibinfo{journal}{International Journal of Geomechanics}
   \bibinfo{volume}{22}.
 \newblock \DOIprefix\doi{10.1061/(ASCE)GM.1943-5622.0002512}.
+%Type = Masterthesis
+\bibitem[{Quevedo(2017)}]{quevedo2017comportamento}
+\bibinfo{author}{Quevedo, F.P.M.}, \bibinfo{year}{2017}.
+\newblock \bibinfo{title}{Comportamento a longo prazo de t{\'u}neis profundos
+  revestidos com concreto: modelo em elementos finitos}.
+\newblock \bibinfo{type}{Master {T}hesis (in portuguese)}. Federal University
+  of Rio Grande do Sul. \bibinfo{address}{Porto Alegre, Brazil}.
+\newblock \URLprefix \url{https://lume.ufrgs.br/handle/10183/163886}.
+%Type = Phdthesis
+\bibitem[{Quevedo(2021)}]{quevedo2022thesis}
+\bibinfo{author}{Quevedo, F.P.M.}, \bibinfo{year}{2021}.
+\newblock \bibinfo{title}{An{\'a}lise computacional das deformações em
+  t{\'u}neis profundos considerando o acoplamento
+  plasticidade-viscoplasticidade}.
+\newblock \bibinfo{type}{Ph.{D}. {T}hesis (in portuguese)}. Federal University
+  of Rio Grande do Sul. \bibinfo{address}{Porto Alegre, Brazil}.
+\newblock \URLprefix \url{https://lume.ufrgs.br/handle/10183/239617}.
+%Type = Article
+\bibitem[{Quevedo et~al.(2022)Quevedo, Bernaud and Campos~Filho}]{quevedo2022}
+\bibinfo{author}{Quevedo, F.P.M.}, \bibinfo{author}{Bernaud, D.},
+  \bibinfo{author}{Campos~Filho, A.}, \bibinfo{year}{2022}.
+\newblock \bibinfo{title}{Numerical analysis of deep tunnels in viscoplastic
+  rock mass considering the creep and shrinkage of the concrete lining}.
+\newblock \bibinfo{journal}{International Journal of Geomechanics}
+  \bibinfo{volume}{22}.
+\newblock \DOIprefix\doi{10.1061/(ASCE)GM.1943-5622.0002282}.
 %Type = Phdthesis
 \bibitem[{Rousset(1988)}]{rousset1988}
 \bibinfo{author}{Rousset, G.}, \bibinfo{year}{1988}.

@@ -150,9 +150,7 @@ During the construction of the transverse tunnel, the surrounding rock mass is s
 
 While the simulation of tunnel convergence in single tunnels has been widely investigated and reported in published literature, few works have addressed the computational evaluation of deformation in twin tunnels. Less attention has been dedicated to assessing the mutual mechanical interaction induced by the excavation of the transverse gallery connecting the twin tunnels. 
 
-In this context, the main contributions of this paper may be summarized at both the material and tunnel analysis levels. At the material level, the constitutive state equations of the rock mass are formulated within the framework of coupled plasticity-viscoplasticity, which is relevant for clayey rocks. Such a framework allows capturing the irreversible instantaneous tunnel response (plasticity) as well as the delayed irreversible response (viscoplasticity).  As regards the mechanical behavior of concrete material defining the lining, which is classically modeled through linear elastic relationships, the present analysis considers an aging viscoelastic rheological model relying upon the Bažant and Prasannan Solidification theory [\citenum{bazant:1989a,bazant:1989b}]. At the structure analysis level, the simulation of deformation in the highly interacting material system components (namely, rock mass and lining), resulting from the excavation process of twin tunnels and transverse gallery, is handled using finite element simulations performed in a three-dimensional setting. The 3D finite element model is essential for this analysis as it not only can represent a complex domain (such as the connection between longitudinal and transverse tunnels) but also enables simulation of the excavation process and lining placement through the activation-deactivation method. 
-
-From the computational viewpoint, the constitutive models formulated for the rock mass and lining constituent are implemented into the same software utilizing the UPF/USERMAT customization tool [\citenum{ANSYS:2013b}] of ANSYS standard software, together with the related numerical integration schemes.  In this context, the finite element analysis specifically investigates the three-dimensional interaction induced by the construction process, twin tunnels proximity, and the presence of the transverse gallery. 
+In this context, the main contributions of this paper may be summarized at both the material and tunnel analysis levels. At the material level, the constitutive state equations of the rock mass are formulated within the framework of coupled plasticity-viscoplasticity, which is relevant for clayey rocks. Such a framework allows capturing the irreversible instantaneous tunnel response (plasticity) as well as the delayed irreversible response (viscoplasticity).  As regards the mechanical behavior of concrete material defining the lining, which is classically modeled through linear elastic relationships, the present analysis considers an aging viscoelastic rheological model relying upon the Bažant and Prasannan Solidification theory [\citenum{bazant:1989a,bazant:1989b}]. At the structure analysis level, the simulation of deformation in the highly interacting material system components (namely, rock mass and lining), resulting from the excavation process of twin tunnels and transverse gallery, is handled using finite element simulations performed in a three-dimensional setting. From the computational viewpoint, the excavation process and lining placement are simulated by means of the activation/deactivation technique. The constitutive models formulated for the rock mass and lining constituent as well as the related numerical integration schemes are implemented into the same procedure UPF/USERMAT customization tool [\citenum{ANSYS:2013b}] of ANSYS standard software. The three-dimensional finite element analysis developed in this paper is specifically devised for addressing the three-dimensional interaction induced by the construction process, twin tunnels proximity, and the presence of the transverse gallery.
 
 \section{Fundamental assumptions}\label{}
 
@@ -171,9 +169,9 @@ The basic assumptions of the constitutive and computational modeling, as well as
 
 	\item The simulation excavation processes are curried out assuming a constant tunnel advancement rate (i.e., constant excavation speed), together with a constant thickness of concrete lining.
 	
-	\item Effects of temperature and humidity that may affect the viscoelastic behaviour of concrete lining are disregarded.
+	\item Effects of temperature and humidity that may affect the viscoelastic behavior of concrete lining are disregarded.
 	
-	\item Perfect bonding is assumed at the interface between concrete lining and the rock mas.
+	\item Perfect bonding is assumed at the interface between concrete lining and the rock mass.
 
 	\item The framework of infinitesimal strain analysis, together with quasi-static evolutions, is adopted in the paper. In particular, dynamic excitations and related inertial forces, such as those induced, for instance, by earthquakes or explosions, shall not be considered in the numerical analysis.
 	
@@ -181,9 +179,9 @@ The basic assumptions of the constitutive and computational modeling, as well as
 
 \section{Constitutive Model of the Rock Material}\label{}
 
-For many deep clay rock formations, the time-dependent phenomenon holds significant importance. And viscoplastic models are traditionally used for this modeling. However, viscoplastic models alone fail to consider the potential failure during the stages of excavation. Indeed, during this early stage, the rock mass is subjected to severe loads and high strain rates which can affect the long-term response. In such scenarios, the incorporation of coupled plasticity allows the consideration of the redistribution of stresses due to failure process. This study will adopt the elastoplastic-viscoplastic model initially developed by Rousset in his investigation of radioactive waste repositories in Boom clay [\citenum{Nguyen1987},\citenum{rousset1988}]. Other subsequent studies considering this feature in single tunnels are in [\citenum{Bernaud1993}, \citenum{piepi1995}, \citenum{GIRAUD1996}] and only a summary of this model will be presented here. More details, including validations and its application in a single tunnel also can be found in [\citenum{quevedo2022b}]. For details of the implementation of this model at USERMAT, see [\citenum{quevedo2022thesis}]. 
+Time-dependent phenomena associated with the delayed behavior of the constitutive material are key aspects of deformation in tunnel structures excavated in deep clayey rocks (see for instance [\citenum{rousset1988}, \citenum{Nguyen1987}] or [\citenum{GIRAUD1996}], to cite a few). In most computational analyses developed for tunnel engineering design, this issue is generally addressed by means of viscoplastic constitutive behavior. While such constitutive models could relevantly model the transient and long-term deformation, they seem however inadequate to capture the influence of short-term events (tunnelling and support placement phases) on the final stability of the structure. In particular, an analysis of tunnel deformation based on a viscoplastic model would suggest that the ultimate support pressure at tunnel strucure equilibrium mainly depends on the closure rate at the moment when the contact between lining and rock mass is achieved (e. g., [\citenum{Nguyen1987}]), thus disregarding the irreversible effects rising in the initial construction phases. Indeed, during the primary stages of tunnel excavation, the surrounding rock mass is subjected to severe loading conditions and hight strain rates, which may lead to yielding associated with high instantaneous irreversible strains near the tunnel wall, and can therefore affect the long-term equilibrium of the structure. It is thus of fundamental concern to formulate a constitutive model that incorporates both instantaneous and delayed irreversible components of the rock material. For this purpose, the present analysis considers a constitutive model that includes both instantaneous plasticity to describe shorth-term material yielding and viscoplasticity to represent delayed behavior. The formulation of the coupled plasticity-viscoplasticity rheological model is based on that originally proposed in [\citenum{Nguyen1987}] and [\citenum{rousset1988}]. Previous studies have implemented this plastic-viscoplastic model for computational analysis of deformation in single tunnels (e.g., [\citenum{Bernaud1993}, \citenum{piepi1995}, \citenum{GIRAUD1996}, \citenum{quevedo2022thesis}]. For the sake of brevity, only the main features of this constitutive model shall be summarized below.  Detailed description of the model, including application and validation in the context of single tunnel structures may be found in [\citenum{quevedo2022b}]. Finite element implementation of this model in the USERMAT procedure of  ANSYS software is also described in [\citenum{quevedo2022thesis}].
 
-This elastoplastic-viscoplastic model is formulated based on a serial association of the elastoplastic and viscoplastic constitutive models. The local strain rate $\dstrain$ is split into three contributions $\dstrain = \dstraine + \dstrainp + \dstrainv$, so that the constitutive relationships relating the Cauchy stress rate $\dstress$ and strain rate components can be written as:
+The elastoplastic-viscoplastic model is formulated based on a serial association of the elastoplastic and viscoplastic constitutive models. The local strain rate $\dstrain$ is split into three contributions $\dstrain = \dstraine + \dstrainp + \dstrainv$, so that the constitutive relationships relating the Cauchy stress rate $\dstress$ and strain rate components can be written as:
 \begin{equation} \label{eq_constitutive_relationship_epvp}
 	\dstress = \Dll : \dstraine = \Dll : (\dstrain - \dstrainp - \dstrainv).\;
 \end{equation}
@@ -221,7 +219,7 @@ where $\dot \lambda$ is the plasticity multiplier and $g$ is a potential flow fu
 	\label{eq_viscoplastic_flow}
 	\dstrainv = \dot \lambda^{vp} \dfrac{\partial f^{vp}}{\partial \stress}
 \end{equation}
-In contrast to the plastic multiplier, the viscoplastic multiplier $\lambda^{vp}$ is independent of a consistency like condition. As a result, its expression is explicit. Based on the framework of generalized Perzyna's overstress theory [\citenum{perzyna1966}], its expression may derived as follows:
+In contrast to the plastic multiplier, the viscoplastic multiplier $\lambda^{vp}$ is independent of a consistency like condition. As a result, its expression is explicit. Based on the framework of generalized Perzyna's overstress theory [\citenum{perzyna1966}], its expression may be derived as follows:
 \begin{equation} \label{eq_perzyna_model}
 	\dot \lambda^{vp} = \dfrac{\Phi(\stress,q^{vp})}{\eta}~~~\text{and}~~~\Phi = \left\langle  \dfrac{f^{vp}(\stress,q^{vp})}{f_0} \right\rangle^n, \,
 \end{equation} where $\Phi$ is the overstress function, $\eta$ is the dynamic viscosity constant, $n$ is the dimensionless parameter that gives the form of the power law, $f_0$ a parameter conveniently adopted and $\left\langle * \right\rangle$ is the McCauley function which is $0$ when $* <0$ , i.e. viscoplastic flow will only occur when the overstress function is positive.
@@ -236,41 +234,43 @@ In this coupled model, when $\phi=\phi^{vp}$, cohesion entirely controls the evo
 
 \section{Constitutive Model of the Lining}\label{}
 
-In a phenomenological way, the creep in the concrete represents a dimensional change in the material under the influence of the sustained loading while shrinkage is the decrease in volume caused by drying. Creep and shrinkage are complex phenomena and have a considerable effect on the performance of the concrete lining and in the long-term convergence of a tunnel, causing strain and stress distribution around the cavity of the tunnel. We implemented a concrete creep through a Generalized Kelvin chain, based on Bažant and Prasannan's Solidification Theory [\citenum{bazant:1989a},  \citenum{bazant:1989b}], with model parameter adjustments performed using the CEB-FIP MC90 formulation present in [\citenum{CEB:1993}]. Only a summary of this model will be presented. More details, including validations and their application in a single tunnel can be found in [\citenum{quevedo2022}] and details of the implementation at USERMAT are in [\citenum{quevedo2017comportamento}]. 
+Shrinkage and creep phenomena represent fundamental components of concrete deformation processes that are expected to naturally affect the instantaneous as well as the transient and long-term behavior of structures involving such material. However, most of the tunnel design analyses consider the concrete involved in lining systems as a linear elastic material. From a phenomenological point of view, creep of concrete refers to the time-dependent deformation induced by sustained loading, whereas shrinkage deformation refers to the volume decrease caused by drying. As far as deformation in tunnel structures is concerned, creep and shrinkage have an important effect on the performance of the concrete lining and consequently on its contribution to controlling the long-term convergence of the tunnel. To account for such constitutive features, the concrete creep deformation is addressed by means of an aging viscoelastic rheological model relying on Bažant and Prasannan Solidification Theory [\citenum{bazant:1989a},  \citenum{bazant:1989b}]. The viscoelastic model is described by a Generalized Kelvin-chain [Quevedo 2018 , \citenum{quevedo2022}] whose defining parameters are calibrated based on the CEB-FIP MC90 standard specifications formulation reported in [\citenum{CEB:1993}]. As regards the concrete deformation associated with shrinkage, the isotropic formulation proposed in CEB-FIP MC90 standard [\citenum{CEB:1993}] is adopted in the present modelling and subsequent computational analyses. Full details regarding model definition and related finite element implementation may be found in [\citenum{quevedo2017comportamento}] and [\citenum{quevedo2022}].
 
-Therefore, in this model, the constitutive relationship between stress and strain is 
+Accordingly, the constitutive equations for concrete lining relating the stress and strain rate can be expressed in the framework of infinitesimal strain analysis as:
 \begin{equation} \label{eq:8}
 	\dstress = \Dll : \dstraine = \Dll : \dstrain - \Dll : \dstrainsh - \Dllmod : \dstraincr\;
 \end{equation}
-where $\dstrainsh$  and $\dstraincr$ are the shrinkage and creep strain rate, respectively, while $\Dll$ and $\Dllmod$ denote the fourth-order isotropic elastic linear constitutive tensor and modified constitutive tensor that incorporates the aging of the concrete, respectively. Due to the time solution procedure the incremental relationship of the Eq.~(\ref{eq:8}) is given by:
+
+In the above relationship, $\dstrainsh$  and $\dstraincr$ are respectively the shrinkage and creep strain rates. The fourth-order tensors $\Dll$ and $\Dllmod$ refer to the isotropic elastic linear constitutive tensor and modified constitutive tensor that incorporate the aging viscoelastic properties of the concrete, respectively.
+
+For the numerical implementation purposes, relationship (\ref{eq:8}) may conveniently be written in incremental form: 
 \begin{equation} \label{eq:9}
 	\Delta \stress = \Dll : \Delta \strain - \Dll : \Delta \strainsh - \Dllmod : \Delta \straincr \;
 \end{equation}
-in which the increment of shrinkage strain is:
+
+As mentioned above, isotropic formulation is considered for shrinkage, so that increment of shrinkage strain reads:
 \begin{equation} \label{eq:10}
 	\Delta \strainsh =  \Delta \strainshCEB(t_{s}) \onell \;
 \end{equation}
-where $t_{s}$ represents the concrete curing time, and $\Delta \strainshCEB$ is the variation of magnitude of the concrete deformation by shrinkage, determined using the expressions of CEB-FIP MC90 [\citenum{CEB:1993}]. To calculate the increment of creep strain, denoted as $\Delta \straincr$, we use the incremental algorithm developed by Bažant and Prasannan [\citenum{bazant:1989a,bazant:1989b}], with an adjustment to incorporate CEB-FIP MC90 formulation. This adaptation is possible comparing the creep functions $J(t,t_0)$ of both references. This gives to the following equivalence:
+where $t_{s}$ represents the concrete curing time, and $\Delta \strainshCEB$ is the variation in magnitude of the concrete deformation associated with shrinkage (the dependency $\Delta \strainshCEB$ of on current time is omitted). The latter expression is determined based on CEB-FIP MC90 standard specifications [\citenum{CEB:1993}]. The increment of creep strain $\Delta \straincr$ is computed making use of the incremental algorithm developed by Bažant and Prasannan [\citenum{bazant:1989a,bazant:1989b}], together with a model calibration that incorporates CEB-FIP MC90 standard formulation [\citenum{CEB:1993}]. The latter procedure for model parameters identification is achieved by comparing the creep functions provided in references [\citenum{bazant:1989a,bazant:1989b}] and [\citenum{CEB:1993}], leading to the following equivalence:
 \begin{equation} \label{eq:11}
-	E_0 = E_c(t_0),~ \gamma_c(t-t_0)=\beta_c(t-t_0),~ \frac{1}{v(t)} = \frac{\phi_0}{E_{ci}} \text{  and  } \frac{1}{\eta(t)}=0 \;
+	E_0 = E_c(t_0),~ \gamma(t-t_0)=\beta_c(t-t_0),~ \frac{1}{v(t)} = \frac{\phi_0}{E_{ci}} \text{  and  } \frac{1}{\eta(t)} \to 0 \;
 \end{equation}
-in which, according to Bažant and Prasannan [\citenum{bazant:1989a,bazant:1989b}], $E_0$  is the modulus of elasticity of the concrete aggregates togheter with the microscopic particles of the cement paste, $\gamma_c(t-t_0)$ is the microviscoelastic deformation of the volume fraction of solidified concrete $v(t)$, $\eta(t)$ is the apparent macroscopic viscosity and, according to CEB-FIP MC90 [\citenum{CEB:1993}], $E_c(t_0)$ is the tangent elastic modulus of the concrete at the instant of loading application $t_0$, $\beta_c(t-t_0)$  is a coefficient that depends on the loading age $t-t_0$ , $\phi_0$ is a coefficient that depends on the age of the concrete at the instant of loading application and $E_{ci}$  the tangent elasticity modulus of the concrete at the age of 28 day.
-
-
+in which $t$ refers to the current time value and $t_0$ to the concrete age at the instant of load application (time interval $t-t_0$ is generally referred to as loading time or loading age). In Bažant and Prasannan [\citenum{bazant:1989a,bazant:1989b}] model, $E_0$ is the instantaneous elasticity modulus of the concrete formed aggregates and cement paste particles, $\gamma(t-t_0)$ is the microviscoelastic deformation of the volume fraction $v(t)$ of solidified concrete and $\eta(t)$  is the apparent macroscopic viscosity. In the CEB-FIP MC90 formulation [\citenum{CEB:1993}], $E_c(t_0)$ stands for the tangent elastic modulus of concrete at the instant of the loading application $t_0$, $\beta_c(t-t_0)$ is a coefficient that depends on the loading age $t-t_0$, $\phi_0(t_0)$ is a coefficient depending on the age $t_0$ of the concrete and $E_{ci}$ represents the tangent elasticity modulus of the concrete at the age of 28 day.
 
 \section{Spatial and time discretization of the domain}\label{}
 
-The problem domain $\Omega$ consists of a twin deep tunnel with a cross gallery, as shown in Fig.~\ref{domain}.
+The geometric layout of the modeled domain $\Omega$ consists of a twin deep tunnel with a transverse gallery, as shown in Fig.~\ref{domain}.
 \begin{figure}[h!]
 	\centering
 	\includegraphics[scale=1]{Domain.pdf}
-	\caption{Problem domain}
+	\caption{Geometric layout of the domain}
 	\label{domain}
 \end{figure}
 \FloatBarrier
 
 
-This domain is parameterized based on the radius of the longitudinal tunnel $R_i$. The geometric parameters and boundary conditions for the domain problem are shown in Fig.~\ref{Mesh1}. We considered front, side, and bottom symmetry to reduce computational cost. In this domain, $d_1$ is the distance between longitudinal tunnel axes, $L_2$ total excavated length, $d_3$ domain height, $L_1$ length of the unexcavated region, $L_3$ transversal length of the domain, $L_p$ step length of the excavation process, $d_2$ position of the gallery along the longitudinal tunnel. In conjunction with boundary pressure $\sigma_x, \sigma_y$ and $\sigma_z$, we apply the initial stress condition $\stress_0 = -\sigma_x \boldsymbol{e}_x \otimes \boldsymbol{e}_x -\sigma_y \boldsymbol{e}_y \otimes \boldsymbol{e}_y -\sigma_z \boldsymbol{e}_z \otimes \boldsymbol{e}_z$ at all integration points to simulate the initial state of the rock mass. The spatial discretization in Fig.~\ref{Mesh1} corresponds to a mesh with trilinear hexahedral elements (SOLID 185, 8 nodes), except in the gallery region, which uses higher-order tetrahedral elements (SOLID186, 10 nodes). 
+This domain is parameterized based on the radius of the longitudinal tunnel $R_i$. The geometric parameters and boundary conditions for the domain problem are shown in Fig.~\ref{Mesh1}. We considered front, side, and bottom symmetry to reduce computational cost. In this domain, $d_1$ is the distance between longitudinal tunnels axes, $L_2$ total excavated length, $d_3$ domain height, $L_1$ length of the unexcavated region, $L_3$ transversal length of the domain, $L_p$ step length of the excavation process, $d_2$ position of the gallery along the longitudinal tunnel. Together with boundary pressure $\sigma_x, \sigma_y$ and $\sigma_z$, we apply the initial stress condition $\stress_0 = -\sigma_x \boldsymbol{e}_x \otimes \boldsymbol{e}_x -\sigma_y \boldsymbol{e}_y \otimes \boldsymbol{e}_y -\sigma_z \boldsymbol{e}_z \otimes \boldsymbol{e}_z$ at all integration points to simulate the initial state of the rock mass. The spatial discretization in Fig.~\ref{Mesh1} corresponds to a mesh with trilinear hexahedral elements (SOLID 185, 8 nodes), except in the gallery region, which uses higher-order tetrahedral elements (SOLID186, 10 nodes). 
 \begin{figure}[h!]
 	\centering
 	\includegraphics[scale=0.5]{Mesh1.pdf}
@@ -285,7 +285,7 @@ We divided the mesh into two regions: one near the tunnel (light gray), which we
 	\label{Mesh2}
 \end{figure}
 \FloatBarrier
-One of the aspects investigated in this work is the influence of the spacing $d_1$ in the convergence of the twin tunnel. Fig.~\ref{Mesh3} and Fig.~\ref{Mesh4} illustrate the spatial discretization in the gallery region and its connection with the longitudinal tunnel considering spacings $d_1 = 16R_i, 8R_i$ and $4R_i$, respectively. We adopt the radius of the gallery as $2/3R_i$, and its lining has the same material and thickness as the longitudinal tunnel. The dimensions $d_5$ and $d_1$ define the size of the transition region comprising tetrahedral elements between the gallery and the rest of the domain. Fig.~\ref{Mesh5} shows half of this transition region inside the rock mass.
+One of the aspects investigated in this work is the influence of the spacing $d_1$ in the convergence of the longitudinal twin tunnel. Fig.~\ref{Mesh3} and Fig.~\ref{Mesh4} illustrate the spatial discretization in the gallery region and its connection with the longitudinal tunnel considering spacings $d_1 = 16R_i, 8R_i$ and $4R_i$, respectively. We adopt the radius of the gallery as $2/3R_i$, and its lining has the same material and thickness as the longitudinal tunnel. The dimensions $d_5$ and $d_1$ define the size of the transition region comprising tetrahedral elements between the gallery and the rest of the domain. Fig.~\ref{Mesh5} shows half of this transition region inside the rock mass.
 \begin{figure}[h!]
 	\centering
 	\includegraphics[scale=0.8]{Mesh3.pdf}
@@ -346,7 +346,7 @@ The construction process is simulated through the deactivating and activating me
 		\multicolumn{4}{c}{Gallery} \\
 		\hline
 		Radius of the gallery & $R_{i_1}$ & m & $2/3R_i$ \\
-		Thickness of the lining & $e_1$ & m & $0.1R_i$ \\
+		Thickness of the concrete lining & $e_1$ & m & $0.1R_i$ \\
 		Step length of the excavation process \footnote{1} & $L_{p_1}$ & m & $0.3R_{i_1} ~0.3214R_{i_1} ~0.3387R_{i_1}$ \\
 		Unlined length & $d_{0_1}$ & m & $2L_{p_1}$ \\
 		Speed of the excavation face & $V_{p_1}$ & m/day & 12.5 \\
@@ -361,7 +361,7 @@ The construction process is simulated through the deactivating and activating me
 		\hline
 	\end{tabular}
 	\normalsize
-	\\ \footnotemark[1]{$L_{p_1} \approx 1/3R_{i_1}$ in such a way that there are $n$ integer excavation steps in $d_1-2R_i$}
+	\\ \footnotemark[1]{{\footnotesize $L_{p_1} \approx 1/3R_{i_1}$ in such a way that there are $n$ integer excavation steps in $d_1-2R_i$}}
 \end{table}
 \FloatBarrier
 During tunnel construction, we determine the initial time increment for solution steps as $0.5t_p$ (for the longitudinal tunnel) and $0.5t_{p_1}$ (for the transverse gallery). ANSYS manages the time increment using the bisection method, halving the time step if there is no equilibrium convergence.
@@ -400,7 +400,7 @@ Fig.~\ref{MA_FIG2} displays the magnitude of displacements, radial, orthoradial,
 
 \section{Numerical Results and Discussion}\label{}
 
-To develop the parametric analyses, we utilized the constitutive parameters of the Callovo-Oxfordian clay rock mass as outlined in Piepi [\citenum{piepi1995}], and for the lining, we employed typical values for ordinary reinforced concrete. These parameters are shown in Table~\ref{table2}. In these analyses the excavation speed is 12.5 m/day.
+To develop the parametric analyses, we utilized the constitutive parameters of the Callovo-Oxfordian clay rock mass as outlined in Piepi [\citenum{piepi1995}], and for the lining, we employed typical values for ordinary reinforced concrete. These parameters are shown in Table~\ref{table2}. In these analyses the radius is $R_i = 1$ m and excavation speed is 12.5 m/day.
 \begin{table}
 	\caption{Constitutive parameters used in the parametric analysis}
 	\label{table2}
@@ -436,7 +436,7 @@ To develop the parametric analyses, we utilized the constitutive parameters of t
 		
 		Coefficient which depends on the type of cement & $s$ & adm & 0.2 \\
 		Relative humidity of ambient environment & $RH$ & \% & 70 \\
-		Fictitious thickness (longitudinal tunnel) & $h_f$ & cm & 0.2111 \\
+		Fictitious thickness\footnote{2} (longitudinal tunnel) & $h_f$ & cm & 0.2111 \\
 		Fictitious thickness (transverse gallery) & $h_{f_1}$ & cm & 0.2176 \\
 		Drying time of the concrete & $t_s$ & days & 7 \\
 		Coefficient in shrinkage which depends on the type of cement & $\beta_{sc}$ & adm & 8 \\
@@ -445,6 +445,7 @@ To develop the parametric analyses, we utilized the constitutive parameters of t
 		\hline
 	\end{tabular}
 	\normalsize
+	\\ \footnotemark[2]{{\footnotesize $h_f= [R_i^2 - (R_i-e)^2]/(R_i-e)$ for a circular tunnel cross-section with internal perimeter in contact with atmosphere}}
 \end{table}
 \FloatBarrier
 In presenting the results, $U_{eq}$ denotes the equilibrium convergence value at the convergence profile outside the region of influence of the excavation face and the gallery. When the gallery is present, the highest convergence value, $U_{peak}$ is highlighted at the gallery position. In addition, it is necessary to highlight some important points:
