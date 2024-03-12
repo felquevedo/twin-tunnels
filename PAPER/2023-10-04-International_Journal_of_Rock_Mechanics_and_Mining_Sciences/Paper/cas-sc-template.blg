@@ -10,60 +10,52 @@ I was expecting a `,' or a `}'---line 61 of file cas-refs.bib
  :  DOI   = {http://dx.doi.org/10.4417/IJGCH-02-01-03},
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 251 of file cas-refs.bib
+I was expecting a `,' or a `}'---line 231 of file cas-refs.bib
  :  
  :  doi  ={https://doi.org/10.1007/s10706-020-01587-w}
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-Too many commas in name 1 of "Quevedo, F. P. M., Bernaud, D. and Maghous S." for entry quevedo2022b
-while executing---line 1545 of file cas-model2-names.bst
-Too many commas in name 1 of "Quevedo, F. P. M., Bernaud, D. and Maghous S." for entry quevedo2022b
-while executing---line 1545 of file cas-model2-names.bst
 Reallocating 'singl_function' (item size: 4) to 100 items.
-Warning--empty booktitle in Nguyen1987
-Too many commas in name 1 of "Quevedo, F. P. M., Bernaud, D. and Maghous S." for entry quevedo2022b
-while executing---line 1636 of file cas-model2-names.bst
-Too many commas in name 1 of "Quevedo, F. P. M., Bernaud, D. and Maghous S." for entry quevedo2022b
-while executing---line 1636 of file cas-model2-names.bst
-You've used 30 entries,
+Warning--empty pages in Fortsakis2021
+You've used 31 entries,
             2990 wiz_defined-function locations,
-            943 strings with 12442 characters,
-and the built_in function-call counts, 19115 in all, are:
-= -- 1565
-> -- 562
-< -- 28
-+ -- 226
-- -- 189
-* -- 1946
-:= -- 2704
-add.period$ -- 104
-call.type$ -- 30
-change.case$ -- 209
+            950 strings with 12864 characters,
+and the built_in function-call counts, 19979 in all, are:
+= -- 1619
+> -- 612
+< -- 26
++ -- 246
+- -- 207
+* -- 2076
+:= -- 2827
+add.period$ -- 109
+call.type$ -- 31
+change.case$ -- 222
 chr.to.int$ -- 27
-cite$ -- 31
-duplicate$ -- 1502
-empty$ -- 1495
-format.name$ -- 290
-if$ -- 3696
-int.to.chr$ -- 4
+cite$ -- 32
+duplicate$ -- 1562
+empty$ -- 1550
+format.name$ -- 309
+if$ -- 3838
+int.to.chr$ -- 5
 int.to.str$ -- 1
-missing$ -- 260
-newline$ -- 179
-num.names$ -- 116
-pop$ -- 517
+missing$ -- 276
+newline$ -- 186
+num.names$ -- 120
+pop$ -- 533
 preamble$ -- 1
-purify$ -- 184
+purify$ -- 194
 quote$ -- 0
-skip$ -- 504
+skip$ -- 508
 stack$ -- 0
-substring$ -- 854
-swap$ -- 1020
-text.length$ -- 7
+substring$ -- 878
+swap$ -- 1083
+text.length$ -- 6
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 267
+type$ -- 276
 warning$ -- 1
-while$ -- 121
+while$ -- 124
 width$ -- 0
-write$ -- 475
-(There were 6 error messages)
+write$ -- 494
+(There were 2 error messages)
