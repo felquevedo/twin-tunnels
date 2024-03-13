@@ -1,286 +1,290 @@
 \begin{thebibliography}{31}
-\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+\providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \providecommand{\href}[2]{#2}
 \providecommand{\path}[1]{#1}
+\providecommand{\eprint}[1]{\href{http://arxiv.org/abs/#1}{\path{#1}}}
 \providecommand{\DOIprefix}{doi:}
 \providecommand{\ArXivprefix}{arXiv:}
 \providecommand{\URLprefix}{URL: }
 \providecommand{\Pubmedprefix}{pmid:}
 \providecommand{\doi}[1]{\href{http://dx.doi.org/#1}{\path{#1}}}
 \providecommand{\Pubmed}[1]{\href{pmid:#1}{\path{#1}}}
+\providecommand{\BIBand}{and}
 \providecommand{\bibinfo}[2]{#2}
-\ifx\xfnm\relax \def\xfnm[#1]{\unskip,\space#1}\fi
+\ifx\xfnm\undefined \def\xfnm[#1]{\unskip,\space#1}\fi
 %Type = Article
-\bibitem[{Aguiar and Maghous(2023)}]{Aguiar2023}
-\bibinfo{author}{Aguiar, C.B.}, \bibinfo{author}{Maghous, S.},
-  \bibinfo{year}{2023}.
-\newblock \bibinfo{title}{A micromechanics-based approach to damage propagation
-  criterion in viscoelastic fractured materials regarded as homogenized media}.
-\newblock \bibinfo{journal}{International Journal for Numerical and Analytical
-  Methods in Geomechanics} \bibinfo{volume}{47}, \bibinfo{pages}{936--971}.
-\newblock \DOIprefix\doi{https://doi.org/10.1002/nag.3500}.
-%Type = Manual
-\bibitem[{ANSYS()}]{ANSYS:2013b}
-ANSYS, \bibinfo{year}{2013}.
-\newblock \bibinfo{title}{ANSYS Programmer's Reference, release 15.0}.
-\newblock \bibinfo{address}{Canonsburg, Pennsylvania}.
-%Type = Article
-\bibitem[{Ba{\v{z}}ant and Prasannan(1989a)}]{bazant:1989a}
-\bibinfo{author}{Ba{\v{z}}ant, Z.P.}, \bibinfo{author}{Prasannan, S.},
-  \bibinfo{year}{1989}a.
-\newblock \bibinfo{title}{Solidification theory for concrete creep. {I}:
-  Formulation}.
-\newblock \bibinfo{journal}{Journal of Engineering Mechanics}
-  \bibinfo{volume}{115}, \bibinfo{pages}{1691--1703}.
-\newblock
-  \DOIprefix\doi{https://doi.org/10.1061/(ASCE)0733-9399(1989)115:8(1691)}.
-%Type = Article
-\bibitem[{Ba{\v{z}}ant and Prasannan(1989b)}]{bazant:1989b}
-\bibinfo{author}{Ba{\v{z}}ant, Z.P.}, \bibinfo{author}{Prasannan, S.},
-  \bibinfo{year}{1989}b.
-\newblock \bibinfo{title}{Solidification theory for concrete creep. {II}:
-  Verification and application}.
-\newblock \bibinfo{journal}{Journal of Engineering Mechanics}
-  \bibinfo{volume}{115}, \bibinfo{pages}{1704--1725}.
-\newblock
-  \DOIprefix\doi{https://doi.org/10.1061/(ASCE)0733-9399(1989)115:8(1704)}.
-%Type = Phdthesis
-\bibitem[{Bernaud(1991)}]{bernaud1991}
-\bibinfo{author}{Bernaud, D.}, \bibinfo{year}{1991}.
-\newblock \bibinfo{title}{Tunnels profonds dans les milieux viscoplastiques:
-  approches exp{\'e}rimentale et num{\'e}rique}.
-\newblock \bibinfo{type}{Ph.{D}. {T}hesis (in french)}. Ecole Nationale des
-  Ponts et Chauss{\'e}es. \bibinfo{address}{Paris, France}.
-\newblock \URLprefix \url{https://theses.hal.science/tel-00529719/}.
-%Type = Inproceedings
-\bibitem[{Bernaud and Rousset(1993)}]{Bernaud1993}
-\bibinfo{author}{Bernaud, D.}, \bibinfo{author}{Rousset, G.},
-  \bibinfo{year}{1993}.
-\newblock \bibinfo{title}{{L'essai de soutènement à convergence controlée}},
-  in: \bibinfo{booktitle}{Proc. of International Symposium, Geotechnical
-  Engineering of Hard Soils-Soft Rocks}, \bibinfo{address}{Athens}. pp.
-  \bibinfo{pages}{1381--1391}.
-%Type = Article
-\bibitem[{de~Buhan et~al.(2002)de~Buhan, Fréard, Garnier and
-  Maghous}]{deBuhan2002}
-\bibinfo{author}{de~Buhan, P.}, \bibinfo{author}{Fréard, J.},
-  \bibinfo{author}{Garnier, D.}, \bibinfo{author}{Maghous, S.},
-  \bibinfo{year}{2002}.
-\newblock \bibinfo{title}{Failure properties of fractured rock masses as
-  anisotropic homogenized media}.
-\newblock \bibinfo{journal}{Journal of Engineering Mechanics}
-  \bibinfo{volume}{128}, \bibinfo{pages}{869--875}.
-\newblock
-  \DOIprefix\doi{https://doi.org/10.1061/(ASCE)0733-9399(2002)128:8(869)}.
-%Type = Manual
-\bibitem[{CEB-FIP(1993)}]{CEB:1993}
-\bibinfo{author}{CEB-FIP}, \bibinfo{year}{1993}.
-\newblock \bibinfo{title}{CEB-FIP model code 1990: Design code}.
-\newblock \bibinfo{organization}{Comité Euro International du Béton and
-  Fédération Internationale de la Précontrainte (CEB-FIP)}.
+\bibitem[{Spyridis and Bergmeister(2015)}]{Spyridis2015}
+\bibinfo{author}{Spyridis\xfnm[ P.]}, \bibinfo{author}{Bergmeister\xfnm[ K.]}.
+\newblock \bibinfo{title}{Analysis of lateral openings in tunnel linings}.
+\newblock \bibinfo{journal}{Tunnelling and Underground Space Technology}
+  \bibinfo{year}{2015};\bibinfo{volume}{50}:\bibinfo{pages}{376--395}.
+\newblock \DOIprefix\doi{https://doi.org/10.1016/j.tust.2015.08.005}.
 %Type = Article
 \bibitem[{Chen et~al.(2019)Chen, Lin and Li}]{Chen2019}
-\bibinfo{author}{Chen, F.}, \bibinfo{author}{Lin, L.b.}, \bibinfo{author}{Li,
-  D.}, \bibinfo{year}{2019}.
+\bibinfo{author}{Chen\xfnm[ F.]}, \bibinfo{author}{Lin\xfnm[ L.b.]},
+  \bibinfo{author}{Li\xfnm[ D.]}.
 \newblock \bibinfo{title}{Analytic solutions for twin tunneling at great depth
   considering liner installation and mutual interaction between geomaterial and
   liners}.
 \newblock \bibinfo{journal}{Applied Mathematical Modelling}
-  \bibinfo{volume}{73}.
+  \bibinfo{year}{2019};\bibinfo{volume}{73}.
 \newblock \DOIprefix\doi{https://doi.org/10.1016/j.apm.2019.04.026}.
-%Type = Article
-\bibitem[{Chortis and Kavvadas(2021a)}]{chortis2021a}
-\bibinfo{author}{Chortis, F.}, \bibinfo{author}{Kavvadas, M.},
-  \bibinfo{year}{2021}a.
-\newblock \bibinfo{title}{Three-dimensional numerical analyses of perpendicular
-  tunnel intersections}.
-\newblock \bibinfo{journal}{Geotechnical and Geological Engineering}
-  \bibinfo{volume}{39}, \bibinfo{pages}{1771--1793}.
-%Type = Article
-\bibitem[{Chortis and Kavvadas(2021b)}]{chortis2021b}
-\bibinfo{author}{Chortis, F.}, \bibinfo{author}{Kavvadas, M.},
-  \bibinfo{year}{2021}b.
-\newblock \bibinfo{title}{Three-dimensional numerical investigation of the
-  interaction between twin tunnels}.
-\newblock \bibinfo{journal}{Geotechnical and Geological Engineering}
-  \bibinfo{volume}{39}, \bibinfo{pages}{5559--5585}.
-\newblock \DOIprefix\doi{https://doi.org/10.1007/s10706-021-01845-5}.
-%Type = Incollection
-\bibitem[{Chortis and Kavvadas(2023a)}]{chortis2023a}
-\bibinfo{author}{Chortis, F.}, \bibinfo{author}{Kavvadas, M.},
-  \bibinfo{year}{2023}a.
-\newblock \bibinfo{title}{3{D} numerical investigation of the axial forces
-  acting on tunnel junctions constructed in fractured/weathered to very blocky
-  rockmass}, in: \bibinfo{booktitle}{Expanding Underground-Knowledge and
-  Passion to Make a Positive Impact on the World}. \bibinfo{publisher}{CRC
-  Press}, pp. \bibinfo{pages}{1574--1582}.
-%Type = Incollection
-\bibitem[{Chortis and Kavvadas(2023b)}]{chortis2023b}
-\bibinfo{author}{Chortis, F.}, \bibinfo{author}{Kavvadas, M.},
-  \bibinfo{year}{2023}b.
-\newblock \bibinfo{title}{3{D} numerical investigation of the bending moments
-  acting on tunnel junctions constructed in fractured/weathered to very blocky
-  rockmass}, in: \bibinfo{booktitle}{Expanding Underground-Knowledge and
-  Passion to Make a Positive Impact on the World}. \bibinfo{publisher}{CRC
-  Press}, pp. \bibinfo{pages}{1583--1591}.
-%Type = Article
-\bibitem[{Deudé et~al.(2002)Deudé, Dormieux, Kondo and Maghous}]{deude2002}
-\bibinfo{author}{Deudé, V.}, \bibinfo{author}{Dormieux, L.},
-  \bibinfo{author}{Kondo, D.}, \bibinfo{author}{Maghous, S.},
-  \bibinfo{year}{2002}.
-\newblock \bibinfo{title}{Micromechanical approach to nonlinear poroelasticity:
-  Application to cracked rocks}.
-\newblock \bibinfo{journal}{Journal of Engineering Mechanics}
-  \bibinfo{volume}{128}, \bibinfo{pages}{848--855}.
-\newblock
-  \DOIprefix\doi{https://doi.org/10.1061/(ASCE)0733-9399(2002)128:8(848)}.
 %Type = Inproceedings
 \bibitem[{Fortsakis et~al.(2012)Fortsakis, Bekri, Prountzopoulos and
   Marinos}]{Fortsakis2021}
-\bibinfo{author}{Fortsakis, P.}, \bibinfo{author}{Bekri, E.},
-  \bibinfo{author}{Prountzopoulos, G.}, \bibinfo{author}{Marinos, P.},
-  \bibinfo{year}{2012}.
-\newblock \bibinfo{title}{Numerical analysis of twin tunnels interaction}, in:
-  \bibinfo{booktitle}{Proc. 1st Eastern European Tunnelling Conference},
-  \bibinfo{address}{Budapest, Hungary}.
+\bibinfo{author}{Fortsakis\xfnm[ P.]}, \bibinfo{author}{Bekri\xfnm[ E.]},
+  \bibinfo{author}{Prountzopoulos\xfnm[ G.]}, \bibinfo{author}{Marinos\xfnm[
+  P.]}.
+\newblock \bibinfo{title}{Numerical analysis of twin tunnels interaction}.
+\newblock In: \bibinfo{booktitle}{Proc. 1st Eastern European Tunnelling
+  Conference}. \bibinfo{address}{Budapest, Hungary}; \bibinfo{year}{2012},.
 %Type = Article
-\bibitem[{Giraud and Rousset(1996)}]{GIRAUD1996}
-\bibinfo{author}{Giraud, A.}, \bibinfo{author}{Rousset, G.},
-  \bibinfo{year}{1996}.
-\newblock \bibinfo{title}{Time-dependent behaviour of deep clays}.
-\newblock \bibinfo{journal}{Engineering Geology} \bibinfo{volume}{41},
-  \bibinfo{pages}{181--195}.
-\newblock \DOIprefix\doi{https://doi.org/10.1016/0013-7952(95)00000-3}.
+\bibitem[{Chortis and Kavvadas(2021{\natexlab{a}})}]{chortis2021a}
+\bibinfo{author}{Chortis\xfnm[ F.]}, \bibinfo{author}{Kavvadas\xfnm[ M.]}.
+\newblock \bibinfo{title}{Three-dimensional numerical analyses of perpendicular
+  tunnel intersections}.
+\newblock \bibinfo{journal}{Geotechnical and Geological Engineering}
+  \bibinfo{year}{2021}{\natexlab{a}};\bibinfo{volume}{39}:\bibinfo{pages}{1771--1793}.
+%Type = Article
+\bibitem[{Chortis and Kavvadas(2021{\natexlab{b}})}]{chortis2021b}
+\bibinfo{author}{Chortis\xfnm[ F.]}, \bibinfo{author}{Kavvadas\xfnm[ M.]}.
+\newblock \bibinfo{title}{Three-dimensional numerical investigation of the
+  interaction between twin tunnels}.
+\newblock \bibinfo{journal}{Geotechnical and Geological Engineering}
+  \bibinfo{year}{2021}{\natexlab{b}};\bibinfo{volume}{39}:\bibinfo{pages}{5559--5585}.
+\newblock \DOIprefix\doi{https://doi.org/10.1007/s10706-021-01845-5}.
 %Type = Article
 \bibitem[{Guo et~al.(2021)Guo, Liu and Zhu}]{GUO2021}
-\bibinfo{author}{Guo, Z.}, \bibinfo{author}{Liu, X.}, \bibinfo{author}{Zhu,
-  Z.}, \bibinfo{year}{2021}.
+\bibinfo{author}{Guo\xfnm[ Z.]}, \bibinfo{author}{Liu\xfnm[ X.]},
+  \bibinfo{author}{Zhu\xfnm[ Z.]}.
 \newblock \bibinfo{title}{An elastic solution for twin circular tunnels’
   stress in hydrostatic stress field}.
 \newblock \bibinfo{journal}{Geotechnical and Geological Engineering}
-  \bibinfo{volume}{39}, \bibinfo{pages}{1--11}.
+  \bibinfo{year}{2021};\bibinfo{volume}{39}:\bibinfo{pages}{1--11}.
 \newblock \DOIprefix\doi{https://doi.org/10.1007/s10706-021-01756-5}.
+%Type = Incollection
+\bibitem[{Chortis and Kavvadas(2023{\natexlab{a}})}]{chortis2023a}
+\bibinfo{author}{Chortis\xfnm[ F.]}, \bibinfo{author}{Kavvadas\xfnm[ M.]}.
+\newblock \bibinfo{title}{3{D} numerical investigation of the axial forces
+  acting on tunnel junctions constructed in fractured/weathered to very blocky
+  rockmass}.
+\newblock In: \bibinfo{booktitle}{Expanding Underground-Knowledge and Passion
+  to Make a Positive Impact on the World}. \bibinfo{publisher}{CRC Press};
+  \bibinfo{year}{2023}{\natexlab{a}}, p. \bibinfo{pages}{1574--1582}.
+%Type = Incollection
+\bibitem[{Chortis and Kavvadas(2023{\natexlab{b}})}]{chortis2023b}
+\bibinfo{author}{Chortis\xfnm[ F.]}, \bibinfo{author}{Kavvadas\xfnm[ M.]}.
+\newblock \bibinfo{title}{3{D} numerical investigation of the bending moments
+  acting on tunnel junctions constructed in fractured/weathered to very blocky
+  rockmass}.
+\newblock In: \bibinfo{booktitle}{Expanding Underground-Knowledge and Passion
+  to Make a Positive Impact on the World}. \bibinfo{publisher}{CRC Press};
+  \bibinfo{year}{2023}{\natexlab{b}}, p. \bibinfo{pages}{1583--1591}.
 %Type = Article
 \bibitem[{Ma et~al.(2020)Ma, Lu, Zeng and Cai}]{MA2020}
-\bibinfo{author}{Ma, Y.}, \bibinfo{author}{Lu, A.}, \bibinfo{author}{Zeng, X.},
-  \bibinfo{author}{Cai, H.}, \bibinfo{year}{2020}.
+\bibinfo{author}{Ma\xfnm[ Y.]}, \bibinfo{author}{Lu\xfnm[ A.]},
+  \bibinfo{author}{Zeng\xfnm[ X.]}, \bibinfo{author}{Cai\xfnm[ H.]}.
 \newblock \bibinfo{title}{Analytical solution for determining the plastic zones
   around twin circular tunnels excavated at great depth}.
 \newblock \bibinfo{journal}{International Journal of Rock Mechanics and Mining
-  Sciences} \bibinfo{volume}{136}, \bibinfo{pages}{104475}.
+  Sciences} \bibinfo{year}{2020};\bibinfo{volume}{136}:\bibinfo{pages}{104475}.
 \newblock \DOIprefix\doi{https://doi.org/10.1016/j.ijrmms.2020.104475}.
 %Type = Article
+\bibitem[{Ba{\v{z}}ant and Prasannan(1989{\natexlab{a}})}]{bazant:1989a}
+\bibinfo{author}{Ba{\v{z}}ant\xfnm[ Z.P.]}, \bibinfo{author}{Prasannan\xfnm[
+  S.]}.
+\newblock \bibinfo{title}{Solidification theory for concrete creep. {I}:
+  Formulation}.
+\newblock \bibinfo{journal}{Journal of Engineering Mechanics}
+  \bibinfo{year}{1989}{\natexlab{a}};\bibinfo{volume}{115}(\bibinfo{number}{8}):\bibinfo{pages}{1691--1703}.
+\newblock
+  \DOIprefix\doi{https://doi.org/10.1061/(ASCE)0733-9399(1989)115:8(1691)}.
+%Type = Article
+\bibitem[{Ba{\v{z}}ant and Prasannan(1989{\natexlab{b}})}]{bazant:1989b}
+\bibinfo{author}{Ba{\v{z}}ant\xfnm[ Z.P.]}, \bibinfo{author}{Prasannan\xfnm[
+  S.]}.
+\newblock \bibinfo{title}{Solidification theory for concrete creep. {II}:
+  Verification and application}.
+\newblock \bibinfo{journal}{Journal of Engineering Mechanics}
+  \bibinfo{year}{1989}{\natexlab{b}};\bibinfo{volume}{115}(\bibinfo{number}{8}):\bibinfo{pages}{1704--1725}.
+\newblock
+  \DOIprefix\doi{https://doi.org/10.1061/(ASCE)0733-9399(1989)115:8(1704)}.
+%Type = Manual
+\bibitem[{ANSYS(2013)}]{ANSYS:2013b}
+ANSYS.
+\newblock \bibinfo{title}{ANSYS Programmer's Reference, release 15.0}.
+\newblock \bibinfo{address}{Canonsburg, Pennsylvania}; \bibinfo{year}{2013}.
+%Type = Book
+\bibitem[{Nemat-Nasser and Hori(1993)}]{nemat1993}
+\bibinfo{author}{Nemat-Nasser\xfnm[ S.]}, \bibinfo{author}{Hori\xfnm[ M.]}.
+\newblock \bibinfo{title}{Micromechanics: overall properties of heterogeneous
+  materials}.
+\newblock \bibinfo{publisher}{North-Holland}; \bibinfo{year}{1993}.
+%Type = Article
+\bibitem[{Deudé et~al.(2002)Deudé, Dormieux, Kondo and Maghous}]{deude2002}
+\bibinfo{author}{Deudé\xfnm[ V.]}, \bibinfo{author}{Dormieux\xfnm[ L.]},
+  \bibinfo{author}{Kondo\xfnm[ D.]}, \bibinfo{author}{Maghous\xfnm[ S.]}.
+\newblock \bibinfo{title}{Micromechanical approach to nonlinear poroelasticity:
+  Application to cracked rocks}.
+\newblock \bibinfo{journal}{Journal of Engineering Mechanics}
+  \bibinfo{year}{2002};\bibinfo{volume}{128}(\bibinfo{number}{8}):\bibinfo{pages}{848--855}.
+\newblock
+  \DOIprefix\doi{https://doi.org/10.1061/(ASCE)0733-9399(2002)128:8(848)}.
+%Type = Article
+\bibitem[{de~Buhan et~al.(2002)de~Buhan, Fréard, Garnier and
+  Maghous}]{deBuhan2002}
+\bibinfo{author}{de~Buhan\xfnm[ P.]}, \bibinfo{author}{Fréard\xfnm[ J.]},
+  \bibinfo{author}{Garnier\xfnm[ D.]}, \bibinfo{author}{Maghous\xfnm[ S.]}.
+\newblock \bibinfo{title}{Failure properties of fractured rock masses as
+  anisotropic homogenized media}.
+\newblock \bibinfo{journal}{Journal of Engineering Mechanics}
+  \bibinfo{year}{2002};\bibinfo{volume}{128}(\bibinfo{number}{8}):\bibinfo{pages}{869--875}.
+\newblock
+  \DOIprefix\doi{https://doi.org/10.1061/(ASCE)0733-9399(2002)128:8(869)}.
+%Type = Article
 \bibitem[{Marmier et~al.(2007)Marmier, Jeannin and Barthélémy}]{Marmier2007}
-\bibinfo{author}{Marmier, R.}, \bibinfo{author}{Jeannin, L.},
-  \bibinfo{author}{Barthélémy, J.F.}, \bibinfo{year}{2007}.
+\bibinfo{author}{Marmier\xfnm[ R.]}, \bibinfo{author}{Jeannin\xfnm[ L.]},
+  \bibinfo{author}{Barthélémy\xfnm[ J.F.]}.
 \newblock \bibinfo{title}{Homogenized constitutive laws for rocks with
   elastoplastic fractures}.
 \newblock \bibinfo{journal}{International Journal for Numerical and Analytical
-  Methods in Geomechanics} \bibinfo{volume}{31}, \bibinfo{pages}{1217--1237}.
+  Methods in Geomechanics}
+  \bibinfo{year}{2007};\bibinfo{volume}{31}(\bibinfo{number}{10}):\bibinfo{pages}{1217--1237}.
 \newblock \DOIprefix\doi{https://doi.org/10.1002/nag.595}.
-%Type = Book
-\bibitem[{Nemat-Nasser and Hori(1993)}]{nemat1993}
-\bibinfo{author}{Nemat-Nasser, S.}, \bibinfo{author}{Hori, M.},
-  \bibinfo{year}{1993}.
-\newblock \bibinfo{title}{Micromechanics: overall properties of heterogeneous
-  materials}.
-\newblock \bibinfo{publisher}{North-Holland}.
+%Type = Article
+\bibitem[{Aguiar and Maghous(2023)}]{Aguiar2023}
+\bibinfo{author}{Aguiar\xfnm[ C.B.]}, \bibinfo{author}{Maghous\xfnm[ S.]}.
+\newblock \bibinfo{title}{A micromechanics-based approach to damage propagation
+  criterion in viscoelastic fractured materials regarded as homogenized media}.
+\newblock \bibinfo{journal}{International Journal for Numerical and Analytical
+  Methods in Geomechanics}
+  \bibinfo{year}{2023};\bibinfo{volume}{47}(\bibinfo{number}{6}):\bibinfo{pages}{936--971}.
+\newblock \DOIprefix\doi{https://doi.org/10.1002/nag.3500}.
+%Type = Phdthesis
+\bibitem[{Rousset(1988)}]{rousset1988}
+\bibinfo{author}{Rousset\xfnm[ G.]}.
+\newblock \bibinfo{title}{Comportement mecanique des argiles profondes:
+  Application au stockage de d{\'e}chets radioactifts}.
+\newblock \bibinfo{type}{Ph.{D}. {T}hesis (in french)}; Ecole Nationale des
+  Ponts et Chauss{\'e}es; \bibinfo{address}{Paris, France};
+  \bibinfo{year}{1988}.
+\newblock \URLprefix \url{https://theses.hal.science/tel-00529719/}.
 %Type = Inproceedings
 \bibitem[{Nguyen~Minh and Rousset(1987)}]{Nguyen1987}
-\bibinfo{author}{Nguyen~Minh, D.}, \bibinfo{author}{Rousset, G.},
-  \bibinfo{year}{1987}.
+\bibinfo{author}{Nguyen~Minh\xfnm[ D.]}, \bibinfo{author}{Rousset\xfnm[ G.]}.
 \newblock \bibinfo{title}{Influence of instantaneous failure on time dependent
-  behavior of underground galleries}, in: \bibinfo{booktitle}{The 28th U.S.
-  Symposium on Rock Mechanics (USRMS)}, \bibinfo{address}{Tucson, Arizona}. pp.
+  behavior of underground galleries}.
+\newblock In: \bibinfo{booktitle}{The 28th U.S. Symposium on Rock Mechanics
+  (USRMS)}. \bibinfo{address}{Tucson, Arizona}; \bibinfo{year}{1987}, p.
   \bibinfo{pages}{ARMA--87--0663}.
 \newblock \URLprefix
   \url{https://onepetro.org/ARMAUSRMS/proceedings-abstract/ARMA87/All-ARMA87/129838}.
-%Type = Incollection
-\bibitem[{Perzyna(1966)}]{perzyna1966}
-\bibinfo{author}{Perzyna, P.}, \bibinfo{year}{1966}.
-\newblock \bibinfo{title}{Fundamental problems in viscoplasticity}, in:
-  \bibinfo{booktitle}{Advances in applied mechanics}.
-  \bibinfo{publisher}{Elsevier}. volume~\bibinfo{volume}{9}, pp.
-  \bibinfo{pages}{243--377}.
+%Type = Article
+\bibitem[{Giraud and Rousset(1996)}]{GIRAUD1996}
+\bibinfo{author}{Giraud\xfnm[ A.]}, \bibinfo{author}{Rousset\xfnm[ G.]}.
+\newblock \bibinfo{title}{Time-dependent behaviour of deep clays}.
+\newblock \bibinfo{journal}{Engineering Geology}
+  \bibinfo{year}{1996};\bibinfo{volume}{41}(\bibinfo{number}{1}):\bibinfo{pages}{181--195}.
+\newblock \DOIprefix\doi{https://doi.org/10.1016/0013-7952(95)00000-3}.
+%Type = Inproceedings
+\bibitem[{Bernaud and Rousset(1993)}]{Bernaud1993}
+\bibinfo{author}{Bernaud\xfnm[ D.]}, \bibinfo{author}{Rousset\xfnm[ G.]}.
+\newblock \bibinfo{title}{{L'essai de soutènement à convergence controlée}}.
+\newblock In: \bibinfo{booktitle}{Proc. of International Symposium,
+  Geotechnical Engineering of Hard Soils-Soft Rocks}.
+  \bibinfo{address}{Athens}; \bibinfo{year}{1993}, p.
+  \bibinfo{pages}{1381--1391}.
 %Type = Phdthesis
 \bibitem[{Piepi(1995)}]{piepi1995}
-\bibinfo{author}{Piepi, G.T.}, \bibinfo{year}{1995}.
+\bibinfo{author}{Piepi\xfnm[ G.T.]}.
 \newblock \bibinfo{title}{Comportement viscoplastique avec rupture des argiles
-  raides. Applications aux ouvrages souterrains}.
-\newblock \bibinfo{type}{Ph.{D}. {T}hesis (in french)}. Ecole Nationale des
-  Ponts et Chauss{\'e}es. \bibinfo{address}{Paris, France}.
+  raides. applications aux ouvrages souterrains}.
+\newblock \bibinfo{type}{Ph.{D}. {T}hesis (in french)}; Ecole Nationale des
+  Ponts et Chauss{\'e}es; \bibinfo{address}{Paris, France};
+  \bibinfo{year}{1995}.
 \newblock \URLprefix \url{https://pastel.hal.science/tel-00523616/document}.
-%Type = Masterthesis
-\bibitem[{Quevedo(2017)}]{quevedo2017comportamento}
-\bibinfo{author}{Quevedo, F.P.M.}, \bibinfo{year}{2017}.
-\newblock \bibinfo{title}{Comportamento a longo prazo de t{\'u}neis profundos
-  revestidos com concreto: modelo em elementos finitos}.
-\newblock \bibinfo{type}{Master {T}hesis (in portuguese)}. Federal University
-  of Rio Grande do Sul. \bibinfo{address}{Porto Alegre, Brazil}.
-\newblock \URLprefix \url{https://lume.ufrgs.br/handle/10183/163886}.
 %Type = Phdthesis
 \bibitem[{Quevedo(2021)}]{quevedo2022thesis}
-\bibinfo{author}{Quevedo, F.P.M.}, \bibinfo{year}{2021}.
+\bibinfo{author}{Quevedo\xfnm[ F.P.M.]}.
 \newblock \bibinfo{title}{An{\'a}lise computacional das deformações em
   t{\'u}neis profundos considerando o acoplamento
   plasticidade-viscoplasticidade}.
-\newblock \bibinfo{type}{Ph.{D}. {T}hesis (in portuguese)}. Federal University
-  of Rio Grande do Sul. \bibinfo{address}{Porto Alegre, Brazil}.
+\newblock \bibinfo{type}{Ph.{D}. {T}hesis (in portuguese)}; Federal University
+  of Rio Grande do Sul; \bibinfo{address}{Porto Alegre, Brazil};
+  \bibinfo{year}{2021}.
 \newblock \URLprefix \url{https://lume.ufrgs.br/handle/10183/239617}.
 %Type = Article
-\bibitem[{Quevedo et~al.(2022a)Quevedo, Bernaud and Campos~Filho}]{quevedo2022}
-\bibinfo{author}{Quevedo, F.P.M.}, \bibinfo{author}{Bernaud, D.},
-  \bibinfo{author}{Campos~Filho, A.}, \bibinfo{year}{2022}a.
-\newblock \bibinfo{title}{Numerical analysis of deep tunnels in viscoplastic
-  rock mass considering the creep and shrinkage of the concrete lining}.
-\newblock \bibinfo{journal}{International Journal of Geomechanics}
-  \bibinfo{volume}{22}.
-\newblock \DOIprefix\doi{https://doi.org/10.1061/(ASCE)GM.1943-5622.0002282}.
-%Type = Article
-\bibitem[{Quevedo et~al.(2022b)Quevedo, Bernaud and S.}]{quevedo2022b}
-\bibinfo{author}{Quevedo, F.P.M.}, \bibinfo{author}{Bernaud, D.},
-  \bibinfo{author}{S., M.}, \bibinfo{year}{2022}b.
+\bibitem[{Quevedo et~al.(2022{\natexlab{a}})Quevedo, Bernaud and
+  Maghous}]{quevedo2022b}
+\bibinfo{author}{Quevedo\xfnm[ F.P.M.]}, \bibinfo{author}{Bernaud\xfnm[ D.]},
+  \bibinfo{author}{Maghous\xfnm[ S.]}.
 \newblock \bibinfo{title}{Numerical integration scheme for coupled
   elastoplastic–viscoplastic constitutive law for tunnels}.
 \newblock \bibinfo{journal}{International Journal of Geomechanics}
-  \bibinfo{volume}{22}.
+  \bibinfo{year}{2022}{\natexlab{a}};\bibinfo{volume}{22}(\bibinfo{number}{10}).
 \newblock \DOIprefix\doi{https://doi.org/10.1061/(ASCE)GM.1943-5622.0002512}.
+%Type = Phdthesis
+\bibitem[{Bernaud(1991)}]{bernaud1991}
+\bibinfo{author}{Bernaud\xfnm[ D.]}.
+\newblock \bibinfo{title}{Tunnels profonds dans les milieux viscoplastiques:
+  approches exp{\'e}rimentale et num{\'e}rique}.
+\newblock \bibinfo{type}{Ph.{D}. {T}hesis (in french)}; Ecole Nationale des
+  Ponts et Chauss{\'e}es; \bibinfo{address}{Paris, France};
+  \bibinfo{year}{1991}.
+\newblock \URLprefix \url{https://theses.hal.science/tel-00529719/}.
+%Type = Incollection
+\bibitem[{Perzyna(1966)}]{perzyna1966}
+\bibinfo{author}{Perzyna\xfnm[ P.]}.
+\newblock \bibinfo{title}{Fundamental problems in viscoplasticity}.
+\newblock In: \bibinfo{booktitle}{Advances in applied mechanics};
+  vol.~\bibinfo{volume}{9}. \bibinfo{publisher}{Elsevier};
+  \bibinfo{year}{1966}, p. \bibinfo{pages}{243--377}.
 %Type = Article
 \bibitem[{Quevedo et~al.(2018)Quevedo, Schmitz, Morsch, A. and
   Bernaud}]{quevedo2018}
-\bibinfo{author}{Quevedo, F.P.M.}, \bibinfo{author}{Schmitz, R.J.},
-  \bibinfo{author}{Morsch, I.B.}, \bibinfo{author}{A., C.F.},
-  \bibinfo{author}{Bernaud, D.}, \bibinfo{year}{2018}.
+\bibinfo{author}{Quevedo\xfnm[ F.P.M.]}, \bibinfo{author}{Schmitz\xfnm[ R.J.]},
+  \bibinfo{author}{Morsch\xfnm[ I.B.]}, \bibinfo{author}{A.\xfnm[ C.F.]},
+  \bibinfo{author}{Bernaud\xfnm[ D.]}.
 \newblock \bibinfo{title}{Customization of a software of finite elements to
   analysis of concrete structures: long-term effects}.
 \newblock \bibinfo{journal}{IBRACON Structures and Materials Journal}
-  \bibinfo{volume}{11}, \bibinfo{pages}{696--718}.
+  \bibinfo{year}{2018};\bibinfo{volume}{11}(\bibinfo{number}{4}):\bibinfo{pages}{696--718}.
 \newblock \DOIprefix\doi{https://doi.org/10.1590/S1983-41952018000400005}.
-%Type = Phdthesis
-\bibitem[{Rousset(1988)}]{rousset1988}
-\bibinfo{author}{Rousset, G.}, \bibinfo{year}{1988}.
-\newblock \bibinfo{title}{Comportement mecanique des argiles profondes:
-  Application au stockage de d{\'e}chets radioactifts}.
-\newblock \bibinfo{type}{Ph.{D}. {T}hesis (in french)}. Ecole Nationale des
-  Ponts et Chauss{\'e}es. \bibinfo{address}{Paris, France}.
-\newblock \URLprefix \url{https://theses.hal.science/tel-00529719/}.
 %Type = Article
-\bibitem[{Spyridis and Bergmeister(2015)}]{Spyridis2015}
-\bibinfo{author}{Spyridis, P.}, \bibinfo{author}{Bergmeister, K.},
-  \bibinfo{year}{2015}.
-\newblock \bibinfo{title}{Analysis of lateral openings in tunnel linings}.
-\newblock \bibinfo{journal}{Tunnelling and Underground Space Technology}
-  \bibinfo{volume}{50}, \bibinfo{pages}{376--395}.
-\newblock \DOIprefix\doi{https://doi.org/10.1016/j.tust.2015.08.005}.
+\bibitem[{Quevedo et~al.(2022{\natexlab{b}})Quevedo, Bernaud and
+  Campos~Filho}]{quevedo2022}
+\bibinfo{author}{Quevedo\xfnm[ F.P.M.]}, \bibinfo{author}{Bernaud\xfnm[ D.]},
+  \bibinfo{author}{Campos~Filho\xfnm[ A.]}.
+\newblock \bibinfo{title}{Numerical analysis of deep tunnels in viscoplastic
+  rock mass considering the creep and shrinkage of the concrete lining}.
+\newblock \bibinfo{journal}{International Journal of Geomechanics}
+  \bibinfo{year}{2022}{\natexlab{b}};\bibinfo{volume}{22}(\bibinfo{number}{4}).
+\newblock \DOIprefix\doi{https://doi.org/10.1061/(ASCE)GM.1943-5622.0002282}.
+%Type = Manual
+\bibitem[{CEB-FIP(1993)}]{CEB:1993}
+\bibinfo{author}{CEB-FIP\xfnm[]}.
+\newblock \bibinfo{title}{CEB-FIP model code 1990: Design code}.
+\newblock \bibinfo{organization}{Comité Euro International du Béton and
+  Fédération Internationale de la Précontrainte (CEB-FIP)};
+  \bibinfo{year}{1993}.
+%Type = Masterthesis
+\bibitem[{Quevedo(2017)}]{quevedo2017comportamento}
+\bibinfo{author}{Quevedo\xfnm[ F.P.M.]}.
+\newblock \bibinfo{title}{Comportamento a longo prazo de t{\'u}neis profundos
+  revestidos com concreto: modelo em elementos finitos}.
+\newblock \bibinfo{type}{Master {T}hesis (in portuguese)}; Federal University
+  of Rio Grande do Sul; \bibinfo{address}{Porto Alegre, Brazil};
+  \bibinfo{year}{2017}.
+\newblock \URLprefix \url{https://lume.ufrgs.br/handle/10183/163886}.
 %Type = Article
 \bibitem[{Zienkiewicz and Cormeau(1974)}]{zienkiewicz1974visco}
-\bibinfo{author}{Zienkiewicz, O.}, \bibinfo{author}{Cormeau, I.},
-  \bibinfo{year}{1974}.
+\bibinfo{author}{Zienkiewicz\xfnm[ O.]}, \bibinfo{author}{Cormeau\xfnm[ I.]}.
 \newblock \bibinfo{title}{Visco-plasticity—plasticity and creep in elastic
   solids—a unified numerical solution approach}.
 \newblock \bibinfo{journal}{International Journal for Numerical Methods in
-  Engineering} \bibinfo{volume}{8}, \bibinfo{pages}{821--845}.
+  Engineering}
+  \bibinfo{year}{1974};\bibinfo{volume}{8}(\bibinfo{number}{4}):\bibinfo{pages}{821--845}.
 \newblock \DOIprefix\doi{https://doi.org/10.1002/nme.v8:4}.
 
 \end{thebibliography}

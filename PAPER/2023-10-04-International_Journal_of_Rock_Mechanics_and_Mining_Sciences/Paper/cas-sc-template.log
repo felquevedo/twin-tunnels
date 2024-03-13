@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.12) (preloaded format=pdflatex 2023.1.18)  12 MAR 2024 20:29
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.12) (preloaded format=pdflatex 2023.1.18)  13 MAR 2024 18:45
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -644,13 +644,21 @@ Package: natbib 2010/09/13 8.31b (PWD, AO)
 LaTeX Info: Redefining \cite on input line 694.
 \c@NAT@ctr=\count329
 )
-(C:\Users\augus\AppData\Local\Programs\MiKTeX\tex/latex/placeins\placeins.sty
+(numcompress.sty
+Package: numcompress 2012/08/18 187 numcompress (CVR)
+
+
+Package numcompress Warning: ****************************************
+(numcompress)                Package numcompress v,187 loaded
+(numcompress)                [Compress numbers (CVR)]
+(numcompress)                ****************************************.
+
+) (C:\Users\augus\AppData\Local\Programs\MiKTeX\tex/latex/placeins\placeins.sty
 Package: placeins 2005/04/18  v 2.2
 )
 LaTeX Font Info:    Trying to load font information for T1+stix on input line 3
-4.
-
-(C:\Users\augus\AppData\Local\Programs\MiKTeX\tex/latex/stix\t1stix.fd
+6.
+ (C:\Users\augus\AppData\Local\Programs\MiKTeX\tex/latex/stix\t1stix.fd
 File: t1stix.fd 2015/04/17 v1.1.2-latex STIX T1 font definitions
 )
 (cas-sc-template.aux
@@ -678,39 +686,39 @@ LaTeX Warning: Label `' multiply defined.
 )
 \openout1 = `cas-sc-template.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for LS1/stix/m/n on input line 34.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for LS1/stix/m/n on input line 36.
 LaTeX Font Info:    Trying to load font information for LS1+stix on input line 
-34.
+36.
  (C:\Users\augus\AppData\Local\Programs\MiKTeX\tex/latex/stix\ls1stix.fd
 File: ls1stix.fd 2015/04/17 v1.1.2-latex STIX LS1 font definitions
 )
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for LS2/stix/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for LS2/stix/m/n on input line 36.
 LaTeX Font Info:    Trying to load font information for LS2+stix on input line 
-34.
+36.
 
 (C:\Users\augus\AppData\Local\Programs\MiKTeX\tex/latex/stix\ls2stix.fd
 File: ls2stix.fd 2015/04/17 v1.1.2-latex STIX LS2 font definitions
 )
-LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    ... okay on input line 36.
 
 (C:\Users\augus\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
 ii
@@ -737,9 +745,9 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 fg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-LaTeX Info: Command `\dddot' is already robust on input line 34.
-LaTeX Info: Command `\ddddot' is already robust on input line 34.
-Package hyperref Info: Link coloring ON on input line 34.
+LaTeX Info: Command `\dddot' is already robust on input line 36.
+LaTeX Info: Command `\ddddot' is already robust on input line 36.
+Package hyperref Info: Link coloring ON on input line 36.
  (cas-sc-template.out) (cas-sc-template.out)
 \@outlinefile=\write3
 \openout3 = `cas-sc-template.out'.
@@ -785,14 +793,14 @@ Package hyperref Info: Link coloring ON on input line 34.
 <graphical_abstract.pdf, id=3, 404.89905pt x 299.4921pt>
 File: graphical_abstract.pdf Graphic file (type pdf)
 <use graphical_abstract.pdf>
-Package pdftex.def Info: graphical_abstract.pdf  used on input line 109.
+Package pdftex.def Info: graphical_abstract.pdf  used on input line 111.
 (pdftex.def)             Requested size: 404.89804pt x 299.49136pt.
 LaTeX Font Info:    Trying to load font information for TS1+stix on input line 
-114.
+116.
 (C:\Users\augus\AppData\Local\Programs\MiKTeX\tex/latex/stix\ts1stix.fd
 File: ts1stix.fd 2015/04/17 v1.1.2-latex STIX TS1 font definitions
 )
-Underfull \hbox (badness 8113) in paragraph at lines 123--124
+Underfull \hbox (badness 8113) in paragraph at lines 125--126
 []\T1/stix/m/n/8 elastoplasticity-viscoplasticity cou-
  []
 
@@ -804,101 +812,101 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.0}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.127 \maketitle
+l.129 \maketitle
                  [0]
 LaTeX Font Info:    Trying to load font information for LS1+stixscr on input li
-ne 127.
+ne 129.
 
 (C:\Users\augus\AppData\Local\Programs\MiKTeX\tex/latex/stix\ls1stixscr.fd
 File: ls1stixscr.fd 2015/04/17 v1.1.2-latex STIX script LS1 font definitions
 )
 LaTeX Font Info:    Trying to load font information for LS2+stixex on input lin
-e 127.
+e 129.
 
 (C:\Users\augus\AppData\Local\Programs\MiKTeX\tex/latex/stix\ls2stixex.fd
 File: ls2stixex.fd 2015/04/17 v1.1.2-latex STIX extentions LS2 font definitions
 
 )
-LaTeX Font Info:    Trying to load font information for U+msa on input line 127
+LaTeX Font Info:    Trying to load font information for U+msa on input line 129
 .
 
 (C:\Users\augus\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 127
+LaTeX Font Info:    Trying to load font information for U+msb on input line 129
 .
 
 (C:\Users\augus\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Trying to load font information for LS1+stixfrak on input l
-ine 127.
+ine 129.
 
 (C:\Users\augus\AppData\Local\Programs\MiKTeX\tex/latex/stix\ls1stixfrak.fd
 File: ls1stixfrak.fd 2015/04/17 v1.1.2-latex STIX fraktur LS1 font definitions
 )
 LaTeX Font Info:    Trying to load font information for LS1+stixbb on input lin
-e 127.
+e 129.
 
 (C:\Users\augus\AppData\Local\Programs\MiKTeX\tex/latex/stix\ls1stixbb.fd
 File: ls1stixbb.fd 2015/04/17 v1.1.2-latex STIX blackboard LS1 font definitions
 
 )
 LaTeX Font Info:    Trying to load font information for LS2+stixcal on input li
-ne 127.
+ne 129.
 
 (C:\Users\augus\AppData\Local\Programs\MiKTeX\tex/latex/stix\ls2stixcal.fd
 File: ls2stixcal.fd 2015/04/17 v1.1.2-latex STIX calligraphic LS2 font definiti
 ons
 )
 LaTeX Font Info:    Trying to load font information for LS1+stixsf on input lin
-e 127.
+e 129.
 
 (C:\Users\augus\AppData\Local\Programs\MiKTeX\tex/latex/stix\ls1stixsf.fd
 File: ls1stixsf.fd 2015/04/17 v1.1.2-latex STIX sans-serif LS1 font definitions
 
 )
 LaTeX Font Info:    Trying to load font information for LS2+stixtt on input lin
-e 127.
+e 129.
 
 (C:\Users\augus\AppData\Local\Programs\MiKTeX\tex/latex/stix\ls2stixtt.fd
 File: ls2stixtt.fd 2015/04/17 v1.1.2-latex STIX typewriter LS2 font definitions
 
 )
-Overfull \hbox (117.0831pt too wide) detected at line 127
+Overfull \hbox (117.0831pt too wide) detected at line 129
 []
  []
 
 (cas-sc-template.abs)
 
-Package hyperref Warning: Ignoring empty anchor on input line 127.
+Package hyperref Warning: Ignoring empty anchor on input line 129.
 
 
-Package hyperref Warning: Ignoring empty anchor on input line 127.
+Package hyperref Warning: Ignoring empty anchor on input line 129.
 
 <thumbnails/cas-email.jpeg, id=44, 225.84375pt x 225.84375pt>
 File: thumbnails/cas-email.jpeg Graphic file (type jpg)
 <use thumbnails/cas-email.jpeg>
-Package pdftex.def Info: thumbnails/cas-email.jpeg  used on input line 127.
+Package pdftex.def Info: thumbnails/cas-email.jpeg  used on input line 129.
 (pdftex.def)             Requested size: 7.99838pt x 8.0pt.
 LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 1
-27.
+29.
 (C:\Users\augus\AppData\Local\Programs\MiKTeX\tex/latex/base\t1cmtt.fd
 File: t1cmtt.fd 2022/07/10 v2.5l Standard LaTeX font definitions
 )
 
-Package hyperref Warning: Ignoring empty anchor on input line 127.
+Package hyperref Warning: Ignoring empty anchor on input line 129.
 
 <thumbnails/cas-url.jpeg, id=45, 225.84375pt x 225.84375pt>
 File: thumbnails/cas-url.jpeg Graphic file (type jpg)
 <use thumbnails/cas-url.jpeg>
-Package pdftex.def Info: thumbnails/cas-url.jpeg  used on input line 127.
+Package pdftex.def Info: thumbnails/cas-url.jpeg  used on input line 129.
 (pdftex.def)             Requested size: 7.99838pt x 8.0pt.
 
-Package hyperref Warning: Ignoring empty anchor on input line 127.
+Package hyperref Warning: Ignoring empty anchor on input line 129.
 
 LaTeX Font Info:    Trying to load font information for T1+cmss on input line 1
-37.
+39.
 (C:\Users\augus\AppData\Local\Programs\MiKTeX\tex/latex/base\t1cmss.fd
 File: t1cmss.fd 2022/07/10 v2.5l Standard LaTeX font definitions
 )
@@ -906,7 +914,7 @@ File: t1cmss.fd 2022/07/10 v2.5l Standard LaTeX font definitions
 <Rheological representation.pdf, id=141, 306.86569pt x 170.44194pt>
 File: Rheological representation.pdf Graphic file (type pdf)
 <use Rheological representation.pdf>
-Package pdftex.def Info: Rheological representation.pdf  used on input line 192
+Package pdftex.def Info: Rheological representation.pdf  used on input line 194
 .
 (pdftex.def)             Requested size: 306.86493pt x 170.44151pt.
  [4 <./Rheological representation.pdf>]
@@ -914,14 +922,14 @@ Package pdftex.def Info: Rheological representation.pdf  used on input line 192
 File: Elastic-plastic-viscoplastic domains.pdf Graphic file (type pdf)
 <use Elastic-plastic-viscoplastic domains.pdf>
 Package pdftex.def Info: Elastic-plastic-viscoplastic domains.pdf  used on inpu
-t line 230.
+t line 232.
 (pdftex.def)             Requested size: 272.86755pt x 170.65683pt.
-<Rheological_representation_concrete.pdf, id=179, 433.52534pt x 110.87039pt>
+<Rheological_representation_concrete.pdf, id=179, 435.82964pt x 162.71996pt>
 File: Rheological_representation_concrete.pdf Graphic file (type pdf)
 <use Rheological_representation_concrete.pdf>
 Package pdftex.def Info: Rheological_representation_concrete.pdf  used on input
- line 241.
-(pdftex.def)             Requested size: 433.52428pt x 110.8701pt.
+ line 243.
+(pdftex.def)             Requested size: 435.82857pt x 162.71954pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -930,7 +938,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 <Domain.pdf, id=239, 411.10066pt x 129.6322pt>
 File: Domain.pdf Graphic file (type pdf)
 <use Domain.pdf>
-Package pdftex.def Info: Domain.pdf  used on input line 273.
+Package pdftex.def Info: Domain.pdf  used on input line 275.
 (pdftex.def)             Requested size: 411.09966pt x 129.63188pt.
 
 
@@ -940,12 +948,12 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 <Mesh1.pdf, id=262, 677.70567pt x 531.0825pt>
 File: Mesh1.pdf Graphic file (type pdf)
 <use Mesh1.pdf>
-Package pdftex.def Info: Mesh1.pdf  used on input line 283.
+Package pdftex.def Info: Mesh1.pdf  used on input line 285.
 (pdftex.def)             Requested size: 338.852pt x 265.54059pt.
 <Mesh2.pdf, id=264, 287.37585pt x 205.54703pt>
 File: Mesh2.pdf Graphic file (type pdf)
 <use Mesh2.pdf>
-Package pdftex.def Info: Mesh2.pdf  used on input line 290.
+Package pdftex.def Info: Mesh2.pdf  used on input line 292.
 (pdftex.def)             Requested size: 229.90099pt x 164.43782pt.
  [7 <./Domain.pdf> <./Mesh1.pdf
 
@@ -955,17 +963,17 @@ ith page group included in a single page
 <Mesh3.pdf, id=327, 545.45775pt x 272.95102pt>
 File: Mesh3.pdf Graphic file (type pdf)
 <use Mesh3.pdf>
-Package pdftex.def Info: Mesh3.pdf  used on input line 298.
+Package pdftex.def Info: Mesh3.pdf  used on input line 300.
 (pdftex.def)             Requested size: 436.36678pt x 218.3611pt.
 <Mesh4.pdf, id=328, 487.13475pt x 437.75934pt>
 File: Mesh4.pdf Graphic file (type pdf)
 <use Mesh4.pdf>
-Package pdftex.def Info: Mesh4.pdf  used on input line 304.
+Package pdftex.def Info: Mesh4.pdf  used on input line 306.
 (pdftex.def)             Requested size: 292.2831pt x 262.65762pt.
 <Mesh5.pdf, id=329, 447.82513pt x 433.35599pt>
 File: Mesh5.pdf Graphic file (type pdf)
 <use Mesh5.pdf>
-Package pdftex.def Info: Mesh5.pdf  used on input line 310.
+Package pdftex.def Info: Mesh5.pdf  used on input line 312.
 (pdftex.def)             Requested size: 268.69714pt x 260.0156pt.
 
 
@@ -982,7 +990,7 @@ ith page group included in a single page
 <Mesh6.pdf, id=371, 459.33456pt x 498.24783pt>
 File: Mesh6.pdf Graphic file (type pdf)
 <use Mesh6.pdf>
-Package pdftex.def Info: Mesh6.pdf  used on input line 318.
+Package pdftex.def Info: Mesh6.pdf  used on input line 320.
 (pdftex.def)             Requested size: 275.60286pt x 298.951pt.
 
 
@@ -996,7 +1004,7 @@ ith page group included in a single page
 <Diagram of excavations.pdf, id=412, 326.31583pt x 150.96735pt>
 File: Diagram of excavations.pdf Graphic file (type pdf)
 <use Diagram of excavations.pdf>
-Package pdftex.def Info: Diagram of excavations.pdf  used on input line 326.
+Package pdftex.def Info: Diagram of excavations.pdf  used on input line 328.
 (pdftex.def)             Requested size: 424.21051pt x 196.25752pt.
 
 
@@ -1006,12 +1014,12 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 <GUO_FIG1.pdf, id=460, 282.92361pt x 174.32298pt>
 File: GUO_FIG1.pdf Graphic file (type pdf)
 <use GUO_FIG1.pdf>
-Package pdftex.def Info: GUO_FIG1.pdf  used on input line 381.
+Package pdftex.def Info: GUO_FIG1.pdf  used on input line 383.
 (pdftex.def)             Requested size: 282.92291pt x 174.32254pt.
 <MA_FIG1.pdf, id=463, 661.36618pt x 395.6265pt>
 File: MA_FIG1.pdf Graphic file (type pdf)
 <use MA_FIG1.pdf>
-Package pdftex.def Info: MA_FIG1.pdf  used on input line 390.
+Package pdftex.def Info: MA_FIG1.pdf  used on input line 392.
 (pdftex.def)             Requested size: 462.95317pt x 276.93665pt.
 
 
@@ -1023,7 +1031,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 <MA_FIG2.pdf, id=496, 320.58696pt x 310.38432pt>
 File: MA_FIG2.pdf Graphic file (type pdf)
 <use MA_FIG2.pdf>
-Package pdftex.def Info: MA_FIG2.pdf  used on input line 400.
+Package pdftex.def Info: MA_FIG2.pdf  used on input line 402.
 (pdftex.def)             Requested size: 320.58617pt x 310.38354pt.
 
 
@@ -1035,7 +1043,7 @@ t>
 File: Ovalization effect and monitoring point.pdf Graphic file (type pdf)
 <use Ovalization effect and monitoring point.pdf>
 Package pdftex.def Info: Ovalization effect and monitoring point.pdf  used on i
-nput line 464.
+nput line 466.
 (pdftex.def)             Requested size: 209.16333pt x 247.04199pt.
 
 
@@ -1045,7 +1053,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 <zones.pdf, id=2594, 521.77295pt x 320.23767pt>
 File: zones.pdf Graphic file (type pdf)
 <use zones.pdf>
-Package pdftex.def Info: zones.pdf  used on input line 471.
+Package pdftex.def Info: zones.pdf  used on input line 473.
 (pdftex.def)             Requested size: 313.06618pt x 192.14407pt.
  [16 <./Ovalization effect and monitoring point.pdf> <./zones.pdf
 
@@ -1058,14 +1066,14 @@ File: Convergence Profiles - WG_ST_LT - $d_1=16R_i$.pdf Graphic file (type pdf)
 
 <use Convergence Profiles - WG_ST_LT - $d_1=16R_i$.pdf>
 Package pdftex.def Info: Convergence Profiles - WG_ST_LT - $d_1=16R_i$.pdf  use
-d on input line 507.
+d on input line 509.
 (pdftex.def)             Requested size: 420.06834pt x 243.60953pt.
 <Convergence Profiles - WG_ST_LT - $d_1=8R_i$.pdf, id=2699, 838.93423pt x 487.2
 2025pt>
 File: Convergence Profiles - WG_ST_LT - $d_1=8R_i$.pdf Graphic file (type pdf)
 <use Convergence Profiles - WG_ST_LT - $d_1=8R_i$.pdf>
 Package pdftex.def Info: Convergence Profiles - WG_ST_LT - $d_1=8R_i$.pdf  used
- on input line 514.
+ on input line 516.
 (pdftex.def)             Requested size: 419.4661pt x 243.60953pt.
 
 
@@ -1077,7 +1085,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 File: Convergence Profiles - WG_ST_LT - $d_1=4R_i$.pdf Graphic file (type pdf)
 <use Convergence Profiles - WG_ST_LT - $d_1=4R_i$.pdf>
 Package pdftex.def Info: Convergence Profiles - WG_ST_LT - $d_1=4R_i$.pdf  used
- on input line 521.
+ on input line 523.
 (pdftex.def)             Requested size: 418.56273pt x 242.70616pt.
  [18 <./Convergence Profiles - WG_ST_LT - $d_1=8R_i$.pdf> <./Convergence Profil
 es - WG_ST_LT - $d_1=4R_i$.pdf
@@ -1089,7 +1097,7 @@ i$.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 <ovalization.pdf, id=2743, 748.71045pt x 832.81702pt>
 File: ovalization.pdf Graphic file (type pdf)
 <use ovalization.pdf>
-Package pdftex.def Info: ovalization.pdf  used on input line 537.
+Package pdftex.def Info: ovalization.pdf  used on input line 539.
 (pdftex.def)             Requested size: 374.35431pt x 416.40749pt.
 
 
@@ -1101,7 +1109,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 File: Convergence Profiles - VP_EPVP_EL_VEL_WG_LT.pdf Graphic file (type pdf)
 <use Convergence Profiles - VP_EPVP_EL_VEL_WG_LT.pdf>
 Package pdftex.def Info: Convergence Profiles - VP_EPVP_EL_VEL_WG_LT.pdf  used 
-on input line 545.
+on input line 547.
 (pdftex.def)             Requested size: 380.14314pt x 308.23393pt.
 
 
@@ -1114,7 +1122,7 @@ File: Convergence Profiles - EP_EL_EPVP_VEL_WG_ST_LT.pdf Graphic file (type pdf
 )
 <use Convergence Profiles - EP_EL_EPVP_VEL_WG_ST_LT.pdf>
 Package pdftex.def Info: Convergence Profiles - EP_EL_EPVP_VEL_WG_ST_LT.pdf  us
-ed on input line 557.
+ed on input line 559.
 (pdftex.def)             Requested size: 380.50447pt x 307.87257pt.
 
 
@@ -1125,7 +1133,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 File: Convergence Profiles - EP_d1_16Ri.pdf Graphic file (type pdf)
 <use Convergence Profiles - EP_d1_16Ri.pdf>
 Package pdftex.def Info: Convergence Profiles - EP_d1_16Ri.pdf  used on input l
-ine 567.
+ine 569.
 (pdftex.def)             Requested size: 423.38072pt x 257.46124pt.
 
 
@@ -1136,7 +1144,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 File: Convergence Profiles - EP_d1_4Ri.pdf Graphic file (type pdf)
 <use Convergence Profiles - EP_d1_4Ri.pdf>
 Package pdftex.def Info: Convergence Profiles - EP_d1_4Ri.pdf  used on input li
-ne 574.
+ne 576.
 (pdftex.def)             Requested size: 423.38072pt x 256.25674pt.
  [23 <./Convergence Profiles - EP_d1_16Ri.pdf> <./Convergence Profiles - EP_d1_
 4Ri.pdf
@@ -1149,14 +1157,14 @@ t>
 File: Convergence Profiles - EPVP_VEL_d1_16Ri.pdf Graphic file (type pdf)
 <use Convergence Profiles - EPVP_VEL_d1_16Ri.pdf>
 Package pdftex.def Info: Convergence Profiles - EPVP_VEL_d1_16Ri.pdf  used on i
-nput line 590.
+nput line 592.
 (pdftex.def)             Requested size: 451.08414pt x 252.64325pt.
 <Convergence Profiles - EPVP_VEL_d1_4Ri.pdf, id=2889, 901.56827pt x 504.68552pt
 >
 File: Convergence Profiles - EPVP_VEL_d1_4Ri.pdf Graphic file (type pdf)
 <use Convergence Profiles - EPVP_VEL_d1_4Ri.pdf>
 Package pdftex.def Info: Convergence Profiles - EPVP_VEL_d1_4Ri.pdf  used on in
-put line 597.
+put line 599.
 (pdftex.def)             Requested size: 450.78304pt x 252.34213pt.
 
 
@@ -1168,7 +1176,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 File: Convergence Profiles - EPVP_EL_VEL_d1_16Ri.pdf Graphic file (type pdf)
 <use Convergence Profiles - EPVP_EL_VEL_d1_16Ri.pdf>
 Package pdftex.def Info: Convergence Profiles - EPVP_EL_VEL_d1_16Ri.pdf  used o
-n input line 611.
+n input line 613.
 (pdftex.def)             Requested size: 451.08414pt x 257.16013pt.
 
 
@@ -1180,7 +1188,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 File: Convergence Profiles - EPVP_EL_VEL_d1_4Ri.pdf Graphic file (type pdf)
 <use Convergence Profiles - EPVP_EL_VEL_d1_4Ri.pdf>
 Package pdftex.def Info: Convergence Profiles - EPVP_EL_VEL_d1_4Ri.pdf  used on
- input line 618.
+ input line 620.
 (pdftex.def)             Requested size: 450.78304pt x 257.16013pt.
  [26 <./Convergence Profiles - EPVP_EL_VEL_d1_16Ri.pdf> <./Convergence Profiles
  - EPVP_EL_VEL_d1_4Ri.pdf
@@ -1194,7 +1202,7 @@ File: Convergence Profiles - EP_EPVP_NG_LT_single tunnel.pdf Graphic file (type
  pdf)
 <use Convergence Profiles - EP_EPVP_NG_LT_single tunnel.pdf>
 Package pdftex.def Info: Convergence Profiles - EP_EPVP_NG_LT_single tunnel.pdf
-  used on input line 634.
+  used on input line 636.
 (pdftex.def)             Requested size: 393.87051pt x 256.859pt.
  [27 <./Convergence Profiles - EP_EPVP_NG_LT_single tunnel.pdf>]
 (cas-sc-template.bbl [28]) [29] (cas-sc-template.aux)
@@ -1205,13 +1213,13 @@ Package rerunfilecheck Info: File `cas-sc-template.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 17129 strings out of 476404
- 268154 string characters out of 2789524
+ 17163 strings out of 476404
+ 268711 string characters out of 2789524
  1875324 words of memory out of 3000000
- 37041 multiletter control sequences out of 15000+600000
+ 37072 multiletter control sequences out of 15000+600000
  622706 words of font info for 183 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 90i,18n,90p,2608b,602s stack positions out of 10000i,1000n,20000p,200000b,80000s
+ 90i,18n,90p,2607b,598s stack positions out of 10000i,1000n,20000p,200000b,80000s
 
 pdfTeX warning (dest): name{Hfootnote.2} has been referenced but does not exist
 , replaced by a fixed one
@@ -1240,9 +1248,9 @@ TeX/fonts/type1/public/stix/stix-mathrm-bold.pfb><C:/Users/augus/AppData/Local/
 Programs/MiKTeX/fonts/type1/public/stix/stix-mathrm.pfb><C:/Users/augus/AppData
 /Local/Programs/MiKTeX/fonts/type1/public/stix/stix-mathscr.pfb><C:/Users/augus
 /AppData/Local/Programs/MiKTeX/fonts/type1/public/stix/stix-mathsf.pfb>
-Output written on cas-sc-template.pdf (31 pages, 6113547 bytes).
+Output written on cas-sc-template.pdf (31 pages, 6120130 bytes).
 PDF statistics:
- 3093 PDF objects out of 3580 (max. 8388607)
+ 3095 PDF objects out of 3580 (max. 8388607)
  124 named destinations out of 1000 (max. 500000)
  161 words of extra memory for PDF output out of 10000 (max. 10000000)
 

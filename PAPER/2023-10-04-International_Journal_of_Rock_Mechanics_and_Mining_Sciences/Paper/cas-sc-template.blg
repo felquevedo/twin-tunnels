@@ -2,7 +2,7 @@ This is BibTeX, Version 0.99d
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: cas-sc-template.aux
 Reallocating 'name_of_file' (item size: 1) to 17 items.
-The style file: cas-model2-names.bst
+The style file: model3-num-names.bst
 Reallocating 'name_of_file' (item size: 1) to 9 items.
 Database file #1: cas-refs.bib
 I was expecting a `,' or a `}'---line 61 of file cas-refs.bib
@@ -15,47 +15,54 @@ I was expecting a `,' or a `}'---line 231 of file cas-refs.bib
  :  doi  ={https://doi.org/10.1007/s10706-020-01587-w}
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
+Name 1 in "Quevedo, F. P. M., and Bernaud, D. and Maghous, S." has a comma at the end for entry quevedo2022b
+while executing---line 1591 of file model3-num-names.bst
+Reallocating 'wiz_functions' (item size: 4) to 6000 items.
 Reallocating 'singl_function' (item size: 4) to 100 items.
 Warning--empty pages in Fortsakis2021
+Name 1 in "Quevedo, F. P. M., and Bernaud, D. and Maghous, S." has a comma at the end for entry quevedo2022b
+while executing---line 1685 of file model3-num-names.bst
+Name 1 in "Quevedo, F. P. M., and Bernaud, D. and Maghous, S." has a comma at the end for entry quevedo2022b
+while executing---line 1685 of file model3-num-names.bst
 You've used 31 entries,
-            2990 wiz_defined-function locations,
-            950 strings with 12864 characters,
-and the built_in function-call counts, 19979 in all, are:
-= -- 1619
-> -- 612
+            3138 wiz_defined-function locations,
+            875 strings with 11955 characters,
+and the built_in function-call counts, 25897 in all, are:
+= -- 2182
+> -- 522
 < -- 26
-+ -- 246
-- -- 207
-* -- 2076
-:= -- 2827
-add.period$ -- 109
++ -- 286
+- -- 138
+* -- 2820
+:= -- 3247
+add.period$ -- 121
 call.type$ -- 31
-change.case$ -- 222
+change.case$ -- 169
 chr.to.int$ -- 27
 cite$ -- 32
-duplicate$ -- 1562
-empty$ -- 1550
-format.name$ -- 309
-if$ -- 3838
+duplicate$ -- 2337
+empty$ -- 2308
+format.name$ -- 240
+if$ -- 5196
 int.to.chr$ -- 5
-int.to.str$ -- 1
-missing$ -- 276
-newline$ -- 186
-num.names$ -- 120
-pop$ -- 533
+int.to.str$ -- 32
+missing$ -- 304
+newline$ -- 194
+num.names$ -- 90
+pop$ -- 591
 preamble$ -- 1
-purify$ -- 194
+purify$ -- 155
 quote$ -- 0
-skip$ -- 508
+skip$ -- 521
 stack$ -- 0
-substring$ -- 878
-swap$ -- 1083
+substring$ -- 2341
+swap$ -- 1177
 text.length$ -- 6
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 276
+type$ -- 184
 warning$ -- 1
-while$ -- 124
+while$ -- 111
 width$ -- 0
-write$ -- 494
-(There were 2 error messages)
+write$ -- 502
+(There were 5 error messages)

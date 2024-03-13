@@ -21,7 +21,9 @@
 \documentclass[a4paper,fleqn]{cas-sc}
 
 % Packages
-\usepackage[authoryear,longnamesfirst]{natbib}
+%%\usepackage[authoryear,longnamesfirst]{natbib}
+\usepackage[numbers]{natbib}
+\usepackage[nodots,nocompress]{numcompress}
 
 %Package to hold figure in position
 \usepackage{placeins}
@@ -128,7 +130,7 @@ twin tunnels \sep transverse gallery \sep elastoplasticity-viscoplasticity coupl
 
 \section{Introduction}\label{}
 
-Many design methods often focus on single tunnels, but twin tunnels are a common occurrence. The interaction between tunnels can be significant, especially when the spacing between them is minimal. Additionally, many twin tunnels incorporate transverse galleries, introducing a localized effect on displacements and stresses. Also, the rheological behavior of the rock mass and lining plays a crucial role in how stress and displacements fields evolve over time. Some recent studies on deep twin tunnels can be found at [\citenum{Spyridis2015}, \citenum{Chen2019}, \citenum{Fortsakis2021}, \citenum{chortis2021a},\citenum{chortis2021b}, \citenum{GUO2021}, \citenum{chortis2023a}, \citenum{chortis2023b}].
+Many design methods often focus on single tunnels, but twin tunnels are a common occurrence. The interaction between tunnels can be significant, especially when the spacing between them is minimal. Additionally, many twin tunnels incorporate transverse galleries, introducing a localized effect on displacements and stresses. Also, the rheological behavior of the rock mass and lining plays a crucial role in how stress and displacements fields evolve over time. Some recent studies on deep twin tunnels can be found at [\citenum{Spyridis2015}, \citenum{Chen2019}, \citenum{Fortsakis2021}, \citenum{chortis2021a}, \citenum{chortis2021b}, \citenum{GUO2021}, \citenum{chortis2023a}, \citenum{chortis2023b}].
 
 Chortis and Kavvadas [\citenum{chortis2021a}] considered the calculation of the axial forces acting on the primary support in the intersection zone before, during, and after the construction of a perpendicular tunnel intersection. The results of the analysis indicated that the zone of influence extends approximately two diameters from the main tunnel to each side from the center of the intersection and that the interaction effects are practically eliminated when they exceed this influence zone. 
 
@@ -261,9 +263,9 @@ As mentioned above, isotropic formulation is considered for shrinkage, so that i
 \end{equation}
 where $t_{s}$ represents the concrete curing time, and $\Delta \strainshCEB$ is the variation in magnitude of the concrete deformation associated with shrinkage (the dependency $\Delta \strainshCEB$ of on current time is omitted). The latter expression is determined based on CEB-FIP MC90 standard specifications [\citenum{CEB:1993}]. The increment of creep strain $\Delta \straincr$ is computed making use of the incremental algorithm developed by Bažant and Prasannan [\citenum{bazant:1989a,bazant:1989b}], together with a model calibration that incorporates CEB-FIP MC90 standard formulation [\citenum{CEB:1993}]. The latter procedure for model parameters identification is achieved by comparing the creep functions provided in references [\citenum{bazant:1989a,bazant:1989b}] and [\citenum{CEB:1993}], leading to the following equivalence:
 \begin{equation} \label{eq:11}
-	E_0 = E_c(t_0),~ \gamma(t-t_0)=\beta_c(t-t_0),~ \frac{1}{v(t)} = \frac{\phi_0}{E_{ci}} \text{  and  } \frac{1}{\eta(t)} \to 0 \;
+	E_0 = E_c(t_0),~ \gamma(t-t_0)=\beta_c(t-t_0),~ \frac{1}{v(t)} = \frac{\phi_0(t_0)}{E_{ci}} \text{  and  } \frac{1}{\eta(t)} \to 0 \;
 \end{equation}
-in which $t$ refers to the current time value and $t_0$ to the concrete age at the instant of load application (time interval $t-t_0$ is generally referred to as loading time or loading age). In Bažant and Prasannan [\citenum{bazant:1989a,bazant:1989b}] model, $E_0$ is the instantaneous elasticity modulus of the concrete formed aggregates and cement paste particles, $\gamma(t-t_0)$ is the microviscoelastic deformation of the volume fraction $v(t)$ of solidified concrete and $\eta(t)$  is the apparent macroscopic viscosity. In the CEB-FIP MC90 formulation [\citenum{CEB:1993}], $E_c(t_0)$ stands for the tangent elastic modulus of concrete at the instant of the loading application $t_0$, $\beta_c(t-t_0)$ is a coefficient that depends on the loading age $t-t_0$, $\phi_0(t_0)$ is a coefficient depending on the age $t_0$ of the concrete and $E_{ci}$ represents the tangent elasticity modulus of the concrete at the age of 28 day.
+in which $t$ refers to the current time value and $t_0$ to the concrete age at the instant of load application (time interval $t-t_0$ is generally referred to as loading time or loading age). In Bažant and Prasannan [\citenum{bazant:1989a,bazant:1989b}] model, $E_0$ is the instantaneous elasticity modulus of the concrete formed aggregates and cement paste particles, $\gamma(t-t_0) = \sum\limits_{i=1}^{N}\gamma_i$ is the microviscoelastic deformation of the volume fraction $v(t)$ of solidified concrete and $\eta(t)$  is the apparent macroscopic viscosity. In the CEB-FIP MC90 formulation [\citenum{CEB:1993}], $E_c(t_0)$ stands for the tangent elastic modulus of concrete at the instant of the loading application $t_0$, $\beta_c(t-t_0)$ is a coefficient that depends on the loading age $t-t_0$, $\phi_0(t_0)$ is a coefficient depending on the age $t_0$ of the concrete and $E_{ci}$ represents the tangent elasticity modulus of the concrete at the age of 28 day.
 
 \section{Spatial and time discretization of the domain}\label{}
 
@@ -659,7 +661,8 @@ However, concerning the existence of a transverse gallery and adopting the const
 %
 %%% Loading bibliography style file
 %%\bibliographystyle{model1-num-names}
-\bibliographystyle{cas-model2-names}
+\bibliographystyle{model3-num-names}
+%\bibliographystyle{elsarticle-num-names}
 %
 %% Loading bibliography database
 \bibliography{cas-refs}
