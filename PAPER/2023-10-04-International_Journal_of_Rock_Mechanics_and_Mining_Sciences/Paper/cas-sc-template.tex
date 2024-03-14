@@ -377,15 +377,15 @@ During the tunnel construction phase, we adopted the initial time increment for 
 
 \section{Comparision with analytical solutions}\label{}
 
-To examine mesh convergence and validate the numerical model, we compared the numerical solution with the elastic and elastoplastic analytical solution in the plane state of deformations for twin tunnels. Guo et al. [\citenum{GUO2021}] develop an elastic analytical solution for the stress field around twin circular tunnels with hydrostatic pressure using the complex variable and the superposition principle. The Fig.~\ref{GUO_FIG1} shows the tangential stress distribution around the tunnel's boundary in this analytical solution with the numerical solution considering  $R_i = 4$ m, $E = 500$ MPa, $\nu =$ 0.23, $d_1 = 2R_i$, $\sigma_x = \sigma_y  = \sigma_z = 2.2$ MPa.
+To examine mesh convergence and validate the numerical model, we compared the numerical solution with the elastic and elastoplastic analytical solution in the plane state of deformations for twin tunnels. Guo et al. [\citenum{GUO2021}] develop an elastic analytical solution for the stress field around twin circular tunnels with hydrostatic pressure using the complex variable and the superposition principle. The Fig.~\ref{GUO_FIG1} shows the comparison of the tangential stress distribution around the tunnel's boundary considering  $R_i = 4$ m, $E = 500$ MPa, $\nu =$ 0.23, $d_1 = 2R_i$, $\sigma_x = \sigma_y  = \sigma_z = 2.2$ MPa.
 \begin{figure}[h!]
 	\centering
 	\includegraphics[scale=1]{GUO_FIG1.pdf}
-	\caption{Verification of numerical results of orthoradial stresses with the analytical solution}
+	\caption{Verification of numerical results of orthoradial stresses with the analytical solution in elasticity}
 	\label{GUO_FIG1}
 \end{figure}
 \FloatBarrier
-Ma et. al. [\citenum{MA2020}] developed an analytical solution for a perfectly plastic constitutive model with a Mohr-Coulomb surface. One of the results was the contour of the plastic zone for several conditions. Fig.~\ref{MA_FIG1} shows the comparison between the numerical model solution (taken from a section away from the excavation face) and the analytical solution. For these analysis, $R_i = 1$ m, Young's modulus $E=20$ GPa and Poisson's ratio $\nu = 0.3$.
+Ma et. al. [\citenum{MA2020}] developed an analytical method for determining the plastic zones around twin circular tunnels considering a perfectly plastic constitutive model with a Mohr-Coulomb criterion. As a result, the authors obtained the contour of the plastic zone for several initial conditions and constitutive parameters. Fig.~\ref{MA_FIG1} shows the comparison between the numerical model solution (taken from a section away from the excavation face) and the analytical solution. For these analysis, $R_i = 1$ m, Young's modulus $E=20$ GPa and Poisson's ratio $\nu = 0.3$. The contour of the plastic zone agrees very well with the elements that have reached the plasticity criterion.
 
 \begin{figure}[h!]
 	\centering
@@ -407,7 +407,7 @@ Fig.~\ref{MA_FIG2} displays the magnitude of displacements, radial, orthoradial,
 
 \section{Numerical Results and Discussion}\label{}
 
-To develop the parametric analyses, we utilized the constitutive parameters of the Callovo-Oxfordian clay rock mass as outlined in Piepi [\citenum{piepi1995}], and for the lining, we employed typical values for ordinary reinforced concrete. These parameters are shown in Table~\ref{table2}. In these analyses the radius is $R_i = 1$ m and excavation speed is 12.5 m/day.
+To develop the parametric analyses, we utilized the constitutive parameters of the Paris basin (in Aisne) clay rock mass as outlined in Piepi [\citenum{piepi1995}], and for the lining, we employed typical values for ordinary reinforced concrete. These parameters are shown in Table~\ref{table2}. In these analyses the radius is $R_i = 1$ m and excavation speed is 12.5 m/day.
 \begin{table}
 	\caption{Constitutive parameters used in the parametric analysis}
 	\label{table2}

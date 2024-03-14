@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.12) (preloaded format=pdflatex 2023.1.18)  13 MAR 2024 18:45
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.12) (preloaded format=pdflatex 2023.1.18)  14 MAR 2024 14:26
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1028,7 +1028,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 [12
 
  <./GUO_FIG1.pdf>]
-<MA_FIG2.pdf, id=496, 320.58696pt x 310.38432pt>
+<MA_FIG2.pdf, id=494, 320.58696pt x 310.38432pt>
 File: MA_FIG2.pdf Graphic file (type pdf)
 <use MA_FIG2.pdf>
 Package pdftex.def Info: MA_FIG2.pdf  used on input line 402.
@@ -1038,7 +1038,7 @@ Package pdftex.def Info: MA_FIG2.pdf  used on input line 402.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [13 <./MA_FIG1.pdf>] [14 <./MA_FIG2.pdf>]
-<Ovalization effect and monitoring point.pdf, id=2585, 348.60286pt x 411.73349p
+<Ovalization effect and monitoring point.pdf, id=2583, 348.60286pt x 411.73349p
 t>
 File: Ovalization effect and monitoring point.pdf Graphic file (type pdf)
 <use Ovalization effect and monitoring point.pdf>
@@ -1050,7 +1050,7 @@ nput line 466.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [15]
-<zones.pdf, id=2594, 521.77295pt x 320.23767pt>
+<zones.pdf, id=2592, 521.77295pt x 320.23767pt>
 File: zones.pdf Graphic file (type pdf)
 <use zones.pdf>
 Package pdftex.def Info: zones.pdf  used on input line 473.
@@ -1060,7 +1060,7 @@ Package pdftex.def Info: zones.pdf  used on input line 473.
 pdfTeX warning: pdflatex.exe (file ./zones.pdf): PDF inclusion: multiple pdfs w
 ith page group included in a single page
 >]
-<Convergence Profiles - WG_ST_LT - $d_1=16R_i$.pdf, id=2698, 840.13875pt x 487.
+<Convergence Profiles - WG_ST_LT - $d_1=16R_i$.pdf, id=2696, 840.13875pt x 487.
 22025pt>
 File: Convergence Profiles - WG_ST_LT - $d_1=16R_i$.pdf Graphic file (type pdf)
 
@@ -1068,7 +1068,7 @@ File: Convergence Profiles - WG_ST_LT - $d_1=16R_i$.pdf Graphic file (type pdf)
 Package pdftex.def Info: Convergence Profiles - WG_ST_LT - $d_1=16R_i$.pdf  use
 d on input line 509.
 (pdftex.def)             Requested size: 420.06834pt x 243.60953pt.
-<Convergence Profiles - WG_ST_LT - $d_1=8R_i$.pdf, id=2699, 838.93423pt x 487.2
+<Convergence Profiles - WG_ST_LT - $d_1=8R_i$.pdf, id=2697, 838.93423pt x 487.2
 2025pt>
 File: Convergence Profiles - WG_ST_LT - $d_1=8R_i$.pdf Graphic file (type pdf)
 <use Convergence Profiles - WG_ST_LT - $d_1=8R_i$.pdf>
@@ -1080,7 +1080,7 @@ Package pdftex.def Info: Convergence Profiles - WG_ST_LT - $d_1=8R_i$.pdf  used
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [17 <./Convergence Profiles - WG_ST_LT - $d_1=16R_i$.pdf>]
-<Convergence Profiles - WG_ST_LT - $d_1=4R_i$.pdf, id=2718, 837.1275pt x 485.41
+<Convergence Profiles - WG_ST_LT - $d_1=4R_i$.pdf, id=2716, 837.1275pt x 485.41
 351pt>
 File: Convergence Profiles - WG_ST_LT - $d_1=4R_i$.pdf Graphic file (type pdf)
 <use Convergence Profiles - WG_ST_LT - $d_1=4R_i$.pdf>
@@ -1094,7 +1094,7 @@ pdfTeX warning: pdflatex.exe (file ./Convergence Profiles - WG_ST_LT - $d_1=4R_
 i$.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 
 >]
-<ovalization.pdf, id=2743, 748.71045pt x 832.81702pt>
+<ovalization.pdf, id=2741, 748.71045pt x 832.81702pt>
 File: ovalization.pdf Graphic file (type pdf)
 <use ovalization.pdf>
 Package pdftex.def Info: ovalization.pdf  used on input line 539.
@@ -1104,7 +1104,7 @@ Package pdftex.def Info: ovalization.pdf  used on input line 539.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [19]
-<Convergence Profiles - VP_EPVP_EL_VEL_WG_LT.pdf, id=2750, 633.56702pt x 513.71
+<Convergence Profiles - VP_EPVP_EL_VEL_WG_LT.pdf, id=2748, 633.56702pt x 513.71
 927pt>
 File: Convergence Profiles - VP_EPVP_EL_VEL_WG_LT.pdf Graphic file (type pdf)
 <use Convergence Profiles - VP_EPVP_EL_VEL_WG_LT.pdf>
@@ -1116,7 +1116,7 @@ on input line 547.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [20 <./ovalization.pdf>]
-<Convergence Profiles - EP_EL_EPVP_VEL_WG_ST_LT.pdf, id=2826, 634.16924pt x 513
+<Convergence Profiles - EP_EL_EPVP_VEL_WG_ST_LT.pdf, id=2824, 634.16924pt x 513
 .11699pt>
 File: Convergence Profiles - EP_EL_EPVP_VEL_WG_ST_LT.pdf Graphic file (type pdf
 )
@@ -1129,7 +1129,7 @@ ed on input line 559.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [21 <./Convergence Profiles - VP_EPVP_EL_VEL_WG_LT.pdf>]
-<Convergence Profiles - EP_d1_16Ri.pdf, id=2844, 846.76353pt x 514.92375pt>
+<Convergence Profiles - EP_d1_16Ri.pdf, id=2842, 846.76353pt x 514.92375pt>
 File: Convergence Profiles - EP_d1_16Ri.pdf Graphic file (type pdf)
 <use Convergence Profiles - EP_d1_16Ri.pdf>
 Package pdftex.def Info: Convergence Profiles - EP_d1_16Ri.pdf  used on input l
@@ -1140,7 +1140,7 @@ ine 569.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [22 <./Convergence Profiles - EP_EL_EPVP_VEL_WG_ST_LT.pdf>]
-<Convergence Profiles - EP_d1_4Ri.pdf, id=2861, 846.76353pt x 512.51476pt>
+<Convergence Profiles - EP_d1_4Ri.pdf, id=2859, 846.76353pt x 512.51476pt>
 File: Convergence Profiles - EP_d1_4Ri.pdf Graphic file (type pdf)
 <use Convergence Profiles - EP_d1_4Ri.pdf>
 Package pdftex.def Info: Convergence Profiles - EP_d1_4Ri.pdf  used on input li
@@ -1152,14 +1152,14 @@ ne 576.
 pdfTeX warning: pdflatex.exe (file ./Convergence Profiles - EP_d1_4Ri.pdf): PDF
  inclusion: multiple pdfs with page group included in a single page
 >]
-<Convergence Profiles - EPVP_VEL_d1_16Ri.pdf, id=2888, 902.17049pt x 505.28775p
+<Convergence Profiles - EPVP_VEL_d1_16Ri.pdf, id=2886, 902.17049pt x 505.28775p
 t>
 File: Convergence Profiles - EPVP_VEL_d1_16Ri.pdf Graphic file (type pdf)
 <use Convergence Profiles - EPVP_VEL_d1_16Ri.pdf>
 Package pdftex.def Info: Convergence Profiles - EPVP_VEL_d1_16Ri.pdf  used on i
 nput line 592.
 (pdftex.def)             Requested size: 451.08414pt x 252.64325pt.
-<Convergence Profiles - EPVP_VEL_d1_4Ri.pdf, id=2889, 901.56827pt x 504.68552pt
+<Convergence Profiles - EPVP_VEL_d1_4Ri.pdf, id=2887, 901.56827pt x 504.68552pt
 >
 File: Convergence Profiles - EPVP_VEL_d1_4Ri.pdf Graphic file (type pdf)
 <use Convergence Profiles - EPVP_VEL_d1_4Ri.pdf>
@@ -1171,7 +1171,7 @@ put line 599.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [24 <./Convergence Profiles - EPVP_VEL_d1_16Ri.pdf>]
-<Convergence Profiles - EPVP_EL_VEL_d1_16Ri.pdf, id=2908, 902.17049pt x 514.321
+<Convergence Profiles - EPVP_EL_VEL_d1_16Ri.pdf, id=2906, 902.17049pt x 514.321
 52pt>
 File: Convergence Profiles - EPVP_EL_VEL_d1_16Ri.pdf Graphic file (type pdf)
 <use Convergence Profiles - EPVP_EL_VEL_d1_16Ri.pdf>
@@ -1183,7 +1183,7 @@ n input line 613.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [25 <./Convergence Profiles - EPVP_VEL_d1_4Ri.pdf>]
-<Convergence Profiles - EPVP_EL_VEL_d1_4Ri.pdf, id=2925, 901.56827pt x 514.3215
+<Convergence Profiles - EPVP_EL_VEL_d1_4Ri.pdf, id=2923, 901.56827pt x 514.3215
 2pt>
 File: Convergence Profiles - EPVP_EL_VEL_d1_4Ri.pdf Graphic file (type pdf)
 <use Convergence Profiles - EPVP_EL_VEL_d1_4Ri.pdf>
@@ -1196,7 +1196,7 @@ Package pdftex.def Info: Convergence Profiles - EPVP_EL_VEL_d1_4Ri.pdf  used on
 pdfTeX warning: pdflatex.exe (file ./Convergence Profiles - EPVP_EL_VEL_d1_4Ri.
 pdf): PDF inclusion: multiple pdfs with page group included in a single page
 >]
-<Convergence Profiles - EP_EPVP_NG_LT_single tunnel.pdf, id=2950, 787.74298pt x
+<Convergence Profiles - EP_EPVP_NG_LT_single tunnel.pdf, id=2948, 787.74298pt x
  513.71927pt>
 File: Convergence Profiles - EP_EPVP_NG_LT_single tunnel.pdf Graphic file (type
  pdf)
@@ -1248,9 +1248,9 @@ TeX/fonts/type1/public/stix/stix-mathrm-bold.pfb><C:/Users/augus/AppData/Local/
 Programs/MiKTeX/fonts/type1/public/stix/stix-mathrm.pfb><C:/Users/augus/AppData
 /Local/Programs/MiKTeX/fonts/type1/public/stix/stix-mathscr.pfb><C:/Users/augus
 /AppData/Local/Programs/MiKTeX/fonts/type1/public/stix/stix-mathsf.pfb>
-Output written on cas-sc-template.pdf (31 pages, 6120130 bytes).
+Output written on cas-sc-template.pdf (31 pages, 6090569 bytes).
 PDF statistics:
- 3095 PDF objects out of 3580 (max. 8388607)
+ 3093 PDF objects out of 3580 (max. 8388607)
  124 named destinations out of 1000 (max. 500000)
  161 words of extra memory for PDF output out of 10000 (max. 10000000)
 
