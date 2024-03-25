@@ -1,4 +1,4 @@
-\begin{thebibliography}{31}
+\begin{thebibliography}{35}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \providecommand{\href}[2]{#2}
@@ -240,6 +240,13 @@ ANSYS.
 \newblock In: \bibinfo{booktitle}{Advances in applied mechanics};
   vol.~\bibinfo{volume}{9}. \bibinfo{publisher}{Elsevier};
   \bibinfo{year}{1966}, p. \bibinfo{pages}{243--377}.
+%Type = Manual
+\bibitem[{CEB-FIP(1993)}]{CEB:1993}
+\bibinfo{author}{CEB-FIP\xfnm[]}.
+\newblock \bibinfo{title}{CEB-FIP model code 1990: Design code}.
+\newblock \bibinfo{organization}{Comité Euro International du Béton and
+  Fédération Internationale de la Précontrainte (CEB-FIP)};
+  \bibinfo{year}{1993}.
 %Type = Article
 \bibitem[{Quevedo et~al.(2018)Quevedo, Schmitz, Morsch, A. and
   Bernaud}]{quevedo2018}
@@ -261,13 +268,6 @@ ANSYS.
 \newblock \bibinfo{journal}{International Journal of Geomechanics}
   \bibinfo{year}{2022}{\natexlab{b}};\bibinfo{volume}{22}(\bibinfo{number}{4}).
 \newblock \DOIprefix\doi{https://doi.org/10.1061/(ASCE)GM.1943-5622.0002282}.
-%Type = Manual
-\bibitem[{CEB-FIP(1993)}]{CEB:1993}
-\bibinfo{author}{CEB-FIP\xfnm[]}.
-\newblock \bibinfo{title}{CEB-FIP model code 1990: Design code}.
-\newblock \bibinfo{organization}{Comité Euro International du Béton and
-  Fédération Internationale de la Précontrainte (CEB-FIP)};
-  \bibinfo{year}{1993}.
 %Type = Masterthesis
 \bibitem[{Quevedo(2017)}]{quevedo2017comportamento}
 \bibinfo{author}{Quevedo\xfnm[ F.P.M.]}.
@@ -278,6 +278,35 @@ ANSYS.
   \bibinfo{year}{2017}.
 \newblock \URLprefix \url{https://lume.ufrgs.br/handle/10183/163886}.
 %Type = Article
+\bibitem[{Bernaud et~al.(1995)Bernaud, Debuhan and Maghous}]{bernaud1995}
+\bibinfo{author}{Bernaud\xfnm[ D.]}, \bibinfo{author}{Debuhan\xfnm[ P.]},
+  \bibinfo{author}{Maghous\xfnm[ S.]}.
+\newblock \bibinfo{title}{Numerical-simulation of the convergence of a
+  bolt-supported tunnel through a homogenization method}.
+\newblock \bibinfo{journal}{International Journal for Numerical and Analytical
+  Methods in Geomechanics}
+  \bibinfo{year}{1995};\bibinfo{volume}{19}(\bibinfo{number}{4}):\bibinfo{pages}{267--288}.
+\newblock \DOIprefix\doi{https://doi.org/10.1002/nag.1610190404}.
+%Type = Article
+\bibitem[{Bernaud et~al.(2009)Bernaud, Maghous, Debuhan and
+  Couto}]{bernaud2009}
+\bibinfo{author}{Bernaud\xfnm[ D.]}, \bibinfo{author}{Maghous\xfnm[ S.]},
+  \bibinfo{author}{Debuhan\xfnm[ P.]}, \bibinfo{author}{Couto\xfnm[ E.]}.
+\newblock \bibinfo{title}{A numerical approach for design of bolt-supported
+  tunnels regarded as homogenized structures}.
+\newblock \bibinfo{journal}{Tunneling and underground space technology}
+  \bibinfo{year}{2009};\bibinfo{volume}{24}(\bibinfo{number}{5}):\bibinfo{pages}{533--546}.
+\newblock \DOIprefix\doi{https://doi.org/10.1016/j.tust.2009.02.002}.
+%Type = Article
+\bibitem[{Maghous et~al.(2012)Maghous, Bernaud and Couto}]{maghous2012}
+\bibinfo{author}{Maghous\xfnm[ S.]}, \bibinfo{author}{Bernaud\xfnm[ D.]},
+  \bibinfo{author}{Couto\xfnm[ E.]}.
+\newblock \bibinfo{title}{Three-dimensional numerical simulation of rock
+  deformation in bolt-supported tunnels: A homogenization approach}.
+\newblock \bibinfo{journal}{Tunneling and Underground Space Technology}
+  \bibinfo{year}{2012};\bibinfo{volume}{31}:\bibinfo{pages}{267--288}.
+\newblock \DOIprefix\doi{https://doi.org/10.1016/j.tust.2012.04.008}.
+%Type = Article
 \bibitem[{Zienkiewicz and Cormeau(1974)}]{zienkiewicz1974visco}
 \bibinfo{author}{Zienkiewicz\xfnm[ O.]}, \bibinfo{author}{Cormeau\xfnm[ I.]}.
 \newblock \bibinfo{title}{Visco-plasticity—plasticity and creep in elastic
@@ -286,5 +315,10 @@ ANSYS.
   Engineering}
   \bibinfo{year}{1974};\bibinfo{volume}{8}(\bibinfo{number}{4}):\bibinfo{pages}{821--845}.
 \newblock \DOIprefix\doi{https://doi.org/10.1002/nme.v8:4}.
+%Type = Book
+\bibitem[{Simo and Hughes(1998)}]{simo1998}
+\bibinfo{author}{Simo\xfnm[ J.C.]}, \bibinfo{author}{Hughes\xfnm[ T.J.R.]}.
+\newblock \bibinfo{title}{Computational Inelasticity}.
+\newblock \bibinfo{publisher}{Springer-Verlag}; \bibinfo{year}{1998}.
 
 \end{thebibliography}

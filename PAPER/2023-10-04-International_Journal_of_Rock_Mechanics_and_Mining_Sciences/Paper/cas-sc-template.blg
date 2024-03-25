@@ -10,7 +10,7 @@ I was expecting a `,' or a `}'---line 61 of file cas-refs.bib
  :  DOI   = {http://dx.doi.org/10.4417/IJGCH-02-01-03},
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 231 of file cas-refs.bib
+I was expecting a `,' or a `}'---line 275 of file cas-refs.bib
  :  
  :  doi  ={https://doi.org/10.1007/s10706-020-01587-w}
 (Error may have been on previous line)
@@ -24,45 +24,45 @@ Name 1 in "Quevedo, F. P. M., and Bernaud, D. and Maghous, S." has a comma at th
 while executing---line 1685 of file model3-num-names.bst
 Name 1 in "Quevedo, F. P. M., and Bernaud, D. and Maghous, S." has a comma at the end for entry quevedo2022b
 while executing---line 1685 of file model3-num-names.bst
-You've used 31 entries,
+You've used 35 entries,
             3138 wiz_defined-function locations,
-            875 strings with 11955 characters,
-and the built_in function-call counts, 25897 in all, are:
-= -- 2182
-> -- 522
-< -- 26
-+ -- 286
-- -- 138
-* -- 2820
-:= -- 3247
-add.period$ -- 121
-call.type$ -- 31
-change.case$ -- 169
-chr.to.int$ -- 27
-cite$ -- 32
-duplicate$ -- 2337
-empty$ -- 2308
-format.name$ -- 240
-if$ -- 5196
+            901 strings with 12749 characters,
+and the built_in function-call counts, 29956 in all, are:
+= -- 2533
+> -- 614
+< -- 27
++ -- 336
+- -- 162
+* -- 3281
+:= -- 3747
+add.period$ -- 136
+call.type$ -- 35
+change.case$ -- 188
+chr.to.int$ -- 31
+cite$ -- 36
+duplicate$ -- 2703
+empty$ -- 2673
+format.name$ -- 278
+if$ -- 6011
 int.to.chr$ -- 5
-int.to.str$ -- 32
-missing$ -- 304
-newline$ -- 194
-num.names$ -- 90
-pop$ -- 591
+int.to.str$ -- 36
+missing$ -- 348
+newline$ -- 217
+num.names$ -- 102
+pop$ -- 673
 preamble$ -- 1
-purify$ -- 155
+purify$ -- 175
 quote$ -- 0
-skip$ -- 521
+skip$ -- 586
 stack$ -- 0
-substring$ -- 2341
-swap$ -- 1177
+substring$ -- 2782
+swap$ -- 1336
 text.length$ -- 6
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 184
+type$ -- 206
 warning$ -- 1
-while$ -- 111
+while$ -- 128
 width$ -- 0
-write$ -- 502
+write$ -- 563
 (There were 5 error messages)
