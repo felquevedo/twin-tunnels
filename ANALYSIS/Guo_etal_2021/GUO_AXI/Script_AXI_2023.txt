@@ -980,15 +980,18 @@ nanalises = 0
 *GET,ncount,NODE,,COUNT			  ! pegando numero máximo de nós selecionados
 *GET,ntotal,NODE,,NUM,MAX		  ! pegando numero total de nós
 *DIM,convergence,TABLE,ncount,2+nanalises ! dimensionando tabela de convergencias
-*DIM,pressure,TABLE,ncount,2+nanalises	  ! dimensionando tabela de pressões em x
+*DIM,pressurex,TABLE,ncount,2+nanalises	  ! dimensionando tabela de pressões em x
+*DIM,pressurey,TABLE,ncount,2+nanalises	  ! dimensionando tabela de pressões em y
 *DIM,coordy,ARRAY,ntotal		  ! dimensionando vetor de coordenadas nodais
 *DIM,u_x,ARRAY,ntotal			  ! dimensionando vetor de deslocamentos em x
 *DIM,s_x,ARRAY,ntotal			  ! dimensionando vetor de pressões em x
+*DIM,s_y,ARRAY,ntotal			  ! dimensionando vetor de pressões em y
 *DIM,n_sel,ARRAY,ntotal			  ! dimensionando vetor que indica se o nó está selecionado
 !
 ! coloca lista de nós em ordem na primeira coluna
 *VGET,convergence(1,1),NODE,,NLIST
-*VGET,pressure(1,1),NODE,,NLIST
+*VGET,pressurex(1,1),NODE,,NLIST
+*VGET,pressurey(1,1),NODE,,NLIST
 !
 ! criando vetor de coordenadas
 *VGET,n_sel(1),NODE,1,NSEL
@@ -999,7 +1002,9 @@ nanalises = 0
 *VMASK,n_sel(1)				! usa como mascara os nós selecionados
 *VFUN,convergence(1,2),COMP,coordy(1)
 *VMASK,n_sel(1)
-*VFUN,pressure(1,2),COMP,coordy(1)
+*VFUN,pressurex(1,2),COMP,coordy(1)
+*VMASK,n_sel(1)
+*VFUN,pressurey(1,2),COMP,coordy(1)
 !
 ! preenchendo o convergence com a convergência
 *DO,i,1,nanalises,1
@@ -1023,21 +1028,30 @@ nanalises = 0
 	*VGET,s_x(1),NODE,1,S,X
 	*VOPER,s_x(1),s_x(1),MULT,1
 	!
+	*VMASK,n_sel(1)
+	*VGET,s_y(1),NODE,1,S,Y
+	*VOPER,s_y(1),s_y(1),MULT,1
+	!
 	! Preenchendo o convergence e pressure
 	*VMASK,n_sel(1)
 	*VFUN,convergence(1,2+i),COMP,u_x(1)
 	*VMASK,n_sel(1)
-	*VFUN,pressure(1,2+i),COMP,s_x(1)
+	*VFUN,pressurex(1,2+i),COMP,s_x(1)
+	*VMASK,n_sel(1)
+	*VFUN,pressurey(1,2+i),COMP,s_y(1)
 *ENDDO
 !
 ! ordena a tabela de acordo com a segunda coluna (das coordenadas)
 *MOPER,ORDER,convergence,SORT,convergence(1,2)
-*MOPER,ORDER,pressure,SORT,pressure(1,2)
+*MOPER,ORDER,pressurex,SORT,pressurex(1,2)
+*MOPER,ORDER,pressurey,SORT,pressurey(1,2)
 !
 ! Coleta o maior valor das convergências
 *VSCFUN,umaximofinal,max,convergence(1,2+nanalises)
-*VSCFUN,smaximofinal,max,pressure(1,2+nanalises)
-*VSCFUN,sminimofinal,min,pressure(1,2+nanalises)
+*VSCFUN,smaximofinalx,max,pressurex(1,2+nanalises)
+*VSCFUN,sminimofinalx,min,pressurex(1,2+nanalises)
+*VSCFUN,smaximofinaly,max,pressurey(1,2+nanalises)
+*VSCFUN,sminimofinaly,min,pressurey(1,2+nanalises)
 !
 ! formatando grafico de convergencia
 /RGB,INDEX,100,100,100,0
@@ -1070,13 +1084,13 @@ nanalises = 0
 /ERASE
 !
 !
-! formatando grafico do pressure
+! formatando grafico do pressurex
 /RGB,INDEX,100,100,100,0
 /RGB,INDEX,0,0,0,15
 /AXLAB,X,Y/Re
 /AXLAB,Y,Sx (MPa)
 /XRANGE,0,Lt/Re
-/YRANGE,smaximofinal*1.2,sminimofinal*1.2
+/YRANGE,smaximofinalx*1.2,sminimofinalx*1.2
 /GROPT,DIVY,20
 /GROPT,DIVX,10
 /GROPT,DIG1,3
@@ -1094,7 +1108,37 @@ nanalises = 0
 	*ELSE
 		/COLOR,CURVE,LGRA,1
 	*ENDIF
-	*VPLOT,pressure(1,2),pressure(1,2+i)
+	*VPLOT,pressurex(1,2),pressurex(1,2+i)
+	/NOERASE
+*ENDDO
+/SHOW,CLOSE	   
+/ERASE
+!
+! formatando grafico do pressurey
+/RGB,INDEX,100,100,100,0
+/RGB,INDEX,0,0,0,15
+/AXLAB,X,Y/Re
+/AXLAB,Y,Sy (MPa)
+/XRANGE,0,Lt/Re
+/YRANGE,smaximofinaly*1.2,sminimofinaly*1.2
+/GROPT,DIVY,20
+/GROPT,DIVX,10
+/GROPT,DIG1,3
+/GTHK,CURVE,1
+/PLOPTS,INFO,on
+!
+! graficando na tela do Ansys
+/ERASE
+/SHOW,JPEG,,iso	       
+*DO,i,1,nanalises,1
+	*IF,i,EQ,nanalises,THEN
+		/COLOR,CURVE,MAGE,1
+	*ELSEIF,i,EQ,nesc,THEN
+		/COLOR,CURVE,YELL,1
+	*ELSE
+		/COLOR,CURVE,LGRA,1
+	*ENDIF
+	*VPLOT,pressurey(1,2),pressurey(1,2+i)
 	/NOERASE
 *ENDDO
 /SHOW,CLOSE	   
@@ -1107,9 +1151,16 @@ nanalises = 0
 *END
 /INPUT,ansuitmp
 !
-! Escrevendo em arquivo as pressões
+! Escrevendo em arquivo as pressõesx
 *CREATE,ansuitmp
-*MWRITE,pressure,pressure,txt
+*MWRITE,pressurex,pressurex,txt
+(1000(E10.4,3X))
+*END
+/INPUT,ansuitmp
+!
+! Escrevendo em arquivo as pressõesy
+*CREATE,ansuitmp
+*MWRITE,pressurey,pressurey,txt
 (1000(E10.4,3X))
 *END
 /INPUT,ansuitmp
@@ -1119,3 +1170,5 @@ PARSAV,SCALAR,parametros,txt
 !
 !
 !****_ 			FIM				_****!
+
+
