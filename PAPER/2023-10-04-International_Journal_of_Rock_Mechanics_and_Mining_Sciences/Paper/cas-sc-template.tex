@@ -395,9 +395,44 @@ For the sake of clearness, the main parameters defining the geometry domain as w
 \FloatBarrier
 During the tunnel construction phases, the time increment used for the time-dependent analysis is automatically managed by the ANSYS solver. The latter makes use of a semi-implicit scheme for the viscoplasticity solution, together with an automatic time stepping algorithm [\citenum{zienkiewicz1974visco}] in which the time step is defined as a fraction of time $t_p$ for the phases of longitudinal tunnel excavation and as a fraction of $t_{pg}$ for the phases of transverse gallery excavation. Furthermore, distinct time steps are considered for the time-dependent analysis during tunnelling process and post-excavation stage. After complete tunnel construction phases, the analysis is carried out for a period of about $3000$ days to assess the time evolving deformation as well as long-term viscous effects on the final equilibrium of the tunnel structure. At that respect and in anticipation of the numerical results of the subsequent sections, the characteristic viscoplastic relaxation time [\citenum{simo1998}] is equal to $\bar{\tau} = \eta f_0 / E$ , which is close to $30$ days for model data of Table~\ref{table2}.
 
-\section{Comparision with analytical solutions}\label{}
+\section{Comparision with elastic analytical solutions}\label{}
 
-To examine mesh convergence and validate the numerical model, we compared the numerical solution with the elastic and elastoplastic analytical solution in the plane state of deformations for twin tunnels. Guo et al. [\citenum{GUO2021}] develop an elastic analytical solution for the stress field around twin circular tunnels with hydrostatic pressure using the complex variable and the superposition principle. The Fig.~\ref{GUO_FIG1} shows the comparison of the tangential stress distribution around the tunnel's boundary considering  $R_t = 4$ m, $E = 500$ MPa, $\nu =$ 0.23, $d_1 = 2R_t$, $\sigma_x = \sigma_y  = \sigma_z = 2.2$ MPa.
+
+As a first verification of the mesh convergence, numerical solutions in elasticity are made to compare with the results obtained from the analytical and numerical solution of Guo et al [\citenum{GUO2021}]. These authors developed an analytical solution in plane state of deformations for the stress field around unlined twin tunnels with hydrostatic pressure. Fig.~\ref{GUO_FIG0} illustrates the main parameters of the domain. The results are shown at points A and B on the tunnel wall.
+\begin{figure}[h!]
+	\centering
+	\includegraphics[scale=1]{GUO_FIG0.pdf}
+	\caption{Parameters, domain and boundary conditions of the Guo et al. analysis}
+	\label{GUO_FIG0}
+\end{figure}
+
+The Fig.~\ref{Convergence Profiles in B} shows the convergence profiles in point B considering several distance between longitudinal tunnel axes $d_1$.
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[scale=0.8]{Convergence Profiles in B.pdf}
+	\caption{Convergence profiles in point B}
+	\label{Convergence Profiles in B}
+\end{figure}
+\FloatBarrier
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[scale=0.8]{Relationship between Convergence in B and A.pdf}
+	\caption{Relationship between Convergence in B and A}
+	\label{Relationship between Convergence in B and A}
+\end{figure}
+\FloatBarrier
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[scale=0.8]{Tangencial stress concentration factor in A.pdf}
+	\caption{Tangencial stress concentration factor in point A}
+	\label{Tangencial stress concentration factor in A}
+\end{figure}
+\FloatBarrier
+
+The Fig.~\ref{GUO_FIG1} shows the comparison of the tangential stress distribution around the tunnel's boundary considering  $R_t = 4$ m, $E = 500$ MPa, $\nu =$ 0.23, $d_1 = 2R_t$, $\sigma_x = \sigma_y  = \sigma_z = 2.2$ MPa.
 \begin{figure}[h!]
 	\centering
 	\includegraphics[scale=1]{GUO_FIG1.pdf}
