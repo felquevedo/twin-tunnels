@@ -406,11 +406,11 @@ As a first verification of the mesh convergence, numerical solutions in elastici
 	\label{GUO_FIG0}
 \end{figure}
 
-The results are shown at crown (point B) and sidewall (point B) of the tunnel considering  $R_t = 4$ m, $E = 500$ MPa, $\nu =$ 0.23, $\sigma_v = \sigma_h = 2.2$ MPa. The Fig.~\ref{Convergence Profiles in B} shows the convergence profiles in the crown for various longitudinal tunnel axis distances normalized by the longitudinal tunnel diameter $d_1/2R_t$. It can be seen that the closer the longitudinal tunnels, the greater the convergence at the crown.
+The results are shown at crown (point B) and sidewall (point A) of the tunnel considering  $R_t = 4$ m, $E = 500$ MPa, $\nu =$ 0.23, $\sigma_v = \sigma_h = 2.2$ MPa. The Fig.~\ref{Convergence Profiles in B} shows the convergence profiles in the crown for various longitudinal tunnel axis distances normalized by the longitudinal tunnel diameter $d_1/2R_t$. It can be seen that the closer the longitudinal tunnels, the greater the convergence at the crown.
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[scale=0.8]{Convergence Profiles in B.pdf}
+	\includegraphics[scale=0.7]{Convergence Profiles in B.pdf}
 	\caption{Convergence profiles in the crown (point B).}
 	\label{Convergence Profiles in B}
 \end{figure}
@@ -420,31 +420,34 @@ Fig.~\ref{Relationship between convergence in B and A} shows the relationship be
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[scale=0.8]{Relationship between Convergence in B and A.pdf}
+	\includegraphics[scale=0.7]{Relationship between Convergence in B and A.pdf}
 	\caption{Relationship between convergence in the crown (point B) and sidewall (point A).}
 	\label{Relationship between convergence in B and A}
 \end{figure}
 \FloatBarrier
 
 
-Fig.~\ref{Tangencial stress concentration factor in A} shows the analytical and numerical solutions of Guo et al [\citenum{GUO2021}] together with the results obtained with the current 3D model. Ling's solution, employed by these researchers to validate their analytical and numerical approaches, is also shown. Extra analyses with $d_1/2R_t = 4$ and $5$ show that, as the longitudinal tunnels become increasingly spaced apart, the solution converges to that of a single tunnel.
+Fig.~\ref{Tangencial stress concentration factor in A} shows the analytical and numerical solutions of Guo et al [\citenum{GUO2021}] together with the results obtained with the current 3D model. Ling's solution [\citenum{ling1948}], employed by these researchers to validate their analytical and numerical approaches, is also shown. Extra analyses with $d_1/2R_t = 4$ and $5$ show that, as the longitudinal tunnels become increasingly spaced apart, the solution converges to that of a single tunnel.
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[scale=0.8]{Tangencial stress concentration factor in A.pdf}
+	\includegraphics[scale=0.7]{Tangencial stress concentration factor in A.pdf}
 	\caption{Tangencial stress concentration factor in the sidewall (point A).}
 	\label{Tangencial stress concentration factor in A}
 \end{figure}
 \FloatBarrier
 
-The Fig.~\ref{GUO_FIG1} shows the comparison of the tangential stress distribution around the tunnel's boundary considering  $R_t = 4$ m, $E = 500$ MPa, $\nu =$ 0.23, $d_1 = 2R_t$, $\sigma_x = \sigma_y  = \sigma_z = 2.2$ MPa.
+The Fig.~\ref{GUO_FIG1} shows the comparison of the tangencial stress distribution around the tunnel's boundary considering  $d_1/2R_t = 1.5$.
 \begin{figure}[h!]
 	\centering
 	\includegraphics[scale=1]{GUO_FIG1.pdf}
-	\caption{Verification of numerical results of orthoradial stresses with the analytical solution in elasticity}
+	\caption{Verification of numerical results of tangencial stresses with the analytical solution in elasticity.}
 	\label{GUO_FIG1}
 \end{figure}
 \FloatBarrier
+
+\section{Comparision with elastoplastic analytical solution}\label{}
+
 Ma et. al. [\citenum{MA2020}] developed an analytical method for determining the plastic zones around twin circular tunnels considering a perfectly plastic constitutive model with a Mohr-Coulomb criterion. As a result, the authors obtained the contour of the plastic zone for several initial conditions and constitutive parameters. Fig.~\ref{MA_FIG1} shows the comparison between the numerical model solution (taken from a section away from the excavation face) and the analytical solution. For these analysis, $R_t = 1$ m, Young's modulus $E=20$ GPa and Poisson's ratio $\nu = 0.3$. The contour of the plastic zone agrees very well with the elements that have reached the plasticity criterion.
 
 \begin{figure}[h!]

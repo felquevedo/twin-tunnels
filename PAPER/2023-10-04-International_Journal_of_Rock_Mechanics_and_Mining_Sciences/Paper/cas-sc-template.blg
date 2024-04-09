@@ -24,45 +24,45 @@ Name 1 in "Quevedo, F. P. M., and Bernaud, D. and Maghous, S." has a comma at th
 while executing---line 1685 of file model3-num-names.bst
 Name 1 in "Quevedo, F. P. M., and Bernaud, D. and Maghous, S." has a comma at the end for entry quevedo2022b
 while executing---line 1685 of file model3-num-names.bst
-You've used 35 entries,
+You've used 36 entries,
             3138 wiz_defined-function locations,
-            901 strings with 12749 characters,
-and the built_in function-call counts, 29956 in all, are:
-= -- 2533
-> -- 614
-< -- 27
-+ -- 336
-- -- 162
-* -- 3281
-:= -- 3747
-add.period$ -- 136
-call.type$ -- 35
-change.case$ -- 188
-chr.to.int$ -- 31
-cite$ -- 36
-duplicate$ -- 2703
-empty$ -- 2673
-format.name$ -- 278
-if$ -- 6011
+            909 strings with 12900 characters,
+and the built_in function-call counts, 30732 in all, are:
+= -- 2599
+> -- 621
+< -- 28
++ -- 340
+- -- 164
+* -- 3366
+:= -- 3848
+add.period$ -- 140
+call.type$ -- 36
+change.case$ -- 193
+chr.to.int$ -- 32
+cite$ -- 37
+duplicate$ -- 2777
+empty$ -- 2749
+format.name$ -- 281
+if$ -- 6167
 int.to.chr$ -- 5
-int.to.str$ -- 36
-missing$ -- 348
-newline$ -- 217
-num.names$ -- 102
-pop$ -- 673
+int.to.str$ -- 37
+missing$ -- 357
+newline$ -- 223
+num.names$ -- 105
+pop$ -- 684
 preamble$ -- 1
-purify$ -- 175
+purify$ -- 180
 quote$ -- 0
-skip$ -- 586
+skip$ -- 599
 stack$ -- 0
-substring$ -- 2782
-swap$ -- 1336
+substring$ -- 2861
+swap$ -- 1372
 text.length$ -- 6
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 206
+type$ -- 212
 warning$ -- 1
-while$ -- 128
+while$ -- 132
 width$ -- 0
-write$ -- 563
+write$ -- 579
 (There were 5 error messages)
