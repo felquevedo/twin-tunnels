@@ -176,7 +176,7 @@ titulo      = 'Relationship between Convergence in B and A'
 eixoy       = r'$U_B/U_A$'
 eixox       = r'$d_1/2R_t$'
 xmin        = 1.25
-xmax        = 4
+xmax        = 5
 xstep       = 0.25
 ymin        = 0
 ymax        = 6
@@ -204,7 +204,7 @@ alpha       = 1
 estilo      = 'dashed'
 marker      = ""
 
-graficar([0,4.0],[1,1],titulo,eixox,eixoy,
+graficar([0,5.0],[1,1],titulo,eixox,eixoy,
           xmin,xmax,xstep,ymin,ymax,ystep,
           lbldata,
           cor,tamanho,ordem,alpha,estilo,marker,

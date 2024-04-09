@@ -197,7 +197,7 @@ poly        = poly_twin_convergence_profile
 modelo      = 'GUO_D1_25RE'
 arquivo     = modelo + '\convergencex_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = r'$d_1 = 2.5R_t$'
+lblcoluna   = r'$d_1/2R_t = 1.25$'
 cor         = '#6a040f'
 tamanho     = 1.5
 ordem       = 4
@@ -216,7 +216,7 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'GUO_D1_3RE'
 arquivo     = modelo + '\convergencex_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = r'$d_1 = 3R_t$'
+lblcoluna   = r'$d_1/2R_t = 1.5$'
 cor         = '#f94144'
 tamanho     = 1.5
 ordem       = 4
@@ -234,7 +234,7 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'GUO_D1_4RE'
 arquivo     = modelo + '\convergencex_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = r'$d_1 = 4R_t$'
+lblcoluna   = r'$d_1/2R_t = 2.0$'
 cor         = '#f3722c'
 tamanho     = 1.5
 ordem       = 4
@@ -252,7 +252,7 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'GUO_D1_5RE'
 arquivo     = modelo + '\convergencex_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = r'$d_1 = 5R_t$'
+lblcoluna   = r'$d_1/2R_t = 2.5$'
 cor         = '#f8961e'
 tamanho     = 1.5
 ordem       = 4
@@ -270,7 +270,7 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'GUO_D1_6RE'
 arquivo     = modelo + '\convergencex_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = r'$d_1 = 6R_t$'
+lblcoluna   = r'$d_1/2R_t = 3.0$'
 cor         = '#F9C74F'
 tamanho     = 1.5
 ordem       = 4
@@ -288,7 +288,7 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'GUO_D1_8RE'
 arquivo     = modelo + '\convergencex_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = r'$d_1 = 8R_t$'
+lblcoluna   = r'$d_1/2R_t = 4.0$'
 cor         = '#90BE6D'
 tamanho     = 1.5
 ordem       = 4
@@ -306,7 +306,7 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'GUO_D1_10RE'
 arquivo     = modelo + '\convergencex_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = r'$d_1 = 10R_t$'
+lblcoluna   = r'$d_1/2R_t = 5.0$'
 cor         = '#43AA8B'
 tamanho     = 1.5
 ordem       = 4
@@ -324,7 +324,7 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'GUO_AXI'
 arquivo     = modelo + '\convergencias.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = r'$d_1 = \infty R_t$'
+lblcoluna   = 'Single Tunnel'
 cor         = '#577590'
 tamanho     = 1.5
 ordem       = 4
