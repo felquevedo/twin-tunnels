@@ -395,7 +395,7 @@ For the sake of clearness, the main parameters defining the geometry domain as w
 \FloatBarrier
 During the tunnel construction phases, the time increment used for the time-dependent analysis is automatically managed by the ANSYS solver. The latter makes use of a semi-implicit scheme for the viscoplasticity solution, together with an automatic time stepping algorithm [\citenum{zienkiewicz1974visco}] in which the time step is defined as a fraction of time $t_p$ for the phases of longitudinal tunnel excavation and as a fraction of $t_{pg}$ for the phases of transverse gallery excavation. Furthermore, distinct time steps are considered for the time-dependent analysis during tunnelling process and post-excavation stage. After complete tunnel construction phases, the analysis is carried out for a period of about $3000$ days to assess the time evolving deformation as well as long-term viscous effects on the final equilibrium of the tunnel structure. At that respect and in anticipation of the numerical results of the subsequent sections, the characteristic viscoplastic relaxation time [\citenum{simo1998}] is equal to $\bar{\tau} = \eta f_0 / E$ , which is close to $30$ days for model data of Table~\ref{table2}.
 
-\section{Comparision with elastic analytical solution}\label{}
+\section{Comparison with elastic analytical solution}\label{}
 
 
 As a first verification of the mesh convergence, numerical solutions in elasticity are made in 3D model to compare with the results obtained from the analytical and numerical solution in plane state of deformation of Guo et al [\citenum{GUO2021}]. These authors developed an analytical solution for the stress field around unlined twin tunnels with hydrostatic pressure in elastic medium. Fig.~\ref{GUO_FIG0} illustrates the main parameters of the domain.
@@ -406,7 +406,7 @@ As a first verification of the mesh convergence, numerical solutions in elastici
 	\label{GUO_FIG0}
 \end{figure}
 
-The results are shown at crown (point B) and sidewall (point A) of the tunnel considering  $R_t = 4$ m, $E = 500$ MPa, $\nu =$ 0.23, $\sigma_v = \sigma_h = 2.2$ MPa. The Fig.~\ref{Convergence Profiles in B} shows the convergence profiles in the crown for various longitudinal tunnel axis distances normalized by the longitudinal tunnel diameter $d_1/2R_t$. It can be seen that the closer the longitudinal tunnels, the greater the convergence at the crown.
+The results are shown at crown (point B) and sidewall (point A) of the tunnel considering  $R_t = 4$ m, $E = 500$ MPa, $\nu =$ 0.23, $\sigma_v = \sigma_h = 2.2$ MPa. The Fig.~\ref{Convergence Profiles in B} shows the convergence profiles in the crown for various longitudinal tunnel axis distances $d_1$ normalized by the longitudinal tunnel diameter $2R_t$. It can be seen that the closer the longitudinal tunnels, the greater the convergence at the crown. The solution for a single tunnel was made using an axisymmetric model, but this result is also obtained using Corbetta's analytical formulations [\citenum{corbetta1990}].
 
 \begin{figure}[h!]
 	\centering
@@ -427,12 +427,12 @@ Fig.~\ref{Relationship between convergence in B and A} shows the relationship be
 \FloatBarrier
 
 
-Fig.~\ref{Tangencial stress concentration factor in A} shows the analytical and numerical solutions of Guo et al [\citenum{GUO2021}] together with the results obtained with the current 3D model. Ling's solution [\citenum{ling1948}], employed by these researchers to validate their analytical and numerical approaches, is also shown. Extra analyses with $d_1/2R_t = 4$ and $5$ show that, as the longitudinal tunnels become increasingly spaced apart, the solution converges to that of a single tunnel.
+Fig.~\ref{Tangencial stress concentration factor in A} shows the analytical and numerical solutions of Guo et al [\citenum{GUO2021}] (in blue and green color) together with the results obtained with the current 3D model (in red color). Ling's solution [\citenum{ling1948}], employed by these researchers to validate their analytical and numerical approaches, is also shown (in black color). Extra analyses with $d_1/2R_t = 4$ and $5$ show that, as the longitudinal tunnels become increasingly spaced apart, the solution converges to that of a single tunnel (in dashed black color).
 
 \begin{figure}[h!]
 	\centering
 	\includegraphics[scale=0.7]{Tangencial stress concentration factor in A.pdf}
-	\caption{Tangencial stress concentration factor in the sidewall (point A).}
+	\caption{Tangential stress concentration factor in the sidewall (point A).}
 	\label{Tangencial stress concentration factor in A}
 \end{figure}
 \FloatBarrier
@@ -441,7 +441,7 @@ The Fig.~\ref{GUO_FIG1} shows the comparison of the tangencial stress distributi
 \begin{figure}[h!]
 	\centering
 	\includegraphics[scale=1]{GUO_FIG1.pdf}
-	\caption{Verification of numerical results of tangencial stresses with the analytical solution in elasticity.}
+	\caption{Verification of numerical results of tangential stresses with the analytical solution in elasticity.}
 	\label{GUO_FIG1}
 \end{figure}
 \FloatBarrier
