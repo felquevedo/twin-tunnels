@@ -13,6 +13,8 @@ import matplotlib.pyplot as plt        # importa o módulo para plotagem
 from scipy.signal import savgol_filter # importa filtro
 #import locale                          # importa módulo para definir a localização usada no ponto decimal
 from matplotlib.ticker import StrMethodFormatter # importa módulo para formatar eixo
+from matplotlib import rc
+
 
 #%% 2. FUNÇÃO GRAFICAR
 
@@ -81,6 +83,24 @@ def graficar(arquivo,                   # nome do arquivo de leitura
     plt.grid(True,which = 'minor', alpha = 0.3)
     plt.minorticks_on()
     
+    # Formatando fontes
+    #rc('font',{'family':'Times New Roman','size' :12})
+    #rc('font',{'family':'Times New Roman','size' :12})
+    plt.rcParams['axes.unicode_minus'] = False
+    plt.rc('text', usetex=True)
+    plt.rc('axes', labelsize=12)
+    plt.rc('xtick', labelsize=12) 
+    plt.rc('ytick', labelsize=12)
+    plt.rc('lines', lw=1.0,color='k')
+    plt.rc('axes',lw=0.75)
+    plt.rc('legend', fontsize=12)
+    plt.rcParams.update({
+        "text.usetex": True,
+        "font.family": "Times"
+        })
+
+
+    
     # Inserir linha vertical em x0
     if inserirx0 == True:
         plt.axvline(x0-x0,color = 'k', lw = 2, linestyle = 'dotted')
@@ -101,7 +121,8 @@ def graficar(arquivo,                   # nome do arquivo de leitura
     
     # Salvando em arquivo    
     plt.savefig(str(titulo) + '.pdf', 
-                dpi = fig.dpi, 
+                dpi = fig.dpi,
+                format = 'pdf',
                 bbox_inches='tight', 
                 pad_inches=0.2)
 
@@ -177,7 +198,7 @@ CONVERGENCE PROFILES IN POINT B
 figura      = figura+1
 titulo      = 'Convergence Profiles in B'
 eixox       = r'$z/R_t$'  
-eixoy       = r'$U_B=-u(r = R_t,\theta = 90^\circ)/R_{t}$ [%]'
+eixoy       = r'$U_B$ [\%]'
 ymin        = ymin_twin_convergence_profile
 ymax        = ymax_twin_convergence_profile
 xmin        = xmin_twin_profile
