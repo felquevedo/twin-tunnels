@@ -398,7 +398,7 @@ During the tunnel construction phases, the time increment used for the time-depe
 \section{Comparison with elastic analytical solution}\label{}
 
 
-As a first verification of the mesh convergence, numerical solutions in elasticity are made in 3D model to compare with the results obtained from the analytical and numerical solution in plane state of deformation of Guo et al [\citenum{GUO2021}]. These authors developed an analytical solution for the stress field around unlined twin tunnels with hydrostatic pressure in elastic medium. Fig.~\ref{GUO_FIG0} illustrates the main parameters of the domain.
+As a first verification of the mesh convergence, numerical solutions in elasticity are made in 3D model to compare with the results obtained from the analytical and numerical solution in plane state of deformation of Guo et al [\citenum{GUO2021}]. These authors developed an analytical solution for the stress field around unlined twin tunnels with hydrostatic pressure in elastic medium. Fig.~\ref{GUO_FIG0} illustrates the main parameters, domain and boundary coditions.
 \begin{figure}[h!]
 	\centering
 	\includegraphics[scale=1]{GUO_FIG0.pdf}
@@ -406,38 +406,37 @@ As a first verification of the mesh convergence, numerical solutions in elastici
 	\label{GUO_FIG0}
 \end{figure}
 
-The results are shown at the crown (point B) and sidewall (point A) of the tunnel considering  $R_t = 4$ m, $E = 500$ MPa, $\nu =$ 0.23, $\sigma_v = \sigma_h = 2.2$ MPa. Fig.~\ref{Convergence Profiles in B} shows the convergence profiles in the crown $U_B = -u_y/R_t$ along the normalized longitudinal tunnel axis $z/R_t$ for various normalized distances $d_1/2R_t$, where $u_y$ is the vertical displacement at the point B. These convergence profiles are calculated with the 3D twin tunnel model in Fig.~\ref{Mesh1}, except for the single tunnel which was calculated using an axisymmetric numerical model.
+The results at the crown (point B) and sidewall (point A) of the tunnel were evaluated considering a tunnel radius of $R_t = 4$ m, Young's modulus of $E = 500$ MPa, Poisson's ratio of $\nu = 0.23$, and initial stresses of $\sigma_v = \sigma_h = 2.2$ MPa. Fig.~\ref{Convergence Profiles in B} presents the convergence $U_B = -u_y/R_t$ at the crown along the normalized longitudinal tunnel axis $z/R_t$ for various normalized distances between the axes $d_1/2R_t$. Here, $u_y$ denotes the vertical displacement at point B. The origin of the coordinate system was shifted to the excavation face, with $z$-axis aligned with the excavation direction. The convergence profiles were calculated using the 3D twin tunnel model shown in Fig.~\ref{Mesh1}, except for the single tunnel, which was calculated using an axisymmetric numerical model. The single tunnel solution, far from the tunnel excavation face, corresponds to the analytical elastic plane state strain solution for unlined tunnels, $U=\sigma_v(1+\nu)/E$. The results shown that the closer the longitudinal tunnels, the greater the convergence at the crown.
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[scale=0.7]{Convergence Profiles in B.pdf}
+	\includegraphics[scale=0.65]{Convergence Profiles in B.pdf}
 	\caption{Convergence profiles in the crown (point B).}
 	\label{Convergence Profiles in B}
 \end{figure}
 \FloatBarrier
 
-Fig.~\ref{Relationship between convergence in B and A} shows the relationship between the convergences in the crown and sidewall at $z/R_t = -25$, showing the ovalization effect that occurs when the longitudinal tunnels get closer and closer together.
+Fig.~\ref{Relationship between convergence in B and A} illustrates the relationship between the convergences at the crown (point B) and sidewall (point A) of the tunnel at a normalized longitudinal position $z/R_t = -25$. The sidewall convergence is defined as $U_A = -u_x/R_t$, with $u_x$ representing the horizontal displacement at point A. The results highlight the ovalization effect that emerges when the longitudinal tunnels are progressively closer together.
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[scale=0.7]{Relationship between Convergence in B and A.pdf}
+	\includegraphics[scale=0.65]{Relationship between Convergence in B and A.pdf}
 	\caption{Relationship between convergence in the crown (point B) and sidewall (point A).}
 	\label{Relationship between convergence in B and A}
 \end{figure}
 \FloatBarrier
 
-
-Fig.~\ref{Tangencial stress concentration factor in A} shows the analytical and numerical solutions of Guo et al [\citenum{GUO2021}] (in blue and green color) together with the results obtained with the current 3D model (in red color). Ling's solution [\citenum{ling1948}], employed by these researchers to validate their analytical and numerical approaches, is also shown (in black color). Extra analyses with $d_1/2R_t = 4$ and $5$ show that, as the longitudinal tunnels become increasingly spaced apart, the solution converges to that of a single tunnel (in dashed black color).
+Fig.~\ref{Tangencial stress concentration factor in A} presents the tangential stress concentration factor in the sidewall, comparing analytical and numerical solutions from Guo et al. [\citenum{GUO2021}] (represented in blue and green color, respectively) with the current 3D twin tunnel model (in red color). The tangential stress at point A is obtained at a distance of $z/R_t = -25$ from the excavation face, where the plane state of deformation has been established. Ling's solution [\citenum{ling1948}], employed by these researchers to validate their analytical and numerical approaches, is also shown (in black color). Additional analyses with $d_1/2R_t = 4$ and $5$ reveal that, as the longitudinal tunnels become increasingly spaced apart, the solution converges to that of a single tunnel , where $\sigma_{yy} = 2\sigma_v$ (shown in dashed black color).
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[scale=0.7]{Tangencial stress concentration factor in A.pdf}
+	\includegraphics[scale=0.65]{Tangencial stress concentration factor in A.pdf}
 	\caption{Tangential stress concentration factor in the sidewall (point A).}
 	\label{Tangencial stress concentration factor in A}
 \end{figure}
 \FloatBarrier
 
-The Fig.~\ref{GUO_FIG1} shows the comparison of the tangencial stress distribution around the tunnel's boundary considering  $d_1/2R_t = 1.5$.
+The Fig.~\ref{GUO_FIG1} shows the comparison of the tangencial stress $\sigma_{\theta \theta}$ distribution around the tunnel's boundary $\left\{0^\circ \le \theta \le 360^\circ\right\}$ considering $d_1/2R_t = 1.5$.
 \begin{figure}[h!]
 	\centering
 	\includegraphics[scale=1]{GUO_FIG1.pdf}

@@ -3,6 +3,7 @@
 import matplotlib.pyplot as plt        # importa o módulo para plotagem
 #from matplotlib.ticker import StrMethodFormatter # importa módulo para formatar eixo
 import numpy as np
+from matplotlib import rc
 #import locale                          # importa módulo para definir a localização usada no ponto decimal
 
 def graficar(x,y,                       # eixo x e y
@@ -34,6 +35,20 @@ def graficar(x,y,                       # eixo x e y
     plt.grid(True,which = 'major')
     plt.grid(True,which = 'minor', alpha = 0.3)
     plt.minorticks_on()
+    
+    # Formatando legendas
+    plt.rcParams['axes.unicode_minus'] = False
+    plt.rc('text', usetex=True)
+    plt.rc('axes', labelsize=12)
+    plt.rc('xtick', labelsize=12) 
+    plt.rc('ytick', labelsize=12)
+    plt.rc('lines', lw=1.0,color='k')
+    plt.rc('axes',lw=0.75)
+    plt.rc('legend', fontsize=12)
+    plt.rcParams.update({
+        "text.usetex": True,
+        "font.family": "Times"
+        })
     
     # Formatando os eixos
     plt.ylim([ymin, ymax])
@@ -91,7 +106,7 @@ sttA_Ling = [2.867, 2.372, 2.112]
 
 figura      = 1
 titulo      = 'Tangencial stress concentration factor in A'
-eixoy       = r'$\sigma_{\theta \theta}\left(r = R_t, \theta = 0^\circ\right)/\sigma_v$'
+eixoy       = r'$\sigma_{\theta \theta}/\sigma_v$'
 eixox       = r'$d_1/2R_t$'
 xmin        = 1.25
 xmax        = 5.0
