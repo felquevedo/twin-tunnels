@@ -71,14 +71,15 @@ def graficar(x,y,                       # eixo x e y
              fillstyle = 'none')
 
     # Formatando a legenda
-    plt.legend(
-        loc = 'center',
-        shadow=False,
-        framealpha = 0,
-        ncol = 2,
-        columnspacing = 0.5,
-        bbox_to_anchor=(0.5, -0.22),
-        fontsize="11")
+    plt.legend(loc = 'upper right', ncol = 1)
+    #plt.legend(
+    #    loc = 'center',
+    #    shadow=False,
+    #    framealpha = 0,
+    #    ncol = 2,
+    #    columnspacing = 0.5,
+    #    bbox_to_anchor=(0.5, -0.22),
+    #    fontsize="11")
 
     # Salvando em arquivo    
     plt.savefig(str(titulo) + '.pdf', 

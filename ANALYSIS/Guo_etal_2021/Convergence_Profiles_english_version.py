@@ -110,14 +110,15 @@ def graficar(arquivo,                   # nome do arquivo de leitura
     #plt.autoscale(axis='y')
     
     # Formatando a legenda
-    plt.legend(
-        loc = 'center',
-        shadow=False,
-        framealpha = 0,
-        ncol = 4,
-        columnspacing = 0.5,
-        bbox_to_anchor=(0.5, -0.2),
-        fontsize="11")
+    plt.legend(loc = 'lower left', ncol = 3)
+    #plt.legend(
+        #loc = 'center',
+        #shadow=False,
+        #framealpha = 0,
+        #ncol = 4,
+       # columnspacing = 0.5,
+       # bbox_to_anchor=(0.5, -0.2),
+        #fontsize="11")
     
     # Salvando em arquivo    
     plt.savefig(str(titulo) + '.pdf', 
