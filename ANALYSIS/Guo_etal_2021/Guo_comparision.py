@@ -116,7 +116,7 @@ ymin        = 1.75
 ymax        = 4
 ystep       = 0.25
 
-lbldata     = 'Present Analysis'
+lbldata     = '3D F.E. Solution'
 cor         = 'r'
 tamanho     = 1.5
 ordem       = 1
@@ -130,7 +130,7 @@ graficar(x,sttA,titulo,eixox,eixoy,
           cor,tamanho,ordem,alpha,estilo,marker,
           figura)
 
-lbldata     = 'Analytical Guo et al. (2021)'
+lbldata     = 'Analytical Solution [6]'
 cor         = 'b'
 tamanho     = 1.5
 ordem       = 1
@@ -144,7 +144,7 @@ graficar(x_analitycal,sttA_analitycal,titulo,eixox,eixoy,
           cor,tamanho,ordem,alpha,estilo,marker,
           figura)
 
-lbldata     = 'Numerical Guo et al. (2021)'
+lbldata     = 'Numerical Solution [6] '
 cor         = 'g'
 tamanho     = 1.5
 ordem       = 1
@@ -158,7 +158,7 @@ graficar(x_numerical,sttA_numerical,titulo,eixox,eixoy,
           cor,tamanho,ordem,alpha,estilo,marker,
           figura)
 
-lbldata     = 'Work by Ling (1948)'
+lbldata     = 'Analytical Solution [37]'
 cor         = 'k'
 tamanho     = 1.5
 ordem       = 1
@@ -198,7 +198,7 @@ ymin        = 0
 ymax        = 6
 ystep       = 1
 
-lbldata     = 'Present Analysis'
+lbldata     = '3D F.E. Solution'
 cor         = 'r'
 tamanho     = 1.5
 ordem       = 1

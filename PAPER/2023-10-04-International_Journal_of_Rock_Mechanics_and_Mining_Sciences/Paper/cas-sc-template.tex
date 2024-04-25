@@ -426,31 +426,34 @@ The tunnel deformation anisotropy induced by the twin tunnels proximity is illus
 \begin{figure}[h!]
 	\centering
 	\includegraphics[scale=0.65]{Relationship between Convergence in B and A.pdf}
-	\caption{Relationship between convergence in the crown (point B) and sidewall (point A).}
+	\caption{Illustration of the tunnel wall deformation anisotropy induced by twin tunnels proximity.}
 	\label{Relationship between convergence in B and A}
 \end{figure}
 \FloatBarrier
 
-Fig.~\ref{Tangencial stress concentration factor in A} presents the tangential stress concentration factor in the sidewall, comparing analytical and numerical solutions from Guo et al. [\citenum{GUO2021}] (represented in blue and green color, respectively) with the current 3D twin tunnel model (in red color). The tangential stress at point A is obtained at a distance of $z/R_t = -25$ from the excavation face, where the plane state of deformation has been established. Ling's solution [\citenum{ling1948}], employed by these researchers to validate their analytical and numerical approaches, is also shown (in black color). Additional analyses with $d_1/2R_t = 4$ and $5$ reveal that, as the longitudinal tunnels become increasingly spaced apart, the solution converges to that of a single tunnel , where $\sigma_{yy} = 2\sigma_v$ (shown in dashed black color).
+The stress distribution prevailing far from the facing that were obtained from the 3D numerical simulations are compared in Fig.~\ref{Tangencial stress concentration factor in A} to the stress solutions derived analytically and numerically in Guo et al. [\citenum{GUO2021}]. In this figure, the tangential stress concentration factor $\sigma_{yy}/\sigma_v$ computed at the side wall $A$ is plotted for several values of the normalized twin tunnels distance. The results of the theoretical solution to a plate containing two circular holes of equal size presented in Ling et al. [\citenum{ling1948}] are also reported in Fig.~\ref{Tangencial stress concentration factor in A}. It is observed that the results of the 3D finite element simulations correspond to a tunnel section located at normalized distance $z/R_t = -25$ from the facing, which is considered sufficient for the plane strain conditions to establish. Interestingly, the tangential stress concentration obtained for a deep single tunnel under plane strain condition simply reads $\sigma_{yy}/\sigma_v = 2$. Although the overall agreement observed between the different predictions, it appears from the comparison that the approximate analytical stress solution provided in [\citenum{GUO2021}] slightly overestimates the tangential stress computed at point A as the value of distance $d_1/2R_t$  increases.
 
 \begin{figure}[h!]
 	\centering
 	\includegraphics[scale=0.65]{Tangencial stress concentration factor in A.pdf}
-	\caption{Tangential stress concentration factor in the sidewall (point A).}
+	\caption{Tangential stress concentration factor at the side wall A versus twin tunnels distance $d_1/2R_t$.}
 	\label{Tangencial stress concentration factor in A}
 \end{figure}
 \FloatBarrier
 
-The Fig.~\ref{GUO_FIG1} shows the comparison of the tangencial stress $\sigma_{\theta \theta}$ distribution around the tunnel's boundary $\left\{0^\circ \le \theta \le 360^\circ\right\}$ considering $d_1/2R_t = 1.5$.
+Finally, Fig.~\ref{GUO_FIG1} displays the distribution of tangential (orthoradial) stress $\sigma_{\theta \theta}$ around the tunnel boundary $\left\{r = R_t, 0 \le \theta \le \pi\right\}$ considering $d_1/2R_t = 1.5$. The predictions of stress component $\sigma_{\theta \theta}$ obtained from the 3D finite element simulations far behind the facing are shown together with the strain plane solutions derived analytically in [\citenum{GUO2021}], emphasizing the ability of the computational model to accurately capture the effect of tunnels proximity on stress distribution.
+
 \begin{figure}[h!]
 	\centering
 	\includegraphics[scale=1]{GUO_FIG1.pdf}
-	\caption{Verification of numerical results of tangential stresses with the analytical solution in elasticity.}
+	\caption{Distribution of tangential stress $\sigma_{\theta \theta}$ around the tunnel wall  prevailing far behind the facing (twin tunnels distance $d_1/2R_t = 1.5$).}
 	\label{GUO_FIG1}
 \end{figure}
 \FloatBarrier
 
-\section{Comparision with elastoplastic analytical solution}\label{}
+Keeping in mind it addresses only an academic configuration, the results provided in this section may be viewed as a first preliminary verification of the accuracy of the computational model formulated for the mechanical interaction in deep twin tunnels.
+
+\subsection{Unlined twin tunnels in elastoplastic medium}\label{}
 
 Ma et al. [\citenum{MA2020}] developed an analytical approach to evaluate the stresses and the plastic zone interface around twin circular tunnels. Their solution is based on a plane strain condition, with the stress along the tunnel axis representing the middle stress, i.e., $\sigma_{zz} = (\sigma_v+\sigma_h)/2$. The study considers symmetry in the vertical plane between the tunnels and assumes that the plastic zones around each tunnel are isolated from each other and completely surround the cross-section of each tunnel. For the constitutive model, the authors consider perfectly plastic Mohr-Coulomb criterion with associated plastic flow and verified their solution with numerical calculation in the plane state of deformations obtained using the finite difference program FLAC3D. As a result, the authors obtained the contour of the plastic zone for several initial conditions and constitutive parameters, i.e., cohesion $c$ and friction angle $\phi$. 
 
