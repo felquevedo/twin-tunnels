@@ -51,7 +51,7 @@ pig1 		= 15 		! [un] numero de passos de escavação a partir da galeria no qual
 !
 ! referente ao restante do domínio
 l1 		= 10 		! [Re] comprimento do trecho não escavado (deve ser suficiente para captar os efeitos na última frente de escavação)
-l2 		= 100 		! [Lp] comprimento do trecho escavado
+l2 		= 200 		! [Lp] comprimento do trecho escavado
 d3 		= 20 		! [Re] altura do domínio (profundidade do eixo do túnel longitudinal)
 d4 		= 20 		! [Re] distância das bordas laterais do domínio até o eixo do tunel longitudinal
 d1 		= 5		! [Re] distância entre eixos dos túneis longitudinais (d1 = 16*Re ou d1 = 4*Re)
