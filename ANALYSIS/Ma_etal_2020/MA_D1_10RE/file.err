@@ -1,0 +1,1068 @@
+/COM,ANSYS RELEASE 2021 R2           BUILD 21.2      UP20210601       02:08:54
+
+ *** WARNING ***                         CP =       0.625   TIME= 02:08:56
+ Assembly A0 is deleted.                                                 
+
+ *** WARNING ***                         CP =       3.859   TIME= 02:08:59
+ Assembly VD8 is deleted.                                                
+
+ *** WARNING ***                         CP =       3.859   TIME= 02:08:59
+ Assembly VD7 is deleted.                                                
+
+ *** WARNING ***                         CP =       4.281   TIME= 02:09:00
+ Assembly VD52 is deleted.                                               
+
+ *** WARNING ***                         CP =       4.281   TIME= 02:09:00
+ Assembly VD51 is deleted.                                               
+
+ *** WARNING ***                         CP =       4.281   TIME= 02:09:00
+ Assembly VD62 is deleted.                                               
+
+ *** WARNING ***                         CP =       4.281   TIME= 02:09:00
+ Assembly VD61 is deleted.                                               
+
+ *** WARNING ***                         CP =      11.156   TIME= 02:09:03
+ Structural elements without mid nodes usually produce much more         
+ accurate results in quad or brick shape.                                
+
+ *** WARNING ***                         CP =      14.781   TIME= 02:09:04
+ Shape testing revealed that 1 of the 7387 new or modified elements      
+ violate shape warning limits.  To review test results, please see the   
+ output file or issue the CHECK command.                                 
+
+ *** WARNING ***                         CP =      18.812   TIME= 02:09:05
+ Shape testing revealed that 3 of the 19580 new or modified elements     
+ violate shape warning limits.  To review test results, please see the   
+ output file or issue the CHECK command.                                 
+
+ *** WARNING ***                         CP =      19.047   TIME= 02:09:05
+ Concatenation of line 240 is not transferred for symm operation.        
+
+ *** WARNING ***                         CP =      19.047   TIME= 02:09:05
+ Concatenation of area 166 is not transferred for symm operation.        
+
+ *** WARNING ***                         CP =      19.047   TIME= 02:09:05
+ Concatenation of line 228 is not transferred for symm operation.        
+
+ *** WARNING ***                         CP =      20.797   TIME= 02:09:05
+ Concatenation of line 225 is not transferred for symm operation.        
+
+ *** WARNING ***                         CP =      22.234   TIME= 02:09:05
+ Shape testing revealed that 4 of the 26967 new or modified elements     
+ violate shape warning limits.  To review test results, please see the   
+ output file or issue the CHECK command.                                 
+
+ *** WARNING ***                         CP =      25.234   TIME= 02:09:05
+ After NUMMRG,NODE, node 88006 (and possibly others) is associated with  
+ more than one solid model entity.  Future commands which depend on the  
+ node to solid model connectivity (meshing, mesh clearing, solid         
+ boundary condition transfer, etc.) may not operate properly.            
+ NUMMRG,KP may correct this problem.                                     
+
+ *** WARNING ***                         CP =      25.984   TIME= 02:09:05
+ Tetrahedron element 111408 has an angle between adjacent edges of       
+ 166.6 degrees, which exceeds the warning limit of 165 degrees.          
+
+ *** WARNING ***                         CP =      25.984   TIME= 02:09:05
+ Tetrahedron element 113445 has an angle between adjacent edges of 168   
+ degrees, which exceeds the warning limit of 165 degrees.                
+
+ *** WARNING ***                         CP =      26.078   TIME= 02:09:06
+ Due to merge, line 174 is now meshed.                                   
+
+ *** WARNING ***                         CP =      26.078   TIME= 02:09:06
+ Due to merge, line 178 is now meshed.                                   
+
+ *** WARNING ***                         CP =      26.078   TIME= 02:09:06
+ Due to merge, line 148 is now meshed.                                   
+
+ *** WARNING ***                         CP =      26.078   TIME= 02:09:06
+ Due to merge, line 176 is now meshed.                                   
+
+ *** WARNING ***                         CP =      26.078   TIME= 02:09:06
+ Due to merge, line 177 is now meshed.                                   
+
+ *** WARNING ***                         CP =      26.078   TIME= 02:09:06
+ Due to merge, line 172 is now meshed.                                   
+
+ *** WARNING ***                         CP =      26.078   TIME= 02:09:06
+ Due to merge, line 171 is now meshed.                                   
+
+ *** WARNING ***                         CP =      26.078   TIME= 02:09:06
+ Due to merge, line 173 is now meshed.                                   
+
+ *** WARNING ***                         CP =      26.078   TIME= 02:09:06
+ Due to merge, line 42 is now meshed.                                    
+
+ *** WARNING ***                         CP =      26.078   TIME= 02:09:06
+ Due to merge, line 169 is now meshed.                                   
+
+ *** WARNING ***                         CP =      26.078   TIME= 02:09:06
+ Due to merge, line 55 is now meshed.                                    
+
+ *** WARNING ***                         CP =      26.094   TIME= 02:09:06
+ Due to merge, line 45 is now meshed.                                    
+
+ *** WARNING ***                         CP =      26.094   TIME= 02:09:06
+ Due to merge, line 54 is now meshed.                                    
+
+ *** WARNING ***                         CP =      26.094   TIME= 02:09:06
+ Due to merge, line 41 is now meshed.                                    
+
+ *** WARNING ***                         CP =      26.094   TIME= 02:09:06
+ Due to merge, area 99 is now meshed.                                    
+
+ *** WARNING ***                         CP =      26.094   TIME= 02:09:06
+ Due to merge, area 112 is now meshed.                                   
+
+ *** WARNING ***                         CP =      26.094   TIME= 02:09:06
+ Due to merge, area 58 is now meshed.                                    
+
+ *** WARNING ***                         CP =      26.094   TIME= 02:09:06
+ Due to merge, area 53 is now meshed.                                    
+
+ *** WARNING ***                         CP =      26.094   TIME= 02:09:06
+ Due to merge, area 28 is now meshed.                                    
+
+ *** WARNING ***                         CP =      26.094   TIME= 02:09:06
+ Due to merge, area 18 is now meshed.                                    
+
+ *** WARNING ***                         CP =      26.484   TIME= 02:09:06
+ Shape testing revealed that 34 of the 14136 new or modified elements    
+ violate shape warning limits.  To review test results, please see the   
+ output file or issue the CHECK command.                                 
+
+ *** WARNING ***                         CP =      27.234   TIME= 02:09:06
+ Shape testing revealed that 192 of the 960 new or modified elements     
+ violate shape warning limits.  To review test results, please see the   
+ output file or issue the CHECK command.                                 
+
+ *** WARNING ***                         CP =      53.844   TIME= 02:09:10
+ Previous testing revealed that 234 of the 182410 selected elements      
+ violate shape warning limits.  To review warning messages, please see   
+ the output or error file, or issue the CHECK command.                   
+
+ *** WARNING ***                         CP =      57.125   TIME= 02:09:10
+ ANSYS,INC.-supplied version of coding for USERCK has been used.         
+
+ *** WARNING ***                         CP =    3195.062   TIME= 02:13:16
+ Both solid model and finite element model boundary conditions have been 
+ applied to this model.  As solid loads are transferred to the nodes or  
+ elements, they can overwrite directly applied loads.                    
+
+ *** WARNING ***                         CP =    3198.234   TIME= 02:13:16
+ Both solid model and finite element model boundary conditions have been 
+ applied to this model.  As solid loads are transferred to the nodes or  
+ elements, they can overwrite directly applied loads.                    
+
+ *** WARNING ***                         CP =  110905.891   TIME= 04:46:31
+ The view for graph plots is currently NOT changeable.                   
+  To enable graph view manipulation, issue /GROPTS,VIEW,1.               
+
+ *** WARNING ***                         CP =  110907.734   TIME= 04:46:43
+ Parameter CONVERGENCEX already exists.  It is deleted and redefined by  
+ the *DIM command.                                                       
+
+ *** WARNING ***                         CP =  110907.734   TIME= 04:46:43
+ Parameter CONVERGENCEY already exists.  It is deleted and redefined by  
+ the *DIM command.                                                       
+
+ *** WARNING ***                         CP =  110907.734   TIME= 04:46:43
+ Parameter STRESSX already exists.  It is deleted and redefined by the   
+ *DIM command.                                                           
+
+ *** WARNING ***                         CP =  110907.734   TIME= 04:46:43
+ Parameter STRESSY already exists.  It is deleted and redefined by the   
+ *DIM command.                                                           
+
+ *** WARNING ***                         CP =  110907.734   TIME= 04:46:43
+ Parameter COORDZ already exists.  It is deleted and redefined by the    
+ *DIM command.                                                           
+
+ *** WARNING ***                         CP =  110907.734   TIME= 04:46:43
+ Parameter ORDER already exists.  It is deleted and redefined by the     
+ *DIM command.                                                           
+
+ *** WARNING ***                         CP =  110907.734   TIME= 04:46:43
+ Parameter U_X already exists.  It is deleted and redefined by the *DIM  
+ command.                                                                
+
+ *** WARNING ***                         CP =  110907.734   TIME= 04:46:43
+ Parameter U_Y already exists.  It is deleted and redefined by the *DIM  
+ command.                                                                
+
+ *** WARNING ***                         CP =  110907.734   TIME= 04:46:43
+ Parameter S_X already exists.  It is deleted and redefined by the *DIM  
+ command.                                                                
+
+ *** WARNING ***                         CP =  110907.734   TIME= 04:46:43
+ Parameter S_Y already exists.  It is deleted and redefined by the *DIM  
+ command.                                                                
+
+ *** WARNING ***                         CP =  110907.984   TIME= 04:46:43
+ Parameter N_SEL already exists.  It is deleted and redefined by the     
+ *DIM command.                                                           
+
+ *** WARNING ***                         CP =  111123.859   TIME= 04:50:26
+ Parameter CONVERGENCEX already exists.  It is deleted and redefined by  
+ the *DIM command.                                                       
+
+ *** WARNING ***                         CP =  111123.859   TIME= 04:50:26
+ Parameter CONVERGENCEY already exists.  It is deleted and redefined by  
+ the *DIM command.                                                       
+
+ *** WARNING ***                         CP =  111123.859   TIME= 04:50:26
+ Parameter STRESSX already exists.  It is deleted and redefined by the   
+ *DIM command.                                                           
+
+ *** WARNING ***                         CP =  111123.859   TIME= 04:50:26
+ Parameter STRESSY already exists.  It is deleted and redefined by the   
+ *DIM command.                                                           
+
+ *** WARNING ***                         CP =  111123.859   TIME= 04:50:26
+ Parameter COORDZ already exists.  It is deleted and redefined by the    
+ *DIM command.                                                           
+
+ *** WARNING ***                         CP =  111123.859   TIME= 04:50:26
+ Parameter ORDER already exists.  It is deleted and redefined by the     
+ *DIM command.                                                           
+
+ *** WARNING ***                         CP =  111123.859   TIME= 04:50:26
+ Parameter U_X already exists.  It is deleted and redefined by the *DIM  
+ command.                                                                
+
+ *** WARNING ***                         CP =  111123.859   TIME= 04:50:26
+ Parameter U_Y already exists.  It is deleted and redefined by the *DIM  
+ command.                                                                
+
+ *** WARNING ***                         CP =  111123.859   TIME= 04:50:26
+ Parameter S_X already exists.  It is deleted and redefined by the *DIM  
+ command.                                                                
+
+ *** WARNING ***                         CP =  111123.859   TIME= 04:50:26
+ Parameter S_Y already exists.  It is deleted and redefined by the *DIM  
+ command.                                                                
+
+ *** WARNING ***                         CP =  111123.859   TIME= 04:50:26
+ Parameter N_SEL already exists.  It is deleted and redefined by the     
+ *DIM command.                                                           
+
+ *** WARNING ***                         CP =  111128.719   TIME= 04:50:27
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111128.719   TIME= 04:50:27
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111130.469   TIME= 04:50:29
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111130.469   TIME= 04:50:29
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111132.219   TIME= 04:50:31
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111132.219   TIME= 04:50:31
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111133.969   TIME= 04:50:33
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111133.969   TIME= 04:50:33
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111135.719   TIME= 04:50:34
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111135.719   TIME= 04:50:34
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111137.469   TIME= 04:50:36
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111137.469   TIME= 04:50:36
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111139.219   TIME= 04:50:38
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111139.219   TIME= 04:50:38
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111140.953   TIME= 04:50:40
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111140.953   TIME= 04:50:40
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111142.703   TIME= 04:50:41
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111142.703   TIME= 04:50:41
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111144.438   TIME= 04:50:43
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111144.438   TIME= 04:50:43
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111146.172   TIME= 04:50:45
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111146.172   TIME= 04:50:45
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111147.906   TIME= 04:50:47
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111147.906   TIME= 04:50:47
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111149.641   TIME= 04:50:48
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111149.641   TIME= 04:50:48
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111151.391   TIME= 04:50:50
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111151.391   TIME= 04:50:50
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111153.125   TIME= 04:50:52
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111153.125   TIME= 04:50:52
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111154.844   TIME= 04:50:54
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111154.844   TIME= 04:50:54
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111156.578   TIME= 04:50:55
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111156.578   TIME= 04:50:55
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111158.312   TIME= 04:50:57
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111158.312   TIME= 04:50:57
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111160.047   TIME= 04:50:59
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111160.047   TIME= 04:50:59
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111161.781   TIME= 04:51:01
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111161.781   TIME= 04:51:01
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111163.516   TIME= 04:51:02
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111163.516   TIME= 04:51:02
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111165.234   TIME= 04:51:04
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111165.234   TIME= 04:51:04
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111166.953   TIME= 04:51:06
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111166.953   TIME= 04:51:06
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111168.688   TIME= 04:51:07
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111168.688   TIME= 04:51:07
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111170.406   TIME= 04:51:09
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111170.406   TIME= 04:51:09
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111172.125   TIME= 04:51:11
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111172.125   TIME= 04:51:11
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111173.844   TIME= 04:51:13
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111173.844   TIME= 04:51:13
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111175.578   TIME= 04:51:14
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111175.578   TIME= 04:51:14
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111177.297   TIME= 04:51:16
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111177.297   TIME= 04:51:16
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111179.016   TIME= 04:51:18
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111179.016   TIME= 04:51:18
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111180.719   TIME= 04:51:19
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111180.719   TIME= 04:51:19
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111182.406   TIME= 04:51:21
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111182.406   TIME= 04:51:21
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111184.109   TIME= 04:51:23
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111184.109   TIME= 04:51:23
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111185.797   TIME= 04:51:25
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111185.797   TIME= 04:51:25
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111187.500   TIME= 04:51:26
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111187.500   TIME= 04:51:26
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111189.188   TIME= 04:51:28
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111189.188   TIME= 04:51:28
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111190.891   TIME= 04:51:30
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111190.891   TIME= 04:51:30
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111192.562   TIME= 04:51:31
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111192.562   TIME= 04:51:31
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111194.250   TIME= 04:51:33
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111194.250   TIME= 04:51:33
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111195.938   TIME= 04:51:35
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111195.938   TIME= 04:51:35
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111197.625   TIME= 04:51:36
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111197.625   TIME= 04:51:36
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111199.312   TIME= 04:51:38
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111199.312   TIME= 04:51:38
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111201.000   TIME= 04:51:40
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111201.000   TIME= 04:51:40
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111202.672   TIME= 04:51:41
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111202.672   TIME= 04:51:41
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111204.359   TIME= 04:51:43
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111204.359   TIME= 04:51:43
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111206.031   TIME= 04:51:45
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111206.031   TIME= 04:51:45
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111207.703   TIME= 04:51:46
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111207.719   TIME= 04:51:46
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111209.406   TIME= 04:51:48
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111209.406   TIME= 04:51:48
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111211.078   TIME= 04:51:50
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111211.078   TIME= 04:51:50
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111212.750   TIME= 04:51:52
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111212.750   TIME= 04:51:52
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111214.422   TIME= 04:51:53
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111214.422   TIME= 04:51:53
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111216.094   TIME= 04:51:55
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111216.094   TIME= 04:51:55
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111217.766   TIME= 04:51:57
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111217.766   TIME= 04:51:57
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111219.438   TIME= 04:51:58
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111219.438   TIME= 04:51:58
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111221.109   TIME= 04:52:00
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111221.109   TIME= 04:52:00
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111222.781   TIME= 04:52:02
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111222.781   TIME= 04:52:02
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111224.453   TIME= 04:52:03
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111224.453   TIME= 04:52:03
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111226.109   TIME= 04:52:05
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111226.109   TIME= 04:52:05
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111227.766   TIME= 04:52:07
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111227.766   TIME= 04:52:07
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111229.406   TIME= 04:52:08
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111229.406   TIME= 04:52:08
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111231.047   TIME= 04:52:10
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111231.047   TIME= 04:52:10
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111232.688   TIME= 04:52:11
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111232.688   TIME= 04:52:11
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111234.312   TIME= 04:52:13
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111234.312   TIME= 04:52:13
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111235.938   TIME= 04:52:15
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111235.938   TIME= 04:52:15
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111237.562   TIME= 04:52:16
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111237.562   TIME= 04:52:16
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111239.188   TIME= 04:52:18
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111239.188   TIME= 04:52:18
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111240.812   TIME= 04:52:20
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111240.812   TIME= 04:52:20
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111242.422   TIME= 04:52:21
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111242.422   TIME= 04:52:21
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111244.031   TIME= 04:52:23
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111244.031   TIME= 04:52:23
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111245.641   TIME= 04:52:24
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111245.641   TIME= 04:52:24
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111247.234   TIME= 04:52:26
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111247.234   TIME= 04:52:26
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111248.844   TIME= 04:52:28
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111248.844   TIME= 04:52:28
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111250.438   TIME= 04:52:29
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111250.438   TIME= 04:52:29
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111252.031   TIME= 04:52:31
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111252.031   TIME= 04:52:31
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111253.625   TIME= 04:52:32
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111253.625   TIME= 04:52:32
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111255.234   TIME= 04:52:34
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111255.234   TIME= 04:52:34
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111256.812   TIME= 04:52:36
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111256.812   TIME= 04:52:36
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111258.406   TIME= 04:52:37
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111258.406   TIME= 04:52:37
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111260.016   TIME= 04:52:39
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111260.016   TIME= 04:52:39
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111261.594   TIME= 04:52:40
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111261.594   TIME= 04:52:40
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111263.172   TIME= 04:52:42
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111263.172   TIME= 04:52:42
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111264.766   TIME= 04:52:44
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111264.766   TIME= 04:52:44
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111266.344   TIME= 04:52:45
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111266.344   TIME= 04:52:45
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111267.922   TIME= 04:52:47
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111267.922   TIME= 04:52:47
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111269.516   TIME= 04:52:48
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111269.516   TIME= 04:52:48
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111271.094   TIME= 04:52:50
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111271.094   TIME= 04:52:50
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111272.672   TIME= 04:52:51
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111272.672   TIME= 04:52:51
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111274.250   TIME= 04:52:53
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111274.250   TIME= 04:52:53
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111275.812   TIME= 04:52:55
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111275.828   TIME= 04:52:55
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111277.391   TIME= 04:52:56
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111277.391   TIME= 04:52:56
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111278.969   TIME= 04:52:58
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111278.969   TIME= 04:52:58
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111280.547   TIME= 04:52:59
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111280.547   TIME= 04:52:59
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111282.125   TIME= 04:53:01
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111282.125   TIME= 04:53:01
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111283.703   TIME= 04:53:02
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111283.703   TIME= 04:53:02
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111285.266   TIME= 04:53:04
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111285.266   TIME= 04:53:04
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111286.828   TIME= 04:53:06
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111286.828   TIME= 04:53:06
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111288.391   TIME= 04:53:07
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111288.391   TIME= 04:53:07
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111289.953   TIME= 04:53:09
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111289.953   TIME= 04:53:09
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111291.516   TIME= 04:53:10
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111291.516   TIME= 04:53:10
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111293.078   TIME= 04:53:12
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111293.078   TIME= 04:53:12
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111294.641   TIME= 04:53:13
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111294.641   TIME= 04:53:13
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111296.188   TIME= 04:53:15
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111296.188   TIME= 04:53:15
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111297.750   TIME= 04:53:17
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111297.750   TIME= 04:53:17
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111299.297   TIME= 04:53:18
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111299.297   TIME= 04:53:18
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111300.859   TIME= 04:53:20
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111300.859   TIME= 04:53:20
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111302.406   TIME= 04:53:21
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111302.406   TIME= 04:53:21
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111303.953   TIME= 04:53:23
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111303.953   TIME= 04:53:23
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111305.500   TIME= 04:53:24
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111305.500   TIME= 04:53:24
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111307.047   TIME= 04:53:26
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111307.047   TIME= 04:53:26
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111308.609   TIME= 04:53:27
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111308.609   TIME= 04:53:27
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111310.156   TIME= 04:53:29
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111310.156   TIME= 04:53:29
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111311.719   TIME= 04:53:30
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111311.719   TIME= 04:53:30
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111313.250   TIME= 04:53:32
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111313.250   TIME= 04:53:32
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111314.797   TIME= 04:53:34
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111314.797   TIME= 04:53:34
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111316.328   TIME= 04:53:35
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111316.328   TIME= 04:53:35
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111317.859   TIME= 04:53:37
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111317.859   TIME= 04:53:37
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111319.391   TIME= 04:53:38
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111319.391   TIME= 04:53:38
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111320.938   TIME= 04:53:40
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111320.938   TIME= 04:53:40
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111322.469   TIME= 04:53:41
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111322.469   TIME= 04:53:41
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111324.000   TIME= 04:53:43
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111324.000   TIME= 04:53:43
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111325.609   TIME= 04:53:44
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111325.609   TIME= 04:53:44
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111327.188   TIME= 04:53:46
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111327.188   TIME= 04:53:46
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111328.719   TIME= 04:53:47
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111328.719   TIME= 04:53:47
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111330.234   TIME= 04:53:49
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111330.234   TIME= 04:53:49
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111331.750   TIME= 04:53:51
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111331.750   TIME= 04:53:51
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111333.281   TIME= 04:53:52
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111333.281   TIME= 04:53:52
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111334.797   TIME= 04:53:54
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111334.797   TIME= 04:53:54
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111336.312   TIME= 04:53:55
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111336.312   TIME= 04:53:55
+ Some entities requested in the *VGET were undefined.                    
+
+ *** WARNING ***                         CP =  111338.312   TIME= 04:54:07
+ Parameter CONVERGENCEX already exists.  It is deleted and redefined by  
+ the *DIM command.                                                       
+
+ *** WARNING ***                         CP =  111338.312   TIME= 04:54:07
+ Parameter CONVERGENCEY already exists.  It is deleted and redefined by  
+ the *DIM command.                                                       
+
+ *** WARNING ***                         CP =  111338.312   TIME= 04:54:07
+ Parameter STRESSX already exists.  It is deleted and redefined by the   
+ *DIM command.                                                           
+
+ *** WARNING ***                         CP =  111338.312   TIME= 04:54:07
+ Parameter STRESSY already exists.  It is deleted and redefined by the   
+ *DIM command.                                                           
+
+ *** WARNING ***                         CP =  111338.312   TIME= 04:54:07
+ Parameter COORDZ already exists.  It is deleted and redefined by the    
+ *DIM command.                                                           
+
+ *** WARNING ***                         CP =  111338.312   TIME= 04:54:07
+ Parameter ORDER already exists.  It is deleted and redefined by the     
+ *DIM command.                                                           
+
+ *** WARNING ***                         CP =  111338.312   TIME= 04:54:07
+ Parameter U_X already exists.  It is deleted and redefined by the *DIM  
+ command.                                                                
+
+ *** WARNING ***                         CP =  111338.312   TIME= 04:54:07
+ Parameter U_Y already exists.  It is deleted and redefined by the *DIM  
+ command.                                                                
+
+ *** WARNING ***                         CP =  111338.312   TIME= 04:54:07
+ Parameter S_X already exists.  It is deleted and redefined by the *DIM  
+ command.                                                                
+
+ *** WARNING ***                         CP =  111338.312   TIME= 04:54:07
+ Parameter S_Y already exists.  It is deleted and redefined by the *DIM  
+ command.                                                                
+
+ *** WARNING ***                         CP =  111338.312   TIME= 04:54:07
+ Parameter N_SEL already exists.  It is deleted and redefined by the     
+ *DIM command.                                                           
+
+ *** WARNING ***                         CP =  111536.328   TIME= 04:57:30
+ During this session a solution was performed using 16 CPU cores in      
+ shared-memory parallel (SMP) mode (-np 16).  It is strongly             
+ recommended to use distributed memory parallel (DMP) mode instead       
+ (-dis -np 16).  DMP mode typically outperforms SMP mode, even when      
+ running on a single system.  For more information, see the ANSYS        
+ Parallel Processing Guide in the ANSYS Help system.                     

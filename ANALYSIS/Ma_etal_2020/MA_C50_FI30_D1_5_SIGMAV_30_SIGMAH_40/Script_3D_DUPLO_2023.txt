@@ -220,7 +220,7 @@ nLp1		= 2 		! [un] numero de elementos no passo escavado da galeria
 nL1 		= 15 		! [un] numero de elementos ao longo do eixo do tunel longitudinal no trecho não escavado
 mL1 		= 1/5 		! [adm] taxa de crescimento
 nesp 		= 2 		! [un] numero de elementos na espessura do revestimento do tunel longitudinal
-nCRe 		= 16 		! [un] numero de elementos na interface entre maciço e o revestimento do tunel longitudinal (deve ser par)
+nCRe 		= 18 		! [un] numero de elementos na interface entre maciço e o revestimento do tunel longitudinal (deve ser par)
 nRi 		= nCRe/2 	! [un] numero de elementos na horizontal e vertical do maciço escavado no tunel longitudinal
 mRi 		= 0 		! [adm] taxa de crecimento
 nd3 		= nCRe/2 	! [un] numero de elementos na horizontal e vertical oposta ao tunel longitudinal
@@ -245,10 +245,10 @@ m4ga		= Lp1/1.5 	! [m] tamanho dos elementos na galeria
 	nd5		= 6		! [un] numero de elementos no trecho adjacente a galeria transversal
 	md5		= 4		! [adm] taxa de crescimento
 *ELSEIF,d1,EQ,5,THEN
-	nd1 		= 9		! [un] numero de elementos na horizontal e vertical contigua ao tunel longitudinal
-	md1 		= 7 		! [adm] taxa de crescimento		
-	nd4 		= 12 		! [un] numero de elementos na horizontal e vertical contigua a região próxima do tunel longitudinal
-	md4 		= 6 		! [adm] taxa de crescimento
+	nd1 		= 20		! [un] numero de elementos na horizontal e vertical contigua ao tunel longitudinal
+	md1 		= 2 		! [adm] taxa de crescimento		
+	nd4 		= 16 		! [un] numero de elementos na horizontal e vertical contigua a região próxima do tunel longitudinal
+	md4 		= 10 		! [adm] taxa de crescimento
 	nd6		= nd1*2		! [un] número de elementos na vertical contígua a galeria transversal
 	md6		= md1		! [adm] taxa de crescimento
 	nd5		= 6		! [un] numero de elementos no trecho adjacente a galeria transversal
@@ -3422,6 +3422,7 @@ zf		= l1+l2 		! cota ao longo dez
 *ELSEIF,teta,EQ,90,THEN
 	CSYS,0,
 	ALLSEL,ALL
+	ESEL,S,LIVE    
 	NSEL,S,LOC,X,0,0
 	NSEL,R,LOC,Y,0,d3
 	NSEL,R,LOC,Z,zf
