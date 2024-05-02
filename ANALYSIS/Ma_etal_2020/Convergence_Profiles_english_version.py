@@ -133,7 +133,8 @@ dicncolunalongterm = {
     'MA_AXI': 129,
     'MA_D1_25RE': 129,
     'MA_D1_3RE': 129,
-    'MA_D1_4RE': 129,
+    'MA_D1_4RE_L2_200': 198,
+    'MA_D1_3RE_L2_200': 199,
     'MA_D1_5RE': 129,
     'MA_D1_6RE': 129,
     'MA_D1_8RE': 129,
@@ -235,7 +236,7 @@ poly        = poly_twin_convergence_profile
 #           figura)
 
 
-modelo      = 'MA_D1_3RE'
+modelo      = 'MA_D1_3RE_L2_200'
 arquivo     = modelo + '\convergencex_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
 lblcoluna   = r'$d_1/2R_t = 1.5$'
@@ -249,27 +250,27 @@ graficar(arquivo,titulo,eixox,eixoy,
           ncoluna,lblcoluna,
           cor,tamanho,ordem,alpha,estilo,
           invertx,
-          inserirx0,x0,
+          inserirx0,199*1/3,
           suavizar,filterx1,filterx2,wl,poly,
           figura)
 
-# modelo      = 'MA_D1_4RE'
-# arquivo     = modelo + '\convergencex_90.txt'
-# ncoluna     = dicncolunalongterm[modelo]
-# lblcoluna   = r'$d_1/2R_t = 2.0$'
-# cor         = '#f3722c'
-# tamanho     = 1.5
-# ordem       = 4
-# alpha       = 1
-# estilo      = 'solid'
-# graficar(arquivo,titulo,eixox,eixoy,
-#           xmin,xmax,ymin,ymax,
-#           ncoluna,lblcoluna,
-#           cor,tamanho,ordem,alpha,estilo,
-#           invertx,
-#           inserirx0,x0,
-#           suavizar,filterx1,filterx2,wl,poly,
-#           figura)
+modelo      = 'MA_D1_4RE_L2_200'
+arquivo     = modelo + '\convergencex_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
+lblcoluna   = r'$d_1/2R_t = 2.0$'
+cor         = '#f3722c'
+tamanho     = 1.5
+ordem       = 4
+alpha       = 1
+estilo      = 'solid'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,198*1/3,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
 
 modelo      = 'MA_D1_5RE'
 arquivo     = modelo + '\convergencex_90.txt'
@@ -407,7 +408,7 @@ poly        = poly_twin_convergence_profile
 #           suavizar,filterx1,filterx2,wl,poly,
 #           figura)
 
-modelo      = 'MA_D1_3RE'
+modelo      = 'MA_D1_3RE_L2_200'
 arquivo     = modelo + '\convergencex_0.txt'
 ncoluna     = dicncolunalongterm[modelo]
 lblcoluna   = r'$d_1 = 3R_t$'
@@ -421,27 +422,27 @@ graficar(arquivo,titulo,eixox,eixoy,
           ncoluna,lblcoluna,
           cor,tamanho,ordem,alpha,estilo,
           invertx,
-          inserirx0,x0,
+          inserirx0,199*1/3,
           suavizar,filterx1,filterx2,wl,poly,
           figura)
 
-# modelo      = 'MA_D1_4RE'
-# arquivo     = modelo + '\convergencex_0.txt'
-# ncoluna     = dicncolunalongterm[modelo]
-# lblcoluna   = r'$d_1 = 4R_t$'
-# cor         = '#f3722c'
-# tamanho     = 1.5
-# ordem       = 4
-# alpha       = 1
-# estilo      = 'solid'
-# graficar(arquivo,titulo,eixox,eixoy,
-#           xmin,xmax,ymin,ymax,
-#           ncoluna,lblcoluna,
-#           cor,tamanho,ordem,alpha,estilo,
-#           invertx,
-#           inserirx0,x0,
-#           suavizar,filterx1,filterx2,wl,poly,
-#           figura)
+modelo      = 'MA_D1_4RE_L2_200'
+arquivo     = modelo + '\convergencex_0.txt'
+ncoluna     = dicncolunalongterm[modelo]
+lblcoluna   = r'$d_1 = 4R_t$'
+cor         = '#f3722c'
+tamanho     = 1.5
+ordem       = 4
+alpha       = 1
+estilo      = 'solid'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,198*1/3,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
 
 modelo      = 'MA_D1_5RE'
 arquivo     = modelo + '\convergencex_0.txt'
@@ -582,7 +583,7 @@ poly        = poly_twin_convergence_profile
 #           figura)
 
 
-modelo      = 'MA_D1_3RE'
+modelo      = 'MA_D1_3RE_L2_200'
 arquivo     = modelo + '\stressy_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
 lblcoluna   = r'$d_1 = 3R_t$'
@@ -596,27 +597,27 @@ graficar(arquivo,titulo,eixox,eixoy,
           ncoluna,lblcoluna,
           cor,tamanho,ordem,alpha,estilo,
           invertx,
-          inserirx0,x0,
+          inserirx0,199*1/3,
           suavizar,filterx1,filterx2,wl,poly,
           figura)
 
-# modelo      = 'MA_D1_4RE'
-# arquivo     = modelo + '\stressy_90.txt'
-# ncoluna     = dicncolunalongterm[modelo]
-# lblcoluna   = r'$d_1 = 4R_t$'
-# cor         = '#f3722c'
-# tamanho     = 1.5
-# ordem       = 4
-# alpha       = 1
-# estilo      = 'solid'
-# graficar(arquivo,titulo,eixox,eixoy,
-#           xmin,xmax,ymin,ymax,
-#           ncoluna,lblcoluna,
-#           cor,tamanho,ordem,alpha,estilo,
-#           invertx,
-#           inserirx0,x0,
-#           suavizar,filterx1,filterx2,wl,poly,
-#           figura)
+modelo      = 'MA_D1_4RE_L2_200'
+arquivo     = modelo + '\stressy_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
+lblcoluna   = r'$d_1 = 4R_t$'
+cor         = '#f3722c'
+tamanho     = 1.5
+ordem       = 4
+alpha       = 1
+estilo      = 'solid'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,198*1/3,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
 
 modelo      = 'MA_D1_5RE'
 arquivo     = modelo + '\stressy_90.txt'
@@ -756,7 +757,7 @@ poly        = poly_twin_convergence_profile
 #           figura)
 
 
-modelo      = 'MA_D1_3RE'
+modelo      = 'MA_D1_3RE_L2_200'
 arquivo     = modelo + '\stressy_0.txt'
 ncoluna     = dicncolunalongterm[modelo]
 lblcoluna   = r'$d_1 = 3R_t$'
@@ -770,27 +771,27 @@ graficar(arquivo,titulo,eixox,eixoy,
           ncoluna,lblcoluna,
           cor,tamanho,ordem,alpha,estilo,
           invertx,
-          inserirx0,x0,
+          inserirx0,199*1/3,
           suavizar,filterx1,filterx2,wl,poly,
           figura)
 
-# modelo      = 'MA_D1_4RE'
-# arquivo     = modelo + '\stressy_0.txt'
-# ncoluna     = dicncolunalongterm[modelo]
-# lblcoluna   = r'$d_1 = 4R_t$'
-# cor         = '#f3722c'
-# tamanho     = 1.5
-# ordem       = 4
-# alpha       = 1
-# estilo      = 'solid'
-# graficar(arquivo,titulo,eixox,eixoy,
-#           xmin,xmax,ymin,ymax,
-#           ncoluna,lblcoluna,
-#           cor,tamanho,ordem,alpha,estilo,
-#           invertx,
-#           inserirx0,x0,
-#           suavizar,filterx1,filterx2,wl,poly,
-#           figura)
+modelo      = 'MA_D1_4RE_L2_200'
+arquivo     = modelo + '\stressy_0.txt'
+ncoluna     = dicncolunalongterm[modelo]
+lblcoluna   = r'$d_1 = 4R_t$'
+cor         = '#f3722c'
+tamanho     = 1.5
+ordem       = 4
+alpha       = 1
+estilo      = 'solid'
+graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,198*1/3,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
 
 modelo      = 'MA_D1_5RE'
 arquivo     = modelo + '\stressy_0.txt'

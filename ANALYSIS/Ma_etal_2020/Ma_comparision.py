@@ -88,14 +88,15 @@ def graficar(x,y,                       # eixo x e y
                 pad_inches=0.2)
 
 Rt = 1
-x = np.array([3, 5, 6, 8, 10])/(2)
+x = np.array([3, 4, 5, 6, 8, 10])/(2)
 q0 = 30
 
-sttA = np.array([17.7, 22.8, 24.2, 22.9, 24.4])/q0
-sttB = np.array([21.03, 22.5, 23.7, 22.6, 24.15])/q0
+sttA = np.array([17.7, 23.50, 23.0, 24.25, 23.0, 24.40])/q0
+sttB = np.array([20.16, 23.0, 22.6, 23.76, 22.60, 24.15])/q0
 
-UA   = np.array([0.5566, 0.464, 0.460, 0.470, 0.469])
-UB   = np.array([1.363, 0.506, 0.473, 0.469, 0.460])
+UA   = np.array([1.50, 0.61, 0.505, 0.472, 0.470, 0.470])
+
+UB   = np.array([0.576, 0.476, 0.464, 0.460, 0.470, 0.470])
 
 #x_analitycal = np.array([2.5, 3, 3.5, 4, 4.5, 5, 5.5,6])/(2)
 #sttA_analitycal = [3.874, 3.077, 2.761, 2.576, 2.456, 2.383, 2.317, 2.283]
@@ -139,6 +140,9 @@ ordem       = 1
 alpha       = 1
 estilo      = 'solid'
 marker      = "s"
+
+
+
 
 # graficar(x_analitycal,sttA_analitycal,titulo,eixox,eixoy,
 #           xmin,xmax,xstep,ymin,ymax,ystep,
