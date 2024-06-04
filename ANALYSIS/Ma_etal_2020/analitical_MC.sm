@@ -1,0 +1,1369 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?application progid="SMath Studio Desktop" version="1.0.8348.30405"?>
+<worksheet xmlns="http://smath.info/schemas/worksheet/1.0">
+  <settings ppi="96">
+    <identity>
+      <id>cdff1f90-6d51-4036-b892-fc2391bbf810</id>
+      <revision>2</revision>
+    </identity>
+    <calculation>
+      <precision>4</precision>
+      <exponentialThreshold>5</exponentialThreshold>
+      <trailingZeros>false</trailingZeros>
+      <significantDigitsMode>false</significantDigitsMode>
+      <roundingMode>0</roundingMode>
+      <approximateEqualAccuracy>0</approximateEqualAccuracy>
+      <fractions>decimal</fractions>
+    </calculation>
+    <pageModel active="false" viewMode="2" printGrid="false" printAreas="true" simpleEqualsOnly="false" printBackgroundImages="true">
+      <paper id="9" orientation="Portrait" width="827" height="1169" />
+      <margins left="39" right="39" top="49" bottom="49" />
+      <header alignment="Center" color="#a9a9a9">&amp;[DATE] &amp;[TIME] - &amp;[FILENAME]</header>
+      <footer alignment="Center" color="#a9a9a9">&amp;[PAGENUM] / &amp;[COUNT]</footer>
+      <backgrounds />
+    </pageModel>
+    <dependencies>
+      <assembly name="SMath Studio Desktop" version="1.0.8348.30405" guid="a37cba83-b69c-4c71-9992-55ff666763bd" />
+      <assembly name="MathRegion" version="1.11.8348.30405" guid="02f1ab51-215b-466e-a74d-5d8b1cf85e8d" />
+      <assembly name="TextRegion" version="1.11.8348.30405" guid="485d28c5-349a-48b6-93be-12a35a1c1e39" />
+    </dependencies>
+  </settings>
+  <regions type="content">
+    <region left="36" top="27" width="165" height="28" color="#000000" fontSize="7">
+      <text lang="por" width="164" fontFamily="Arial" fontSize="7">
+        <content>
+          <p>Solução analítica de Mohr-Coulomb (tese do Caio):</p>
+        </content>
+      </text>
+    </region>
+    <region left="63" top="63" width="60" height="19" color="#000000" fontSize="7">
+      <math>
+        <input>
+          <e type="operand">Pi</e>
+          <e type="operand">0</e>
+          <e type="operand" style="unit">MPa</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="63" top="81" width="77" height="19" color="#000000" fontSize="7">
+      <math>
+        <input>
+          <e type="operand">Pinf</e>
+          <e type="operand">30</e>
+          <e type="operand" style="unit">MPa</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="378" top="81" width="66" height="19" color="#000000" fontSize="7">
+      <math>
+        <input>
+          <e type="operand">30</e>
+          <e type="operand">0.8</e>
+          <e type="operator" args="2">*</e>
+        </input>
+        <result action="numeric">
+          <e type="operand">24</e>
+        </result>
+      </math>
+    </region>
+    <region left="63" top="99" width="49" height="19" color="#000000" fontSize="7">
+      <math>
+        <input>
+          <e type="operand">Ri</e>
+          <e type="operand">1</e>
+          <e type="operand" style="unit">m</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="63" top="135" width="60" height="19" color="#000000" fontSize="7">
+      <math>
+        <input>
+          <e type="operand">E</e>
+          <e type="operand">20</e>
+          <e type="operand" style="unit">GPa</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="63" top="153" width="52" height="19" color="#000000" fontSize="7">
+      <math>
+        <input>
+          <e type="operand">nu</e>
+          <e type="operand">0.3</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="63" top="189" width="55" height="19" color="#000000" fontSize="7">
+      <math>
+        <input>
+          <e type="operand">c</e>
+          <e type="operand">5</e>
+          <e type="operand" style="unit">MPa</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="63" top="207" width="60" height="19" color="#000000" fontSize="7">
+      <math>
+        <input>
+          <e type="operand">phi</e>
+          <e type="operand">30</e>
+          <e type="operand" style="unit">°</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="63" top="225" width="60" height="19" color="#000000" fontSize="7">
+      <math>
+        <input>
+          <e type="operand">psi</e>
+          <e type="operand">30</e>
+          <e type="operand" style="unit">°</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="63" top="270" width="148" height="33" color="#000000" fontSize="7">
+      <math>
+        <input>
+          <e type="operand">a</e>
+          <e type="operand">c</e>
+          <e type="operand">phi</e>
+          <e type="function" args="1">tan</e>
+          <e type="operator" args="2">/</e>
+          <e type="operator" args="2">:</e>
+        </input>
+        <contract>
+          <e type="operand" style="unit">MPa</e>
+        </contract>
+        <result action="numeric">
+          <e type="operand">8.6603</e>
+        </result>
+      </math>
+    </region>
+    <region left="63" top="306" width="123" height="35" color="#000000" fontSize="7">
+      <math>
+        <input>
+          <e type="operand">Kp</e>
+          <e type="operand">1</e>
+          <e type="operand">phi</e>
+          <e type="function" args="1">sin</e>
+          <e type="operator" args="2">+</e>
+          <e type="operand">1</e>
+          <e type="operand">phi</e>
+          <e type="function" args="1">sin</e>
+          <e type="operator" args="2">-</e>
+          <e type="operator" args="2">/</e>
+          <e type="operator" args="2">:</e>
+        </input>
+        <result action="numeric">
+          <e type="operand">3</e>
+        </result>
+      </math>
+    </region>
+    <region left="63" top="342" width="123" height="35" color="#000000" fontSize="7">
+      <math>
+        <input>
+          <e type="operand">Kb</e>
+          <e type="operand">1</e>
+          <e type="operand">psi</e>
+          <e type="function" args="1">sin</e>
+          <e type="operator" args="2">+</e>
+          <e type="operand">1</e>
+          <e type="operand">psi</e>
+          <e type="function" args="1">sin</e>
+          <e type="operator" args="2">-</e>
+          <e type="operator" args="2">/</e>
+          <e type="operator" args="2">:</e>
+        </input>
+        <result action="numeric">
+          <e type="operand">3</e>
+        </result>
+      </math>
+    </region>
+    <region left="54" top="396" width="245" height="54" color="#000000" fontSize="7">
+      <math>
+        <input>
+          <e type="operand">Rp</e>
+          <e type="operand">2</e>
+          <e type="operand">Pinf</e>
+          <e type="operand">a</e>
+          <e type="operator" args="2">+</e>
+          <e type="bracket">(</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">Kp</e>
+          <e type="operand">1</e>
+          <e type="operator" args="2">+</e>
+          <e type="bracket">(</e>
+          <e type="operand">Pi</e>
+          <e type="operand">a</e>
+          <e type="operator" args="2">+</e>
+          <e type="bracket">(</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">/</e>
+          <e type="bracket">(</e>
+          <e type="operand">1</e>
+          <e type="operand">Kp</e>
+          <e type="operand">1</e>
+          <e type="operator" args="2">-</e>
+          <e type="operator" args="2">/</e>
+          <e type="operator" args="2">^</e>
+          <e type="operand">Ri</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+        <result action="numeric">
+          <e type="operand">1.494</e>
+          <e type="operand" style="unit">m</e>
+          <e type="operator" args="2">*</e>
+        </result>
+      </math>
+    </region>
+    <region left="54" top="459" width="223" height="33" color="#000000" fontSize="7">
+      <math>
+        <input>
+          <e type="operand">Plim</e>
+          <e type="operand">2</e>
+          <e type="operand">Pinf</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">a</e>
+          <e type="operand">1</e>
+          <e type="operand">Kp</e>
+          <e type="operator" args="2">-</e>
+          <e type="bracket">(</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">+</e>
+          <e type="operand">Kp</e>
+          <e type="operand">1</e>
+          <e type="operator" args="2">+</e>
+          <e type="operator" args="2">/</e>
+          <e type="operator" args="2">:</e>
+        </input>
+        <contract>
+          <e type="operand" style="unit">MPa</e>
+        </contract>
+        <result action="numeric">
+          <e type="operand">10.6699</e>
+        </result>
+      </math>
+    </region>
+    <region left="54" top="531" width="42" height="19" color="#000000" fontSize="7">
+      <math>
+        <input>
+          <e type="operand">r</e>
+          <e type="operand">Ri</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="54" top="549" width="223" height="37" color="#000000" fontSize="7">
+      <math>
+        <input>
+          <e type="operand">sigma_rr</e>
+          <e type="operand">Pi</e>
+          <e type="operand">a</e>
+          <e type="operator" args="2">+</e>
+          <e type="bracket">(</e>
+          <e type="operand">r</e>
+          <e type="operand">Ri</e>
+          <e type="operator" args="2">/</e>
+          <e type="bracket">(</e>
+          <e type="operand">Kp</e>
+          <e type="operand">1</e>
+          <e type="operator" args="2">-</e>
+          <e type="operator" args="2">^</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="1">-</e>
+          <e type="operand">a</e>
+          <e type="operator" args="2">+</e>
+          <e type="operator" args="2">:</e>
+        </input>
+        <result action="numeric">
+          <e type="operand">0</e>
+        </result>
+      </math>
+    </region>
+    <region left="54" top="585" width="305" height="37" color="#000000" fontSize="7">
+      <math>
+        <input>
+          <e type="operand">sigma_tt</e>
+          <e type="operand">Kp</e>
+          <e type="operand">Pi</e>
+          <e type="operand">a</e>
+          <e type="operator" args="2">+</e>
+          <e type="bracket">(</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">r</e>
+          <e type="operand">Ri</e>
+          <e type="operator" args="2">/</e>
+          <e type="bracket">(</e>
+          <e type="operand">Kp</e>
+          <e type="operand">1</e>
+          <e type="operator" args="2">-</e>
+          <e type="operator" args="2">^</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="1">-</e>
+          <e type="operand">a</e>
+          <e type="operator" args="2">+</e>
+          <e type="operator" args="2">:</e>
+        </input>
+        <contract>
+          <e type="operand" style="unit">MPa</e>
+        </contract>
+        <result action="numeric">
+          <e type="operand">17.3205</e>
+          <e type="operator" args="1">-</e>
+        </result>
+      </math>
+    </region>
+    <region left="54" top="621" width="442" height="39" color="#000000" fontSize="7">
+      <math>
+        <input>
+          <e type="operand">sigma_zz</e>
+          <e type="operand">nu</e>
+          <e type="operand">Kp</e>
+          <e type="operand">1</e>
+          <e type="operator" args="2">+</e>
+          <e type="bracket">(</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">Pi</e>
+          <e type="operand">a</e>
+          <e type="operator" args="2">+</e>
+          <e type="bracket">(</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">Rp</e>
+          <e type="operand">Ri</e>
+          <e type="operator" args="2">/</e>
+          <e type="bracket">(</e>
+          <e type="operand">Kp</e>
+          <e type="operand">1</e>
+          <e type="operator" args="2">-</e>
+          <e type="operator" args="2">^</e>
+          <e type="operand">r</e>
+          <e type="operand">Ri</e>
+          <e type="operator" args="2">/</e>
+          <e type="bracket">(</e>
+          <e type="operand">Kp</e>
+          <e type="operand">1</e>
+          <e type="operator" args="2">-</e>
+          <e type="operator" args="2">^</e>
+          <e type="operator" args="2">-</e>
+          <e type="bracket">(</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">Pinf</e>
+          <e type="operator" args="2">-</e>
+          <e type="operator" args="2">:</e>
+        </input>
+        <contract>
+          <e type="operand" style="unit">MPa</e>
+        </contract>
+        <result action="numeric">
+          <e type="operand">17.1962</e>
+          <e type="operator" args="1">-</e>
+        </result>
+      </math>
+    </region>
+    <region left="54" top="693" width="214" height="21" color="#000000" fontSize="7">
+      <math>
+        <input>
+          <e type="operand">A</e>
+          <e type="operand">1</e>
+          <e type="operand">2</e>
+          <e type="operand">nu</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">-</e>
+          <e type="bracket">(</e>
+          <e type="operand">Pinf</e>
+          <e type="operand">a</e>
+          <e type="operator" args="2">+</e>
+          <e type="bracket">(</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+        <contract>
+          <e type="operand" style="unit">MPa</e>
+        </contract>
+        <result action="numeric">
+          <e type="operand">15.4641</e>
+        </result>
+      </math>
+    </region>
+    <region left="54" top="720" width="355" height="35" color="#000000" fontSize="7">
+      <math>
+        <input>
+          <e type="operand">B</e>
+          <e type="operand">1</e>
+          <e type="operand">nu</e>
+          <e type="operator" args="2">-</e>
+          <e type="bracket">(</e>
+          <e type="operand">Kb</e>
+          <e type="operand">Kp</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">1</e>
+          <e type="operator" args="2">+</e>
+          <e type="bracket">(</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">Kp</e>
+          <e type="operand">Kb</e>
+          <e type="operator" args="2">+</e>
+          <e type="operator" args="2">/</e>
+          <e type="operand">nu</e>
+          <e type="operator" args="2">-</e>
+          <e type="bracket">(</e>
+          <e type="operand">2</e>
+          <e type="operand">Pinf</e>
+          <e type="operand">a</e>
+          <e type="operator" args="2">+</e>
+          <e type="bracket">(</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">Kp</e>
+          <e type="operand">1</e>
+          <e type="operator" args="2">+</e>
+          <e type="operator" args="2">/</e>
+          <e type="bracket">(</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="1">-</e>
+          <e type="operator" args="2">:</e>
+        </input>
+        <contract>
+          <e type="operand" style="unit">MPa</e>
+        </contract>
+        <result action="numeric">
+          <e type="operand">16.7528</e>
+          <e type="operator" args="1">-</e>
+        </result>
+      </math>
+    </region>
+    <region left="54" top="756" width="295" height="35" color="#000000" fontSize="7">
+      <math>
+        <input>
+          <e type="operand">C</e>
+          <e type="operand">2</e>
+          <e type="operand">1</e>
+          <e type="operand">nu</e>
+          <e type="operator" args="2">-</e>
+          <e type="bracket">(</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">Kp</e>
+          <e type="operand">1</e>
+          <e type="operator" args="2">-</e>
+          <e type="bracket">(</e>
+          <e type="operand">Pinf</e>
+          <e type="operand">a</e>
+          <e type="operator" args="2">+</e>
+          <e type="bracket">(</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">Kp</e>
+          <e type="operand">Kb</e>
+          <e type="operator" args="2">+</e>
+          <e type="operator" args="2">/</e>
+          <e type="bracket">(</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="1">-</e>
+          <e type="operator" args="2">:</e>
+        </input>
+        <contract>
+          <e type="operand" style="unit">MPa</e>
+        </contract>
+        <result action="numeric">
+          <e type="operand">18.0415</e>
+          <e type="operator" args="1">-</e>
+        </result>
+      </math>
+    </region>
+    <region left="54" top="828" width="348" height="39" color="#000000" fontSize="7">
+      <math>
+        <input>
+          <e type="operand">u</e>
+          <e type="operand">1</e>
+          <e type="operand">nu</e>
+          <e type="operator" args="2">+</e>
+          <e type="operand">E</e>
+          <e type="operator" args="2">/</e>
+          <e type="bracket">(</e>
+          <e type="operand">A</e>
+          <e type="operand">B</e>
+          <e type="operand">r</e>
+          <e type="operand">Rp</e>
+          <e type="operator" args="2">/</e>
+          <e type="bracket">(</e>
+          <e type="operand">Kp</e>
+          <e type="operand">1</e>
+          <e type="operator" args="2">-</e>
+          <e type="operator" args="2">^</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">+</e>
+          <e type="operand">C</e>
+          <e type="operand">Rp</e>
+          <e type="operand">r</e>
+          <e type="operator" args="2">/</e>
+          <e type="bracket">(</e>
+          <e type="operand">Kp</e>
+          <e type="operand">1</e>
+          <e type="operator" args="2">+</e>
+          <e type="operator" args="2">^</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">+</e>
+          <e type="bracket">(</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">r</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+        <result action="numeric">
+          <e type="operand">0.0053</e>
+          <e type="operand" style="unit">m</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="1">-</e>
+        </result>
+      </math>
+    </region>
+    <region left="45" top="1098" width="165" height="28" color="#000000" fontSize="7" isBreakable="false">
+      <text lang="por" width="164" fontFamily="Arial" fontSize="7">
+        <content>
+          <p>Solução analítica de Mohr-Coulomb (tese Dissertação Quevedo)</p>
+        </content>
+      </text>
+    </region>
+    <region left="72" top="1134" width="60" height="19" color="#000000" fontSize="7">
+      <math>
+        <input>
+          <e type="operand">Pi</e>
+          <e type="operand">0</e>
+          <e type="operand" style="unit">MPa</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="72" top="1152" width="77" height="19" color="#000000" fontSize="7">
+      <math>
+        <input>
+          <e type="operand">Pinf</e>
+          <e type="operand">30</e>
+          <e type="operand" style="unit">MPa</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="72" top="1170" width="49" height="19" color="#000000" fontSize="7">
+      <math>
+        <input>
+          <e type="operand">Ri</e>
+          <e type="operand">1</e>
+          <e type="operand" style="unit">m</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="72" top="1206" width="60" height="19" color="#000000" fontSize="7">
+      <math>
+        <input>
+          <e type="operand">E</e>
+          <e type="operand">20</e>
+          <e type="operand" style="unit">GPa</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="72" top="1224" width="52" height="19" color="#000000" fontSize="7">
+      <math>
+        <input>
+          <e type="operand">nu</e>
+          <e type="operand">0.3</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="72" top="1260" width="55" height="19" color="#000000" fontSize="7">
+      <math>
+        <input>
+          <e type="operand">c</e>
+          <e type="operand">5</e>
+          <e type="operand" style="unit">MPa</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="72" top="1278" width="60" height="19" color="#000000" fontSize="7">
+      <math>
+        <input>
+          <e type="operand">phi</e>
+          <e type="operand">30</e>
+          <e type="operand" style="unit">°</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="72" top="1323" width="148" height="33" color="#000000" fontSize="7">
+      <math>
+        <input>
+          <e type="operand">H</e>
+          <e type="operand">c</e>
+          <e type="operand">phi</e>
+          <e type="function" args="1">tan</e>
+          <e type="operator" args="2">/</e>
+          <e type="operator" args="2">:</e>
+        </input>
+        <contract>
+          <e type="operand" style="unit">MPa</e>
+        </contract>
+        <result action="numeric">
+          <e type="operand">8.6603</e>
+        </result>
+      </math>
+    </region>
+    <region left="72" top="1377" width="123" height="35" color="#000000" fontSize="7">
+      <math>
+        <input>
+          <e type="operand">Kp</e>
+          <e type="operand">1</e>
+          <e type="operand">phi</e>
+          <e type="function" args="1">sin</e>
+          <e type="operator" args="2">+</e>
+          <e type="operand">1</e>
+          <e type="operand">phi</e>
+          <e type="function" args="1">sin</e>
+          <e type="operator" args="2">-</e>
+          <e type="operator" args="2">/</e>
+          <e type="operator" args="2">:</e>
+        </input>
+        <result action="numeric">
+          <e type="operand">3</e>
+        </result>
+      </math>
+    </region>
+    <region left="72" top="1413" width="245" height="54" color="#000000" fontSize="7">
+      <math>
+        <input>
+          <e type="operand">Rp</e>
+          <e type="operand">2</e>
+          <e type="operand">Pinf</e>
+          <e type="operand">H</e>
+          <e type="operator" args="2">+</e>
+          <e type="bracket">(</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">Kp</e>
+          <e type="operand">1</e>
+          <e type="operator" args="2">+</e>
+          <e type="bracket">(</e>
+          <e type="operand">Pi</e>
+          <e type="operand">H</e>
+          <e type="operator" args="2">+</e>
+          <e type="bracket">(</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">/</e>
+          <e type="bracket">(</e>
+          <e type="operand">1</e>
+          <e type="operand">Kp</e>
+          <e type="operand">1</e>
+          <e type="operator" args="2">-</e>
+          <e type="operator" args="2">/</e>
+          <e type="operator" args="2">^</e>
+          <e type="operand">Ri</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+        <result action="numeric">
+          <e type="operand">1.494</e>
+          <e type="operand" style="unit">m</e>
+          <e type="operator" args="2">*</e>
+        </result>
+      </math>
+    </region>
+    <region left="72" top="1476" width="223" height="33" color="#000000" fontSize="7">
+      <math>
+        <input>
+          <e type="operand">Plim</e>
+          <e type="operand">2</e>
+          <e type="operand">Pinf</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">H</e>
+          <e type="operand">1</e>
+          <e type="operand">Kp</e>
+          <e type="operator" args="2">-</e>
+          <e type="bracket">(</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">+</e>
+          <e type="operand">Kp</e>
+          <e type="operand">1</e>
+          <e type="operator" args="2">+</e>
+          <e type="operator" args="2">/</e>
+          <e type="operator" args="2">:</e>
+        </input>
+        <contract>
+          <e type="operand" style="unit">MPa</e>
+        </contract>
+        <result action="numeric">
+          <e type="operand">10.6699</e>
+        </result>
+      </math>
+    </region>
+    <region left="63" top="1530" width="234" height="39" color="#000000" fontSize="7">
+      <math>
+        <input>
+          <e type="operand">sigma_rr</e>
+          <e type="operand">r</e>
+          <e type="operand">Ri</e>
+          <e type="operator" args="2">/</e>
+          <e type="bracket">(</e>
+          <e type="operand">Kp</e>
+          <e type="operand">1</e>
+          <e type="operator" args="2">-</e>
+          <e type="bracket">(</e>
+          <e type="operator" args="2">^</e>
+          <e type="operand">Pi</e>
+          <e type="operator" args="1">-</e>
+          <e type="operand">H</e>
+          <e type="operator" args="2">-</e>
+          <e type="bracket">(</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">H</e>
+          <e type="operator" args="2">+</e>
+          <e type="operator" args="2">:</e>
+        </input>
+        <result action="numeric">
+          <e type="operand">0</e>
+        </result>
+      </math>
+    </region>
+    <region left="63" top="1575" width="328" height="41" color="#000000" fontSize="7">
+      <math>
+        <input>
+          <e type="operand">sigma_tt</e>
+          <e type="operand">Kp</e>
+          <e type="operand">r</e>
+          <e type="operand">Ri</e>
+          <e type="operator" args="2">/</e>
+          <e type="bracket">(</e>
+          <e type="operand">Kp</e>
+          <e type="operand">1</e>
+          <e type="operator" args="2">-</e>
+          <e type="bracket">(</e>
+          <e type="operator" args="2">^</e>
+          <e type="bracket">(</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">Pi</e>
+          <e type="operator" args="1">-</e>
+          <e type="operand">H</e>
+          <e type="operator" args="2">-</e>
+          <e type="bracket">(</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">H</e>
+          <e type="operator" args="2">+</e>
+          <e type="operator" args="2">:</e>
+        </input>
+        <contract>
+          <e type="operand" style="unit">MPa</e>
+        </contract>
+        <result action="numeric">
+          <e type="operand">17.3205</e>
+          <e type="operator" args="1">-</e>
+        </result>
+      </math>
+    </region>
+    <region left="63" top="1620" width="379" height="21" color="#000000" fontSize="7">
+      <math>
+        <input>
+          <e type="operand">sigma_zz</e>
+          <e type="operand">nu</e>
+          <e type="operand">sigma_rr</e>
+          <e type="operand">sigma_tt</e>
+          <e type="operator" args="2">+</e>
+          <e type="bracket">(</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">2</e>
+          <e type="operand">nu</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">1</e>
+          <e type="operator" args="2">-</e>
+          <e type="bracket">(</e>
+          <e type="operand">Pinf</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">+</e>
+          <e type="operator" args="2">:</e>
+        </input>
+        <contract>
+          <e type="operand" style="unit">MPa</e>
+        </contract>
+        <result action="numeric">
+          <e type="operand">17.1962</e>
+          <e type="operator" args="1">-</e>
+        </result>
+      </math>
+    </region>
+    <region left="0" top="1692" width="632" height="41" color="#000000" fontSize="7">
+      <math>
+        <input>
+          <e type="operand">u</e>
+          <e type="operand">1</e>
+          <e type="operand">1</e>
+          <e type="operand">nu</e>
+          <e type="operator" args="2">+</e>
+          <e type="operand">E</e>
+          <e type="operator" args="2">/</e>
+          <e type="bracket">(</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">1</e>
+          <e type="operand">2</e>
+          <e type="operand">nu</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">-</e>
+          <e type="bracket">(</e>
+          <e type="operand">Pi</e>
+          <e type="operator" args="1">-</e>
+          <e type="operand">H</e>
+          <e type="operator" args="2">-</e>
+          <e type="bracket">(</e>
+          <e type="operand">r</e>
+          <e type="operand">Ri</e>
+          <e type="operator" args="2">/</e>
+          <e type="bracket">(</e>
+          <e type="operand">Kp</e>
+          <e type="operand">1</e>
+          <e type="operator" args="2">-</e>
+          <e type="operator" args="2">^</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">H</e>
+          <e type="operator" args="2">+</e>
+          <e type="operand">Pinf</e>
+          <e type="operator" args="2">+</e>
+          <e type="bracket">(</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">2</e>
+          <e type="operand">1</e>
+          <e type="operand">nu</e>
+          <e type="operator" args="2">+</e>
+          <e type="bracket">(</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">Kp</e>
+          <e type="operand">1</e>
+          <e type="operator" args="2">-</e>
+          <e type="operand">Kp</e>
+          <e type="operand">1</e>
+          <e type="operator" args="2">+</e>
+          <e type="operator" args="2">/</e>
+          <e type="bracket">(</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">Pinf</e>
+          <e type="operator" args="1">-</e>
+          <e type="operand">H</e>
+          <e type="operator" args="2">-</e>
+          <e type="bracket">(</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">Rp</e>
+          <e type="operand">r</e>
+          <e type="operator" args="2">/</e>
+          <e type="bracket">(</e>
+          <e type="operand">2</e>
+          <e type="operator" args="2">^</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">+</e>
+          <e type="bracket">(</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+        <result action="numeric">
+          <e type="operand">0.0065</e>
+          <e type="operator" args="1">-</e>
+        </result>
+      </math>
+    </region>
+    <region left="54" top="2160" width="165" height="28" color="#000000" fontSize="7" isBreakable="false">
+      <text lang="por" width="164" fontFamily="Arial" fontSize="7">
+        <content>
+          <p>Solução analítica de Mohr-Coulomb (Salençon 1969)</p>
+        </content>
+      </text>
+    </region>
+    <region left="288" top="2169" width="428" height="18" color="#000000" fontSize="7">
+      <text lang="por" fontFamily="Arial" fontSize="7">
+        <content>
+          <p>https://docs.itascacg.com/3dec700/3dec/docproject/source/examples/CylindricalHoleInAnIMCM.html</p>
+        </content>
+      </text>
+    </region>
+    <region left="81" top="2196" width="60" height="19" color="#000000" fontSize="7">
+      <math>
+        <input>
+          <e type="operand">Pi</e>
+          <e type="operand">0</e>
+          <e type="operand" style="unit">MPa</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="81" top="2214" width="77" height="19" color="#000000" fontSize="7">
+      <math>
+        <input>
+          <e type="operand">Pinf</e>
+          <e type="operand">30</e>
+          <e type="operand" style="unit">MPa</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="81" top="2232" width="49" height="19" color="#000000" fontSize="7">
+      <math>
+        <input>
+          <e type="operand">Ri</e>
+          <e type="operand">1</e>
+          <e type="operand" style="unit">m</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="81" top="2268" width="60" height="19" color="#000000" fontSize="7">
+      <math>
+        <input>
+          <e type="operand">E</e>
+          <e type="operand">20</e>
+          <e type="operand" style="unit">GPa</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="81" top="2286" width="52" height="19" color="#000000" fontSize="7">
+      <math>
+        <input>
+          <e type="operand">nu</e>
+          <e type="operand">0.3</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="81" top="2322" width="55" height="19" color="#000000" fontSize="7">
+      <math>
+        <input>
+          <e type="operand">c</e>
+          <e type="operand">5</e>
+          <e type="operand" style="unit">MPa</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="81" top="2340" width="60" height="19" color="#000000" fontSize="7">
+      <math>
+        <input>
+          <e type="operand">phi</e>
+          <e type="operand">30</e>
+          <e type="operand" style="unit">°</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="81" top="2358" width="60" height="19" color="#000000" fontSize="7">
+      <math>
+        <input>
+          <e type="operand">psi</e>
+          <e type="operand">30</e>
+          <e type="operand" style="unit">°</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="81" top="2403" width="123" height="35" color="#000000" fontSize="7">
+      <math>
+        <input>
+          <e type="operand">Kp</e>
+          <e type="operand">1</e>
+          <e type="operand">phi</e>
+          <e type="function" args="1">sin</e>
+          <e type="operator" args="2">+</e>
+          <e type="operand">1</e>
+          <e type="operand">phi</e>
+          <e type="function" args="1">sin</e>
+          <e type="operator" args="2">-</e>
+          <e type="operator" args="2">/</e>
+          <e type="operator" args="2">:</e>
+        </input>
+        <result action="numeric">
+          <e type="operand">3</e>
+        </result>
+      </math>
+    </region>
+    <region left="252" top="2412" width="129" height="35" color="#000000" fontSize="7">
+      <math>
+        <input>
+          <e type="operand">Kps</e>
+          <e type="operand">1</e>
+          <e type="operand">psi</e>
+          <e type="function" args="1">sin</e>
+          <e type="operator" args="2">+</e>
+          <e type="operand">1</e>
+          <e type="operand">psi</e>
+          <e type="function" args="1">sin</e>
+          <e type="operator" args="2">-</e>
+          <e type="operator" args="2">/</e>
+          <e type="operator" args="2">:</e>
+        </input>
+        <result action="numeric">
+          <e type="operand">3</e>
+        </result>
+      </math>
+    </region>
+    <region left="90" top="2457" width="210" height="33" color="#000000" fontSize="7">
+      <math>
+        <input>
+          <e type="operand">q</e>
+          <e type="operand">2</e>
+          <e type="operand">c</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">45</e>
+          <e type="operand" style="unit">°</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">phi</e>
+          <e type="operand">2</e>
+          <e type="operator" args="2">/</e>
+          <e type="operator" args="2">+</e>
+          <e type="function" args="1">tan</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+        <contract>
+          <e type="operand" style="unit">MPa</e>
+        </contract>
+        <result action="numeric">
+          <e type="operand">17.3205</e>
+        </result>
+      </math>
+    </region>
+    <region left="81" top="2502" width="262" height="74" color="#000000" fontSize="7">
+      <math>
+        <input>
+          <e type="operand">Rp</e>
+          <e type="operand">Ri</e>
+          <e type="operand">2</e>
+          <e type="operand">Kp</e>
+          <e type="operand">1</e>
+          <e type="operator" args="2">+</e>
+          <e type="operator" args="2">/</e>
+          <e type="operand">Pinf</e>
+          <e type="operand">q</e>
+          <e type="operand">Kp</e>
+          <e type="operand">1</e>
+          <e type="operator" args="2">-</e>
+          <e type="operator" args="2">/</e>
+          <e type="operator" args="2">+</e>
+          <e type="operand">Pi</e>
+          <e type="operand">q</e>
+          <e type="operand">Kp</e>
+          <e type="operand">1</e>
+          <e type="operator" args="2">-</e>
+          <e type="operator" args="2">/</e>
+          <e type="operator" args="2">+</e>
+          <e type="operator" args="2">/</e>
+          <e type="operator" args="2">*</e>
+          <e type="bracket">(</e>
+          <e type="operand">1</e>
+          <e type="operand">Kp</e>
+          <e type="operand">1</e>
+          <e type="operator" args="2">-</e>
+          <e type="operator" args="2">/</e>
+          <e type="operator" args="2">^</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+        <result action="numeric">
+          <e type="operand">1.494</e>
+          <e type="operand" style="unit">m</e>
+          <e type="operator" args="2">*</e>
+        </result>
+      </math>
+    </region>
+    <region left="81" top="2610" width="42" height="19" color="#000000" fontSize="7">
+      <math>
+        <input>
+          <e type="operand">r</e>
+          <e type="operand">Ri</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="81" top="2628" width="294" height="37" color="#000000" fontSize="7">
+      <math>
+        <input>
+          <e type="operand">sigma_rr</e>
+          <e type="operand">q</e>
+          <e type="operand">Kp</e>
+          <e type="operand">1</e>
+          <e type="operator" args="2">-</e>
+          <e type="operator" args="2">/</e>
+          <e type="operator" args="1">-</e>
+          <e type="operand">Pi</e>
+          <e type="operand">q</e>
+          <e type="operand">Kp</e>
+          <e type="operand">1</e>
+          <e type="operator" args="2">-</e>
+          <e type="operator" args="2">/</e>
+          <e type="operator" args="2">+</e>
+          <e type="bracket">(</e>
+          <e type="operand">r</e>
+          <e type="operand">Ri</e>
+          <e type="operator" args="2">/</e>
+          <e type="bracket">(</e>
+          <e type="operand">Kp</e>
+          <e type="operand">1</e>
+          <e type="operator" args="2">-</e>
+          <e type="operator" args="2">^</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">+</e>
+          <e type="operator" args="2">:</e>
+        </input>
+        <contract>
+          <e type="operand" style="unit">MPa</e>
+        </contract>
+        <result action="numeric">
+          <e type="operand">0</e>
+        </result>
+      </math>
+    </region>
+    <region left="81" top="2673" width="377" height="39" color="#000000" fontSize="7">
+      <math>
+        <input>
+          <e type="operand">sigma_tt</e>
+          <e type="operand">q</e>
+          <e type="operand">Kp</e>
+          <e type="operand">1</e>
+          <e type="operator" args="2">-</e>
+          <e type="operator" args="2">/</e>
+          <e type="operator" args="1">-</e>
+          <e type="operand">Kp</e>
+          <e type="operand">Pi</e>
+          <e type="operand">q</e>
+          <e type="operand">Kp</e>
+          <e type="operand">1</e>
+          <e type="operator" args="2">-</e>
+          <e type="operator" args="2">/</e>
+          <e type="operator" args="2">+</e>
+          <e type="bracket">(</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">r</e>
+          <e type="operand">Ri</e>
+          <e type="operator" args="2">/</e>
+          <e type="bracket">(</e>
+          <e type="operand">Kp</e>
+          <e type="operand">1</e>
+          <e type="operator" args="2">-</e>
+          <e type="operator" args="2">^</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">+</e>
+          <e type="bracket">(</e>
+          <e type="operator" args="1">-</e>
+          <e type="operator" args="2">:</e>
+        </input>
+        <contract>
+          <e type="operand" style="unit">MPa</e>
+        </contract>
+        <result action="numeric">
+          <e type="operand">17.3205</e>
+          <e type="operator" args="1">-</e>
+        </result>
+      </math>
+    </region>
+    <region left="81" top="2718" width="379" height="21" color="#000000" fontSize="7">
+      <math>
+        <input>
+          <e type="operand">sigma_zz</e>
+          <e type="operand">nu</e>
+          <e type="operand">sigma_rr</e>
+          <e type="operand">sigma_tt</e>
+          <e type="operator" args="2">+</e>
+          <e type="bracket">(</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">2</e>
+          <e type="operand">nu</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">1</e>
+          <e type="operator" args="2">-</e>
+          <e type="bracket">(</e>
+          <e type="operand">Pinf</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">+</e>
+          <e type="operator" args="2">:</e>
+        </input>
+        <contract>
+          <e type="operand" style="unit">MPa</e>
+        </contract>
+        <result action="numeric">
+          <e type="operand">17.1962</e>
+          <e type="operator" args="1">-</e>
+        </result>
+      </math>
+    </region>
+    <region left="81" top="2754" width="152" height="33" color="#000000" fontSize="7">
+      <math>
+        <input>
+          <e type="operand">G</e>
+          <e type="operand">E</e>
+          <e type="operand">2</e>
+          <e type="operand">1</e>
+          <e type="operand">nu</e>
+          <e type="operator" args="2">+</e>
+          <e type="bracket">(</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">/</e>
+          <e type="operator" args="2">:</e>
+        </input>
+        <contract>
+          <e type="operand" style="unit">GPa</e>
+        </contract>
+        <result action="numeric">
+          <e type="operand">7.6923</e>
+        </result>
+      </math>
+    </region>
+    <region left="0" top="2799" width="871" height="39" color="#000000" fontSize="7">
+      <math>
+        <input>
+          <e type="operand">χ</e>
+          <e type="operand">2</e>
+          <e type="operand">nu</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">1</e>
+          <e type="operator" args="2">-</e>
+          <e type="bracket">(</e>
+          <e type="operand">Pinf</e>
+          <e type="operand">q</e>
+          <e type="operand">Kp</e>
+          <e type="operand">1</e>
+          <e type="operator" args="2">-</e>
+          <e type="operator" args="2">/</e>
+          <e type="operator" args="2">+</e>
+          <e type="bracket">(</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">1</e>
+          <e type="operand">nu</e>
+          <e type="operator" args="2">-</e>
+          <e type="bracket">(</e>
+          <e type="operand">Kp</e>
+          <e type="operand">2</e>
+          <e type="operator" args="2">^</e>
+          <e type="operand">1</e>
+          <e type="operator" args="2">-</e>
+          <e type="bracket">(</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">Kp</e>
+          <e type="operand">Kps</e>
+          <e type="operator" args="2">+</e>
+          <e type="operator" args="2">/</e>
+          <e type="operand">Pi</e>
+          <e type="operand">q</e>
+          <e type="operand">Kp</e>
+          <e type="operand">1</e>
+          <e type="operator" args="2">-</e>
+          <e type="operator" args="2">/</e>
+          <e type="operator" args="2">+</e>
+          <e type="bracket">(</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">Rp</e>
+          <e type="operand">Ri</e>
+          <e type="operator" args="2">/</e>
+          <e type="bracket">(</e>
+          <e type="operand">Kp</e>
+          <e type="operand">1</e>
+          <e type="operator" args="2">-</e>
+          <e type="operator" args="2">^</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">Rp</e>
+          <e type="operand">r</e>
+          <e type="operator" args="2">/</e>
+          <e type="bracket">(</e>
+          <e type="operand">Kps</e>
+          <e type="operand">1</e>
+          <e type="operator" args="2">+</e>
+          <e type="operator" args="2">^</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">+</e>
+          <e type="operand">1</e>
+          <e type="operand">nu</e>
+          <e type="operator" args="2">-</e>
+          <e type="bracket">(</e>
+          <e type="operand">Kp</e>
+          <e type="operand">Kps</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">1</e>
+          <e type="operator" args="2">+</e>
+          <e type="operand">Kp</e>
+          <e type="operand">Kps</e>
+          <e type="operator" args="2">+</e>
+          <e type="operator" args="2">/</e>
+          <e type="operand">nu</e>
+          <e type="operator" args="2">-</e>
+          <e type="bracket">(</e>
+          <e type="operator" args="2">*</e>
+          <e type="bracket">(</e>
+          <e type="operand">Pi</e>
+          <e type="operand">q</e>
+          <e type="operand">Kp</e>
+          <e type="operand">1</e>
+          <e type="operator" args="2">-</e>
+          <e type="operator" args="2">/</e>
+          <e type="operator" args="2">+</e>
+          <e type="bracket">(</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">r</e>
+          <e type="operand">Ri</e>
+          <e type="operator" args="2">/</e>
+          <e type="bracket">(</e>
+          <e type="operand">Kp</e>
+          <e type="operand">1</e>
+          <e type="operator" args="2">-</e>
+          <e type="operator" args="2">^</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">+</e>
+          <e type="operator" args="2">:</e>
+        </input>
+        <contract>
+          <e type="operand" style="unit">MPa</e>
+        </contract>
+        <result action="numeric">
+          <e type="operand">82.7043</e>
+        </result>
+      </math>
+    </region>
+    <region left="81" top="2853" width="120" height="31" color="#000000" fontSize="7">
+      <math>
+        <input>
+          <e type="operand">u</e>
+          <e type="operand">r</e>
+          <e type="operand">2</e>
+          <e type="operand">G</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">/</e>
+          <e type="operand">χ</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+        <result action="numeric">
+          <e type="operand">0.0054</e>
+          <e type="operand" style="unit">m</e>
+          <e type="operator" args="2">*</e>
+        </result>
+      </math>
+    </region>
+  </regions>
+</worksheet>
