@@ -1354,18 +1354,18 @@ c     !
 c     !**************************************************************************! 
 c     ! Verificação do incremento de tempo                                       !
 c     !**************************************************************************!
-c       IF(PHI.GT.0.0d0)THEN
-c       dt1 = 4.0d0/3.0d0*eta/PHI*(1.0d0+posn)/young*DSQRT(3.0d0*J2)
-c       dt2 = eta*f0/(n*(fVP/f0)**(n-1))*
-c      &        (1.0d0+posn)*(1.0d0-2.0d0*posn)/young*
-c      &        ((3.0d0-DSIN(fiVP))**2)/
-c      &        (3.0d0/4.0d0*(1.0d0-2.0d0*posn)*(3.0d0-DSIN(fiVP))**2+
-c      &        6.0d0*(1.0d0+posn)*DSIN(fiVP)**2)
-c       IF(dtime.GT.dt1.OR.dtime.GT.dt2)THEN
-c           keycut = 1
-c           RETURN
-c       ENDIF
-c       ENDIF
+c      IF(PHI.GT.0.0d0)THEN
+c      dt1 = 4.0d0/3.0d0*eta/PHI*(1.0d0+posn)/young*DSQRT(3.0d0*J2)
+c      dt2 = eta*f0/(n*(fVP/f0)**(n-1))*
+c     &        (1.0d0+posn)*(1.0d0-2.0d0*posn)/young*
+c     &        ((3.0d0-DSIN(fiVP))**2)/
+c     &        (3.0d0/4.0d0*(1.0d0-2.0d0*posn)*(3.0d0-DSIN(fiVP))**2+
+c     &        6.0d0*(1.0d0+posn)*DSIN(fiVP)**2)
+c      IF(dtime.GT.dt1.OR.dtime.GT.dt2)THEN
+c          keycut = 1
+c          RETURN
+c      ENDIF
+c      ENDIF
 c     !
 c     !**************************************************************************! 
 c     ! Atualização do módulo constitutivo                                       !
@@ -1710,6 +1710,9 @@ c     !*************************************************************************
       DOUBLE PRECISION c1,c2,c3           ! magnitude das componentes do vetor
       DOUBLE PRECISION beta1,beta2,beta3  ! parâmetros do DP
       DOUBLE PRECISION k                  ! coeficiente de empuxo
+      DOUBLE PRECISION difflode		  ! diferença do ângulo de lode para +-pi/6 (singularidade)
+      DOUBLE PRECISION vPi		  ! Valor de Pi
+      PARAMETER	(vPi = 3.14159265358979323846d0)
 c     !
 c     ! Seleciona o modelo
       SELECT CASE (superficie)
@@ -1735,7 +1738,47 @@ c             ! DPIII - Owen e Hinton (1980, p.231)
               c1 = 2.0d0*DSIN(fi)/(DSQRT(3.0d0)*(3.0d0+DSIN(fi)))
               c2 = 1.0d0
               c3 = 0.0d0
-c             !                 
+c             !  
+          CASE(4)
+c             ! 
+	      ! MC - Owen e Hinton (1980, p.231)
+	      !
+	      ! Verificacao do angulo de Lode
+	      difflode = DABS(theta)-vPi/6.0d0
+	      difflode = DABS(difflode)
+	      IF(difflode.GT.0.1d-9)THEN
+c                  !
+c	           ! O angulo de lode é diferente de +-30
+	           c1 = 1.0d0/3.0d0*DSIN(fi)
+	           c2 = DCOS(theta)*(1+DTAN(theta)*DTAN(3.0d0*theta) + 
+     &			DSIN(fi)*(DTAN(3.0d0*theta)-
+     &			DTAN(theta))/DSQRT(3.0d0))
+	           c3 = (DSQRT(3.0D0)*DSIN(theta)+
+     &			DCOS(theta)*DSIN(fi))/(2.0d0*J2*DCOS(3.0d0*theta))
+c                  !  
+	      ELSE
+c                  !
+c		   ! O angulo de lode é igual de +-30
+c             	   !
+		   IF(DABS(theta+vPi/6.0d0).GT.DABS(theta))THEN
+c             	        !
+c		        ! O angulo de lode é positivo
+c             	        !		   
+		        c1 = 1.0d0/3.0d0*DSIN(fi)
+		        c2 = 1.0d0/2.0d0*(DSQRT(3.0d0)-DSIN(fi)/DSQRT(3.0d0))
+		        c3 = 0.0d0
+c             	        !
+		   ELSE
+c             	        !
+c		        ! O angulo de lode é negativo
+c             	        !		   
+		        c1 = 1.0d0/3.0d0*DSIN(fi)
+		        c2 = 1.0d0/2.0d0*(DSQRT(3.0d0)+DSIN(fi)/DSQRT(3.0d0))
+		        c3 = 0.0d0
+c             	        !
+		   ENDIF
+	      ENDIF
+c	      !
       ENDSELECT
       END SUBROUTINE
 c     !
@@ -1788,7 +1831,15 @@ c             ! DPIII Souza Neto,  Peri, Owen (2008, p. 162-167)
               beta2 = 1.0d0
               beta3 = 6.0d0*DCOS(fi)/(DSQRT(3.0d0)*(3.0d0+DSIN(fi)))*c
               f = beta1*I1 + beta2*DSQRT(J2)-beta3                        
-c             !
+c             ! 
+          CASE(4)
+c             !    
+c             ! MC Owen,  Hinton (1980, p. 231) e Souza Neto,  Peri, Owen (2008, p. 164)
+	        beta1 = 1.0d0/3.0d0*DSIN(fi)
+	        beta2 = DCOS(theta)-DSIN(theta)*DSIN(fi)/DSQRT(3.0d0)
+	        beta3 = c*DCOS(fi)
+              f = beta1*I1 + beta2*DSQRT(J2)-beta3   
+c             ! 
       ENDSELECT
       END SUBROUTINE
 c     !
@@ -1842,19 +1893,28 @@ c             !
 c             ! DPI
               beta = 2.0d0*DSIN(fi)/(DSQRT(3.0d0)*(3.0d0-DSIN(fi)))
 c             ! 
+              Czao = (beta+1.0d0/DSQRT(3.0d0))/
+     &            (DSQRT(3.0d0*beta**2+1.0d0/2.0d0)) 
           CASE(2)
 c             !    
 c             ! DPII
               beta = 2.0d0*DSIN(fi)/(DSQRT(3.0d0)*(3.0d0+DSIN(fi)))
 c             ! 
+              Czao = (beta+1.0d0/DSQRT(3.0d0))/
+     &            (DSQRT(3.0d0*beta**2+1.0d0/2.0d0))  
           CASE(3)
 c             !    
 c             ! DPIII
               beta = 2.0d0*DSIN(fi)/(DSQRT(3.0d0)*(3.0d0+DSIN(fi)))                       
-c             !
+c             ! 
+              Czao = (beta+1.0d0/DSQRT(3.0d0))/
+     &            (DSQRT(3.0d0*beta**2+1.0d0/2.0d0))  
+          CASE(4)                         
+c             ! 
+c             ! MC (de Souza Neto, 2008, p. 184)
+              Czao = 2.0d0*DCOS(fi)
       ENDSELECT
-      Czao = (beta+1.0d0/DSQRT(3.0d0))/
-     &        (DSQRT(3.0d0*beta**2+1.0d0/2.0d0))      
+c     !     
       END SUBROUTINE
 c     !
       SUBROUTINE calcula_Xi(superficie,fi,Xi)
@@ -1884,6 +1944,9 @@ c     !*************************************************************************
       CASE(3)
           k = (1.0d0+DSIN(fi))/(1.0d0-DSIN(fi))
           Xi = 6.0d0*DCOS(fi)/(DSQRT(3.0d0)*(3.0d0+DSIN(fi)))
+      CASE(4)
+	    ! Aqui q = beta3 = X*c(epspeq) 
+          Xi = DCOS(fi)
       END SELECT
       END SUBROUTINE
 c     !
