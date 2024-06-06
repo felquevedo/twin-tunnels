@@ -1,0 +1,100 @@
+/COM,ANSYS RELEASE 2021 R1           BUILD 21.1      UP20201109       13:12:43
+
+ *** WARNING ***                         CP =      18.359   TIME= 13:13:09
+ Shape testing revealed that 6 of the 30 new or modified elements        
+ violate shape warning limits.  To review test results, please see the   
+ output file or issue the CHECK command.                                 
+
+ *** WARNING ***                         CP =      72.469   TIME= 13:13:31
+ Previous testing revealed that 6 of the 4060 selected elements violate  
+ shape warning limits.  To review warning messages, please see the       
+ output or error file, or issue the CHECK command.                       
+
+ *** WARNING ***                         CP =      74.766   TIME= 13:13:39
+ ANSYS,INC.-supplied version of coding for USERCK has been used.         
+
+ *** WARNING ***                         CP =     121.375   TIME= 13:13:45
+ Both solid model and finite element model boundary conditions have been 
+ applied to this model.  As solid loads are transferred to the nodes or  
+ elements, they can overwrite directly applied loads.                    
+
+ *** WARNING ***                         CP =     121.422   TIME= 13:13:45
+ Both solid model and finite element model boundary conditions have been 
+ applied to this model.  As solid loads are transferred to the nodes or  
+ elements, they can overwrite directly applied loads.                    
+
+ *** WARNING ***                         CP =    1348.125   TIME= 13:16:27
+ The view for graph plots is currently NOT changeable.                   
+  To enable graph view manipulation, issue /GROPTS,VIEW,1.               
+
+ *** WARNING ***                         CP =    1368.750   TIME= 13:39:38
+ During this session a solution was performed using 12 CPU cores in      
+ shared-memory parallel (SMP) mode (-np 12).  It is strongly             
+ recommended to use distributed memory parallel (DMP) mode instead       
+ (-dis -np 12).  DMP mode typically outperforms SMP mode, even when      
+ running on a single system.  For more information, see the ANSYS        
+ Parallel Processing Guide in the ANSYS Help system.                     
+/COM,ANSYS RELEASE 2021 R1           BUILD 21.1      UP20201109       13:51:57
+
+ *** WARNING ***                         CP =      19.234   TIME= 13:52:37
+ Shape testing revealed that 6 of the 30 new or modified elements        
+ violate shape warning limits.  To review test results, please see the   
+ output file or issue the CHECK command.                                 
+
+ *** WARNING ***                         CP =      74.234   TIME= 13:52:58
+ Previous testing revealed that 6 of the 4060 selected elements violate  
+ shape warning limits.  To review warning messages, please see the       
+ output or error file, or issue the CHECK command.                       
+
+ *** WARNING ***                         CP =      76.500   TIME= 13:53:00
+ ANSYS,INC.-supplied version of coding for USERCK has been used.         
+
+ *** WARNING ***                         CP =     122.812   TIME= 13:53:06
+ Both solid model and finite element model boundary conditions have been 
+ applied to this model.  As solid loads are transferred to the nodes or  
+ elements, they can overwrite directly applied loads.                    
+
+ *** WARNING ***                         CP =     122.844   TIME= 13:53:06
+ Both solid model and finite element model boundary conditions have been 
+ applied to this model.  As solid loads are transferred to the nodes or  
+ elements, they can overwrite directly applied loads.                    
+
+ *** WARNING ***                         CP =    1349.125   TIME= 15:18:10
+ During this session a solution was performed using 12 CPU cores in      
+ shared-memory parallel (SMP) mode (-np 12).  It is strongly             
+ recommended to use distributed memory parallel (DMP) mode instead       
+ (-dis -np 12).  DMP mode typically outperforms SMP mode, even when      
+ running on a single system.  For more information, see the ANSYS        
+ Parallel Processing Guide in the ANSYS Help system.                     
+/COM,ANSYS RELEASE 2021 R1           BUILD 21.1      UP20201109       15:18:28
+
+ *** WARNING ***                         CP =      19.266   TIME= 15:18:53
+ Shape testing revealed that 6 of the 30 new or modified elements        
+ violate shape warning limits.  To review test results, please see the   
+ output file or issue the CHECK command.                                 
+
+ *** WARNING ***                         CP =      74.094   TIME= 15:19:14
+ Previous testing revealed that 6 of the 4060 selected elements violate  
+ shape warning limits.  To review warning messages, please see the       
+ output or error file, or issue the CHECK command.                       
+
+ *** WARNING ***                         CP =      76.375   TIME= 15:19:23
+ ANSYS,INC.-supplied version of coding for USERCK has been used.         
+
+ *** WARNING ***                         CP =     124.953   TIME= 15:19:29
+ Both solid model and finite element model boundary conditions have been 
+ applied to this model.  As solid loads are transferred to the nodes or  
+ elements, they can overwrite directly applied loads.                    
+
+ *** WARNING ***                         CP =     125.000   TIME= 15:19:29
+ Both solid model and finite element model boundary conditions have been 
+ applied to this model.  As solid loads are transferred to the nodes or  
+ elements, they can overwrite directly applied loads.                    
+
+ *** WARNING ***                         CP =    1361.188   TIME= 17:56:12
+ During this session a solution was performed using 12 CPU cores in      
+ shared-memory parallel (SMP) mode (-np 12).  It is strongly             
+ recommended to use distributed memory parallel (DMP) mode instead       
+ (-dis -np 12).  DMP mode typically outperforms SMP mode, even when      
+ running on a single system.  For more information, see the ANSYS        
+ Parallel Processing Guide in the ANSYS Help system.                     

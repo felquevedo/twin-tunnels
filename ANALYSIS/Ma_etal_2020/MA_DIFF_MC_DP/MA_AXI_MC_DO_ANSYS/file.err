@@ -1,0 +1,37 @@
+/COM,ANSYS RELEASE 2021 R1           BUILD 21.1      UP20201109       13:40:06
+
+ *** WARNING ***                         CP =      18.812   TIME= 13:40:37
+ Shape testing revealed that 6 of the 30 new or modified elements        
+ violate shape warning limits.  To review test results, please see the   
+ output file or issue the CHECK command.                                 
+
+ *** WARNING ***                         CP =      74.000   TIME= 13:40:59
+ Previous testing revealed that 6 of the 4060 selected elements violate  
+ shape warning limits.  To review warning messages, please see the       
+ output or error file, or issue the CHECK command.                       
+
+ *** WARNING ***                         CP =     115.094   TIME= 13:41:06
+ Both solid model and finite element model boundary conditions have been 
+ applied to this model.  As solid loads are transferred to the nodes or  
+ elements, they can overwrite directly applied loads.                    
+
+ *** WARNING ***                         CP =     115.141   TIME= 13:41:06
+ Both solid model and finite element model boundary conditions have been 
+ applied to this model.  As solid loads are transferred to the nodes or  
+ elements, they can overwrite directly applied loads.                    
+
+ *** WARNING ***                         CP =    1725.922   TIME= 13:44:33
+ The view for graph plots is currently NOT changeable.                   
+  To enable graph view manipulation, issue /GROPTS,VIEW,1.               
+
+ *** WARNING ***                         CP =    1726.188   TIME= 13:46:54
+ The view for graph plots is currently NOT changeable.                   
+  To enable graph view manipulation, issue /GROPTS,VIEW,1.               
+
+ *** WARNING ***                         CP =    1726.812   TIME= 13:51:41
+ During this session a solution was performed using 12 CPU cores in      
+ shared-memory parallel (SMP) mode (-np 12).  It is strongly             
+ recommended to use distributed memory parallel (DMP) mode instead       
+ (-dis -np 12).  DMP mode typically outperforms SMP mode, even when      
+ running on a single system.  For more information, see the ANSYS        
+ Parallel Processing Guide in the ANSYS Help system.                     
