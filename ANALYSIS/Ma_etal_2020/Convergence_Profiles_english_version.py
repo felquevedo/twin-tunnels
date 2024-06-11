@@ -152,15 +152,15 @@ x0_twin_profile                         = 130*1/3
 xmin_twin_profile                       = 5
 xmax_twin_profile                       = 50
 ymin_twin_convergence_profile           = 0
-ymax_twin_convergence_profile           = 0.9
+ymax_twin_convergence_profile           = 0.7
 ymin_twin_pressure_profile              = -55
 ymax_twin_pressure_profile              = -15
 
 suavizar_twin                           = True
 
-filterx1_twin_convergence_profile       = 60
-filterx2_twin_convergence_profile       = 105
-wl_twin_convergence_profile             = 30
+filterx1_twin_convergence_profile       = 90
+filterx2_twin_convergence_profile       = 130
+wl_twin_convergence_profile             = 20
 poly_twin_convergence_profile           = 1
 
 filterx1_twin_pressure_profile          = 40
@@ -235,6 +235,12 @@ poly        = poly_twin_convergence_profile
 #           suavizar,filterx1,filterx2,wl,poly,
 #           figura)
 
+
+suavizar       = False
+filterx1       = 80
+filterx2       = 200
+wl             = 10     
+poly           = 1
 
 modelo      = 'MA_D1_3RE_L2_200'
 arquivo     = modelo + '\convergencex_90.txt'

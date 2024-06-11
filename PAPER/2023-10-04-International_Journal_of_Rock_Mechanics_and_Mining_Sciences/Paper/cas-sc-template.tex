@@ -401,7 +401,7 @@ This section is aimed at applying the computational modeling to simulate deforma
 
 \subsection{Unlined twin tunnels in elastic medium}
 
-In the context of plane strain conditions, Guo et al. [\citenum{GUO2021}] addressed the configuration of deep twin tunnels excavated in a homogeneous elastic medium in which prevails a hydrostatic initial stress distribution. The authors formulated approximate analytical solutions for the stress distribution establishing far behind the face, which are induced in the rock mass by the excavation of two parallel circular tunnels. The model geometry of the twin circular tunnels as well as the loading associated with initial hydrostatic stress are displayed in Fig.~\ref{GUO_FIG0}.
+In the context of plane strain conditions, Guo et al. [\citenum{GUO2021}] addressed the configuration of deep twin tunnels excavated in a homogeneous elastic medium in which prevails a hydrostatic initial stress distribution. The authors formulated approximate analytical solutions for the stress distribution establishing far behind the face, which are induced in the rock mass by the excavation of two parallel circular tunnels. The model geometry of the twin circular tunnels as well as the loading associated with initial hydrostatic stress ($\sigma_h = \sigma_v$) are displayed in Fig.~\ref{GUO_FIG0}.
 
 Simulation of the problem has been addressed by means of the 3D finite element model and the numerical results obtained for the stress distribution far behind the faces of the twin tunnel shall be compared to the analytical stress solution derived by Guo et al. [\citenum{GUO2021}] in the framework of plane strain conditions. The simulations have been performed taking advantage of symmetry with respect to the midplane between twin tunnels and considering the following model data: tunnel radius $R_t = 4$ m, rock Young modulus $E = 500$ MPa and Poisson ratio $\nu = 0.23$, isotropic initial stresses of $\sigma_v = \sigma_h = 2.2$ MPa.
 \begin{figure}[h!]
@@ -455,14 +455,35 @@ Keeping in mind it addresses only an academic configuration, the results provide
 
 \subsection{Unlined twin tunnels in elastoplastic medium}\label{}
 
-Ma et al. [\citenum{MA2020}] developed an analytical approach to evaluate the stresses and the plastic zone interface around twin circular tunnels. Their solution is based on a plane strain condition, with the stress along the tunnel axis representing the middle stress, i.e., $\sigma_{zz} = (\sigma_v+\sigma_h)/2$. The study considers symmetry in the vertical plane between the tunnels and assumes that the plastic zones around each tunnel are isolated from each other and completely surround the cross-section of each tunnel. For the constitutive model, the authors consider perfectly plastic Mohr-Coulomb criterion with associated plastic flow and verified their solution with numerical calculation in the plane state of deformations obtained using the finite difference program FLAC3D. As a result, the authors obtained the contour of the plastic zone for several initial conditions and constitutive parameters, i.e., cohesion $c$ and friction angle $\phi$. 
+In the context of plane strain conditions, Ma et al. [\citenum{MA2020}] developed an approximate analytical solution for the stresses and the plastic zone boundary around deep twin circular tunnels excavated in a homogeneous elastoplastic medium. The geometric model and initial stress state are the same as those shown in Fig.~\ref{GUO_FIG0}. However, this model does not assume necessarily equal initial stresses, and the initial stress along the tunnel axis is assumed as the middle stress, i.e., $\sigma_{zz} = (\sigma_v+\sigma_h)/2$. For the constitutive model, the authors considered perfectly plastic Mohr-Coulomb criterion with associated plastic flow rule. 
 
-Fig.~\ref{MA_FIG1} shows the comparison between the present 3D numerical model solution (taken from a section away from the excavation face influence) and the analytical solution for plastic zone boundary. For these analysis, $R_t = 1$ m, Young's modulus $E=20$ GPa and Poisson's ratio $\nu = 0.3$. The boundary of the plastic zone agrees very well with the elements that have reached the plasticity criterion.
+Numerical results of the convergence and the stress distribution localized in a section far from the excavation face, obtained from the 3D finite element model, are compared with the analytical solution for the plane strain derived by [\citenum{MA2020}]. The simulations also utilized symmetry concerning the midplane between the twin tunnels. Denoting by $u_y$ the displacement component along the y-axis, Fig.~\ref{MA_convergence_profile_B} displays the convergence curves $U_B = -u_y(B)/R_t$, that characterize the inward movement at the tunnel roof $B(x = 0, y = R_t, z)$ as a function of normalized longitudinal distance to the facing, using the following data:
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[scale=0.7]{MA_FIG1.pdf}
-	\caption{Numerical and analytical comparison of plastic zones}
+	\includegraphics[scale=0.65]{MA_Convergence Profiles in B.pdf}
+	\caption{Convergence profiles in the crown (Point B).}.
+	\label{MA_convergence_profile_B}
+\end{figure}
+\FloatBarrier
+
+
+
+continue from here
+
+
+The authors consider symmetry in the midplane between twin tunnels and assume that the plastic zones around each tunnel are isolated from each other and completely surround each tunnel.  Their analytical solution is verified with plane strain numerical solutions obtained using the finite difference program FLAC3D. 
+
+Denoting by $u_y$
+
+As a result, the authors obtained the contour of the plastic zone for several initial conditions and constitutive parameters, i.e., cohesion $c$ and friction angle $\phi$.
+
+Fig.~\ref{MA_FIG1} shows the comparison between the 3D F.E. Solution (from a far behind the excavation face) and the analytical solution for plastic zone boundary provided in [\citenum{MA2020}]. For these analysis, $R_t = 1$ m, $d_1 = 5$ m, Young's modulus $E=20$ GPa, Poisson's ratio $\nu = 0.3$ and, friction angle $\phi = 30^\circ$. The boundary of the plastic zone agrees very well with the elements that have reached the plasticity criterion.
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[scale=0.7]{MA_Comparisions_plastic_zones.pdf}
+	\caption{Comparisons between the numerical and analytical solution for the plastic zones considering $d_1 = 5$ and $\phi = 30^\circ$ for different initial conditions and cohesion values.}.
 	\label{MA_FIG1}
 \end{figure}
 \FloatBarrier
