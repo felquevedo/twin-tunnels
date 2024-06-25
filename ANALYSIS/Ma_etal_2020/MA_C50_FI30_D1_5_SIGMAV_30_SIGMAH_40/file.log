@@ -2,3 +2,2548 @@
 /COM,ANSYS RELEASE 2021 R2           BUILD 21.2      UP20210601       19:20:49
 /COM,ANSYS RELEASE 2021 R2           BUILD 21.2      UP20210601       19:20:49
 /COM,ANSYS RELEASE 2021 R2           BUILD 21.2      UP20210601       19:35:21
+/BATCH  
+/COM,ANSYS RELEASE 2021 R2           BUILD 21.2      UP20210601       10:31:23
+/input,menust,tmp,''
+/GRA,POWER
+/GST,ON
+/PLO,INFO,3
+/GRO,CURL,ON
+/CPLANE,1   
+/REPLOT,RESIZE  
+WPSTYLE,,,,,,,,0
+RESUME  
+/COM,ANSYS RELEASE 2021 R2           BUILD 21.2      UP20210601       10:31:36
+/ZOOM,1,SCRN,-0.031954,0.337117,0.038923,0.311350   
+/DIST, 1 ,1.082226,1
+/REP,FAST   
+/DIST, 1 ,1.082226,1
+/REP,FAST   
+/DIST, 1 ,1.082226,1
+/REP,FAST   
+/DIST, 1 ,1.082226,1
+/REP,FAST   
+/DIST, 1 ,1.082226,1
+/REP,FAST   
+/DIST, 1 ,1.082226,1
+/REP,FAST   
+/DIST, 1 ,1.082226,1
+/REP,FAST   
+/REPLOT,RESIZE  
+! /UIS,MSGPOP,3 
+KEYW,PR_SGVOF,1 
+/NERR,5,10000, ,0,5,
+!*  
+!************************************************************!  
+!****_ 5. PÓS-PROCESSAMENTO     _****! 
+!************************************************************!  
+!   
+!************************************************************!  
+!****_   5.1 Configurações iniciais  _****!   
+!************************************************************!  
+!   
+! mudando a cor da janela   
+/RGB,INDEX,100,100,100,0
+/RGB,INDEX,0,0,0,15 
+!   
+! qualidade do arquivo jpeg de saida
+JPEG,QUAL,100,  
+JPEG,ORIENT,HORIZ   
+JPEG,COLOR,2
+JPEG,TMOD,1 
+/GFILE,800, 
+/TYPE,,3
+!   
+! Colocando na angulação  
+/VIEW,1,,-1 
+/ANG,1  
+/ANG,1,30,XS,1  
+/ANG,1,30,XS,1  
+/ANG,1,-30,YS,1 
+/DIST,1,0.729,1 
+/DIST,1,0.729,1 
+/REPLOT 
+!   
+!************************************************************!  
+!****_   5.2 Plotando nó de controle no tempo  _****!  
+!************************************************************!  
+!   
+! Escrevendo criterio de convergencia no tempo  
+! criterio(:,1) - tempo 
+! criterio(:,2) - deltau
+! criterio(:,3) - uatual
+!   
+*IF,analise2,EQ,1,THEN  
+!   
+*CREATE,ansuitmp
+*MWRITE,criterio,criterio,txt   
+(1000(E10.4,3X))
+*END
+/INPUT,ansuitmp 
+!   
+! formatando grafico para plotar uatual x tempo 
+/RGB,INDEX,100,100,100,0
+/RGB,INDEX,0,0,0,15 
+/AXLAB,X,t  
+/AXLAB,Y,u(r=Re,z=Lt)   
+/XRANGE,0,npi*tp+tp*(nesc-1)+tad1+np2*tp2   
+*VSCFUN,criteriomax,max,criterio(1,3)   
+/YRANGE,0,criteriomax*1.2   
+/GROPT,DIVY,20  
+/GROPT,DIVX,10  
+/GROPT,DIG1,3   
+/GTHK,CURVE,1   
+/PLOPTS,INFO,on 
+!   
+! graficando na tela do Ansys   
+/ERASE  
+/SHOW,JPEG,,iso 
+*VLEN,np2   
+*VPLOT,criterio(1,1),criterio(1,3)  
+/SHOW,CLOSE 
+/ERASE  
+!   
+*ENDIF  
+!   
+!************************************************************!  
+!****_   5.3 Perfis tunel longitudinal (teta=90) _****! 
+!************************************************************!  
+/POST1  
+!   
+*SET,teta  , 90  ! angulo da posição do perfil de convergências no túnel longitudinal   
+!   
+! selecionando os nós na interface entre revestimento e o maciço  
+LOCAL,11,1,0,0,lt,0,0,0,0   
+CSYS,11,
+ALLSEL,ALL  
+NSEL,R,LOC,X,Re-0.01,Re+0.01
+NSEL,R,LOC,Y,teta-0.01,teta+0.01
+NSLE,R,CORNER   
+CSYS,0  
+!   
+! sistemas de referencias dos resultados
+RSYS,1  
+!   
+! dimensionando arrays  
+*SET,nanalises , 0  
+*GET,nanalises,ACTIVE,0,SET,NSET ! pegando o número de análises   
+*GET,ncount,NODE,,COUNT     ! pegando numero máximo de nós selecionados   
+*GET,ntotal,NODE,,NUM,MAX    ! pegando numero total de nós 
+*DIM,convergencex,TABLE,ncount,2+nanalises ! dimensionando tabela de convergencias  
+*DIM,convergencey,TABLE,ncount,2+nanalises ! dimensionando tabela de convergencias  
+*DIM,stressx,TABLE,ncount,2+nanalises   ! dimensionando tabela de pressões em x
+*DIM,stressy,TABLE,ncount,2+nanalises   ! dimensionando tabela de pressões em y
+*DIM,coordz,ARRAY,ntotal    ! dimensionando vetor de coordenadas nodais 
+*DIM,ORDER,ARRAY,ncount     ! array auxiliar para ordenamento   
+*DIM,u_x,ARRAY,ntotal     ! dimensionando vetor de deslocamentos em x   
+*DIM,u_y,ARRAY,ntotal     ! dimensionando vetor de deslocamentos em y   
+*DIM,s_x,ARRAY,ntotal     ! dimensionando vetor de pressões em x   
+*DIM,s_y,ARRAY,ntotal     ! dimensionando vetor de pressões em y   
+*DIM,n_sel,ARRAY,ntotal     ! dimensionando vetor que indica se o nó está selecionado 
+!   
+! coloca lista de nós em ordem na primeira coluna  
+*VGET,convergencex(1,1),NODE,,NLIST 
+*VGET,convergencey(1,1),NODE,,NLIST 
+*VGET,stressx(1,1),NODE,,NLIST  
+*VGET,stressy(1,1),NODE,,NLIST  
+!   
+! criando vetor de coordenadas  
+*VGET,n_sel(1),NODE,1,NSEL  
+*VGET,coordz(1),NODE,1,LOC,z
+*VOPER,coordz(1),coordz(1),MULT,1/Re
+!   
+! Preenchendo o convergence e pressure com as coordenadas   
+*VMASK,n_sel(1) 
+*VFUN,convergencex(1,2),COMP,coordz(1)  
+*VMASK,n_sel(1) 
+*VFUN,convergencey(1,2),COMP,coordz(1)  
+*VMASK,n_sel(1) 
+*VFUN,stressx(1,2),COMP,coordz(1)   
+*VMASK,n_sel(1) 
+*VFUN,stressy(1,2),COMP,coordz(1)   
+!   
+! preenchendo o convergence com a convergência 
+*DO,i,1,nanalises,1 
+! identifica o passo
+*IF,i,EQ,nanalises,THEN 
+SUBSET,LAST 
+*ELSE   
+*IF,matmacico,LE,1,AND,matrev,EQ,0,THEN 
+SUBSET,LAST 
+*ELSE   
+SUBSET,i,,,,,,  
+*ENDIF  
+*ENDIF  
+!   
+! Preenchendo o array com os deslocamentos radiais e tensões radiais   
+*VMASK,n_sel(1) 
+*VGET,u_x(1),NODE,1,U,X 
+*VOPER,u_x(1),u_x(1),MULT,-1/Re*100 
+!   
+*VMASK,n_sel(1) 
+*VGET,u_y(1),NODE,1,U,Y 
+*VOPER,u_y(1),u_y(1),MULT,-1/Re*100 
+!   
+*VMASK,n_sel(1) 
+*VGET,s_x(1),NODE,1,S,X 
+*VOPER,s_x(1),s_x(1),MULT,1 
+!   
+*VMASK,n_sel(1) 
+*VGET,s_y(1),NODE,1,S,Y 
+*VOPER,s_y(1),s_y(1),MULT,1 
+!   
+! Preenchendo o convergence e pressure  
+*VMASK,n_sel(1) 
+*VFUN,convergencex(1,2+i),COMP,u_x(1)   
+*VMASK,n_sel(1) 
+*VFUN,convergencey(1,2+i),COMP,u_y(1)   
+*VMASK,n_sel(1) 
+*VFUN,stressx(1,2+i),COMP,s_x(1)
+*VMASK,n_sel(1) 
+*VFUN,stressy(1,2+i),COMP,s_y(1)
+*ENDDO  
+!   
+! ordena a tabela de acordo com a segunda coluna (das coordenadas)  
+*MOPER,ORDER,convergencex,SORT,convergencex(1,2)
+*MOPER,ORDER,convergencey,SORT,convergencey(1,2)
+*MOPER,ORDER,stressx,SORT,stressx(1,2)  
+*MOPER,ORDER,stressy,SORT,stressy(1,2)  
+!   
+! Coleta o maior valor das convergências   
+*VSCFUN,uxmaximofinal,max,convergencex(1,2+nanalises)   
+*VSCFUN,uymaximofinal,max,convergencey(1,2+nanalises)   
+!   
+*VSCFUN,sxmaximofinal,max,stressx(1,2+nanalises)
+*VSCFUN,sxminimofinal,min,stressx(1,2+nanalises)
+!   
+*VSCFUN,symaximofinal,max,stressy(1,2+nanalises)
+*VSCFUN,syminimofinal,min,stressy(1,2+nanalises)
+!   
+! formatando grafico de convergencia x  
+/RGB,INDEX,100,100,100,0
+/RGB,INDEX,0,0,0,15 
+/AXLAB,X,Z/Re   
+/AXLAB,Y,Ux=-ux(r=Re,theta=%teta%)/Re (%)   
+/XRANGE,0,Lt/Re 
+/YRANGE,uxmaximofinal*1.2,0 
+/GROPT,DIVY,20  
+/GROPT,DIVX,10  
+/GROPT,DIG1,3   
+/GTHK,CURVE,1   
+/PLOPTS,INFO,on 
+!   
+! graficando na tela do Ansys   
+/ERASE  
+/SHOW,JPEG,,iso 
+*DO,i,1,nanalises,1 
+*IF,i,EQ,nanalises,THEN 
+/COLOR,CURVE,MAGE,1 
+*ELSEIF,i,EQ,nesc+nesc1-1,THEN  
+/COLOR,CURVE,YELL,1 
+*ELSE   
+/COLOR,CURVE,LGRA,1 
+*ENDIF  
+*VPLOT,convergencex(1,2),convergencex(1,2+i)
+/NOERASE
+*ENDDO  
+/SHOW,CLOSE 
+/ERASE  
+!   
+! formatando grafico de convergencia y  
+/RGB,INDEX,100,100,100,0
+/RGB,INDEX,0,0,0,15 
+/AXLAB,X,Z/Re   
+/AXLAB,Y,Uy=-uy(r=Re,theta=%teta%)/Re (%)   
+/XRANGE,0,Lt/Re 
+/YRANGE,uymaximofinal*1.2,0 
+/GROPT,DIVY,20  
+/GROPT,DIVX,10  
+/GROPT,DIG1,3   
+/GTHK,CURVE,1   
+/PLOPTS,INFO,on 
+!   
+! graficando na tela do Ansys   
+/ERASE  
+/SHOW,JPEG,,iso 
+*DO,i,1,nanalises,1 
+*IF,i,EQ,nanalises,THEN 
+/COLOR,CURVE,MAGE,1 
+*ELSEIF,i,EQ,nesc+nesc1-1,THEN  
+/COLOR,CURVE,YELL,1 
+*ELSE   
+/COLOR,CURVE,LGRA,1 
+*ENDIF  
+*VPLOT,convergencey(1,2),convergencey(1,2+i)
+/NOERASE
+*ENDDO  
+/SHOW,CLOSE 
+/ERASE  
+!   
+!   
+! formatando grafico do stress x
+/RGB,INDEX,100,100,100,0
+/RGB,INDEX,0,0,0,15 
+/AXLAB,X,Z/Re   
+/AXLAB,Y,Sx(r=Re,theta=%teta%)(MPa) 
+/XRANGE,0,Lt/Re 
+/YRANGE,sxmaximofinal*1.2,sxminimofinal*1.2 
+/GROPT,DIVY,20  
+/GROPT,DIVX,10  
+/GROPT,DIG1,3   
+/GTHK,CURVE,1   
+/PLOPTS,INFO,on 
+!   
+! graficando na tela do Ansys   
+/ERASE  
+/SHOW,JPEG,,iso 
+*DO,i,1,nanalises,1 
+*IF,i,EQ,nanalises,THEN 
+/COLOR,CURVE,MAGE,1 
+*ELSEIF,i,EQ,nesc+nesc1-1,THEN  
+/COLOR,CURVE,YELL,1 
+*ELSE   
+/COLOR,CURVE,LGRA,1 
+*ENDIF  
+*VPLOT,stressx(1,2),stressx(1,2+i)  
+/NOERASE
+*ENDDO  
+/SHOW,CLOSE 
+/ERASE  
+!   
+! formatando grafico do stress y
+/RGB,INDEX,100,100,100,0
+/RGB,INDEX,0,0,0,15 
+/AXLAB,X,Z/Re   
+/AXLAB,Y,Sy(r=Re,theta=%teta%)(MPa) 
+/XRANGE,0,Lt/Re 
+/YRANGE,symaximofinal,syminimofinal 
+/GROPT,DIVY,20  
+/GROPT,DIVX,10  
+/GROPT,DIG1,3   
+/GTHK,CURVE,1   
+/PLOPTS,INFO,on 
+!   
+! graficando na tela do Ansys   
+/ERASE  
+/SHOW,JPEG,,iso 
+*DO,i,1,nanalises,1 
+*IF,i,EQ,nanalises,THEN 
+/COLOR,CURVE,MAGE,1 
+*ELSEIF,i,EQ,nesc+nesc1-1,THEN  
+/COLOR,CURVE,YELL,1 
+*ELSE   
+/COLOR,CURVE,LGRA,1 
+*ENDIF  
+*VPLOT,stressy(1,2),stressy(1,2+i)  
+/NOERASE
+*ENDDO  
+/SHOW,CLOSE 
+/ERASE  
+!   
+! Escrevendo em arquivo as convergências   
+*CREATE,ansuitmp
+*MWRITE,convergencex,convergencex_%teta%,txt
+(1000(E10.4,3X))
+*END
+/INPUT,ansuitmp 
+!   
+*CREATE,ansuitmp
+*MWRITE,convergencey,convergencey_%teta%,txt
+(1000(E10.4,3X))
+*END
+/INPUT,ansuitmp 
+!   
+!   
+! Escrevendo em arquivo stress  
+*CREATE,ansuitmp
+*MWRITE,stressx,stressx_%teta%,txt  
+(1000(E10.4,3X))
+*END
+/INPUT,ansuitmp 
+!   
+*CREATE,ansuitmp
+*MWRITE,stressy,stressy_%teta%,txt  
+(1000(E10.4,3X))
+*END
+/INPUT,ansuitmp 
+!   
+! Cria arquivo com os parâmetros   
+PARSAV,SCALAR,parametros,txt
+!   
+!   
+!************************************************************!  
+!****_   5.4 Perfis tunel longitudinal (teta=0)  _****! 
+!************************************************************!  
+!   
+*SET,teta  , 0  ! angulo da posição do perfil de convergências no túnel longitudinal
+!   
+! selecionando os nós na interface entre revestimento e o maciço  
+LOCAL,11,1,0,0,lt,0,0,0,0   
+CSYS,11,
+ALLSEL,ALL  
+NSEL,R,LOC,X,Re-0.01,Re+0.01
+NSEL,R,LOC,Y,teta-0.01,teta+0.01
+NSLE,R,CORNER   
+CSYS,0  
+!   
+! sistemas de referencias dos resultados
+RSYS,1  
+!   
+! dimensionando arrays  
+*SET,nanalises , 0  
+*GET,nanalises,ACTIVE,0,SET,NSET ! pegando o número de análises   
+*GET,ncount,NODE,,COUNT     ! pegando numero máximo de nós selecionados   
+*GET,ntotal,NODE,,NUM,MAX    ! pegando numero total de nós 
+*DIM,convergencex,TABLE,ncount,2+nanalises ! dimensionando tabela de convergencias  
+*DIM,convergencey,TABLE,ncount,2+nanalises ! dimensionando tabela de convergencias  
+*DIM,stressx,TABLE,ncount,2+nanalises   ! dimensionando tabela de pressões em x
+*DIM,stressy,TABLE,ncount,2+nanalises   ! dimensionando tabela de pressões em y
+*DIM,coordz,ARRAY,ntotal    ! dimensionando vetor de coordenadas nodais 
+*DIM,ORDER,ARRAY,ncount     ! array auxiliar para ordenamento   
+*DIM,u_x,ARRAY,ntotal     ! dimensionando vetor de deslocamentos em x   
+*DIM,u_y,ARRAY,ntotal     ! dimensionando vetor de deslocamentos em y   
+*DIM,s_x,ARRAY,ntotal     ! dimensionando vetor de pressões em x   
+*DIM,s_y,ARRAY,ntotal     ! dimensionando vetor de pressões em y   
+*DIM,n_sel,ARRAY,ntotal     ! dimensionando vetor que indica se o nó está selecionado 
+!   
+! coloca lista de nós em ordem na primeira coluna  
+*VGET,convergencex(1,1),NODE,,NLIST 
+*VGET,convergencey(1,1),NODE,,NLIST 
+*VGET,stressx(1,1),NODE,,NLIST  
+*VGET,stressy(1,1),NODE,,NLIST  
+!   
+! criando vetor de coordenadas  
+*VGET,n_sel(1),NODE,1,NSEL  
+*VGET,coordz(1),NODE,1,LOC,z
+*VOPER,coordz(1),coordz(1),MULT,1/Re
+!   
+! Preenchendo o convergence e pressure com as coordenadas   
+*VMASK,n_sel(1) 
+*VFUN,convergencex(1,2),COMP,coordz(1)  
+*VMASK,n_sel(1) 
+*VFUN,convergencey(1,2),COMP,coordz(1)  
+*VMASK,n_sel(1) 
+*VFUN,stressx(1,2),COMP,coordz(1)   
+*VMASK,n_sel(1) 
+*VFUN,stressy(1,2),COMP,coordz(1)   
+!   
+! preenchendo o convergence com a convergência 
+*DO,i,1,nanalises,1 
+! identifica o passo
+*IF,i,EQ,nanalises,THEN 
+SUBSET,LAST 
+*ELSE   
+*IF,matmacico,LE,1,AND,matrev,EQ,0,THEN 
+SUBSET,LAST 
+*ELSE   
+SUBSET,i,,,,,,  
+*ENDIF  
+*ENDIF  
+!   
+! Preenchendo o array com os deslocamentos radiais e tensões radiais   
+*VMASK,n_sel(1) 
+*VGET,u_x(1),NODE,1,U,X 
+*VOPER,u_x(1),u_x(1),MULT,-1/Re*100 
+!   
+*VMASK,n_sel(1) 
+*VGET,u_y(1),NODE,1,U,Y 
+*VOPER,u_y(1),u_y(1),MULT,-1/Re*100 
+!   
+*VMASK,n_sel(1) 
+*VGET,s_x(1),NODE,1,S,X 
+*VOPER,s_x(1),s_x(1),MULT,1 
+!   
+*VMASK,n_sel(1) 
+*VGET,s_y(1),NODE,1,S,Y 
+*VOPER,s_y(1),s_y(1),MULT,1 
+!   
+! Preenchendo o convergence e pressure  
+*VMASK,n_sel(1) 
+*VFUN,convergencex(1,2+i),COMP,u_x(1)   
+*VMASK,n_sel(1) 
+*VFUN,convergencey(1,2+i),COMP,u_y(1)   
+*VMASK,n_sel(1) 
+*VFUN,stressx(1,2+i),COMP,s_x(1)
+*VMASK,n_sel(1) 
+*VFUN,stressy(1,2+i),COMP,s_y(1)
+*ENDDO  
+!   
+! ordena a tabela de acordo com a segunda coluna (das coordenadas)  
+*MOPER,ORDER,convergencex,SORT,convergencex(1,2)
+*MOPER,ORDER,convergencey,SORT,convergencey(1,2)
+*MOPER,ORDER,stressx,SORT,stressx(1,2)  
+*MOPER,ORDER,stressy,SORT,stressy(1,2)  
+!   
+! Coleta o maior valor das convergências   
+*VSCFUN,uxmaximofinal,max,convergencex(1,2+nanalises)   
+*VSCFUN,uymaximofinal,max,convergencey(1,2+nanalises)   
+!   
+*VSCFUN,sxmaximofinal,max,stressx(1,2+nanalises)
+*VSCFUN,sxminimofinal,min,stressx(1,2+nanalises)
+!   
+*VSCFUN,symaximofinal,max,stressy(1,2+nanalises)
+*VSCFUN,syminimofinal,min,stressy(1,2+nanalises)
+!   
+! formatando grafico de convergencia x  
+/RGB,INDEX,100,100,100,0
+/RGB,INDEX,0,0,0,15 
+/AXLAB,X,Z/Re   
+/AXLAB,Y,Ux=-ux(r=Re,theta=%teta%)/Re (%)   
+/XRANGE,0,Lt/Re 
+/YRANGE,uxmaximofinal*1.2,0 
+/GROPT,DIVY,20  
+/GROPT,DIVX,10  
+/GROPT,DIG1,3   
+/GTHK,CURVE,1   
+/PLOPTS,INFO,on 
+!   
+! graficando na tela do Ansys   
+/ERASE  
+/SHOW,JPEG,,iso 
+*DO,i,1,nanalises,1 
+*IF,i,EQ,nanalises,THEN 
+/COLOR,CURVE,MAGE,1 
+*ELSEIF,i,EQ,nesc+nesc1-1,THEN  
+/COLOR,CURVE,YELL,1 
+*ELSE   
+/COLOR,CURVE,LGRA,1 
+*ENDIF  
+*VPLOT,convergencex(1,2),convergencex(1,2+i)
+/NOERASE
+*ENDDO  
+/SHOW,CLOSE 
+/ERASE  
+!   
+! formatando grafico de convergencia y  
+/RGB,INDEX,100,100,100,0
+/RGB,INDEX,0,0,0,15 
+/AXLAB,X,Z/Re   
+/AXLAB,Y,Uy=-uy(r=Re,theta=%teta%)/Re (%)   
+/XRANGE,0,Lt/Re 
+/YRANGE,uymaximofinal*1.2,0 
+/GROPT,DIVY,20  
+/GROPT,DIVX,10  
+/GROPT,DIG1,3   
+/GTHK,CURVE,1   
+/PLOPTS,INFO,on 
+!   
+! graficando na tela do Ansys   
+/ERASE  
+/SHOW,JPEG,,iso 
+*DO,i,1,nanalises,1 
+*IF,i,EQ,nanalises,THEN 
+/COLOR,CURVE,MAGE,1 
+*ELSEIF,i,EQ,nesc+nesc1-1,THEN  
+/COLOR,CURVE,YELL,1 
+*ELSE   
+/COLOR,CURVE,LGRA,1 
+*ENDIF  
+*VPLOT,convergencey(1,2),convergencey(1,2+i)
+/NOERASE
+*ENDDO  
+/SHOW,CLOSE 
+/ERASE  
+!   
+!   
+! formatando grafico do stress x
+/RGB,INDEX,100,100,100,0
+/RGB,INDEX,0,0,0,15 
+/AXLAB,X,Z/Re   
+/AXLAB,Y,Sx(r=Re,theta=%teta%)(MPa) 
+/XRANGE,0,Lt/Re 
+/YRANGE,sxmaximofinal*1.2,sxminimofinal*1.2 
+/GROPT,DIVY,20  
+/GROPT,DIVX,10  
+/GROPT,DIG1,3   
+/GTHK,CURVE,1   
+/PLOPTS,INFO,on 
+!   
+! graficando na tela do Ansys   
+/ERASE  
+/SHOW,JPEG,,iso 
+*DO,i,1,nanalises,1 
+*IF,i,EQ,nanalises,THEN 
+/COLOR,CURVE,MAGE,1 
+*ELSEIF,i,EQ,nesc+nesc1-1,THEN  
+/COLOR,CURVE,YELL,1 
+*ELSE   
+/COLOR,CURVE,LGRA,1 
+*ENDIF  
+*VPLOT,stressx(1,2),stressx(1,2+i)  
+/NOERASE
+*ENDDO  
+/SHOW,CLOSE 
+/ERASE  
+!   
+! formatando grafico do stress y
+/RGB,INDEX,100,100,100,0
+/RGB,INDEX,0,0,0,15 
+/AXLAB,X,Z/Re   
+/AXLAB,Y,Sy(r=Re,theta=%teta%)(MPa) 
+/XRANGE,0,Lt/Re 
+/YRANGE,symaximofinal,syminimofinal 
+/GROPT,DIVY,20  
+/GROPT,DIVX,10  
+/GROPT,DIG1,3   
+/GTHK,CURVE,1   
+/PLOPTS,INFO,on 
+!   
+! graficando na tela do Ansys   
+/ERASE  
+/SHOW,JPEG,,iso 
+*DO,i,1,nanalises,1 
+*IF,i,EQ,nanalises,THEN 
+/COLOR,CURVE,MAGE,1 
+*ELSEIF,i,EQ,nesc+nesc1-1,THEN  
+/COLOR,CURVE,YELL,1 
+*ELSE   
+/COLOR,CURVE,LGRA,1 
+*ENDIF  
+*VPLOT,stressy(1,2),stressy(1,2+i)  
+/NOERASE
+*ENDDO  
+/SHOW,CLOSE 
+/ERASE  
+!   
+! Escrevendo em arquivo as convergências   
+*CREATE,ansuitmp
+*MWRITE,convergencex,convergencex_%teta%,txt
+(1000(E10.4,3X))
+*END
+/INPUT,ansuitmp 
+!   
+*CREATE,ansuitmp
+*MWRITE,convergencey,convergencey_%teta%,txt
+(1000(E10.4,3X))
+*END
+/INPUT,ansuitmp 
+!   
+!   
+! Escrevendo em arquivo stress  
+*CREATE,ansuitmp
+*MWRITE,stressx,stressx_%teta%,txt  
+(1000(E10.4,3X))
+*END
+/INPUT,ansuitmp 
+!   
+*CREATE,ansuitmp
+*MWRITE,stressy,stressy_%teta%,txt  
+(1000(E10.4,3X))
+*END
+/INPUT,ansuitmp 
+!   
+! Cria arquivo com os parâmetros   
+PARSAV,SCALAR,parametros,txt
+!   
+!   
+!************************************************************!  
+!****_   5.5 Tensões em uma dada cota (teta = 0) _****!
+!************************************************************!  
+!   
+*SET,teta  , 0   ! ângulo  
+*SET,zf  , l1+l2   ! cota ao longo dez  
+!   
+! selecionando os nós na interface entre revestimento e o maciço  
+*IF,teta,EQ,0,THEN  
+CSYS,0, 
+ALLSEL,ALL  
+NSEL,S,LOC,X,-d4,d1/2   
+NSEL,R,LOC,Y,0,0
+NSEL,R,LOC,Z,zf 
+NSLE,R,CORNER   
+CSYS,0  
+*SET,eixo , 'x' 
+*SET,localizacao , 'x'  
+*ELSE   
+CSYS,0, 
+ALLSEL,ALL  
+NSEL,S,LOC,X,0,0
+NSEL,R,LOC,Y,0,d3   
+NSEL,R,LOC,Z,zf 
+NSLE,R,CORNER   
+CSYS,0  
+*SET,eixo , 'y' 
+*SET,localizacao , 'y'  
+*ENDIF  
+!   
+! sistemas de referencias dos resultados
+RSYS,1  
+!   
+! dimensionando arrays  
+*SET,nanalises , 0  
+*GET,nanalises,ACTIVE,0,SET,NSET ! pegando o número de análises   
+*GET,ncount,NODE,,COUNT     ! pegando numero máximo de nós selecionados   
+*GET,ntotal,NODE,,NUM,MAX    ! pegando numero total de nós 
+*DIM,convergencex,TABLE,ncount,2+nanalises ! dimensionando tabela de convergencias  
+*DIM,convergencey,TABLE,ncount,2+nanalises ! dimensionando tabela de convergencias  
+*DIM,stressx,TABLE,ncount,2+nanalises   ! dimensionando tabela de pressões em x
+*DIM,stressy,TABLE,ncount,2+nanalises   ! dimensionando tabela de pressões em y
+*DIM,coordz,ARRAY,ntotal    ! dimensionando vetor de coordenadas nodais 
+*DIM,ORDER,ARRAY,ncount     ! array auxiliar para ordenamento   
+*DIM,u_x,ARRAY,ntotal     ! dimensionando vetor de deslocamentos em x   
+*DIM,u_y,ARRAY,ntotal     ! dimensionando vetor de deslocamentos em y   
+*DIM,s_x,ARRAY,ntotal     ! dimensionando vetor de pressões em x   
+*DIM,s_y,ARRAY,ntotal     ! dimensionando vetor de pressões em y   
+*DIM,n_sel,ARRAY,ntotal     ! dimensionando vetor que indica se o nó está selecionado 
+!   
+! coloca lista de nós em ordem na primeira coluna  
+*VGET,convergencex(1,1),NODE,,NLIST 
+*VGET,convergencey(1,1),NODE,,NLIST 
+*VGET,stressx(1,1),NODE,,NLIST  
+*VGET,stressy(1,1),NODE,,NLIST  
+!   
+! criando vetor de coordenadas  
+*VGET,n_sel(1),NODE,1,NSEL  
+*VGET,coordz(1),NODE,1,LOC,localizacao  
+*VOPER,coordz(1),coordz(1),MULT,1 !1/Re 
+!   
+! Preenchendo o convergence e pressure com as coordenadas   
+*VMASK,n_sel(1) 
+*VFUN,convergencex(1,2),COMP,coordz(1)  
+*VMASK,n_sel(1) 
+*VFUN,convergencey(1,2),COMP,coordz(1)  
+*VMASK,n_sel(1) 
+*VFUN,stressx(1,2),COMP,coordz(1)   
+*VMASK,n_sel(1) 
+*VFUN,stressy(1,2),COMP,coordz(1)   
+!   
+! preenchendo o convergence com a convergência 
+*DO,i,1,nanalises,1 
+! identifica o passo
+*IF,i,EQ,nanalises,THEN 
+SUBSET,LAST 
+*ELSE   
+*IF,matmacico,LE,1,AND,matrev,EQ,0,THEN 
+SUBSET,LAST 
+*ELSE   
+SUBSET,i,,,,,,  
+*ENDIF  
+*ENDIF  
+!   
+! Preenchendo o array com os deslocamentos radiais e tensões radiais   
+*VMASK,n_sel(1) 
+*VGET,u_x(1),NODE,1,U,X 
+*VOPER,u_x(1),u_x(1),MULT,-1/Re*100 
+!   
+*VMASK,n_sel(1) 
+*VGET,u_y(1),NODE,1,U,Y 
+*VOPER,u_y(1),u_y(1),MULT,-1/Re*100 
+!   
+*VMASK,n_sel(1) 
+*VGET,s_x(1),NODE,1,S,X 
+*VOPER,s_x(1),s_x(1),MULT,1 
+!   
+*VMASK,n_sel(1) 
+*VGET,s_y(1),NODE,1,S,Y 
+*VOPER,s_y(1),s_y(1),MULT,1 
+!   
+! Preenchendo o convergence e pressure  
+*VMASK,n_sel(1) 
+*VFUN,convergencex(1,2+i),COMP,u_x(1)   
+*VMASK,n_sel(1) 
+*VFUN,convergencey(1,2+i),COMP,u_y(1)   
+*VMASK,n_sel(1) 
+*VFUN,stressx(1,2+i),COMP,s_x(1)
+*VMASK,n_sel(1) 
+*VFUN,stressy(1,2+i),COMP,s_y(1)
+*ENDDO  
+!   
+! ordena a tabela de acordo com a segunda coluna (das coordenadas)  
+*MOPER,ORDER,convergencex,SORT,convergencex(1,2)
+*MOPER,ORDER,convergencey,SORT,convergencey(1,2)
+*MOPER,ORDER,stressx,SORT,stressx(1,2)  
+*MOPER,ORDER,stressy,SORT,stressy(1,2)  
+!   
+! Coleta o maior valor das convergências   
+*VSCFUN,uxmaximofinal,max,convergencex(1,2+nanalises)   
+*VSCFUN,uymaximofinal,max,convergencey(1,2+nanalises)   
+!   
+*VSCFUN,sxmaximofinal,max,stressx(1,2+nanalises)
+*VSCFUN,sxminimofinal,min,stressx(1,2+nanalises)
+!   
+*VSCFUN,symaximofinal,max,stressy(1,2+nanalises)
+*VSCFUN,syminimofinal,min,stressy(1,2+nanalises)
+!   
+! formatando grafico de convergencia x  
+/RGB,INDEX,100,100,100,0
+/RGB,INDEX,0,0,0,15 
+/AXLAB,X,%eixo% 
+/AXLAB,Y,Ux=-ux(r,theta=%teta%)/Re (%)  
+/XRANGE,DEFAULT 
+/YRANGE,DEFAULT 
+/GROPT,DIVY,20  
+/GROPT,DIVX,10  
+/GROPT,DIG1,3   
+/GTHK,CURVE,1   
+/PLOPTS,INFO,on 
+!   
+! graficando na tela do Ansys   
+/ERASE  
+/SHOW,JPEG,,iso 
+*DO,i,1,nanalises,1 
+*IF,i,EQ,nanalises,THEN 
+/COLOR,CURVE,MAGE,1 
+*ELSEIF,i,EQ,nesc+nesc1-1,THEN  
+/COLOR,CURVE,YELL,1 
+*ELSE   
+/COLOR,CURVE,LGRA,1 
+*ENDIF  
+*VPLOT,convergencex(1,2),convergencex(1,2+i)
+/NOERASE
+*ENDDO  
+/SHOW,CLOSE 
+/ERASE  
+!   
+! formatando grafico de convergencia y  
+/RGB,INDEX,100,100,100,0
+/RGB,INDEX,0,0,0,15 
+/AXLAB,X,%eixo% 
+/AXLAB,Y,Uy=-uy(r,theta=%teta%)/Re (%)  
+/XRANGE,DEFAULT 
+/YRANGE,DEFAULT 
+/GROPT,DIVY,20  
+/GROPT,DIVX,10  
+/GROPT,DIG1,3   
+/GTHK,CURVE,1   
+/PLOPTS,INFO,on 
+!   
+! graficando na tela do Ansys   
+/ERASE  
+/SHOW,JPEG,,iso 
+*DO,i,1,nanalises,1 
+*IF,i,EQ,nanalises,THEN 
+/COLOR,CURVE,MAGE,1 
+*ELSEIF,i,EQ,nesc+nesc1-1,THEN  
+/COLOR,CURVE,YELL,1 
+*ELSE   
+/COLOR,CURVE,LGRA,1 
+*ENDIF  
+*VPLOT,convergencey(1,2),convergencey(1,2+i)
+/NOERASE
+*ENDDO  
+/SHOW,CLOSE 
+/ERASE  
+!   
+!   
+! formatando grafico do stress x
+/RGB,INDEX,100,100,100,0
+/RGB,INDEX,0,0,0,15 
+/AXLAB,X,%eixo% 
+/AXLAB,Y,Sx(r,theta=%teta%)(MPa)
+/XRANGE,DEFAULT 
+/YRANGE,DEFAULT 
+/GROPT,DIVY,20  
+/GROPT,DIVX,10  
+/GROPT,DIG1,3   
+/GTHK,CURVE,1   
+/PLOPTS,INFO,on 
+!   
+! graficando na tela do Ansys   
+/ERASE  
+/SHOW,JPEG,,iso 
+*DO,i,1,nanalises,1 
+*IF,i,EQ,nanalises,THEN 
+/COLOR,CURVE,MAGE,1 
+*ELSEIF,i,EQ,nesc+nesc1-1,THEN  
+/COLOR,CURVE,YELL,1 
+*ELSE   
+/COLOR,CURVE,LGRA,1 
+*ENDIF  
+*VPLOT,stressx(1,2),stressx(1,2+i)  
+/NOERASE
+*ENDDO  
+/SHOW,CLOSE 
+/ERASE  
+!   
+! formatando grafico do stress y
+/RGB,INDEX,100,100,100,0
+/RGB,INDEX,0,0,0,15 
+/AXLAB,X,%eixo% 
+/AXLAB,Y,Sy(r,theta=%teta%)(MPa)
+/XRANGE,DEFAULT 
+/YRANGE,DEFAULT 
+/GROPT,DIVY,20  
+/GROPT,DIVX,10  
+/GROPT,DIG1,3   
+/GTHK,CURVE,1   
+/PLOPTS,INFO,on 
+!   
+! graficando na tela do Ansys   
+/ERASE  
+/SHOW,JPEG,,iso 
+*DO,i,1,nanalises,1 
+*IF,i,EQ,nanalises,THEN 
+/COLOR,CURVE,MAGE,1 
+*ELSEIF,i,EQ,nesc+nesc1-1,THEN  
+/COLOR,CURVE,YELL,1 
+*ELSE   
+/COLOR,CURVE,LGRA,1 
+*ENDIF  
+*VPLOT,stressy(1,2),stressy(1,2+i)  
+/NOERASE
+*ENDDO  
+/SHOW,CLOSE 
+/ERASE  
+!   
+! Escrevendo em arquivo as convergências   
+*CREATE,ansuitmp
+*MWRITE,convergencex,convergencex_zf_%teta%,txt 
+(1000(E10.4,3X))
+*END
+/INPUT,ansuitmp 
+!   
+*CREATE,ansuitmp
+*MWRITE,convergencey,convergencey_zf_%teta%,txt 
+(1000(E10.4,3X))
+*END
+/INPUT,ansuitmp 
+!   
+!   
+! Escrevendo em arquivo stress  
+*CREATE,ansuitmp
+*MWRITE,stressx,stressx_zf_%teta%,txt   
+(1000(E10.4,3X))
+*END
+/INPUT,ansuitmp 
+!   
+*CREATE,ansuitmp
+*MWRITE,stressy,stressy_zf_%teta%,txt   
+(1000(E10.4,3X))
+*END
+/INPUT,ansuitmp 
+!   
+! Cria arquivo com os parâmetros   
+PARSAV,SCALAR,parametros,txt
+!   
+!************************************************************!  
+!****_   5.5 Tensões uma dada cota (teta = 45)   _****!
+!************************************************************!  
+!   
+*SET,teta  , 45   ! ângulo 
+*SET,zf  , l1+l2   ! cota ao longo dez  
+!   
+! selecionando os nós na interface entre revestimento e o maciço  
+*IF,teta,EQ,0,THEN  
+CSYS,0, 
+ALLSEL,ALL  
+NSEL,S,LOC,X,-d4,d1/2   
+NSEL,R,LOC,Y,0,0
+NSEL,R,LOC,Z,zf 
+NSLE,R,CORNER   
+CSYS,0  
+*SET,eixo , 'x' 
+*SET,localizacao , 'x'  
+*ELSEIF,teta,EQ,90,THEN 
+CSYS,0, 
+ALLSEL,ALL  
+ESEL,S,LIVE 
+NSEL,S,LOC,X,0,0
+NSEL,R,LOC,Y,0,d3   
+NSEL,R,LOC,Z,zf 
+NSLE,R,CORNER   
+CSYS,0  
+*SET,eixo , 'y' 
+*SET,localizacao , 'y'  
+*ELSEIF,teta,EQ,45,THEN 
+CSYS,1, 
+ALLSEL,ALL  
+NSEL,S,LOC,X,0,10   
+NSEL,R,LOC,Y,45,45  
+NSEL,R,LOC,Z,zf 
+NSLE,R,CORNER   
+CSYS,1  
+*SET,eixo , 'r' 
+*SET,localizacao , 'X'  
+*ELSEIF,teta,EQ,135,THEN
+CSYS,1, 
+ALLSEL,ALL  
+NSEL,S,LOC,X,0,d3   
+NSEL,R,LOC,Y,135,135
+NSEL,R,LOC,Z,zf 
+NSLE,R,CORNER   
+CSYS,1  
+*SET,eixo , 'r' 
+*SET,localizacao , 'X'  
+*ENDIF  
+!   
+! sistemas de referencias dos resultados
+RSYS,1  
+!   
+! dimensionando arrays  
+*SET,nanalises , 0  
+*GET,nanalises,ACTIVE,0,SET,NSET ! pegando o número de análises   
+*GET,ncount,NODE,,COUNT     ! pegando numero máximo de nós selecionados   
+*GET,ntotal,NODE,,NUM,MAX    ! pegando numero total de nós 
+*DIM,convergencex,TABLE,ncount,2+nanalises ! dimensionando tabela de convergencias  
+*DIM,convergencey,TABLE,ncount,2+nanalises ! dimensionando tabela de convergencias  
+*DIM,stressx,TABLE,ncount,2+nanalises   ! dimensionando tabela de pressões em x
+*DIM,stressy,TABLE,ncount,2+nanalises   ! dimensionando tabela de pressões em y
+*DIM,coordz,ARRAY,ntotal    ! dimensionando vetor de coordenadas nodais 
+*DIM,ORDER,ARRAY,ncount     ! array auxiliar para ordenamento   
+*DIM,u_x,ARRAY,ntotal     ! dimensionando vetor de deslocamentos em x   
+*DIM,u_y,ARRAY,ntotal     ! dimensionando vetor de deslocamentos em y   
+*DIM,s_x,ARRAY,ntotal     ! dimensionando vetor de pressões em x   
+*DIM,s_y,ARRAY,ntotal     ! dimensionando vetor de pressões em y   
+*DIM,n_sel,ARRAY,ntotal     ! dimensionando vetor que indica se o nó está selecionado 
+!   
+! coloca lista de nós em ordem na primeira coluna  
+*VGET,convergencex(1,1),NODE,,NLIST 
+*VGET,convergencey(1,1),NODE,,NLIST 
+*VGET,stressx(1,1),NODE,,NLIST  
+*VGET,stressy(1,1),NODE,,NLIST  
+!   
+! criando vetor de coordenadas  
+*VGET,n_sel(1),NODE,1,NSEL  
+*VGET,coordz(1),NODE,1,LOC,localizacao  
+*VOPER,coordz(1),coordz(1),MULT,1 !1/Re 
+!   
+! Preenchendo o convergence e pressure com as coordenadas   
+*VMASK,n_sel(1) 
+*VFUN,convergencex(1,2),COMP,coordz(1)  
+*VMASK,n_sel(1) 
+*VFUN,convergencey(1,2),COMP,coordz(1)  
+*VMASK,n_sel(1) 
+*VFUN,stressx(1,2),COMP,coordz(1)   
+*VMASK,n_sel(1) 
+*VFUN,stressy(1,2),COMP,coordz(1)   
+!   
+! preenchendo o convergence com a convergência 
+*DO,i,1,nanalises,1 
+! identifica o passo
+*IF,i,EQ,nanalises,THEN 
+SUBSET,LAST 
+*ELSE   
+*IF,matmacico,LE,1,AND,matrev,EQ,0,THEN 
+SUBSET,LAST 
+*ELSE   
+SUBSET,i,,,,,,  
+*ENDIF  
+*ENDIF  
+!   
+! Preenchendo o array com os deslocamentos radiais e tensões radiais   
+*VMASK,n_sel(1) 
+*VGET,u_x(1),NODE,1,U,X 
+*VOPER,u_x(1),u_x(1),MULT,-1/Re*100 
+!   
+*VMASK,n_sel(1) 
+*VGET,u_y(1),NODE,1,U,Y 
+*VOPER,u_y(1),u_y(1),MULT,-1/Re*100 
+!   
+*VMASK,n_sel(1) 
+*VGET,s_x(1),NODE,1,S,X 
+*VOPER,s_x(1),s_x(1),MULT,1 
+!   
+*VMASK,n_sel(1) 
+*VGET,s_y(1),NODE,1,S,Y 
+*VOPER,s_y(1),s_y(1),MULT,1 
+!   
+! Preenchendo o convergence e pressure  
+*VMASK,n_sel(1) 
+*VFUN,convergencex(1,2+i),COMP,u_x(1)   
+*VMASK,n_sel(1) 
+*VFUN,convergencey(1,2+i),COMP,u_y(1)   
+*VMASK,n_sel(1) 
+*VFUN,stressx(1,2+i),COMP,s_x(1)
+*VMASK,n_sel(1) 
+*VFUN,stressy(1,2+i),COMP,s_y(1)
+*ENDDO  
+!   
+! ordena a tabela de acordo com a segunda coluna (das coordenadas)  
+*MOPER,ORDER,convergencex,SORT,convergencex(1,2)
+*MOPER,ORDER,convergencey,SORT,convergencey(1,2)
+*MOPER,ORDER,stressx,SORT,stressx(1,2)  
+*MOPER,ORDER,stressy,SORT,stressy(1,2)  
+!   
+! Coleta o maior valor das convergências   
+*VSCFUN,uxmaximofinal,max,convergencex(1,2+nanalises)   
+*VSCFUN,uymaximofinal,max,convergencey(1,2+nanalises)   
+!   
+*VSCFUN,sxmaximofinal,max,stressx(1,2+nanalises)
+*VSCFUN,sxminimofinal,min,stressx(1,2+nanalises)
+!   
+*VSCFUN,symaximofinal,max,stressy(1,2+nanalises)
+*VSCFUN,syminimofinal,min,stressy(1,2+nanalises)
+!   
+! formatando grafico de convergencia x  
+/RGB,INDEX,100,100,100,0
+/RGB,INDEX,0,0,0,15 
+/AXLAB,X,%eixo% 
+/AXLAB,Y,Ux=-ux(r,theta=%teta%)/Re (%)  
+/XRANGE,DEFAULT 
+/YRANGE,DEFAULT 
+/GROPT,DIVY,20  
+/GROPT,DIVX,10  
+/GROPT,DIG1,3   
+/GTHK,CURVE,1   
+/PLOPTS,INFO,on 
+!   
+! graficando na tela do Ansys   
+/ERASE  
+/SHOW,JPEG,,iso 
+*DO,i,1,nanalises,1 
+*IF,i,EQ,nanalises,THEN 
+/COLOR,CURVE,MAGE,1 
+*ELSEIF,i,EQ,nesc+nesc1-1,THEN  
+/COLOR,CURVE,YELL,1 
+*ELSE   
+/COLOR,CURVE,LGRA,1 
+*ENDIF  
+*VPLOT,convergencex(1,2),convergencex(1,2+i)
+/NOERASE
+*ENDDO  
+/SHOW,CLOSE 
+/ERASE  
+!   
+! formatando grafico de convergencia y  
+/RGB,INDEX,100,100,100,0
+/RGB,INDEX,0,0,0,15 
+/AXLAB,X,%eixo% 
+/AXLAB,Y,Uy=-uy(r,theta=%teta%)/Re (%)  
+/XRANGE,DEFAULT 
+/YRANGE,DEFAULT 
+/GROPT,DIVY,20  
+/GROPT,DIVX,10  
+/GROPT,DIG1,3   
+/GTHK,CURVE,1   
+/PLOPTS,INFO,on 
+!   
+! graficando na tela do Ansys   
+/ERASE  
+/SHOW,JPEG,,iso 
+*DO,i,1,nanalises,1 
+*IF,i,EQ,nanalises,THEN 
+/COLOR,CURVE,MAGE,1 
+*ELSEIF,i,EQ,nesc+nesc1-1,THEN  
+/COLOR,CURVE,YELL,1 
+*ELSE   
+/COLOR,CURVE,LGRA,1 
+*ENDIF  
+*VPLOT,convergencey(1,2),convergencey(1,2+i)
+/NOERASE
+*ENDDO  
+/SHOW,CLOSE 
+/ERASE  
+!   
+!   
+! formatando grafico do stress x
+/RGB,INDEX,100,100,100,0
+/RGB,INDEX,0,0,0,15 
+/AXLAB,X,%eixo% 
+/AXLAB,Y,Sx(r,theta=%teta%)(MPa)
+/XRANGE,DEFAULT 
+/YRANGE,DEFAULT 
+/GROPT,DIVY,20  
+/GROPT,DIVX,10  
+/GROPT,DIG1,3   
+/GTHK,CURVE,1   
+/PLOPTS,INFO,on 
+!   
+! graficando na tela do Ansys   
+/ERASE  
+/SHOW,JPEG,,iso 
+*DO,i,1,nanalises,1 
+*IF,i,EQ,nanalises,THEN 
+/COLOR,CURVE,MAGE,1 
+*ELSEIF,i,EQ,nesc+nesc1-1,THEN  
+/COLOR,CURVE,YELL,1 
+*ELSE   
+/COLOR,CURVE,LGRA,1 
+*ENDIF  
+*VPLOT,stressx(1,2),stressx(1,2+i)  
+/NOERASE
+*ENDDO  
+/SHOW,CLOSE 
+/ERASE  
+!   
+! formatando grafico do stress y
+/RGB,INDEX,100,100,100,0
+/RGB,INDEX,0,0,0,15 
+/AXLAB,X,%eixo% 
+/AXLAB,Y,Sy(r,theta=%teta%)(MPa)
+/XRANGE,DEFAULT 
+/YRANGE,DEFAULT 
+/GROPT,DIVY,20  
+/GROPT,DIVX,10  
+/GROPT,DIG1,3   
+/GTHK,CURVE,1   
+/PLOPTS,INFO,on 
+!   
+! graficando na tela do Ansys   
+/ERASE  
+/SHOW,JPEG,,iso 
+*DO,i,1,nanalises,1 
+*IF,i,EQ,nanalises,THEN 
+/COLOR,CURVE,MAGE,1 
+*ELSEIF,i,EQ,nesc+nesc1-1,THEN  
+/COLOR,CURVE,YELL,1 
+*ELSE   
+/COLOR,CURVE,LGRA,1 
+*ENDIF  
+*VPLOT,stressy(1,2),stressy(1,2+i)  
+/NOERASE
+*ENDDO  
+/SHOW,CLOSE 
+/ERASE  
+!   
+! Escrevendo em arquivo as convergências   
+*CREATE,ansuitmp
+*MWRITE,convergencex,convergencex_zf_%teta%,txt 
+(1000(E10.4,3X))
+*END
+/INPUT,ansuitmp 
+!   
+*CREATE,ansuitmp
+*MWRITE,convergencey,convergencey_zf_%teta%,txt 
+(1000(E10.4,3X))
+*END
+/INPUT,ansuitmp 
+!   
+!   
+! Escrevendo em arquivo stress  
+*CREATE,ansuitmp
+*MWRITE,stressx,stressx_zf_%teta%,txt   
+(1000(E10.4,3X))
+*END
+/INPUT,ansuitmp 
+!   
+*CREATE,ansuitmp
+*MWRITE,stressy,stressy_zf_%teta%,txt   
+(1000(E10.4,3X))
+*END
+/INPUT,ansuitmp 
+!   
+! Cria arquivo com os parâmetros   
+PARSAV,SCALAR,parametros,txt
+!************************************************************!  
+!****_   5.5 Tensões em uma dada cota (teta = 90) _****!   
+!************************************************************!  
+!   
+*SET,teta  , 90   ! ângulo 
+*SET,zf  , l1+l2   ! cota ao longo dez  
+!   
+! selecionando os nós na interface entre revestimento e o maciço  
+*IF,teta,EQ,0,THEN  
+CSYS,0, 
+ALLSEL,ALL  
+NSEL,S,LOC,X,-d4,d1/2   
+NSEL,R,LOC,Y,0,0
+NSEL,R,LOC,Z,zf 
+NSLE,R,CORNER   
+CSYS,0  
+*SET,eixo , 'x' 
+*SET,localizacao , 'x'  
+*ELSE   
+CSYS,0, 
+ALLSEL,ALL  
+NSEL,S,LOC,X,0,0
+NSEL,R,LOC,Y,0,d3   
+NSEL,R,LOC,Z,zf 
+NSLE,R,CORNER   
+CSYS,0  
+*SET,eixo , 'y' 
+*SET,localizacao , 'y'  
+*ENDIF  
+!   
+! sistemas de referencias dos resultados
+RSYS,1  
+!   
+! dimensionando arrays  
+*SET,nanalises , 0  
+*GET,nanalises,ACTIVE,0,SET,NSET ! pegando o número de análises   
+*GET,ncount,NODE,,COUNT     ! pegando numero máximo de nós selecionados   
+*GET,ntotal,NODE,,NUM,MAX    ! pegando numero total de nós 
+*DIM,convergencex,TABLE,ncount,2+nanalises ! dimensionando tabela de convergencias  
+*DIM,convergencey,TABLE,ncount,2+nanalises ! dimensionando tabela de convergencias  
+*DIM,stressx,TABLE,ncount,2+nanalises   ! dimensionando tabela de pressões em x
+*DIM,stressy,TABLE,ncount,2+nanalises   ! dimensionando tabela de pressões em y
+*DIM,coordz,ARRAY,ntotal    ! dimensionando vetor de coordenadas nodais 
+*DIM,ORDER,ARRAY,ncount     ! array auxiliar para ordenamento   
+*DIM,u_x,ARRAY,ntotal     ! dimensionando vetor de deslocamentos em x   
+*DIM,u_y,ARRAY,ntotal     ! dimensionando vetor de deslocamentos em y   
+*DIM,s_x,ARRAY,ntotal     ! dimensionando vetor de pressões em x   
+*DIM,s_y,ARRAY,ntotal     ! dimensionando vetor de pressões em y   
+*DIM,n_sel,ARRAY,ntotal     ! dimensionando vetor que indica se o nó está selecionado 
+!   
+! coloca lista de nós em ordem na primeira coluna  
+*VGET,convergencex(1,1),NODE,,NLIST 
+*VGET,convergencey(1,1),NODE,,NLIST 
+*VGET,stressx(1,1),NODE,,NLIST  
+*VGET,stressy(1,1),NODE,,NLIST  
+!   
+! criando vetor de coordenadas  
+*VGET,n_sel(1),NODE,1,NSEL  
+*VGET,coordz(1),NODE,1,LOC,localizacao  
+*VOPER,coordz(1),coordz(1),MULT,1 !1/Re 
+!   
+! Preenchendo o convergence e pressure com as coordenadas   
+*VMASK,n_sel(1) 
+*VFUN,convergencex(1,2),COMP,coordz(1)  
+*VMASK,n_sel(1) 
+*VFUN,convergencey(1,2),COMP,coordz(1)  
+*VMASK,n_sel(1) 
+*VFUN,stressx(1,2),COMP,coordz(1)   
+*VMASK,n_sel(1) 
+*VFUN,stressy(1,2),COMP,coordz(1)   
+!   
+! preenchendo o convergence com a convergência 
+*DO,i,1,nanalises,1 
+! identifica o passo
+*IF,i,EQ,nanalises,THEN 
+SUBSET,LAST 
+*ELSE   
+*IF,matmacico,LE,1,AND,matrev,EQ,0,THEN 
+SUBSET,LAST 
+*ELSE   
+SUBSET,i,,,,,,  
+*ENDIF  
+*ENDIF  
+!   
+! Preenchendo o array com os deslocamentos radiais e tensões radiais   
+*VMASK,n_sel(1) 
+*VGET,u_x(1),NODE,1,U,X 
+*VOPER,u_x(1),u_x(1),MULT,-1/Re*100 
+!   
+*VMASK,n_sel(1) 
+*VGET,u_y(1),NODE,1,U,Y 
+*VOPER,u_y(1),u_y(1),MULT,-1/Re*100 
+!   
+*VMASK,n_sel(1) 
+*VGET,s_x(1),NODE,1,S,X 
+*VOPER,s_x(1),s_x(1),MULT,1 
+!   
+*VMASK,n_sel(1) 
+*VGET,s_y(1),NODE,1,S,Y 
+*VOPER,s_y(1),s_y(1),MULT,1 
+!   
+! Preenchendo o convergence e pressure  
+*VMASK,n_sel(1) 
+*VFUN,convergencex(1,2+i),COMP,u_x(1)   
+*VMASK,n_sel(1) 
+*VFUN,convergencey(1,2+i),COMP,u_y(1)   
+*VMASK,n_sel(1) 
+*VFUN,stressx(1,2+i),COMP,s_x(1)
+*VMASK,n_sel(1) 
+*VFUN,stressy(1,2+i),COMP,s_y(1)
+*ENDDO  
+!   
+! ordena a tabela de acordo com a segunda coluna (das coordenadas)  
+*MOPER,ORDER,convergencex,SORT,convergencex(1,2)
+*MOPER,ORDER,convergencey,SORT,convergencey(1,2)
+*MOPER,ORDER,stressx,SORT,stressx(1,2)  
+*MOPER,ORDER,stressy,SORT,stressy(1,2)  
+!   
+! Coleta o maior valor das convergências   
+*VSCFUN,uxmaximofinal,max,convergencex(1,2+nanalises)   
+*VSCFUN,uymaximofinal,max,convergencey(1,2+nanalises)   
+!   
+*VSCFUN,sxmaximofinal,max,stressx(1,2+nanalises)
+*VSCFUN,sxminimofinal,min,stressx(1,2+nanalises)
+!   
+*VSCFUN,symaximofinal,max,stressy(1,2+nanalises)
+*VSCFUN,syminimofinal,min,stressy(1,2+nanalises)
+!   
+! formatando grafico de convergencia x  
+/RGB,INDEX,100,100,100,0
+/RGB,INDEX,0,0,0,15 
+/AXLAB,X,%eixo% 
+/AXLAB,Y,Ux=-ux(r,theta=%teta%)/Re (%)  
+/XRANGE,DEFAULT 
+/YRANGE,DEFAULT 
+/GROPT,DIVY,20  
+/GROPT,DIVX,10  
+/GROPT,DIG1,3   
+/GTHK,CURVE,1   
+/PLOPTS,INFO,on 
+!   
+! graficando na tela do Ansys   
+/ERASE  
+/SHOW,JPEG,,iso 
+*DO,i,1,nanalises,1 
+*IF,i,EQ,nanalises,THEN 
+/COLOR,CURVE,MAGE,1 
+*ELSEIF,i,EQ,nesc+nesc1-1,THEN  
+/COLOR,CURVE,YELL,1 
+*ELSE   
+/COLOR,CURVE,LGRA,1 
+*ENDIF  
+*VPLOT,convergencex(1,2),convergencex(1,2+i)
+/NOERASE
+*ENDDO  
+/SHOW,CLOSE 
+/ERASE  
+!   
+! formatando grafico de convergencia y  
+/RGB,INDEX,100,100,100,0
+/RGB,INDEX,0,0,0,15 
+/AXLAB,X,%eixo% 
+/AXLAB,Y,Uy=-uy(r,theta=%teta%)/Re (%)  
+/XRANGE,DEFAULT 
+/YRANGE,DEFAULT 
+/GROPT,DIVY,20  
+/GROPT,DIVX,10  
+/GROPT,DIG1,3   
+/GTHK,CURVE,1   
+/PLOPTS,INFO,on 
+!   
+! graficando na tela do Ansys   
+/ERASE  
+/SHOW,JPEG,,iso 
+*DO,i,1,nanalises,1 
+*IF,i,EQ,nanalises,THEN 
+/COLOR,CURVE,MAGE,1 
+*ELSEIF,i,EQ,nesc+nesc1-1,THEN  
+/COLOR,CURVE,YELL,1 
+*ELSE   
+/COLOR,CURVE,LGRA,1 
+*ENDIF  
+*VPLOT,convergencey(1,2),convergencey(1,2+i)
+/NOERASE
+*ENDDO  
+/SHOW,CLOSE 
+/ERASE  
+!   
+!   
+! formatando grafico do stress x
+/RGB,INDEX,100,100,100,0
+/RGB,INDEX,0,0,0,15 
+/AXLAB,X,%eixo% 
+/AXLAB,Y,Sx(r,theta=%teta%)(MPa)
+/XRANGE,DEFAULT 
+/YRANGE,DEFAULT 
+/GROPT,DIVY,20  
+/GROPT,DIVX,10  
+/GROPT,DIG1,3   
+/GTHK,CURVE,1   
+/PLOPTS,INFO,on 
+!   
+! graficando na tela do Ansys   
+/ERASE  
+/SHOW,JPEG,,iso 
+*DO,i,1,nanalises,1 
+*IF,i,EQ,nanalises,THEN 
+/COLOR,CURVE,MAGE,1 
+*ELSEIF,i,EQ,nesc+nesc1-1,THEN  
+/COLOR,CURVE,YELL,1 
+*ELSE   
+/COLOR,CURVE,LGRA,1 
+*ENDIF  
+*VPLOT,stressx(1,2),stressx(1,2+i)  
+/NOERASE
+*ENDDO  
+/SHOW,CLOSE 
+/ERASE  
+!   
+! formatando grafico do stress y
+/RGB,INDEX,100,100,100,0
+/RGB,INDEX,0,0,0,15 
+/AXLAB,X,%eixo% 
+/AXLAB,Y,Sy(r,theta=%teta%)(MPa)
+/XRANGE,DEFAULT 
+/YRANGE,DEFAULT 
+/GROPT,DIVY,20  
+/GROPT,DIVX,10  
+/GROPT,DIG1,3   
+/GTHK,CURVE,1   
+/PLOPTS,INFO,on 
+!   
+! graficando na tela do Ansys   
+/ERASE  
+/SHOW,JPEG,,iso 
+*DO,i,1,nanalises,1 
+*IF,i,EQ,nanalises,THEN 
+/COLOR,CURVE,MAGE,1 
+*ELSEIF,i,EQ,nesc+nesc1-1,THEN  
+/COLOR,CURVE,YELL,1 
+*ELSE   
+/COLOR,CURVE,LGRA,1 
+*ENDIF  
+*VPLOT,stressy(1,2),stressy(1,2+i)  
+/NOERASE
+*ENDDO  
+/SHOW,CLOSE 
+/ERASE  
+!   
+! Escrevendo em arquivo as convergências   
+*CREATE,ansuitmp
+*MWRITE,convergencex,convergencex_zf_%teta%,txt 
+(1000(E10.4,3X))
+*END
+/INPUT,ansuitmp 
+!   
+*CREATE,ansuitmp
+*MWRITE,convergencey,convergencey_zf_%teta%,txt 
+(1000(E10.4,3X))
+*END
+/INPUT,ansuitmp 
+!   
+!   
+! Escrevendo em arquivo stress  
+*CREATE,ansuitmp
+*MWRITE,stressx,stressx_zf_%teta%,txt   
+(1000(E10.4,3X))
+*END
+/INPUT,ansuitmp 
+!   
+*CREATE,ansuitmp
+*MWRITE,stressy,stressy_zf_%teta%,txt   
+(1000(E10.4,3X))
+*END
+/INPUT,ansuitmp 
+!   
+! Cria arquivo com os parâmetros   
+PARSAV,SCALAR,parametros,txt
+!   
+!************************************************************!  
+!****_   5.5 Tensões em uma dada cota (teta = 135) _****!  
+!************************************************************!  
+!   
+*SET,teta  , 135   ! ângulo
+*SET,zf  , l1+l2   ! cota ao longo dez  
+!   
+! selecionando os nós na interface entre revestimento e o maciço  
+*IF,teta,EQ,0,THEN  
+CSYS,0, 
+ALLSEL,ALL  
+NSEL,S,LOC,X,-d4,d1/2   
+NSEL,R,LOC,Y,0,0
+NSEL,R,LOC,Z,zf 
+NSLE,R,CORNER   
+CSYS,0  
+*SET,eixo , 'x' 
+*SET,localizacao , 'x'  
+*ELSE   
+CSYS,0, 
+ALLSEL,ALL  
+NSEL,S,LOC,X,0,0
+NSEL,R,LOC,Y,0,d3   
+NSEL,R,LOC,Z,zf 
+NSLE,R,CORNER   
+CSYS,0  
+*SET,eixo , 'y' 
+*SET,localizacao , 'y'  
+*ENDIF  
+!   
+! sistemas de referencias dos resultados
+RSYS,1  
+!   
+! dimensionando arrays  
+*SET,nanalises , 0  
+*GET,nanalises,ACTIVE,0,SET,NSET ! pegando o número de análises   
+*GET,ncount,NODE,,COUNT     ! pegando numero máximo de nós selecionados   
+*GET,ntotal,NODE,,NUM,MAX    ! pegando numero total de nós 
+*DIM,convergencex,TABLE,ncount,2+nanalises ! dimensionando tabela de convergencias  
+*DIM,convergencey,TABLE,ncount,2+nanalises ! dimensionando tabela de convergencias  
+*DIM,stressx,TABLE,ncount,2+nanalises   ! dimensionando tabela de pressões em x
+*DIM,stressy,TABLE,ncount,2+nanalises   ! dimensionando tabela de pressões em y
+*DIM,coordz,ARRAY,ntotal    ! dimensionando vetor de coordenadas nodais 
+*DIM,ORDER,ARRAY,ncount     ! array auxiliar para ordenamento   
+*DIM,u_x,ARRAY,ntotal     ! dimensionando vetor de deslocamentos em x   
+*DIM,u_y,ARRAY,ntotal     ! dimensionando vetor de deslocamentos em y   
+*DIM,s_x,ARRAY,ntotal     ! dimensionando vetor de pressões em x   
+*DIM,s_y,ARRAY,ntotal     ! dimensionando vetor de pressões em y   
+*DIM,n_sel,ARRAY,ntotal     ! dimensionando vetor que indica se o nó está selecionado 
+!   
+! coloca lista de nós em ordem na primeira coluna  
+*VGET,convergencex(1,1),NODE,,NLIST 
+*VGET,convergencey(1,1),NODE,,NLIST 
+*VGET,stressx(1,1),NODE,,NLIST  
+*VGET,stressy(1,1),NODE,,NLIST  
+!   
+! criando vetor de coordenadas  
+*VGET,n_sel(1),NODE,1,NSEL  
+*VGET,coordz(1),NODE,1,LOC,localizacao  
+*VOPER,coordz(1),coordz(1),MULT,1 !1/Re 
+!   
+! Preenchendo o convergence e pressure com as coordenadas   
+*VMASK,n_sel(1) 
+*VFUN,convergencex(1,2),COMP,coordz(1)  
+*VMASK,n_sel(1) 
+*VFUN,convergencey(1,2),COMP,coordz(1)  
+*VMASK,n_sel(1) 
+*VFUN,stressx(1,2),COMP,coordz(1)   
+*VMASK,n_sel(1) 
+*VFUN,stressy(1,2),COMP,coordz(1)   
+!   
+! preenchendo o convergence com a convergência 
+*DO,i,1,nanalises,1 
+! identifica o passo
+*IF,i,EQ,nanalises,THEN 
+SUBSET,LAST 
+*ELSE   
+*IF,matmacico,LE,1,AND,matrev,EQ,0,THEN 
+SUBSET,LAST 
+*ELSE   
+SUBSET,i,,,,,,  
+*ENDIF  
+*ENDIF  
+!   
+! Preenchendo o array com os deslocamentos radiais e tensões radiais   
+*VMASK,n_sel(1) 
+*VGET,u_x(1),NODE,1,U,X 
+*VOPER,u_x(1),u_x(1),MULT,-1/Re*100 
+!   
+*VMASK,n_sel(1) 
+*VGET,u_y(1),NODE,1,U,Y 
+*VOPER,u_y(1),u_y(1),MULT,-1/Re*100 
+!   
+*VMASK,n_sel(1) 
+*VGET,s_x(1),NODE,1,S,X 
+*VOPER,s_x(1),s_x(1),MULT,1 
+!   
+*VMASK,n_sel(1) 
+*VGET,s_y(1),NODE,1,S,Y 
+*VOPER,s_y(1),s_y(1),MULT,1 
+!   
+! Preenchendo o convergence e pressure  
+*VMASK,n_sel(1) 
+*VFUN,convergencex(1,2+i),COMP,u_x(1)   
+*VMASK,n_sel(1) 
+*VFUN,convergencey(1,2+i),COMP,u_y(1)   
+*VMASK,n_sel(1) 
+*VFUN,stressx(1,2+i),COMP,s_x(1)
+*VMASK,n_sel(1) 
+*VFUN,stressy(1,2+i),COMP,s_y(1)
+*ENDDO  
+!   
+! ordena a tabela de acordo com a segunda coluna (das coordenadas)  
+*MOPER,ORDER,convergencex,SORT,convergencex(1,2)
+*MOPER,ORDER,convergencey,SORT,convergencey(1,2)
+*MOPER,ORDER,stressx,SORT,stressx(1,2)  
+*MOPER,ORDER,stressy,SORT,stressy(1,2)  
+!   
+! Coleta o maior valor das convergências   
+*VSCFUN,uxmaximofinal,max,convergencex(1,2+nanalises)   
+*VSCFUN,uymaximofinal,max,convergencey(1,2+nanalises)   
+!   
+*VSCFUN,sxmaximofinal,max,stressx(1,2+nanalises)
+*VSCFUN,sxminimofinal,min,stressx(1,2+nanalises)
+!   
+*VSCFUN,symaximofinal,max,stressy(1,2+nanalises)
+*VSCFUN,syminimofinal,min,stressy(1,2+nanalises)
+!   
+! formatando grafico de convergencia x  
+/RGB,INDEX,100,100,100,0
+/RGB,INDEX,0,0,0,15 
+/AXLAB,X,%eixo% 
+/AXLAB,Y,Ux=-ux(r,theta=%teta%)/Re (%)  
+/XRANGE,DEFAULT 
+/YRANGE,DEFAULT 
+/GROPT,DIVY,20  
+/GROPT,DIVX,10  
+/GROPT,DIG1,3   
+/GTHK,CURVE,1   
+/PLOPTS,INFO,on 
+!   
+! graficando na tela do Ansys   
+/ERASE  
+/SHOW,JPEG,,iso 
+*DO,i,1,nanalises,1 
+*IF,i,EQ,nanalises,THEN 
+/COLOR,CURVE,MAGE,1 
+*ELSEIF,i,EQ,nesc+nesc1-1,THEN  
+/COLOR,CURVE,YELL,1 
+*ELSE   
+/COLOR,CURVE,LGRA,1 
+*ENDIF  
+*VPLOT,convergencex(1,2),convergencex(1,2+i)
+/NOERASE
+*ENDDO  
+/SHOW,CLOSE 
+/ERASE  
+!   
+! formatando grafico de convergencia y  
+/RGB,INDEX,100,100,100,0
+/RGB,INDEX,0,0,0,15 
+/AXLAB,X,%eixo% 
+/AXLAB,Y,Uy=-uy(r,theta=%teta%)/Re (%)  
+/XRANGE,DEFAULT 
+/YRANGE,DEFAULT 
+/GROPT,DIVY,20  
+/GROPT,DIVX,10  
+/GROPT,DIG1,3   
+/GTHK,CURVE,1   
+/PLOPTS,INFO,on 
+!   
+! graficando na tela do Ansys   
+/ERASE  
+/SHOW,JPEG,,iso 
+*DO,i,1,nanalises,1 
+*IF,i,EQ,nanalises,THEN 
+/COLOR,CURVE,MAGE,1 
+*ELSEIF,i,EQ,nesc+nesc1-1,THEN  
+/COLOR,CURVE,YELL,1 
+*ELSE   
+/COLOR,CURVE,LGRA,1 
+*ENDIF  
+*VPLOT,convergencey(1,2),convergencey(1,2+i)
+/NOERASE
+*ENDDO  
+/SHOW,CLOSE 
+/ERASE  
+!   
+!   
+! formatando grafico do stress x
+/RGB,INDEX,100,100,100,0
+/RGB,INDEX,0,0,0,15 
+/AXLAB,X,%eixo% 
+/AXLAB,Y,Sx(r,theta=%teta%)(MPa)
+/XRANGE,DEFAULT 
+/YRANGE,DEFAULT 
+/GROPT,DIVY,20  
+/GROPT,DIVX,10  
+/GROPT,DIG1,3   
+/GTHK,CURVE,1   
+/PLOPTS,INFO,on 
+!   
+! graficando na tela do Ansys   
+/ERASE  
+/SHOW,JPEG,,iso 
+*DO,i,1,nanalises,1 
+*IF,i,EQ,nanalises,THEN 
+/COLOR,CURVE,MAGE,1 
+*ELSEIF,i,EQ,nesc+nesc1-1,THEN  
+/COLOR,CURVE,YELL,1 
+*ELSE   
+/COLOR,CURVE,LGRA,1 
+*ENDIF  
+*VPLOT,stressx(1,2),stressx(1,2+i)  
+/NOERASE
+*ENDDO  
+/SHOW,CLOSE 
+/ERASE  
+!   
+! formatando grafico do stress y
+/RGB,INDEX,100,100,100,0
+/RGB,INDEX,0,0,0,15 
+/AXLAB,X,%eixo% 
+/AXLAB,Y,Sy(r,theta=%teta%)(MPa)
+/XRANGE,DEFAULT 
+/YRANGE,DEFAULT 
+/GROPT,DIVY,20  
+/GROPT,DIVX,10  
+/GROPT,DIG1,3   
+/GTHK,CURVE,1   
+/PLOPTS,INFO,on 
+!   
+! graficando na tela do Ansys   
+/ERASE  
+/SHOW,JPEG,,iso 
+*DO,i,1,nanalises,1 
+*IF,i,EQ,nanalises,THEN 
+/COLOR,CURVE,MAGE,1 
+*ELSEIF,i,EQ,nesc+nesc1-1,THEN  
+/COLOR,CURVE,YELL,1 
+*ELSE   
+/COLOR,CURVE,LGRA,1 
+*ENDIF  
+*VPLOT,stressy(1,2),stressy(1,2+i)  
+/NOERASE
+*ENDDO  
+/SHOW,CLOSE 
+/ERASE  
+!   
+! Escrevendo em arquivo as convergências   
+*CREATE,ansuitmp
+*MWRITE,convergencex,convergencex_zf_%teta%,txt 
+(1000(E10.4,3X))
+*END
+/INPUT,ansuitmp 
+!   
+*CREATE,ansuitmp
+*MWRITE,convergencey,convergencey_zf_%teta%,txt 
+(1000(E10.4,3X))
+*END
+/INPUT,ansuitmp 
+!   
+!   
+! Escrevendo em arquivo stress  
+*CREATE,ansuitmp
+*MWRITE,stressx,stressx_zf_%teta%,txt   
+(1000(E10.4,3X))
+*END
+/INPUT,ansuitmp 
+!   
+*CREATE,ansuitmp
+*MWRITE,stressy,stressy_zf_%teta%,txt   
+(1000(E10.4,3X))
+*END
+/INPUT,ansuitmp 
+!   
+! Cria arquivo com os parâmetros   
+PARSAV,SCALAR,parametros,txt
+!   
+FINISH  
+! /EXIT,NOSAV   
+/BATCH  
+/COM,ANSYS RELEASE 2021 R2           BUILD 21.2      UP20210601       12:31:08
+/input,menust,tmp,''
+/GRA,POWER
+/GST,ON
+/PLO,INFO,3
+/GRO,CURL,ON
+/CPLANE,1   
+/REPLOT,RESIZE  
+WPSTYLE,,,,,,,,0
+RESUME  
+/COM,ANSYS RELEASE 2021 R2           BUILD 21.2      UP20210601       12:31:20
+! /UIS,MSGPOP,3 
+KEYW,PR_SGVOF,1 
+/NERR,5,10000, ,0,5,
+!*  
+RESUME  
+/COM,ANSYS RELEASE 2021 R2           BUILD 21.2      UP20210601       12:32:04
+!************************************************************!  
+!****_ 5. PÓS-PROCESSAMENTO     _****! 
+!************************************************************!  
+!   
+!************************************************************!  
+!****_   5.1 Configurações iniciais  _****!   
+!************************************************************!  
+!   
+! mudando a cor da janela   
+/RGB,INDEX,100,100,100,0
+/RGB,INDEX,0,0,0,15 
+!   
+! qualidade do arquivo jpeg de saida
+JPEG,QUAL,100,  
+JPEG,ORIENT,HORIZ   
+JPEG,COLOR,2
+JPEG,TMOD,1 
+/GFILE,800, 
+/TYPE,,3
+!   
+! Colocando na angulação  
+/VIEW,1,,-1 
+/ANG,1  
+/ANG,1,30,XS,1  
+/ANG,1,30,XS,1  
+/ANG,1,-30,YS,1 
+/DIST,1,0.729,1 
+/DIST,1,0.729,1 
+/REPLOT 
+!   
+!************************************************************!  
+!****_   5.2 Plotando nó de controle no tempo  _****!  
+!************************************************************!  
+!   
+! Escrevendo criterio de convergencia no tempo  
+! criterio(:,1) - tempo 
+! criterio(:,2) - deltau
+! criterio(:,3) - uatual
+!   
+*IF,analise2,EQ,1,THEN  
+!   
+*CREATE,ansuitmp
+*MWRITE,criterio,criterio,txt   
+(1000(E10.4,3X))
+*END
+/INPUT,ansuitmp 
+!   
+! formatando grafico para plotar uatual x tempo 
+/RGB,INDEX,100,100,100,0
+/RGB,INDEX,0,0,0,15 
+/AXLAB,X,t  
+/AXLAB,Y,u(r=Re,z=Lt)   
+/XRANGE,0,npi*tp+tp*(nesc-1)+tad1+np2*tp2   
+*VSCFUN,criteriomax,max,criterio(1,3)   
+/YRANGE,0,criteriomax*1.2   
+/GROPT,DIVY,20  
+/GROPT,DIVX,10  
+/GROPT,DIG1,3   
+/GTHK,CURVE,1   
+/PLOPTS,INFO,on 
+!   
+! graficando na tela do Ansys   
+/ERASE  
+/SHOW,JPEG,,iso 
+*VLEN,np2   
+*VPLOT,criterio(1,1),criterio(1,3)  
+/SHOW,CLOSE 
+/ERASE  
+!   
+*ENDIF  
+!   
+!************************************************************!  
+!****_   5.3 Perfis tunel longitudinal (teta=90) _****! 
+!************************************************************!  
+/POST1  
+!   
+*SET,teta  , 90  ! angulo da posição do perfil de convergências no túnel longitudinal   
+!   
+! selecionando os nós na interface entre revestimento e o maciço  
+LOCAL,11,1,0,0,lt,0,0,0,0   
+CSYS,11,
+ALLSEL,ALL  
+NSEL,R,LOC,X,Re-0.01,Re+0.01
+NSEL,R,LOC,Y,teta-0.01,teta+0.01
+NSLE,R,CORNER   
+CSYS,0  
+!   
+! sistemas de referencias dos resultados
+RSYS,1  
+!   
+! dimensionando arrays  
+*SET,nanalises , 0  
+*GET,nanalises,ACTIVE,0,SET,NSET ! pegando o número de análises   
+*GET,ncount,NODE,,COUNT     ! pegando numero máximo de nós selecionados   
+*GET,ntotal,NODE,,NUM,MAX    ! pegando numero total de nós 
+*DIM,convergencex,TABLE,ncount,2+nanalises ! dimensionando tabela de convergencias  
+*DIM,convergencey,TABLE,ncount,2+nanalises ! dimensionando tabela de convergencias  
+*DIM,stressx,TABLE,ncount,2+nanalises   ! dimensionando tabela de pressões em x
+*DIM,stressy,TABLE,ncount,2+nanalises   ! dimensionando tabela de pressões em y
+*DIM,coordz,ARRAY,ntotal    ! dimensionando vetor de coordenadas nodais 
+*DIM,ORDER,ARRAY,ncount     ! array auxiliar para ordenamento   
+*DIM,u_x,ARRAY,ntotal     ! dimensionando vetor de deslocamentos em x   
+*DIM,u_y,ARRAY,ntotal     ! dimensionando vetor de deslocamentos em y   
+*DIM,s_x,ARRAY,ntotal     ! dimensionando vetor de pressões em x   
+*DIM,s_y,ARRAY,ntotal     ! dimensionando vetor de pressões em y   
+*DIM,n_sel,ARRAY,ntotal     ! dimensionando vetor que indica se o nó está selecionado 
+!   
+! coloca lista de nós em ordem na primeira coluna  
+*VGET,convergencex(1,1),NODE,,NLIST 
+*VGET,convergencey(1,1),NODE,,NLIST 
+*VGET,stressx(1,1),NODE,,NLIST  
+*VGET,stressy(1,1),NODE,,NLIST  
+!   
+! criando vetor de coordenadas  
+*VGET,n_sel(1),NODE,1,NSEL  
+*VGET,coordz(1),NODE,1,LOC,z
+*VOPER,coordz(1),coordz(1),MULT,1/Re
+!   
+! Preenchendo o convergence e pressure com as coordenadas   
+*VMASK,n_sel(1) 
+*VFUN,convergencex(1,2),COMP,coordz(1)  
+*VMASK,n_sel(1) 
+*VFUN,convergencey(1,2),COMP,coordz(1)  
+*VMASK,n_sel(1) 
+*VFUN,stressx(1,2),COMP,coordz(1)   
+*VMASK,n_sel(1) 
+*VFUN,stressy(1,2),COMP,coordz(1)   
+!   
+! preenchendo o convergence com a convergência 
+*DO,i,1,nanalises,1 
+! identifica o passo
+*IF,i,EQ,nanalises,THEN 
+SUBSET,LAST 
+*ELSE   
+*IF,matmacico,LE,1,AND,matrev,EQ,0,THEN 
+SUBSET,LAST 
+*ELSE   
+SUBSET,i,,,,,,  
+*ENDIF  
+*ENDIF  
+!   
+! Preenchendo o array com os deslocamentos radiais e tensões radiais   
+*VMASK,n_sel(1) 
+*VGET,u_x(1),NODE,1,U,X 
+*VOPER,u_x(1),u_x(1),MULT,-1/Re*100 
+!   
+*VMASK,n_sel(1) 
+*VGET,u_y(1),NODE,1,U,Y 
+*VOPER,u_y(1),u_y(1),MULT,-1/Re*100 
+!   
+*VMASK,n_sel(1) 
+*VGET,s_x(1),NODE,1,S,X 
+*VOPER,s_x(1),s_x(1),MULT,1 
+!   
+*VMASK,n_sel(1) 
+*VGET,s_y(1),NODE,1,S,Y 
+*VOPER,s_y(1),s_y(1),MULT,1 
+!   
+! Preenchendo o convergence e pressure  
+*VMASK,n_sel(1) 
+*VFUN,convergencex(1,2+i),COMP,u_x(1)   
+*VMASK,n_sel(1) 
+*VFUN,convergencey(1,2+i),COMP,u_y(1)   
+*VMASK,n_sel(1) 
+*VFUN,stressx(1,2+i),COMP,s_x(1)
+*VMASK,n_sel(1) 
+*VFUN,stressy(1,2+i),COMP,s_y(1)
+*ENDDO  
+!   
+! ordena a tabela de acordo com a segunda coluna (das coordenadas)  
+*MOPER,ORDER,convergencex,SORT,convergencex(1,2)
+*MOPER,ORDER,convergencey,SORT,convergencey(1,2)
+*MOPER,ORDER,stressx,SORT,stressx(1,2)  
+*MOPER,ORDER,stressy,SORT,stressy(1,2)  
+!   
+! Coleta o maior valor das convergências   
+*VSCFUN,uxmaximofinal,max,convergencex(1,2+nanalises)   
+*VSCFUN,uymaximofinal,max,convergencey(1,2+nanalises)   
+!   
+*VSCFUN,sxmaximofinal,max,stressx(1,2+nanalises)
+*VSCFUN,sxminimofinal,min,stressx(1,2+nanalises)
+!   
+*VSCFUN,symaximofinal,max,stressy(1,2+nanalises)
+*VSCFUN,syminimofinal,min,stressy(1,2+nanalises)
+!   
+! formatando grafico de convergencia x  
+/RGB,INDEX,100,100,100,0
+/RGB,INDEX,0,0,0,15 
+/AXLAB,X,Z/Re   
+/AXLAB,Y,Ux=-ux(r=Re,theta=%teta%)/Re (%)   
+/XRANGE,0,Lt/Re 
+/YRANGE,uxmaximofinal*1.2,0 
+/GROPT,DIVY,20  
+/GROPT,DIVX,10  
+/GROPT,DIG1,3   
+/GTHK,CURVE,1   
+/PLOPTS,INFO,on 
+!   
+! graficando na tela do Ansys   
+/ERASE  
+/SHOW,JPEG,,iso 
+*DO,i,1,nanalises,1 
+*IF,i,EQ,nanalises,THEN 
+/COLOR,CURVE,MAGE,1 
+*ELSEIF,i,EQ,nesc+nesc1-1,THEN  
+/COLOR,CURVE,YELL,1 
+*ELSE   
+/COLOR,CURVE,LGRA,1 
+*ENDIF  
+*VPLOT,convergencex(1,2),convergencex(1,2+i)
+/NOERASE
+*ENDDO  
+/SHOW,CLOSE 
+/ERASE  
+!   
+! formatando grafico de convergencia y  
+/RGB,INDEX,100,100,100,0
+/RGB,INDEX,0,0,0,15 
+/AXLAB,X,Z/Re   
+/AXLAB,Y,Uy=-uy(r=Re,theta=%teta%)/Re (%)   
+/XRANGE,0,Lt/Re 
+/YRANGE,uymaximofinal*1.2,0 
+/GROPT,DIVY,20  
+/GROPT,DIVX,10  
+/GROPT,DIG1,3   
+/GTHK,CURVE,1   
+/PLOPTS,INFO,on 
+!   
+! graficando na tela do Ansys   
+/ERASE  
+/SHOW,JPEG,,iso 
+*DO,i,1,nanalises,1 
+*IF,i,EQ,nanalises,THEN 
+/COLOR,CURVE,MAGE,1 
+*ELSEIF,i,EQ,nesc+nesc1-1,THEN  
+/COLOR,CURVE,YELL,1 
+*ELSE   
+/COLOR,CURVE,LGRA,1 
+*ENDIF  
+*VPLOT,convergencey(1,2),convergencey(1,2+i)
+/NOERASE
+*ENDDO  
+/SHOW,CLOSE 
+/ERASE  
+!   
+!   
+! formatando grafico do stress x
+/RGB,INDEX,100,100,100,0
+/RGB,INDEX,0,0,0,15 
+/AXLAB,X,Z/Re   
+/AXLAB,Y,Sx(r=Re,theta=%teta%)(MPa) 
+/XRANGE,0,Lt/Re 
+/YRANGE,sxmaximofinal*1.2,sxminimofinal*1.2 
+/GROPT,DIVY,20  
+/GROPT,DIVX,10  
+/GROPT,DIG1,3   
+/GTHK,CURVE,1   
+/PLOPTS,INFO,on 
+!   
+! graficando na tela do Ansys   
+/ERASE  
+/SHOW,JPEG,,iso 
+*DO,i,1,nanalises,1 
+*IF,i,EQ,nanalises,THEN 
+/COLOR,CURVE,MAGE,1 
+*ELSEIF,i,EQ,nesc+nesc1-1,THEN  
+/COLOR,CURVE,YELL,1 
+*ELSE   
+/COLOR,CURVE,LGRA,1 
+*ENDIF  
+*VPLOT,stressx(1,2),stressx(1,2+i)  
+/NOERASE
+*ENDDO  
+/SHOW,CLOSE 
+/ERASE  
+!   
+! formatando grafico do stress y
+/RGB,INDEX,100,100,100,0
+/RGB,INDEX,0,0,0,15 
+/AXLAB,X,Z/Re   
+/AXLAB,Y,Sy(r=Re,theta=%teta%)(MPa) 
+/XRANGE,0,Lt/Re 
+/YRANGE,symaximofinal,syminimofinal 
+/GROPT,DIVY,20  
+/GROPT,DIVX,10  
+/GROPT,DIG1,3   
+/GTHK,CURVE,1   
+/PLOPTS,INFO,on 
+!   
+! graficando na tela do Ansys   
+/ERASE  
+/SHOW,JPEG,,iso 
+*DO,i,1,nanalises,1 
+*IF,i,EQ,nanalises,THEN 
+/COLOR,CURVE,MAGE,1 
+*ELSEIF,i,EQ,nesc+nesc1-1,THEN  
+/COLOR,CURVE,YELL,1 
+*ELSE   
+/COLOR,CURVE,LGRA,1 
+*ENDIF  
+*VPLOT,stressy(1,2),stressy(1,2+i)  
+/NOERASE
+*ENDDO  
+/SHOW,CLOSE 
+/ERASE  
+!   
+! Escrevendo em arquivo as convergências   
+*CREATE,ansuitmp
+*MWRITE,convergencex,convergencex_%teta%,txt
+(1000(E10.4,3X))
+*END
+/INPUT,ansuitmp 
+!   
+*CREATE,ansuitmp
+*MWRITE,convergencey,convergencey_%teta%,txt
+(1000(E10.4,3X))
+*END
+/INPUT,ansuitmp 
+!   
+!   
+! Escrevendo em arquivo stress  
+*CREATE,ansuitmp
+*MWRITE,stressx,stressx_%teta%,txt  
+(1000(E10.4,3X))
+*END
+/INPUT,ansuitmp 
+!   
+*CREATE,ansuitmp
+*MWRITE,stressy,stressy_%teta%,txt  
+(1000(E10.4,3X))
+*END
+/INPUT,ansuitmp 
+!   
+! Cria arquivo com os parâmetros   
+PARSAV,SCALAR,parametros,txt
+!   
+!   
+!************************************************************!  
+!****_   5.4 Perfis tunel longitudinal (teta=0)  _****! 
+!************************************************************!  
+!   
+*SET,teta  , 0  ! angulo da posição do perfil de convergências no túnel longitudinal
+!   
+! selecionando os nós na interface entre revestimento e o maciço  
+LOCAL,11,1,0,0,lt,0,0,0,0   
+CSYS,11,
+ALLSEL,ALL  
+NSEL,R,LOC,X,Re-0.01,Re+0.01
+NSEL,R,LOC,Y,teta-0.01,teta+0.01
+NSLE,R,CORNER   
+CSYS,0  
+!   
+! sistemas de referencias dos resultados
+RSYS,1  
+!   
+! dimensionando arrays  
+*SET,nanalises , 0  
+*GET,nanalises,ACTIVE,0,SET,NSET ! pegando o número de análises   
+*GET,ncount,NODE,,COUNT     ! pegando numero máximo de nós selecionados   
+*GET,ntotal,NODE,,NUM,MAX    ! pegando numero total de nós 
+*DIM,convergencex,TABLE,ncount,2+nanalises ! dimensionando tabela de convergencias  
+*DIM,convergencey,TABLE,ncount,2+nanalises ! dimensionando tabela de convergencias  
+*DIM,stressx,TABLE,ncount,2+nanalises   ! dimensionando tabela de pressões em x
+*DIM,stressy,TABLE,ncount,2+nanalises   ! dimensionando tabela de pressões em y
+*DIM,coordz,ARRAY,ntotal    ! dimensionando vetor de coordenadas nodais 
+*DIM,ORDER,ARRAY,ncount     ! array auxiliar para ordenamento   
+*DIM,u_x,ARRAY,ntotal     ! dimensionando vetor de deslocamentos em x   
+*DIM,u_y,ARRAY,ntotal     ! dimensionando vetor de deslocamentos em y   
+*DIM,s_x,ARRAY,ntotal     ! dimensionando vetor de pressões em x   
+*DIM,s_y,ARRAY,ntotal     ! dimensionando vetor de pressões em y   
+*DIM,n_sel,ARRAY,ntotal     ! dimensionando vetor que indica se o nó está selecionado 
+!   
+! coloca lista de nós em ordem na primeira coluna  
+*VGET,convergencex(1,1),NODE,,NLIST 
+*VGET,convergencey(1,1),NODE,,NLIST 
+*VGET,stressx(1,1),NODE,,NLIST  
+*VGET,stressy(1,1),NODE,,NLIST  
+!   
+! criando vetor de coordenadas  
+*VGET,n_sel(1),NODE,1,NSEL  
+*VGET,coordz(1),NODE,1,LOC,z
+*VOPER,coordz(1),coordz(1),MULT,1/Re
+!   
+! Preenchendo o convergence e pressure com as coordenadas   
+*VMASK,n_sel(1) 
+*VFUN,convergencex(1,2),COMP,coordz(1)  
+*VMASK,n_sel(1) 
+*VFUN,convergencey(1,2),COMP,coordz(1)  
+*VMASK,n_sel(1) 
+*VFUN,stressx(1,2),COMP,coordz(1)   
+*VMASK,n_sel(1) 
+*VFUN,stressy(1,2),COMP,coordz(1)   
+!   
+! preenchendo o convergence com a convergência 
+*DO,i,1,nanalises,1 
+! identifica o passo
+*IF,i,EQ,nanalises,THEN 
+SUBSET,LAST 
+*ELSE   
+*IF,matmacico,LE,1,AND,matrev,EQ,0,THEN 
+SUBSET,LAST 
+*ELSE   
+SUBSET,i,,,,,,  
+*ENDIF  
+*ENDIF  
+!   
+! Preenchendo o array com os deslocamentos radiais e tensões radiais   
+*VMASK,n_sel(1) 
+*VGET,u_x(1),NODE,1,U,X 
+*VOPER,u_x(1),u_x(1),MULT,-1/Re*100 
+!   
+*VMASK,n_sel(1) 
+*VGET,u_y(1),NODE,1,U,Y 
+*VOPER,u_y(1),u_y(1),MULT,-1/Re*100 
+!   
+*VMASK,n_sel(1) 
+*VGET,s_x(1),NODE,1,S,X 
+*VOPER,s_x(1),s_x(1),MULT,1 
+!   
+*VMASK,n_sel(1) 
+*VGET,s_y(1),NODE,1,S,Y 
+*VOPER,s_y(1),s_y(1),MULT,1 
+!   
+! Preenchendo o convergence e pressure  
+*VMASK,n_sel(1) 
+*VFUN,convergencex(1,2+i),COMP,u_x(1)   
+*VMASK,n_sel(1) 
+*VFUN,convergencey(1,2+i),COMP,u_y(1)   
+*VMASK,n_sel(1) 
+*VFUN,stressx(1,2+i),COMP,s_x(1)
+*VMASK,n_sel(1) 
+*VFUN,stressy(1,2+i),COMP,s_y(1)
+*ENDDO  
+!   
+! ordena a tabela de acordo com a segunda coluna (das coordenadas)  
+*MOPER,ORDER,convergencex,SORT,convergencex(1,2)
+*MOPER,ORDER,convergencey,SORT,convergencey(1,2)
+*MOPER,ORDER,stressx,SORT,stressx(1,2)  
+*MOPER,ORDER,stressy,SORT,stressy(1,2)  
+!   
+! Coleta o maior valor das convergências   
+*VSCFUN,uxmaximofinal,max,convergencex(1,2+nanalises)   
+*VSCFUN,uymaximofinal,max,convergencey(1,2+nanalises)   
+!   
+*VSCFUN,sxmaximofinal,max,stressx(1,2+nanalises)
+*VSCFUN,sxminimofinal,min,stressx(1,2+nanalises)
+!   
+*VSCFUN,symaximofinal,max,stressy(1,2+nanalises)
+*VSCFUN,syminimofinal,min,stressy(1,2+nanalises)
+!   
+! formatando grafico de convergencia x  
+/RGB,INDEX,100,100,100,0
+/RGB,INDEX,0,0,0,15 
+/AXLAB,X,Z/Re   
+/AXLAB,Y,Ux=-ux(r=Re,theta=%teta%)/Re (%)   
+/XRANGE,0,Lt/Re 
+/YRANGE,uxmaximofinal*1.2,0 
+/GROPT,DIVY,20  
+/GROPT,DIVX,10  
+/GROPT,DIG1,3   
+/GTHK,CURVE,1   
+/PLOPTS,INFO,on 
+!   
+! graficando na tela do Ansys   
+/ERASE  
+/SHOW,JPEG,,iso 
+*DO,i,1,nanalises,1 
+*IF,i,EQ,nanalises,THEN 
+/COLOR,CURVE,MAGE,1 
+*ELSEIF,i,EQ,nesc+nesc1-1,THEN  
+/COLOR,CURVE,YELL,1 
+*ELSE   
+/COLOR,CURVE,LGRA,1 
+*ENDIF  
+*VPLOT,convergencex(1,2),convergencex(1,2+i)
+/NOERASE
+*ENDDO  
+/SHOW,CLOSE 
+/ERASE  
+!   
+! formatando grafico de convergencia y  
+/RGB,INDEX,100,100,100,0
+/RGB,INDEX,0,0,0,15 
+/AXLAB,X,Z/Re   
+/AXLAB,Y,Uy=-uy(r=Re,theta=%teta%)/Re (%)   
+/XRANGE,0,Lt/Re 
+/YRANGE,uymaximofinal*1.2,0 
+/GROPT,DIVY,20  
+/GROPT,DIVX,10  
+/GROPT,DIG1,3   
+/GTHK,CURVE,1   
+/PLOPTS,INFO,on 
+!   
+! graficando na tela do Ansys   
+/ERASE  
+/SHOW,JPEG,,iso 
+*DO,i,1,nanalises,1 
+*IF,i,EQ,nanalises,THEN 
+/COLOR,CURVE,MAGE,1 
+*ELSEIF,i,EQ,nesc+nesc1-1,THEN  
+/COLOR,CURVE,YELL,1 
+*ELSE   
+/COLOR,CURVE,LGRA,1 
+*ENDIF  
+*VPLOT,convergencey(1,2),convergencey(1,2+i)
+/NOERASE
+*ENDDO  
+/SHOW,CLOSE 
+/ERASE  
+!   
+!   
+! formatando grafico do stress x
+/RGB,INDEX,100,100,100,0
+/RGB,INDEX,0,0,0,15 
+/AXLAB,X,Z/Re   
+/AXLAB,Y,Sx(r=Re,theta=%teta%)(MPa) 
+/XRANGE,0,Lt/Re 
+/YRANGE,sxmaximofinal*1.2,sxminimofinal*1.2 
+/GROPT,DIVY,20  
+/GROPT,DIVX,10  
+/GROPT,DIG1,3   
+/GTHK,CURVE,1   
+/PLOPTS,INFO,on 
+!   
+! graficando na tela do Ansys   
+/ERASE  
+/SHOW,JPEG,,iso 
+*DO,i,1,nanalises,1 
+*IF,i,EQ,nanalises,THEN 
+/COLOR,CURVE,MAGE,1 
+*ELSEIF,i,EQ,nesc+nesc1-1,THEN  
+/COLOR,CURVE,YELL,1 
+*ELSE   
+/COLOR,CURVE,LGRA,1 
+*ENDIF  
+*VPLOT,stressx(1,2),stressx(1,2+i)  
+/NOERASE
+*ENDDO  
+/SHOW,CLOSE 
+/ERASE  
+!   
+! formatando grafico do stress y
+/RGB,INDEX,100,100,100,0
+/RGB,INDEX,0,0,0,15 
+/AXLAB,X,Z/Re   
+/AXLAB,Y,Sy(r=Re,theta=%teta%)(MPa) 
+/XRANGE,0,Lt/Re 
+/YRANGE,symaximofinal,syminimofinal 
+/GROPT,DIVY,20  
+/GROPT,DIVX,10  
+/GROPT,DIG1,3   
+/GTHK,CURVE,1   
+/PLOPTS,INFO,on 
+!   
+! graficando na tela do Ansys   
+/ERASE  
+/SHOW,JPEG,,iso 
+*DO,i,1,nanalises,1 
+*IF,i,EQ,nanalises,THEN 
+/COLOR,CURVE,MAGE,1 
+*ELSEIF,i,EQ,nesc+nesc1-1,THEN  
+/COLOR,CURVE,YELL,1 
+*ELSE   
+/COLOR,CURVE,LGRA,1 
+*ENDIF  
+*VPLOT,stressy(1,2),stressy(1,2+i)  
+/NOERASE
+*ENDDO  
+/SHOW,CLOSE 
+/ERASE  
+!   
+! Escrevendo em arquivo as convergências   
+*CREATE,ansuitmp
+*MWRITE,convergencex,convergencex_%teta%,txt
+(1000(E10.4,3X))
+*END
+/INPUT,ansuitmp 
+!   
+*CREATE,ansuitmp
+*MWRITE,convergencey,convergencey_%teta%,txt
+(1000(E10.4,3X))
+*END
+/INPUT,ansuitmp 
+!   
+!   
+! Escrevendo em arquivo stress  
+*CREATE,ansuitmp
+*MWRITE,stressx,stressx_%teta%,txt  
+(1000(E10.4,3X))
+*END
+/INPUT,ansuitmp 
+!   
+*CREATE,ansuitmp
+*MWRITE,stressy,stressy_%teta%,txt  
+(1000(E10.4,3X))
+*END
+/INPUT,ansuitmp 
+!   
+! Cria arquivo com os parâmetros   
+PARSAV,SCALAR,parametros,txt
+!   
+!   
+!************************************************************!  
+!****_   5.5 Tensões em uma dada cota (teta = 0) _****!
+!************************************************************!  
+!   
+*SET,teta  , 0   ! ângulo  
+*SET,zf  , l1+l2   ! cota ao longo dez  
+!   
+! selecionando os nós na interface entre revestimento e o maciço  
+*IF,teta,EQ,0,THEN  
+CSYS,0, 
+ALLSEL,ALL  
+NSEL,S,LOC,X,-d4,d1/2   
+NSEL,R,LOC,Y,0,0
+NSEL,R,LOC,Z,zf 
+NSLE,R,CORNER   
+CSYS,0  
+*SET,eixo , 'x' 
+*SET,localizacao , 'x'  
+*ELSE   
+CSYS,0, 
+ALLSEL,ALL  
+NSEL,S,LOC,X,0,0
+NSEL,R,LOC,Y,0,d3   
+NSEL,R,LOC,Z,zf 
+NSLE,R,CORNER   
+CSYS,0  
+*SET,eixo , 'y' 
+*SET,localizacao , 'y'  
+*ENDIF  
+!   
+! sistemas de referencias dos resultados
+RSYS,1  
+!   
+! dimensionando arrays  
+*SET,nanalises , 0  
+*GET,nanalises,ACTIVE,0,SET,NSET ! pegando o número de análises   
+*GET,ncount,NODE,,COUNT     ! pegando numero máximo de nós selecionados   
+*GET,ntotal,NODE,,NUM,MAX    ! pegando numero total de nós 
+*DIM,convergencex,TABLE,ncount,2+nanalises ! dimensionando tabela de convergencias  
+*DIM,convergencey,TABLE,ncount,2+nanalises ! dimensionando tabela de convergencias  
+*DIM,stressx,TABLE,ncount,2+nanalises   ! dimensionando tabela de pressões em x
+*DIM,stressy,TABLE,ncount,2+nanalises   ! dimensionando tabela de pressões em y
+*DIM,coordz,ARRAY,ntotal    ! dimensionando vetor de coordenadas nodais 
+*DIM,ORDER,ARRAY,ncount     ! array auxiliar para ordenamento   
+*DIM,u_x,ARRAY,ntotal     ! dimensionando vetor de deslocamentos em x   
+*DIM,u_y,ARRAY,ntotal     ! dimensionando vetor de deslocamentos em y   
+*DIM,s_x,ARRAY,ntotal     ! dimensionando vetor de pressões em x   
+*DIM,s_y,ARRAY,ntotal     ! dimensionando vetor de pressões em y   
+*DIM,n_sel,ARRAY,ntotal     ! dimensionando vetor que indica se o nó está selecionado 
+!   
+! coloca lista de nós em ordem na primeira coluna  
+*VGET,convergencex(1,1),NODE,,NLIST 
+*VGET,convergencey(1,1),NODE,,NLIST 
+*VGET,stressx(1,1),NODE,,NLIST  
+*VGET,stressy(1,1),NODE,,NLIST  
+!   
+! criando vetor de coordenadas  
+*VGET,n_sel(1),NODE,1,NSEL  
+*VGET,coordz(1),NODE,1,LOC,localizacao  
+*VOPER,coordz(1),coordz(1),MULT,1 !1/Re 
+!   
+! Preenchendo o convergence e pressure com as coordenadas   
+*VMASK,n_sel(1) 
+*VFUN,convergencex(1,2),COMP,coordz(1)  
+*VMASK,n_sel(1) 
+*VFUN,convergencey(1,2),COMP,coordz(1)  
+*VMASK,n_sel(1) 
+*VFUN,stressx(1,2),COMP,coordz(1)   
+*VMASK,n_sel(1) 
+*VFUN,stressy(1,2),COMP,coordz(1)   
+!   
+! preenchendo o convergence com a convergência 
+*DO,i,1,nanalises,1 
+! identifica o passo
+*IF,i,EQ,nanalises,THEN 
+SUBSET,LAST 
+*ELSE   
+*IF,matmacico,LE,1,AND,matrev,EQ,0,THEN 
+SUBSET,LAST 
+*ELSE   
+SUBSET,i,,,,,,  
+*ENDIF  
+*ENDIF  
+!   
+! Preenchendo o array com os deslocamentos radiais e tensões radiais   
+*VMASK,n_sel(1) 
+*VGET,u_x(1),NODE,1,U,X 
+*VOPER,u_x(1),u_x(1),MULT,-1/Re*100 
+!   
+*VMASK,n_sel(1) 
+*VGET,u_y(1),NODE,1,U,Y 
+*VOPER,u_y(1),u_y(1),MULT,-1/Re*100 
+!   
+*VMASK,n_sel(1) 
+*VGET,s_x(1),NODE,1,S,X 
+*VOPER,s_x(1),s_x(1),MULT,1 
+!   
+*VMASK,n_sel(1) 
+*VGET,s_y(1),NODE,1,S,Y 
+*VOPER,s_y(1),s_y(1),MULT,1 
+!   
+! Preenchendo o convergence e pressure  
+*VMASK,n_sel(1) 
+*VFUN,convergencex(1,2+i),COMP,u_x(1)   
+*VMASK,n_sel(1) 
+*VFUN,convergencey(1,2+i),COMP,u_y(1)   
+*VMASK,n_sel(1) 
+*VFUN,stressx(1,2+i),COMP,s_x(1)
+*VMASK,n_sel(1) 
+*VFUN,stressy(1,2+i),COMP,s_y(1)
+*ENDDO  
+/BATCH  
+/COM,ANSYS RELEASE 2021 R2           BUILD 21.2      UP20210601       15:37:37
+/input,menust,tmp,''
+/GRA,POWER
+/GST,ON
+/PLO,INFO,3
+/GRO,CURL,ON
+/CPLANE,1   
+/REPLOT,RESIZE  
+WPSTYLE,,,,,,,,0
+RESUME  
+/COM,ANSYS RELEASE 2021 R2           BUILD 21.2      UP20210601       15:37:56
+FINISH  
+! /EXIT,NOSAV   
+/BATCH  
+/COM,ANSYS RELEASE 2021 R2           BUILD 21.2      UP20210601       15:38:17
+/input,menust,tmp,''
+/GRA,POWER
+/GST,ON
+/PLO,INFO,3
+/GRO,CURL,ON
+/CPLANE,1   
+/REPLOT,RESIZE  
+WPSTYLE,,,,,,,,0
+RESU
+/COM,ANSYS RELEASE 2021 R2           BUILD 21.2      UP20210601       15:38:27
+FINISH  
+! /EXIT,NOSAV   
+/BATCH  
+/COM,ANSYS RELEASE 2021 R2           BUILD 21.2      UP20210601       15:38:59
+/input,menust,tmp,''
+/GRA,POWER
+/GST,ON
+/PLO,INFO,3
+/GRO,CURL,ON
+/CPLANE,1   
+/REPLOT,RESIZE  
+WPSTYLE,,,,,,,,0
+resu
+/COM,ANSYS RELEASE 2021 R2           BUILD 21.2      UP20210601       15:41:21
+FINISH  
+! /EXIT,NOSAV   
