@@ -30,7 +30,7 @@ def graficar(arquivo,                   # nome do arquivo de leitura
              figura):
     
     # define localização para o ponto decimal
-    locale.setlocale(locale.LC_NUMERIC,"ru_RU.utf8")
+    #locale.setlocale(locale.LC_NUMERIC,"ru_RU.utf8")
     
     # Lendo arquivo de dados      
     data = pd.read_csv(arquivo,delim_whitespace= True).values
@@ -73,7 +73,7 @@ def graficar(arquivo,                   # nome do arquivo de leitura
     plt.gca().yaxis.set_major_formatter(StrMethodFormatter("{x:.2f}"))
     
     # aplica localização para o ponto decimal
-    plt.rcParams['axes.formatter.use_locale'] = True
+    #plt.rcParams['axes.formatter.use_locale'] = True
     
     # Formatando grades
     plt.rcParams['axes.axisbelow'] = True 
@@ -81,23 +81,40 @@ def graficar(arquivo,                   # nome do arquivo de leitura
     plt.grid(True,which = 'minor', alpha = 0.3)
     plt.minorticks_on()
     
+    # Formatando fontes
+    #rc('font',{'family':'Times New Roman','size' :12})
+    #rc('font',{'family':'Times New Roman','size' :12})
+    plt.rcParams['axes.unicode_minus'] = False
+    plt.rc('text', usetex=True)
+    plt.rc('axes', labelsize=12)
+    plt.rc('xtick', labelsize=12) 
+    plt.rc('ytick', labelsize=12)
+    plt.rc('lines', lw=1.0,color='k')
+    plt.rc('axes',lw=0.75)
+    plt.rc('legend', fontsize=12)
+    plt.rcParams.update({
+        "text.usetex": True,
+        "font.family": "Times"
+        })
+    
     # Inserir linha vertical em x0
     if inserirx0 == True:
         plt.axvline(x0-x0,color = 'k', lw = 2, linestyle = 'dotted')
     
     # adicionando título
-    plt.title(titulo, fontsize = 16, fontweight="bold") 
+    #plt.title(titulo, fontsize = 16, fontweight="bold") 
     #plt.autoscale(axis='y')
     
     # Formatando a legenda
-    plt.legend(
-        loc = 'center',
-        shadow=False,
-        framealpha = 0,
-        ncol = 4,
-        columnspacing = 0.5,
-        bbox_to_anchor=(0.5, -0.2),
-        fontsize="11")
+    plt.legend(loc = 'lower left', ncol = 2)
+    #plt.legend(
+        #loc = 'center',
+        #shadow=False,
+        #framealpha = 0,
+        #ncol = 4,
+       # columnspacing = 0.5,
+       # bbox_to_anchor=(0.5, -0.2),
+        #fontsize="11")
     
     # Salvando em arquivo    
     plt.savefig(str(titulo) + '.pdf', 
@@ -245,8 +262,8 @@ CONVERGENCE PROFILES - MODEL E_CRE_CG
 # Formatação do gráfico
 figura      = figura+1
 titulo      = 'Convergence Profiles - E_EL_WG'
-eixox       = r'$x/R_i$'  
-eixoy       = r'$U=-u(r = R_i,\theta = 90^\circ)/R_{i}$ [%]'
+eixox       = r'$z/R_t$'  
+eixoy       = r'$U_B$ [\%]'
 ymin        = ymin_twin_convergence_profile
 ymax        = ymax_twin_convergence_profile
 xmin        = xmin_twin_profile
@@ -283,7 +300,7 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'E_CRE_CG_D1_16RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = '$d_1 = 16R_i$'
+lblcoluna   = '$d_1/2R_t = 8$'
 cor         = 'orange'
 tamanho     = 2
 ordem       = 3
@@ -302,7 +319,7 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'E_CRE_CG_D1_8RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = '$d_1 = 8R_i$'
+lblcoluna   = '$d_1/2R_t = 4$'
 cor         = 'g'
 tamanho     = 2
 ordem       = 2
@@ -321,7 +338,7 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'E_CRE_CG_D1_4RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = '$d_1 = 4R_i$'
+lblcoluna   = '$d_1/2R_t = 2$'
 cor         = 'r'
 tamanho     = 2
 ordem       = 1
@@ -345,8 +362,8 @@ CONVERGENCE PROFILES - MODEL EP_SR_SG
 # Formatação do gráfico
 figura      = figura+1
 titulo      = 'Convergence Profiles - EP_NL_NG'
-eixox       = r'$x/R_i$'  
-eixoy       = r'$U=-u(r = R_i,\theta = 90^\circ)/R_{i}$ [%]'
+eixox       = r'$z/R_t$'  
+eixoy       = r'$U_B$ [\%]'
 ymin        = ymin_twin_convergence_profile
 ymax        = ymax_twin_convergence_profile+1
 xmin        = xmin_twin_profile
@@ -383,7 +400,7 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EP_SR_SG_D1_16RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = '$d_1 = 16R_i$'
+lblcoluna   = '$d_1/2R_t = 8$'
 cor         = 'orange'
 tamanho     = 2
 ordem       = 3
@@ -402,7 +419,7 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EP_SR_SG_D1_8RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = ' $d_1 = 8R_i$'
+lblcoluna   = '$d_1/2R_t = 4$'
 cor         = 'g'
 tamanho     = 2
 ordem       = 2
@@ -421,7 +438,7 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EP_SR_SG_D1_4RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = '$d_1 = 4R_i$'
+lblcoluna   = '$d_1/2R_t = 2$'
 cor         = 'r'
 tamanho     = 2
 ordem       = 1
@@ -444,8 +461,8 @@ CONVERGENCE PROFILES - MODEL EP_SR_CG
 # Formatação do gráfico
 figura      = figura + 1
 titulo      = 'Convergence Profiles - EP_NL_WG'
-eixox       = r'$x/R_i$'  
-eixoy       = r'$U=-u(r = R_i,\theta = 90^\circ)/R_{i}$ [%]'
+eixox       = r'$z/R_t$'  
+eixoy       = r'$U_B$ [\%]'
 ymin        = ymin_twin_convergence_profile
 ymax        = ymax_twin_convergence_profile+1
 xmin        = xmin_twin_profile
@@ -482,7 +499,7 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EP_SR_CG_D1_16RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = '$d_1 = 16R_i$'
+lblcoluna   = '$d_1/2R_t = 8$'
 cor         = 'orange'
 tamanho     = 2
 ordem       = 3
@@ -501,7 +518,7 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EP_SR_CG_D1_8RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = ' $d_1 = 8R_i$'
+lblcoluna   = '$d_1/2R_t = 4$'
 cor         = 'g'
 tamanho     = 2
 ordem       = 2
@@ -520,7 +537,7 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EP_SR_CG_D1_4RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = '$d_1 = 4R_i$'
+lblcoluna   = '$d_1/2R_t = 2$'
 cor         = 'r'
 tamanho     = 2
 ordem       = 1
@@ -543,8 +560,8 @@ CONVERGENCE PROFILES - MODEL EP_SR_SG_CG
 # Formatação do gráfico
 figura      = figura + 1
 titulo      = 'Convergence Profiles - EP_NL_NG_WG'
-eixox       = r'$x/R_i$'  
-eixoy       = r'$U=-u(r = R_i,\theta = 90^\circ)/R_{i}$ [%]'
+eixox       = r'$z/R_t$'  
+eixoy       = r'$U_B$ [\%]'
 ymin        = ymin_twin_convergence_profile
 ymax        = ymax_twin_convergence_profile+1
 xmin        = xmin_twin_profile
@@ -563,7 +580,8 @@ poly        = poly_twin_convergence_profile
 modelo      = 'EP_SR_SG_D1_16RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'NG_$d_1 = 16R_i$_Ueq=1.407'
+lblcoluna   = 'NG-$d_1/2R_t = 8$'
+#lblcoluna   = 'NG_$d_1 = 16R_i$_Ueq=1.407'
 cor         = 'orange'
 tamanho     = 2
 ordem       = 3
@@ -581,7 +599,8 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EP_SR_CG_D1_16RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'WG_$d_1 = 16R_i$_Ueq=1.425'
+lblcoluna   = 'WG-$d_1/2R_t = 8$'
+#lblcoluna   = 'WG_$d_1 = 16R_i$_Ueq=1.425'
 cor         = 'orange'
 tamanho     = 2
 ordem       = 3
@@ -599,7 +618,8 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EP_SR_SG_D1_8RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'NG_$d_1 = 8R_i$_Ueq=1.429'
+lblcoluna   = 'NG-$d_1/2R_t = 4$'
+#lblcoluna   = 'NG_$d_1 = 8R_i$_Ueq=1.429'
 cor         = 'g'
 tamanho     = 2
 ordem       = 2
@@ -617,7 +637,8 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EP_SR_CG_D1_8RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'WG_$d_1 = 8R_i$_Ueq=1.439'
+lblcoluna   = 'WG-$d_1/2R_t = 4$'
+#lblcoluna   = 'WG_$d_1 = 8R_i$_Ueq=1.439'
 cor         = 'g'
 tamanho     = 2
 ordem       = 2
@@ -635,7 +656,8 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EP_SR_SG_D1_4RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'NG_$d_1 = 4R_i$_Ueq=1.83'
+lblcoluna   = 'NG-$d_1/2R_t = 2$'
+#lblcoluna   = 'NG_$d_1 = 4R_i$_Ueq=1.83'
 cor         = 'r'
 tamanho     = 2
 ordem       = 1
@@ -653,7 +675,8 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EP_SR_CG_D1_4RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'WG_$d_1 = 4R_i$_Ueq=1.845'
+lblcoluna   = 'WG-$d_1/2R_t = 2$'
+#lblcoluna   = 'WG_$d_1 = 4R_i$_Ueq=1.845'
 cor         = 'r'
 tamanho     = 2
 ordem       = 1
@@ -671,7 +694,8 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EP_SR_SG_D1_INF_AXI'
 arquivo     = modelo + '\convergencias.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'single tunnel_Ueq=1.406'
+lblcoluna   = 'single tunnel'
+#lblcoluna   = 'single tunnel_Ueq=1.406'
 cor         = 'k'
 tamanho     = 1.5
 ordem       = 4
@@ -694,8 +718,8 @@ CONVERGENCE PROFILES - MODEL EP_CRE
 # Formatação do gráfico
 figura      = figura+1
 titulo      = 'Convergence Profiles - EP_EL_NG'
-eixox       = r'$x/R_i$'  
-eixoy       = r'$U=-u(r = R_i,\theta = 90^\circ)/R_{i}$ [%]'
+eixox       = r'$z/R_t$'  
+eixoy       = r'$U_B$ [\%]'
 ymin        = ymin_twin_convergence_profile
 ymax        = ymax_twin_convergence_profile
 xmin        = xmin_twin_profile
@@ -732,7 +756,7 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EP_CRE_SG_D1_16RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = '$d_1 = 16R_i$'
+lblcoluna   = '$d_1/2R_t = 8$'
 cor         = 'orange'
 tamanho     = 2
 ordem       = 3
@@ -751,7 +775,7 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EP_CRE_SG_D1_8RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = '$d_1 = 8R_i$'
+lblcoluna   = '$d_1/2R_t = 4$'
 cor         = 'g'
 tamanho     = 2
 ordem       = 2
@@ -770,7 +794,7 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EP_CRE_SG_D1_4RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = '$d_1 = 4R_i$'
+lblcoluna   = '$d_1/2R_t = 2$'
 cor         = 'r'
 tamanho     = 2
 ordem       = 1
@@ -794,8 +818,8 @@ CONVERGENCE PROFILES - MODEL EP_CRE
 # Formatação do gráfico
 figura      = figura + 1
 titulo      = 'Convergence Profiles - EP_EL_WG'
-eixox       = r'$x/R_i$'  
-eixoy       = r'$U=-u(r = R_i,\theta = 90^\circ)/R_{i}$ [%]'
+eixox       = r'$z/R_t$'  
+eixoy       = r'$U_B$ [\%]'
 ymin        = ymin_twin_convergence_profile
 ymax        = ymax_twin_convergence_profile
 xmin        = xmin_twin_profile
@@ -832,7 +856,7 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EP_CRE_CG_D1_16RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = '$d_1 = 16R_i$'
+lblcoluna   = '$d_1/2R_t = 8$'
 cor         = 'orange'
 tamanho     = 2
 ordem       = 3
@@ -851,7 +875,7 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EP_CRE_CG_D1_8RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = '$d_1 = 8R_i$'
+lblcoluna   = '$d_1/2R_t = 4$'
 cor         = 'g'
 tamanho     = 2
 ordem       = 2
@@ -870,7 +894,7 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EP_CRE_CG_D1_4RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = '$d_1 = 4R_i$'
+lblcoluna   = '$d_1/2R_t = 2$'
 cor         = 'r'
 tamanho     = 2
 ordem       = 1
@@ -893,8 +917,8 @@ CONVERGENCE PROFILES - MODEL VP_CRE_SG_CP
 # Formatação do gráfico
 figura      = figura + 1
 titulo      = 'Convergence Profiles - VP_EL_NG_ST'
-eixox       = r'$x/R_i$'  
-eixoy       = r'$U=-u(r = R_i,\theta = 90^\circ)/R_{i}$ [%]'
+eixox       = r'$z/R_t$'  
+eixoy       = r'$U_B$ [\%]'
 ymin        = ymin_twin_convergence_profile
 ymax        = ymax_twin_convergence_profile
 xmin        = xmin_twin_profile
@@ -931,7 +955,7 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'VP_CRE_SG_D1_16RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunafinalexcavation[modelo]
-lblcoluna   = '$d_1 = 16R_i$'
+lblcoluna   = '$d_1/2R_t = 8$'
 cor         = 'orange'
 tamanho     = 2
 ordem       = 3
@@ -950,7 +974,7 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'VP_CRE_SG_D1_8RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunafinalexcavation[modelo]
-lblcoluna   = '$d_1 = 8R_i$'
+lblcoluna   = '$d_1/2R_t = 4$'
 cor         = 'g'
 tamanho     = 2
 ordem       = 2
@@ -968,7 +992,7 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'VP_CRE_SG_D1_4RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunafinalexcavation[modelo]
-lblcoluna   = '$d_1 = 4R_i$'
+lblcoluna   = '$d_1/2R_t = 2$'
 cor         = 'r'
 tamanho     = 2
 ordem       = 1
@@ -991,8 +1015,8 @@ CONVERGENCE PROFILES - MODEL VP_CRE_CG_CP
 # Formatação do gráfico
 figura      = figura + 1
 titulo      = 'Convergence Profiles - VP_EL_WG_ST'
-eixox       = r'$x/R_i$'  
-eixoy       = r'$U=-u(r = R_i,\theta = 90^\circ)/R_{i}$ [%]'
+eixox       = r'$z/R_t$'  
+eixoy       = r'$U_B$ [\%]'
 ymin        = ymin_twin_convergence_profile
 ymax        = ymax_twin_convergence_profile
 xmin        = xmin_twin_profile
@@ -1029,7 +1053,7 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'VP_CRE_CG_D1_16RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunafinalexcavation[modelo]
-lblcoluna   = '$d_1 = 16R_i$'
+lblcoluna   = '$d_1/2R_t = 8$'
 cor         = 'orange'
 tamanho     = 2
 ordem       = 3
@@ -1048,7 +1072,7 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'VP_CRE_CG_D1_8RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunafinalexcavation[modelo]
-lblcoluna   = '$d_1 = 8R_i$'
+lblcoluna   = '$d_1/2R_t = 4$'
 cor         = 'g'
 tamanho     = 2
 ordem       = 2
@@ -1067,7 +1091,7 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'VP_CRE_CG_D1_4RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunafinalexcavation[modelo]
-lblcoluna   = '$d_1 = 4R_i$'
+lblcoluna   = '$d_1/2R_t = 2$'
 cor         = 'r'
 tamanho     = 2
 ordem       = 1
@@ -1091,8 +1115,8 @@ CONVERGENCE PROFILES - MODEL VP_CRE_SG_LP
 # Formatação do gráfico
 figura      = figura + 1
 titulo      = 'Convergence Profiles - VP_EL_NG_LT'
-eixox       = r'$x/R_i$'  
-eixoy       = r'$U=-u(r = R_i,\theta = 90^\circ)/R_{i}$ [%]'
+eixox       = r'$z/R_t$'  
+eixoy       = r'$U_B$ [\%]'
 ymin        = ymin_twin_convergence_profile
 ymax        = ymax_twin_convergence_profile
 xmin        = xmin_twin_profile
@@ -1129,7 +1153,7 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'VP_CRE_SG_D1_16RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = '$d_1 = 16R_i$'
+lblcoluna   = '$d_1/2R_t = 8$'
 cor         = 'orange'
 tamanho     = 2
 ordem       = 3
@@ -1148,7 +1172,7 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'VP_CRE_SG_D1_8RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = '$d_1 = 8R_i$'
+lblcoluna   = '$d_1/2R_t = 4$'
 cor         = 'g'
 tamanho     = 2
 ordem       = 2
@@ -1167,7 +1191,7 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'VP_CRE_SG_D1_4RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = '$d_1 = 4R_i$'
+lblcoluna   = '$d_1/2R_t = 2$'
 cor         = 'r'
 tamanho     = 2
 ordem       = 1
@@ -1191,8 +1215,8 @@ CONVERGENCE PROFILES - MODEL VP_CRE_CG_LP
 # Formatação do gráfico
 figura      = figura + 1
 titulo      = 'Convergence Profiles - VP_EL_WG_LT'
-eixox       = r'$x/R_i$'  
-eixoy       = r'$U=-u(r = R_i,\theta = 90^\circ)/R_{i}$ [%]'
+eixox       = r'$z/R_t$'  
+eixoy       = r'$U_B$ [\%]'
 ymin        = ymin_twin_convergence_profile
 ymax        = ymax_twin_convergence_profile
 xmin        = xmin_twin_profile
@@ -1229,7 +1253,7 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'VP_CRE_CG_D1_16RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = '$d_1 = 16R_i$'
+lblcoluna   = '$d_1/2R_t = 8$'
 cor         = 'orange'
 tamanho     = 2
 ordem       = 3
@@ -1248,7 +1272,7 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'VP_CRE_CG_D1_8RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = '$d_1 = 8R_i$'
+lblcoluna   = '$d_1/2R_t = 4$'
 cor         = 'g'
 tamanho     = 2
 ordem       = 2
@@ -1267,7 +1291,7 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'VP_CRE_CG_D1_4RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = '$d_1 = 4R_i$'
+lblcoluna   = '$d_1/2R_t = 2$'
 cor         = 'r'
 tamanho     = 2
 ordem       = 1
@@ -1290,8 +1314,8 @@ CONVERGENCE PROFILES - MODEL EP_VP_CRE_SG_LP
 # Formatação do gráfico
 figura      = figura+1
 titulo      = 'Convergence Profiles - EP_VP_EL_NG_LT'
-eixox       = r'$x/R_i$'  
-eixoy       = r'$U=-u(r = R_i,\theta = 90^\circ)/R_{i}$ [%]'
+eixox       = r'$z/R_t$'  
+eixoy       = r'$U_B$ [\%]'
 ymin        = ymin_twin_convergence_profile
 ymax        = ymax_twin_convergence_profile
 xmin        = xmin_twin_profile
@@ -1310,7 +1334,8 @@ poly        = poly_twin_convergence_profile
 modelo      = 'EP_CRE_SG_D1_INF_AXI'
 arquivo     = modelo + '\convergencias.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'EP_single tunnel_Ueq=0.914'
+lblcoluna   = 'EP_single tunnel'
+#lblcoluna   = 'EP_single tunnel_Ueq=0.914'
 cor         = 'k'
 tamanho     = 1.5
 ordem       = 4
@@ -1328,7 +1353,8 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'VP_CRE_SG_D1_INF_AXI'
 arquivo     = modelo + '\convergencias.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'VP_single tunnel_Ueq=0.784'
+lblcoluna   = 'VP_single tunnel'
+#lblcoluna   = 'VP_single tunnel_Ueq=0.784'
 cor         = 'k'
 tamanho     = 1.5
 ordem       = 4
@@ -1346,7 +1372,8 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EP_CRE_SG_D1_16RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'EP_$d_1 = 16R_i$_Ueq=0.921'
+lblcoluna   = 'EP-$d_1/2R_t = 8$'
+#lblcoluna   = 'EP_$d_1 = 16R_i$_Ueq=0.921'
 cor         = 'orange'
 tamanho     = 2
 ordem       = 3
@@ -1364,7 +1391,8 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'VP_CRE_SG_D1_16RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'VP_$d_1 = 16R_i$_Ueq=0.787'
+lblcoluna   = 'VP-$d_1/2R_t = 8$'
+#lblcoluna   = 'VP_$d_1 = 16R_i$_Ueq=0.787'
 cor         = 'orange'
 tamanho     = 2
 ordem       = 3
@@ -1382,7 +1410,8 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EP_CRE_SG_D1_8RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'EP_$d_1 = 8R_i$_Ueq=0.935'
+lblcoluna   = 'EP-$d_1/2R_t = 4$'
+#lblcoluna   = 'EP_$d_1 = 8R_i$_Ueq=0.935'
 cor         = 'g'
 tamanho     = 2
 ordem       = 2
@@ -1400,7 +1429,8 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'VP_CRE_SG_D1_8RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'VP_$d_1 = 8R_i$_Ueq=0.799'
+lblcoluna   = 'VP-$d_1/2R_t = 4$'
+#lblcoluna   = 'VP_$d_1 = 8R_i$_Ueq=0.799'
 cor         = 'g'
 tamanho     = 2
 ordem       = 2
@@ -1418,7 +1448,8 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EP_CRE_SG_D1_4RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'EP_$d_1 = 4R_i$_Ueq=1.000'
+lblcoluna   = 'EP-$d_1/2R_t = 2$'
+#lblcoluna   = 'EP_$d_1 = 4R_i$_Ueq=1.000'
 cor         = 'r'
 tamanho     = 2
 ordem       = 1
@@ -1436,7 +1467,8 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'VP_CRE_SG_D1_4RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'VP_$d_1 = 4R_i$_Ueq=0.809'
+lblcoluna   = 'VP-$d_1/2R_t = 2$'
+#lblcoluna   = 'VP_$d_1 = 4R_i$_Ueq=0.809'
 cor         = 'r'
 tamanho     = 2
 ordem       = 1
@@ -1460,8 +1492,8 @@ CONVERGENCE PROFILES - MODEL EP_VP_CRE_CG_LP
 # Formatação do gráfico
 figura      = figura + 1
 titulo      = 'Convergence Profiles - EP_VP_EL_WG_LT'
-eixox       = r'$x/R_i$'  
-eixoy       = r'$U=-u(r = R_i,\theta = 90^\circ)/R_{i}$ [%]'
+eixox       = r'$z/R_t$'  
+eixoy       = r'$U_B$ [\%]'
 ymin        = ymin_twin_convergence_profile
 ymax        = ymax_twin_convergence_profile
 xmin        = xmin_twin_profile
@@ -1480,7 +1512,8 @@ poly        = poly_twin_convergence_profile
 modelo      = 'EP_CRE_SG_D1_INF_AXI'
 arquivo     = modelo + '\convergencias.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'EP_single tunnel_Ueq=0.914'
+lblcoluna   = 'EP-single tunnel'
+#lblcoluna   = 'EP_single tunnel_Ueq=0.914'
 cor         = 'k'
 tamanho     = 1.5
 ordem       = 4
@@ -1498,7 +1531,8 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'VP_CRE_SG_D1_INF_AXI'
 arquivo     = modelo + '\convergencias.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'VP_single tunnel_Ueq=0.784'
+lblcoluna   = 'VP-single tunnel'
+#lblcoluna   = 'VP_single tunnel_Ueq=0.784'
 cor         = 'k'
 tamanho     = 1.5
 ordem       = 4
@@ -1516,7 +1550,8 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EP_CRE_CG_D1_16RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'EP_$d_1 = 16R_i$_Ueq=0.924'
+lblcoluna   = 'EP-$d_1/2R_t = 8$'
+#lblcoluna   = 'EP_$d_1 = 16R_i$_Ueq=0.924'
 cor         = 'orange'
 tamanho     = 2
 ordem       = 3
@@ -1534,7 +1569,8 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'VP_CRE_CG_D1_16RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'VP_$d_1 = 16R_i$_Ueq=0.785'
+lblcoluna   = 'VP-$d_1/2R_t = 8$'
+#lblcoluna   = 'VP_$d_1 = 16R_i$_Ueq=0.785'
 cor         = 'orange'
 tamanho     = 2
 ordem       = 3
@@ -1552,7 +1588,8 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EP_CRE_CG_D1_8RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'EP_$d_1 = 8R_i$_Ueq=0.946'
+lblcoluna   = 'EP-$d_1/2R_t = 4$'
+#lblcoluna   = 'EP_$d_1 = 8R_i$_Ueq=0.946'
 cor         = 'g'
 tamanho     = 2
 ordem       = 2
@@ -1570,7 +1607,8 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'VP_CRE_CG_D1_8RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'VP_$d_1 = 8R_i$_Ueq=0.799'
+lblcoluna   = 'VP-$d_1/2R_t = 4$'
+#lblcoluna   = 'VP_$d_1 = 8R_i$_Ueq=0.799'
 cor         = 'g'
 tamanho     = 2
 ordem       = 2
@@ -1588,7 +1626,8 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EP_CRE_CG_D1_4RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'EP_$d_1 = 4R_i$_Ueq=1.000'
+lblcoluna   = 'EP-$d_1/2R_t = 2$'
+#lblcoluna   = 'EP_$d_1 = 4R_i$_Ueq=1.000'
 cor         = 'r'
 tamanho     = 2
 ordem       = 1
@@ -1606,7 +1645,8 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'VP_CRE_CG_D1_4RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'VP_$d_1 = 4R_i$_Ueq=0.807'
+lblcoluna   = 'VP-$d_1/2R_t = 2$'
+#lblcoluna   = 'VP_$d_1 = 4R_i$_Ueq=0.807'
 cor         = 'r'
 tamanho     = 2
 ordem       = 1
@@ -1629,8 +1669,8 @@ CONVERGENCE PROFILES - MODEL EPVP_CRE_CG_CP
 # Formatação do gráfico
 figura      = figura + 1
 titulo      = 'Convergence Profiles - EPVP_EL_NG_ST'
-eixox       = r'$x/R_i$'  
-eixoy       = r'$U=-u(r = R_i,\theta = 90^\circ)/R_{i}$ [%]'
+eixox       = r'$z/R_t$'  
+eixoy       = r'$U_B$ [\%]'
 ymin        = ymin_twin_convergence_profile
 ymax        = ymax_twin_convergence_profile
 xmin        = xmin_twin_profile
@@ -1667,7 +1707,7 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EPVP_CRE_SG_D1_16RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunafinalexcavation[modelo]
-lblcoluna   = '$d_1 = 16R_i$'
+lblcoluna   = '$d_1/2R_t = 8$'
 cor         = 'orange'
 tamanho     = 2
 ordem       = 3
@@ -1686,7 +1726,7 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EPVP_CRE_SG_D1_8RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunafinalexcavation[modelo]
-lblcoluna   = '$d_1 = 8R_i$'
+lblcoluna   = '$d_1/2R_t = 4$'
 cor         = 'g'
 tamanho     = 2
 ordem       = 2
@@ -1705,7 +1745,7 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EPVP_CRE_SG_D1_4RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunafinalexcavation[modelo]
-lblcoluna   = '$d_1 = 4R_i$'
+lblcoluna   = '$d_1/2R_t = 2$'
 cor         = 'r'
 tamanho     = 2
 ordem       = 1
@@ -1728,8 +1768,8 @@ CONVERGENCE PROFILES - MODEL EPVP_CRE_SG_LP
 # Formatação do gráfico
 figura      = figura + 1
 titulo      = 'Convergence Profiles - EPVP_EL_NG_LT'
-eixox       = r'$x/R_i$'  
-eixoy       = r'$U=-u(r = R_i,\theta = 90^\circ)/R_{i}$ [%]'
+eixox       = r'$z/R_t$'  
+eixoy       = r'$U_B$ [\%]'
 ymin        = ymin_twin_convergence_profile
 ymax        = ymax_twin_convergence_profile
 xmin        = xmin_twin_profile
@@ -1766,7 +1806,7 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EPVP_CRE_SG_D1_16RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = '$d_1 = 16R_i$'
+lblcoluna   = '$d_1/2R_t = 8$'
 cor         = 'orange'
 tamanho     = 2
 ordem       = 3
@@ -1785,7 +1825,7 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EPVP_CRE_SG_D1_8RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = '$d_1 = 8R_i$'
+lblcoluna   = '$d_1/2R_t = 4$'
 cor         = 'g'
 tamanho     = 2
 ordem       = 2
@@ -1804,7 +1844,7 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EPVP_CRE_SG_D1_4RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = '$d_1 = 4R_i$'
+lblcoluna   = '$d_1/2R_t = 2$'
 cor         = 'r'
 tamanho     = 2
 ordem       = 1
@@ -1828,8 +1868,8 @@ CONVERGENCE PROFILES - MODEL EPVP_CRE_CG_CP
 # Formatação do gráfico
 figura      = figura + 1
 titulo      = 'Convergence Profiles - EPVP_EL_WG_ST'
-eixox       = r'$x/R_i$'  
-eixoy       = r'$U=-u(r = R_i,\theta = 90^\circ)/R_{i}$ [%]'
+eixox       = r'$z/R_t$'  
+eixoy       = r'$U_B$ [\%]'
 ymin        = ymin_twin_convergence_profile
 ymax        = ymax_twin_convergence_profile
 xmin        = xmin_twin_profile
@@ -1866,7 +1906,7 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EPVP_CRE_CG_D1_16RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunafinalexcavation[modelo]
-lblcoluna   = '$d_1 = 16R_i$'
+lblcoluna   = '$d_1/2R_t = 8$'
 cor         = 'orange'
 tamanho     = 2
 ordem       = 3
@@ -1885,7 +1925,7 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EPVP_CRE_CG_D1_8RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunafinalexcavation[modelo]
-lblcoluna   = '$d_1 = 8R_i$'
+lblcoluna   = '$d_1/2R_t = 4$'
 cor         = 'g'
 tamanho     = 2
 ordem       = 2
@@ -1904,7 +1944,7 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EPVP_CRE_CG_D1_4RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunafinalexcavation[modelo]
-lblcoluna   = '$d_1 = 4R_i$'
+lblcoluna   = '$d_1/2R_t = 2$'
 cor         = 'r'
 tamanho     = 2
 ordem       = 1
@@ -1928,8 +1968,8 @@ CONVERGENCE PROFILES - MODEL EPVP_CRE_CG_LP
 # Formatação do gráfico
 figura      = figura + 1
 titulo      = 'Convergence Profiles - EPVP_EL_WG_LT'
-eixox       = r'$x/R_i$'  
-eixoy       = r'$U=-u(r = R_i,\theta = 90^\circ)/R_{i}$ [%]'
+eixox       = r'$z/R_t$'  
+eixoy       = r'$U_B$ [\%]'
 ymin        = ymin_twin_convergence_profile
 ymax        = ymax_twin_convergence_profile
 xmin        = xmin_twin_profile
@@ -1966,7 +2006,7 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EPVP_CRE_CG_D1_16RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = '$d_1 = 16R_i$'
+lblcoluna   = '$d_1/2R_t = 8$'
 cor         = 'orange'
 tamanho     = 2
 ordem       = 3
@@ -1985,7 +2025,7 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EPVP_CRE_CG_D1_8RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = '$d_1 = 8R_i$'
+lblcoluna   = '$d_1/2R_t = 4$'
 cor         = 'g'
 tamanho     = 2
 ordem       = 2
@@ -2004,7 +2044,7 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EPVP_CRE_CG_D1_4RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = '$d_1 = 4R_i$'
+lblcoluna   = '$d_1/2R_t = 2$'
 cor         = 'r'
 tamanho     = 2
 ordem       = 1
@@ -2026,8 +2066,8 @@ CONVERGENCE PROFILES - MODEL EPVP_CRE_CG_CP
 # Formatação do gráfico
 figura      = figura + 1
 titulo      = 'Convergence Profiles - EPVP_VEL_NG_ST'
-eixox       = r'$x/R_i$'  
-eixoy       = r'$U=-u(r = R_i,\theta = 90^\circ)/R_{i}$ [%]'
+eixox       = r'$z/R_t$'  
+eixoy       = r'$U_B$ [\%]'
 ymin        = ymin_twin_convergence_profile
 ymax        = ymax_twin_convergence_profile
 xmin        = xmin_twin_profile
@@ -2064,7 +2104,7 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EPVP_CRVE_SG_D1_16RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunafinalexcavation[modelo]
-lblcoluna   = '$d_1 = 16R_i$'
+lblcoluna   = '$d_1/2R_t = 8$'
 cor         = 'orange'
 tamanho     = 2
 ordem       = 3
@@ -2083,7 +2123,7 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EPVP_CRVE_SG_D1_8RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunafinalexcavation[modelo]
-lblcoluna   = '$d_1 = 8R_i$'
+lblcoluna   = '$d_1/2R_t = 4$'
 cor         = 'g'
 tamanho     = 2
 ordem       = 2
@@ -2102,7 +2142,7 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EPVP_CRVE_SG_D1_4RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunafinalexcavation[modelo]
-lblcoluna   = '$d_1 = 4R_i$'
+lblcoluna   = '$d_1/2R_t = 2$'
 cor         = 'r'
 tamanho     = 2
 ordem       = 1
@@ -2125,8 +2165,8 @@ CONVERGENCE PROFILES - MODEL EPVP_CRVE_SG_LP
 # Formatação do gráfico
 figura      = figura + 1
 titulo      = 'Convergence Profiles - EPVP_VEL_NG_LT'
-eixox       = r'$x/R_i$'  
-eixoy       = r'$U=-u(r = R_i,\theta = 90^\circ)/R_{i}$ [%]'
+eixox       = r'$z/R_t$'  
+eixoy       = r'$U_B$ [\%]'
 ymin        = ymin_twin_convergence_profile
 ymax        = ymax_twin_convergence_profile
 xmin        = xmin_twin_profile
@@ -2163,7 +2203,7 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EPVP_CRVE_SG_D1_16RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = '$d_1 = 16R_i$'
+lblcoluna   = '$d_1/2R_t = 8$'
 cor         = 'orange'
 tamanho     = 2
 ordem       = 3
@@ -2182,7 +2222,7 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EPVP_CRVE_SG_D1_8RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = '$d_1 = 8R_i$'
+lblcoluna   = '$d_1/2R_t = 4$'
 cor         = 'g'
 tamanho     = 2
 ordem       = 2
@@ -2201,7 +2241,7 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EPVP_CRVE_SG_D1_4RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = '$d_1 = 4R_i$'
+lblcoluna   = '$d_1/2R_t = 2$'
 cor         = 'r'
 tamanho     = 2
 ordem       = 1
@@ -2224,8 +2264,8 @@ CONVERGENCE PROFILES - MODEL EPVP_CRE_CG_CP
 # Formatação do gráfico
 figura      = figura + 1
 titulo      = 'Convergence Profiles - EPVP_VEL_WG_ST'
-eixox       = r'$x/R_i$'  
-eixoy       = r'$U=-u(r = R_i,\theta = 90^\circ)/R_{i}$ [%]'
+eixox       = r'$z/R_t$'  
+eixoy       = r'$U_B$ [\%]'
 ymin        = ymin_twin_convergence_profile
 ymax        = ymax_twin_convergence_profile
 xmin        = xmin_twin_profile
@@ -2262,7 +2302,7 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EPVP_CRVE_CG_D1_16RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunafinalexcavation[modelo]
-lblcoluna   = '$d_1 = 16R_i$'
+lblcoluna   = '$d_1/2R_t = 8$'
 cor         = 'orange'
 tamanho     = 2
 ordem       = 3
@@ -2281,7 +2321,7 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EPVP_CRVE_CG_D1_8RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunafinalexcavation[modelo]
-lblcoluna   = '$d_1 = 8R_i$'
+lblcoluna   = '$d_1/2R_t = 4$'
 cor         = 'g'
 tamanho     = 2
 ordem       = 2
@@ -2300,7 +2340,7 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EPVP_CRVE_CG_D1_4RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunafinalexcavation[modelo]
-lblcoluna   = '$d_1 = 4R_i$'
+lblcoluna   = '$d_1/2R_t = 2$'
 cor         = 'r'
 tamanho     = 2
 ordem       = 1
@@ -2323,8 +2363,8 @@ CONVERGENCE PROFILES - MODEL EPVP_CRVE_CG_LP
 # Formatação do gráfico
 figura      = figura + 1
 titulo      = 'Convergence Profiles - EPVP_VEL_WG_LT'
-eixox       = r'$x/R_i$'  
-eixoy       = r'$U=-u(r = R_i,\theta = 90^\circ)/R_{i}$ [%]'
+eixox       = r'$z/R_t$'  
+eixoy       = r'$U_B$ [\%]'
 ymin        = ymin_twin_convergence_profile
 ymax        = ymax_twin_convergence_profile
 xmin        = xmin_twin_profile
@@ -2361,7 +2401,7 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EPVP_CRVE_CG_D1_16RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = '$d_1 = 16R_i$'
+lblcoluna   = '$d_1/2R_t = 8$'
 cor         = 'orange'
 tamanho     = 2
 ordem       = 3
@@ -2380,7 +2420,7 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EPVP_CRVE_CG_D1_8RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = '$d_1 = 8R_i$'
+lblcoluna   = '$d_1/2R_t = 4$'
 cor         = 'g'
 tamanho     = 2
 ordem       = 2
@@ -2399,7 +2439,7 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EPVP_CRVE_CG_D1_4RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = '$d_1 = 4R_i$'
+lblcoluna   = '$d_1/2R_t = 2$'
 cor         = 'r'
 tamanho     = 2
 ordem       = 1
@@ -2422,8 +2462,8 @@ CONVERGENCE PROFILES - MODEL VP_EPVP_CRE_CRVE_SG_CP
 # Formatação do gráfico
 figura      = figura+1
 titulo      = 'Convergence Profiles - VP_EPVP_EL_VEL_NG_ST'
-eixox       = r'$x/R_i$'  
-eixoy       = r'$U=-u(r = R_i,\theta = 90^\circ)/R_{i}$ [%]'
+eixox       = r'$z/R_t$'  
+eixoy       = r'$U_B$ [\%]'
 ymin        = ymin_twin_convergence_profile
 ymax        = ymax_twin_convergence_profile
 xmin        = xmin_twin_profile
@@ -2442,7 +2482,8 @@ poly        = poly_twin_convergence_profile
 modelo      = 'VP_CRE_SG_D1_INF_AXI'
 arquivo     = modelo + '\convergencias.txt'
 ncoluna     = dicncolunafinalexcavation[modelo]
-lblcoluna   = 'VP_EL_single tunnel_Ueq=0.719'
+lblcoluna   = 'VP-EL-single tunnel'
+#lblcoluna   = 'VP_EL_single tunnel_Ueq=0.719'
 cor         = 'k'
 tamanho     = 1.5
 ordem       = 4
@@ -2460,7 +2501,8 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EPVP_CRE_SG_D1_INF_AXI'
 arquivo     = modelo + '\convergencias.txt'
 ncoluna     = dicncolunafinalexcavation[modelo]
-lblcoluna   = 'EPVP_EL_single tunnel_Ueq=0.914'
+lblcoluna   = 'EPVP-EL-single tunnel'
+#lblcoluna   = 'EPVP_EL_single tunnel_Ueq=0.914'
 cor         = 'k'
 tamanho     = 1.5
 ordem       = 4
@@ -2478,7 +2520,8 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EPVP_CRVE_SG_D1_INF_AXI'
 arquivo     = modelo + '\convergencias.txt'
 ncoluna     = dicncolunafinalexcavation[modelo]
-lblcoluna   = 'EPVP_VEL_single tunnel_Ueq=0.969'
+lblcoluna   = 'EPVP-VEL-single tunnel'
+#lblcoluna   = 'EPVP_VEL_single tunnel_Ueq=0.969'
 cor         = 'k'
 tamanho     = 1.5
 ordem       = 4
@@ -2496,7 +2539,8 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'VP_CRE_SG_D1_16RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunafinalexcavation[modelo]
-lblcoluna   = 'VP_EL_$d_1 = 16R_i$_Ueq=0.721'
+lblcoluna   = 'VP-EL-$d_1/2R_t = 8$'
+#lblcoluna   = 'VP_EL_$d_1 = 16R_i$_Ueq=0.721'
 cor         = 'orange'
 tamanho     = 2
 ordem       = 3
@@ -2514,7 +2558,8 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EPVP_CRE_SG_D1_16RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunafinalexcavation[modelo]
-lblcoluna   = 'EPVP_EL_$d_1 = 16R_i$_Ueq=0.92'
+lblcoluna   = 'EPVP-EL-$d_1/2R_t = 8$'
+#lblcoluna   = 'EPVP_EL_$d_1 = 16R_i$_Ueq=0.92'
 cor         = 'orange'
 tamanho     = 2
 ordem       = 3
@@ -2532,7 +2577,8 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EPVP_CRVE_SG_D1_16RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunafinalexcavation[modelo]
-lblcoluna   = 'EPVP_VEL_$d_1 = 16R_i$_Ueq=0.977'
+lblcoluna   = 'EPVP-VEL-$d_1/2R_t = 8$'
+#lblcoluna   = 'EPVP_VEL_$d_1 = 16R_i$_Ueq=0.977'
 cor         = 'orange'
 tamanho     = 2
 ordem       = 3
@@ -2550,7 +2596,8 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'VP_CRE_SG_D1_8RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunafinalexcavation[modelo]
-lblcoluna   = 'VP_EL_$d_1 = 8R_i$_Ueq=0.745'
+lblcoluna   = 'VP-EL-$d_1/2R_t = 4$'
+#lblcoluna   = 'VP_EL_$d_1 = 8R_i$_Ueq=0.745'
 cor         = 'g'
 tamanho     = 2
 ordem       = 2
@@ -2568,7 +2615,8 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EPVP_CRE_SG_D1_8RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunafinalexcavation[modelo]
-lblcoluna   = 'EPVP_EL_$d_1 = 8R_i$_Ueq=0.941'
+lblcoluna   = 'EPVP-EL-$d_1/2R_t = 4$'
+#lblcoluna   = 'EPVP_EL_$d_1 = 8R_i$_Ueq=0.941'
 cor         = 'g'
 tamanho     = 2
 ordem       = 2
@@ -2586,7 +2634,8 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EPVP_CRVE_SG_D1_8RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunafinalexcavation[modelo]
-lblcoluna   = 'EPVP_VEL_$d_1 = 8R_i$_Ueq=0.994'
+lblcoluna   = 'EPVP-VEL-$d_1/2R_t = 4$'
+#lblcoluna   = 'EPVP_VEL_$d_1 = 8R_i$_Ueq=0.994'
 cor         = 'g'
 tamanho     = 2
 ordem       = 2
@@ -2604,7 +2653,8 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'VP_CRE_SG_D1_4RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunafinalexcavation[modelo]
-lblcoluna   = 'VP_EL_$d_1 = 4R_i$_Ueq=0.797'
+lblcoluna   = 'VP-EL-$d_1/2R_t = 2$'
+#lblcoluna   = 'VP_EL_$d_1 = 4R_i$_Ueq=0.797'
 cor         = 'r'
 tamanho     = 2
 ordem       = 1
@@ -2622,7 +2672,8 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EPVP_CRE_SG_D1_4RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunafinalexcavation[modelo]
-lblcoluna   = 'EPVP_EL_$d_1 = 4R_i$_Ueq=0.998'
+lblcoluna   = 'EPVP-EL-$d_1/2R_t = 2$'
+#lblcoluna   = 'EPVP_EL_$d_1 = 4R_i$_Ueq=0.998'
 cor         = 'r'
 tamanho     = 2
 ordem       = 1
@@ -2640,7 +2691,8 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EPVP_CRVE_SG_D1_4RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunafinalexcavation[modelo]
-lblcoluna   = 'EPVP_VEL_$d_1 = 4R_i$_Ueq=1.062'
+lblcoluna   = 'EPVP-VEL-$d_1/2R_t = 2$'
+#lblcoluna   = 'EPVP_VEL_$d_1 = 4R_i$_Ueq=1.062'
 cor         = 'r'
 tamanho     = 2
 ordem       = 1
@@ -2663,8 +2715,8 @@ CONVERGENCE PROFILES - MODEL VP_EPVP_CRE_CRVE_SG_LP
 # Formatação do gráfico
 figura      = figura+1
 titulo      = 'Convergence Profiles - VP_EPVP_EL_VEL_NG_LT'
-eixox       = r'$x/R_i$'  
-eixoy       = r'$U=-u(r = R_i,\theta = 90^\circ)/R_{i}$ [%]'
+eixox       = r'$z/R_t$'  
+eixoy       = r'$U_B$ [\%]'
 ymin        = ymin_twin_convergence_profile
 ymax        = ymax_twin_convergence_profile
 xmin        = xmin_twin_profile
@@ -2683,7 +2735,8 @@ poly        = poly_twin_convergence_profile
 modelo      = 'VP_CRE_SG_D1_INF_AXI'
 arquivo     = modelo + '\convergencias.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'VP_EL_single tunnel_Ueq=0.784'
+lblcoluna   = 'VP-EL-single tunnel$'
+#lblcoluna   = 'VP_EL_single tunnel_Ueq=0.784'
 cor         = 'k'
 tamanho     = 1.5
 ordem       = 4
@@ -2701,7 +2754,8 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EPVP_CRE_SG_D1_INF_AXI'
 arquivo     = modelo + '\convergencias.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'EPVP_EL_single tunnel_Ueq=0.967'
+lblcoluna   = 'EPVP-EL-single tunnel$'
+#lblcoluna   = 'EPVP_EL_single tunnel_Ueq=0.967'
 cor         = 'k'
 tamanho     = 1.5
 ordem       = 4
@@ -2719,7 +2773,8 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EPVP_CRVE_SG_D1_INF_AXI'
 arquivo     = modelo + '\convergencias.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'EPVP_VEL_single tunnel_Ueq=1.183'
+lblcoluna   = 'EPVP-VEL-single tunnel$'
+#lblcoluna   = 'EPVP_VEL_single tunnel_Ueq=1.183'
 cor         = 'k'
 tamanho     = 1.5
 ordem       = 4
@@ -2737,7 +2792,8 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'VP_CRE_SG_D1_16RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'VP_EL_$d_1 = 16R_i$_Ueq=0.787'
+lblcoluna   = 'VP-EL-$d_1/2R_t = 8$'
+#lblcoluna   = 'VP_EL_$d_1 = 16R_i$_Ueq=0.787'
 cor         = 'orange'
 tamanho     = 2
 ordem       = 3
@@ -2755,7 +2811,8 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EPVP_CRE_SG_D1_16RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'EPVP_EL_$d_1 = 16R_i$_Ueq=0.968'
+lblcoluna   = 'EPVP-EL-$d_1/2R_t = 8$'
+#lblcoluna   = 'EPVP_EL_$d_1 = 16R_i$_Ueq=0.968'
 cor         = 'orange'
 tamanho     = 2
 ordem       = 3
@@ -2773,7 +2830,8 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EPVP_CRVE_SG_D1_16RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'EPVP_VEL_$d_1 = 16R_i$_Ueq=1.181'
+lblcoluna   = 'EPVP-VEL-$d_1/2R_t = 8$'
+#lblcoluna   = 'EPVP_VEL_$d_1 = 16R_i$_Ueq=1.181'
 cor         = 'orange'
 tamanho     = 2
 ordem       = 3
@@ -2791,7 +2849,8 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'VP_CRE_SG_D1_8RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'VP_EL_$d_1 = 8R_i$_Ueq=0.799'
+lblcoluna   = 'VP-EL-$d_1/2R_t = 4$'
+#lblcoluna   = 'VP_EL_$d_1 = 8R_i$_Ueq=0.799'
 cor         = 'g'
 tamanho     = 2
 ordem       = 2
@@ -2809,7 +2868,8 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EPVP_CRE_SG_D1_8RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'EPVP_EL_$d_1 = 8R_i$_Ueq=0.972'
+lblcoluna   = 'EPVP-EL-$d_1/2R_t = 4$'
+#lblcoluna   = 'EPVP_EL_$d_1 = 8R_i$_Ueq=0.972'
 cor         = 'g'
 tamanho     = 2
 ordem       = 2
@@ -2827,7 +2887,8 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EPVP_CRVE_SG_D1_8RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'EPVP_VEL_$d_1 = 8R_i$_Ueq=1.166'
+lblcoluna   = 'EPVP-VEL-$d_1/2R_t = 4$'
+#lblcoluna   = 'EPVP_VEL_$d_1 = 8R_i$_Ueq=1.166'
 cor         = 'g'
 tamanho     = 2
 ordem       = 2
@@ -2845,7 +2906,8 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'VP_CRE_SG_D1_4RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'VP_EL_$d_1 = 4R_i$_Ueq=0.809'
+lblcoluna   = 'VP-EL-$d_1/2R_t = 2$'
+#lblcoluna   = 'VP_EL_$d_1 = 4R_i$_Ueq=0.809'
 cor         = 'r'
 tamanho     = 2
 ordem       = 1
@@ -2863,7 +2925,8 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EPVP_CRE_SG_D1_4RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'EPVP_EL_$d_1 = 4R_i$_Ueq=0.985'
+lblcoluna   = 'EPVP-EL-$d_1/2R_t = 2$'
+#lblcoluna   = 'EPVP_EL_$d_1 = 4R_i$_Ueq=0.985'
 cor         = 'r'
 tamanho     = 2
 ordem       = 1
@@ -2881,7 +2944,8 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EPVP_CRVE_SG_D1_4RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'EPVP_VEL_$d_1 = 4R_i$_Ueq=1.193'
+lblcoluna   = 'EPVP-VEL-$d_1/2R_t = 2$'
+#lblcoluna   = 'EPVP_VEL_$d_1 = 4R_i$_Ueq=1.193'
 cor         = 'r'
 tamanho     = 2
 ordem       = 1
@@ -2904,8 +2968,8 @@ CONVERGENCE PROFILES - MODEL VP_EPVP_CRE_CRVE_CG_CP
 # Formatação do gráfico
 figura      = figura+1
 titulo      = 'Convergence Profiles - VP_EPVP_EL_VEL_WG_ST'
-eixox       = r'$x/R_i$'  
-eixoy       = r'$U=-u(r = R_i,\theta = 90^\circ)/R_{i}$ [%]'
+eixox       = r'$z/R_t$'  
+eixoy       = r'$U_B$ [\%]'
 ymin        = ymin_twin_convergence_profile
 ymax        = ymax_twin_convergence_profile
 xmin        = xmin_twin_profile
@@ -2924,7 +2988,8 @@ poly        = poly_twin_convergence_profile
 modelo      = 'VP_CRE_SG_D1_INF_AXI'
 arquivo     = modelo + '\convergencias.txt'
 ncoluna     = dicncolunafinalexcavation[modelo]
-lblcoluna   = 'VP_EL_single tunnel_Ueq=0.719'
+lblcoluna   = 'VP-EL-single tunnel'
+#lblcoluna   = 'VP_EL_single tunnel_Ueq=0.719'
 cor         = 'k'
 tamanho     = 1.5
 ordem       = 4
@@ -2942,7 +3007,8 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EPVP_CRE_SG_D1_INF_AXI'
 arquivo     = modelo + '\convergencias.txt'
 ncoluna     = dicncolunafinalexcavation[modelo]
-lblcoluna   = 'EPVP_EL_single tunnel_Ueq=0.914'
+lblcoluna   = 'EPVP-EL-single tunnel'
+#lblcoluna   = 'EPVP_EL_single tunnel_Ueq=0.914'
 cor         = 'k'
 tamanho     = 1.5
 ordem       = 4
@@ -2960,7 +3026,8 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EPVP_CRVE_SG_D1_INF_AXI'
 arquivo     = modelo + '\convergencias.txt'
 ncoluna     = dicncolunafinalexcavation[modelo]
-lblcoluna   = 'EPVP_VEL_single tunnel_Ueq=0.969'
+lblcoluna   = 'EPVP-VEL-single tunnel'
+#lblcoluna   = 'EPVP_VEL_single tunnel_Ueq=0.969'
 cor         = 'k'
 tamanho     = 1.5
 ordem       = 4
@@ -2978,7 +3045,8 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'VP_CRE_CG_D1_16RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunafinalexcavation[modelo]
-lblcoluna   = 'VP_EL_$d_1 = 16R_i$_Ueq=0.729'
+lblcoluna   = 'VP-EL-$d_1/2R_t=8$'
+#lblcoluna   = 'VP_EL_$d_1 = 16R_i$_Ueq=0.729'
 cor         = 'orange'
 tamanho     = 2
 ordem       = 3
@@ -2996,7 +3064,8 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EPVP_CRE_CG_D1_16RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunafinalexcavation[modelo]
-lblcoluna   = 'EPVP_EL_$d_1 = 16R_i$_Ueq=0.918'
+lblcoluna   = 'EPVP-EL-$d_1/2R_t=8$'
+#lblcoluna   = 'EPVP_EL_$d_1 = 16R_i$_Ueq=0.918'
 cor         = 'orange'
 tamanho     = 2
 ordem       = 3
@@ -3014,7 +3083,8 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EPVP_CRVE_CG_D1_16RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunafinalexcavation[modelo]
-lblcoluna   = 'EPVP_VEL_$d_1 = 16R_i$_Ueq=0.975'
+lblcoluna   = 'EPVP-VEL-$d_1/2R_t=8$'
+#lblcoluna   = 'EPVP_VEL_$d_1 = 16R_i$_Ueq=0.975'
 cor         = 'orange'
 tamanho     = 2
 ordem       = 3
@@ -3032,7 +3102,8 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'VP_CRE_CG_D1_8RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunafinalexcavation[modelo]
-lblcoluna   = 'VP_EL_$d_1 = 8R_i$_Ueq=0.743'
+lblcoluna   = 'VP-EL-$d_1/2R_t=4$'
+#lblcoluna   = 'VP_EL_$d_1 = 8R_i$_Ueq=0.743'
 cor         = 'g'
 tamanho     = 2
 ordem       = 2
@@ -3050,7 +3121,8 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EPVP_CRE_CG_D1_8RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunafinalexcavation[modelo]
-lblcoluna   = 'EPVP_EL_$d_1 = 8R_i$_Ueq=0.937'
+lblcoluna   = 'EPVP-EL-$d_1/2R_t=4$'
+#lblcoluna   = 'EPVP_EL_$d_1 = 8R_i$_Ueq=0.937'
 cor         = 'g'
 tamanho     = 2
 ordem       = 2
@@ -3068,7 +3140,8 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EPVP_CRVE_CG_D1_8RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunafinalexcavation[modelo]
-lblcoluna   = 'EPVP_VEL_$d_1 = 8R_i$_Ueq=0.992'
+lblcoluna   = 'EPVP-VEL-$d_1/2R_t=4$'
+#lblcoluna   = 'EPVP_VEL_$d_1 = 8R_i$_Ueq=0.992'
 cor         = 'g'
 tamanho     = 2
 ordem       = 2
@@ -3086,7 +3159,8 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'VP_CRE_CG_D1_4RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunafinalexcavation[modelo]
-lblcoluna   = 'VP_EL_$d_1 = 4R_i$_Ueq=0.795'
+lblcoluna   = 'VP-EL-$d_1/2R_t=2$'
+#lblcoluna   = 'VP_EL_$d_1 = 4R_i$_Ueq=0.795'
 cor         = 'r'
 tamanho     = 2
 ordem       = 1
@@ -3104,7 +3178,8 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EPVP_CRE_CG_D1_4RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunafinalexcavation[modelo]
-lblcoluna   = 'EPVP_EL_$d_1 = 4R_i$_Ueq=1.000'
+lblcoluna   = 'EPVP-EL-$d_1/2R_t=2$'
+#lblcoluna   = 'EPVP_EL_$d_1 = 4R_i$_Ueq=1.000'
 cor         = 'r'
 tamanho     = 2
 ordem       = 1
@@ -3122,7 +3197,8 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EPVP_CRVE_CG_D1_4RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunafinalexcavation[modelo]
-lblcoluna   = 'EPVP_VEL_$d_1 = 4R_i$_Ueq=1.062'
+lblcoluna   = 'EPVP-VEL-$d_1/2R_t=2$'
+#lblcoluna   = 'EPVP_VEL_$d_1 = 4R_i$_Ueq=1.062'
 cor         = 'r'
 tamanho     = 2
 ordem       = 1
@@ -3145,8 +3221,8 @@ CONVERGENCE PROFILES - MODEL VP_EPVP_CRE_CRVE_CG_LP
 # Formatação do gráfico
 figura      = figura+1
 titulo      = 'Convergence Profiles - VP_EPVP_EL_VEL_WG_LT'
-eixox       = r'$x/R_i$'  
-eixoy       = r'$U=-u(r = R_i,\theta = 90^\circ)/R_{i}$ [%]'
+eixox       = r'$z/R_t$'  
+eixoy       = r'$U_B$ [\%]'
 ymin        = ymin_twin_convergence_profile
 ymax        = ymax_twin_convergence_profile
 xmin        = xmin_twin_profile
@@ -3165,7 +3241,8 @@ poly        = poly_twin_convergence_profile
 modelo      = 'VP_CRE_SG_D1_INF_AXI'
 arquivo     = modelo + '\convergencias.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'VP_EL_single tunnel_Ueq=0.784'
+lblcoluna   = 'VP-EL-single tunnel'
+#lblcoluna   = 'VP_EL_single tunnel_Ueq=0.784'
 cor         = 'k'
 tamanho     = 1.5
 ordem       = 4
@@ -3183,7 +3260,8 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EPVP_CRE_SG_D1_INF_AXI'
 arquivo     = modelo + '\convergencias.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'EPVP_EL_single tunnel_Ueq=0.967'
+lblcoluna   = 'EPVP-EL-single tunnel'
+#lblcoluna   = 'EPVP_EL_single tunnel_Ueq=0.967'
 cor         = 'k'
 tamanho     = 1.5
 ordem       = 4
@@ -3201,7 +3279,8 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EPVP_CRVE_SG_D1_INF_AXI'
 arquivo     = modelo + '\convergencias.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'EPVP_VEL_single tunnel_Ueq=1.183'
+lblcoluna   = 'EPVP-VEL-single tunnel'
+#lblcoluna   = 'EPVP_VEL_single tunnel_Ueq=1.183'
 cor         = 'k'
 tamanho     = 1.5
 ordem       = 4
@@ -3219,7 +3298,8 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'VP_CRE_CG_D1_16RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'VP_EL_$d_1 = 16R_i$_Ueq=0.785'
+lblcoluna   = 'VP-EL-$d_1/2R_t = 8$'
+#lblcoluna   = 'VP_EL_$d_1 = 16R_i$_Ueq=0.785'
 cor         = 'orange'
 tamanho     = 2
 ordem       = 3
@@ -3237,7 +3317,8 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EPVP_CRE_CG_D1_16RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'EPVP_EL_$d_1 = 16R_i$_Ueq=0.972'
+lblcoluna   = 'EPVP-EL-$d_1/2R_t = 8$'
+#lblcoluna   = 'EPVP_EL_$d_1 = 16R_i$_Ueq=0.972'
 cor         = 'orange'
 tamanho     = 2
 ordem       = 3
@@ -3255,7 +3336,8 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EPVP_CRVE_CG_D1_16RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'EPVP_VEL_$d_1 = 16R_i$_Ueq=1.178'
+lblcoluna   = 'EPVP-VEL-$d_1/2R_t = 8$'
+#lblcoluna   = 'EPVP_VEL_$d_1 = 16R_i$_Ueq=1.178'
 cor         = 'orange'
 tamanho     = 2
 ordem       = 3
@@ -3273,7 +3355,8 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'VP_CRE_CG_D1_8RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'VP_EL_$d_1 = 8R_i$_Ueq=0.799'
+lblcoluna   = 'VP-EL-$d_1/2R_t = 4$'
+#lblcoluna   = 'VP_EL_$d_1 = 8R_i$_Ueq=0.799'
 cor         = 'g'
 tamanho     = 2
 ordem       = 2
@@ -3291,7 +3374,8 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EPVP_CRE_CG_D1_8RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'EPVP_EL_$d_1 = 8R_i$_Ueq=0.971'
+lblcoluna   = 'EVP-EL-$d_1/2R_t = 4$'
+#lblcoluna   = 'EPVP_EL_$d_1 = 8R_i$_Ueq=0.971'
 cor         = 'g'
 tamanho     = 2
 ordem       = 2
@@ -3309,7 +3393,8 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EPVP_CRVE_CG_D1_8RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'EPVP_VEL_$d_1 = 8R_i$_Ueq=1.165'
+lblcoluna   = 'EPVP-VEL-$d_1/2R_t = 4$'
+#lblcoluna   = 'EPVP_VEL_$d_1 = 8R_i$_Ueq=1.165'
 cor         = 'g'
 tamanho     = 2
 ordem       = 2
@@ -3327,7 +3412,8 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'VP_CRE_CG_D1_4RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'VP_EL_$d_1 = 4R_i$_Ueq=0.807'
+lblcoluna   = 'VP-EL-$d_1/2R_t = 2$'
+#lblcoluna   = 'VP_EL_$d_1 = 4R_i$_Ueq=0.807'
 cor         = 'r'
 tamanho     = 2
 ordem       = 1
@@ -3345,7 +3431,8 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EPVP_CRE_CG_D1_4RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'EPVP_EL_$d_1 = 4R_i$_Ueq=0.978'
+lblcoluna   = 'EPVP-EL-$d_1/2R_t = 2$'
+#lblcoluna   = 'EPVP_EL_$d_1 = 4R_i$_Ueq=0.978'
 cor         = 'r'
 tamanho     = 2
 ordem       = 1
@@ -3363,7 +3450,8 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EPVP_CRVE_CG_D1_4RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'EPVP_VEL_$d_1 = 4R_i$_Ueq=1.191'
+lblcoluna   = 'EPVP-VEL-$d_1/2R_t = 2$'
+#lblcoluna   = 'EPVP_VEL_$d_1 = 4R_i$_Ueq=1.191'
 cor         = 'r'
 tamanho     = 2
 ordem       = 1
@@ -3386,8 +3474,8 @@ CONVERGENCE PROFILES - MODEL EP_EPVP_CRE_CRVE_SG_LP
 # Formatação do gráfico
 figura      = figura+1
 titulo      = 'Convergence Profiles - EP_EPVP_EL_VEL_NG_LT'
-eixox       = r'$x/R_i$'  
-eixoy       = r'$U=-u(r = R_i,\theta = 90^\circ)/R_{i}$ [%]'
+eixox       = r'$z/R_t$'  
+eixoy       = r'$U_B$ [\%]'
 ymin        = ymin_twin_convergence_profile
 ymax        = ymax_twin_convergence_profile
 xmin        = xmin_twin_profile
@@ -3406,7 +3494,7 @@ poly        = poly_twin_convergence_profile
 modelo      = 'EP_CRE_SG_D1_INF_AXI'
 arquivo     = modelo + '\convergencias.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'EP_EL_single tunnel'
+lblcoluna   = 'EP-EL-single tunnel'
 cor         = 'k'
 tamanho     = 1.5
 ordem       = 4
@@ -3424,7 +3512,7 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EPVP_CRE_SG_D1_INF_AXI'
 arquivo     = modelo + '\convergencias.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'EPVP_EL_single tunnel'
+lblcoluna   = 'EPVP-EL-single tunnel'
 cor         = 'k'
 tamanho     = 1.5
 ordem       = 4
@@ -3442,7 +3530,7 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EPVP_CRVE_SG_D1_INF_AXI'
 arquivo     = modelo + '\convergencias.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'EPVP_VEL_single tunnel'
+lblcoluna   = 'EPVP-VEL-single tunnel'
 cor         = 'k'
 tamanho     = 1.5
 ordem       = 4
@@ -3460,7 +3548,8 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EP_CRE_SG_D1_16RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'EP_EL_$d_1 = 16R_i$'
+lblcoluna   = 'EP-EL-$d_1/2R_t = 8$'
+#lblcoluna   = 'EP_EL_$d_1 = 16R_i$'
 cor         = 'orange'
 tamanho     = 2
 ordem       = 3
@@ -3478,7 +3567,8 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EPVP_CRE_SG_D1_16RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'EPVP_EL_$d_1 = 16R_i$'
+lblcoluna   = 'EPVP-EL-$d_1/2R_t = 8$'
+#lblcoluna   = 'EPVP_EL_$d_1 = 16R_i$'
 cor         = 'orange'
 tamanho     = 2
 ordem       = 3
@@ -3496,7 +3586,8 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EPVP_CRVE_SG_D1_16RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'EPVP_VEL_$d_1 = 16R_i$'
+lblcoluna   = 'EPVP-VEL-$d_1/2R_t = 8$'
+#lblcoluna   = 'EPVP_VEL_$d_1 = 16R_i$'
 cor         = 'orange'
 tamanho     = 2
 ordem       = 3
@@ -3514,7 +3605,8 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EP_CRE_SG_D1_8RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'EP_EL_$d_1 = 8R_i$'
+lblcoluna   = 'EP-EL-$d_1/2R_t = 4$'
+#lblcoluna   = 'EP_EL_$d_1 = 8R_i$'
 cor         = 'g'
 tamanho     = 2
 ordem       = 2
@@ -3532,7 +3624,8 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EPVP_CRE_SG_D1_8RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'EPVP_EL_$d_1 = 8R_i$'
+lblcoluna   = 'EPVP-EL-$d_1/2R_t = 4$'
+#lblcoluna   = 'EPVP_EL_$d_1 = 8R_i$'
 cor         = 'g'
 tamanho     = 2
 ordem       = 2
@@ -3550,7 +3643,8 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EPVP_CRVE_SG_D1_8RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'EPVP_VEL_$d_1 = 8R_i$'
+lblcoluna   = 'EPVP-VEL-$d_1/2R_t = 4$'
+#lblcoluna   = 'EPVP_VEL_$d_1 = 8R_i$'
 cor         = 'g'
 tamanho     = 2
 ordem       = 2
@@ -3568,7 +3662,8 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EP_CRE_SG_D1_4RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'EP_EL_$d_1 = 4R_i$'
+lblcoluna   = 'EP-EL-$d_1/2R_t = 2$'
+#lblcoluna   = 'EP_EL_$d_1 = 4R_i$'
 cor         = 'r'
 tamanho     = 2
 ordem       = 1
@@ -3586,7 +3681,8 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EPVP_CRE_SG_D1_4RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'EPVP_EL_$d_1 = 4R_i$'
+lblcoluna   = 'EPVP-EL-$d_1/2R_t = 2$'
+#lblcoluna   = 'EPVP_EL_$d_1 = 4R_i$'
 cor         = 'r'
 tamanho     = 2
 ordem       = 1
@@ -3604,7 +3700,8 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EPVP_CRVE_SG_D1_4RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'EPVP_VEL_$d_1 = 4R_i$'
+lblcoluna   = 'EPVP-VEL-$d_1/2R_t = 2$'
+#lblcoluna   = 'EPVP_VEL_$d_1 = 4R_i$'
 cor         = 'r'
 tamanho     = 2
 ordem       = 1
@@ -3627,8 +3724,8 @@ CONVERGENCE PROFILES - MODEL EP_EPVP_CRE_CRVE_CG_LP
 # Formatação do gráfico
 figura      = figura+1
 titulo      = 'Convergence Profiles - EP_EPVP_EL_VEL_WG_LT'
-eixox       = r'$x/R_i$'  
-eixoy       = r'$U=-u(r = R_i,\theta = 90^\circ)/R_{i}$ [%]'
+eixox       = r'$z/R_t$'  
+eixoy       = r'$U_B$ [\%]'
 ymin        = ymin_twin_convergence_profile
 ymax        = ymax_twin_convergence_profile
 xmin        = xmin_twin_profile
@@ -3647,7 +3744,7 @@ poly        = poly_twin_convergence_profile
 modelo      = 'EP_CRE_SG_D1_INF_AXI'
 arquivo     = modelo + '\convergencias.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'EP_EL_single tunnel'
+lblcoluna   = 'EP-EL-single tunnel'
 cor         = 'k'
 tamanho     = 1.5
 ordem       = 4
@@ -3665,7 +3762,7 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EPVP_CRE_SG_D1_INF_AXI'
 arquivo     = modelo + '\convergencias.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'EPVP_EL_single tunnel'
+lblcoluna   = 'EPVP-EL-single tunnel'
 cor         = 'k'
 tamanho     = 1.5
 ordem       = 4
@@ -3683,7 +3780,7 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EPVP_CRVE_SG_D1_INF_AXI'
 arquivo     = modelo + '\convergencias.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'EPVP_VEL_single tunnel'
+lblcoluna   = 'EPVP-VEL-single tunnel'
 cor         = 'k'
 tamanho     = 1.5
 ordem       = 4
@@ -3701,7 +3798,8 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EP_CRE_CG_D1_16RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'EP_EL_$d_1 = 16R_i$'
+lblcoluna   = 'EP-EL-$d_1/2R_t = 8$'
+#lblcoluna   = 'EP_EL_$d_1 = 16R_i$'
 cor         = 'orange'
 tamanho     = 2
 ordem       = 3
@@ -3719,7 +3817,8 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EPVP_CRE_CG_D1_16RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'EPVP_EL_$d_1 = 16R_i$'
+lblcoluna   = 'EPVP-EL-$d_1/2R_t = 8$'
+#lblcoluna   = 'EPVP_EL_$d_1 = 16R_i$'
 cor         = 'orange'
 tamanho     = 2
 ordem       = 3
@@ -3737,7 +3836,8 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EPVP_CRVE_CG_D1_16RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'EPVP_VEL_$d_1 = 16R_i$'
+lblcoluna   = 'EPVP-VEL-$d_1/2R_t = 8$'
+#lblcoluna   = 'EPVP_VEL_$d_1 = 16R_i$'
 cor         = 'orange'
 tamanho     = 2
 ordem       = 3
@@ -3755,7 +3855,8 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EP_CRE_CG_D1_8RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'EP_EL_$d_1 = 8R_i$'
+lblcoluna   = 'EP-EL-$d_1/2R_t = 4$'
+#lblcoluna   = 'EP_EL_$d_1 = 8R_i$'
 cor         = 'g'
 tamanho     = 2
 ordem       = 2
@@ -3773,7 +3874,8 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EPVP_CRE_CG_D1_8RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'EPVP_EL_$d_1 = 8R_i$'
+lblcoluna   = 'EPVP-EL-$d_1/2R_t = 4$'
+#lblcoluna   = 'EPVP_EL_$d_1 = 8R_i$'
 cor         = 'g'
 tamanho     = 2
 ordem       = 2
@@ -3791,7 +3893,8 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EPVP_CRVE_CG_D1_8RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'EPVP_VEL_$d_1 = 8R_i$'
+lblcoluna   = 'EPVP-VEL-$d_1/2R_t = 4$'
+#lblcoluna   = 'EPVP_VEL_$d_1 = 8R_i$'
 cor         = 'g'
 tamanho     = 2
 ordem       = 2
@@ -3809,7 +3912,8 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EP_CRE_CG_D1_4RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'EP_EL_$d_1 = 4R_i$'
+lblcoluna   = 'EP-EL-$d_1/2R_t = 2$'
+#lblcoluna   = 'EP_EL_$d_1 = 4R_i$'
 cor         = 'r'
 tamanho     = 2
 ordem       = 1
@@ -3827,7 +3931,8 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EPVP_CRE_CG_D1_4RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'EPVP_EL_$d_1 = 4R_i$'
+lblcoluna   = 'EPVP-EL-$d_1/2R_t = 2$'
+#lblcoluna   = 'EPVP_EL_$d_1 = 4R_i$'
 cor         = 'r'
 tamanho     = 2
 ordem       = 1
@@ -3845,7 +3950,8 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EPVP_CRVE_CG_D1_4RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'EPVP_VEL_$d_1 = 4R_i$'
+lblcoluna   = 'EPVP-VEL-$d_1/2R_t = 2$'
+#lblcoluna   = 'EPVP_VEL_$d_1 = 4R_i$'
 cor         = 'r'
 tamanho     = 2
 ordem       = 1
@@ -3868,8 +3974,8 @@ CONVERGENCE PROFILES - MODEL EP_CRE_EPVP_CRVE_CG_CP
 # Formatação do gráfico
 figura      = figura+1
 titulo      = 'Convergence Profiles - EP_EL_EPVP_VEL_WG_ST'
-eixox       = r'$x/R_i$'  
-eixoy       = r'$U=-u(r = R_i,\theta = 90^\circ)/R_{i}$ [%]'
+eixox       = r'$z/R_t$'  
+eixoy       = r'$U_B$ [\%]'
 ymin        = ymin_twin_convergence_profile
 ymax        = ymax_twin_convergence_profile
 xmin        = xmin_twin_profile
@@ -3888,7 +3994,7 @@ poly        = poly_twin_convergence_profile
 modelo      = 'EP_CRE_SG_D1_INF_AXI'
 arquivo     = modelo + '\convergencias.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'EP_EL_single tunnel'
+lblcoluna   = 'EP-EL-single tunnel'
 cor         = 'k'
 tamanho     = 1.5
 ordem       = 4
@@ -3906,7 +4012,7 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EPVP_CRVE_SG_D1_INF_AXI'
 arquivo     = modelo + '\convergencias.txt'
 ncoluna     = dicncolunafinalexcavation[modelo]
-lblcoluna   = 'EPVP_VEL_single tunnel'
+lblcoluna   = 'EPVP-VEL-single tunnel'
 cor         = 'k'
 tamanho     = 1.5
 ordem       = 4
@@ -3924,7 +4030,8 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EP_CRE_CG_D1_16RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'EP_EL_$d_1 = 16R_i$'
+lblcoluna   = 'EP-EL-$d_1/2R_t = 8$'
+#lblcoluna   = 'EP_EL_$d_1 = 16R_i$'
 cor         = 'orange'
 tamanho     = 2
 ordem       = 3
@@ -3942,7 +4049,8 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EPVP_CRVE_CG_D1_16RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunafinalexcavation[modelo]
-lblcoluna   = 'EPVP_VEL_$d_1 = 16R_i$'
+lblcoluna   = 'EPVP-EL-$d_1/2R_t = 8$'
+#lblcoluna   = 'EPVP_VEL_$d_1 = 16R_i$'
 cor         = 'orange'
 tamanho     = 2
 ordem       = 3
@@ -3960,7 +4068,8 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EP_CRE_CG_D1_8RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'EP_EL_$d_1 = 8R_i$'
+lblcoluna   = 'EP-EL-$d_1/2R_t = 4$'
+#lblcoluna   = 'EP_EL_$d_1 = 8R_i$'
 cor         = 'g'
 tamanho     = 2
 ordem       = 2
@@ -3978,7 +4087,8 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EPVP_CRVE_CG_D1_8RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunafinalexcavation[modelo]
-lblcoluna   = 'EPVP_VEL_$d_1 = 8R_i$'
+lblcoluna   = 'EPVP-VEL-$d_1/2R_t = 4$'
+#lblcoluna   = 'EPVP_VEL_$d_1 = 8R_i$'
 cor         = 'g'
 tamanho     = 2
 ordem       = 2
@@ -3996,7 +4106,8 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EP_CRE_CG_D1_4RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'EP_EL_$d_1 = 4R_i$'
+lblcoluna   = 'EP-EL-$d_1/2R_t = 2$'
+#lblcoluna   = 'EP_EL_$d_1 = 4R_i$'
 cor         = 'r'
 tamanho     = 2
 ordem       = 1
@@ -4014,7 +4125,8 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EPVP_CRVE_CG_D1_4RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunafinalexcavation[modelo]
-lblcoluna   = 'EPVP_VEL_$d_1 = 4R_i$'
+lblcoluna   = 'EPVP-VEL-$d_1/2R_t = 2$'
+#lblcoluna   = 'EPVP_VEL_$d_1 = 4R_i$'
 cor         = 'r'
 tamanho     = 2
 ordem       = 1
@@ -4037,8 +4149,8 @@ CONVERGENCE PROFILES - MODEL EP_CRE_EPVP_CRVE_CG_LP
 # Formatação do gráfico
 figura      = figura+1
 titulo      = 'Convergence Profiles - EP_EL_EPVP_VEL_WG_LT'
-eixox       = r'$x/R_i$'  
-eixoy       = r'$U=-u(r = R_i,\theta = 90^\circ)/R_{i}$ [%]'
+eixox       = r'$z/R_t$'  
+eixoy       = r'$U_B$ [\%]'
 ymin        = ymin_twin_convergence_profile
 ymax        = ymax_twin_convergence_profile
 xmin        = xmin_twin_profile
@@ -4057,7 +4169,7 @@ poly        = poly_twin_convergence_profile
 modelo      = 'EP_CRE_SG_D1_INF_AXI'
 arquivo     = modelo + '\convergencias.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'EP_EL_single tunnel'
+lblcoluna   = 'EP-EL-single tunnel'
 cor         = 'k'
 tamanho     = 1.5
 ordem       = 4
@@ -4075,7 +4187,7 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EPVP_CRVE_SG_D1_INF_AXI'
 arquivo     = modelo + '\convergencias.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'EPVP_VEL_single tunnel'
+lblcoluna   = 'EPVP-VEL-single tunnel'
 cor         = 'k'
 tamanho     = 1.5
 ordem       = 4
@@ -4093,7 +4205,8 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EP_CRE_CG_D1_16RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'EP_EL_$d_1 = 16R_i$'
+lblcoluna   = 'EP-EL-$d_1/2R_t = 8$'
+#lblcoluna   = 'EP_EL_$d_1 = 16R_i$'
 cor         = 'orange'
 tamanho     = 2
 ordem       = 3
@@ -4111,7 +4224,8 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EPVP_CRVE_CG_D1_16RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'EPVP_VEL_$d_1 = 16R_i$'
+lblcoluna   = 'EPVP-EL-$d_1/2R_t = 8$'
+#lblcoluna   = 'EPVP_VEL_$d_1 = 16R_i$'
 cor         = 'orange'
 tamanho     = 2
 ordem       = 3
@@ -4129,7 +4243,8 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EP_CRE_CG_D1_8RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'EP_EL_$d_1 = 8R_i$'
+lblcoluna   = 'EP-EL-$d_1/2R_t = 4$'
+#lblcoluna   = 'EP_EL_$d_1 = 8R_i$'
 cor         = 'g'
 tamanho     = 2
 ordem       = 2
@@ -4147,7 +4262,8 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EPVP_CRVE_CG_D1_8RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'EPVP_VEL_$d_1 = 8R_i$'
+lblcoluna   = 'EPVP-VEL-$d_1/2R_t = 4$'
+#lblcoluna   = 'EPVP_VEL_$d_1 = 8R_i$'
 cor         = 'g'
 tamanho     = 2
 ordem       = 2
@@ -4165,7 +4281,8 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EP_CRE_CG_D1_4RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'EP_EL_$d_1 = 4R_i$'
+lblcoluna   = 'EP-EL-$d_1/2R_t = 2$'
+#lblcoluna   = 'EP_EL_$d_1 = 4R_i$'
 cor         = 'r'
 tamanho     = 2
 ordem       = 1
@@ -4183,7 +4300,8 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EPVP_CRVE_CG_D1_4RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'EPVP_VEL_$d_1 = 4R_i$'
+lblcoluna   = 'EPVP-VEL-$d_1/2R_t = 2$'
+#lblcoluna   = 'EPVP_VEL_$d_1 = 4R_i$'
 cor         = 'r'
 tamanho     = 2
 ordem       = 1
@@ -4206,8 +4324,8 @@ CONVERGENCE PROFILES - MODEL EP_CRE_EPVP_CRVE_CG_CP_LP
 # Formatação do gráfico
 figura      = figura+1
 titulo      = 'Convergence Profiles - EP_EL_EPVP_VEL_WG_ST_LT'
-eixox       = r'$x/R_i$'  
-eixoy       = r'$U=-u(r = R_i,\theta = 90^\circ)/R_{i}$ [%]'
+eixox       = r'$z/R_t$'  
+eixoy       = r'$U_B$ [\%]'
 ymin        = ymin_twin_convergence_profile
 ymax        = ymax_twin_convergence_profile
 xmin        = xmin_twin_profile
@@ -4226,7 +4344,8 @@ poly        = poly_twin_convergence_profile
 modelo      = 'EP_CRE_SG_D1_INF_AXI'
 arquivo     = modelo + '\convergencias.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'EP_EL_single tunnel_Ueq=0.9148'
+lblcoluna   = 'EP-EL-single tunnel'
+#lblcoluna   = 'EP_EL_single tunnel_Ueq=0.9148'
 cor         = 'k'
 tamanho     = 1.5
 ordem       = 4
@@ -4244,7 +4363,8 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EPVP_CRVE_SG_D1_INF_AXI'
 arquivo     = modelo + '\convergencias.txt'
 ncoluna     = dicncolunafinalexcavation[modelo]
-lblcoluna   = 'EPVP_VEL_ST_single tunnel_Ueq=0.969'
+lblcoluna   = 'EPVP-VEL-ST-single tunnel'
+#lblcoluna   = 'EPVP_VEL_ST_single tunnel_Ueq=0.969'
 cor         = 'k'
 tamanho     = 1.5
 ordem       = 4
@@ -4262,7 +4382,8 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EPVP_CRVE_SG_D1_INF_AXI'
 arquivo     = modelo + '\convergencias.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'EPVP_VEL_LT_single tunnel_Ueq=1.183'
+lblcoluna   = 'EPVP-VEL-LT-single tunnel'
+#lblcoluna   = 'EPVP_VEL_LT_single tunnel_Ueq=1.183'
 cor         = 'k'
 tamanho     = 1.5
 ordem       = 4
@@ -4280,7 +4401,8 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EP_CRE_CG_D1_16RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'EP_EL_$d_1 = 16R_i$_Ueq=0.924'
+lblcoluna   = 'EP-EL-$d_1/2R_t = 8$'
+#lblcoluna   = 'EP_EL_$d_1 = 16R_i$_Ueq=0.924'
 cor         = 'orange'
 tamanho     = 2
 ordem       = 3
@@ -4298,7 +4420,8 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EPVP_CRVE_CG_D1_16RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunafinalexcavation[modelo]
-lblcoluna   = 'EPVP_VEL_ST_$d_1 = 16R_i$_Ueq=0.975'
+lblcoluna   = 'EPVP-VEL-ST-$d_1/2R_t = 8$'
+#lblcoluna   = 'EPVP_VEL_ST_$d_1 = 16R_i$_Ueq=0.975'
 cor         = 'orange'
 tamanho     = 2
 ordem       = 3
@@ -4316,7 +4439,8 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EPVP_CRVE_CG_D1_16RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'EPVP_VEL_LT_$d_1 = 16R_i$_Ueq=1.178'
+lblcoluna   = 'EPVP-VEL-LT-$d_1/2R_t = 8$'
+#lblcoluna   = 'EPVP_VEL_LT_$d_1 = 16R_i$_Ueq=1.178'
 cor         = 'orange'
 tamanho     = 2
 ordem       = 3
@@ -4334,7 +4458,8 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EP_CRE_CG_D1_8RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'EP_EL_$d_1 = 8R_i$_Ueq=0.946'
+lblcoluna   = 'EP-EL-$d_1/2R_t = 4$'
+#lblcoluna   = 'EP_EL_$d_1 = 8R_i$_Ueq=0.946'
 cor         = 'g'
 tamanho     = 2
 ordem       = 2
@@ -4352,7 +4477,8 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EPVP_CRVE_CG_D1_8RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunafinalexcavation[modelo]
-lblcoluna   = 'EPVP_VEL_ST_$d_1 = 8R_i$_Ueq=0.992'
+lblcoluna   = 'EPVP-VEL-ST-$d_1/2R_t = 4$'
+#lblcoluna   = 'EPVP_VEL_ST_$d_1 = 8R_i$_Ueq=0.992'
 cor         = 'g'
 tamanho     = 2
 ordem       = 2
@@ -4370,7 +4496,8 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EPVP_CRVE_CG_D1_8RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'EPVP_VEL_LT_$d_1 = 8R_i$_Ueq=1.165'
+lblcoluna   = 'EPVP-VEL-LT-$d_1/2R_t = 4$'
+#lblcoluna   = 'EPVP_VEL_LT_$d_1 = 8R_i$_Ueq=1.165'
 cor         = 'g'
 tamanho     = 2
 ordem       = 2
@@ -4388,7 +4515,8 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EP_CRE_CG_D1_4RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'EP_EL_$d_1 = 4R_i$_Ueq=1.000'
+lblcoluna   = 'EP-EL-$d_1/2R_t = 2$'
+#lblcoluna   = 'EP_EL_$d_1 = 4R_i$_Ueq=1.000'
 cor         = 'r'
 tamanho     = 2
 ordem       = 1
@@ -4406,7 +4534,8 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EPVP_CRVE_CG_D1_4RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunafinalexcavation[modelo]
-lblcoluna   = 'EPVP_VEL_ST_$d_1 = 4R_i$_Ueq=1.062'
+lblcoluna   = 'EPVP-VEL-ST-$d_1/2R_t = 2$'
+#lblcoluna   = 'EPVP_VEL_ST_$d_1 = 4R_i$_Ueq=1.062'
 cor         = 'r'
 tamanho     = 2
 ordem       = 1
@@ -4424,7 +4553,8 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EPVP_CRVE_CG_D1_4RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'EPVP_VEL_LT_$d_1 = 4R_i$_Ueq=1.191'
+lblcoluna   = 'EPVP-VEL-LT-$d_1/2R_t = 2$'
+#lblcoluna   = 'EPVP_VEL_LT_$d_1 = 4R_i$_Ueq=1.191'
 cor         = 'r'
 tamanho     = 2
 ordem       = 1
@@ -4447,8 +4577,8 @@ CONVERGENCE PROFILES - MODEL EP_CRE_EPVP_CRVE_SG_CP
 # Formatação do gráfico
 figura      = figura+1
 titulo      = 'Convergence Profiles - EP_EL_EPVP_VEL_NG_ST'
-eixox       = r'$x/R_i$'  
-eixoy       = r'$U=-u(r = R_i,\theta = 90^\circ)/R_{i}$ [%]'
+eixox       = r'$z/R_t$'  
+eixoy       = r'$U_B$ [\%]'
 ymin        = ymin_twin_convergence_profile
 ymax        = ymax_twin_convergence_profile
 xmin        = xmin_twin_profile
@@ -4467,7 +4597,7 @@ poly        = poly_twin_convergence_profile
 modelo      = 'EP_CRE_SG_D1_INF_AXI'
 arquivo     = modelo + '\convergencias.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'EP_EL_single tunnel'
+lblcoluna   = 'EP-EL-single tunnel'
 cor         = 'k'
 tamanho     = 1.5
 ordem       = 4
@@ -4485,7 +4615,7 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EPVP_CRVE_SG_D1_INF_AXI'
 arquivo     = modelo + '\convergencias.txt'
 ncoluna     = dicncolunafinalexcavation[modelo]
-lblcoluna   = 'EPVP_VEL_single tunnel'
+lblcoluna   = 'EPVP-VEL-single tunnel'
 cor         = 'k'
 tamanho     = 1.5
 ordem       = 4
@@ -4503,7 +4633,8 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EP_CRE_SG_D1_16RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'EP_EL_$d_1 = 16R_i$'
+lblcoluna   = 'EP-EL-$d_1/2R_t = 8$'
+#lblcoluna   = 'EP_EL_$d_1 = 16R_i$'
 cor         = 'orange'
 tamanho     = 2
 ordem       = 3
@@ -4521,7 +4652,8 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EPVP_CRVE_SG_D1_16RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunafinalexcavation[modelo]
-lblcoluna   = 'EPVP_VEL_$d_1 = 16R_i$'
+lblcoluna   = 'EPVP-VEL-$d_1/2R_t = 8$'
+#lblcoluna   = 'EPVP_VEL_$d_1 = 16R_i$'
 cor         = 'orange'
 tamanho     = 2
 ordem       = 3
@@ -4539,7 +4671,8 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EP_CRE_SG_D1_8RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'EP_EL_$d_1 = 8R_i$'
+lblcoluna   = 'EP-EL-$d_1/2R_t = 4$'
+#lblcoluna   = 'EP_EL_$d_1 = 8R_i$'
 cor         = 'g'
 tamanho     = 2
 ordem       = 2
@@ -4557,7 +4690,8 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EPVP_CRVE_SG_D1_8RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunafinalexcavation[modelo]
-lblcoluna   = 'EPVP_VEL_$d_1 = 8R_i$'
+lblcoluna   = 'EPVP-VEL-$d_1/2R_t = 4$'
+#lblcoluna   = 'EPVP_VEL_$d_1 = 8R_i$'
 cor         = 'g'
 tamanho     = 2
 ordem       = 2
@@ -4575,7 +4709,8 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EP_CRE_SG_D1_4RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'EP_EL_$d_1 = 4R_i$'
+lblcoluna   = 'EP-EL-$d_1/2R_t = 2$'
+#lblcoluna   = 'EP_EL_$d_1 = 4R_i$'
 cor         = 'r'
 tamanho     = 2
 ordem       = 1
@@ -4593,7 +4728,8 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EPVP_CRVE_SG_D1_4RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunafinalexcavation[modelo]
-lblcoluna   = 'EPVP_VEL_$d_1 = 4R_i$'
+lblcoluna   = 'EPVP-VEL-$d_1/2R_t = 2$'
+#lblcoluna   = 'EPVP_VEL_$d_1 = 4R_i$'
 cor         = 'r'
 tamanho     = 2
 ordem       = 1
@@ -4616,8 +4752,8 @@ CONVERGENCE PROFILES - MODEL EP_CRE_EPVP_CRVE_SG_LP
 # Formatação do gráfico
 figura      = figura+1
 titulo      = 'Convergence Profiles - EP_EL_EPVP_VEL_NG_LT'
-eixox       = r'$x/R_i$'  
-eixoy       = r'$U=-u(r = R_i,\theta = 90^\circ)/R_{i}$ [%]'
+eixox       = r'$z/R_t$'  
+eixoy       = r'$U_B$ [\%]'
 ymin        = ymin_twin_convergence_profile
 ymax        = ymax_twin_convergence_profile
 xmin        = xmin_twin_profile
@@ -4636,7 +4772,7 @@ poly        = poly_twin_convergence_profile
 modelo      = 'EP_CRE_SG_D1_INF_AXI'
 arquivo     = modelo + '\convergencias.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'EP_EL_single tunnel'
+lblcoluna   = 'EP-EL-single tunnel'
 cor         = 'k'
 tamanho     = 1.5
 ordem       = 4
@@ -4654,7 +4790,7 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EPVP_CRVE_SG_D1_INF_AXI'
 arquivo     = modelo + '\convergencias.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'EPVP_VEL_single tunnel'
+lblcoluna   = 'EPVP-VEL-single tunnel'
 cor         = 'k'
 tamanho     = 1.5
 ordem       = 4
@@ -4672,7 +4808,8 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EP_CRE_SG_D1_16RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'EP_EL_$d_1 = 16R_i$'
+lblcoluna   = 'EP-EL-$d_1/2R_t = 8$'
+#lblcoluna   = 'EP_EL_$d_1 = 16R_i$'
 cor         = 'orange'
 tamanho     = 2
 ordem       = 3
@@ -4690,7 +4827,8 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EPVP_CRVE_SG_D1_16RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'EPVP_VEL_$d_1 = 16R_i$'
+lblcoluna   = 'EPVP-VEL-$d_1/2R_t = 8$'
+#lblcoluna   = 'EPVP_VEL_$d_1 = 16R_i$'
 cor         = 'orange'
 tamanho     = 2
 ordem       = 3
@@ -4708,7 +4846,8 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EP_CRE_SG_D1_8RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'EP_EL_$d_1 = 8R_i$'
+lblcoluna   = 'EP-EL-$d_1/2R_t = 4$'
+#lblcoluna   = 'EP_EL_$d_1 = 8R_i$'
 cor         = 'g'
 tamanho     = 2
 ordem       = 2
@@ -4726,7 +4865,8 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EPVP_CRVE_SG_D1_8RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'EPVP_VEL_$d_1 = 8R_i$'
+lblcoluna   = 'EPVP-VEL-$d_1/2R_t = 4$'
+#lblcoluna   = 'EPVP_VEL_$d_1 = 8R_i$'
 cor         = 'g'
 tamanho     = 2
 ordem       = 2
@@ -4744,7 +4884,8 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EP_CRE_SG_D1_4RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'EP_EL_$d_1 = 4R_i$'
+lblcoluna   = 'EP-EL-$d_1/2R_t = 2$'
+#lblcoluna   = 'EP_EL_$d_1 = 4R_i$'
 cor         = 'r'
 tamanho     = 2
 ordem       = 1
@@ -4762,7 +4903,8 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EPVP_CRVE_SG_D1_4RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'EPVP_VEL_$d_1 = 4R_i$'
+lblcoluna   = 'EPVP-VEL-$d_1/2R_t = 2$'
+#lblcoluna   = 'EPVP_VEL_$d_1 = 4R_i$'
 cor         = 'r'
 tamanho     = 2
 ordem       = 1
@@ -4790,8 +4932,8 @@ CONVERGENCE PROFILES - CRE_SG_CP - D1=16Re
 # Formatação do gráfico
 figura      = figura+1
 titulo      = 'Convergence Profiles - EL_NG_ST - $d_1=16R_i$'
-eixox       = r'$x/R_i$'  
-eixoy       = r'$U=-u(r = R_i,\theta = 90^\circ)/R_{i}$ [%]'
+eixox       = r'$z/R_t$'  
+eixoy       = r'$U_B$ [\%]'
 ymin        = ymin_twin_convergence_profile
 ymax        = ymax_twin_convergence_profile
 xmin        = xmin_twin_profile
@@ -4905,8 +5047,8 @@ CONVERGENCE PROFILES - CRE_CG_LP - D1=16Re
 # Formatação do gráfico
 figura      = figura+1
 titulo      = 'Convergence Profiles - EL_NG_LT - $d_1=16R_i$'
-eixox       = r'$x/R_i$'  
-eixoy       = r'$U=-u(r = R_i,\theta = 90^\circ)/R_{i}$ [%]'
+eixox       = r'$z/R_t$'  
+eixoy       = r'$U_B$ [\%]'
 ymin        = ymin_twin_convergence_profile
 ymax        = ymax_twin_convergence_profile
 xmin        = xmin_twin_profile
@@ -5019,8 +5161,8 @@ CONVERGENCE PROFILES - SG_CP_LP - D1=16Re
 # Formatação do gráfico
 figura      = figura+1
 titulo      = 'Convergence Profiles - NG_ST_LT - $d_1=16R_i$'
-eixox       = r'$x/R_i$'  
-eixoy       = r'$U=-u(r = R_i,\theta = 90^\circ)/R_{i}$ [%]'
+eixox       = r'$z/R_t$'  
+eixoy       = r'$U_B$ [\%]'
 ymin        = ymin_twin_convergence_profile
 ymax        = ymax_twin_convergence_profile
 xmin        = xmin_twin_profile
@@ -5187,8 +5329,8 @@ CONVERGENCE PROFILES - CRE_CG_CP - D1=16Re
 # Formatação do gráfico
 figura      = figura+1
 titulo      = 'Convergence Profiles - EL_WG_ST - $d_1=16R_i$'
-eixox       = r'$x/R_i$'  
-eixoy       = r'$U=-u(r = R_i,\theta = 90^\circ)/R_{i}$ [%]'
+eixox       = r'$z/R_t$'  
+eixoy       = r'$U_B$ [\%]'
 ymin        = ymin_twin_convergence_profile
 ymax        = ymax_twin_convergence_profile
 xmin        = xmin_twin_profile
@@ -5302,8 +5444,8 @@ CONVERGENCE PROFILES - CRE_CG_LP - D1=16Re
 # Formatação do gráfico
 figura      = figura+1
 titulo      = 'Convergence Profiles - EL_WG_LT - $d_1=16R_i$'
-eixox       = r'$x/R_i$'  
-eixoy       = r'$U=-u(r = R_i,\theta = 90^\circ)/R_{i}$ [%]'
+eixox       = r'$z/R_t$'  
+eixoy       = r'$U_B$ [\%]'
 ymin        = ymin_twin_convergence_profile
 ymax        = ymax_twin_convergence_profile
 xmin        = xmin_twin_profile
@@ -5416,8 +5558,8 @@ CONVERGENCE PROFILES - CG_CP_LP - D1=16Re
 # Formatação do gráfico
 figura      = figura+1
 titulo      = 'Convergence Profiles - WG_ST_LT - $d_1=16R_i$'
-eixox       = r'$x/R_i$'  
-eixoy       = r'$U=-u(r = R_i,\theta = 90^\circ)/R_{i}$ [%]'
+eixox       = r'$z/R_t$'  
+eixoy       = r'$U_B$ [\%]'
 ymin        = ymin_twin_convergence_profile
 ymax        = ymax_twin_convergence_profile
 xmin        = xmin_twin_profile
@@ -5584,8 +5726,8 @@ CONVERGENCE PROFILES - CRE_SG_CP - D1=8Re
 # Formatação do gráfico
 figura      = figura+1
 titulo      = 'Convergence Profiles - EL_NG_ST - $d_1=8R_i$'
-eixox       = r'$x/R_i$'  
-eixoy       = r'$U=-u(r = R_i,\theta = 90^\circ)/R_{i}$ [%]'
+eixox       = r'$z/R_t$'  
+eixoy       = r'$U_B$ [\%]'
 ymin        = ymin_twin_convergence_profile
 ymax        = ymax_twin_convergence_profile
 xmin        = xmin_twin_profile
@@ -5699,8 +5841,8 @@ CONVERGENCE PROFILES - CRE_CG_LP - D1=8Re
 # Formatação do gráfico
 figura      = figura+1
 titulo      = 'Convergence Profiles - EL_NG_LT - $d_1=8R_i$'
-eixox       = r'$x/R_i$'  
-eixoy       = r'$U=-u(r = R_i,\theta = 90^\circ)/R_{i}$ [%]'
+eixox       = r'$z/R_t$'  
+eixoy       = r'$U_B$ [\%]'
 ymin        = ymin_twin_convergence_profile
 ymax        = ymax_twin_convergence_profile
 xmin        = xmin_twin_profile
@@ -5813,8 +5955,8 @@ CONVERGENCE PROFILES - SG_CP_LP - D1=8Re
 # Formatação do gráfico
 figura      = figura+1
 titulo      = 'Convergence Profiles - NG_ST_LT - $d_1=8R_i$'
-eixox       = r'$x/R_i$'  
-eixoy       = r'$U=-u(r = R_i,\theta = 90^\circ)/R_{i}$ [%]'
+eixox       = r'$z/R_t$'  
+eixoy       = r'$U_B$ [\%]'
 ymin        = ymin_twin_convergence_profile
 ymax        = ymax_twin_convergence_profile
 xmin        = xmin_twin_profile
@@ -5981,8 +6123,8 @@ CONVERGENCE PROFILES - CRE_CG_CP - D1=8Re
 # Formatação do gráfico
 figura      = figura+1
 titulo      = 'Convergence Profiles - EL_WG_ST - $d_1=8R_i$'
-eixox       = r'$x/R_i$'  
-eixoy       = r'$U=-u(r = R_i,\theta = 90^\circ)/R_{i}$ [%]'
+eixox       = r'$z/R_t$'  
+eixoy       = r'$U_B$ [\%]'
 ymin        = ymin_twin_convergence_profile
 ymax        = ymax_twin_convergence_profile
 xmin        = xmin_twin_profile
@@ -6096,8 +6238,8 @@ CONVERGENCE PROFILES - CRE_CG_LP - D1=8Re
 # Formatação do gráfico
 figura      = figura+1
 titulo      = 'Convergence Profiles - EL_WG_LT- $d_1=8R_i$'
-eixox       = r'$x/R_i$'  
-eixoy       = r'$U=-u(r = R_i,\theta = 90^\circ)/R_{i}$ [%]'
+eixox       = r'$z/R_t$'  
+eixoy       = r'$U_B$ [\%]'
 ymin        = ymin_twin_convergence_profile
 ymax        = ymax_twin_convergence_profile
 xmin        = xmin_twin_profile
@@ -6210,8 +6352,8 @@ CONVERGENCE PROFILES - CG_CP_LP - D1=8Re
 # Formatação do gráfico
 figura      = figura+1
 titulo      = 'Convergence Profiles - WG_ST_LT - $d_1=8R_i$'
-eixox       = r'$x/R_i$'  
-eixoy       = r'$U=-u(r = R_i,\theta = 90^\circ)/R_{i}$ [%]'
+eixox       = r'$z/R_t$'  
+eixoy       = r'$U_B$ [\%]'
 ymin        = ymin_twin_convergence_profile
 ymax        = ymax_twin_convergence_profile
 xmin        = xmin_twin_profile
@@ -6378,8 +6520,8 @@ CONVERGENCE PROFILES - CRE_SG_CP - D1=4Re
 # Formatação do gráfico
 figura      = figura+1
 titulo      = 'Convergence Profiles - EL_NG_ST - $d_1=4R_i$'
-eixox       = r'$x/R_i$'  
-eixoy       = r'$U=-u(r = R_i,\theta = 90^\circ)/R_{i}$ [%]'
+eixox       = r'$z/R_t$'  
+eixoy       = r'$U_B$ [\%]'
 ymin        = ymin_twin_convergence_profile
 ymax        = ymax_twin_convergence_profile
 xmin        = xmin_twin_profile
@@ -6493,8 +6635,8 @@ CONVERGENCE PROFILES - CRE_CG_LP - D1=4Re
 # Formatação do gráfico
 figura      = figura+1
 titulo      = 'Convergence Profiles - EL_NG_LT - $d_1=4R_i$'
-eixox       = r'$x/R_i$'  
-eixoy       = r'$U=-u(r = R_i,\theta = 90^\circ)/R_{i}$ [%]'
+eixox       = r'$z/R_t$'  
+eixoy       = r'$U_B$ [\%]'
 ymin        = ymin_twin_convergence_profile
 ymax        = ymax_twin_convergence_profile
 xmin        = xmin_twin_profile
@@ -6607,8 +6749,8 @@ CONVERGENCE PROFILES - SG_CP_LP - D1=4Re
 # Formatação do gráfico
 figura      = figura+1
 titulo      = 'Convergence Profiles - NG_ST_LT - $d_1=4R_i$'
-eixox       = r'$x/R_i$'  
-eixoy       = r'$U=-u(r = R_i,\theta = 90^\circ)/R_{i}$ [%]'
+eixox       = r'$z/R_t$'  
+eixoy       = r'$U_B$ [\%]'
 ymin        = ymin_twin_convergence_profile
 ymax        = ymax_twin_convergence_profile
 xmin        = xmin_twin_profile
@@ -6775,8 +6917,8 @@ CONVERGENCE PROFILES - CRE_CG_CP - D1=4Re
 # Formatação do gráfico
 figura      = figura+1
 titulo      = 'Convergence Profiles - EL_WG_ST - $d_1=4R_i$'
-eixox       = r'$x/R_i$'  
-eixoy       = r'$U=-u(r = R_i,\theta = 90^\circ)/R_{i}$ [%]'
+eixox       = r'$z/R_t$'  
+eixoy       = r'$U_B$ [\%]'
 ymin        = ymin_twin_convergence_profile
 ymax        = ymax_twin_convergence_profile
 xmin        = xmin_twin_profile
@@ -6890,8 +7032,8 @@ CONVERGENCE PROFILES - CRE_CG_LP - D1=4Re
 # Formatação do gráfico
 figura      = figura+1
 titulo      = 'Convergence Profiles - EL_WG_LT - $d_1=4R_i$'
-eixox       = r'$x/R_i$'  
-eixoy       = r'$U=-u(r = R_i,\theta = 90^\circ)/R_{i}$ [%]'
+eixox       = r'$z/R_t$'  
+eixoy       = r'$U_B$ [\%]'
 ymin        = ymin_twin_convergence_profile
 ymax        = ymax_twin_convergence_profile
 xmin        = xmin_twin_profile
@@ -7004,8 +7146,8 @@ CONVERGENCE PROFILES - CG_CP_LP - D1=4Re
 # Formatação do gráfico
 figura      = figura+1
 titulo      = 'Convergence Profiles - WG_ST_LT - $d_1=4R_i$'
-eixox       = r'$x/R_i$'  
-eixoy       = r'$U=-u(r = R_i,\theta = 90^\circ)/R_{i}$ [%]'
+eixox       = r'$z/R_t$'  
+eixoy       = r'$U_B$ [\%]'
 ymin        = ymin_twin_convergence_profile
 ymax        = ymax_twin_convergence_profile
 xmin        = xmin_twin_profile
