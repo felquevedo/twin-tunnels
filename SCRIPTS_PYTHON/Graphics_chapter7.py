@@ -871,7 +871,7 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'VP_CRE_CG_D1_16RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'VP, EL, $d_1/2R_t = 8$, $U_C=$ 0.79'
+lblcoluna   = 'VP, EL, $d_1 = 16R_t$, $U_C=$ 0.79'
 cor         = 'orange'
 tamanho     = 2
 ordem       = 3
@@ -889,7 +889,7 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EPVP_CRE_CG_D1_16RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'EPVP, EL, $d_1/2R_t = 8$, $U_C=$ 0.97'
+lblcoluna   = 'EPVP, EL, $d_1 = 16R_t$, $U_C=$ 0.97'
 cor         = 'orange'
 tamanho     = 2
 ordem       = 3
@@ -907,7 +907,7 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EPVP_CRVE_CG_D1_16RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'EPVP, VEL, $d_1/2R_t = 8$, $U_C=$ 1.18'
+lblcoluna   = 'EPVP, VEL, $d_1 = 16R_t$, $U_C=$ 1.18'
 cor         = 'orange'
 tamanho     = 2
 ordem       = 3
@@ -925,7 +925,7 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'VP_CRE_CG_D1_8RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'VP, EL, $d_1/2R_t = 4$, $U_C=$ 0.80'
+lblcoluna   = 'VP, EL, $d_1 = 8R_t$, $U_C=$ 0.80'
 cor         = 'g'
 tamanho     = 2
 ordem       = 2
@@ -943,7 +943,7 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EPVP_CRE_CG_D1_8RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'EPVP, EL, $d_1/2R_t = 4$, $U_C=$ 0.97'
+lblcoluna   = 'EPVP, EL, $d_1 = 8R_t$, $U_C=$ 0.97'
 cor         = 'g'
 tamanho     = 2
 ordem       = 2
@@ -961,7 +961,7 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EPVP_CRVE_CG_D1_8RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'EPVP, VEL, $d_1/2R_t = 4$, $U_C=$ 1.17'
+lblcoluna   = 'EPVP, VEL, $d_1 = 8R_t$, $U_C=$ 1.17'
 cor         = 'g'
 tamanho     = 2
 ordem       = 2
@@ -979,7 +979,7 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'VP_CRE_CG_D1_4RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'VP, EL, $d_1/2R_t = 2$, $U_C=$ 0.81'
+lblcoluna   = 'VP, EL, $d_1 = 4R_t$, $U_C=$ 0.81'
 cor         = 'r'
 tamanho     = 2
 ordem       = 1
@@ -997,7 +997,7 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EPVP_CRE_CG_D1_4RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'EPVP, EL, $d_1/2R_t = 2$, $U_C=$ 0.98'
+lblcoluna   = 'EPVP, EL, $d_1 = 4R_t$, $U_C=$ 0.98'
 cor         = 'r'
 tamanho     = 2
 ordem       = 1
@@ -1015,7 +1015,7 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EPVP_CRVE_CG_D1_4RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'EPVP, VEL, $d_1/2R_t = 2$, $U_C=$ 1.19'
+lblcoluna   = 'EPVP, VEL, $d_1 = 4R_t$, $U_C=$ 1.19'
 cor         = 'r'
 tamanho     = 2
 ordem       = 1
@@ -1113,7 +1113,7 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EP_CRE_CG_D1_16RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'EP, EL, $d_1/2R_t = 8$, $U_C=$ 0.92'
+lblcoluna   = 'EP, EL, $d_1 = 16R_t$, $U_C=$ 0.92'
 cor         = 'orange'
 tamanho     = 2
 ordem       = 3
@@ -1131,7 +1131,7 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EPVP_CRVE_CG_D1_16RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunafinalexcavation[modelo]
-lblcoluna   = 'EPVP, VEL, ST, $d_1/2R_t = 8$, $U_C=$ 0.98'
+lblcoluna   = 'EPVP, VEL, ST, $d_1 = 16R_t$, $U_C=$ 0.98'
 cor         = 'orange'
 tamanho     = 2
 ordem       = 3
@@ -1149,7 +1149,7 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EPVP_CRVE_CG_D1_16RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'EPVP, VEL, LT, $d_1/2R_t = 8$, $U_C=$ 1.18'
+lblcoluna   = 'EPVP, VEL, LT, $d_1 = 16R_t$, $U_C=$ 1.18'
 cor         = 'orange'
 tamanho     = 2
 ordem       = 3
@@ -1167,7 +1167,7 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EP_CRE_CG_D1_8RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'EP, EL, $d_1/2R_t = 4$, $U_C=$ 0.95'
+lblcoluna   = 'EP, EL, $d_1 = 8R_t$, $U_C=$ 0.95'
 cor         = 'g'
 tamanho     = 2
 ordem       = 2
@@ -1185,7 +1185,7 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EPVP_CRVE_CG_D1_8RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunafinalexcavation[modelo]
-lblcoluna   = 'EPVP, VEL, ST, $d_1/2R_t = 4$, $U_C=$ 0.99'
+lblcoluna   = 'EPVP, VEL, ST, $d_1 = 8R_t$, $U_C=$ 0.99'
 cor         = 'g'
 tamanho     = 2
 ordem       = 2
@@ -1203,7 +1203,7 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EPVP_CRVE_CG_D1_8RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'EPVP, VEL, LT, $d_1/2R_t = 4$, $U_C=$ 1.17'
+lblcoluna   = 'EPVP, VEL, LT, $d_1 = 8R_t$, $U_C=$ 1.17'
 cor         = 'g'
 tamanho     = 2
 ordem       = 2
@@ -1221,7 +1221,7 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EP_CRE_CG_D1_4RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'EP, EL, $d_1/2R_t = 2$, $U_C=$ 1.00'
+lblcoluna   = 'EP, EL, $d_1 = 4R_t$, $U_C=$ 1.00'
 cor         = 'r'
 tamanho     = 2
 ordem       = 1
@@ -1239,7 +1239,7 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EPVP_CRVE_CG_D1_4RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunafinalexcavation[modelo]
-lblcoluna   = 'EPVP, VEL, ST, $d_1/2R_t = 2$, $U_C=$ 1.06'
+lblcoluna   = 'EPVP, VEL, ST, $d_1 = 4R_t$, $U_C=$ 1.06'
 cor         = 'r'
 tamanho     = 2
 ordem       = 1
@@ -1257,7 +1257,7 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EPVP_CRVE_CG_D1_4RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'EPVP, VEL, LT, $d_1/2R_t = 2$, $U_C=$ 1.19'
+lblcoluna   = 'EPVP, VEL, LT, $d_1 = 4R_t$, $U_C=$ 1.19'
 cor         = 'r'
 tamanho     = 2
 ordem       = 1

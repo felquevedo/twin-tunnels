@@ -540,34 +540,34 @@ These parameters are shown in Table~\ref{table2}. In these analyses the radius i
 		\hline
 		Initial stress state (isotropic) & $\sigma_x, \sigma_y, \sigma_z$ & MPa & $9$ \\
 		Young's modulus & $E$ & MPa & $1500$ \\
-		Poisson's ratio & $\nu$ & adm & $0.498$ \\
+		Poisson's ratio & $\nu$ & - & $0.498$ \\
 		Plastic cohesion & $c$ & MPa & 4$\sqrt{3}/2$ \\
 		Plastic friction angle & $\phi$ & $^{\circ}$ & 0 \\
 		Viscoplastic cohesion & $c_{vp}$ & MPa & 2$\sqrt{3}/2$ \\
-		Viscoplastic friction angle & $\phi_{vp}$ & $^{\circ}$ & $\phi$ \\
-		Power law parameter & $n$ & adm & 1 \\
+		Viscoplastic friction angle & $\phi_{vp}$ & $^{\circ}$ & 0 \\
+		Power law parameter & $n$ & - & 1 \\
 		Reference parameter & $f_0$ & MPa & 1 \\
 		Viscosity coefficient & $\eta$ & day & $40000$ \\
 		\hline
 		\multicolumn{4}{c}{Constitutive model of lining} \\
 		\hline
 		
-		Compressive strength & $f_{ck}$ & MPa & $20$ \\
-		Young's modulus at 28 days & $E_{c_{28}}$ & MPa & $30303$ \\
-		Poisson's ratio & $\nu$ & adm & $0.2$ \\
+		Characteristic compressive strength at age of 28 days & $f_{ck}$ & MPa & $20$ \\
+		Modulus of elasticity at a age of 28 days & $E_{c_{28}}$ & MPa & $30303$ \\
+		Poisson's ratio & $\nu$ & - & $0.2$ \\
 		
-		Coefficient which depends on the type of cement & $s$ & adm & $0.2$ \\
+		Coefficient which depends on the type of cement & $s$ & - & $0.2$ \\
 		Relative humidity of ambient environment & $RH$ & \% & $70$ \\
-		Fictitious thickness\footnote{2} (longitudinal tunnel) & $h_f$ & cm & $0.2111$ \\
-		Fictitious thickness (transverse gallery) & $h_{f_g}$ & cm & $0.2176$ \\
-		Drying time of the concrete & $t_s$ & days & $7$ \\
-		Coefficient in shrinkage which depends on the type of cement & $\beta_{sc}$ & adm & $8$ \\
+		Notational size of longitudinal tunnel cross-section$^2$ & $h_t$ & cm & $0.2111$ \\
+		Notational size of transverse gallery cross-section$^2$ & $h_{g}$ & cm & $0.2176$ \\
+		Age of concrete at the beginning of shrinkage & $t_s$ & days & $7$ \\
+		Coefficient in shrinkage which depends on the type of cement & $\beta_{sc}$ & - & $8$ \\
 		Temperature & $T$ & $^\circ$C & $20^\circ$ \\
 		Age of concrete at loading & $t_0$ & days & $1$ \\
 		\hline
 	\end{tabular}
 	\normalsize
-	\\ \footnotemark[2]{{\footnotesize $h_f= [R_t^2 - (R_t-e)^2]/(R_t-e)$ for a circular tunnel cross-section with internal perimeter in contact with atmosphere}}
+	\\ \footnotemark[2]{{\footnotesize $h_i= [R_i^2 - (R_i-e_i)^2]/(R_i-e_i)$ where $i = t$ for longitudinal tunnel or $i=g$ for gallery  circular cross-section with internal perimeter in contact with atmosphere.}}
 \end{table}
 \FloatBarrier
 In presenting the results, it is necessary to highlight some important points:
