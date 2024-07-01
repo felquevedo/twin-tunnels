@@ -456,7 +456,7 @@ Keeping in mind it addresses only an academic configuration, the results provide
 
 In the context of plane strain conditions, Ma et al. [\citenum{MA2020}] developed an approximate analytical solution for the stresses and the plastic zone boundary around deep twin circular tunnels excavated in a homogeneous elastoplastic medium. The geometric model and initial stress state are the same as those shown in Fig.~\ref{GUO_FIG0}. However, this model does not assume necessarily equal initial stresses, and the initial stress along the tunnel axis is assumed as the middle stress, i.e., $\sigma_{zz} = (\sigma_v+\sigma_h)/2$. For the constitutive model, the authors considered perfectly plastic Mohr-Coulomb criterion with associated plastic flow rule. In this analytical solution, it is assumed that the plastic zones around each tunnel are isolated from each other and completely surround each tunnel.
 
-Denoting by $u_y$ the displacement component along the y-axis, Fig.~\ref{MA_convergence_profile_B} displays the convergence curves $U_B = -u_y(B)/R_t$, that characterize the inward movement at the tunnel roof $B(x = 0, y = R_t, z)$ as a function of normalized longitudinal distance to the excavation face, using the following data: tunnel radius $R_t = 1$ m, rock Young modulus $E =20$ GPa, Poisson ratio $\nu = 0.3$, friction angle $\phi = 30^\circ$, cohesion $c = 5$ MPa and initial stresses $\sigma_v = \sigma_h = 30$ MPa. Several values of normalized distances between the twin tunnels axes $d_1/2R_t$ have been investigated, and the configuration of single tunnel may be viwed as the limiting case $d_1/2R_t \gg 1$. These simulations also utilized symmetry concerning the midplane between the twin tunnels. As expected, this figure indicates that the closer the longitudinal tunnels, the greater the convergence at the roof.
+Denoting by $u_y$ the displacement component along the y-axis, Fig.~\ref{MA_convergence_profile_B} displays the convergence curves $U_B = -u_y(B)/R_t$, that characterize the inward movement at the tunnel roof $B(x = 0, y = R_t, z)$ as a function of normalized longitudinal distance to the excavation face, using the following data: tunnel radius $R_t = 1$ m, rock Young modulus $E =20$ GPa, Poisson ratio $\nu = 0.3$, friction angle $\phi = 30^\circ$, cohesion $c = 5$ MPa and initial stresses $\sigma_v = \sigma_h = 30$ MPa. Several values of normalized distances between the twin tunnels axes $d_1/2R_t$ have been investigated, and the configuration of single tunnel may be viwed as the limiting case $d_1/2R_t \gg 1$. These simulations also utilized symmetry concerning the midplane between the twin tunnels. It can be seen that the effect on the convergence of the roof is more pronounced when $d1/2Rt$ is smaller than $2$.
 
 \begin{figure}[h!]
 	\centering
@@ -486,7 +486,7 @@ Fig.~\ref{MA_FIG1} shows the comparison between the 3D F.E. Solution (from a far
 \end{figure}
 \FloatBarrier
 
-The stresses obtained in the 3D numerical simulation are compared quantitatively in Fig.~\ref{MA_stresspaths} with the stresses derived from the elastoplastic analytical solution in [\citenum{MA2020}]. In this figure, the stresses are given in polar coordinates $(r, \theta = 45^\circ, 90^\circ \text{and} 135^\circ)$. Although the criterion adopted for numerical simulation is the Drucker-Prager inscribed in Mohr-Coulomb, the solution agrees very well with the analytical solution in the plastic zone.
+The stresses obtained in the 3D numerical simulation are compared quantitatively in Fig.~\ref{MA_stresspaths} with the stresses derived from the elastoplastic analytical solution in [\citenum{MA2020}]. This figure shows the radial and orthoradial stresses in polar coordinates $(r,\theta)$ considering three paths $\theta = 45^\circ, 90^\circ \text{~and~} 135^\circ$. Although the criterion adopted for numerical simulation is the Drucker-Prager inscribed in Mohr-Coulomb, the solution agrees very well with the analytical solution in the plastic zone.
 
 \begin{figure}[h!]
 	\centering
@@ -496,9 +496,7 @@ The stresses obtained in the 3D numerical simulation are compared quantitatively
 \end{figure}
 \FloatBarrier
 
-
-
-Fig.~\ref{MA_FIG2} displays the magnitude of displacements $u$ and stresses $\sigma_{rr}, \sigma_{\theta \theta}$ and $\sigma_{zz}$ at the element level for the case with $c=5$ MPa, $d_1=5$ m, $\sigma_h = \sigma_v = 30$ MPa. We adopted a case without excavating the gallery to assess the quality of the mesh. The smoothness observed in the solution between the elements indicates satisfactory discretization.
+As part of the study of mesh convergence, Fig.~\ref{MA_FIG2} shows the magnitude of the displacements $u$ and stresses  $\sigma_{rr}, \sigma_{\theta \theta}$ and $\sigma_{zz}$ at element level in the gallery region for the case with $R_t = 1$ m, $d_1/2R_t = 2.5$, $E = 20GPa$, $\nu = 0.3$ $c=5$ MPa, $\phi = 30^\circ$ and $\sigma_h = \sigma_v = 30$ MPa. The smoothness observed in the solution between the elements indicates satisfactory spatial discretization.
 
 \begin{figure}[h!]
 	\centering
