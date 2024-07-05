@@ -4,7 +4,7 @@
   <settings ppi="96">
     <identity>
       <id>8d8aa970-7ccc-4010-b395-495540aa7675</id>
-      <revision>5</revision>
+      <revision>6</revision>
     </identity>
     <calculation>
       <precision>4</precision>
@@ -39,11 +39,11 @@
         </input>
       </math>
     </region>
-    <region left="153" top="162" width="114" height="24" color="#000000" fontSize="10">
+    <region left="153" top="162" width="90" height="24" color="#000000" fontSize="10">
       <math optimize="2">
         <input>
           <e type="operand">esp</e>
-          <e type="operand">0.0848</e>
+          <e type="operand">0.1</e>
           <e type="operand" style="unit">m</e>
           <e type="operator" args="2">*</e>
           <e type="operator" args="2">:</e>
@@ -66,12 +66,12 @@
       <math>
         <input>
           <e type="operand">nu</e>
-          <e type="operand">0.3</e>
+          <e type="operand">0.2</e>
           <e type="operator" args="2">:</e>
         </input>
       </math>
     </region>
-    <region left="324" top="189" width="181" height="24" color="#000000" fontSize="10">
+    <region left="324" top="189" width="157" height="24" color="#000000" fontSize="10">
       <math>
         <input>
           <e type="operand">Ri</e>
@@ -81,13 +81,13 @@
           <e type="operator" args="2">:</e>
         </input>
         <result action="numeric">
-          <e type="operand">0.9152</e>
+          <e type="operand">0.9</e>
           <e type="operand" style="unit">m</e>
           <e type="operator" args="2">*</e>
         </result>
       </math>
     </region>
-    <region left="153" top="207" width="188" height="41" color="#000000" fontSize="10">
+    <region left="153" top="207" width="148" height="41" color="#000000" fontSize="10">
       <math>
         <input>
           <e type="operand">ratioRe</e>
@@ -97,7 +97,7 @@
           <e type="operator" args="2">:</e>
         </input>
         <result action="numeric">
-          <e type="operand">11.7925</e>
+          <e type="operand">10</e>
         </result>
       </math>
     </region>
@@ -165,7 +165,7 @@
         </result>
       </math>
     </region>
-    <region left="126" top="432" width="436" height="67" color="#000000" fontSize="10">
+    <region left="126" top="432" width="444" height="67" color="#000000" fontSize="10">
       <math>
         <input>
           <e type="operand">Kc</e>
@@ -212,7 +212,7 @@
           <e type="operand" style="unit">MPa</e>
         </contract>
         <result action="numeric">
-          <e type="operand">3059.008</e>
+          <e type="operand">3402.8623</e>
         </result>
       </math>
     </region>
@@ -238,7 +238,7 @@
           <e type="operand" style="unit">MPa</e>
         </contract>
         <result action="numeric">
-          <e type="operand">2823.8758</e>
+          <e type="operand">3156.6026</e>
         </result>
       </math>
     </region>
@@ -295,7 +295,7 @@
           <e type="operator" args="2">:</e>
         </input>
         <result action="numeric">
-          <e type="operand">0.1775</e>
+          <e type="operand">0.2111</e>
           <e type="operand" style="unit">m</e>
           <e type="operator" args="2">*</e>
         </result>

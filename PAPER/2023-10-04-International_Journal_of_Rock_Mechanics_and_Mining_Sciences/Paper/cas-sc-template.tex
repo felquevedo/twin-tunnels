@@ -200,12 +200,13 @@ In the above relationship, $\dstraine$, $\dstrainp$ and $\dstrainv$, represent r
 	\caption{Rheological representation of the elastoplastic-viscoplastic model.}
 	\label{reological_scheme}
 \end{figure}
-In this model is used a Drucker-Prager plastic flow surface given by
+\FloatBarrier
+In the three-dimensional context, the plasticity component of constitutive behavior is described by a Drucker-Prager plastic flow surface given by:
 \begin{equation}
 	\label{eq:f_Drucker_Prager}
 	f(\stress,q) = f(I_1,J_2,q) = \beta_1 I_1 +\beta_2 \sqrt{J_2}-q(\alpha),
 \end{equation}
-which $I_1$ is the first invariant of the stress tensor, $J_2$ the second invariant of the deviator tensor and $\beta_1, \beta_2$ and $q(\alpha)$ are strength parameters related to the friction angle $\phi$ and cohesion $c(\alpha)$, respectively. In the present model Drucker-Prager surface been inner of the Mohr-Coulomb surface [\citenum{bernaud1991}], that is,
+which $I_1$ is the first invariant of the stress tensor, $J_2$ the second invariant of the deviator tensor and $\beta_1, \beta_2$ and $q(\alpha)$ are strength parameters related to the friction angle $\phi$ and cohesion $c(\alpha)$, respectively. Drucker-Prager plasticity surface inscribed to the Mohr-Coulomb surface shall be considered throughout the subsequent analysis [\citenum{bernaud1991}]:
 \begin{equation}
 	\label{eq:f_DP_inscrita_MC}
 	\beta_1 = \dfrac{(k-1)}{3}, ~~~ \beta_2 = \dfrac{(2k+1)}{\sqrt{3}}, ~~~
@@ -401,7 +402,7 @@ This section is aimed at applying the computational modeling to simulate deforma
 
 \subsection{Unlined twin tunnels in elastic medium}
 
-In the context of plane strain conditions, Guo et al. [\citenum{GUO2021}] addressed the configuration of deep twin tunnels excavated in a homogeneous elastic medium in which prevails a hydrostatic initial stress distribution. The authors formulated approximate analytical solutions for the stress distribution establishing far behind the face, which are induced in the rock mass by the excavation of two parallel circular tunnels. The model geometry of the twin circular tunnels as well as the loading associated with initial stress (where $\sigma_h = \sigma_v$) are displayed in Fig.~\ref{GUO_FIG0}.
+In the context of plane strain conditions, Guo et al. [\citenum{GUO2021}] addressed the configuration of deep twin tunnels excavated in a homogeneous elastic medium in which prevails a hydrostatic initial stress distribution. The authors formulated approximate analytical solutions for the stress distribution establishing far behind the face, which are induced in the rock mass by the excavation of two parallel circular tunnels. The model geometry of the twin circular tunnels as well as loading associated with initial hydrostatic stress (i.e., $\sigma_h = \sigma_v$) are displayed in Fig.~\ref{GUO_FIG0}.
 
 Simulation of the problem has been addressed by means of the 3D finite element model and the numerical results obtained for the stress distribution far behind the faces of the twin tunnel shall be compared to the analytical stress solution derived by Guo et al. [\citenum{GUO2021}] in the framework of plane strain conditions. The simulations have been performed taking advantage of symmetry with respect to the midplane between twin tunnels and considering the following model data: tunnel radius $R_t = 4$ m, rock Young modulus $E = 500$ MPa and Poisson ratio $\nu = 0.23$, isotropic initial stresses of $\sigma_v = \sigma_h = 2.2$ MPa.
 \begin{figure}[h!]
@@ -416,12 +417,12 @@ Denoting by $u_y$ the displacement component following the  $y$-axis, Fig.~\ref{
 \begin{figure}[h!]
 	\centering
 	\includegraphics[scale=0.65]{Convergence Profiles in B.pdf}
-	\caption{Convergence profiles in the tunnel roof (point B).}
+	\caption{Convergence profiles at the tunnel roof (point B).}
 	\label{Convergence Profiles in B}
 \end{figure}
 \FloatBarrier
 
-The tunnel deformation anisotropy induced by the twin tunnels proximity is illustrated in Fig.~\ref{Relationship between convergence in B and A}, which plots the ratio $U_B/U_A = u_y(B)/u_x(A)$ between the vertical displacement $u_y$ at the roof B and the horizontal displacement $u_x$ at the side wall  $A(x=R_t, y = 0, z)$. The results refer to a tunnel section located far behind the facing at normalized distance $z/R_t = -25$. They emphasize the significative tunnel ovalization induced by the proximity of twin tunnel as the distance $d_1/2R_t$ decreases. 
+The tunnel deformation anisotropy induced by the twin tunnels proximity is illustrated in Fig.~\ref{Relationship between convergence in B and A}, which plots the ratio $U_B/U_A = u_y(B)/u_x(A)$ between the vertical displacement $u_y$ at the roof B and the horizontal displacement $u_x$ at the side wall  $A(x=R_t, y = 0, z)$. The results shown in this figure refer to a tunnel section located far behind the facing at normalized distance $z/R_t = -25$. They emphasize the significative tunnel ovalization induced by the proximity of twin tunnel as the distance $d_1/2R_t$ decreases. 
 
 \begin{figure}[h!]
 	\centering
@@ -454,55 +455,49 @@ Keeping in mind it addresses only an academic configuration, the results provide
 
 \subsection{Unlined twin tunnels in elastoplastic medium}\label{}
 
-In the context of plane strain conditions, Ma et al. [\citenum{MA2020}] developed an approximate analytical solution for the stresses and the plastic zone boundary around deep twin circular tunnels excavated in a homogeneous elastoplastic medium. The geometric model and initial stress state are the same as those shown in Fig.~\ref{GUO_FIG0}. However, this model does not assume necessarily equal initial stresses, and the initial stress along the tunnel axis is assumed as the middle stress, i.e., $\sigma_{zz} = (\sigma_v+\sigma_h)/2$. For the constitutive model, the authors considered perfectly plastic Mohr-Coulomb criterion with associated plastic flow rule. In this analytical solution, it is assumed that the plastic zones around each tunnel are isolated from each other and completely surround each tunnel.
 
-Denoting by $u_y$ the displacement component along the y-axis, Fig.~\ref{MA_convergence_profile_B} displays the convergence curves $U_B = -u_y(B)/R_t$, that characterize the inward movement at the tunnel roof $B(x = 0, y = R_t, z)$ as a function of normalized longitudinal distance to the excavation face, using the following data: tunnel radius $R_t = 1$ m, rock Young modulus $E =20$ GPa, Poisson ratio $\nu = 0.3$, friction angle $\phi = 30^\circ$, cohesion $c = 5$ MPa and initial stresses $\sigma_v = \sigma_h = 30$ MPa. Several values of normalized distances between the twin tunnels axes $d_1/2R_t$ have been investigated, and the configuration of single tunnel may be viewed as the limiting case $d_1/2R_t \gg 1$. These simulations also utilized symmetry concerning the midplane between the twin tunnels. It can be seen that the effect on the convergence of the roof is more pronounced when $d1/2Rt$ is smaller than $2$.
+In the analysis developed by Ma et al. [\citenum{MA2020}], an approximate analytical solution has been formulated for the stresses and the plastic zone boundary around deep twin circular tunnels excavated in a homogeneous elastoplastic medium. The approach carried out under the assumption of plane strain condition makes use of the conformal transformation in the complex variable method to transform the solution of the elastic-plastic interfaces into the determination of the mapping function coefficients.
+
+The geometry model and boundary loading conditions associated with the initial stress state are the same as depicted Fig.~\ref{GUO_FIG0}. Unlike the configuration studied in the preceding section, anisotropic initial stress distributions defined by $\sigma_h \neq \sigma_v$ shall be considered in the present analysis. As regards the rock constitutive model, an elastic-perfectly plastic behavior defined by a Mohr-Coulomb criterion with associated plastic flow rule has been adopted in the study.  Furthermore, the formulation of stress solution for twin tunnels configuration was based on the premise that the plastic zone around each tunnel completely encloses the tunnel edge and the two plastic zones are not connected.
+
+For the comparison purposes, numerical simulations are carried out by means of the 3D finite element model with the aim to investigate the effect of twin tunnels proximity on the tunnel wall deformation. The following model data has been considered in the F.E simulations: tunnel radius $R_t = 1$ m, rock Young modulus $E = 20$ GPa, Poisson ratio $\nu =$ 0.3, friction angle $\phi = 30^\circ$, cohesion $c = 5$ MPa or $2.5$ MPa, initial vertical stress $\sigma_v =30$ MPa or $40$ MPa, initial horizontal stress $\sigma_h = 30$ MPa or $40$ MPa. The simulation took advantage symmetry with respect to the midplane between the twin tunnels has been used for in the F.E discretization model.
+
+Similarly to the analysis developed in the preceding section, the convergence curves $U_B=-u_y(B)/R_t$, which reflects the inward movement at the tunnel roof $B(x=0, y=R_t, z)$, is depicted in Fig.~\ref{MA_convergence_profile_B} as a function of normalized longitudinal distance to the tunnel face. Several values of normalized distances between the twin tunnels axes $d_1/2R_t$ have been investigated, together with the reference configuration of single tunnel, the latter being viewed as the limiting case $d_1/2R_t \gg 1$. As it could be expected from such simulations, this figure indicates that the proximity of tunnels significantly increases the convergence at the tunnel roof for small values, say $d_1/2R_t < 2$, of twin tunnel spacing. However, this effect rapidly become negligible as soon as the tunnel spacing increases.
 
 \begin{figure}[h!]
 	\centering
 	\includegraphics[scale=0.65]{MA_Convergence Profiles in B.pdf}
-	\caption{Convergence profiles in the tunnel roof (point B).}.
+	\caption{Convergence profiles at the tunnel roof (point B): $c=5$ MPa, $\sigma_v = \sigma_h = 30$ MPa.}
 	\label{MA_convergence_profile_B}
 \end{figure}
 \FloatBarrier
 
-The tunnel deformation anisotropy induced by the twin tunnels proximity is illustrated in Fig.~\ref{MA_Relationship between convergence in B and A}, which plots the ratio $U_B/U_A = u_y(B)/u_x(A)$ between the vertical displacement $u_y$ at the roof B and the horizontal displacement $u_x$ at the side wall  $A(x=R_t, y = 0, z)$. The results refer to a tunnel section located far behind the facing at normalized distance $z/R_t = -35$. They emphasize the significative tunnel ovalization induced by the proximity of twin tunnel as the distance $d_1/2R_t$ decreases. In this case, the horizontal displacement in the tunnel side wall in A is greater than the vertical displacement in the tunnel roof in B, indicating an ovalization along the tunnel's vertical axis.
+An important feature of the twin tunnels deformation is related to the anisotropy induced by the mutual interaction as the normalized tunnel spacing $d_1/2R_t$ decreases. In that respect, anisotropy of tunnel deformation is illustrated in Fig.~\ref{MA_Relationship between convergence in B and A}, which presents the variations of the ratio $U_B/U_A = u_y(B)/u_x(A)$ between the vertical displacement $u_y$ at the roof $B$ and the horizontal displacement $u_x$ at the side wall $A(x = R_t, y = 0, z)$ as a function of  normalized twin tunnel spacing $d_1/2R_t$. These results refer to a tunnel section located far behind the facing at normalized distance $z/R_t = -35$. As observed in the elastic case studied in the preceding section, the proximity of twin tunnels reflected by small values of normalized distance $d_1/2R_t$ is responsible for tunnel ovalization. The magnitude of horizontal displacement at the side wall $A$ is actually larger in than that of vertical displacement at the tunnel roof $B$, thus indicating an ovalization in the vertical direction (i.e., parallel to $y$-axis).
 
 \begin{figure}[h!]
 	\centering
 	\includegraphics[scale=0.65]{MA_Relationship between Convergence in B and A.pdf}
-	\caption{Illustration of the tunnel wall deformation anisotropy induced by twin tunnels proximity.}
+	\caption{Tunnel wall deformation anisotropy induced by twin tunnels proximity: $c=5$ MPa, $\sigma_v = \sigma_h = 30$ MPa.}
 	\label{MA_Relationship between convergence in B and A}
 \end{figure}
 \FloatBarrier
 
-Fig.~\ref{MA_FIG1} shows the comparison between the 3D F.E. Solution (from a far behind the excavation face) and the analytical solution for plastic zone boundary provided in [\citenum{MA2020}]. For these analysis, $R_t = 1$ m, $d_1/2R_t = 2.5$, Young's modulus $E=20$ GPa, Poisson's ratio $\nu = 0.3$ and, friction angle $\phi = 30^\circ$. The boundary of the plastic zone agrees very well with the elements that have reached the plasticity criterion.
+The stress distribution prevailing far from the facing that were obtained from the 3D numerical simulations are compared in the to the approximate stress solutions derived by Ma et al. [\citenum{MA2020}] within the context of plane strain conditions. Fig.~\ref{MA_FIG1} displays such a comparison in terms of predicted plastic zone surrounding the twin tunnels considering a normalized tunnel spacing of $d_1/2R_t = 2.5$.  Different values have been considered for rock cohesion $c$ and initial stresses $\sigma_v$ and $\sigma_h$. It appears from the latter figure that the finite element modeling produces predictions very similar to those provided in \ref{MA_FIG1}. The results also illustrate that larger plastic zones arise when the cohesion $c$ is smaller.
 
 \begin{figure}[h!]
 	\centering
 	\includegraphics[scale=0.7]{MA_Comparisions_plastic_zones.pdf}
-	\caption{Comparisons between the numerical and analytical solution for the plastic zones considering $d_1/2R_t = 2.5$ and $\phi = 30^\circ$ for different initial conditions and cohesion values.}.
+	\caption{The plastic zone extent obtained from the present F.E. simulations and from the stress solution provided in [\citenum{MA2020}].}
 	\label{MA_FIG1}
 \end{figure}
 \FloatBarrier
-
-The stresses obtained in the 3D numerical simulation are compared quantitatively in Fig.~\ref{MA_stresspaths} with the stresses derived from the elastoplastic analytical solution in [\citenum{MA2020}]. This figure shows the radial and orthoradial stresses in polar coordinates $(r,\theta)$ considering three paths $\theta = 45^\circ, 90^\circ \text{~and~} 135^\circ$. Although the criterion adopted for numerical simulation is the Drucker-Prager inscribed in Mohr-Coulomb, the solution agrees very well with the analytical solution in the plastic zone.
+Further comparisons are shown in Fig.~\ref{MA_stresspaths}, which presents the plots of radial $\sigma_{rr}$, and orthoradial $\sigma_{\theta \theta}$ stress components along three radial paths defined in polar coordinates by $\theta = 45^\circ,~90^\circ \text{~and~} 135^\circ$. It should be pointed out that, although the F.E element simulations make use of the Drucker-Prager yield surface inscribed to the Mohr-Coulomb one (used in the solution of Ma et al. \citenum{MA2020}), the numerical predictions are matching well with the analytical stress solution.
 
 \begin{figure}[h!]
 	\centering
 	\includegraphics[scale=0.6]{MA_stresspaths.pdf}
-	\caption{Comparisons between the numerical and analytical solution for differents stress-paths.}.
+	\caption{Distribution of radial and orthoradial stress components along different radial directions: comparison between numerical and analytical predictions.}
 	\label{MA_stresspaths}
-\end{figure}
-\FloatBarrier
-
-As part of the study of mesh convergence, Fig.~\ref{MA_FIG2} shows the magnitude of the displacements $u$ and stresses  $\sigma_{rr}, \sigma_{\theta \theta}$ and $\sigma_{zz}$ at element level in the gallery region for the case with $R_t = 1$ m, $d_1/2R_t = 2.5$, $E = 20GPa$, $\nu = 0.3$ $c=5$ MPa, $\phi = 30^\circ$ and $\sigma_h = \sigma_v = 30$ MPa. The smoothness observed in the solution between the elements indicates satisfactory spatial discretization.
-
-\begin{figure}[h!]
-	\centering
-	\includegraphics[scale=1]{MA_FIG2.pdf}
-	\caption{Element solution with $c=5$ MPa, $d_1=5$ m, $\sigma_v = \sigma_h = 30$ MPa at the junction of the longitudinal tunnel with the gallery from the viewpoint of the symmetry plane $y = 0$}
-	\label{MA_FIG2}
 \end{figure}
 \FloatBarrier
 
