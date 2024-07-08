@@ -385,9 +385,10 @@ For the sake of clearness, the main parameters defining the geometry domain as w
 		\multicolumn{4}{c}{Rest of domain} \\
 		\hline
 		Distance between longitudinal tunnel axes & $d_1$ & m & $4R_t ~8R_t ~16R_t$ \\
+		Total length along vertical direction $\ey$ & $d_3$ & m & $20R_t$ \\
 		Length of the unexcavated region & $L_1$ & m & $10R_t$ \\
 		Total excavated length & $L_2$ & m & $100L_{pt}$ \\
-		Domain height & $L_3$ & m & $20R_t$ \\
+		Total length along transversal direction $\ex$ & $L_3$ & m & $20R_t + d_1/2$ \\
 		\hline
 	\end{tabular}
 	\normalsize
@@ -504,19 +505,14 @@ Further comparisons are shown in Fig.~\ref{MA_stresspaths}, which presents the p
 \section{Numerical Results and Discussion}\label{}
 
 
-To develop the parametric analyses, we employed the constitutive parameters of the clay rock mass in the Paris basin (specifically in Aisne), as detailed in Piepi [\citenum{piepi1995}] and Rousset [\citenum{rousset1988}]. These parameters, shown in Table~\ref{table2}, were derived qualitatively from various axisymmetric triaxial compression tests, including cyclic and creep tests conducted under undrained conditions. Previous research by Giraud [\citenum{GIRAUD1996}] indicates that for Aisne clay rocks, characterized by low porosity (typically less than 20\%), hydromechanical coupling has minimal significance. The delayed effects primarily stem from material viscosity, with a low proportion attributable to pore pressure redistribution (hydraulic diffusion). The material exhibits high density (ranging from 2.01 to 2.57) and a low average water content (between 3 to 11\%). Another characteristic is that irreversible deformations are observed in cyclic tests even at very small values of axial deformation (less than 0.3\%). Furthermore, for confinement values exceeding 10 MPa (approximately the in situ confinement), the maximum deviation remains practically constant, suggesting a Tresca-type failure criterion.
+To develop the parametric analyses, we employed the constitutive parameters of the clay rock mass in the Paris basin (in Aisne, France), as detailed in [\citenum{rousset1988}], [\citenum{giraud1993}] and [\citenum{piepi1995}]. These parameters, shown in Table~\ref{table2}, were derived qualitatively from various axisymmetric triaxial compression tests, including cyclic and creep tests conducted mainly under undrained conditions. The Aisne clay rocks are characterized by low porosity (typically less than 20\%), hydromechanical coupling has minimal significance. The delayed effects primarily stem from material viscosity, with a low proportion attributable to pore pressure redistribution (hydraulic diffusion). The material exhibits high density (ranging from 2.01 to 2.57 g/cm$^3$) and a low average water content (between 3 to 11\%). Another characteristic is that irreversible deformations are observed in cyclic tests even at very small values of axial deformation (less than 0.3\%). Furthermore, for confinement values exceeding 10 MPa (approximately the in situ confinement), the maximum deviation remains practically constant, suggesting a Tresca-type failure criterion.
 
 During creep tests on this material, it was observed that creep deformations are of comparable magnitude to deformations observed during instantaneous tests, and there exists a deviatoric stress threshold beyond which creep phenomena initiate. Moreover, it was found that the influence of confining pressure on creep phenomena can be disregarded. Comparing both behaviors—instantaneous and delayed—reveals that short-term cohesion exceeds long-term cohesion, with the ratio between these two cohesion values ranging between 1.2 and 2.
-
-
-
-%To develop the parametric analyses, we utilized the constitutive parameters of the Paris basin (in Aisne) clay rock mass as outlined in Piepi [\citenum{piepi1995}] and Rousset [\citenum{rousset1988}]. These values qualitatively represent several of axisymmetric triaxial compression tests, including cycle and creep tests in undrained conditions. Previous studies by Giraud [\citenum{GIRAUD1996}] show that, for Aisne rock clays, due to their low porosity (typically less than 20\%), hydromechanical coupling is not very important. The delayed effects are mainly due to the viscosity of the material and the proportion of these effects that can be attributed to pore pressure redistribution (hydraulic diffusion) is low. The density is high (ranging from 2.01 to 2.57), while the average water content remains low (between 3 to 11\%). Another aspect of this material is that in cyclic tests it can be seen that irreversible deformations appear for very small values of axial deformation (less than 0.3\%). Additionally, for confinement values greater than 10MPa (approximately the in situ confinement), the maximum deviation is practically constant, indicating a Tresca-type failure criterion. During creep tests on this material, it was noted that creep deformations are comparable in magnitude to deformations observed during instantaneous tests, and there exists a deviatoric stress threshold beyond which creep phenomena initiate. Furthermore, it was discovered that the influence of confining pressure on creep phenomena can be disregarded. A comparison of both behaviors—instantaneous and delayed—reveals that short-term cohesion surpasses long-term cohesion. The ratio between these two cohesion values ranges between 1.2 and 2.
-
 
 For the lining, we employed typical values for ordinary reinforced concrete. 
 
 These parameters are shown in Table~\ref{table2}. In these analyses the radius is $R_t = 1$ m and excavation speed is 12.5 m/day.
-\begin{table}
+\begin{table}[h!]
 	\caption{Constitutive parameters used in the parametric analysis}
 	\label{table2}
 	\centering
@@ -531,9 +527,9 @@ These parameters are shown in Table~\ref{table2}. In these analyses the radius i
 		\hline
 		\multicolumn{4}{c}{Constitutive model of rock mass} \\
 		\hline
-		Initial stress state (isotropic) & $\sigma_x, \sigma_y, \sigma_z$ & MPa & $9$ \\
+		Initial stress state (isotropic) & $\sigma_h = \sigma_v$ & MPa & $9$ \\
 		Young's modulus & $E$ & MPa & $1500$ \\
-		Poisson's ratio & $\nu$ & - & $0.498$ \\
+		Poisson's ratio & $\nu$ & - & $0.49$ \\
 		Plastic cohesion & $c$ & MPa & 4$\sqrt{3}/2$ \\
 		Plastic friction angle & $\phi$ & $^{\circ}$ & 0 \\
 		Viscoplastic cohesion & $c_{vp}$ & MPa & 2$\sqrt{3}/2$ \\
@@ -551,18 +547,18 @@ These parameters are shown in Table~\ref{table2}. In these analyses the radius i
 		
 		Coefficient which depends on the type of cement & $s$ & - & $0.2$ \\
 		Relative humidity of ambient environment & $RH$ & \% & $70$ \\
-		Notational size of longitudinal tunnel cross-section$^2$ & $h_t$ & cm & $0.2111$ \\
-		Notational size of transverse gallery cross-section$^2$ & $h_{g}$ & cm & $0.2176$ \\
+		Notional size of member - longitudinal concrete lining & $h_t$ & cm & $0.2111$ \\
+		Notional size of member - gallery concrete lining & $h_{g}$ & cm & $0.2176$ \\
 		Age of concrete at the beginning of shrinkage & $t_s$ & days & $7$ \\
 		Coefficient in shrinkage which depends on the type of cement & $\beta_{sc}$ & - & $8$ \\
-		Temperature & $T$ & $^\circ$C & $20^\circ$ \\
+		Temperature & $T$ & $^\circ$C & $20$ \\
 		Age of concrete at loading & $t_0$ & days & $1$ \\
 		\hline
 	\end{tabular}
 	\normalsize
-	\\ \footnotemark[2]{{\footnotesize $h_i= [R_i^2 - (R_i-e_i)^2]/(R_i-e_i)$ where $i = t$ for longitudinal tunnel or $i=g$ for gallery  circular cross-section with internal perimeter in contact with atmosphere.}}
 \end{table}
 \FloatBarrier
+
 In presenting the results, it is necessary to highlight some important points:
 \begin{itemize}[]
 	\item \textbf{Observation 1}: Denoting by $u_y$ the displacement component along the y-axis, all the results presented in the following analyses, show the convergence profiles $U_B = -u_y(B)/R_t$, which characterize the inward movement of the tunnel roof $B(x = 0, y = Rt, z)$ as a function of the normalized longitudinal distance from the excavation face. In addition, point $C(x=0, y =Rt, z = -25)$ was chosen to denote the equilibrium convergence $U_C$ outside the region of influence of the excavation face and the gallery. When the gallery is present, the highest convergence value, $U_{peak}$ is highlighted at the gallery position $D(x=0, y = Rt, z = L_2/2)$. 
@@ -671,9 +667,9 @@ Fig.~\ref{EP-EL-EPVP-VEL-WG-ST-LT} compares the convergence profiles of the elas
 	\label{EP-EL-EPVP-VEL-WG-ST-LT}
 \end{figure}
 \FloatBarrier
-This Figure shows the crucial effect of the viscoelastic lining to the convergence profile of the tunnels. In the short term (ST), the elastoplastic-viscoplastic rock mass (EPVP) with viscoelastic lining (VEL) (dotted lines) shows superior convergences compared to the elastoplastic (EP) model with elastic lining (EL) (solid lines). Because the young age of the viscoelastic lining (VEL) has a lower modulus of elasticity, resulting in lower stiffness. Therefore, compared to the elastic lining (EL), the lower initial value of the modulus of elasticity contributes more to the development of convergence. In the long term (LT), even though the viscoelastic lining (VEL) (dashed lindes) has a higher stiffness due to a aging of lining, the viscous effects over time result in a significantly more discrepant convergence profile compared to the elastoplastic model (EP) with elastic lining (EL) (solid lines). There is a noticeable increase in the magnitude of $U_{peak}$ between the short term and the long term at the gallery position, highlighting the influence of the viscoelastic lining.
+This figure shows the crucial effect of the viscoelastic lining to the convergence profile of the tunnels. In the short term (ST), the elastoplastic-viscoplastic rock mass (EPVP) with viscoelastic lining (VEL) (dotted lines) shows superior convergences compared to the elastoplastic (EP) model with elastic lining (EL) (solid lines). Because the young age of the viscoelastic lining (VEL) has a lower modulus of elasticity, resulting in lower stiffness. Therefore, compared to the elastic lining (EL), the lower initial value of the modulus of elasticity contributes more to the development of convergence. In the long term (LT), even though the viscoelastic lining (VEL) (dashed lindes) has a higher stiffness due to a aging of lining, the viscous effects over time result in a significantly more discrepant convergence profile compared to the elastoplastic model (EP) with elastic lining (EL) (solid lines). There is a noticeable increase in the magnitude of $U_{peak}$ between the short term and the long term at the gallery position, highlighting the influence of the viscoelastic lining.
 
-To study the effect of the lining, Fig.~\ref{EP_d1_16Ri} and \ref{EP_d1_4Ri} show the elastoplastic rock mass (EP) under various conditions: without lining (NL), with a moderately stiff elastic lining ($K_c = 1027$ MPa), and with a highly stiff lining ($K_c = 3660$ MPa) with (WG) and without gallary (NG).
+To study the effect of the lining, Fig.~\ref{EP_d1_16Ri} and \ref{EP_d1_4Ri} show the elastoplastic rock mass (EP) under various conditions: without lining (NL), with a moderately stiff elastic lining ($K_c = 1027$ MPa), and with a highly stiff lining ($K_c = 3660$ MPa) with (WG) and without gallery (NG).
 \begin{figure}[h!]
 	\centering
 	\includegraphics[scale=0.5]{Convergence Profiles - EP_d1_16Ri.pdf}
