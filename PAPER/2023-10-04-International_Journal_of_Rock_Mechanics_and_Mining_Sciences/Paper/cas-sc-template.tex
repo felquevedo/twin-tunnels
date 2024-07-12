@@ -385,10 +385,10 @@ For the sake of clearness, the main parameters defining the geometry domain as w
 		\multicolumn{4}{c}{Rest of domain} \\
 		\hline
 		Distance between longitudinal tunnel axes & $d_1$ & m & $4R_t ~8R_t ~16R_t$ \\
-		Total length along vertical direction $\ey$ & $d_3$ & m & $20R_t$ \\
+		Thickness along vertical direction $\ey$ & $d_3$ & m & $20R_t$ \\
 		Length of the unexcavated region & $L_1$ & m & $10R_t$ \\
 		Total excavated length & $L_2$ & m & $100L_{pt}$ \\
-		Total length along transversal direction $\ex$ & $L_3$ & m & $20R_t + d_1/2$ \\
+		Thickness along transversal direction $\ex$ & $L_3$ & m & $20R_t + d_1/2$ \\
 		\hline
 	\end{tabular}
 	\normalsize
@@ -507,12 +507,10 @@ Further comparisons are shown in Fig.~\ref{MA_stresspaths}, which presents the p
 
 To develop the parametric analyses, we employed the constitutive parameters of the clay rock mass in the Paris basin (in Aisne, France), as detailed in [\citenum{rousset1988}], [\citenum{giraud1993}] and [\citenum{piepi1995}]. These parameters, shown in Table~\ref{table2}, were derived qualitatively from various axisymmetric triaxial compression tests, including cyclic and creep tests conducted mainly under undrained conditions. The Aisne clay rocks are characterized by low porosity (typically less than 20\%), hydromechanical coupling has minimal significance. The delayed effects primarily stem from material viscosity, with a low proportion attributable to pore pressure redistribution (hydraulic diffusion). The material exhibits high density (ranging from 2.01 to 2.57 g/cm$^3$) and a low average water content (between 3 to 11\%). Another characteristic is that irreversible deformations are observed in cyclic tests even at very small values of axial deformation (less than 0.3\%). Furthermore, for confinement values exceeding 10 MPa (approximately the in situ confinement), the maximum deviation remains practically constant, suggesting a Tresca-type failure criterion.
 
-During creep tests on this material, it was observed that creep deformations are of comparable magnitude to deformations observed during instantaneous tests, and there exists a deviatoric stress threshold beyond which creep phenomena initiate. Moreover, it was found that the influence of confining pressure on creep phenomena can be disregarded. Comparing both behaviors—instantaneous and delayed—reveals that short-term cohesion exceeds long-term cohesion, with the ratio between these two cohesion values ranging between 1.2 and 2.
+During creep tests on this material, it was observed that creep deformations are of comparable magnitude to deformations observed during instantaneous tests, and there exists a deviatoric stress threshold beyond which creep phenomena initiate. Moreover, it was found that the influence of confining pressure on creep phenomena can be disregarded. Comparing both behaviors—instantaneous and delayed—reveals that short-term cohesion exceeds long-term cohesion, with the ratio between these two cohesion values ranging between 1.2 and 2. For the lining, we employed typical values for ordinary reinforced concrete. These parameters are shown in Table~\ref{table2}.
 
-For the lining, we employed typical values for ordinary reinforced concrete. 
-
-These parameters are shown in Table~\ref{table2}. In these analyses the radius is $R_t = 1$ m and excavation speed is 12.5 m/day.
-\begin{table}[h!]
+\FloatBarrier
+\begin{table}[H]
 	\caption{Constitutive parameters used in the parametric analysis}
 	\label{table2}
 	\centering
@@ -558,6 +556,8 @@ These parameters are shown in Table~\ref{table2}. In these analyses the radius i
 	\normalsize
 \end{table}
 \FloatBarrier
+
+In these analyses the radius is $R_t = 1$ m and excavation speed is 12.5 m/day.
 
 In presenting the results, it is necessary to highlight some important points:
 \begin{itemize}[]
