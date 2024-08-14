@@ -36,7 +36,7 @@ def graficar(arquivo,                   # nome do arquivo de leitura
     data = pd.read_csv(arquivo,delim_whitespace= True).values
 
     # Definindo as dimensões do layout da figura
-    fig = plt.figure(figura,figsize = (9,5))
+    fig = plt.figure(figura,figsize = (4.5,2.5))
 
     # Eixo x
     if invertx == True:
@@ -145,7 +145,7 @@ def graficarxy(x,y,                   # nome do arquivo de leitura
     #data = pd.read_csv(arquivo,delim_whitespace= True).values
 
     # Definindo as dimensões do layout da figura
-    fig = plt.figure(figura,figsize = (9,5))
+    fig = plt.figure(figura,figsize = (4.5,2.5))
 
     # Eixo x
    # if invertx == True:
@@ -396,7 +396,7 @@ CONVERGENCE PROFILES - UB e UA - D1=4Re LT
 ******************************************** """ 
 # Formatação do gráfico
 figura      = figura+1
-titulo      = 'Convergence Profiles - UB-UA - $d_1=4R_t$'
+titulo      = 'Convergence Profiles - UB-UA - $d_1=4R_t - Lt$'
 eixox       = r'$z/R_t$'  
 eixoy       = r'$U$ [\%]'
 ymin        = ymin_twin_convergence_profile
@@ -573,7 +573,7 @@ CONVERGENCE PROFILES - UB/UA - D1=4Re
 ******************************************** """
 
 figura      = 30
-titulo      = 'Convergence Profiles - UBUA - $d_1=4R_t$'
+titulo      = 'Convergence Profiles - UBUA - $d_1=4R_t - Lt$'
 eixox       = r'$z/R_t$'  
 eixoy       = r'$U_B/U_A$'
 estilo      = 'solid'
@@ -638,7 +638,7 @@ CONVERGENCE PROFILES - UB e UA - D1=4Re ST
 ******************************************** """ 
 # Formatação do gráfico
 figura      = figura+1
-titulo      = 'Convergence Profiles - UB-UA - $d_1=4R_t$'
+titulo      = 'Convergence Profiles - UB-UA - $d_1=4R_t - ST$'
 eixox       = r'$z/R_t$'  
 eixoy       = r'$U$ [\%]'
 ymin        = ymin_twin_convergence_profile
@@ -815,10 +815,10 @@ CONVERGENCE PROFILES - UB/UA - D1=4Re ST
 ******************************************** """
 
 figura      = 32
-titulo      = 'Convergence Profiles - UBUA - $d_1=4R_t$'
+titulo      = 'Convergence Profiles - UBUA - $d_1=4R_t - ST$'
 eixox       = r'$z/R_t$'  
 eixoy       = r'$U_B/U_A$'
-estilo      = 'solid'
+estilo      = 'dashed'
 
 ya = y2/y1
 lblcoluna   = 'EP, EL, SG'
@@ -862,6 +862,166 @@ yd = y8/y7
 lblcoluna   = 'EPVP, VEL, SG, ST'
 cor         = 'red'
 graficarxy(x1,yd,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+
+
+#%% #. CONVERGENCE PROFILES - UB/UA - D1=4Re ST-LT
+""" ********************************************
+CONVERGENCE PROFILES - UB e UA - D1=4Re LT
+******************************************** """ 
+# Formatação do gráfico
+figura      = figura+1
+titulo      = 'Convergence Profiles - UB - $d_1=4R_t - ST_Lt$'
+eixox       = r'$z/R_t$'  
+eixoy       = r'$U_B$ [\%]'
+ymin        = ymin_twin_convergence_profile
+ymax        = ymax_twin_convergence_profile
+xmin        = xmin_twin_profile
+xmax        = xmax_twin_profile
+invertx     = True
+inserirx0   = True
+x0          = x0_twin_profile
+suavizar    = suavizar_twin
+
+# parametros para o filtro de suavização
+filterx1    = filterx1_twin_convergence_profile
+filterx2    = filterx2_twin_convergence_profile
+wl          = wl_twin_convergence_profile
+poly        = poly_twin_convergence_profile
+
+
+modelo      = 'EP_CRE_SG_D1_4RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
+lblcoluna   = 'EP, EL, SG'
+cor         = 'blue'
+tamanho     = 2
+ordem       = 3
+alpha       = 1
+estilo      = 'solid'
+x1 , y1 = graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'VP_CRE_SG_D1_4RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
+lblcoluna   = 'VP, EL, SG, LT'
+cor         = 'orange'
+tamanho     = 2
+ordem       = 3
+alpha       = 1
+estilo      = 'solid'
+x3 , y3 = graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'VP_CRE_SG_D1_4RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunafinalexcavation[modelo]
+lblcoluna   = 'VP, EL, SG, ST'
+cor         = 'orange'
+tamanho     = 2
+ordem       = 3
+alpha       = 1
+estilo      = 'dashed'
+x4 , y4 = graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+# parametros para o filtro de suavização
+filterx1    = filterx1_twin_convergence_profile
+filterx2    = filterx2_twin_convergence_profile
+wl          = wl_twin_convergence_profile
+poly        = poly_twin_convergence_profile
+
+modelo      = 'EPVP_CRE_SG_D1_4RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
+lblcoluna   = 'EPVP, EL, SG, LT'
+cor         = 'black'
+tamanho     = 2
+ordem       = 3
+alpha       = 1
+estilo      = 'solid'
+x5 , y5 = graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'EPVP_CRE_SG_D1_4RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunafinalexcavation[modelo]
+lblcoluna   = 'EPVP, EL, SG, ST'
+cor         = 'black'
+tamanho     = 2
+ordem       = 3
+alpha       = 1
+estilo      = 'dashed'
+x6 , y6 = graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+
+modelo      = 'EPVP_CRVE_SG_D1_4RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunalongterm[modelo]
+lblcoluna   = 'EPVP, VEL, SG, LT'
+cor         = 'red'
+tamanho     = 2
+ordem       = 3
+alpha       = 1
+estilo      = 'solid'
+x7 , y7 = graficar(arquivo,titulo,eixox,eixoy,
+          xmin,xmax,ymin,ymax,
+          ncoluna,lblcoluna,
+          cor,tamanho,ordem,alpha,estilo,
+          invertx,
+          inserirx0,x0,
+          suavizar,filterx1,filterx2,wl,poly,
+          figura)
+
+modelo      = 'EPVP_CRVE_SG_D1_4RE_3D'
+arquivo     = modelo + '\convergencias_90.txt'
+ncoluna     = dicncolunafinalexcavation[modelo]
+lblcoluna   = 'EPVP, VEL, SG, ST'
+cor         = 'red'
+tamanho     = 2
+ordem       = 3
+alpha       = 1
+estilo      = 'dashed'
+x8 , y8 = graficar(arquivo,titulo,eixox,eixoy,
           xmin,xmax,ymin,ymax,
           ncoluna,lblcoluna,
           cor,tamanho,ordem,alpha,estilo,
