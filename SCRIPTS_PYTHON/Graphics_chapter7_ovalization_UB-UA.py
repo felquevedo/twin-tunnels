@@ -423,7 +423,7 @@ cor         = 'blue'
 tamanho     = 1
 ordem       = 3
 alpha       = 1
-estilo      = 'solid'
+estilo      = 'dashed'
 x1 , y1 = graficar(arquivo,titulo,eixox,eixoy,
           xmin,xmax,ymin,ymax,
           ncoluna,lblcoluna,
@@ -441,7 +441,7 @@ cor         = 'blue'
 tamanho     = 1
 ordem       = 3
 alpha       = 1
-estilo      = 'dashed'
+estilo      = 'solid'
 x2 , y2 = graficar(arquivo,titulo,eixox,eixoy,
           xmin,xmax,ymin,ymax,
           ncoluna,lblcoluna,
@@ -459,7 +459,7 @@ cor         = 'orange'
 tamanho     = 1
 ordem       = 3
 alpha       = 1
-estilo      = 'solid'
+estilo      = 'dashed'
 x3 , y3 = graficar(arquivo,titulo,eixox,eixoy,
           xmin,xmax,ymin,ymax,
           ncoluna,lblcoluna,
@@ -477,7 +477,7 @@ cor         = 'orange'
 tamanho     = 1
 ordem       = 3
 alpha       = 1
-estilo      = 'dashed'
+estilo      = 'solid'
 x4 , y4 = graficar(arquivo,titulo,eixox,eixoy,
           xmin,xmax,ymin,ymax,
           ncoluna,lblcoluna,
@@ -501,7 +501,7 @@ cor         = 'black'
 tamanho     = 1
 ordem       = 3
 alpha       = 1
-estilo      = 'solid'
+estilo      = 'dashed'
 x5 , y5 = graficar(arquivo,titulo,eixox,eixoy,
           xmin,xmax,ymin,ymax,
           ncoluna,lblcoluna,
@@ -519,7 +519,7 @@ cor         = 'black'
 tamanho     = 1
 ordem       = 3
 alpha       = 1
-estilo      = 'dashed'
+estilo      = 'solid'
 x6 , y6 = graficar(arquivo,titulo,eixox,eixoy,
           xmin,xmax,ymin,ymax,
           ncoluna,lblcoluna,
@@ -538,7 +538,7 @@ cor         = 'red'
 tamanho     = 1
 ordem       = 3
 alpha       = 1
-estilo      = 'solid'
+estilo      = 'dashed'
 x7 , y7 = graficar(arquivo,titulo,eixox,eixoy,
           xmin,xmax,ymin,ymax,
           ncoluna,lblcoluna,
@@ -556,7 +556,7 @@ cor         = 'red'
 tamanho     = 1
 ordem       = 3
 alpha       = 1
-estilo      = 'dashed'
+estilo      = 'solid'
 x8 , y8 = graficar(arquivo,titulo,eixox,eixoy,
           xmin,xmax,ymin,ymax,
           ncoluna,lblcoluna,
@@ -576,7 +576,7 @@ figura      = 30
 titulo      = 'Convergence Profiles - UBUA - $d_1=4R_t - Lt$'
 eixox       = r'$z/R_t$'  
 eixoy       = r'$U_B/U_A$'
-estilo      = 'solid'
+estilo      = 'dashed'
 
 ya = y2/y1
 lblcoluna   = 'EP, EL, SG'
@@ -665,7 +665,7 @@ cor         = 'blue'
 tamanho     = 1
 ordem       = 3
 alpha       = 1
-estilo      = 'solid'
+estilo      = 'dashed'
 x1 , y1 = graficar(arquivo,titulo,eixox,eixoy,
           xmin,xmax,ymin,ymax,
           ncoluna,lblcoluna,
@@ -683,7 +683,7 @@ cor         = 'blue'
 tamanho     = 1
 ordem       = 3
 alpha       = 1
-estilo      = 'dashed'
+estilo      = 'solid'
 x2 , y2 = graficar(arquivo,titulo,eixox,eixoy,
           xmin,xmax,ymin,ymax,
           ncoluna,lblcoluna,
@@ -701,7 +701,7 @@ cor         = 'orange'
 tamanho     = 1
 ordem       = 3
 alpha       = 1
-estilo      = 'solid'
+estilo      = 'dashed'
 x3 , y3 = graficar(arquivo,titulo,eixox,eixoy,
           xmin,xmax,ymin,ymax,
           ncoluna,lblcoluna,
@@ -719,7 +719,7 @@ cor         = 'orange'
 tamanho     = 1
 ordem       = 3
 alpha       = 1
-estilo      = 'dashed'
+estilo      = 'solid'
 x4 , y4 = graficar(arquivo,titulo,eixox,eixoy,
           xmin,xmax,ymin,ymax,
           ncoluna,lblcoluna,
@@ -743,7 +743,7 @@ cor         = 'black'
 tamanho     = 1
 ordem       = 3
 alpha       = 1
-estilo      = 'solid'
+estilo      = 'dashed'
 x5 , y5 = graficar(arquivo,titulo,eixox,eixoy,
           xmin,xmax,ymin,ymax,
           ncoluna,lblcoluna,
@@ -761,7 +761,7 @@ cor         = 'black'
 tamanho     = 1
 ordem       = 3
 alpha       = 1
-estilo      = 'dashed'
+estilo      = 'solid'
 x6 , y6 = graficar(arquivo,titulo,eixox,eixoy,
           xmin,xmax,ymin,ymax,
           ncoluna,lblcoluna,
@@ -780,7 +780,7 @@ cor         = 'red'
 tamanho     = 1
 ordem       = 3
 alpha       = 1
-estilo      = 'solid'
+estilo      = 'dashed'
 x7 , y7 = graficar(arquivo,titulo,eixox,eixoy,
           xmin,xmax,ymin,ymax,
           ncoluna,lblcoluna,
@@ -798,7 +798,7 @@ cor         = 'red'
 tamanho     = 1
 ordem       = 3
 alpha       = 1
-estilo      = 'dashed'
+estilo      = 'solid'
 x8 , y8 = graficar(arquivo,titulo,eixox,eixoy,
           xmin,xmax,ymin,ymax,
           ncoluna,lblcoluna,
@@ -818,7 +818,7 @@ figura      = 32
 titulo      = 'Convergence Profiles - UBUA - $d_1=4R_t - ST$'
 eixox       = r'$z/R_t$'  
 eixoy       = r'$U_B/U_A$'
-estilo      = 'dashed'
+estilo      = 'solid'
 
 ya = y2/y1
 lblcoluna   = 'EP, EL, SG'
@@ -905,7 +905,7 @@ cor         = 'blue'
 tamanho     = 1
 ordem       = 3
 alpha       = 1
-estilo      = 'solid'
+estilo      = 'dashed'
 x1 , y1 = graficar(arquivo,titulo,eixox,eixoy,
           xmin,xmax,ymin,ymax,
           ncoluna,lblcoluna,
@@ -923,7 +923,7 @@ cor         = 'orange'
 tamanho     = 1
 ordem       = 3
 alpha       = 1
-estilo      = 'solid'
+estilo      = 'dashed'
 x3 , y3 = graficar(arquivo,titulo,eixox,eixoy,
           xmin,xmax,ymin,ymax,
           ncoluna,lblcoluna,
@@ -941,7 +941,7 @@ cor         = 'orange'
 tamanho     = 1
 ordem       = 3
 alpha       = 1
-estilo      = 'dashed'
+estilo      = 'solid'
 x4 , y4 = graficar(arquivo,titulo,eixox,eixoy,
           xmin,xmax,ymin,ymax,
           ncoluna,lblcoluna,
@@ -965,7 +965,7 @@ cor         = 'black'
 tamanho     = 1
 ordem       = 3
 alpha       = 1
-estilo      = 'solid'
+estilo      = 'dashed'
 x5 , y5 = graficar(arquivo,titulo,eixox,eixoy,
           xmin,xmax,ymin,ymax,
           ncoluna,lblcoluna,
@@ -983,7 +983,7 @@ cor         = 'black'
 tamanho     = 1
 ordem       = 3
 alpha       = 1
-estilo      = 'dashed'
+estilo      = 'solid'
 x6 , y6 = graficar(arquivo,titulo,eixox,eixoy,
           xmin,xmax,ymin,ymax,
           ncoluna,lblcoluna,
@@ -1002,7 +1002,7 @@ cor         = 'red'
 tamanho     = 1
 ordem       = 3
 alpha       = 1
-estilo      = 'solid'
+estilo      = 'dashed'
 x7 , y7 = graficar(arquivo,titulo,eixox,eixoy,
           xmin,xmax,ymin,ymax,
           ncoluna,lblcoluna,
@@ -1020,7 +1020,7 @@ cor         = 'red'
 tamanho     = 1
 ordem       = 3
 alpha       = 1
-estilo      = 'dashed'
+estilo      = 'solid'
 x8 , y8 = graficar(arquivo,titulo,eixox,eixoy,
           xmin,xmax,ymin,ymax,
           ncoluna,lblcoluna,

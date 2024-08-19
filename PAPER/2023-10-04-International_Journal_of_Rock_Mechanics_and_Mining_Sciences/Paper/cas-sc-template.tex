@@ -504,15 +504,11 @@ Further comparisons are shown in Fig.~\ref{MA_stresspaths}, which presents the p
 
 \section{Numerical Results and Discussion}\label{}
 
-The constitutive parameters of the clay rock mass of the eastern Paris basin (in Aisne, France), as detailed in [\citenum{rousset1988}], [\citenum{giraud1993}] and [\citenum{piepi1995}] and shown in Table~\ref{table2}, are used in the following parametric analysis. These parameters are derived qualitatively from various triaxial compression tests, including creep tests conducted mainly in undrained conditions. The Aisne clay rocks are characterized by low porosity (typically less then 20\%), therefore, hydromechanical coupling has minimal significance. The longterm effects primarily stem from material viscosity, with a low proportion attributable to pore pressure redistribution (hydraulic diffusion). The material exhibits high density (ranging from 2.01 to 2.57 g/cm$^3$) and a low average water content (between 3 to 11\%). Another characteristic is that irreversible deformations are observed in cyclic tests even at very small values of axial deformation (less than 0.3\%). Furthermore, for in situ confinement values (approximaly 450 m deep), the maximum deviation remains practically constant, suggesting a Tresca-type failure criterion. In the creep tests, it was observed that creep deformations are of comparable magnitude to deformations observed during instantaneous tests, and there exists a deviatoric stress threshold beyond which creep phenomena initiate. Moreover, the influence of confining pressure on creep phenomena can be disregarded and comparing both behaviors, instantaneous and delayed, reveals that short-term cohesion exceeds long-term cohesion, with the ratio between these two cohesion values ranging between 1.2 and 2.
+The parametric analysis uses the constitutive parameters of the clay rock mass of the eastern Paris basin (Aisne, France), as detailed in [\citenum{rousset1988}], [\citenum{giraud1993}] and [\citenum{piepi1995}] and summarized in Table~\ref{table2}. The parameter values are derived qualitatively from various triaxial compression tests, including creep tests conducted mainly in undrained conditions. The Aisne clay rocks are characterized by low porosity (typically less then 20\%), therefore, hydromechanical coupling has minimal significance. The longterm effects primarily stem from material viscosity, with a low proportion attributable to pore pressure redistribution (hydraulic diffusion). The material exhibits high density (2.01 to 2.57 g/cm$^3$) and a low average water content (between 3 to 11\%). Another characteristic is that irreversible deformations are observed in cyclic tests even at very small values of axial deformation (less than 0.3\%). Furthermore, for in situ confinement values (approximaly 450 m deep), the maximum deviation remains practically constant, suggesting a Tresca-type failure criterion. In the creep tests, the magnitude of delayed deformations is comparable to that observed during instantaneous tests, with a deviatoric stress threshold beyond which creep phenomena initiate. Moreover, the influence of confining pressure on creep phenomena can be disregarded, and comparing both behaviors, instantaneous and delayed, reveals that short-term cohesion exceeds long-term cohesion, with the ratio between these two cohesion values ranging from 1.2 and 2. 
 
-Table~\ref{table2} also shows the constitutive parameters used in the lining. Typical values for reinforced concrete are used. For the elastic analyses, Young's modulus at 28 days is used, while for the visous analyses, Young's modulus evolves over time as the lining ages. Each section of the coating has an age that starts counting from the moment it is activated in the analysis. In the constitutive model, the age at which shrinkage begins and the age at which loading begins are given as x and y, respectively.
+Table~\ref{table2} also presents the constitutive parameters for the lining, based on typical values for reinforced concrete. For the elastic analyses, Young's modulus at 28 days is employed. In the viscoelastic analyses, however, Young's modulus evolves as the lining ages. Each segment of the lining begins aging from the moment it is activated during the construction process. The effect of shrinkage begins at the age of $t_s = 7$ days and creep begins at the age of loading, at $t_0 = 1$ day.
 
-
-For the lining, we employed typical values for ordinary reinforced concrete. These parameters are shown in Table~\ref{table2}.
-
-\FloatBarrier
-\begin{table}[H]
+\begin{table}[h!]
 	\caption{Constitutive parameters used in the parametric analysis}
 	\label{table2}
 	\centering
@@ -527,7 +523,6 @@ For the lining, we employed typical values for ordinary reinforced concrete. The
 		\hline
 		\multicolumn{4}{c}{Constitutive model of rock mass} \\
 		\hline
-		Initial stress state (isotropic) & $\sigma_h = \sigma_v$ & MPa & $9$ \\
 		Young's modulus & $E$ & MPa & $1500$ \\
 		Poisson's ratio & $\nu$ & - & $0.49$ \\
 		Plastic cohesion & $c$ & MPa & 4$\sqrt{3}/2$ \\
@@ -559,32 +554,10 @@ For the lining, we employed typical values for ordinary reinforced concrete. The
 \end{table}
 \FloatBarrier
 
-In these analyses the radius is $R_t = 1$ m and excavation speed is 12.5 m/day.
+In this study, an initial hydrostatic stress of 9 MPa, corresponding to a depth of 450 m, is adopted, reflecting the conditions of the rock mass characterization. The study examines the long-term and short-term convergence profiles using various constitutive models for the rock mass (elastic, elastoplastic, and viscoplastic) and the lining (elastic, and viscoelastic), including scenarios without lining. For the sake of clarity, Table~\ref{table3} shows the abbreviations used in the results legends. These analyses are conducted for three different distances between the longitudinal tunnels ($d_1 = 4R_t$, $8R_t$, and $16R_t$), using a tunnel radius $R_t=1$ m and an excavation speed of 12.5 m/day. The other geometric parameters for the domain, excavation, and lining installation are presented in Table~\ref{table1}.
 
-In presenting the results, it is necessary to highlight some important points:
-\begin{itemize}[]
-	\item \textbf{Observation 1}: Denoting by $u_y$ the displacement component along the y-axis, all the results presented in the following analyses, show the convergence profiles $U_B = -u_y(B)/R_t$, which characterize the inward movement of the tunnel roof $B(x = 0, y = Rt, z)$ as a function of the normalized longitudinal distance from the excavation face. In addition, point $C(x=0, y =Rt, z = -25)$ was chosen to denote the equilibrium convergence $U_C$ outside the region of influence of the excavation face and the gallery. When the gallery is present, the highest convergence value, $U_{peak}$ is highlighted at the gallery position $D(x=0, y = Rt, z = L_2/2)$. 
- 
-	\item \textbf{Observation 2}: In single tunnels, under rock mass isotropy and initial stress state conditions, the symmetry of the tunnel wall is preserved throughout the excavation process. Thus, the deformed tunnel wall remains circular. On the other hand, one of the effects of the mutual interaction induced by the proximity of the twin tunnels is the loss of symmetry of the deformed tunnel wall. Fig.~\ref{Ovalization effect and monitoring point} presents tunnel roof B and the effect of ovalization due to the proximity of the tunnels. In this context, $U_B$ is not representative of the entire deformation of the tunnel wall.
-	
-	\item \textbf{Observation 3}: Referring to the material properties shown in Table~\ref{table2}, the value adopted for plastic cohesion ($c$) is higher than the value for viscoplastic cohesion ($c_{vp}$): $c$ > $c_{vp}$. This implies that in the regime of irreversible deformations, the viscoplasticity of the material will be activated first. The generic configurations of the deformation zones of the rock mass throughout the excavation process are illustrated in Fig.~\ref{zones}.
-\end{itemize}
-\begin{figure}[h!]
-	\centering
-	\includegraphics[scale=0.6]{Ovalization effect and monitoring point.pdf}
-	\caption{Monitoring point and ovalization effect}
-	\label{Ovalization effect and monitoring point}
-\end{figure}
 \FloatBarrier
-\begin{figure}[h!]
-	\centering
-	\includegraphics[scale=0.6]{zones.pdf}
-	\caption{Configurations for the zones with irreversible deformations in the rock mass}
-	\label{zones}
-\end{figure}
-\FloatBarrier
-Table~\ref{table3} presents the abbreviation to read the title and legend of the results.
-\begin{table}
+\begin{table}[h!]
 	\caption{Abbreviation to the title and legend of the results}
 	\label{table3}
 	\centering
@@ -611,7 +584,28 @@ Table~\ref{table3} presents the abbreviation to read the title and legend of the
 	\normalsize
 \end{table}
 \FloatBarrier
-Figs.~\ref{WG-ST-LT-D1-16RI}, \ref{WG-ST-LT-D1-8RI}, and \ref{WG-ST-LT-D1-4RI} show the convergence profiles of the twin tunnels with gallery (WG) for all the constitutive models of the rock mass (E - blue, EP - yellow, VP - magenta, EPVP - red) and the lining (EL and VEL) in the short-term (solid lines) and the long-term (dashed lines), for $d_1 = 16R_t, 8R_t$ and $4R_t$ respectively.
+
+Denoting by $u_y$ the displacement component along the y-axis, all the results presented in the following analyses, show the convergence profile $U_B = -u_y(B)/R_t$, which characterize the inward movement of the tunnel roof $B(x = 0, y = R_t, z)$ as a function of the normalized longitudinal distance from the excavation face. In addition, point $C(x=0, y =R_t, z = -25)$ was chosen to denote the equilibrium convergence $U_C$ outside the region of influence of the excavation face and the gallery. When the gallery is present, the highest convergence value, $U_{peak}$ is highlighted at the center of gallery position $D(x=0, y = R_t, z = L_2/2)$.
+
+An important observation is that in single tunnels, under rock mass isotropy and hidrostatic initial stress state conditions, the symmetry of the tunnel wall is preserved throughout the excavation process. Thus, the deformed tunnel wall remains circular. On the other hand, one of the effects of the mutual interaction induced by the proximity of the twin tunnels is the loss of symmetry of the deformed tunnel wall. Fig.~\ref{Ovalization effect and monitoring point} presents tunnel roof B and the effect of ovalization due to the proximity of the tunnels. In this context, $U_B$ is not representative of the entire deformation of the tunnel wall.
+\begin{figure}[h!]
+	\centering
+	\includegraphics[scale=0.5]{Ovalization effect and monitoring point.pdf}
+	\caption{Monitoring point and ovalization effect}
+	\label{Ovalization effect and monitoring point}
+\end{figure}
+\FloatBarrier
+
+Another important observation regarding the material properties shown in Table~\ref{table2} is that the value adopted for plastic cohesion ($c$) is greater than the value for viscoplastic cohesion ($c_{vp}$): $c$ > $c_{vp}$. This implies that, in the regime of irreversible deformations, the viscoplasticity of the material will be activated first. The generic configurations of the rock mass deformation zones during the excavation process are illustrated in Fig.~\ref{zones}.
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[scale=0.6]{zones.pdf}
+	\caption{Configurations for the zones with irreversible deformations in the rock mass}
+	\label{zones}
+\end{figure}
+
+Figs.~\ref{WG-ST-LT-D1-16RI}, \ref{WG-ST-LT-D1-8RI}, and \ref{WG-ST-LT-D1-4RI} show the convergence profiles of the twin tunnels with gallery (WG) for all the constitutive models of the rock mass (E - blue, EP - yellow, VP - magenta, EPVP - red) and the lining (EL and VEL) in the short-term (ST - solid lines) and the long-term (LT - dashed lines), for $d_1 = 16R_t, 8R_t$ and $4R_t$ respectively.
 \begin{figure}[h!]
 	\centering
 	\includegraphics[scale=0.9]{Convergence Profiles - WG_ST_LT - $d_1=16R_i$_anotate.pdf}
@@ -633,23 +627,24 @@ Figs.~\ref{WG-ST-LT-D1-16RI}, \ref{WG-ST-LT-D1-8RI}, and \ref{WG-ST-LT-D1-4RI} s
 	\label{WG-ST-LT-D1-4RI}
 \end{figure}
 \FloatBarrier
-In all $d_1$ distances, the convergence profiles of the E-EL model (blue dashed line) and the VP-EL (magenta solid line) in the short-term (ST) are equivalent, probably due to the high excavation speed. The high speed of the excavation and installation of the lining limits the time for the viscous effects to manifest themselves also taking into account the restriction imposed by the stiffness of the lining.
+In all $d_1$ distances, the convergence profiles of the E-EL models (blue dashed line) and the VP-EL (magenta solid line) in the short-term (ST) are equivalent, due to the high excavation speed. The high speed of the excavation and installation of the lining limits the time for the viscous effects to manifest themselves also taking into account the restriction imposed by the stiffness of the lining.
 
-In the short-term (ST), the EPVP-EL model (green solid line) is equivalent to the EP-EL (yellow dashed line) because, although plasticization around the section has already occurred due to excavation, the viscous effects have not yet evolved considerably due to the short time variation between the start of excavation and the end of the excavation process. After the long-term convergence occurs (green dashed line) are a difference. However, when the rheological effect of the lining is present, the profile continues to evolve considerably over the long-term, for example, EPVP-VEL (red solid and dashed line).
+In the short-term (ST), the EPVP-EL model (green solid line) is equivalent to the EP-EL (yellow dashed line) because, although plasticization around the section has already occurred due to excavation, the viscous effects have not yet evolved considerably due to the short time between the start and end of excavation process. However, in the long term (LT), as convergence continues (dashed green line), differences become apparent. When the rheological effects of the lining are considered, the profile continues to evolve significantly, as seen in the EPVP-VEL model (solid and dashed red lines).
 
-It's worth noting that the stiffness of the elastic lining significantly impedes the evolution of convergence due to viscous effects, particularly evident in the VP-EL model with $d_1=4R_t$ (magenta solid and dashed line). In this scenario, the interaction between nearby twin tunnels causes a substantial rise in the value of $U_{eq}$ in the short-term (ST). However, the profile in the long-term (LT) practically remains unchanged, staying close to the short-term due to the limitation imposed by the stiffness of the lining.
+An important aspect is that the stiffness of the elastic lining significantly impeded the evolution of convergence under viscous effects. This is particularly evident in the VP-EL model with $d_1=4R_t$ (solid and dashed magenta line). In this case, the interaction between nearby twin tunnels causes a substantial increase in the value of $U_{C}$ in the short term (ST). However, the long-term profile (LT) hardly changes, remaining close to the short-term one due to the limitation imposed by the stiffness of the lining.
 
-Another noteworthy aspect is that the EPVP-VEL model with $d_1 = 16R_t$ (red dashed line) experiences a reduction in $U_{eq}$ convergence after 15 excavation steps ($n_{pig}$) following the gallery. This phenomenon is due to the evolving viscous effects of the already-excavated longitudinal tunnel during the gallery excavation. This effect becomes more pronounced with $d_1 = 16R_t$. When the gallery is smaller ($d_1 = 8R_t$ and $4R_t$), the time elapsed is shorter, and this effect is less pronounced.
+Another noteworthy aspect is that the EPVP-VEL model with $d_1 = 16R_t$ (red dashed line) has a reduction in $U_{B}$ convergence after 15 excavation steps ($n_{pig}$) from the gallery. This phenomenon is due to the evolving viscous effects of the already-excavated longitudinal tunnel during the gallery excavation. This effect becomes more pronounced with $d_1 = 16R_t$ which spends the longest time excavating the gallery. When the gallery is smaller ($d_1 = 8R_t$ and $4R_t$), the time elapsed is shorter, and this effect is less pronounced.
 
-Note another aspect: the EPVP-EL-LT (green solid line) model converges slightly lower than the EVP-EL-ST (green dashed line) model with $d_1 = 4R_t$. The ovalization effect is responsible for the crown's convergence decreasing over time. However, another point in the section experiences an increase in convergence. Fig.~\ref{ovalization} illustrates this effect away from the gallery region with a single tunnel reference.
+The effect of ovalization can also be seen in the convergence profile. The EPVP-EL-LT model (green solid line) has a slightly lower convergence than the EPVP-EL-ST (green dashed line) for $d_1 = 4R_t$. The ovalization effect is responsible for the roof's convergence decreasing over time. However, another point in the tunnel wall experiences an increase in convergence. Fig.~\ref{ovalization} illustrates this effect away from the gallery region with a single tunnel reference.
+
 \begin{figure}[h!]
 	\centering
-	\includegraphics[scale=0.5]{ovalization.pdf}
+	\includegraphics[scale=0.4]{ovalization.pdf}
 	\caption{Ovalization effect for $d_1 = 4R_t$ with deformations magnified 50x}
 	\label{ovalization}
 \end{figure}
 \FloatBarrier
-Figs.~\ref{UB-UAUB-D1_4RT} show ovalization effect for $d_1 = 4R_t$.
+Figs.~\ref{UB-UAUB-D1_4RT} show ovalization effect $U_B/U_A = u_y(B)/u_x(A)$ between the vertical displacement $u_y$ at the roof B and the horizontal displacement $u_x$ at the side wall $A(x=R_t,y=0,z)$, for $d_1 = 4R_t$ without gallery. The effect is more pronounced in the short term.
 \begin{figure}[h!]
 	\centering
 	\includegraphics[scale=0.65]{Convergence Profiles - UB - UAUB - $d_1=4R_t - ST_Lt$.pdf}
@@ -657,7 +652,10 @@ Figs.~\ref{UB-UAUB-D1_4RT} show ovalization effect for $d_1 = 4R_t$.
 	\label{UB-UAUB-D1_4RT}
 \end{figure}
 \FloatBarrier
-Fig.~\ref{VP-EL-EPVP-VEL-WG-LT} compares the convergence profiles of the viscoplastic rock mass (VP) with elastic lining (EL) models (solid lines) with the elasto-plastic-viscoplastic rock mass (EPVP) with elastic (EL) and viscoelastic lining (VEL) models in the long-term (LT) (dashed lines and dot lines, respectively). As a reference, it also shows the results for a single tunnel (black lines).
+Fig.~\ref{VP-EL-EPVP-VEL-WG-LT} shows the convergence profiles for $d_1 = 16R_t, 8R_t$ and $4R_t$ (yellow, green and red lines, respectively) with viscous constitutive models: viscoplastic rock mass with elastic lining (VP-EL - solid lines), elasto-plastic-viscoplastic rock mass with elastic lining (EPVP-EL - dashed line) and viscoelastic lining (EPVP-VEL - dotted lines). As a reference, it also shows the results of a single tunnel (black lines). A slight increase in the peak value of convergence $U_{peak}$ can be seen for the EPVP-VEL model when comparing $d_1 = 16R_t$ (yellow dotted line) and $d_1 = 8R_t$ (green dotted line). In the case of $d_1 = 8R_t$, the proximity of the tunnel compensates the convergence difference due the gallery excavation eplapsed time between $d_1 = 8R_t$ and $16 R_t$. However, when $d_1 = 4R_t$ (red  dotted line) the effect of the gallery is more pronounced due to the interaction between the proximity of the twin tunnels and the viscous effect. 
+
+Moreover, it is possible to observe greater convergence in the convergence profile before the gallery, specifically, in the EPVP-VEL model for $d_1 = 8R_t$ and $d_1 = 16R_t$ (green and yellow dotted lines). This effect is due to the viscoelastic behavior of the lining and elapsed time to excavate the gallery. Unlike the highly rigid elastic lining, the viscoelastic lining allows the convergence to evolve during the excavation of the gallery. Consequently, the values of convergences before the gallery tend to be higher than after the gallery.
+
 \begin{figure}[h!]
 	\centering
 	\includegraphics[scale=0.9]{Convergence Profiles - VP_EPVP_EL_VEL_WG_LT_anotate.pdf}
@@ -665,11 +663,9 @@ Fig.~\ref{VP-EL-EPVP-VEL-WG-LT} compares the convergence profiles of the viscopl
 	\label{VP-EL-EPVP-VEL-WG-LT}
 \end{figure}
 \FloatBarrier
-Figure \ref{VP-EL-EPVP-VEL-WG-LT} shows a slight increase in the peak value of convergence $U_{peak}$ for the EPVP-VEL model when comparing $d_1 = 16R_t$ (dotted yellow line) and $d_1 = 8R_t$ (dotted green line). In the case of $d_1 = 8R_t$, the proximity of the tunnel compensates the convergence difference due the gallery excavation eplapsed time between $d_1 = 8R_t$ and $16 R_t$. However, when $d_1 = 4R_t$ (dotted red line) the effect of the gallery is more pronounced due to the interaction between the proximity of the twin tunnels and the viscous effect. 
 
-Moreover, one can observe a more pronounced effect in the section before the gallery, specifically at the plateau of the convergence profile, in the EPVP-VEL model for $d_1 = 8R_t$ and $d_1 = 16R_t$ (green and yellow dotted lines). This effect is due to the viscoelastic behavior of the lining and elapsed time to excavate the gallery. Unlike the highly rigid elastic lining, the viscoelastic lining allows the convergence to evolve during the excavation of the gallery. Consequently, the values of convergences before the gallery tend to be higher than after the gallery.
+Fig.~\ref{EP-EL-EPVP-VEL-WG-ST-LT} shows the convergence profiles for $d_1 = 16R_t, 8R_t$ and $4R_t$ (yellow, green and red lines, respectively) with elastoplastic rock mass with elastic lining (EP-EL - solid lines), elasto-plastic-viscoplastic rock mass with viscoelastic lining in short term (EPVP-VEL-ST - dotted lines) and long term (EPVP-VEL-LT - dashed lines). As a reference, it also shows the results of a single tunnel (black lines). 
 
-Fig.~\ref{EP-EL-EPVP-VEL-WG-ST-LT} compares the convergence profiles of the elastoplastic rock mass (EP) and elastic lining (EL) models (solid lines) with the elasto-plastic-viscoplastic rock mass (EPVP) and viscoelastic lining (VEL) models in the short-term (ST) (dot lines) and long-term (LT) (dahed lines). As a reference, it also shows the results for a single tunnel (black lines).
 \begin{figure}[h!]
 	\centering
 	\includegraphics[scale=0.9]{Convergence Profiles - EP_EL_EPVP_VEL_WG_ST_LT_anotate.pdf}
@@ -677,6 +673,10 @@ Fig.~\ref{EP-EL-EPVP-VEL-WG-ST-LT} compares the convergence profiles of the elas
 	\label{EP-EL-EPVP-VEL-WG-ST-LT}
 \end{figure}
 \FloatBarrier
+
+
+%PAREI AQUI
+
 This figure shows the crucial effect of the viscoelastic lining to the convergence profile of the tunnels. In the short term (ST), the elastoplastic-viscoplastic rock mass (EPVP) with viscoelastic lining (VEL) (dotted lines) shows superior convergences compared to the elastoplastic (EP) model with elastic lining (EL) (solid lines). Because the young age of the viscoelastic lining (VEL) has a lower modulus of elasticity, resulting in lower stiffness. Therefore, compared to the elastic lining (EL), the lower initial value of the modulus of elasticity contributes more to the development of convergence. In the long term (LT), even though the viscoelastic lining (VEL) (dashed lindes) has a higher stiffness due to a aging of lining, the viscous effects over time result in a significantly more discrepant convergence profile compared to the elastoplastic model (EP) with elastic lining (EL) (solid lines). There is a noticeable increase in the magnitude of $U_{peak}$ between the short term and the long term at the gallery position, highlighting the influence of the viscoelastic lining.
 
 To study the effect of the lining, Fig.~\ref{EP_d1_16Ri} and \ref{EP_d1_4Ri} show the elastoplastic rock mass (EP) under various conditions: without lining (NL), with a moderately stiff elastic lining ($K_c = 969$ MPa), and with a highly stiff lining ($K_c = 3403$ MPa) with (WG) and without gallery (NG).
