@@ -7,7 +7,7 @@
    viewBox="0 0 183.38222 112.55066"
    version="1.1"
    id="svg5"
-   inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
+   inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
    sodipodi:docname="Zones.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
@@ -28,10 +28,10 @@
      showgrid="false"
      inkscape:zoom="0.8409652"
      inkscape:cx="260.41506"
-     inkscape:cy="445.91619"
-     inkscape:window-width="1680"
-     inkscape:window-height="987"
-     inkscape:window-x="1672"
+     inkscape:cy="446.51075"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
      inkscape:current-layer="g6124-0" />
@@ -2127,7 +2127,7 @@
            style="font-size:5.64444px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.999999"
            x="46.045742"
            y="54.394279"
-           id="tspan5749-8">Elasto-plastic-viscoplastic</tspan><tspan
+           id="tspan5749-8">Elastoplastic-viscoplastic</tspan><tspan
            sodipodi:role="line"
            style="font-size:5.64444px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.999999"
            x="46.045742"

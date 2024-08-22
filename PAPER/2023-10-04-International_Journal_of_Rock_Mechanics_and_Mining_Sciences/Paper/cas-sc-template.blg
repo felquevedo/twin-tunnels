@@ -5,12 +5,12 @@ Reallocating 'name_of_file' (item size: 1) to 17 items.
 The style file: model3-num-names.bst
 Reallocating 'name_of_file' (item size: 1) to 9 items.
 Database file #1: cas-refs.bib
-I was expecting a `,' or a `}'---line 61 of file cas-refs.bib
+I was expecting a `,' or a `}'---line 31 of file cas-refs.bib
  :  
  :  DOI   = {http://dx.doi.org/10.4417/IJGCH-02-01-03},
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 275 of file cas-refs.bib
+I was expecting a `,' or a `}'---line 138 of file cas-refs.bib
  :  
  :  doi  ={https://doi.org/10.1007/s10706-020-01587-w}
 (Error may have been on previous line)
@@ -24,45 +24,45 @@ Name 1 in "Quevedo, F. P. M., and Bernaud, D. and Maghous, S." has a comma at th
 while executing---line 1685 of file model3-num-names.bst
 Name 1 in "Quevedo, F. P. M., and Bernaud, D. and Maghous, S." has a comma at the end for entry quevedo2022b
 while executing---line 1685 of file model3-num-names.bst
-You've used 37 entries,
+You've used 38 entries,
             3138 wiz_defined-function locations,
-            913 strings with 13061 characters,
-and the built_in function-call counts, 31162 in all, are:
-= -- 2630
-> -- 628
-< -- 29
-+ -- 344
-- -- 166
-* -- 3407
-:= -- 3912
-add.period$ -- 144
-call.type$ -- 37
-change.case$ -- 199
-chr.to.int$ -- 33
-cite$ -- 38
-duplicate$ -- 2818
-empty$ -- 2785
-format.name$ -- 284
-if$ -- 6245
+            920 strings with 13222 characters,
+and the built_in function-call counts, 31610 in all, are:
+= -- 2658
+> -- 635
+< -- 30
++ -- 348
+- -- 168
+* -- 3446
+:= -- 3975
+add.period$ -- 148
+call.type$ -- 38
+change.case$ -- 203
+chr.to.int$ -- 34
+cite$ -- 39
+duplicate$ -- 2861
+empty$ -- 2831
+format.name$ -- 287
+if$ -- 6332
 int.to.chr$ -- 5
-int.to.str$ -- 38
-missing$ -- 364
-newline$ -- 229
-num.names$ -- 108
-pop$ -- 697
+int.to.str$ -- 39
+missing$ -- 373
+newline$ -- 235
+num.names$ -- 111
+pop$ -- 717
 preamble$ -- 1
-purify$ -- 185
+purify$ -- 190
 quote$ -- 0
-skip$ -- 610
+skip$ -- 623
 stack$ -- 0
-substring$ -- 2873
-swap$ -- 1398
+substring$ -- 2885
+swap$ -- 1422
 text.length$ -- 6
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 218
+type$ -- 222
 warning$ -- 1
-while$ -- 134
+while$ -- 136
 width$ -- 0
-write$ -- 596
+write$ -- 611
 (There were 5 error messages)
