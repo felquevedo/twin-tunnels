@@ -46,6 +46,7 @@
   tunnel intersections}.
 \newblock \bibinfo{journal}{Geotechnical and Geological Engineering}
   \bibinfo{year}{2021}{\natexlab{a}};\bibinfo{volume}{39}:\bibinfo{pages}{1771--1793}.
+\newblock \DOIprefix\doi{https://doi.org/10.1007/s10706-020-01587-w}.
 %Type = Article
 \bibitem[{Chortis and Kavvadas(2021{\natexlab{b}})}]{chortis2021b}
 \bibinfo{author}{Chortis\xfnm[ F.]}, \bibinfo{author}{Kavvadas\xfnm[ M.]}.

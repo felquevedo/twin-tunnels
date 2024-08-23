@@ -5,16 +5,6 @@ Reallocating 'name_of_file' (item size: 1) to 17 items.
 The style file: model3-num-names.bst
 Reallocating 'name_of_file' (item size: 1) to 9 items.
 Database file #1: cas-refs.bib
-I was expecting a `,' or a `}'---line 31 of file cas-refs.bib
- :  
- :  DOI   = {http://dx.doi.org/10.4417/IJGCH-02-01-03},
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 138 of file cas-refs.bib
- :  
- :  doi  ={https://doi.org/10.1007/s10706-020-01587-w}
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
 Name 1 in "Quevedo, F. P. M., and Bernaud, D. and Maghous, S." has a comma at the end for entry quevedo2022b
 while executing---line 1591 of file model3-num-names.bst
 Reallocating 'wiz_functions' (item size: 4) to 6000 items.
@@ -26,16 +16,16 @@ Name 1 in "Quevedo, F. P. M., and Bernaud, D. and Maghous, S." has a comma at th
 while executing---line 1685 of file model3-num-names.bst
 You've used 38 entries,
             3138 wiz_defined-function locations,
-            920 strings with 13222 characters,
-and the built_in function-call counts, 31610 in all, are:
-= -- 2658
+            921 strings with 13264 characters,
+and the built_in function-call counts, 31625 in all, are:
+= -- 2661
 > -- 635
 < -- 30
 + -- 348
 - -- 168
-* -- 3446
-:= -- 3975
-add.period$ -- 148
+* -- 3449
+:= -- 3977
+add.period$ -- 149
 call.type$ -- 38
 change.case$ -- 203
 chr.to.int$ -- 34
@@ -43,20 +33,20 @@ cite$ -- 39
 duplicate$ -- 2861
 empty$ -- 2831
 format.name$ -- 287
-if$ -- 6332
+if$ -- 6335
 int.to.chr$ -- 5
 int.to.str$ -- 39
 missing$ -- 373
-newline$ -- 235
+newline$ -- 236
 num.names$ -- 111
-pop$ -- 717
+pop$ -- 715
 preamble$ -- 1
 purify$ -- 190
 quote$ -- 0
-skip$ -- 623
+skip$ -- 624
 stack$ -- 0
 substring$ -- 2885
-swap$ -- 1422
+swap$ -- 1423
 text.length$ -- 6
 text.prefix$ -- 0
 top$ -- 0
@@ -64,5 +54,5 @@ type$ -- 222
 warning$ -- 1
 while$ -- 136
 width$ -- 0
-write$ -- 611
-(There were 5 error messages)
+write$ -- 613
+(There were 3 error messages)
