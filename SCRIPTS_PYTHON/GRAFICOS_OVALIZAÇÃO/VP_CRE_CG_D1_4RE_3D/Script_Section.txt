@@ -1,0 +1,106 @@
+!************************************************************!
+!****_ Cria arquivos deformada da seção localizada a zf _****!
+!************************************************************!
+RESUME,file,db
+
+/POST1
+!
+! selecionando os nós na interface entre revestimento e o maciço
+zf = lt-25*Lp
+teta = 180
+CSYS,1,
+ALLSEL,ALL
+NSEL,R,LOC,X,Re-0.01,Re+0.01
+NSEL,R,LOC,Y,0,teta
+NSEL,R,LOC,Z,zf,zf
+NSLE,R,CORNER
+CSYS,0
+!
+! sistemas de referencias dos resultados
+RSYS,0
+!
+! dimensionando arrays
+nanalises = 0
+*GET,nanalises,ACTIVE,0,SET,NSET	  ! pegando o número de análises								 
+*GET,ncount,NODE,,COUNT			  ! pegando numero máximo de nós selecionados
+*GET,ntotal,NODE,,NUM,MAX		  ! pegando numero total de nós
+
+*DIM,convergence_x,TABLE,ncount,3+nanalises ! dimensionando tabela de convergencias
+*DIM,convergence_y,TABLE,ncount,3+nanalises	  ! dimensionando tabela de pressões em x
+
+*DIM,coordx,ARRAY,ntotal		  ! dimensionando vetor de coordenadas nodais
+*DIM,coordy,ARRAY,ntotal		  ! dimensionando vetor de coordenadas nodais
+
+*DIM,u_x,ARRAY,ntotal			  ! dimensionando vetor de deslocamentos em x
+*DIM,u_y,ARRAY,ntotal			  ! dimensionando vetor de pressões em x
+*DIM,n_sel,ARRAY,ntotal			  ! dimensionando vetor que indica se o nó está selecionado
+!
+! coloca lista de nós em ordem na primeira coluna
+*VGET,convergence_x(1,1),NODE,,NLIST
+*VGET,convergence_y(1,1),NODE,,NLIST
+!
+! criando vetor de coordenadas
+*VGET,n_sel(1),NODE,1,NSEL
+*VGET,coordx(1),NODE,1,LOC,x
+!
+! criando vetor de coordenadas
+*VGET,n_sel(1),NODE,1,NSEL
+*VGET,coordy(1),NODE,1,LOC,y
+!
+! Preenchendo o convergence com as coordenadas
+*VMASK,n_sel(1)				! usa como mascara os nós selecionados
+*VFUN,convergence_x(1,2),COMP,coordx(1)
+*VMASK,n_sel(1)
+*VFUN,convergence_x(1,3),COMP,coordy(1)
+!
+! Preenchendo o convergence com as coordenadas
+*VMASK,n_sel(1)				! usa como mascara os nós selecionados
+*VFUN,convergence_y(1,2),COMP,coordx(1)
+*VMASK,n_sel(1)
+*VFUN,convergence_y(1,3),COMP,coordy(1)
+!
+! preenchendo o convergence com a convergência
+*DO,i,1,nanalises,1
+	! identifica o passo
+	*IF,i,EQ,nanalises,THEN
+		SUBSET,LAST
+	*ELSE
+		*IF,matmacico,LE,1,AND,matrev,EQ,0,THEN
+			SUBSET,LAST
+		*ELSE
+			SUBSET,i,,,,,,
+		*ENDIF
+	*ENDIF
+	!
+	! Preenchendo o array com os deslocamentos radiais e tensões radiais
+	*VMASK,n_sel(1)
+	*VGET,u_x(1),NODE,1,U,X
+	!
+	*VMASK,n_sel(1)
+	*VGET,u_y(1),NODE,1,U,Y
+	!
+	! Preenchendo o convergence e pressure
+	*VMASK,n_sel(1)
+	*VFUN,convergence_x(1,3+i),COMP,u_x(1)
+	*VMASK,n_sel(1)
+	*VFUN,convergence_y(1,3+i),COMP,u_y(1)
+*ENDDO
+!
+! ordena a tabela de acordo com a segunda coluna (das coordenadas)
+*MOPER,ORDER,convergence_x,SORT,convergence_x(1,2)
+*MOPER,ORDER,convergence_y,SORT,convergence_y(1,2)
+!
+! Escrevendo em arquivo as convergências
+*CREATE,ansuitmp
+*MWRITE,convergence_x,convergencias_x,txt
+(1000(E10.4,3X))
+*END
+/INPUT,ansuitmp
+!
+!
+! Escrevendo em arquivo as convergências
+*CREATE,ansuitmp
+*MWRITE,convergence_y,convergencias_y,txt
+(1000(E10.4,3X))
+*END
+/INPUT,ansuitmp

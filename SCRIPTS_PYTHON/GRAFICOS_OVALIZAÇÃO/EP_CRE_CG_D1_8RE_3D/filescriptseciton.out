@@ -1,0 +1,540 @@
+
+ Ansys Mechanical Enterprise                       
+
+
+ *------------------------------------------------------------------*
+ |                                                                  |
+ |   W E L C O M E   T O   T H E   A N S Y S (R)  P R O G R A M     |
+ |                                                                  |
+ *------------------------------------------------------------------*
+
+
+
+
+ ***************************************************************
+ *            ANSYS 2022 R1          LEGAL NOTICES             *
+ ***************************************************************
+ *                                                             *
+ * Copyright 1971-2022 ANSYS, Inc.  All rights reserved.       *
+ * Unauthorized use, distribution or duplication is            *
+ * prohibited.                                                 *
+ *                                                             *
+ * Ansys is a registered trademark of ANSYS, Inc. or its       *
+ * subsidiaries in the United States or other countries.       *
+ * See the ANSYS, Inc. online documentation or the ANSYS, Inc. *
+ * documentation CD or online help for the complete Legal      *
+ * Notice.                                                     *
+ *                                                             *
+ ***************************************************************
+ *                                                             *
+ * THIS ANSYS SOFTWARE PRODUCT AND PROGRAM DOCUMENTATION       *
+ * INCLUDE TRADE SECRETS AND CONFIDENTIAL AND PROPRIETARY      *
+ * PRODUCTS OF ANSYS, INC., ITS SUBSIDIARIES, OR LICENSORS.    *
+ * The software products and documentation are furnished by    *
+ * ANSYS, Inc. or its subsidiaries under a software license    *
+ * agreement that contains provisions concerning               *
+ * non-disclosure, copying, length and nature of use,          *
+ * compliance with exporting laws, warranties, disclaimers,    *
+ * limitations of liability, and remedies, and other           *
+ * provisions.  The software products and documentation may be *
+ * used, disclosed, transferred, or copied only in accordance  *
+ * with the terms and conditions of that software license      *
+ * agreement.                                                  *
+ *                                                             *
+ * ANSYS, Inc. is a UL registered                              *
+ * ISO 9001:2015 company.                                      *
+ *                                                             *
+ ***************************************************************
+ *                                                             *
+ * This product is subject to U.S. laws governing export and   *
+ * re-export.                                                  *
+ *                                                             *
+ * For U.S. Government users, except as specifically granted   *
+ * by the ANSYS, Inc. software license agreement, the use,     *
+ * duplication, or disclosure by the United States Government  *
+ * is subject to restrictions stated in the ANSYS, Inc.        *
+ * software license agreement and FAR 12.212 (for non-DOD      *
+ * licenses).                                                  *
+ *                                                             *
+ ***************************************************************
+
+ 2022 R1 
+     
+ Point Releases and Patches installed:   
+     
+ ANSYS, Inc. License Manager 2022 R1 
+ Discovery 2022 R1   
+ SpaceClaim 2022 R1  
+ Ansys Sherlock 2022 R1  
+ Autodyn 2022 R1 
+ LS-DYNA 2022 R1 
+ CFX (includes CFD-Post) 2022 R1 
+ Chemkin 2022 R1 
+ EnSight 2022 R1 
+ FENSAP-ICE 2022 R1  
+ Fluent (includes CFD-Post) 2022 R1  
+ Polyflow (includes CFD-Post) 2022 R1
+ Forte (includes EnSight) 2022 R1
+ TurboGrid 2022 R1   
+ ICEM CFD 2022 R1
+ Aqwa 2022 R1
+ Speos 2022 R1   
+ Additive 2022 R1
+ Customization Files for User Programmable Features 2022 R1  
+ Mechanical Products 2022 R1 
+ Icepak (includes CFD-Post) 2022 R1  
+ ACIS Geometry Interface 2022 R1 
+ AutoCAD Geometry Interface 2022 R1  
+ Catia, Version 4 Geometry Interface 2022 R1 
+ Catia, Version 5 Geometry Interface 2022 R1 
+ Catia, Version 6 Geometry Interface 2022 R1 
+ Creo Elements/Direct Modeling Geometry Interface 2022 R1
+ Creo Parametric Geometry Interface 2022 R1  
+ Inventor Geometry Interface 2022 R1 
+ JTOpen Geometry Interface 2022 R1   
+ NX Geometry Interface 2022 R1   
+ Parasolid Geometry Interface  2022 R1   
+ Solid Edge Geometry Interface 2022 R1   
+ SOLIDWORKS Geometry Interface 2022 R1   
+
+
+          *****  ANSYS COMMAND LINE ARGUMENTS  *****
+  INITIAL JOBNAME              = file                                                                                                                                                                                                                                                    
+  BATCH MODE REQUESTED (-b)    = LIST
+  INPUT FILE COPY MODE (-c)    = COPY
+  SHARED MEMORY PARALLEL REQUESTED
+    SINGLE PROCESS WITH  24 THREADS REQUESTED
+    TOTAL OF    24 CORES REQUESTED
+  INPUT FILE NAME              = C:\ANALISES_FINAIS_TUNEIS_CARLOS\EP_CRE_CG_D1_8RE_3D\Script_Section.txt
+  OUTPUT FILE NAME             = C:\ANALISES_FINAIS_TUNEIS_CARLOS\EP_CRE_CG_D1_8RE_3D\filescriptseciton.out
+  START-UP FILE MODE           = READ  
+  STOP FILE MODE               = READ  
+  LANGUAGE                     = en-us               
+  INITIAL DIRECTORY = C:\ANALISES_FINAIS_TUNEIS_CARLOS\EP_CRE_CG_D1_8RE_3D
+
+ User Link path (ANS_USER_PATH): C:\Usermat                                                                                                                                                                                                                                              
+
+ RELEASE= 2022 R1              BUILD= 22.1      UP20211129   VERSION=WINDOWS x64 
+ CURRENT JOBNAME=file  19:46:26  NOV 06, 2023 CP=      0.375
+ Note - This ANSYS version was linked by Licensee
+     1  !************************************************************!  
+     2  !****_ Cria arquivos deformada da seção localizada a zf _****!
+     3  !************************************************************!  
+     4  RESUME,file,db  
+     5      
+     6  /POST1  
+     7  !   
+     8  ! selecionando os nós na interface entre revestimento e o maciço  
+     9  zf = lt-25*Lp   
+    10  teta = 180  
+    11  CSYS,1, 
+    12  ALLSEL,ALL  
+    13  NSEL,R,LOC,X,Re-0.01,Re+0.01
+    14  NSEL,R,LOC,Y,0,teta 
+    15  NSEL,R,LOC,Z,zf,zf  
+    16  NSLE,R,CORNER   
+    17  CSYS,0  
+    18  !   
+    19  ! sistemas de referencias dos resultados
+    20  RSYS,0  
+    21  !   
+    22  ! dimensionando arrays  
+    23  nanalises = 0   
+    24  *GET,nanalises,ACTIVE,0,SET,NSET	  ! pegando o número de análises								 
+    25  *GET,ncount,NODE,,COUNT			  ! pegando numero máximo de nós selecionados   
+    26  *GET,ntotal,NODE,,NUM,MAX		  ! pegando numero total de nós 
+    27      
+    28  *DIM,convergence_x,TABLE,ncount,3+nanalises ! dimensionando tabela de convergencias 
+    29  *DIM,convergence_y,TABLE,ncount,3+nanalises	  ! dimensionando tabela de pressões em x  
+    30      
+    31  *DIM,coordx,ARRAY,ntotal		  ! dimensionando vetor de coordenadas nodais 
+    32  *DIM,coordy,ARRAY,ntotal		  ! dimensionando vetor de coordenadas nodais 
+    33      
+    34  *DIM,u_x,ARRAY,ntotal			  ! dimensionando vetor de deslocamentos em x   
+    35  *DIM,u_y,ARRAY,ntotal			  ! dimensionando vetor de pressões em x   
+    36  *DIM,n_sel,ARRAY,ntotal			  ! dimensionando vetor que indica se o nó está selecionado 
+    37  !   
+    38  ! coloca lista de nós em ordem na primeira coluna  
+    39  *VGET,convergence_x(1,1),NODE,,NLIST
+    40  *VGET,convergence_y(1,1),NODE,,NLIST
+    41  !   
+    42  ! criando vetor de coordenadas  
+    43  *VGET,n_sel(1),NODE,1,NSEL  
+    44  *VGET,coordx(1),NODE,1,LOC,x
+    45  !   
+    46  ! criando vetor de coordenadas  
+    47  *VGET,n_sel(1),NODE,1,NSEL  
+    48  *VGET,coordy(1),NODE,1,LOC,y
+    49  !   
+    50  ! Preenchendo o convergence com as coordenadas  
+    51  *VMASK,n_sel(1)				! usa como mascara os nós selecionados  
+    52  *VFUN,convergence_x(1,2),COMP,coordx(1) 
+    53  *VMASK,n_sel(1) 
+    54  *VFUN,convergence_x(1,3),COMP,coordy(1) 
+    55  !   
+    56  ! Preenchendo o convergence com as coordenadas  
+    57  *VMASK,n_sel(1)				! usa como mascara os nós selecionados  
+    58  *VFUN,convergence_y(1,2),COMP,coordx(1) 
+    59  *VMASK,n_sel(1) 
+    60  *VFUN,convergence_y(1,3),COMP,coordy(1) 
+    61  !   
+    62  ! preenchendo o convergence com a convergência 
+    63  *DO,i,1,nanalises,1 
+    64  	! identifica o passo   
+    65  	*IF,i,EQ,nanalises,THEN
+    66  		SUBSET,LAST   
+    67  	*ELSE  
+    68  		*IF,matmacico,LE,1,AND,matrev,EQ,0,THEN   
+    69  			SUBSET,LAST  
+    70  		*ELSE 
+    71  			SUBSET,i,,,,,,   
+    72  		*ENDIF
+    73  	*ENDIF 
+    74  	!  
+    75  	! Preenchendo o array com os deslocamentos radiais e tensões radiais  
+    76  	*VMASK,n_sel(1)
+    77  	*VGET,u_x(1),NODE,1,U,X
+    78  	!  
+    79  	*VMASK,n_sel(1)
+    80  	*VGET,u_y(1),NODE,1,U,Y
+    81  	!  
+    82  	! Preenchendo o convergence e pressure 
+    83  	*VMASK,n_sel(1)
+    84  	*VFUN,convergence_x(1,3+i),COMP,u_x(1) 
+    85  	*VMASK,n_sel(1)
+    86  	*VFUN,convergence_y(1,3+i),COMP,u_y(1) 
+    87  *ENDDO  
+    88  !   
+    89  ! ordena a tabela de acordo com a segunda coluna (das coordenadas)  
+    90  *MOPER,ORDER,convergence_x,SORT,convergence_x(1,2)  
+    91  *MOPER,ORDER,convergence_y,SORT,convergence_y(1,2)  
+    92  !   
+    93  ! Escrevendo em arquivo as convergências   
+    94  *CREATE,ansuitmp
+    95  *MWRITE,convergence_x,convergencias_x,txt   
+    96  (1000(E10.4,3X))
+    97  *END
+    98  /INPUT,ansuitmp 
+    99  !   
+   100  !   
+   101  ! Escrevendo em arquivo as convergências   
+   102  *CREATE,ansuitmp
+   103  *MWRITE,convergence_y,convergencias_y,txt   
+   104  (1000(E10.4,3X))
+   105  *END
+   106  /INPUT,ansuitmp 
+
+ RUN SETUP PROCEDURE FROM FILE= C:\Program Files\ANSYS Inc\v221\ANSYS\apdl\start.ans
+
+ /INPUT FILE= C:\Program Files\ANSYS Inc\v221\ANSYS\apdl\start.ans  LINE=       0
+
+ RESUME ANSYS DATA FROM FILE NAME=file.db                                                                                                                                                                                                                                                             
+
+ *** NOTE ***                            CP =       2.375   TIME= 19:46:28
+ The initial memory allocation (-m) has been exceeded.                   
+  Supplemental memory allocations are being used.                        
+
+ Memory resident data base increased from      1024 MB to      2048 MB.
+
+ *** ANSYS GLOBAL STATUS *** 
+
+ TITLE =  Re=1 matmacico=6 E1=1500 pr=%pr% matrev=1 E2=30303.3845 vp=12.5      
+ ANALYSIS TYPE =  STATIC (STEADY-STATE)
+ NUMBER OF ELEMENT TYPES =      2
+    182996 ELEMENTS CURRENTLY SELECTED.  MAX ELEMENT NUMBER =      182996
+    203425 NODES CURRENTLY SELECTED.     MAX NODE NUMBER =         203425
+       271 KEYPOINTS CURRENTLY SELECTED. MAX KEYPOINT NUMBER =        271
+       658 LINES CURRENTLY SELECTED.     MAX LINE NUMBER =            658
+       519 AREAS CURRENTLY SELECTED.     MAX AREA NUMBER =            519
+       136 VOLUMES CURRENTLY SELECTED.   MAX VOL. NUMBER =            136
+       266 COMPONENTS CURRENTLY DEFINED
+ MAXIMUM LINEAR PROPERTY NUMBER        =     110
+ ACTIVE COORDINATE SYSTEM              =       0  (CARTESIAN)  
+ NUMBER OF SPECIFIED CONSTRAINTS       =   17643
+ NUMBER OF SPECIFIED SURFACE LOADS     =    3703
+ CURRENT LOAD CASE =      0 OF      0
+ LOAD SET   =     108
+ SUBSTEP    =       2
+ TIME/FREQ  =    2.8800    
+
+ INITIAL JOBNAME = file
+ CURRENT JOBNAME = file
+
+ *** ANSYS - ENGINEERING ANALYSIS SYSTEM  RELEASE 2022 R1          22.1     ***
+ Ansys Mechanical Enterprise                       
+ 00000000  VERSION=WINDOWS x64   19:46:30  NOV 06, 2023 CP=      3.562
+
+  Re=1 matmacico=6 E1=1500 pr=%pr% matrev=1 E2=30303.3845 vp=12.5              
+
+ Note - This ANSYS version was linked by Licensee
+
+          ***** ANSYS RESULTS INTERPRETATION (POST1) *****
+
+ *** NOTE ***                            CP =       3.562   TIME= 19:46:30
+ Reading results into the database (SET command) will update the current 
+ displacement and force boundary conditions in the database with the     
+ values from the results file for that load set.  Note that any          
+ subsequent solutions will use these values unless action is taken to    
+ either SAVE the current values or not overwrite them (/EXIT,NOSAVE).    
+
+ PARAMETER ZF =     35.00000000    
+
+ PARAMETER TETA =     180.0000000    
+
+ ACTIVE COORDINATE SYSTEM SET TO          1  (CYLINDRICAL) Z- CYL. AXIS
+
+ SELECT ALL ENTITIES OF TYPE= ALL  AND BELOW
+
+ RESELECT     FOR ITEM=LOC  COMPONENT=X     BETWEEN 0.99000     AND   1.0100    
+   KABS=  0.  TOLERANCE= 0.200000E-09
+
+       5916  NODES (OF     203425  DEFINED) SELECTED BY  NSEL  COMMAND.
+
+ RESELECT     FOR ITEM=LOC  COMPONENT=Y     BETWEEN  0.0000     AND   180.00    
+   KABS=  0.  TOLERANCE= 0.180000E-05
+
+       5916  NODES (OF     203425  DEFINED) SELECTED BY  NSEL  COMMAND.
+
+ RESELECT     FOR ITEM=LOC  COMPONENT=Z     BETWEEN  35.000     AND   35.000    
+   KABS=  0.  TOLERANCE= 0.175000    
+
+         33  NODES (OF     203425  DEFINED) SELECTED BY  NSEL  COMMAND.
+
+ RESELECT    ALL NODES HAVING ANY ELEMENT IN ELEMENT SET.
+ CONSIDER ONLY CORNER NODES
+
+         33 NODES (OF     203425  DEFINED) SELECTED FROM
+   182996 SELECTED ELEMENTS BY NSLE COMMAND.
+
+ ACTIVE COORDINATE SYSTEM SET TO          0  (CARTESIAN)  
+
+ RSYS KEY SET TO   0
+
+ USE THE GLOBAL COORDINATE SYSTEM FOR SOLUTION RESULTS
+
+ PARAMETER NANALISES =     0.000000000    
+
+ *GET  NANALISES  FROM  ACTI  ITEM=SET  NSET  VALUE=  109.000000    
+
+ *GET  NCOUNT    FROM  NODE  ITEM=COUN       VALUE=  33.0000000     
+
+ *GET  NTOTAL    FROM  NODE  ITEM=NUM  MAX   VALUE=  4361.00000     
+
+ SET PARAMETER DIMENSIONS ON  CONVERGENCE_X
+  TYPE=TABL  DIMENSIONS=       33      112        1
+                              
+
+ SET PARAMETER DIMENSIONS ON  CONVERGENCE_Y
+  TYPE=TABL  DIMENSIONS=       33      112        1
+                              
+
+ SET PARAMETER DIMENSIONS ON  COORDX TYPE=ARRA  DIMENSIONS=  4361     1     1
+
+ SET PARAMETER DIMENSIONS ON  COORDY TYPE=ARRA  DIMENSIONS=  4361     1     1
+
+ SET PARAMETER DIMENSIONS ON  U_X TYPE=ARRA  DIMENSIONS=  4361     1     1
+
+ SET PARAMETER DIMENSIONS ON  U_Y TYPE=ARRA  DIMENSIONS=  4361     1     1
+
+ SET PARAMETER DIMENSIONS ON  N_SEL TYPE=ARRA  DIMENSIONS=  4361     1     1
+
+ VECTOR GET OPERATION  convergence_x(1,1)  VECTOR LENGTH=      33
+ NAME= NODE         0  NLIS      
+
+ VECTOR GET OPERATION  convergence_y(1,1)  VECTOR LENGTH=      33
+ NAME= NODE         0  NLIS      
+
+ VECTOR GET OPERATION  n_sel(1)  VECTOR LENGTH=    4361
+ NAME= NODE         1  NSEL      
+
+ VECTOR GET OPERATION  coordx(1)  VECTOR LENGTH=    4361
+ NAME= NODE         1  LOC   X   
+
+ VECTOR GET OPERATION  n_sel(1)  VECTOR LENGTH=    4361
+ NAME= NODE         1  NSEL      
+
+ VECTOR GET OPERATION  coordy(1)  VECTOR LENGTH=    4361
+ NAME= NODE         1  LOC   Y   
+
+ SET MASK VECTOR TO  N_SEL(1:4361)
+
+ VECTOR PARAMETER OPERATION *VFUN   
+  convergence_x(1,2) = COMP  coordx(1)
+ VECTOR LENGTH=      33
+
+ SET MASK VECTOR TO  N_SEL(1:4361)
+
+ VECTOR PARAMETER OPERATION *VFUN   
+  convergence_x(1,3) = COMP  coordy(1)
+ VECTOR LENGTH=      33
+
+ SET MASK VECTOR TO  N_SEL(1:4361)
+
+ VECTOR PARAMETER OPERATION *VFUN   
+  convergence_y(1,2) = COMP  coordx(1)
+ VECTOR LENGTH=      33
+
+ SET MASK VECTOR TO  N_SEL(1:4361)
+
+ VECTOR PARAMETER OPERATION *VFUN   
+  convergence_y(1,3) = COMP  coordy(1)
+ VECTOR LENGTH=      33
+
+ *DO LOOP ON PARAMETER= I FROM  1.0000     TO  109.00     BY  1.0000    
+
+ *IF  i                                 ( =   1.00000     )  EQ  
+      nanalises                         ( =   109.000     )  THEN    
+
+ *ELSE
+
+ *IF  matmacico                         ( =   6.00000     )  LE  
+      1                                 ( =   1.00000     )          
+ *****  AND   *****
+      matrev                            ( =   1.00000     )  EQ  
+      0                                 ( =   0.00000     )  THEN    
+
+ *ELSE
+
+ STORE RESULTS DATA FOR THE CURRENTLY SELECTED MODEL
+ USE LOAD STEP     1  SUBSTEP  LAST    FOR LOAD CASE 0 
+
+ SET COMMAND GOT LOAD STEP=     1  SUBSTEP=     6  CUMULATIVE ITERATION=    12
+   TIME/FREQUENCY= 0.80000E-01
+ TITLE=  Re=1 matmacico=6 E1=1500 pr=%pr% matrev=1 E2=30303.3845 vp=12.5        
+
+ *ENDIF
+
+ *ENDIF
+
+ SET MASK VECTOR TO  N_SEL(1:4361)
+
+ VECTOR GET OPERATION  u_x(1)  VECTOR LENGTH=    4361
+ NAME= NODE         1  U     X   
+
+ SET MASK VECTOR TO  N_SEL(1:4361)
+
+ VECTOR GET OPERATION  u_y(1)  VECTOR LENGTH=    4361
+ NAME= NODE         1  U     Y   
+
+ SET MASK VECTOR TO  N_SEL(1:4361)
+
+ VECTOR PARAMETER OPERATION *VFUN   
+  convergence_x(1,3+i) = COMP  u_x(1)
+ VECTOR LENGTH=      33
+
+ SET MASK VECTOR TO  N_SEL(1:4361)
+
+ VECTOR PARAMETER OPERATION *VFUN   
+  convergence_y(1,3+i) = COMP  u_y(1)
+ VECTOR LENGTH=      33
+
+ *ENDDO  INDEX= I                               
+
+ ARRAY SORT OPERATION  RESULT ORDER VECTOR= ORDER           
+  ARRAY NAME= convergence_x   
+  SORT VECTOR= convergence_x(1,
+ MATRIX SIZE=      33 ROWS  BY      112 COLUMNS
+
+ ARRAY SORT OPERATION  RESULT ORDER VECTOR= ORDER           
+  ARRAY NAME= convergence_y   
+  SORT VECTOR= convergence_y(1,
+ MATRIX SIZE=      33 ROWS  BY      112 COLUMNS
+
+ START CREATE BY COPY FROM INPUT TO  ansuitmp
+
+ END FILE CREATE
+
+ /INPUT FILE= ansuitmp  LINE=       0
+
+ MATRIX WRITE OPERATION  *MWRITE 
+  convergence_x WRITE TO FILE convergencias_x.txt
+ LOOP DIRECTIONS=JIK   COUNTS=     112      33       1       1       1
+ FORMAT=(1000(E10.4,3X))                                                      
+
+ START CREATE BY COPY FROM INPUT TO  ansuitmp
+
+ END FILE CREATE
+
+ /INPUT FILE= ansuitmp  LINE=       0
+
+ MATRIX WRITE OPERATION  *MWRITE 
+  convergence_y WRITE TO FILE convergencias_y.txt
+ LOOP DIRECTIONS=JIK   COUNTS=     112      33       1       1       1
+ FORMAT=(1000(E10.4,3X))                                                      
+
+ ***** END OF INPUT ENCOUNTERED *****
+
+
+ NUMBER OF WARNING MESSAGES ENCOUNTERED=          0
+ NUMBER OF ERROR   MESSAGES ENCOUNTERED=          0
+
+
+
+ ***** PROBLEM TERMINATED BY INDICATED ERROR(S) OR BY END OF INPUT DATA *****
+
++--------------------- A N S Y S   S T A T I S T I C S ------------------------+
+
+Release: 2022 R1            Build: 22.1       Update: UP20211129   Platform: WINDOWS x64 
+Date Run: 11/06/2023   Time: 19:50     Process ID: 8036
+Operating System: Windows 10  (Build: 19045)
+
+Processor Model: Intel(R) Xeon(R) CPU E5-2697 v3 @ 2.60GHz
+
+Compiler: Intel(R) Fortran Compiler Version 19.0.5  (Build: 20190815)
+          Intel(R) C/C++ Compiler Version 19.0.5  (Build: 20190815)
+          Intel(R) Math Kernel Library Version 2020.0.0 Product Build 20191125
+          BLAS Library supplied by Intel(R) MKL
+
+Number of machines requested            :    1
+Total number of cores available         :   56
+Number of physical cores available      :   28
+Number of processes requested           :    1
+Number of threads per process requested :   24
+Total number of cores requested         :   24 (Shared Memory Parallel)                    
+
+GPU Acceleration: Not Requested
+
+Job Name: file
+Input File: C:\ANALISES_FINAIS_TUNEIS_CARLOS\EP_CRE_CG_D1_8RE_3D\Script_Section.txt
+Working Directory: C:\ANALISES_FINAIS_TUNEIS_CARLOS
+
+Total CPU time for main thread                    :      211.0 seconds
+Total CPU time summed for all threads             :      220.6 seconds
+
+Elapsed time spent obtaining a license            :        4.9 seconds
+Elapsed time spent pre-processing model (/PREP7)  :        0.0 seconds
+Elapsed time spent solution - preprocessing       :        0.0 seconds
+Elapsed time spent computing solution             :        0.0 seconds
+Elapsed time spent solution - postprocessing      :        0.0 seconds
+Elapsed time spent post-processing model (/POST1) :        0.0 seconds
+ 
+
+Sum of memory used on all processes               :     2496.0 MB
+Sum of memory allocated on all processes          :     4160.0 MB
+Physical memory available                         :         64 GB
+
+Total amount of I/O written to disk               :        0.0 GB
+Total amount of I/O read from disk                :       25.0 GB
+
++------------------ E N D   A N S Y S   S T A T I S T I C S -------------------+
+
+
+ *---------------------------------------------------------------------------*
+ |                                                                           |
+ |                            ANSYS RUN COMPLETED                            |
+ |                                                                           |
+ |---------------------------------------------------------------------------|
+ |                                                                           |
+ | Ansys 2022 R1               Build 22.1         UP20211129     WINDOWS x64 |
+ |                                                                           |
+ |---------------------------------------------------------------------------|
+ |                                                                           |
+ | Database Requested(-db)  1024 MB    Scratch Memory Requested      1024 MB |
+ | Maximum Database Used    1470 MB    Maximum Scratch Memory Used   1026 MB |
+ |                                                                           |
+ |---------------------------------------------------------------------------|
+ |                                                                           |
+ |        CP Time      (sec) =        220.641       Time  =  19:50:00        |
+ |        Elapsed Time (sec) =        226.000       Date  =  11/06/2023      |
+ |                                                                           |
+ *---------------------------------------------------------------------------*
