@@ -2,9 +2,9 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="107.00412mm"
+   width="94.290504mm"
    height="91.169022mm"
-   viewBox="0 0 107.00412 91.169022"
+   viewBox="0 0 94.290505 91.169022"
    version="1.1"
    id="svg1"
    xml:space="preserve"
@@ -25,17 +25,17 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
      inkscape:zoom="1.4022026"
-     inkscape:cx="134.78794"
-     inkscape:cy="149.4078"
+     inkscape:cx="163.67107"
+     inkscape:cy="157.2526"
      inkscape:window-width="1680"
      inkscape:window-height="987"
-     inkscape:window-x="-8"
+     inkscape:window-x="1672"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
      inkscape:current-layer="layer1" /><defs
      id="defs1"><inkscape:perspective
        sodipodi:type="inkscape:persp3d"
-       inkscape:vp_x="94.731645 : 75.204827 : 1"
+       inkscape:vp_x="94.731644 : 75.204827 : 1"
        inkscape:vp_y="0 : 1000 : 0"
        inkscape:vp_z="142.22828 : 78.140174 : 1"
        inkscape:persp3d-origin="105.67118 : 42.798185 : 1"
@@ -906,7 +906,7 @@
        id="path41423-2-47"
        sodipodi:nodetypes="cc" /><path
        style="fill:#ffffff;fill-opacity:0.2;fill-rule:evenodd;stroke:#000000;stroke-width:0.209;stroke-miterlimit:10;stroke-dasharray:none;marker-end:url(#marker7-6)"
-       d="m 64.658581,48.807146 5.515274,-5.75803"
+       d="m 64.558513,48.740434 5.515274,-5.75803"
        id="path41423-2-47-9"
        sodipodi:nodetypes="cc" /><g
        id="g13-8"
@@ -1159,7 +1159,7 @@
    id="id-5f020b8c-b771-4c20-861e-40cbf2d128b1" />
       </g></g>
 </g><g
-       transform="matrix(0.549741,0,0,0.549741,51.7533,42.8402)"
+       transform="matrix(0.549741,0,0,0.549741,50.557217,49.974165)"
        ns2:version="1.10.2"
        ns2:texconverter="pdflatex"
        ns2:pdfconverter="inkscape"
@@ -1401,25 +1401,29 @@
          id="path13" /><path
          style="fill:#ff0000;fill-opacity:1;stroke:#ff0000;stroke-width:0.3;stroke-linecap:square;stroke-dasharray:none;stroke-opacity:1"
          d="M 53.19675,37.67249 51.629006,36.104747"
-         id="path13-2" /></g><path
-       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.25;stroke-linecap:square;stroke-opacity:1;marker-end:url(#marker7);stroke-dasharray:none"
-       d="M 99.280714,83.530983 V 71.255896"
-       id="path6" /><path
-       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.25;stroke-linecap:square;stroke-opacity:1;marker-end:url(#marker7-43);stroke-dasharray:none"
-       d="M 98.043285,82.287949 H 110.31837"
-       id="path6-7" /><g
-       transform="matrix(0.549741,0,0,0.549741,110.41665,78.698182)"
-       ns2:version="1.10.2"
-       ns2:texconverter="pdflatex"
-       ns2:pdfconverter="inkscape"
-       ns2:text="$x$"
-       ns2:preamble="D:\GITPROJECTS\twin-tunnels\PAPER\2023-10-04-International_Journal_of_Rock_Mechanics_and_Mining_Sciences\Paper\inkscape.tex"
-       ns2:scale="0.37941183685316876"
-       ns2:alignment="middle center"
-       ns2:stroke-to-path="0"
-       ns2:inkscapeversion="1.3.2"
-       id="g2016-0-5-9-5-4-1-5-7-0-3-3-9-8-8-3-9-4-8-1-57-6-4-9-77-9-6-35-3-0-6-9-9-1-5-9-4-6-6-3-7-6-3-7-1-2"
-       ns2:jacobian_sqrt="0.549741"><defs
+         id="path13-2" /></g><g
+       id="g1"
+       transform="translate(-44.374817,-33.597505)"><path
+         style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.25;stroke-linecap:square;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker7)"
+         d="M 99.280714,83.530983 V 58.613584"
+         id="path6"
+         sodipodi:nodetypes="cc" /><path
+         style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.25;stroke-linecap:square;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker7-43)"
+         d="M 98.043285,82.287949 H 126.54582"
+         id="path6-7"
+         sodipodi:nodetypes="cc" /><g
+         transform="matrix(0.549741,0,0,0.549741,127.02148,78.509491)"
+         ns2:version="1.10.2"
+         ns2:texconverter="pdflatex"
+         ns2:pdfconverter="inkscape"
+         ns2:text="$x$"
+         ns2:preamble="D:\GITPROJECTS\twin-tunnels\PAPER\2023-10-04-International_Journal_of_Rock_Mechanics_and_Mining_Sciences\Paper\inkscape.tex"
+         ns2:scale="0.37941183685316876"
+         ns2:alignment="middle center"
+         ns2:stroke-to-path="0"
+         ns2:inkscapeversion="1.3.2"
+         id="g2016-0-5-9-5-4-1-5-7-0-3-3-9-8-8-3-9-4-8-1-57-6-4-9-77-9-6-35-3-0-6-9-9-1-5-9-4-6-6-3-7-6-3-7-1-2"
+         ns2:jacobian_sqrt="0.549741"><defs
    id="id-c49eea52-d835-4c14-ae0b-bba68136dd82">
     <g
    id="id-2a4bb32d-7bce-49b7-8f84-5d64e19ee0bc">
@@ -1443,18 +1447,18 @@
    id="id-4d370afa-7c19-4e04-a902-400983d85652" />
       </g></g>
 </g><g
-       transform="matrix(0.549741 0 0 0.549741 100.284 67.7641)"
-       ns2:version="1.10.2"
-       ns2:texconverter="pdflatex"
-       ns2:pdfconverter="inkscape"
-       ns2:text="$y$"
-       ns2:preamble="D:\GITPROJECTS\twin-tunnels\PAPER\2023-10-04-International_Journal_of_Rock_Mechanics_and_Mining_Sciences\Paper\inkscape.tex"
-       ns2:scale="0.37941183685316876"
-       ns2:alignment="middle center"
-       ns2:stroke-to-path="0"
-       ns2:inkscapeversion="1.3.2"
-       id="g2016-0-5-9-5-4-1-5-7-0-3-3-9-8-8-3-9-4-8-1-57-6-4-9-77-9-6-35-3-0-6-9-9-1-5-9-4-6-6-3-7-6-3-7-1-2-7"
-       ns2:jacobian_sqrt="0.549741"><defs
+         transform="matrix(0.549741,0,0,0.549741,96.132793,54.65006)"
+         ns2:version="1.10.2"
+         ns2:texconverter="pdflatex"
+         ns2:pdfconverter="inkscape"
+         ns2:text="$y$"
+         ns2:preamble="D:\GITPROJECTS\twin-tunnels\PAPER\2023-10-04-International_Journal_of_Rock_Mechanics_and_Mining_Sciences\Paper\inkscape.tex"
+         ns2:scale="0.37941183685316876"
+         ns2:alignment="middle center"
+         ns2:stroke-to-path="0"
+         ns2:inkscapeversion="1.3.2"
+         id="g2016-0-5-9-5-4-1-5-7-0-3-3-9-8-8-3-9-4-8-1-57-6-4-9-77-9-6-35-3-0-6-9-9-1-5-9-4-6-6-3-7-6-3-7-1-2-7"
+         ns2:jacobian_sqrt="0.549741"><defs
    id="id-d186ad16-d0a2-4604-9ff4-68ddb83136bf">
     <g
    id="id-c64c5eda-e8ae-4973-af19-d74c99602ba9">
@@ -1470,14 +1474,14 @@
    fill="#000000"
    fill-opacity="1"
    id="id-c005e223-d3d1-495f-af3d-d687a0ee069a"
-   transform="translate(-99.7486, -90.6114)">
+   transform="translate(-99.7486,-90.6114)">
     <g
-   transform="translate(99.983, 95.002)"
+   transform="translate(99.983,95.002)"
    id="g9897"><path
    d="m 0.15625,-3.984375 c 0.125,-0.03125 0.1875,-0.046875 0.296875,-0.046875 0.578125,0 0.71875,0.25 1.1875,1.96875 0.15625,0.640625 0.40625,1.8125 0.40625,1.984375 0,0.15625 -0.0625,0.3125 -0.21875,0.5 -0.296875,0.40625 -0.5,0.671875 -0.609375,0.78125 C 1,1.421875 0.890625,1.5 0.75,1.5 0.703125,1.5 0.625,1.46875 0.515625,1.390625 0.375,1.28125 0.265625,1.21875 0.15625,1.21875 c -0.21875,0 -0.390625,0.171875 -0.390625,0.390625 0,0.25 0.21875,0.4375 0.5,0.4375 0.640625,0 1.953125,-1.484375 3.03125,-3.46875 C 3.96875,-2.640625 4.25,-3.359375 4.25,-3.84375 4.25,-4.140625 4,-4.390625 3.703125,-4.390625 3.46875,-4.390625 3.3125,-4.25 3.3125,-4.03125 c 0,0.15625 0.078125,0.265625 0.28125,0.390625 0.1875,0.109375 0.25,0.203125 0.25,0.34375 0,0.390625 -0.359375,1.171875 -1.21875,2.578125 L 2.4375,-1.875 C 2.28125,-2.75 1.71875,-4.390625 1.578125,-4.390625 H 1.53125 c 0,0 -0.046875,0 -0.078125,0 C 1.359375,-4.375 1,-4.3125 0.46875,-4.21875 c -0.046875,0.015625 -0.171875,0.046875 -0.3125,0.0625 z m 0,0"
    id="id-196f3a3f-ff16-4d91-aac9-2657212fa2bb" />
       </g></g>
-</g><g
+</g></g><g
        transform="matrix(0.549741,0,0,0.549741,96.780001,46.336293)"
        ns2:version="1.10.2"
        ns2:texconverter="pdflatex"
