@@ -1,0 +1,85 @@
+O QUE ATENTAR NA CONCLUSÃO:
+
+- Justificar o estudo de forma mais clara
+- A pertinência da metodologia
+- Resumo da investigação e destaque das inovações
+
+Algumas ressalvas:
+
+- não tem comparação com estudo de caso
+- a sequência da escavação não é realística
+- definir as siglas na conclusão.
+- falar da verificação com soluções analíticas (efeito da malha)
+- raio do túnel circular
+- estado de tensões isotrópico
+
+Questões a serem respondidas na conclusão:
+
+- como o trabalho afeta a literatura existente sobre o assunto
+- onde está a novidade
+- o que você trabalha dá para a engenharia prática?
+- sobre o tipo de revestimento específico
+
+Sobre análise paramétrica
+
+- dados do maciço argiloso
+- pelos parâmetros da coesão, a viscosidade do maciço é ativada primeiro.
+- análises conduzidas com d1 = 4Rt, 8Rt e 16Rt
+- modelos para o maciço: elástico (E), elastoplastico (EP), elastoplastico-viscoplastico (EPVP).
+- modelos para o revestimento: sem revestimento (NL), elástico (EL) e viscoelástico (VEL)
+- Condições da galeria: com galeria (WG) e sem galeria (NG)
+- Resultados: curto prazo (ST) e longo prazo (LT)
+- Constatado:
+	- E-EL e VP-EL no curto prazo são equivalentes devido à alta velocidade de escavação.
+	- EPVP-EL e EP-EL são equivalentes no curto prazo, pois os efeitos viscosos estão a correr no tempo. No LT passa a ter diferenças;
+	- A rigidez do revestimento impediu significativamente a evolução da convergência devido ao efeito viscoso.
+	- A interação pode ser vista no curto prazo VP-EL d1 = 4Rt mas no longo prazo LT dificilmente muda (o bloqueio devido a rigidez do revestimento)
+	- O efeito da ovalização foi mais pronunciado no curto prazo ST e no longo prazo houve uma atenuação da ovalização.
+	- O modelo EPVP-VEL pra d1 - 8Rt e 16Rt apresentou maiores convergências antes da escavação da galeria, porém não é possível atribuir o efeito a algum fenômeno devido as diversas interações que tem. Suposição: devido ao tempo que demora para escavar a galeria é mais pronunciado no d1 = 16Rt.
+	- no ST o modelo EPVP-VEL maiores convergências que o EP-EL. A idade precoce do revestimento tem um módulo menor no modelo VEL.
+	- no LT o modelo EPVP-VEL, apesar de maior módulo, as convergências superam o EP-EL devido aos efeitos de fluência;
+	- nos modelos viscosos há uma diferença grande no pico considerando curto e longo prazo (figura 29);
+	- em comparação com o cenário sem revestimento, o revestimento mais rígido reduzidu a convergência em approx. 35% (figura 31)
+	- revestimento moderadamente rígido aumentou a convergência em 12% em comparação com o revestimento mais rígido (figura 31)
+	- considerando modelo EP quando d1 = 16Rt os resultados de Uc são semelhantes a um túnel isolado independente da situação do revestimento.
+	- porém quando d1 = 4Rt a interação entre os túneis se torna significativa. O revestimento de alta rigidez reduz em até 46% em relação a não revestido.
+	- e um revestimento de rigidez moderada leva a um aumento de até 16% na convergência em comparação com o revestimento mais rígido (figura 31)
+	- Ao comparar d1 = 16Rt e 4Rt, diferenças de 6% (revestimento de maior rigidez), 10% (rigidez moderada) e 30% (sem revestimento).
+	- No ponto de pico, há um aumento de 15% ao usar um revestimento de rigidez moederada em comparação com um de rigidez mais alta. 
+	- Porém, a diferença entre Uc e Upeak há uma diferença de até 12% pra o revestimento de rigidez mais alta e até 13% para o revestimento de rigidez moderada para 4Rt e 16Rt.
+	- Em todos os casos o aumento da rigidez reduziu a extensão da zona de influência da galeria 22,5Rg (sem revestimento), 10,5Rg e 7,5Rg (com revestimento).
+	- A proximidade dos túneis longitudinais teve um impacto mínimo no comprimento da zona de influência da galeria.
+	- d1 = 4Rt com um revestimento mais rígido praticamente não há diferenças (figura 33). Porém, ao usar um revestimento moderadamente rígido, há uma difrença de 3% em Uc (figura 33).
+	- Comparando d1 = 16Rt e 4Rt há uma diferença de 0,8% um revestimento de maior rigidez e 4,8% o de menor rigidez
+	- Ao analisar a convergência no pico, há um aumento de 47% para d1 = 4Rt com revestimento moderadamente rígido em comparação com o revestimento de alta rigidez;
+	- Ao analisar a diferença entre Uc e Upeak é de 18% para revestimento de alta rigidez e 15% revestimento de rigidezmoderada para d1 = 4Rt.
+	- Figura 34 e 35 - Para d1 = 16Rt uma diferença de 1,8% em comparação com túnel isolado ocorre com revestimento rígido. Para d1 = $rt as diferenças aumentam para 4% para o revestimento elástico e 3% para o revestimento viscoelástico moderadamente rígido.
+	- Figura 34: para d1=16Rt uma pequena diferença ocorre com revestimento viscoelástico 1,8%. Em contraste para d1 = 4Rt (figura 35) as diferenças aumentam para 4% (EL), 3%(VEL Kc = 970).
+	- Usando o revestimento elástico de maior rigidez como referência, para d1=16Rt as diferenças sobem de 27% para revestimento elástico e 78% para revestimento viscoelástico com rigidez moderada. Para d1 = 4Rt essas diferenças aumentam de 31% e 81% respectivamente.
+	- considerando como referência o valor do revestimento elástico de maior rigidez, observa-se no pico um aumento de 31% (EL) e 77% (VEL) para d1 = 4Rt. A diferença entre Uc e Upeak é de até 18% para (EL Kc =970) e 15% para (VEL Kc = 970) para d1 = 4Rt.
+	- Figura 36 - tomando como referencia EP EL Kc = 3400, uma diferença de 12% (EPKc=970) e 53% (EP-NL). E diferenças de 5,5% (EPVP Kc 3400), 33,5% (EPVP Kc 970) e 748% (EPVP NL). Diferença de 28% (EPVP VEL Kc = 3400) e 87.5% (EPVP VEL Kc = 970)
+
+
+
+Parágrafos a elaborar:
+
+Uma observação importante é que em túneis simples, sob condições de isotropia de massa rochosa e estado de tensão inicial hidrostática, a simetria da parede do túnel é preservada durante todo o processo de escavação. Assim, a parede deformada do túnel permanece circular. Por outro lado, um dos efeitos da interação mútua induzida pela proximidade dos túneis gêmeos é a perda de simetria da parede deformada do túnel. 
+
+Outra observação importante em relação às propriedades do material mostradas na Tabela 2 é que o valor adotado para a coesão plástica ( c) é maior que o valor para a coesão viscoplástica ( c_vp): c> c_vp. Isso implica que, no regime de deformações irreversíveis, a viscoplasticidade do material será ativada primeiro. 
+
+
+ATUAL CONCLUSÃO:
+
+O papel fundamental da rigidez do revestimento de concreto no perfil de convergência dos túneis gêmeos é compreendido a partir das análises. Dependendo do valor dessa rigidez, é possível condicionar a restrição dos efeitos viscosos que tendem a se manifestar ao longo do tempo após a conclusão do processo de escavação.
+
+Além disso, o efeito da interação entre os túneis longitudinais é notável quando se considera a proximidade, com grande influência a partir de uma distância de 4 raios. No entanto, em muitos casos, esse efeito pode ser sutil ou quase imperceptível devido à presença de um revestimento mais rígido.
+
+Nos modelos que consideram a viscosidade do maciço rochoso, o fator tempo desempenha um papel significativo na convergência. Nesse cenário, ao escavar a galeria com 𝑑1 = 16𝑅𝑡 , a parte do túnel já escavada permanece sujeita a efeitos viscosos por um período mais longo em comparação com outras distâncias. De qualquer forma, quando 𝑑1 = 4𝑅𝑡 , a interação de proximidade entre os túneis gêmeos, juntamente com os efeitos viscosos ao longo do tempo, resulta em um valor mais alto em comparação com os casos em que 𝑑1 = 16𝑅𝑡 e 8𝑅𝑡.
+
+Outra observação importante relacionada aos modelos EPVP-EL e EPVP-VEL diz respeito à possível ovalização da seção ao longo do tempo, em relação ao ponto de referência analisado no perímetro da seção (na coroa). Em vez de seguir a lógica de seguir a direção de fechamento da seção, ela pode sofrer algum deslocamento negativo a longo prazo. O resultado, para o mesmo ponto de observação, é um valor de convergência que, a curto prazo, pode indicar o fechamento da seção, mas, a longo prazo, pode indicar o contrário.
+
+Outra observação crucial em relação aos modelos EPVP-EL e EPVP-VEL diz respeito à possível ovalização da seção ao longo do tempo, especialmente em relação ao ponto de referência analisado no perímetro da seção (na coroa). Em vez de estar em conformidade com a lógica esperada de fechamento na direção da seção, ela pode sofrer um deslocamento negativo a longo prazo. Consequentemente, para o mesmo ponto de observação, o valor de convergência pode inicialmente sugerir o fechamento da seção no curto prazo, mas indicar o contrário no longo prazo
+
+Em relação ao modelo EPVP-VEL, especificamente com distâncias de 16 e 8 raios entre os túneis gêmeos, observamos que a Ueq na seção à frente da região da galeria é ligeiramente menor do que a Ueq na seção anterior à galeria. Essa variação no perfil de convergência resulta do menor tempo de exposição aos efeitos viscosos na parte escavada depois da galeria transversal. Portanto, durante o processo de escavação da galeria, a parte do túnel longitudinal já escavada experimenta efeitos viscosos até a conclusão da escavação da galeria.
+
+Entretanto, com relação à existência de uma galeria transversal e à adoção dos parâmetros constitutivos considerando a presença do revestimento, sua influência é altamente localizada, abrangendo aproximadamente quatro raios de cada lado de seu eixo. Consequentemente, não há impacto significativo no perfil de convergência restante dos túneis, exceto no modelo com revestimento viscoelástico, em que ocorrem convergências mais baixas após a galeria.
