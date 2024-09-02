@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.12) (preloaded format=pdflatex 2024.7.1)  30 AUG 2024 11:08
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.12) (preloaded format=pdflatex 2024.7.1)  2 SEP 2024 10:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1160,14 +1160,14 @@ File: ovalization.pdf Graphic file (type pdf)
 <use ovalization.pdf>
 Package pdftex.def Info: ovalization.pdf  used on input line 648.
 (pdftex.def)             Requested size: 299.47887pt x 333.1209pt.
-<Convergence Profiles - UB - UAUB - $d_1=4R_t - ST_Lt$.pdf, id=6679, 652.70253p
-t x 366.52957pt>
+<Convergence Profiles - UB - UAUB - $d_1=4R_t - ST_Lt$.pdf, id=6679, 653.53915p
+t x 406.73724pt>
 File: Convergence Profiles - UB - UAUB - $d_1=4R_t - ST_Lt$.pdf Graphic file (t
 ype pdf)
 <use Convergence Profiles - UB - UAUB - $d_1=4R_t - ST_Lt$.pdf>
 Package pdftex.def Info: Convergence Profiles - UB - UAUB - $d_1=4R_t - ST_Lt$.
 pdf  used on input line 656.
-(pdftex.def)             Requested size: 424.25162pt x 238.2414pt.
+(pdftex.def)             Requested size: 424.79541pt x 264.37607pt.
  [24 <./ovalization.pdf>]
 <Convergence Profiles - VP_EPVP_EL_VEL_WG_LT_anotate.pdf, id=6748, 487.8225pt x
  271.0125pt>
@@ -1318,7 +1318,7 @@ TeX/fonts/type1/public/stix/stix-mathrm-bold.pfb><C:/Users/augus/AppData/Local/
 Programs/MiKTeX/fonts/type1/public/stix/stix-mathrm.pfb><C:/Users/augus/AppData
 /Local/Programs/MiKTeX/fonts/type1/public/stix/stix-mathscr.pfb><C:/Users/augus
 /AppData/Local/Programs/MiKTeX/fonts/type1/public/stix/stix-mathsf.pfb>
-Output written on cas-sc-template.pdf (36 pages, 4418176 bytes).
+Output written on cas-sc-template.pdf (36 pages, 4420517 bytes).
 PDF statistics:
  9602 PDF objects out of 10688 (max. 8388607)
  150 named destinations out of 1000 (max. 500000)
