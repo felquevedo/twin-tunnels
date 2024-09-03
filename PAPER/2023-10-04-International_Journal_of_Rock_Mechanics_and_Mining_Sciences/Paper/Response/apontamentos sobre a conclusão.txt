@@ -83,3 +83,20 @@ Outra observação crucial em relação aos modelos EPVP-EL e EPVP-VEL diz respe
 Em relação ao modelo EPVP-VEL, especificamente com distâncias de 16 e 8 raios entre os túneis gêmeos, observamos que a Ueq na seção à frente da região da galeria é ligeiramente menor do que a Ueq na seção anterior à galeria. Essa variação no perfil de convergência resulta do menor tempo de exposição aos efeitos viscosos na parte escavada depois da galeria transversal. Portanto, durante o processo de escavação da galeria, a parte do túnel longitudinal já escavada experimenta efeitos viscosos até a conclusão da escavação da galeria.
 
 Entretanto, com relação à existência de uma galeria transversal e à adoção dos parâmetros constitutivos considerando a presença do revestimento, sua influência é altamente localizada, abrangendo aproximadamente quatro raios de cada lado de seu eixo. Consequentemente, não há impacto significativo no perfil de convergência restante dos túneis, exceto no modelo com revestimento viscoelástico, em que ocorrem convergências mais baixas após a galeria.
+
+
+
+
+De forma geral, o campo de deformações e tensões ao redor da cavidade de um túnel profundo depende de vários fatores inter-relacionados, como a profundidade do túnel, a geometria da seção transversal, a anisotropia das tensões in situ, das condições de tunelamento, do comportamento e acoplamento mecânico do maciço rochoso e do revestimento. Em túneis gêmeos é acrescida a interação da proximidade entre os túneis longitudinais e, quando existem, galerias transversais, que causam uma redistribuição das tensões de forma localizada sobrecarregando os túneis principais. Diferentemente de túneis solteiros, a existência da galeria só pode ser estudada com modelos que consideram o estado de tensões tridimensional. Nesse contexto, esse estudo trouxe contribuições de análises do ponto de vista estrutural e do material. No nível da estrutura o estudo é feito através de simulações tridimensionais em elementos finitos considerando o processo construtivo através da técnica de ativação/desativação. No nível do material, foram implementados e investigados três modelos constitutivos para o maciço (elástico - E, elastoplástico - EP, viscoplástico - VP, elastoplástico-viscoplástico - EPVP) e três configurações para o revestimento (sem revestimento - NL, elástico - EL e viscoelástico - VEL). Além dos diferentes modelos constitutivos, foram estudados a influência do espaçamento entre eixos dos túneis longitudinais (d1 = 16Rt, 8Rt e 4Rt) e a influência da rigidez do revestimento no controle das deformações. Para os modelos constitutivos viscosos resultados ao final da construção do túnel (curto prazo - ST) e após os efeitos viscosos atingirem o equilíbrio (longo prazo - LT) foram obtidos e investigados. Simulações numéricas preliminares e verificação do modelo computacional são feitas com soluções analíticas em elasticidade e elastoplasticidade.
+
+
+
+
+
+
+ 
+
+
+
+
+
