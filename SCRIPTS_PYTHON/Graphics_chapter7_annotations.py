@@ -248,15 +248,15 @@ anotar(titulo, coords, texts, styles, cores, xytexts)
 CONVERGENCE PROFILES - MODEL EPVP_CRE_CRVE_D1_16RE
 ******************************************** """ 
 # Adicionar anotações
-coords = [(11.2/L1, (A1-1.86)/A1), (11.2/L1, (A1-1.38)/A1), (11.2/L1, (A1-1.08)/A1)]
+coords = [(11.2/L1, (A1-1.38)/A1), (11.2/L1, (A1-1.08)/A1)]
 
-texts = ['1.86', '1.38', '1.08']
+texts = ['1.38', '1.08']
 
-styles = ['arc', 'arc', 'arc']
+styles = ['arc', 'arc']
 
-cores = ['blue', 'blue', 'blue']
+cores = ['blue', 'blue']
 
-xytexts =[(50, 20), (50, 10), (50, 0)]
+xytexts =[(50, 10), (50, 0)]
 
 titulo = 'Convergence Profiles - EPVP_EL_VEL_d1_16Ri'
 anotar(titulo, coords, texts, styles, cores, xytexts)
@@ -266,15 +266,15 @@ anotar(titulo, coords, texts, styles, cores, xytexts)
 CONVERGENCE PROFILES - MODEL EPVP_CRE_CRVE_D1_4RE
 ******************************************** """ 
 # Adicionar anotações
-coords = [(11.2/L1, (A1-2.04)/A1), (11.2/L1, (A1-1.51)/A1), (11.2/L1, (A1-1.15)/A1)]
+coords = [(11.2/L1, (A1-1.51)/A1), (11.2/L1, (A1-1.15)/A1)]
 
-texts = ['2.04', '1.51', '1.15']
+texts = ['1.51', '1.15']
 
-styles = ['arc', 'arc', 'arc']
+styles = ['arc', 'arc']
 
-cores = ['blue', 'blue', 'blue']
+cores = ['blue', 'blue']
 
-xytexts =[(50, 20), (50, 0), (50, -5)]
+xytexts =[(50, 0), (50, -5)]
 
 titulo = 'Convergence Profiles - EPVP_EL_VEL_d1_4Ri'
 anotar(titulo, coords, texts, styles, cores, xytexts)

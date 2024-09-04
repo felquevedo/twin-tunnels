@@ -1975,23 +1975,23 @@ graficar(arquivo,titulo,eixox,eixoy,
           suavizar,filterx1,filterx2,wl,poly,
           figura)
 
-modelo      = 'EPVP_CRVE_ESP003_SG_D1_INF_AXI'
-arquivo     = modelo + '\convergencias.txt'
-ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'NG, VEL, $K_c=969$, single tunnel, $U_C=$ 1.73'
-cor         = 'k'
-tamanho     = 1.5
-ordem       = 4
-alpha       = 1
-estilo      = 'dotted'
-graficar(arquivo,titulo,eixox,eixoy,
-          xmin,xmax,ymin,ymax,
-          ncoluna,lblcoluna,
-          cor,tamanho,ordem,alpha,estilo,
-          invertx,
-          inserirx0,x0,
-          suavizar,filterx1,filterx2,wl,poly,
-          figura)
+# modelo      = 'EPVP_CRVE_ESP003_SG_D1_INF_AXI'
+# arquivo     = modelo + '\convergencias.txt'
+# ncoluna     = dicncolunalongterm[modelo]
+# lblcoluna   = 'NG, VEL, $K_c=969$, single tunnel, $U_C=$ 1.73'
+# cor         = 'k'
+# tamanho     = 1.5
+# ordem       = 4
+# alpha       = 1
+# estilo      = 'dotted'
+# graficar(arquivo,titulo,eixox,eixoy,
+#           xmin,xmax,ymin,ymax,
+#           ncoluna,lblcoluna,
+#           cor,tamanho,ordem,alpha,estilo,
+#           invertx,
+#           inserirx0,x0,
+#           suavizar,filterx1,filterx2,wl,poly,
+#           figura)
 
 modelo      = 'EPVP_CRE_SG_D1_16RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
@@ -2029,23 +2029,23 @@ graficar(arquivo,titulo,eixox,eixoy,
           suavizar,filterx1,filterx2,wl,poly,
           figura)
 
-modelo      = 'EPVP_CRVE_ESP003_SG_D1_16RE_3D'
-arquivo     = modelo + '\convergencias_90.txt'
-ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'NG, VEL, $K_c=969$, $U_C=$ 1.70'
-cor         = 'orange'
-tamanho     = 2
-ordem       = 1
-alpha       = 1
-estilo      = 'dotted'
-graficar(arquivo,titulo,eixox,eixoy,
-          xmin,xmax,ymin,ymax,
-          ncoluna,lblcoluna,
-          cor,tamanho,ordem,alpha,estilo,
-          invertx,
-          inserirx0,x0,
-          suavizar,filterx1,filterx2,wl,poly,
-          figura)
+# modelo      = 'EPVP_CRVE_ESP003_SG_D1_16RE_3D'
+# arquivo     = modelo + '\convergencias_90.txt'
+# ncoluna     = dicncolunalongterm[modelo]
+# lblcoluna   = 'NG, VEL, $K_c=969$, $U_C=$ 1.70'
+# cor         = 'orange'
+# tamanho     = 2
+# ordem       = 1
+# alpha       = 1
+# estilo      = 'dotted'
+# graficar(arquivo,titulo,eixox,eixoy,
+#           xmin,xmax,ymin,ymax,
+#           ncoluna,lblcoluna,
+#           cor,tamanho,ordem,alpha,estilo,
+#           invertx,
+#           inserirx0,x0,
+#           suavizar,filterx1,filterx2,wl,poly,
+#           figura)
 
 modelo      = 'EPVP_CRE_CG_D1_16RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
@@ -2083,23 +2083,23 @@ graficar(arquivo,titulo,eixox,eixoy,
           suavizar,filterx1,filterx2,wl,poly,
           figura)
 
-modelo      = 'EPVP_CRVE_ESP003_CG_D1_16RE_3D'
-arquivo     = modelo + '\convergencias_90.txt'
-ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'WG, VEL, $K_c=969$, $U_C=$ 1.70'
-cor         = 'b'
-tamanho     = 2
-ordem       = 1
-alpha       = 1
-estilo      = 'dotted'
-graficar(arquivo,titulo,eixox,eixoy,
-          xmin,xmax,ymin,ymax,
-          ncoluna,lblcoluna,
-          cor,tamanho,ordem,alpha,estilo,
-          invertx,
-          inserirx0,x0,
-          suavizar,filterx1,filterx2,wl,poly,
-          figura)
+# modelo      = 'EPVP_CRVE_ESP003_CG_D1_16RE_3D'
+# arquivo     = modelo + '\convergencias_90.txt'
+# ncoluna     = dicncolunalongterm[modelo]
+# lblcoluna   = 'WG, VEL, $K_c=969$, $U_C=$ 1.70'
+# cor         = 'b'
+# tamanho     = 2
+# ordem       = 1
+# alpha       = 1
+# estilo      = 'dotted'
+# graficar(arquivo,titulo,eixox,eixoy,
+#           xmin,xmax,ymin,ymax,
+#           ncoluna,lblcoluna,
+#           cor,tamanho,ordem,alpha,estilo,
+#           invertx,
+#           inserirx0,x0,
+#           suavizar,filterx1,filterx2,wl,poly,
+#           figura)
 
 #%% #.  CONVERGENCE PROFILES - MODEL EPVP_CRE_CRVE_D1_4RE
 """ ********************************************
@@ -2162,23 +2162,23 @@ graficar(arquivo,titulo,eixox,eixoy,
           suavizar,filterx1,filterx2,wl,poly,
           figura)
 
-modelo      = 'EPVP_CRVE_ESP003_SG_D1_INF_AXI'
-arquivo     = modelo + '\convergencias.txt'
-ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'NG, VEL, $K_c=969$, single tunnel, $U_C=$ 1.73'
-cor         = 'k'
-tamanho     = 1.5
-ordem       = 4
-alpha       = 1
-estilo      = 'dotted'
-graficar(arquivo,titulo,eixox,eixoy,
-          xmin,xmax,ymin,ymax,
-          ncoluna,lblcoluna,
-          cor,tamanho,ordem,alpha,estilo,
-          invertx,
-          inserirx0,x0,
-          suavizar,filterx1,filterx2,wl,poly,
-          figura)
+# modelo      = 'EPVP_CRVE_ESP003_SG_D1_INF_AXI'
+# arquivo     = modelo + '\convergencias.txt'
+# ncoluna     = dicncolunalongterm[modelo]
+# lblcoluna   = 'NG, VEL, $K_c=969$, single tunnel, $U_C=$ 1.73'
+# cor         = 'k'
+# tamanho     = 1.5
+# ordem       = 4
+# alpha       = 1
+# estilo      = 'dotted'
+# graficar(arquivo,titulo,eixox,eixoy,
+#           xmin,xmax,ymin,ymax,
+#           ncoluna,lblcoluna,
+#           cor,tamanho,ordem,alpha,estilo,
+#           invertx,
+#           inserirx0,x0,
+#           suavizar,filterx1,filterx2,wl,poly,
+#           figura)
 
 modelo      = 'EPVP_CRE_SG_D1_4RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
@@ -2216,23 +2216,23 @@ graficar(arquivo,titulo,eixox,eixoy,
           suavizar,filterx1,filterx2,wl,poly,
           figura)
 
-modelo      = 'EPVP_CRVE_ESP003_SG_D1_4RE_3D'
-arquivo     = modelo + '\convergencias_90.txt'
-ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'NG, VEL, $K_c=969$, $U_C=$ 1.78'
-cor         = 'orange'
-tamanho     = 2
-ordem       = 1
-alpha       = 1
-estilo      = 'dotted'
-graficar(arquivo,titulo,eixox,eixoy,
-          xmin,xmax,ymin,ymax,
-          ncoluna,lblcoluna,
-          cor,tamanho,ordem,alpha,estilo,
-          invertx,
-          inserirx0,x0,
-          suavizar,filterx1,filterx2,wl,poly,
-          figura)
+# modelo      = 'EPVP_CRVE_ESP003_SG_D1_4RE_3D'
+# arquivo     = modelo + '\convergencias_90.txt'
+# ncoluna     = dicncolunalongterm[modelo]
+# lblcoluna   = 'NG, VEL, $K_c=969$, $U_C=$ 1.78'
+# cor         = 'orange'
+# tamanho     = 2
+# ordem       = 1
+# alpha       = 1
+# estilo      = 'dotted'
+# graficar(arquivo,titulo,eixox,eixoy,
+#           xmin,xmax,ymin,ymax,
+#           ncoluna,lblcoluna,
+#           cor,tamanho,ordem,alpha,estilo,
+#           invertx,
+#           inserirx0,x0,
+#           suavizar,filterx1,filterx2,wl,poly,
+#           figura)
 
 modelo      = 'EPVP_CRE_CG_D1_4RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
@@ -2270,23 +2270,23 @@ graficar(arquivo,titulo,eixox,eixoy,
           suavizar,filterx1,filterx2,wl,poly,
           figura)
 
-modelo      = 'EPVP_CRVE_ESP003_CG_D1_4RE_3D'
-arquivo     = modelo + '\convergencias_90.txt'
-ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'WG, VEL, $K_c=969$, $U_C=$ 1.78'
-cor         = 'b'
-tamanho     = 2
-ordem       = 1
-alpha       = 1
-estilo      = 'dotted'
-graficar(arquivo,titulo,eixox,eixoy,
-          xmin,xmax,ymin,ymax,
-          ncoluna,lblcoluna,
-          cor,tamanho,ordem,alpha,estilo,
-          invertx,
-          inserirx0,x0,
-          suavizar,filterx1,filterx2,wl,poly,
-          figura)
+# modelo      = 'EPVP_CRVE_ESP003_CG_D1_4RE_3D'
+# arquivo     = modelo + '\convergencias_90.txt'
+# ncoluna     = dicncolunalongterm[modelo]
+# lblcoluna   = 'WG, VEL, $K_c=969$, $U_C=$ 1.78'
+# cor         = 'b'
+# tamanho     = 2
+# ordem       = 1
+# alpha       = 1
+# estilo      = 'dotted'
+# graficar(arquivo,titulo,eixox,eixoy,
+#           xmin,xmax,ymin,ymax,
+#           ncoluna,lblcoluna,
+#           cor,tamanho,ordem,alpha,estilo,
+#           invertx,
+#           inserirx0,x0,
+#           suavizar,filterx1,filterx2,wl,poly,
+#           figura)
 
 #%% #.  CONVERGENCE PROFILES - MODEL EP_EPVP_SG
 """ ********************************************
