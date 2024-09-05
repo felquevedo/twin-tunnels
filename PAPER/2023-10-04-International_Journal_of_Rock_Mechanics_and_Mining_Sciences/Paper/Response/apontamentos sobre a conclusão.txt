@@ -61,6 +61,66 @@ Sobre análise paramétrica
 
 
 
+Sobre análise paramétrica revisada do SAMIR:
+
+7.2 Perfis de convergência de curto e longo prazo
+
+A discrepância entre as respostas de curto e longo prazo é mais pronunciada quando um revestimento viscoelástico dependente do tempo é considerado, como claramente indicado pela convergência associada ao modelo EPVP-VEL (linhas vermelhas sólidas e tracejadas).
+
+Nota-se que a rigidez relativamente alta considerada do revestimento elástico provavelmente reduz significativamente o componente viscoso da deformação da parede do túnel
+
+Os resultados sugerem um efeito de ovalização mais pronunciado na deformação do túnel de curto prazo (linhas sólidas).
+
+
+
+7.3 Análises numéricas adicionais: impacto da deformação por fluência
+
+Este resultado pode ser explicado pelo fato de que o efeito de interação geral na convergência do túnel resulta dos efeitos concorrentes da proximidade do túnel duplo (definida por d_1) e do tempo necessário para a escavação completa da galeria e sua intersecção com o túnel longitudinal (também definido pelo comprimento por d_1). Os resultados indicaram que esses fenômenos concorrentes levam a um efeito geral equivalente nos casos de d_1=8R_te d_1=16R_t. No caso de d_1=4R_t(linha pontilhada vermelha), o efeito da proximidade do túnel duplo parece ser predominante , o que leva a um valor mais alto da convergência de pico U_peak.
+
+Referindo-se aos modelos EPVP-VEL e EPVP-EL (linhas pontilhadas e tracejadas), pode-se observar pelos resultados da Fig. 28 que valores de convergência mais altos estão associados ao comportamento dependente do tempo do revestimento. Ao contrário do revestimento elástico rígido, o revestimento viscoelástico envelhecido induz a evolução da convergência do túnel ao longo do processo de escavação .
+
+Mais uma vez, as previsões de resultados mostradas nesta figura enfatizam o impacto significativo do comportamento do revestimento viscoelástico no perfil de convergência de curto prazo dos túneis. No curto prazo (ST), o maciço rochoso elastoplástico- viscosplástico com revestimento viscoelástico (EPVP-VEL - linhas pontilhadas) leva a maiores convergências quando comparado ao maciço rochoso elastoplástico com revestimento elástico (EP-EL - linhas contínuas). Isto é atribuído principalmente ao fato de que o revestimento viscoelástico (VEL) de idade precoce exibe menor módulo de relaxamento do que a rigidez E_(c_28 )  considerada para o revestimento elástico (EL), resultando assim em maior deformação do túnel 
+
+Em relação à análise de longo prazo (LT), embora o revestimento viscoelástico (VEL) (linhas tracejadas) exiba módulo de relaxamento crescente devido ao fenômeno do envelhecimento, a deformação por fluência tanto da rocha quanto dos constituintes do revestimento resulta em convergências significativamente maiores no teto do túnel quando comparadas às obtidas para rocha elastoplástica com revestimento elástico (EP-EL - linhas sólidas). 
+
+Um aumento notável na magnitude de U_peak, induzido pela interação com a galeria transversal, também é observado da resposta de curto prazo (linhas pontilhadas) para a resposta de longo prazo (linhas tracejadas), destacando mais uma vez a influência do comportamento retardado da rocha e do revestimento.
+
+
+
+7.4 Efeito da rigidez do revestimento na convergência do túnel
+
+Para avaliar o efeito da rigidez do revestimento no perfil de convergência, um valor menor e_t=e_g=0.03R_t, correspondente ao módulo de rigidez do revestimento K_(c_28 )=970MPa, estará nas simulações numéricas . Referindo-se ao caso particular de uma massa rochosa exibindo comportamento elastoplástico (EP) , que é apenas comportamento instantâneo,...
+
+Conforme observado nas simulações das seções anteriores, a convergência de equilíbrio U_Cbem atrás da face do túnel quase não é afetada pela presença da galeria transversal.
+
+Em relação ao efeito da rigidez do revestimento na convergência de um único túnel, o revestimento mais rígido (linha preta contínua) leva a uma redução da convergência estabilizada de aproximadamente 35% em relação à estrutura sem revestimento (linha preta tracejada), enquanto essa redução é de apenas 12% para o revestimento de rigidez moderada (linha preta pontilhada).
+
+Em contraste, a interação entre os túneis gêmeos revela-se significativa quando o espaçamento reduz para d_1=4R_t. [O impacto combinado do suporte do revestimento e da proximidade dos túneis gêmeos...] Comparado à convergência de túnel único, o aumento na convergência induzido pela proximidade de túneis gêmeos atinge valores de 30% para estrutura não revestida, 10% para o revestimento de rigidez moderada e 6,5% para o revestimento de rigidez mais alta. 
+
+
+Analisando o efeito da rigidez do revestimento na região perturbada associada ao longo do perfil de convergência com a presença da galeria transversal, observa-se primeiramente que o aumento da rigidez reduz em todas as configurações estudadas a extensão da região perturbada, enquanto o espaçamento dos túneis gêmeos tem pouco impacto. 
+
+Para a configuração de espaçamento d_1=16R_t, onde se espera que a interação devido à proximidade dos túneis gêmeos seja menor, a razão U_(peak-U_C )/U_C   que define a variação relativa entre o valor de pico e a convergência estabilizada do teto do túnel é de cerca de 14%, 12,5% e 8,7% de acordo com o valor da rigidez do revestimento: K_(c_28 )=0(sem revestimento), K_(c_28 )=970MPa e K_(c_28 )=3400 MPa. Os valores desta relação são alterados para cerca de 9,7%, 13% e 12% para a configuração com espaçamento d_1=4R_tem que ambos os efeitos da rigidez do revestimento e da proximidade dos túneis atuam simultaneamente .
+
+
+Semelhante à análise anterior envolvendo materiais constituintes que exibem apenas comportamentos instantâneos, os resultados da Fig. 3 2 indicam que as previsões de convergência estabilizada U_Cno caso de túneis gêmeos com espaçamento d_1=16R_tsão muito próximas das obtidas para túnel único.
+
+Mesmo no caso específico d_1=4R_tem que seria esperada uma forte interação entre túneis gêmeos, o papel do revestimento com maior rigidez na convergência estabilizada (linhas sólidas azuis e amarelas na Fig. 33) é predominante com valores próximos aos obtidos para o túnel único (linha sólida preta na Fig. 33), mascarando assim tal efeito de interação.    Para menor rigidez do revestimento, os resultados numéricos (linhas tracejadas azuis e amarelas) indicam um pequeno aumento no valor U_Cquando comparado ao túnel único (linha tracejada preta).
+
+No que diz respeito ao impacto na convergência de pico U_peake extensão da zona de influência da galeria (porção perturbada do perfil de convergência), os resultados mostram que para cada valor do espaçamento dos túneis gêmeos d_1, a última extensão é ligeiramente afetada pelo módulo de rigidez do revestimento instantâneo. Em contraste, a razãoU_peak/U_C    é significativamente afetado pelos valores de d_1e K_(c_28 ). Para a configuração com d_1=4R_t, ele assume respectivamente os valores U_peak/U_C= 14,5% e 18% menor e maior rigidez do revestimento , enquanto que para a configuração com ele assume respectivamente os valores 9,5% e 13%d_1=16R_t. 
+
+No geral, as mesmas observações formuladas nas análises anteriores sobre o efeito do espaçamento de túneis duplos na convergência estabilizada ainda são válidas: com relação à configuração de túnel único, U_Cé quase não afetado pela rigidez do revestimento U_Ce ligeiramente aumentado (até 4%) para d_1=4R_t.
+
+Com o revestimento elástico, o aumento da rigidez de K_(c_28 )=970MPa para K_(c_28 )=3400 MPa leva a uma redução na convergência estabilizada U_Cem 28% para espaçamento de túneis duplos d_1=16R_te em 16% para d_1=4R_t, enfatizando mais uma vez a forte interação mecânica entre os diferentes componentes da estrutura do túnel.
+
+O valor de pico da convergência do teto do túnel U_peakque reflete o acoplamento associado à galeria transversal de intersecção, o acoplamento associado à intersecção é quase não afetado pela rigidez do revestimento, pelo menos para os parâmetros de dados considerados. A esse respeito, o valor da razão U_(peak-U_C )/U_C   computado na configuração d_1=16R_t(resp. d_1=4R_t) é de aproximadamente 12% (resp. e 18%) para ambos os valores de rigidez do revestimento, o que corrobora o efeito predominante da proximidade dos túneis na convergência de pico U_peak. 
+
+
+
+
+
+
+
 Parágrafos a elaborar:
 
 Uma observação importante é que em túneis simples, sob condições de isotropia de massa rochosa e estado de tensão inicial hidrostática, a simetria da parede do túnel é preservada durante todo o processo de escavação. Assim, a parede deformada do túnel permanece circular. Por outro lado, um dos efeitos da interação mútua induzida pela proximidade dos túneis gêmeos é a perda de simetria da parede deformada do túnel. 
@@ -87,14 +147,38 @@ Entretanto, com relação à existência de uma galeria transversal e à adoçã
 
 
 
-
+CONSTRUÇÃO DA CONCLUSÃO:
 
 
 De forma geral, o campo de deformações e tensões ao redor da cavidade de um túnel profundo depende de vários fatores inter-relacionados, como a profundidade do túnel, a geometria da seção transversal, a anisotropia das tensões in situ, das condições de tunelamento, do comportamento e acoplamento mecânico do maciço rochoso e do revestimento. Em túneis gêmeos é acrescida a interação da proximidade entre os túneis longitudinais e, quando existem, galerias transversais, que causam uma redistribuição das tensões de forma localizada sobrecarregando os túneis principais. Além disso, diferentemente de túneis solteiros, a existência da galeria só pode ser estudada com modelos que consideram o estado de tensões tridimensional.
 
-Uma das contribuição do estudo, ao nivel da estrutura, está na construção de um modelo capaz de fazer simulações tridimensionais em elementos finitos em um domínio de túneis gêmeos profundos circulares interligados por uma galeria. O processo construtivo, i.e, escavação e colocação do revestimento, é simulado através da técnica de ativação/desativação. 
+Uma das contribuição do estudo, ao nivel da estrutura, está na construção de um modelo capaz de fazer simulações tridimensionais em elementos finitos em um domínio de túneis gêmeos profundos circulares interligados por uma galeria. O processo construtivo, i.e, escavação e colocação do revestimento, foi simulado através da técnica de ativação/desativação. No nível do material, foram implmenetados e investigados quatro modelos constitutivos para o maciço (elástico - E, elastoplástico - EP, viscoplástico - VP, elastoplástico-viscoplástico - EPVP) e três configurações para o revestimento (sem revestimento - NL, elástico - EL e viscoelástico - VEL). Na aplicação numérica desse estudo, além dos diferentes modelos constitutivos, foram estudados a influência do espaçamento entre eixos dos túneis longitudinais (d1 = 16Rt, 8Rt e 4Rt) e a influência da rigidez do revestimento no controle das deformações. Para os modelos dependentes do tempo, resultados ao final da construção do túnel (curto prazo - ST) e após os efeitos viscosos atingirem o equilíbrio (longo prazo - LT) foram obtidos e investigados.
 
-No nível do material, foram implmenetados e investigados quatro modelos constitutivos para o maciço (elástico - E, elastoplástico - EP, viscoplástico - VP, elastoplástico-viscoplástico - EPVP) e três configurações para o revestimento (sem revestimento - NL, elástico - EL e viscoelástico - VEL).
+Porém, antes dessa aplicação, simulações numéricas preliminares do modelo computacional 3D foram realizadas e verificações com soluções analíticas de túneis gêmeos não revestidos em estado plano de deformações considerando maciço rochoso em elasticidade e elastoplasticidade foram feitas. Essas simulações demonstraram a capacidade do modelo de capturar acuradamente os principais efeitos que ocorrem nesses tipo de estrutura, como o efeito da ovalização, a distribuição das tensões e a extensão da zona da plastificação para diversas distâncias entre os túneis e diferentes valores de coesão e ângulo de atrito.
+
+No que diz respeito a aplicação, o objetivo principal foi ilustrar a capacidade da formulação proposta de abordar a problemática tridimensional de túneis gêmeos conectados com galerias envolvendo acoplamentos não lineares e dependentes do tempo. A realização de uma análise paramétrica exaustiva integrando os efeitos dos parâmetros geométricos, constitutivos de de carga está além dessa aplicação numérica. Foi escolhido paramâmetros constitutivos da argila profunda (450 m de profundidade) da bacia oriental de Paris cujos testes de laboratório realizado em condições não drenadas apresentava comportamento instantâneo e diferido capaz de ser simulado pelos modelos constitutivos implementados. Para o revestimento, tanto para os túneis gêmeos quanto para a galeria, um modelo constitutivo que considera a fluência e a retração do concreto foi adotado.
+
+Algumas conclusões desse estudo podem ser apontadas. Primeiramente, comparando-se os perfis de convergência, a discrepância entre as respostas de curto e longo prazo é mais pronunciada quando se tem um revestimento viscoelástico envelhecido. O que mostra a importância de se considerar um modelo que leve em conta a fluência e retração do concreto. A rigidez relativamente alta considerada de um revestimento elástico, reduz significativamente o componente viscoso da deformação da parede do túnel. Além disso, os resultados sugerem que o efeito de ovalização na deformação do túnel longitudinal induzida pela proximidade dos túneis é mais pronunciada no curto prazo. A viscosidade do maciço rochoso tende a reduzir o efeito de ovalização com o tempo.
+
+O efeito na convergência global do túnel devido a interação da proximidade dos túneis d1 e do tempo necessário para a escavação completa da galeria, também dependente do comprimento d1, se mostraram predominantes para uma distância d1 = 4Rt. Essa distância também levou a um maior valor de pico na convergência no ponto de encontro entre os eixos dos túneis gêmeos com a galeria. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 Nesse contexto, esse estudo trouxe contribuições de análises do ponto de vista estrutural e do material. No nível da estrutura o estudo é feito através de simulações tridimensionais em elementos finitos considerando o processo construtivo através da técnica de ativação/desativação. No nível do material, foram implementados e investigados quatro modelos constitutivos para o maciço (elástico - E, elastoplástico - EP, viscoplástico - VP, elastoplástico-viscoplástico - EPVP) e três configurações para o revestimento (sem revestimento - NL, elástico - EL e viscoelástico - VEL). Além dos diferentes modelos constitutivos, foram estudados a influência do espaçamento entre eixos dos túneis longitudinais (d1 = 16Rt, 8Rt e 4Rt) e a influência da rigidez do revestimento no controle das deformações. Para os modelos constitutivos que envolviam a viscosidade, resultados ao final da construção do túnel (curto prazo - ST) e após os efeitos viscosos atingirem o equilíbrio (longo prazo - LT) foram obtidos e investigados. Simulações numéricas preliminares e verificação do modelo computacional são feitas com soluções analíticas em elasticidade e elastoplasticidade.
