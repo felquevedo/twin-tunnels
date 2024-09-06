@@ -196,7 +196,11 @@ In general, the field of deformations and stresses around a deep tunnel depends 
 
 PARTE DE TRABALHOS FUTUROS
 
-Futuros desenvolvimentos podem ampliar esse estudo considerando outras condições de tunelamento, como a influência lagged distance betwenn the two tunnels faces, ou ainda a influência da proximidade da face de escavação dos túneis longitudinais na galeria. 
+
+
+Validações com estudos de casos ainda são necessários para suportar os resultados desse estudo. Futuros desenvolvimentos podem ampliar esse estudo. Do ponto de vista estrutural, outras condições de tunelamento podem ser implementadas, como a lagged distance betwenn the two tunnels excavation faces, ou ainda a influência da proximidade da face de escavação dos túneis longitudinais na escavação da galeria. Outro aspecto de fácil implementação e interessante para modelos constitutivos viscosos é considerar uma velocidade de escavação variável e diferente para os túneis longitudinais e para a galeria. Do ponto de vista do material, pode ser incorporado o efeito da poropressão da rocha e tirantes radiais.
+
+
 
 Do ponto de vista do material, estudos considerando modelos constitutivos poromecânicos ou tirantes também podem ser feitos.
 

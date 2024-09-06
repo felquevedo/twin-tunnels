@@ -3,3 +3,5 @@ pandoc --citeproc --bibliography=cas-refs.bib -s .\cas-sc-template.tex -f latex 
 pandoc -o out.docx -t docx cas-sc-template.tex 
 
 pandoc -o introduction.docx -t docx cas-sc-template.tex 
+
+pandoc -o conclusion.docx -t docx cas-sc-template.tex 

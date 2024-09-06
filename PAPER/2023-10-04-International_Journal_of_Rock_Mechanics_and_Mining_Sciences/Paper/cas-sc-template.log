@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.12) (preloaded format=pdflatex 2024.7.1)  6 SEP 2024 10:09
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.12) (preloaded format=pdflatex 2024.7.1)  6 SEP 2024 14:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1278,7 +1278,7 @@ Package pdftex.def Info: Convergence Profiles - EP_EPVP_NG_LT_single tunnel.pdf
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [31 <./Convergence Profiles - EPVP_EL_VEL_d1_4Ri_anotate.pdf>] [32 <./Convergen
-ce Profiles - EP_EPVP_NG_LT_single tunnel.pdf>] (cas-sc-template.bbl [33]
+ce Profiles - EP_EPVP_NG_LT_single tunnel.pdf>] [33] (cas-sc-template.bbl
 [34]) [35] (cas-sc-template.aux)
 
 LaTeX Warning: There were multiply-defined labels.
@@ -1289,11 +1289,11 @@ Package rerunfilecheck Info: File `cas-sc-template.out' has not changed.
 Here is how much of TeX's memory you used:
  17292 strings out of 476404
  273113 string characters out of 2789525
- 1882324 words of memory out of 3000000
+ 1881324 words of memory out of 3000000
  37167 multiletter control sequences out of 15000+600000
  632452 words of font info for 203 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 90i,17n,90p,2606b,636s stack positions out of 10000i,1000n,20000p,200000b,80000s
+ 90i,17n,90p,2606b,628s stack positions out of 10000i,1000n,20000p,200000b,80000s
 
 pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist
 , replaced by a fixed one
@@ -1318,7 +1318,7 @@ TeX/fonts/type1/public/stix/stix-mathrm-bold.pfb><C:/Users/augus/AppData/Local/
 Programs/MiKTeX/fonts/type1/public/stix/stix-mathrm.pfb><C:/Users/augus/AppData
 /Local/Programs/MiKTeX/fonts/type1/public/stix/stix-mathscr.pfb><C:/Users/augus
 /AppData/Local/Programs/MiKTeX/fonts/type1/public/stix/stix-mathsf.pfb>
-Output written on cas-sc-template.pdf (37 pages, 4425586 bytes).
+Output written on cas-sc-template.pdf (37 pages, 4426032 bytes).
 PDF statistics:
  9610 PDF objects out of 10688 (max. 8388607)
  151 named destinations out of 1000 (max. 500000)
