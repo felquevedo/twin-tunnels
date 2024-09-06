@@ -194,6 +194,12 @@ In general, the field of deformations and stresses around a deep tunnel depends 
 
 
 
+PARTE DE TRABALHOS FUTUROS
+
+Futuros desenvolvimentos podem ampliar esse estudo considerando outras condições de tunelamento, como a influência lagged distance betwenn the two tunnels faces, ou ainda a influência da proximidade da face de escavação dos túneis longitudinais na galeria. 
+
+Do ponto de vista do material, estudos considerando modelos constitutivos poromecânicos ou tirantes também podem ser feitos.
+
 
 
 
