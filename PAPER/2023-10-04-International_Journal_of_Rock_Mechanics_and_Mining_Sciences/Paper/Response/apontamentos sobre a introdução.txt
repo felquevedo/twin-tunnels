@@ -1,0 +1,30 @@
+QUESTÕES REVISORES
+
+- Deixar claro a racionalidade do estudo
+- Pq a metodologia é usada?
+- Um resmo das pesquisas existentes e highlight na inovação do trabalho
+- Vantagem de fazer uma análise complexa visco-elasto-plastica sem sequenciamento
+- Pq análise 3D?
+- A importância da plasticidade e viscosidade?
+- Onde está a novidade?
+
+
+CONSTRUÇÃO DO PARÁGRAFO:
+
+Tunnels are impressive engineering feats that serve various purposes, the most common being the ability to traverse geographical barriers such as mountains and maritime channels, thus enabling more efficient transportation of people and resources. Additionally, with growing environmental concerns and the need to preserve urban surfaces, tunnels have increasingly been employed in large cities to improve urban mobility, such as in subway systems, while also serving as infrastructure for water, sewage, gas, and electricity networks. They play a crucial role in sectors such as hydroelectric plants, underground laboratories, radioactive material storage facilities, mining, and the petrochemical industry. They represent a strategically important technology for national development, addressing a range of geotechnical and structural challenges.
+
+The structural design and analysis of tunnels require consideration of numerous geotechnical parameters and the accurate estimation of several critical factors such as cavity convergence (or closure), the loads applied to the tunnel lining, and plastification of the surrounding rock mass. For shallow tunnels, surface settlement also becomes a significant concern.
+
+The stress and deformation fields that develop around a tunnel are influenced by a range of parameters, including the tunnel's depth, the tunnel wall geometry, anisotropy of in situ stresses, presence of water, and surface loads in the case of shallow tunnels. Additionally, the excavation method and lining installation play crucial roles, as does the rheological behavior and coupling of both the rock mass and the lining. 
+
+One of the key challenges in tunnel modeling is accurately capturing the interaction between the immediate response and the long-term behavior of the structure. The time-dependent behavior can significantly influence both deformations and overall cavity stability. Phenomena such as plasticization of the surrounding rock mass, gradual tunnel wall closure, and increased loading on the lining may develop not only during construction in the short-term but also progressively over months or even years.
+
+In adjacent tunnels such the twin tunnels, there is also the interaction due to the proximity of the tunnels, lagging distance between escavation faces and, if present, transverse galleries, which cause localized stress distribution and overloading the main tunnels. Furthermore, unlike single tunnels, twin tunnels with gallery’s influence can only be studied with three-dimensional models.
+
+A maioria dos estudos que envolve túneis adjacentes ou túneis gêmeos se concentram nos efeitos da bacia de assentamento (citar os estudos recentes). E poucos são aqueles que envolvem túneis gêmeos profundos. Contudo, alguns estudos recentes podem ser encontrados em [....] e serão comentados na sequência. Há uma ausência de trabalhos dedicados envolvendo efeitos diferidos no tempo, tanto do maciço quanto do revestimento e ainda mais com galerias transversais. (essa é a novidade).
+
+
+
+
+
+
