@@ -9,50 +9,50 @@ Name 1 in "Quevedo, F. P. M., and Bernaud, D. and Maghous, S." has a comma at th
 while executing---line 1591 of file model3-num-names.bst
 Reallocating 'wiz_functions' (item size: 4) to 6000 items.
 Reallocating 'singl_function' (item size: 4) to 100 items.
-Warning--empty pages in Fortsakis2021
+Warning--empty pages in Fortsakis2012
 Name 1 in "Quevedo, F. P. M., and Bernaud, D. and Maghous, S." has a comma at the end for entry quevedo2022b
 while executing---line 1685 of file model3-num-names.bst
 Name 1 in "Quevedo, F. P. M., and Bernaud, D. and Maghous, S." has a comma at the end for entry quevedo2022b
 while executing---line 1685 of file model3-num-names.bst
-You've used 44 entries,
+You've used 43 entries,
             3138 wiz_defined-function locations,
-            970 strings with 15212 characters,
-and the built_in function-call counts, 37818 in all, are:
-= -- 3214
-> -- 789
-< -- 31
-+ -- 428
-- -- 208
-* -- 4177
-:= -- 4754
-add.period$ -- 179
-call.type$ -- 44
-change.case$ -- 233
-chr.to.int$ -- 40
-cite$ -- 45
-duplicate$ -- 3396
-empty$ -- 3359
-format.name$ -- 347
-if$ -- 7583
+            963 strings with 15052 characters,
+and the built_in function-call counts, 36807 in all, are:
+= -- 3122
+> -- 774
+< -- 30
++ -- 420
+- -- 204
+* -- 4064
+:= -- 4628
+add.period$ -- 175
+call.type$ -- 43
+change.case$ -- 228
+chr.to.int$ -- 39
+cite$ -- 44
+duplicate$ -- 3303
+empty$ -- 3265
+format.name$ -- 338
+if$ -- 7376
 int.to.chr$ -- 5
-int.to.str$ -- 45
-missing$ -- 441
-newline$ -- 272
-num.names$ -- 129
-pop$ -- 817
+int.to.str$ -- 44
+missing$ -- 431
+newline$ -- 266
+num.names$ -- 126
+pop$ -- 800
 preamble$ -- 1
-purify$ -- 220
+purify$ -- 215
 quote$ -- 0
-skip$ -- 724
+skip$ -- 710
 stack$ -- 0
-substring$ -- 3510
-swap$ -- 1684
+substring$ -- 3391
+swap$ -- 1648
 text.length$ -- 6
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 258
+type$ -- 252
 warning$ -- 1
-while$ -- 163
+while$ -- 159
 width$ -- 0
-write$ -- 715
+write$ -- 699
 (There were 3 error messages)
