@@ -1,4 +1,4 @@
-\begin{thebibliography}{43}
+\begin{thebibliography}{44}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \providecommand{\href}[2]{#2}
@@ -411,5 +411,10 @@ ANSYS.
 \newblock \bibinfo{publisher}{Presses De L'ecole Nationale Des Ponts Et
   Chaussees}; \bibinfo{year}{1995}.
 \newblock ISBN \bibinfo{isbn}{2859782303}.
+%Type = Book
+\bibitem[{Hoek and Brown(1980)}]{brown1980}
+\bibinfo{author}{Hoek\xfnm[ E.]}, \bibinfo{author}{Brown\xfnm[ E.T.]}.
+\newblock \bibinfo{title}{Underground excavations in rock}.
+\newblock \bibinfo{publisher}{CRC Press}; \bibinfo{year}{1980}.
 
 \end{thebibliography}
