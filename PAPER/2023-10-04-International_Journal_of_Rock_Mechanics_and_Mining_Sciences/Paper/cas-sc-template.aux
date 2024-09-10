@@ -2,10 +2,13 @@
 \providecommand\hyper@newdestlabel[2]{}
 \providecommand\HyperFirstAtBeginDocument{\AtBeginDocument}
 \HyperFirstAtBeginDocument{\ifx\hyper@anchor\@undefined
+\global\let\oldcontentsline\contentsline
+\gdef\contentsline#1#2#3#4{\oldcontentsline{#1}{#2}{#3}}
 \global\let\oldnewlabel\newlabel
 \gdef\newlabel#1#2{\newlabelxx{#1}#2}
 \gdef\newlabelxx#1#2#3#4#5#6{\oldnewlabel{#1}{{#2}{#3}}}
 \AtEndDocument{\ifx\hyper@anchor\@undefined
+\let\contentsline\oldcontentsline
 \let\newlabel\oldnewlabel
 \fi}
 \fi}
@@ -26,18 +29,15 @@
 \emailauthor{samir.maghous@ufrgs.br}{Maghous, S.}
 \urlauthor{https://www.researchgate.net/profile/Samir-Maghous}{Maghous, S.}
 \NewLabel{cor1}{1}
-\citation{Spyridis2015}
-\citation{Chen2019}
-\citation{Fortsakis2021}
-\citation{chortis2021a}
-\citation{chortis2021b}
-\citation{GUO2021}
-\citation{chortis2023a}
-\citation{chortis2023b}
-\citation{chortis2021a}
-\citation{chortis2021b}
 \@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{1}{section.1}\protected@file@percent }
 \newlabel{}{{1}{1}{Introduction}{section.1}{}}
+\citation{karakus2007}
+\citation{ZHENG2015}
+\citation{do_3d_2016}
+\citation{forsat2022}
+\citation{PHUTTHANANON2023}
+\citation{ISLAM2021}
+\citation{chortis2021b}
 \citation{Chen2019}
 \citation{GUO2021}
 \citation{MA2020}
@@ -45,7 +45,6 @@
 \citation{chortis2023b}
 \citation{Fortsakis2021}
 \citation{chortis2021a}
-\citation{Spyridis2015}
 \citation{chortis2021a}
 \citation{bazant:1989a,bazant:1989b}
 \citation{ANSYS:2013b}
@@ -71,14 +70,13 @@
 \@writefile{toc}{\contentsline {section}{\numberline {3}Constitutive Model of the Rock Material}{3}{section.3}\protected@file@percent }
 \newlabel{}{{3}{3}{Constitutive Model of the Rock Material}{section.3}{}}
 \citation{bernaud1991}
-\citation{quevedo2022b}
-\citation{perzyna1966}
 \newlabel{eq_constitutive_relationship_epvp}{{1}{4}{Constitutive Model of the Rock Material}{equation.3.1}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Rheological representation of the elastoplastic-viscoplastic model.}}{4}{figure.1}\protected@file@percent }
 \newlabel{reological_scheme}{{1}{4}{Rheological representation of the elastoplastic-viscoplastic model}{figure.1}{}}
 \newlabel{eq:f_Drucker_Prager}{{2}{4}{Constitutive Model of the Rock Material}{equation.3.2}{}}
 \newlabel{eq:f_DP_inscrita_MC}{{3}{4}{Constitutive Model of the Rock Material}{equation.3.3}{}}
-\newlabel{eq_plastic_flow}{{4}{4}{Constitutive Model of the Rock Material}{equation.3.4}{}}
+\citation{quevedo2022b}
+\citation{perzyna1966}
 \citation{bazant:1989a}
 \citation{bazant:1989b}
 \citation{CEB:1993}
@@ -87,6 +85,7 @@
 \citation{CEB:1993}
 \citation{quevedo2017comportamento}
 \citation{quevedo2022}
+\newlabel{eq_plastic_flow}{{4}{5}{Constitutive Model of the Rock Material}{equation.3.4}{}}
 \newlabel{eq_viscoplastic_flow}{{5}{5}{Constitutive Model of the Rock Material}{equation.3.5}{}}
 \newlabel{eq_perzyna_model}{{6}{5}{Constitutive Model of the Rock Material}{equation.3.6}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Elastoplastic-viscoplastic domains.}}{5}{figure.2}\protected@file@percent }
@@ -98,18 +97,18 @@
 \citation{CEB:1993}
 \citation{bazant:1989a,bazant:1989b}
 \citation{CEB:1993}
-\citation{bazant:1989a,bazant:1989b}
-\citation{CEB:1993}
 \@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Generalized Kelvin model for uniaxial concrete viscoelasticity.}}{6}{figure.3}\protected@file@percent }
 \newlabel{reological_representation_concrete}{{3}{6}{Generalized Kelvin model for uniaxial concrete viscoelasticity}{figure.3}{}}
 \newlabel{eq:8}{{7}{6}{Constitutive Model of the Lining}{equation.4.7}{}}
 \newlabel{eq:9}{{8}{6}{Constitutive Model of the Lining}{equation.4.8}{}}
 \newlabel{eq:10}{{9}{6}{Constitutive Model of the Lining}{equation.4.9}{}}
-\newlabel{eq:11}{{10}{6}{Constitutive Model of the Lining}{equation.4.10}{}}
+\citation{bazant:1989a,bazant:1989b}
+\citation{CEB:1993}
 \citation{bernaud1995}
 \citation{bernaud2009}
 \citation{maghous2012}
 \citation{quevedo2022}
+\newlabel{eq:11}{{10}{7}{Constitutive Model of the Lining}{equation.4.10}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {5}Spatial and time discretization of the domain}{7}{section.5}\protected@file@percent }
 \newlabel{section_spatial}{{5}{7}{Spatial and time discretization of the domain}{section.5}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Schematic representation of the twin tunnels geometry problem.}}{7}{figure.4}\protected@file@percent }
@@ -117,12 +116,12 @@
 \newlabel{eq:stress0}{{11}{7}{Spatial and time discretization of the domain}{equation.5.11}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Mesh, dimensions and boundary conditions of the 3D twin tunnel domain.}}{8}{figure.5}\protected@file@percent }
 \newlabel{Mesh1}{{5}{8}{Mesh, dimensions and boundary conditions of the 3D twin tunnel domain}{figure.5}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Detail 1 - Mesh in longitudinal tunnel cross-section with spacing $d_1=4R_t$.}}{8}{figure.6}\protected@file@percent }
-\newlabel{Mesh2}{{6}{8}{Detail 1 - Mesh in longitudinal tunnel cross-section with spacing $d_1=4R_t$}{figure.6}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Detail 1 - Mesh in longitudinal tunnel cross-section with spacing $d_1=4R_t$.}}{9}{figure.6}\protected@file@percent }
+\newlabel{Mesh2}{{6}{9}{Detail 1 - Mesh in longitudinal tunnel cross-section with spacing $d_1=4R_t$}{figure.6}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Geometry and F.E mesh of gallery cross-section for configurations $d_1=16R_t$, $d_1=8R_t$ and $d_1=4R_t$.}}{9}{figure.7}\protected@file@percent }
 \newlabel{Mesh3}{{7}{9}{Geometry and F.E mesh of gallery cross-section for configurations $d_1=16R_t$, $d_1=8R_t$ and $d_1=4R_t$}{figure.7}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Views of longitudinal tunnel and gallery in the symmetry plane $y=0$ for configurations $d_1=16R_t$, $d_1=8R_t$ and $d_1=4R_t$.}}{9}{figure.8}\protected@file@percent }
-\newlabel{Mesh4}{{8}{9}{Views of longitudinal tunnel and gallery in the symmetry plane $y=0$ for configurations $d_1=16R_t$, $d_1=8R_t$ and $d_1=4R_t$}{figure.8}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Views of longitudinal tunnel and gallery in the symmetry plane $y=0$ for configurations $d_1=16R_t$, $d_1=8R_t$ and $d_1=4R_t$.}}{10}{figure.8}\protected@file@percent }
+\newlabel{Mesh4}{{8}{10}{Views of longitudinal tunnel and gallery in the symmetry plane $y=0$ for configurations $d_1=16R_t$, $d_1=8R_t$ and $d_1=4R_t$}{figure.8}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces View of the transition and tunnel/gallery intersection zones for configurations $d_1=16R_t$, $d_1=8R_t$ and $d_1=4R_t$.}}{10}{figure.9}\protected@file@percent }
 \newlabel{Mesh5}{{9}{10}{View of the transition and tunnel/gallery intersection zones for configurations $d_1=16R_t$, $d_1=8R_t$ and $d_1=4R_t$}{figure.9}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces Isometric view of the lining at the intersection for $d_1=16R_t$, $d_1=8R_t$ and $d_1=4R_t$ - expansion of symmetry in the $xz$ plane.}}{11}{figure.10}\protected@file@percent }
@@ -224,43 +223,49 @@
 \newlabel{}{{8}{32}{Conclusions}{section.8}{}}
 \bibstyle{model3-num-names}
 \bibdata{cas-refs}
-\bibcite{Spyridis2015}{{1}{2015}{{Spyridis and Bergmeister}}{{}}}
-\bibcite{Chen2019}{{2}{2019}{{Chen et~al.}}{{Chen, Lin and Li}}}
-\bibcite{Fortsakis2021}{{3}{2012}{{Fortsakis et~al.}}{{Fortsakis, Bekri, Prountzopoulos and Marinos}}}
-\bibcite{chortis2021a}{{4}{2021{}}{{Chortis and Kavvadas}}{{}}}
-\bibcite{chortis2021b}{{5}{2021{}}{{Chortis and Kavvadas}}{{}}}
-\bibcite{GUO2021}{{6}{2021}{{Guo et~al.}}{{Guo, Liu and Zhu}}}
-\bibcite{chortis2023a}{{7}{2023{}}{{Chortis and Kavvadas}}{{}}}
-\bibcite{chortis2023b}{{8}{2023{}}{{Chortis and Kavvadas}}{{}}}
-\bibcite{MA2020}{{9}{2020}{{Ma et~al.}}{{Ma, Lu, Zeng and Cai}}}
-\bibcite{bazant:1989a}{{10}{1989{}}{{Ba{\v {z}}ant and Prasannan}}{{}}}
-\bibcite{bazant:1989b}{{11}{1989{}}{{Ba{\v {z}}ant and Prasannan}}{{}}}
-\bibcite{ANSYS:2013b}{{12}{2013}{{ANSYS}}{{}}}
-\bibcite{nemat1993}{{13}{1993}{{Nemat-Nasser and Hori}}{{}}}
-\bibcite{deude2002}{{14}{2002}{{Deudé et~al.}}{{Deudé, Dormieux, Kondo and Maghous}}}
-\bibcite{deBuhan2002}{{15}{2002}{{de~Buhan et~al.}}{{de~Buhan, Fréard, Garnier and Maghous}}}
-\bibcite{Marmier2007}{{16}{2007}{{Marmier et~al.}}{{Marmier, Jeannin and Barthélémy}}}
-\bibcite{Aguiar2023}{{17}{2023}{{Aguiar and Maghous}}{{}}}
-\bibcite{rousset1988}{{18}{1988}{{Rousset}}{{}}}
-\bibcite{Nguyen1987}{{19}{1987}{{Nguyen~Minh and Rousset}}{{}}}
-\bibcite{GIRAUD1996}{{20}{1996}{{Giraud and Rousset}}{{}}}
-\bibcite{Bernaud1993}{{21}{1993}{{Bernaud and Rousset}}{{}}}
-\bibcite{piepi1995}{{22}{1995}{{Piepi}}{{}}}
-\bibcite{quevedo2022thesis}{{23}{2021}{{Quevedo}}{{}}}
-\bibcite{quevedo2022b}{{24}{2022{}}{{Quevedo et~al.}}{{Quevedo, Bernaud and Maghous}}}
-\bibcite{bernaud1991}{{25}{1991}{{Bernaud}}{{}}}
-\bibcite{perzyna1966}{{26}{1966}{{Perzyna}}{{}}}
-\bibcite{CEB:1993}{{27}{1993}{{CEB-FIP}}{{}}}
-\bibcite{quevedo2018}{{28}{2018}{{Quevedo et~al.}}{{Quevedo, Schmitz, Morsch, A. and Bernaud}}}
-\bibcite{quevedo2022}{{29}{2022{}}{{Quevedo et~al.}}{{Quevedo, Bernaud and Campos~Filho}}}
-\bibcite{quevedo2017comportamento}{{30}{2017}{{Quevedo}}{{}}}
-\bibcite{bernaud1995}{{31}{1995}{{Bernaud et~al.}}{{Bernaud, Debuhan and Maghous}}}
-\bibcite{bernaud2009}{{32}{2009}{{Bernaud et~al.}}{{Bernaud, Maghous, Debuhan and Couto}}}
-\bibcite{maghous2012}{{33}{2012}{{Maghous et~al.}}{{Maghous, Bernaud and Couto}}}
-\bibcite{zienkiewicz1974visco}{{34}{1974}{{Zienkiewicz and Cormeau}}{{}}}
-\bibcite{simo1998}{{35}{1998}{{Simo and Hughes}}{{}}}
-\bibcite{ling1948}{{36}{1948}{{Ling}}{{}}}
-\bibcite{giraud1993}{{37}{1993}{{Giraud}}{{}}}
-\bibcite{Panet1995}{{38}{1995}{{Panet}}{{}}}
+\bibcite{karakus2007}{{1}{2007}{{Karakus et~al.}}{{Karakus, Ozsan and Başarır}}}
+\bibcite{ZHENG2015}{{2}{2015}{{Zheng et~al.}}{{Zheng, Zhang and Diao}}}
+\bibcite{do_3d_2016}{{3}{2016}{{Do et~al.}}{{Do, Dias and Oreste}}}
+\bibcite{forsat2022}{{4}{2022}{{Forsat et~al.}}{{Forsat, Taghipoor and Palassi}}}
+\bibcite{PHUTTHANANON2023}{{5}{2023}{{Phutthananon et~al.}}{{Phutthananon, Lertkultanon, Jongpradist, Duangsano, Likitlersuang and Jamsawang}}}
+\bibcite{ISLAM2021}{{6}{2021}{{Islam and Iskander}}{{}}}
+\bibcite{Spyridis2015}{{7}{2015}{{Spyridis and Bergmeister}}{{}}}
+\bibcite{Chen2019}{{8}{2019}{{Chen et~al.}}{{Chen, Lin and Li}}}
+\bibcite{Fortsakis2021}{{9}{2012}{{Fortsakis et~al.}}{{Fortsakis, Bekri, Prountzopoulos and Marinos}}}
+\bibcite{chortis2021a}{{10}{2021{}}{{Chortis and Kavvadas}}{{}}}
+\bibcite{chortis2021b}{{11}{2021{}}{{Chortis and Kavvadas}}{{}}}
+\bibcite{GUO2021}{{12}{2021}{{Guo et~al.}}{{Guo, Liu and Zhu}}}
+\bibcite{chortis2023a}{{13}{2023{}}{{Chortis and Kavvadas}}{{}}}
+\bibcite{chortis2023b}{{14}{2023{}}{{Chortis and Kavvadas}}{{}}}
+\bibcite{MA2020}{{15}{2020}{{Ma et~al.}}{{Ma, Lu, Zeng and Cai}}}
+\bibcite{bazant:1989a}{{16}{1989{}}{{Ba{\v {z}}ant and Prasannan}}{{}}}
+\bibcite{bazant:1989b}{{17}{1989{}}{{Ba{\v {z}}ant and Prasannan}}{{}}}
+\bibcite{ANSYS:2013b}{{18}{2013}{{ANSYS}}{{}}}
+\bibcite{nemat1993}{{19}{1993}{{Nemat-Nasser and Hori}}{{}}}
+\bibcite{deude2002}{{20}{2002}{{Deudé et~al.}}{{Deudé, Dormieux, Kondo and Maghous}}}
+\bibcite{deBuhan2002}{{21}{2002}{{de~Buhan et~al.}}{{de~Buhan, Fréard, Garnier and Maghous}}}
+\bibcite{Marmier2007}{{22}{2007}{{Marmier et~al.}}{{Marmier, Jeannin and Barthélémy}}}
+\bibcite{Aguiar2023}{{23}{2023}{{Aguiar and Maghous}}{{}}}
+\bibcite{rousset1988}{{24}{1988}{{Rousset}}{{}}}
+\bibcite{Nguyen1987}{{25}{1987}{{Nguyen~Minh and Rousset}}{{}}}
+\bibcite{GIRAUD1996}{{26}{1996}{{Giraud and Rousset}}{{}}}
+\bibcite{Bernaud1993}{{27}{1993}{{Bernaud and Rousset}}{{}}}
+\bibcite{piepi1995}{{28}{1995}{{Piepi}}{{}}}
+\bibcite{quevedo2022thesis}{{29}{2021}{{Quevedo}}{{}}}
+\bibcite{quevedo2022b}{{30}{2022{}}{{Quevedo et~al.}}{{Quevedo, Bernaud and Maghous}}}
+\bibcite{bernaud1991}{{31}{1991}{{Bernaud}}{{}}}
+\bibcite{perzyna1966}{{32}{1966}{{Perzyna}}{{}}}
+\bibcite{CEB:1993}{{33}{1993}{{CEB-FIP}}{{}}}
+\bibcite{quevedo2018}{{34}{2018}{{Quevedo et~al.}}{{Quevedo, Schmitz, Morsch, A. and Bernaud}}}
+\bibcite{quevedo2022}{{35}{2022{}}{{Quevedo et~al.}}{{Quevedo, Bernaud and Campos~Filho}}}
+\bibcite{quevedo2017comportamento}{{36}{2017}{{Quevedo}}{{}}}
+\bibcite{bernaud1995}{{37}{1995}{{Bernaud et~al.}}{{Bernaud, Debuhan and Maghous}}}
+\bibcite{bernaud2009}{{38}{2009}{{Bernaud et~al.}}{{Bernaud, Maghous, Debuhan and Couto}}}
+\bibcite{maghous2012}{{39}{2012}{{Maghous et~al.}}{{Maghous, Bernaud and Couto}}}
+\bibcite{zienkiewicz1974visco}{{40}{1974}{{Zienkiewicz and Cormeau}}{{}}}
+\bibcite{simo1998}{{41}{1998}{{Simo and Hughes}}{{}}}
+\bibcite{ling1948}{{42}{1948}{{Ling}}{{}}}
+\bibcite{giraud1993}{{43}{1993}{{Giraud}}{{}}}
+\bibcite{Panet1995}{{44}{1995}{{Panet}}{{}}}
 \csxdef{lastpage}{35}
 \gdef \@abspage@last{37}

@@ -1,4 +1,4 @@
-\begin{thebibliography}{38}
+\begin{thebibliography}{44}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \providecommand{\href}[2]{#2}
@@ -13,6 +13,78 @@
 \providecommand{\BIBand}{and}
 \providecommand{\bibinfo}[2]{#2}
 \ifx\xfnm\undefined \def\xfnm[#1]{\unskip,\space#1}\fi
+%Type = Article
+\bibitem[{Karakus et~al.(2007)Karakus, Ozsan and Başarır}]{karakus2007}
+\bibinfo{author}{Karakus\xfnm[ M.]}, \bibinfo{author}{Ozsan\xfnm[ A.]},
+  \bibinfo{author}{Başarır\xfnm[ H.]}.
+\newblock \bibinfo{title}{Finite element analysis for the twin metro tunnel
+  constructed in {Ankara} {Clay}, {Turkey}}.
+\newblock \bibinfo{journal}{Bulletin of Engineering Geology and the
+  Environment}
+  \bibinfo{year}{2007};\bibinfo{volume}{66}(\bibinfo{number}{1}):\bibinfo{pages}{71--79}.
+\newblock \URLprefix \url{http://link.springer.com/10.1007/s10064-006-0056-z}.
+  \DOIprefix\doi{10.1007/s10064-006-0056-z}.
+%Type = Article
+\bibitem[{Zheng et~al.(2015)Zheng, Zhang and Diao}]{ZHENG2015}
+\bibinfo{author}{Zheng\xfnm[ G.]}, \bibinfo{author}{Zhang\xfnm[ T.]},
+  \bibinfo{author}{Diao\xfnm[ Y.]}.
+\newblock \bibinfo{title}{Mechanism and countermeasures of preceding tunnel
+  distortion induced by succeeding {EPBS} tunnelling in close proximity}.
+\newblock \bibinfo{journal}{Computers and Geotechnics}
+  \bibinfo{year}{2015};\bibinfo{volume}{66}:\bibinfo{pages}{53--65}.
+\newblock \URLprefix
+  \url{https://www.sciencedirect.com/science/article/pii/S0266352X15000105}.
+  \DOIprefix\doi{https://doi.org/10.1016/j.compgeo.2015.01.008}.
+%Type = Article
+\bibitem[{Do et~al.(2016)Do, Dias and Oreste}]{do_3d_2016}
+\bibinfo{author}{Do\xfnm[ N.A.]}, \bibinfo{author}{Dias\xfnm[ D.]},
+  \bibinfo{author}{Oreste\xfnm[ P.]}.
+\newblock \bibinfo{title}{{3D} numerical investigation of mechanized twin
+  tunnels in soft ground – {Influence} of lagging distance between two tunnel
+  faces}.
+\newblock \bibinfo{journal}{Engineering Structures}
+  \bibinfo{year}{2016};\bibinfo{volume}{109}:\bibinfo{pages}{117--125}.
+\newblock \URLprefix
+  \url{https://linkinghub.elsevier.com/retrieve/pii/S0141029615007609}.
+  \DOIprefix\doi{10.1016/j.engstruct.2015.11.053}.
+%Type = Article
+\bibitem[{Forsat et~al.(2022)Forsat, Taghipoor and Palassi}]{forsat2022}
+\bibinfo{author}{Forsat\xfnm[ M.]}, \bibinfo{author}{Taghipoor\xfnm[ M.]},
+  \bibinfo{author}{Palassi\xfnm[ M.]}.
+\newblock \bibinfo{title}{{3D} {FEM} {Model} on the {Parameters}’ {Influence}
+  of {EPB}-{TBM} on {Settlements} of {Single} and {Twin} {Metro} {Tunnels}
+  {During} {Construction}}.
+\newblock \bibinfo{journal}{International Journal of Pavement Research and
+  Technology}
+  \bibinfo{year}{2022};\bibinfo{volume}{15}(\bibinfo{number}{3}):\bibinfo{pages}{525--538}.
+\newblock \URLprefix
+  \url{https://link.springer.com/10.1007/s42947-021-00034-0}.
+  \DOIprefix\doi{10.1007/s42947-021-00034-0}.
+%Type = Article
+\bibitem[{Phutthananon et~al.(2023)Phutthananon, Lertkultanon, Jongpradist,
+  Duangsano, Likitlersuang and Jamsawang}]{PHUTTHANANON2023}
+\bibinfo{author}{Phutthananon\xfnm[ C.]}, \bibinfo{author}{Lertkultanon\xfnm[
+  S.]}, \bibinfo{author}{Jongpradist\xfnm[ P.]},
+  \bibinfo{author}{Duangsano\xfnm[ O.]}, \bibinfo{author}{Likitlersuang\xfnm[
+  S.]}, \bibinfo{author}{Jamsawang\xfnm[ P.]}.
+\newblock \bibinfo{title}{Numerical investigation on the responses of existing
+  single piles due to adjacent twin tunneling considering the lagging
+  distance}.
+\newblock \bibinfo{journal}{Underground Space}
+  \bibinfo{year}{2023};\bibinfo{volume}{11}:\bibinfo{pages}{171--188}.
+\newblock \URLprefix
+  \url{https://www.sciencedirect.com/science/article/pii/S2467967423000387}.
+  \DOIprefix\doi{https://doi.org/10.1016/j.undsp.2022.12.005}.
+%Type = Article
+\bibitem[{Islam and Iskander(2021)}]{ISLAM2021}
+\bibinfo{author}{Islam\xfnm[ M.S.]}, \bibinfo{author}{Iskander\xfnm[ M.]}.
+\newblock \bibinfo{title}{Twin tunnelling induced ground settlements: A
+  review}.
+\newblock \bibinfo{journal}{Tunnelling and Underground Space Technology}
+  \bibinfo{year}{2021};\bibinfo{volume}{110}:\bibinfo{pages}{103614}.
+\newblock \URLprefix
+  \url{https://www.sciencedirect.com/science/article/pii/S088677982030568X}.
+  \DOIprefix\doi{https://doi.org/10.1016/j.tust.2020.103614}.
 %Type = Article
 \bibitem[{Spyridis and Bergmeister(2015)}]{Spyridis2015}
 \bibinfo{author}{Spyridis\xfnm[ P.]}, \bibinfo{author}{Bergmeister\xfnm[ K.]}.
