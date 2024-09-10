@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.12) (preloaded format=pdflatex 2024.7.1)  10 SEP 2024 17:26
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.12) (preloaded format=pdflatex 2024.7.1)  10 SEP 2024 17:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -678,9 +678,6 @@ LaTeX Warning: Label `' multiply defined.
 LaTeX Warning: Label `' multiply defined.
 
 
-LaTeX Warning: Label `' multiply defined.
-
-
 LaTeX Warning: Label `eq:8' multiply defined.
 
 
@@ -1288,7 +1285,7 @@ Package pdftex.def Info: Convergence Profiles - EPVP_EL_VEL_d1_4Ri_anotate.pdf
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [34 <./Convergence Profiles - EPVP_EL_VEL_d1_16Ri_anotate.pdf>] [35 <./Converge
-nce Profiles - EPVP_EL_VEL_d1_4Ri_anotate.pdf>] [36] (cas-sc-template.bbl
+nce Profiles - EPVP_EL_VEL_d1_4Ri_anotate.pdf>] (cas-sc-template.bbl [36]
 [37]) [38] (cas-sc-template.aux)
 
 LaTeX Warning: There were multiply-defined labels.
@@ -1297,13 +1294,13 @@ Package rerunfilecheck Info: File `cas-sc-template.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 17314 strings out of 476404
- 273122 string characters out of 2789525
- 1880324 words of memory out of 3000000
- 37182 multiletter control sequences out of 15000+600000
+ 17320 strings out of 476404
+ 273163 string characters out of 2789525
+ 1883324 words of memory out of 3000000
+ 37183 multiletter control sequences out of 15000+600000
  632452 words of font info for 203 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 90i,17n,90p,2606b,618s stack positions out of 10000i,1000n,20000p,200000b,80000s
+ 90i,17n,90p,2606b,652s stack positions out of 10000i,1000n,20000p,200000b,80000s
 
 pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist
 , replaced by a fixed one
@@ -1328,9 +1325,9 @@ TeX/fonts/type1/public/stix/stix-mathrm-bold.pfb><C:/Users/augus/AppData/Local/
 Programs/MiKTeX/fonts/type1/public/stix/stix-mathrm.pfb><C:/Users/augus/AppData
 /Local/Programs/MiKTeX/fonts/type1/public/stix/stix-mathscr.pfb><C:/Users/augus
 /AppData/Local/Programs/MiKTeX/fonts/type1/public/stix/stix-mathsf.pfb>
-Output written on cas-sc-template.pdf (40 pages, 4309085 bytes).
+Output written on cas-sc-template.pdf (40 pages, 4306610 bytes).
 PDF statistics:
- 9350 PDF objects out of 10688 (max. 8388607)
- 159 named destinations out of 1000 (max. 500000)
+ 9357 PDF objects out of 10688 (max. 8388607)
+ 164 named destinations out of 1000 (max. 500000)
  191 words of extra memory for PDF output out of 10000 (max. 10000000)
 
