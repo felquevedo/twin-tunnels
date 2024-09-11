@@ -510,7 +510,7 @@ Further comparisons are shown in Fig.~\ref{MA_stresspaths}, which presents the p
 
 This section provides some numerical results related to rock deformation in twin tunnels with transverse gallery obtained from the 3D computational model presented in sections ~\ref{sec3}, ~\ref{sec4} and ~\ref{section_spatial}. It is emphasized that the primary objective herein is to illustrate the capabilities of the proposed formulation to address within a 3D context the configuration of a complex tunnel structure involving nonlinear and time-dependent couplings.  Elaboration of an exhaustive parametric analysis integrating the effects of geometrical, constitutive and loading parameters is notably beyond the scope of the numerical application.
 
-\subsection{Model data and preliminary considerations}\label{}
+\subsection{Model data and preliminary considerations}\label{sec71}
 
 The rock constitutive data used in the subsequent analysis refer to a deep clay from eastern Paris basin (Aisne region, France) studied in [\citenum{rousset1988}, \citenum{GIRAUD1996}, \citenum{piepi1995}, \citenum{giraud1993}]. The material properties including elastoplastic and viscoplastic parameters summarized in Table~\ref{table2} have been evaluated and calibrated from an extensive series of laboratory tests performed under undrained conditions [\citenum{rousset1988}, \citenum{piepi1995}, \citenum{giraud1993}]. The Aisne clay rocks exhibit high density (2.01 to 2.57 g/cm$^3$), a low average water content (between 3 to 11\%) and relatively low porosity (typically less than 20\%). It is therefore assumed that hydromechanical coupling can be neglected in the analysis of rock material deformation. In particular, the creep tests indicated that the long-term effects primarily stem from material viscosity, with a very low proportion induced by pore pressure redistribution. An important characteristic of the behavior such clay is that irreversible strains are observed in cyclic tests even at small values of axial strain (less than 0.3\%). The instantaneous undrained triaxial tests performed at high confining pressure values, such as those prevailing in the rock mass at approximately 450 m deep, indicated that the maximum deviatoric stress remains approximately constant, thus suggesting a Tresca-type failure criterion for the short-term component of the behavior. As for the long-term behavior, the creep tests revealed that the deviatoric stress threshold beyond which the material exhibits creep deformation is almost independent on the mean stress, suggesting that the time-dependent behavior component can be conveniently described by a Tresca-like criterion. Comparison of instantaneous and delayed behaviors reveals that short-term cohesion exceeds long-term cohesion within a ratio ranging between 1.2 and 2.  Based on these observations, the constitutive model data adopted for the elastoplastic and viscoplastic components of rock material behavior is summarized in Table~\ref{table2}.
 
@@ -621,7 +621,7 @@ The second feature of the tunnel deformation that deserves to be mentioned refer
 [parei aqui]
 
 
-\subsection{Short and long-term convergence profiles}\label{}
+\subsection{Short and long-term convergence profiles}\label{sec72}
 
 Figs.~\ref{WG-ST-LT-D1-16RI}, \ref{WG-ST-LT-D1-8RI}, and \ref{WG-ST-LT-D1-4RI} show the convergence profiles in the twin tunnels with gallery (WG) considering the different constitutive models of the rock mass (E - blue, EP - yellow, VP - magenta, EPVP - red and green) and of the lining (EL and VEL). The interaction effect rising from twin tunnels proximity is investigated by considering three values $d_1=4R_t$, $d_1=8R_t$, and $d_1=16R_t$.  The solid lines refer to short-term analysis (ST) whereas the dashed lines to long-term analysis (LT).
 
@@ -652,7 +652,7 @@ For all investigated values of twin tunnels distance $d_1$, the convergence prof
 
 It is noted that the relatively high stiffness considered of the elastic lining is likely to significantly reduces the viscous component of tunnel wall deformation. This can be illustrated by analyzing the short-term and long-term convergences for VP-EL model (solid and dashed magenta line). In this configuration, the twin tunnels proximity induces a substantial increase in the short-term (ST) prediction of $U_C$ when comparing $d_1=8R_t$ and $d_1=4R_t$, whereas the long-term (LT) convergence hardly changes mainly due to the restriction imposed by the stiff lining.
 
-Referring to the configuration analyzed in Figs.~\ref{WG-ST-LT-D1-16RI}, \ref{WG-ST-LT-D1-8RI}, and \ref{WG-ST-LT-D1-4RI}, the ovalization effect may be illustrated by visualizing in Fig.Fig.~\ref{ovalization}~the anisotropic deformation of  a tunnel cross-section located far behind the face  in the particular case of twin tunnel distance $d_1=4R_t$. In this figure, the configuration of a single circular tunnel ($d_1 \rightarrow \infty$) is also shown as a reference case. 
+Referring to the configuration analyzed in Figs.~\ref{WG-ST-LT-D1-16RI}, \ref{WG-ST-LT-D1-8RI}, and \ref{WG-ST-LT-D1-4RI}, the ovalization effect may be illustrated by visualizing in Fig.~\ref{ovalization}~the anisotropic deformation of  a tunnel cross-section located far behind the face  in the particular case of twin tunnel distance $d_1=4R_t$. In this figure, the configuration of a single circular tunnel ($d_1 \rightarrow \infty$) is also shown as a reference case. 
 
 \begin{figure}[h!]
 	\centering
@@ -662,7 +662,7 @@ Referring to the configuration analyzed in Figs.~\ref{WG-ST-LT-D1-16RI}, \ref{WG
 \end{figure}
 \FloatBarrier
 
-In that respect, Fig.~\ref{UB-UAUB-D1_4RT} provides further illustration of the ovalization effect by plotting the anisotropy ratio $U_B/U_A = u_y(B)/u_x(A)$ between the vertical displacement $u_y$ at the roof B and the horizontal displacement $u_x$ at the side wall $A(x=R_t - d_1/2,y=R_t,z)$. The resulted presented in this figure correspond to twin tunnels without transverse gallery (NG) and distance $d_1=4R_t$. The results suggest a more pronounced ovalization effect short-term tunnel deformation (solid lines).
+In that respect, Fig.~\ref{UB-UAUB-D1_4RT} provides further illustration of the ovalization effect by plotting the anisotropy ratio $U_B/U_A = u_y(B)/u_x(A)$ between the vertical displacement $u_y$ at the roof B and the horizontal displacement $u_x$ at the side wall $A(x=R_t - d_1/2,y=0,z)$. The resulted presented in this figure correspond to twin tunnels without transverse gallery (NG) and distance $d_1=4R_t$. The results suggest a more pronounced ovalization effect short-term tunnel deformation (solid lines).
 
 \begin{figure}[h!]
 	\centering
@@ -672,7 +672,7 @@ In that respect, Fig.~\ref{UB-UAUB-D1_4RT} provides further illustration of the 
 \end{figure}
 \FloatBarrier
 
-\subsection{Additional numerical analysis: impact of creep deformation}\label{}
+\subsection{Additional numerical analysis: impact of creep deformation}\label{sec73}
 
 This section provides further numerical results obtained from long-term and short-term analyses, with particular emphasis on the effect of time-dependent behavior of the rock material and lining constituent materials. Fig.~\ref{VP-EL-EPVP-VEL-WG-LT} displays the long-term convergence profiles for $d_1=16R_t$, $8R_t$ and $4R_t$ (yellow, green and red lines, respectively) considering viscous constitutive models: viscoplastic rock mass with elastic lining (VP-EL - solid lines), elastoplastic-viscoplastic rock mass with elastic lining (EPVP-EL - dashed line) and viscoelastic lining (EPVP-VEL - dotted lines). To emphasize the interaction rising from twin tunnels proximity and transverse gallery, the results obtained in the reference configuration of a single tunnel (black lines) are also shown. Close values of the peak convergence  $U_{peak}$ are obtained at the tunnel roof for the EPVP-VEL model with $d_1=16R_t$ (yellow dotted line) and with $d_1=8R_t$ (green dotted line). This result may be explained by the fact the overall interaction effect on tunnel convergence results from the competing effects of twin tunnel proximity (defined by $d_1$) and the time necessary for complete gallery excavation and its intersection with longitudinal tunnel (also defined by length by $d_1$). The results indicated that these competing phenomena lead to equivalent overall effect in the cases of $d_1=8R_t$ and $d_1=16R_t$. In the case of $d_1=4R_t$ (red dotted line), the effect of twin tunnel proximity appears to be predominant, which lead to higher value of the peak convergence  $U_{peak}$.
 
@@ -700,13 +700,13 @@ Once again, the result predictions shown in this figure emphasize the significat
 
 \subsection{Effect of the lining stiffness on the tunnel convergence}\label{}
 
-In tunnel deformation analyses, the behavior of the concrete lining is classically characterized by the elastic stiffness parameter, which relates the normal stress exerted by the surrounding the rock mass and the normalized lining normal displacement (convergence).   The elastic the elastic stiffness parameter is computed from the elastic properties of concrete material and the lining thickness (normalized by the tunnel radius) [\citenum{Panet1995}, \citenum{brown1980}]. This concept is extended herein to case of viscoelastic lining by in traducing the instantaneous stiffness modulus at 28 days $K_{c_{28}}$ as:
+In tunnel deformation analyses, the behavior of the concrete lining is classically characterized by the elastic stiffness parameter, which relates the normal stress exerted by the surrounding the rock mass and the normalized lining normal displacement (convergence).   The elastic stiffness parameter is computed from the elastic properties of concrete material and the lining thickness (normalized by the tunnel radius) [\citenum{Panet1995}, \citenum{brown1980}]. This concept is extended herein to case of viscoelastic lining by in traducing the instantaneous stiffness modulus at 28 days $K_{c_{28}}$ as:
 
 \begin{equation} \label{eq:8}
 	K_{c_{28}} = \frac{E_{c_{28}}}{1+\nu_c}\frac{1-(1-e_t/R_t)^2}{(1-2\nu_c)+(1-e_t/R_t)^2}
 \end{equation}
 
-In the above analyses of sections 7.1, 7.2 and 7.3 the lining thickness were fixed to $e_t=e_g=0.1R_t$, corresponding to lining stiffness  $K_{c_{28}}=3400$ MPa. As far as the tunnel deformation is concerned, the latter value characterizes a rather stiff lining, which might be a predominating factor for the control of tunnel convergence.
+In the above analyses of sections~\ref{sec71}, \ref{sec72} and \ref{sec73} the lining thickness were fixed to $e_t=e_g=0.1R_t$, corresponding to lining stiffness  $K_{c_{28}}=3400$ MPa. As far as the tunnel deformation is concerned, the latter value characterizes a rather stiff lining, which might be a predominating factor for the control of tunnel convergence.
 
 To assess the effect of the lining stiffness on the convergence profile, a smaller value $e_t=e_g=0.03R_t$, corresponding to lining stiffness modulus $K_{c_{28}}=970$ MPa, will be in the numerical simulations. Referring to the particular case of a rock mass exhibiting elastoplastic behavior (EP), that is only instantaneous behavior, Fig.~\ref{EP_d1_16Ri} and Fig.~\ref{EP_d1_4Ri} display the convergence profiles at tunnel roof predicted respectively for $d_1=16R_t$ and $d_1=4R_t$.  Three configurations for the support lining are considered: unlined structure (NL - dashed lines), elastic lining with lower stiffness $K_{c_{28}}=970$ - dotted lines), and elastic lining with higher stiffness $K_{c_{28}}=3400$ - solid lines). In addition, the numerical simulations include the cases with transverse gallery (WG - blue lines) and without gallery (NG - yellow lines). The reference configuration of a single tunnel is also studied (black lines). 
 
@@ -732,7 +732,7 @@ Regarding first the effect of lining stiffness on the convergence of single tunn
 For twin tunnels with spacing $d_1=16R_t$, the predictions of stabilized convergence $U_C$ (blue and yellow lines) provided in Fig.~\ref{EP_d1_16Ri} are close for each lining configuration to those obtained for a single tunnel (black lines). In contrast, the interaction between the twin tunnels reveals significative when the spacing reduces to $d_1=4R_t$. In that case, the combined impact of lining support and twin tunnels proximity can be assessed by comparing in Fig.~\ref{EP_d1_4Ri} the values of convergence $U_C$ predicted for $d_1=4R_t$ (yellow and blue solid lines) and $d_1 \rightarrow \infty$ (single tunnel - black lines). Compared to the convergence of single tunnel, the increase in convergence induced by twin tunnels proximity reaches values of 30\% for unlined structure, 10\% for the moderate stiffness lining  and 6.5\% for the higher stiffness stiff. 
 
 
-Analyzing the effect of lining stiffness on the disturbed region associated along the convergence profile with the presence of transverse gallery, it is first observed that the increase in stiffness reduces in all studied configurations the extent of the disturbed region, whereas the twin tunnels spacing has little impact. For the configuration of spacing $d_1=16R_t$, where the interaction due to twin tunnels proximity is expected to be minor,   the ratio $(U_{peak}-U_C)/(U_C)$ defining the relative variation between peak value and stabilized tunnel roof convergence is about 14\% , 12.5\% and 8.7\% according to the lining stiffness value: $K_{c_{28}}=0$ (unlined), $K_{c_{28}}=970$ MPa and $K_{c_{28}}=3400$ MPa. The values of this ratio are altered to about 9.7\%, 13\% and 12\% for the configuration with spacing $d_1=4R_t$ in which both effects of lining stiffness and tunnels proximity are simultaneously acting.
+Analyzing the effect of lining stiffness on the disturbed region associated along the convergence profile with the presence of transverse gallery, it is first observed that the increase in stiffness reduces in all studied configurations the extent of the disturbed region, whereas the twin tunnels spacing has little impact. For the configuration of spacing $d_1=16R_t$, where the interaction due to twin tunnels proximity is expected to be minor,   the ratio $(U_{peak}-U_C)/(U_C)$ defining the relative variation between peak value and stabilized tunnel roof convergence is about 14\%, 12.5\% and 8.7\% according to the lining stiffness value: $K_{c_{28}}=0$ (unlined), $K_{c_{28}}=970$ MPa and $K_{c_{28}}=3400$ MPa. The values of this ratio are altered to about 9.7\%, 13\% and 12\% for the configuration with spacing $d_1=4R_t$ in which both effects of lining stiffness and tunnels proximity are simultaneously acting.
 
 In line with the previous analysis investigating the impact of instantaneous stiffness modulus $K_{c_{28}}$ of the lining, Fig.~\ref{EPVP_VEL_d1_16Ri} and Fig.~\ref{EPVP_VEL_d1_4Ri} present the long-term convergence results in the configurations of elastoplastic-viscoplastic rock mass (EPVP) and  viscoelastic lining (VEL) with gallery (WG - blue lines) and without gallery (NG - yellow lines), considering  twin tunnels spacing $d_1=16R_t$ and $4R_t$, respectively. The results obtained for the reference single tunnel configuration are also provided (black lines).
 
@@ -741,33 +741,33 @@ Similar to the previous analysis involving constituent materials that exhibit on
 \begin{figure}[h!]
 	\centering
 	\includegraphics[scale=0.9]{Convergence Profiles - EPVP_VEL_d1_16Ri_anotate.pdf}
-	\caption{Effect of instantaneous lining stiffness on the long-term convergence profiles for the configuration of twin tunnels with and without transverse gallery and distance between twin tunnels $d_1=16R_t$ - elastoplastic-viscoplastic rock mass, without and with viscoelastic elastic lining.}
+	\caption{Effect of instantaneous lining stiffness on the long-term convergence profiles for the configuration of twin tunnels with and without transverse gallery and distance between twin tunnels $d_1=16R_t$ - elastoplastic-viscoplastic rock mass with viscoelastic lining.}
 	\label{EPVP_VEL_d1_16Ri}
 \end{figure}
 \FloatBarrier
 \begin{figure}[h!]
 	\centering
 	\includegraphics[scale=0.9]{Convergence Profiles - EPVP_VEL_d1_4Ri_anotate.pdf}
-	\caption{Effect of instantaneous lining stiffness on the long-term convergence profiles for the configuration of twin tunnels with and without transverse gallery and distance between twin tunnels $d_1=4R_t$ - elastoplastic-viscoplastic rock mass, without and with viscoelastic elastic lining.}
+	\caption{Effect of instantaneous lining stiffness on the long-term convergence profiles for the configuration of twin tunnels with and without transverse gallery and distance between twin tunnels $d_1=4R_t$ - elastoplastic-viscoplastic rock mass with viscoelastic lining.}
 	\label{EPVP_VEL_d1_4Ri}
 \end{figure}
 \FloatBarrier
 
 Even in the specific case of $d_1=4R_t$ where a strong twin tunnels interaction would be expected, the role of lining with higher stiffness on stabilized convergence (blue and yellow solid lines in Fig.~\ref{EPVP_VEL_d1_4Ri}) is predominating with values close to obtained for single tunnel (black solid line in Fig.~\ref{EPVP_VEL_d1_4Ri}), thus masking such interaction effect. For lower lining stiffness, the numerical results (blue and yellow dashed lines) indicate a small increase in the value of  $U_C$  when compared to the single tunnel (black dashed line).
 
-As regards the impact on the peak convergence $U_{peak}$ and extent of the gallery influence zone (disturbed portion of convergence profile), the results show that for each value of twin tunnels spacing $d_1$, the latter extent is slightly affected by the instantaneous lining stiffness modulus. In contrast the ratio $U_{peak}/U_C$ is significantly affected by the values of $d_1$ and  $K_{c_{28}}$. For the configuration with $d_1=4R_t$, it respectively takes the values $U_{peak}/U_C=$14.5\% and 18\% lower and higher lining stiffness, whereas it respectively takes the values 9.5\% and 13\% for the configuration with $d_1=16R_t$. 
+As regards the impact on the peak convergence $U_{peak}$ and extent of the gallery influence zone (disturbed portion of convergence profile), the results show that for each value of twin tunnels spacing $d_1$, the latter extent is slightly affected by the instantaneous lining stiffness modulus. In contrast the ratio $(U_{peak}-U_C)/U_C$ is significantly affected by the values of $d_1$ and  $K_{c_{28}}$. For the configuration with $d_1=4R_t$, it respectively takes the values $(U_{peak}-U_C)/U_C=$14.5\% and 18\% lower and higher lining stiffness, whereas it respectively takes the values 9.5\% and 13\% for the configuration with $d_1=16R_t$. 
 
 \begin{figure}[h!]
 	\centering
 	\includegraphics[scale=0.9]{Convergence Profiles - EPVP_EL_VEL_d1_16Ri_anotate.pdf}
-	\caption{Effect of lining stiffness on the long-term convergence profiles for the configuration of twin tunnels with and without transverse gallery and distance between twin tunnels $d_1=16R_t$ - elastoplastic-viscoplastic rock mass, without and with elastic lining.}
+	\caption{Effect of lining stiffness on the long-term convergence profiles for the configuration of twin tunnels with and without transverse gallery and distance between twin tunnels $d_1=16R_t$ - elastoplastic-viscoplastic rock mass with elastic lining.}
 	\label{EPVP_EL_VEL_d1_16Ri}
 \end{figure}
 \FloatBarrier
 \begin{figure}[h!]
 	\centering
 	\includegraphics[scale=0.9]{Convergence Profiles - EPVP_EL_VEL_d1_4Ri_anotate.pdf}
-	\caption{Effect of lining stiffness on the long-term convergence profiles for the configuration of twin tunnels with and without transverse gallery and distance between twin tunnels $d_1=4R_t$ - elastoplastic-viscoplastic rock mass, without and with elastic lining.}
+	\caption{Effect of lining stiffness on the long-term convergence profiles for the configuration of twin tunnels with and without transverse gallery and distance between twin tunnels $d_1=4R_t$ - elastoplastic-viscoplastic rock mass with elastic lining.}
 	\label{EPVP_EL_VEL_d1_4Ri}
 \end{figure}
 \FloatBarrier
@@ -776,7 +776,7 @@ Overall, the same observations formulated in the previous analyses regarding the
 
 With the elastic lining, the increase in stiffness from $K_{c_{28}}=970$ MPa to $K_{c_{28}}=3400$ MPa leads to a reduction in stabilized convergence $U_C$ by 28\% for twin tunnels spacing  $d_1=16R_t$ and by 16\% for $d_1=4R_t$, emphasizing once again the strong mechanical interaction between the different components of the tunnel structure.
 
-The peak value of tunnel roof convergence $U_{peak}$ that reflects the coupling associated with intersecting transverse gallery the coupling associated then intersecting is almost unaffected by the lining stiffness, at least for considered data parameters. In that respect, the value of ratio $(U_{peak}-U_C)/U_C$ computed in the configuration $d_1=16R_t$ (resp. $d_1=4R_t$) is  approximately 12\% (resp. and 18\%) for both values of lining stiffness, which corroborates the predominating effect of tunnels proximity on peak convergence $U_{peak}$. 
+The peak value of tunnel roof convergence $U_{peak}$ that reflects the coupling associated with intersecting transverse gallery is almost unaffected by the lining stiffness, at least for considered data parameters. In that respect, the value of ratio $(U_{peak}-U_C)/U_C$ computed in the configuration $d_1=16R_t$ (resp. $d_1=4R_t$) is  approximately 12\% (resp. and 18\%) for both values of lining stiffness, which corroborates the predominating effect of tunnels proximity on peak convergence $U_{peak}$. 
 
 \section{Conclusions}\label{}
 

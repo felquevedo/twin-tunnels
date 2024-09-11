@@ -86,15 +86,17 @@
   \url{https://www.sciencedirect.com/science/article/pii/S088677982030568X}.
   \DOIprefix\doi{https://doi.org/10.1016/j.tust.2020.103614}.
 %Type = Article
-\bibitem[{Chen et~al.(2019)Chen, Lin and Li}]{Chen2019}
-\bibinfo{author}{Chen\xfnm[ F.]}, \bibinfo{author}{Lin\xfnm[ L.b.]},
-  \bibinfo{author}{Li\xfnm[ D.]}.
+\bibitem[{quan Chen et~al.(2019)quan Chen, bin Lin and yong Li}]{Chen2019}
+\bibinfo{author}{quan Chen\xfnm[ F.]}, \bibinfo{author}{bin Lin\xfnm[ L.]},
+  \bibinfo{author}{yong Li\xfnm[ D.]}.
 \newblock \bibinfo{title}{Analytic solutions for twin tunneling at great depth
   considering liner installation and mutual interaction between geomaterial and
   liners}.
 \newblock \bibinfo{journal}{Applied Mathematical Modelling}
-  \bibinfo{year}{2019};\bibinfo{volume}{73}.
-\newblock \DOIprefix\doi{https://doi.org/10.1016/j.apm.2019.04.026}.
+  \bibinfo{year}{2019};\bibinfo{volume}{73}:\bibinfo{pages}{412--441}.
+\newblock \URLprefix
+  \url{https://www.sciencedirect.com/science/article/pii/S0307904X19302161}.
+  \DOIprefix\doi{https://doi.org/10.1016/j.apm.2019.04.026}.
 %Type = Article
 \bibitem[{Ma et~al.(2020)Ma, Lu, Zeng and Cai}]{MA2020}
 \bibinfo{author}{Ma\xfnm[ Y.]}, \bibinfo{author}{Lu\xfnm[ A.]},
@@ -121,7 +123,9 @@
   P.]}.
 \newblock \bibinfo{title}{Numerical analysis of twin tunnels interaction}.
 \newblock In: \bibinfo{booktitle}{Proc. 1st Eastern European Tunnelling
-  Conference}. \bibinfo{address}{Budapest, Hungary}; \bibinfo{year}{2012},.
+  Conference}. \bibinfo{address}{Budapest, Hungary};
+  \bibinfo{year}{2012},\URLprefix
+  \url{https://ita-hun.hu/items/files/2012_eloadasok/Fortsakis_175_70_1.pdf}.
 %Type = Article
 \bibitem[{Chortis and Kavvadas(2021{\natexlab{a}})}]{chortis2021b}
 \bibinfo{author}{Chortis\xfnm[ F.]}, \bibinfo{author}{Kavvadas\xfnm[ M.]}.
@@ -147,6 +151,8 @@
 \newblock In: \bibinfo{booktitle}{Expanding Underground-Knowledge and Passion
   to Make a Positive Impact on the World}. \bibinfo{publisher}{CRC Press};
   \bibinfo{year}{2023}{\natexlab{a}}, p. \bibinfo{pages}{1574--1582}.
+\newblock \URLprefix
+  \url{https://www.taylorfrancis.com/chapters/oa-edit/10.1201/9781003348030-188/3d-numerical-investigation-axial-forces-acting-tunnel-junctions-constructed-fractured-weathered-blocky-rockmass-chortis-kavvadas}.
 %Type = Incollection
 \bibitem[{Chortis and Kavvadas(2023{\natexlab{b}})}]{chortis2023b}
 \bibinfo{author}{Chortis\xfnm[ F.]}, \bibinfo{author}{Kavvadas\xfnm[ M.]}.
@@ -156,6 +162,8 @@
 \newblock In: \bibinfo{booktitle}{Expanding Underground-Knowledge and Passion
   to Make a Positive Impact on the World}. \bibinfo{publisher}{CRC Press};
   \bibinfo{year}{2023}{\natexlab{b}}, p. \bibinfo{pages}{1583--1591}.
+\newblock \URLprefix
+  \url{https://www.taylorfrancis.com/chapters/oa-edit/10.1201/9781003348030-189/3d-numerical-investigation-bending-moments-acting-tunnel-junctions-constructed-fractured-weathered-blocky-rockmass-chortis-kavvadas}.
 %Type = Article
 \bibitem[{Ba{\v{z}}ant and Prasannan(1989{\natexlab{a}})}]{bazant:1989a}
 \bibinfo{author}{Ba{\v{z}}ant\xfnm[ Z.P.]}, \bibinfo{author}{Prasannan\xfnm[
@@ -235,7 +243,7 @@ ANSYS.
 \newblock \bibinfo{type}{Ph.{D}. {T}hesis (in french)}; Ecole Nationale des
   Ponts et Chauss{\'e}es; \bibinfo{address}{Paris, France};
   \bibinfo{year}{1988}.
-\newblock \URLprefix \url{https://theses.hal.science/tel-00529719/}.
+\newblock \URLprefix \url{http://www.theses.fr/1988ENPCA005}.
 %Type = Inproceedings
 \bibitem[{Nguyen~Minh and Rousset(1987)}]{Nguyen1987}
 \bibinfo{author}{Nguyen~Minh\xfnm[ D.]}, \bibinfo{author}{Rousset\xfnm[ G.]}.
@@ -388,7 +396,7 @@ ANSYS.
 \newblock \bibinfo{publisher}{Springer-Verlag}; \bibinfo{year}{1998}.
 %Type = Article
 \bibitem[{Ling(1948)}]{ling1948}
-\bibinfo{author}{Ling\xfnm[ C.]}.
+\bibinfo{author}{Ling\xfnm[ C.B.]}.
 \newblock \bibinfo{title}{On the stresses in a plate containing two circular
   holes}.
 \newblock \bibinfo{journal}{Journal of Applied Physics}

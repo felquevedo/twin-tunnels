@@ -106,7 +106,7 @@ def graficar(arquivo,                   # nome do arquivo de leitura
     #plt.autoscale(axis='y')
     
     # Formatando a legenda
-    plt.legend(loc = 'lower left', ncol = 2, fontsize = 'medium')
+    plt.legend(loc = 'lower left', ncol = 2, fontsize = 'medium', columnspacing = 1.0)
     #plt.legend(
         #loc = 'center',
         #shadow=False,
@@ -1320,7 +1320,7 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EP_CRE_ESP003_SG_D1_INF_AXI'
 arquivo     = modelo + '\convergencias.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'NG, EL, $K_c=969$, single tunnel, $U_C=$ 1.03'
+lblcoluna   = 'NG, EL, $K_{c_{28}}=970$, single tunnel, $U_C=$ 1.03'
 cor         = 'k'
 tamanho     = 1.5
 ordem       = 4
@@ -1338,7 +1338,7 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EP_CRE_SG_D1_INF_AXI'
 arquivo     = modelo + '\convergencias.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'NG, EL, $K_c=3403$, single tunnel, $U_C=$ 0.92'
+lblcoluna   = 'NG, EL, $K_{c_{28}}=3400$, single tunnel, $U_C=$ 0.92'
 cor         = 'k'
 tamanho     = 1.5
 ordem       = 4
@@ -1374,7 +1374,7 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EP_CRE_ESP003_SG_D1_16RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'NG, EL, $K_c=969$, $U_C=$ 1.03'
+lblcoluna   = 'NG, EL, $K_{c_{28}}=970$, $U_C=$ 1.03'
 cor         = 'orange'
 tamanho     = 2
 ordem       = 1
@@ -1392,7 +1392,7 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EP_CRE_SG_D1_16RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'NG, EL, $K_c=3403$, $U_C=$ 0.92'
+lblcoluna   = 'NG, EL, $K_{c_{28}}=3400$, $U_C=$ 0.92'
 cor         = 'orange'
 tamanho     = 2
 ordem       = 1
@@ -1428,7 +1428,7 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EP_CRE_ESP003_CG_D1_16RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'WG, EL, $K_c=969$, $U_C=$ 1.03'
+lblcoluna   = 'WG, EL, $K_{c_{28}}=970$, $U_C=$ 1.03'
 cor         = 'b'
 tamanho     = 2
 ordem       = 1
@@ -1446,7 +1446,7 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EP_CRE_CG_D1_16RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'WG, EL, $K_c=3403$, $U_C=$ 0.92'
+lblcoluna   = 'WG, EL, $K_{c_{28}}=3400$, $U_C=$ 0.92'
 cor         = 'b'
 tamanho     = 2
 ordem       = 1
@@ -1507,7 +1507,7 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EP_CRE_ESP003_SG_D1_INF_AXI'
 arquivo     = modelo + '\convergencias.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'NG, EL, $K_c=969$, single tunnel, $U_C=$ 1.03'
+lblcoluna   = 'NG, EL, $K_{c_{28}}=970$, single tunnel, $U_C=$ 1.03'
 cor         = 'k'
 tamanho     = 1.5
 ordem       = 4
@@ -1525,7 +1525,7 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EP_CRE_SG_D1_INF_AXI'
 arquivo     = modelo + '\convergencias.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'NG, EL, $K_c=3403$, single tunnel, $U_C=$ 0.92'
+lblcoluna   = 'NG, EL, $K_{c_{28}}=3400$, single tunnel, $U_C=$ 0.92'
 cor         = 'k'
 tamanho     = 1.5
 ordem       = 4
@@ -1561,7 +1561,7 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EP_CRE_ESP003_SG_D1_4RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'NG, EL, $K_c=969$, $U_C=$ 1.13'
+lblcoluna   = 'NG, EL, $K_{c_{28}}=970$, $U_C=$ 1.13'
 cor         = 'orange'
 tamanho     = 2
 ordem       = 1
@@ -1579,7 +1579,7 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EP_CRE_SG_D1_4RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'NG, EL, $K_c=3403$, $U_C=$ 0.98'
+lblcoluna   = 'NG, EL, $K_{c_{28}}=3400$, $U_C=$ 0.98'
 cor         = 'orange'
 tamanho     = 2
 ordem       = 1
@@ -1615,7 +1615,7 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EP_CRE_ESP003_CG_D1_4RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'WG, EL, $K_c=969$, $U_C=$ 1.13'
+lblcoluna   = 'WG, EL, $K_{c_{28}}=970$, $U_C=$ 1.13'
 cor         = 'b'
 tamanho     = 2
 ordem       = 1
@@ -1633,7 +1633,7 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EP_CRE_CG_D1_4RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'WG, EL, $K_c=3403$, $U_C=$ 0.98'
+lblcoluna   = 'WG, EL, $K_{c_{28}}=3400$, $U_C=$ 0.98'
 cor         = 'b'
 tamanho     = 2
 ordem       = 1
@@ -1676,7 +1676,7 @@ poly        = poly_twin_convergence_profile
 modelo      = 'EPVP_CRVE_SG_D1_INF_AXI'
 arquivo     = modelo + '\convergencias.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'NG, VEL, $K_c=3403$, single tunnel, $U_C=$ 1.18'
+lblcoluna   = 'NG, VEL, $K_{c_{28}}=3400$, single tunnel, $U_C=$ 1.18'
 cor         = 'k'
 tamanho     = 1.5
 ordem       = 4
@@ -1694,7 +1694,7 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EPVP_CRVE_ESP003_SG_D1_INF_AXI'
 arquivo     = modelo + '\convergencias.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'NG, VEL, $K_c=969$, single tunnel, $U_C=$ 1.73'
+lblcoluna   = 'NG, VEL, $K_{c_{28}}=970$, single tunnel, $U_C=$ 1.73'
 cor         = 'k'
 tamanho     = 1.5
 ordem       = 4
@@ -1712,7 +1712,7 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EPVP_CRVE_SG_D1_16RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'NG, VEL, $K_c=3403$, $U_C=$ 1.17'
+lblcoluna   = 'NG, VEL, $K_{c_{28}}=3400$, $U_C=$ 1.17'
 cor         = 'orange'
 tamanho     = 2
 ordem       = 1
@@ -1730,7 +1730,7 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EPVP_CRVE_ESP003_SG_D1_16RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'NG, VEL, $K_c=969$, $U_C=$ 1.70'
+lblcoluna   = 'NG, VEL, $K_{c_{28}}=970$, $U_C=$ 1.70'
 cor         = 'orange'
 tamanho     = 2
 ordem       = 1
@@ -1748,7 +1748,7 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EPVP_CRVE_CG_D1_16RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'WG, VEL, $K_c=3403$, $U_C=$ 1.17'
+lblcoluna   = 'WG, VEL, $K_{c_{28}}=3400$, $U_C=$ 1.17'
 cor         = 'b'
 tamanho     = 2
 ordem       = 1
@@ -1766,7 +1766,7 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EPVP_CRVE_ESP003_CG_D1_16RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'WG, VEL, $K_c=969$, $U_C=$ 1.70'
+lblcoluna   = 'WG, VEL, $K_{c_{28}}=970$, $U_C=$ 1.70'
 cor         = 'b'
 tamanho     = 2
 ordem       = 1
@@ -1809,7 +1809,7 @@ poly        = poly_twin_convergence_profile
 modelo      = 'EPVP_CRVE_SG_D1_INF_AXI'
 arquivo     = modelo + '\convergencias.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'NG, VEL, $K_c=3403$, single tunnel, $U_C=$ 1.18'
+lblcoluna   = 'NG, VEL, $K_{c_{28}}=3400$, single tunnel, $U_C=$ 1.18'
 cor         = 'k'
 tamanho     = 1.5
 ordem       = 4
@@ -1827,7 +1827,7 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EPVP_CRVE_ESP003_SG_D1_INF_AXI'
 arquivo     = modelo + '\convergencias.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'NG, VEL, $K_c=969$, single tunnel, $U_C=$ 1.73'
+lblcoluna   = 'NG, VEL, $K_{c_{28}}=970$, single tunnel, $U_C=$ 1.73'
 cor         = 'k'
 tamanho     = 1.5
 ordem       = 4
@@ -1845,7 +1845,7 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EPVP_CRVE_SG_D1_4RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'NG, VEL, $K_c=3403$, $U_C=$ 1.18'
+lblcoluna   = 'NG, VEL, $K_{c_{28}}=3400$, $U_C=$ 1.18'
 cor         = 'orange'
 tamanho     = 2
 ordem       = 1
@@ -1863,7 +1863,7 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EPVP_CRVE_ESP003_SG_D1_4RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'NG, VEL, $K_c=969$, $U_C=$ 1.78'
+lblcoluna   = 'NG, VEL, $K_{c_{28}}=970$, $U_C=$ 1.78'
 cor         = 'orange'
 tamanho     = 2
 ordem       = 1
@@ -1881,7 +1881,7 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EPVP_CRVE_CG_D1_4RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'WG, VEL, $K_c=3403$, $U_C=$ 1.18'
+lblcoluna   = 'WG, VEL, $K_{c_{28}}=3400$, $U_C=$ 1.18'
 cor         = 'b'
 tamanho     = 2
 ordem       = 1
@@ -1899,7 +1899,7 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EPVP_CRVE_ESP003_CG_D1_4RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'WG, VEL, $K_c=969$, $U_C=$ 1.78'
+lblcoluna   = 'WG, VEL, $K_{c_{28}}=970$, $U_C=$ 1.78'
 cor         = 'b'
 tamanho     = 2
 ordem       = 1
@@ -1942,7 +1942,7 @@ poly        = poly_twin_convergence_profile
 modelo      = 'EPVP_CRE_SG_D1_INF_AXI'
 arquivo     = modelo + '\convergencias.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'NG, EL, $K_c=3403$, single tunnel, $U_C=$ 0.97'
+lblcoluna   = 'NG, EL, $K_{c_{28}}=3400$, single tunnel, $U_C=$ 0.97'
 cor         = 'k'
 tamanho     = 1.5
 ordem       = 4
@@ -1960,7 +1960,7 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EPVP_CRE_ESP003_SG_D1_INF_AXI'
 arquivo     = modelo + '\convergencias.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'NG, EL, $K_c=969$, single tunnel, $U_C=$ 1.23'
+lblcoluna   = 'NG, EL, $K_{c_{28}}=970$, single tunnel, $U_C=$ 1.23'
 cor         = 'k'
 tamanho     = 1.5
 ordem       = 4
@@ -1978,7 +1978,7 @@ graficar(arquivo,titulo,eixox,eixoy,
 # modelo      = 'EPVP_CRVE_ESP003_SG_D1_INF_AXI'
 # arquivo     = modelo + '\convergencias.txt'
 # ncoluna     = dicncolunalongterm[modelo]
-# lblcoluna   = 'NG, VEL, $K_c=969$, single tunnel, $U_C=$ 1.73'
+# lblcoluna   = 'NG, VEL, $K_{c_{28}}=970$, single tunnel, $U_C=$ 1.73'
 # cor         = 'k'
 # tamanho     = 1.5
 # ordem       = 4
@@ -1996,7 +1996,7 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EPVP_CRE_SG_D1_16RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'NG, EL, $K_c=3403$, $U_C=$ 0.96'
+lblcoluna   = 'NG, EL, $K_{c_{28}}=3400$, $U_C=$ 0.96'
 cor         = 'orange'
 tamanho     = 2
 ordem       = 1
@@ -2014,7 +2014,7 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EPVP_CRE_ESP003_SG_D1_16RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'NG, EL, $K_c=969$, $U_C=$ 1.23'
+lblcoluna   = 'NG, EL, $K_{c_{28}}=970$, $U_C=$ 1.23'
 cor         = 'orange'
 tamanho     = 2
 ordem       = 1
@@ -2032,7 +2032,7 @@ graficar(arquivo,titulo,eixox,eixoy,
 # modelo      = 'EPVP_CRVE_ESP003_SG_D1_16RE_3D'
 # arquivo     = modelo + '\convergencias_90.txt'
 # ncoluna     = dicncolunalongterm[modelo]
-# lblcoluna   = 'NG, VEL, $K_c=969$, $U_C=$ 1.70'
+# lblcoluna   = 'NG, VEL, $K_{c_{28}}=970$, $U_C=$ 1.70'
 # cor         = 'orange'
 # tamanho     = 2
 # ordem       = 1
@@ -2050,7 +2050,7 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EPVP_CRE_CG_D1_16RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'WG, EL, $K_c=3403$, $U_C=$ 0.96'
+lblcoluna   = 'WG, EL, $K_{c_{28}}=3400$, $U_C=$ 0.96'
 cor         = 'b'
 tamanho     = 2
 ordem       = 1
@@ -2068,7 +2068,7 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EPVP_CRE_ESP003_CG_D1_16RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'WG, EL, $K_c=969$, $U_C=$ 1.23'
+lblcoluna   = 'WG, EL, $K_{c_{28}}=970$, $U_C=$ 1.23'
 cor         = 'b'
 tamanho     = 2
 ordem       = 1
@@ -2086,7 +2086,7 @@ graficar(arquivo,titulo,eixox,eixoy,
 # modelo      = 'EPVP_CRVE_ESP003_CG_D1_16RE_3D'
 # arquivo     = modelo + '\convergencias_90.txt'
 # ncoluna     = dicncolunalongterm[modelo]
-# lblcoluna   = 'WG, VEL, $K_c=969$, $U_C=$ 1.70'
+# lblcoluna   = 'WG, VEL, $K_{c_{28}}=970$, $U_C=$ 1.70'
 # cor         = 'b'
 # tamanho     = 2
 # ordem       = 1
@@ -2129,7 +2129,7 @@ poly        = poly_twin_convergence_profile
 modelo      = 'EPVP_CRE_SG_D1_INF_AXI'
 arquivo     = modelo + '\convergencias.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'NG, EL, $K_c=3403$, single tunnel, $U_C=$ 0.97'
+lblcoluna   = 'NG, EL, $K_{c_{28}}=3400$, single tunnel, $U_C=$ 0.97'
 cor         = 'k'
 tamanho     = 1.5
 ordem       = 4
@@ -2147,7 +2147,7 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EPVP_CRE_ESP003_SG_D1_INF_AXI'
 arquivo     = modelo + '\convergencias.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'NG, EL, $K_c=969$, single tunnel, $U_C=$ 1.23'
+lblcoluna   = 'NG, EL, $K_{c_{28}}=970$, single tunnel, $U_C=$ 1.23'
 cor         = 'k'
 tamanho     = 1.5
 ordem       = 4
@@ -2165,7 +2165,7 @@ graficar(arquivo,titulo,eixox,eixoy,
 # modelo      = 'EPVP_CRVE_ESP003_SG_D1_INF_AXI'
 # arquivo     = modelo + '\convergencias.txt'
 # ncoluna     = dicncolunalongterm[modelo]
-# lblcoluna   = 'NG, VEL, $K_c=969$, single tunnel, $U_C=$ 1.73'
+# lblcoluna   = 'NG, VEL, $K_{c_{28}}=970$, single tunnel, $U_C=$ 1.73'
 # cor         = 'k'
 # tamanho     = 1.5
 # ordem       = 4
@@ -2183,7 +2183,7 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EPVP_CRE_SG_D1_4RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'NG, EL, $K_c=3403$, $U_C=$ 0.98'
+lblcoluna   = 'NG, EL, $K_{c_{28}}=3400$, $U_C=$ 0.98'
 cor         = 'orange'
 tamanho     = 2
 ordem       = 1
@@ -2201,7 +2201,7 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EPVP_CRE_ESP003_SG_D1_4RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'NG, EL, $K_c=969$, $U_C=$ 1.28'
+lblcoluna   = 'NG, EL, $K_{c_{28}}=970$, $U_C=$ 1.28'
 cor         = 'orange'
 tamanho     = 2
 ordem       = 1
@@ -2219,7 +2219,7 @@ graficar(arquivo,titulo,eixox,eixoy,
 # modelo      = 'EPVP_CRVE_ESP003_SG_D1_4RE_3D'
 # arquivo     = modelo + '\convergencias_90.txt'
 # ncoluna     = dicncolunalongterm[modelo]
-# lblcoluna   = 'NG, VEL, $K_c=969$, $U_C=$ 1.78'
+# lblcoluna   = 'NG, VEL, $K_{c_{28}}=970$, $U_C=$ 1.78'
 # cor         = 'orange'
 # tamanho     = 2
 # ordem       = 1
@@ -2237,7 +2237,7 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EPVP_CRE_CG_D1_4RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'WG, EL, $K_c=3403$, $U_C=$ 0.98'
+lblcoluna   = 'WG, EL, $K_{c_{28}}=3400$, $U_C=$ 0.98'
 cor         = 'b'
 tamanho     = 2
 ordem       = 1
@@ -2255,7 +2255,7 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EPVP_CRE_ESP003_CG_D1_4RE_3D'
 arquivo     = modelo + '\convergencias_90.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'WG, EL, $K_c=969$, $U_C=$ 1.28'
+lblcoluna   = 'WG, EL, $K_{c_{28}}=970$, $U_C=$ 1.28'
 cor         = 'b'
 tamanho     = 2
 ordem       = 1
@@ -2273,7 +2273,7 @@ graficar(arquivo,titulo,eixox,eixoy,
 # modelo      = 'EPVP_CRVE_ESP003_CG_D1_4RE_3D'
 # arquivo     = modelo + '\convergencias_90.txt'
 # ncoluna     = dicncolunalongterm[modelo]
-# lblcoluna   = 'WG, VEL, $K_c=969$, $U_C=$ 1.78'
+# lblcoluna   = 'WG, VEL, $K_{c_{28}}=970$, $U_C=$ 1.78'
 # cor         = 'b'
 # tamanho     = 2
 # ordem       = 1
@@ -2316,7 +2316,7 @@ poly        = poly_twin_convergence_profile
 modelo      = 'EP_CRE_SG_D1_INF_AXI'
 arquivo     = modelo + '\convergencias.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'EP, EL, $K_c=3403$, $U_C=$ 0.92'
+lblcoluna   = 'EP, EL, $K_{c_{28}}=3400$, $U_C=$ 0.92'
 cor         = 'k'
 tamanho     = 1.5
 ordem       = 4
@@ -2334,7 +2334,7 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EP_CRE_ESP003_SG_D1_INF_AXI'
 arquivo     = modelo + '\convergencias.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'EP, EL, $K_c=969$, $U_C=$ 1.03'
+lblcoluna   = 'EP, EL, $K_{c_{28}}=970$, $U_C=$ 1.03'
 cor         = 'k'
 tamanho     = 1.5
 ordem       = 4
@@ -2406,7 +2406,7 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EPVP_CRE_SG_D1_INF_AXI'
 arquivo     = modelo + '\convergencias.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'EPVP, EL, $K_c=3403$, $U_C=$ 0.97'
+lblcoluna   = 'EPVP, EL, $K_{c_{28}}=3400$, $U_C=$ 0.97'
 cor         = 'r'
 tamanho     = 1.5
 ordem       = 3
@@ -2424,7 +2424,7 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EPVP_CRE_ESP003_SG_D1_INF_AXI'
 arquivo     = modelo + '\convergencias.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'EPVP, EL, $K_c=969$, $U_C=$ 1.23'
+lblcoluna   = 'EPVP, EL, $K_{c_{28}}=970$, $U_C=$ 1.23'
 cor         = 'r'
 tamanho     = 1.5
 ordem       = 3
@@ -2460,7 +2460,7 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EPVP_CRVE_SG_D1_INF_AXI'
 arquivo     = modelo + '\convergencias.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'EPVP, VEL, $K_c=3403$, $U_C=$ 1.18'
+lblcoluna   = 'EPVP, VEL, $K_{c_{28}}=3400$, $U_C=$ 1.18'
 cor         = 'b'
 tamanho     = 1.5
 ordem       = 3
@@ -2478,7 +2478,7 @@ graficar(arquivo,titulo,eixox,eixoy,
 modelo      = 'EPVP_CRVE_ESP003_SG_D1_INF_AXI'
 arquivo     = modelo + '\convergencias.txt'
 ncoluna     = dicncolunalongterm[modelo]
-lblcoluna   = 'EPVP, VEL, $K_c=969$, $U_C=$ 1.73'
+lblcoluna   = 'EPVP, VEL, $K_{c_{28}}=970$, $U_C=$ 1.73'
 cor         = 'b'
 tamanho     = 1.5
 ordem       = 3
