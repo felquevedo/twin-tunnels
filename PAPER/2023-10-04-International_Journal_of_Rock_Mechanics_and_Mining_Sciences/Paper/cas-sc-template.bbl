@@ -22,8 +22,7 @@
 \newblock \bibinfo{journal}{Bulletin of Engineering Geology and the
   Environment}
   \bibinfo{year}{2007};\bibinfo{volume}{66}(\bibinfo{number}{1}):\bibinfo{pages}{71--79}.
-\newblock \URLprefix \url{http://link.springer.com/10.1007/s10064-006-0056-z}.
-  \DOIprefix\doi{10.1007/s10064-006-0056-z}.
+\newblock \DOIprefix\doi{10.1007/s10064-006-0056-z}.
 %Type = Article
 \bibitem[{Zheng et~al.(2015)Zheng, Zhang and Diao}]{ZHENG2015}
 \bibinfo{author}{Zheng\xfnm[ G.]}, \bibinfo{author}{Zhang\xfnm[ T.]},
@@ -32,9 +31,7 @@
   distortion induced by succeeding {EPBS} tunnelling in close proximity}.
 \newblock \bibinfo{journal}{Computers and Geotechnics}
   \bibinfo{year}{2015};\bibinfo{volume}{66}:\bibinfo{pages}{53--65}.
-\newblock \URLprefix
-  \url{https://www.sciencedirect.com/science/article/pii/S0266352X15000105}.
-  \DOIprefix\doi{https://doi.org/10.1016/j.compgeo.2015.01.008}.
+\newblock \DOIprefix\doi{https://doi.org/10.1016/j.compgeo.2015.01.008}.
 %Type = Article
 \bibitem[{Do et~al.(2016)Do, Dias and Oreste}]{do_3d_2016}
 \bibinfo{author}{Do\xfnm[ N.A.]}, \bibinfo{author}{Dias\xfnm[ D.]},
@@ -44,9 +41,7 @@
   faces}.
 \newblock \bibinfo{journal}{Engineering Structures}
   \bibinfo{year}{2016};\bibinfo{volume}{109}:\bibinfo{pages}{117--125}.
-\newblock \URLprefix
-  \url{https://linkinghub.elsevier.com/retrieve/pii/S0141029615007609}.
-  \DOIprefix\doi{10.1016/j.engstruct.2015.11.053}.
+\newblock \DOIprefix\doi{10.1016/j.engstruct.2015.11.053}.
 %Type = Article
 \bibitem[{Forsat et~al.(2022)Forsat, Taghipoor and Palassi}]{forsat2022}
 \bibinfo{author}{Forsat\xfnm[ M.]}, \bibinfo{author}{Taghipoor\xfnm[ M.]},
@@ -57,9 +52,7 @@
 \newblock \bibinfo{journal}{International Journal of Pavement Research and
   Technology}
   \bibinfo{year}{2022};\bibinfo{volume}{15}(\bibinfo{number}{3}):\bibinfo{pages}{525--538}.
-\newblock \URLprefix
-  \url{https://link.springer.com/10.1007/s42947-021-00034-0}.
-  \DOIprefix\doi{10.1007/s42947-021-00034-0}.
+\newblock \DOIprefix\doi{10.1007/s42947-021-00034-0}.
 %Type = Article
 \bibitem[{Phutthananon et~al.(2023)Phutthananon, Lertkultanon, Jongpradist,
   Duangsano, Likitlersuang and Jamsawang}]{PHUTTHANANON2023}
@@ -72,9 +65,7 @@
   distance}.
 \newblock \bibinfo{journal}{Underground Space}
   \bibinfo{year}{2023};\bibinfo{volume}{11}:\bibinfo{pages}{171--188}.
-\newblock \URLprefix
-  \url{https://www.sciencedirect.com/science/article/pii/S2467967423000387}.
-  \DOIprefix\doi{https://doi.org/10.1016/j.undsp.2022.12.005}.
+\newblock \DOIprefix\doi{https://doi.org/10.1016/j.undsp.2022.12.005}.
 %Type = Article
 \bibitem[{Islam and Iskander(2021)}]{ISLAM2021}
 \bibinfo{author}{Islam\xfnm[ M.S.]}, \bibinfo{author}{Iskander\xfnm[ M.]}.
@@ -82,9 +73,7 @@
   review}.
 \newblock \bibinfo{journal}{Tunnelling and Underground Space Technology}
   \bibinfo{year}{2021};\bibinfo{volume}{110}:\bibinfo{pages}{103614}.
-\newblock \URLprefix
-  \url{https://www.sciencedirect.com/science/article/pii/S088677982030568X}.
-  \DOIprefix\doi{https://doi.org/10.1016/j.tust.2020.103614}.
+\newblock \DOIprefix\doi{https://doi.org/10.1016/j.tust.2020.103614}.
 %Type = Article
 \bibitem[{quan Chen et~al.(2019)quan Chen, bin Lin and yong Li}]{Chen2019}
 \bibinfo{author}{quan Chen\xfnm[ F.]}, \bibinfo{author}{bin Lin\xfnm[ L.]},
@@ -94,9 +83,7 @@
   liners}.
 \newblock \bibinfo{journal}{Applied Mathematical Modelling}
   \bibinfo{year}{2019};\bibinfo{volume}{73}:\bibinfo{pages}{412--441}.
-\newblock \URLprefix
-  \url{https://www.sciencedirect.com/science/article/pii/S0307904X19302161}.
-  \DOIprefix\doi{https://doi.org/10.1016/j.apm.2019.04.026}.
+\newblock \DOIprefix\doi{https://doi.org/10.1016/j.apm.2019.04.026}.
 %Type = Article
 \bibitem[{Ma et~al.(2020)Ma, Lu, Zeng and Cai}]{MA2020}
 \bibinfo{author}{Ma\xfnm[ Y.]}, \bibinfo{author}{Lu\xfnm[ A.]},
@@ -123,9 +110,7 @@
   P.]}.
 \newblock \bibinfo{title}{Numerical analysis of twin tunnels interaction}.
 \newblock In: \bibinfo{booktitle}{Proc. 1st Eastern European Tunnelling
-  Conference}. \bibinfo{address}{Budapest, Hungary};
-  \bibinfo{year}{2012},\URLprefix
-  \url{https://ita-hun.hu/items/files/2012_eloadasok/Fortsakis_175_70_1.pdf}.
+  Conference}. \bibinfo{address}{Budapest, Hungary}; \bibinfo{year}{2012},.
 %Type = Article
 \bibitem[{Chortis and Kavvadas(2021{\natexlab{a}})}]{chortis2021b}
 \bibinfo{author}{Chortis\xfnm[ F.]}, \bibinfo{author}{Kavvadas\xfnm[ M.]}.
@@ -151,8 +136,6 @@
 \newblock In: \bibinfo{booktitle}{Expanding Underground-Knowledge and Passion
   to Make a Positive Impact on the World}. \bibinfo{publisher}{CRC Press};
   \bibinfo{year}{2023}{\natexlab{a}}, p. \bibinfo{pages}{1574--1582}.
-\newblock \URLprefix
-  \url{https://www.taylorfrancis.com/chapters/oa-edit/10.1201/9781003348030-188/3d-numerical-investigation-axial-forces-acting-tunnel-junctions-constructed-fractured-weathered-blocky-rockmass-chortis-kavvadas}.
 %Type = Incollection
 \bibitem[{Chortis and Kavvadas(2023{\natexlab{b}})}]{chortis2023b}
 \bibinfo{author}{Chortis\xfnm[ F.]}, \bibinfo{author}{Kavvadas\xfnm[ M.]}.
@@ -162,8 +145,6 @@
 \newblock In: \bibinfo{booktitle}{Expanding Underground-Knowledge and Passion
   to Make a Positive Impact on the World}. \bibinfo{publisher}{CRC Press};
   \bibinfo{year}{2023}{\natexlab{b}}, p. \bibinfo{pages}{1583--1591}.
-\newblock \URLprefix
-  \url{https://www.taylorfrancis.com/chapters/oa-edit/10.1201/9781003348030-189/3d-numerical-investigation-bending-moments-acting-tunnel-junctions-constructed-fractured-weathered-blocky-rockmass-chortis-kavvadas}.
 %Type = Article
 \bibitem[{Ba{\v{z}}ant and Prasannan(1989{\natexlab{a}})}]{bazant:1989a}
 \bibinfo{author}{Ba{\v{z}}ant\xfnm[ Z.P.]}, \bibinfo{author}{Prasannan\xfnm[
@@ -252,8 +233,6 @@ ANSYS.
 \newblock In: \bibinfo{booktitle}{The 28th U.S. Symposium on Rock Mechanics
   (USRMS)}. \bibinfo{address}{Tucson, Arizona}; \bibinfo{year}{1987}, p.
   \bibinfo{pages}{ARMA--87--0663}.
-\newblock \URLprefix
-  \url{https://onepetro.org/ARMAUSRMS/proceedings-abstract/ARMA87/All-ARMA87/129838}.
 %Type = Article
 \bibitem[{Giraud and Rousset(1996)}]{GIRAUD1996}
 \bibinfo{author}{Giraud\xfnm[ A.]}, \bibinfo{author}{Rousset\xfnm[ G.]}.

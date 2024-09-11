@@ -16,16 +16,16 @@ Name 1 in "Quevedo, F. P. M., and Bernaud, D. and Maghous, S." has a comma at th
 while executing---line 1685 of file model3-num-names.bst
 You've used 44 entries,
             3138 wiz_defined-function locations,
-            972 strings with 15706 characters,
-and the built_in function-call counts, 37468 in all, are:
-= -- 3178
+            961 strings with 14725 characters,
+and the built_in function-call counts, 37281 in all, are:
+= -- 3129
 > -- 789
 < -- 31
 + -- 428
 - -- 208
-* -- 4139
-:= -- 4711
-add.period$ -- 181
+* -- 4099
+:= -- 4682
+add.period$ -- 171
 call.type$ -- 44
 change.case$ -- 232
 chr.to.int$ -- 40
@@ -33,20 +33,20 @@ cite$ -- 45
 duplicate$ -- 3352
 empty$ -- 3321
 format.name$ -- 347
-if$ -- 7510
+if$ -- 7461
 int.to.chr$ -- 5
 int.to.str$ -- 45
 missing$ -- 442
-newline$ -- 273
+newline$ -- 270
 num.names$ -- 129
-pop$ -- 818
+pop$ -- 840
 preamble$ -- 1
 purify$ -- 220
 quote$ -- 0
-skip$ -- 728
+skip$ -- 724
 stack$ -- 0
 substring$ -- 3424
-swap$ -- 1684
+swap$ -- 1673
 text.length$ -- 6
 text.prefix$ -- 0
 top$ -- 0
@@ -54,5 +54,5 @@ type$ -- 256
 warning$ -- 1
 while$ -- 162
 width$ -- 0
-write$ -- 718
+write$ -- 704
 (There were 3 error messages)
