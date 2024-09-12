@@ -1,16 +1,40 @@
 
 CLASSIFICAÇÃO QUALIS: https://sucupira.capes.gov.br/sucupira/public/consultas/coleta/veiculoPublicacaoQualis/listaConsultaGeralPeriodicos.xhtml
 
+
+************************************************************************************************************
+
 ****
 Samir: mais genérica na área da geomecânica
 ISSN: 			1096-9853	
 TÍTULO: 		INTERNATIONAL JOURNAL FOR NUMERICAL AND ANALYTICAL METHODS IN GEOMECHANICS	
 ÁREA DE AVALIAÇÃO: 	ENGENHARIAS I, ENGENHARIAS III	
 CLASSIFICAÇÃO: 		A1
-Impact factor (2022):	4.0
+Impact factor :		4.0 (2022), 3.4 (2024)
+Cite score (Scopus):	6.4 (2024)
+Editor Chefe:		Félix Darve, René de Borst, Andrew J. Whittle, Ronaldo I. Borja e Gilles Pijaudier-Cabot
 AIM AND SCOPE:		https://onlinelibrary.wiley.com/page/journal/10969853/homepage/productinformation.html	
 SUBMISSION: 		https://onlinelibrary.wiley.com/page/journal/10969853/homepage/forauthors.html
 
+			O International Journal for Numerical and Analytical Methods in Geomechanics 
+			aceita manuscritos que contribuam substancialmente para a compreensão do complexo 
+			comportamento mecânico de geomateriais (solos, rochas, concreto, gelo, neve e pós), 
+			por meio de técnicas experimentais inovadoras e/ou pelo desenvolvimento de novos conceitos 
+			de modelagem numérica ou híbrida experimental/numérica em geomecânica. Os tópicos de interesse 
+			incluem instabilidades e localização, fenômenos de interface e superfície, fratura e 
+			falha, multifísica e outros fenômenos dependentes do tempo, micromecânica e métodos 
+			de várias escalas, além de análise inversa e métodos estocásticos. Os trabalhos relacionados 
+			a questões energéticas e ambientais são particularmente bem-vindos. A ilustração dos métodos e 
+			técnicas propostos para problemas de engenharia é incentivada. No entanto, manuscritos 
+			que tratem de aplicações de métodos existentes ou que proponham melhorias incrementais 
+			em métodos existentes - em particular, extensões marginais de soluções analíticas ou métodos 
+			numéricos existentes - não serão considerados para revisão. A revista publica artigos completos, 
+			que normalmente não devem exceder 30 páginas, e comunicações curtas, que podem ter no 
+			máximo 8 páginas, e cartas ao editor, que normalmente não excedem 2 páginas e serão 
+			publicadas juntamente com uma resposta dos autores. Não é recomendável a apresentação de 
+			artigos em duas partes.
+
+************************************************************************************************************
 (Denise)
 *
 Samir: mais específica
@@ -18,48 +42,137 @@ ISSN:			0886-7798
 TÍTULO:			TUNNELLING AND UNDERGROUND SPACE TECHNOLOGY
 ÁREA DE AVALIAÇÃO:	ENGENHARIAS I
 CLASSIFICAÇÃO:		A1
-Impact factor (2022):	6.9
-CiteScore:		11.5
-AIM AND SCOPE:		https://www.sciencedirect.com/journal/tunnelling-and-underground-space-technology/about/aims-and-scope
-SUBMISSION:		https://www.editorialmanager.com/tust/default2.aspx	
+Impact factor:		6.9 (2022), 6.7 (2024)
+CiteScore:		11.5 (2022), 11.9 (2024)
+Editor Chefe:		Wout Broere, Shucai Li, Jamal Rostami, Qiabing Zhang
+SUBMISSION:		https://www.editorialmanager.com/tust/default2.aspx
+AIM AND SCOPE:		https://www.sciencedirect.com/journal/tunnelling-and-underground-space-technology/about/aims-and-scope	
 
+			A Tunnelling and Underground Space Technology incorporating Trenchless Technology 
+			Research é uma revista internacional que publica artigos confiáveis, abrangendo 
+			pesquisas originais e estudos de caso sobre o desenvolvimento da tecnologia de 
+			abertura de túneis, o uso do espaço subterrâneo, a construção subterrânea e a 
+			tecnologia sem valas.
+			
+			A revista tem o compromisso de publicar artigos sobre os aspectos interdisciplinares 
+			do planejamento, da criação e da regulamentação do espaço subterrâneo, e abrange 
+			um amplo escopo que inclui:
+
+			- Geoinvestigação, análise geomecânica, projeto e modelagem, construção e monitoramento, 
+			manutenção e reabilitação de túneis e grandes estruturas subterrâneas e abrigadas na terra.
+
+			- Planejamento, desenvolvimento e operação do espaço subterrâneo e do ambiente do 
+			espaço subterrâneo, como arquitetura, segurança e conforto, e interação homem-espaço.
+			
+			- Instalação e reabilitação de tubulações, dutos e cabos subterrâneos usando pipe 
+			jacking, microtunnelling e outras formas de tecnologias sem valas.
+
+************************************************************************************************************
 ****
 ISSN:			1532-3641
 TÍTULO:			INTERNATIONAL JOURNAL OF GEOMECHANICS
 ÁREA DE AVALIAÇÃO:	ENGENHARIAS I, ENGENHARIAS II e GEOCIÊNCIAS
 CLASSIFICAÇÃO:		A2
-Impact factor:		3.918
-CiteScore: 		6
-AIM AND SCOPE:		https://ascelibrary.org/page/ijgnai/editorialboard
+Impact factor:		3.918 (2022), 3.3 (2024)
+CiteScore: 		6 (2022), 6.4 (2024)
+Editor chefe:		Marco Barla Ph.D. Plitecnico di Torino
 SUBMISSION:		https://www.editorialmanager.com/jrngmeng/default2.aspx	
+AIM AND SCOPE:		https://ascelibrary.org/page/ijgnai/editorialboard
 
+			O International Journal of Geomechanics (IJOG) concentra-se em aspectos 
+			inovadores da geomecânica com ênfase em aspectos teóricos, incluindo métodos 
+			computacionais e analíticos, e no desenvolvimento de validações de modelos usando 
+			medições de laboratório e de campo para a solução de problemas geotécnicos práticos.
+			
+			As aplicações de tópicos interdisciplinares, como engenharia geotécnica e 
+			geoambiental, engenharia de mineração e geológica, engenharia de rochas e explosões,
+			estruturas subterrâneas, engenharia de infraestrutura e pavimentação, engenharia 
+			de petróleo, geofísica de engenharia, geotecnologia marítima e offshore, energia geotérmica, 
+			engenharia lunar e planetária e mecânica do gelo estão dentro do escopo da revista. 
+			Os tópicos específicos abordados incluem métodos numéricos e analíticos; modelagem 
+			constitutiva, incluindo elasticidade, plasticidade, fluência, localização, 
+			fratura e instabilidades; inteligência artificial, sistemas especializados, 
+			otimização e confiabilidade; estática e dinâmica de estruturas e fundações 
+			que interagem; fluxo de líquido e gás através de meios geológicos, transporte de 
+			contaminantes e problemas de água subterrânea; estabilidade de furos de sondagem, 
+			riscos geológicos, como terremotos, deslizamentos de terra e subsidência; melhoria 
+			do solo/rocha.
+
+			A ASCE se esforça para promover pesquisas em engenharia civil e disciplinas relacionadas 
+			que ajudarão a informar, desenvolver e inspirar ações sustentáveis. Portanto, incentivamos 
+			os autores a categorizar suas pesquisas usando pelo menos um dos Objetivos de Desenvolvimento 
+			Sustentável identificados pelas Nações Unidas.
+			
+************************************************************************************************************			
 (Denise!)
 ***
 ISSN:			1365-1609
 TÍTULO:			INTERNATIONAL JOURNAL OF ROCK MECHANICS AND MINING SCIENCES (1997)
 ÁREA DE AVALIAÇÃO:	ENGENHARIAS I
 CLASSIFICAÇÃO:		A1
-Impact factor:		7.2
-CiteScore:		13
-AIM AND SCOPE:		https://www.sciencedirect.com/journal/international-journal-of-rock-mechanics-and-mining-sciences
+Impact factor:		7.2 (2022), 7.0 (2024)
+CiteScore:		13 (2022), 14 (2024)
+Editor chefe:		Jian Zhao Monash University Melbourne Australia
 SUBMISSION:		https://www.editorialmanager.com/ijrmms/default2.aspx
+AIM AND SCOPE:		https://www.sciencedirect.com/journal/international-journal-of-rock-mechanics-and-mining-sciences
+			
+			Esta revista trata de pesquisas originais, novos desenvolvimentos, medições no local e 
+			estudos de caso em mecânica de rochas e engenharia de rochas. 
+			Ela oferece um fórum internacional para a publicação de artigos de alta qualidade 
+			sobre o tema da mecânica de rochas e a aplicação de princípios e técnicas de 
+			mecânica de rochas a projetos de mineração e engenharia civil construídos sobre ou 
+			em maciços rochosos. Esses projetos incluem taludes, minas a céu aberto, pedreiras, poços, 
+			túneis, cavernas, minas subterrâneas, sistemas de metrô, barragens e usinas hidrelétricas, 
+			energia geotérmica, engenharia de petróleo e descarte de resíduos radioativos. São bem-vindos 
+			artigos sobre todos os tópicos relevantes, especialmente sobre desenvolvimentos teóricos, 
+			métodos analíticos, métodos numéricos, testes de rochas, investigação de locais e estudos de caso.
 
+************************************************************************************************************
 ***
 ISSN:			1674-7755	
 TÍTULO:			JOURNAL OF ROCK MECHANICS AND GEOTECHNICAL ENGINEERING	
 ÁREA:			ENGENHARIAS I	
 CLASSIFICAÇÃO:		A1
-Impact factor:		7.3
-CiteScore:		10.9
-AIM AND SCOPE:		https://www.sciencedirect.com/journal/journal-of-rock-mechanics-and-geotechnical-engineering	
+Impact factor:		7.3 (2022), 9.4 (2024)
+CiteScore:		10.9 (2022), 11.6 (2024)
+Editor Chefe:		Qihu Qian Army Engineering Nanjing China
 SUBMISSION:		https://www.editorialmanager.com/jrmge/default2.aspx
+AIM AND SCOPE:		https://www.sciencedirect.com/journal/journal-of-rock-mechanics-and-geotechnical-engineering	
+			
+			O Journal of Rock Mechanics and Geotechnical Engineering (JRMGE) trata 
+			das mais recentes realizações de pesquisa em mecânica de rochas e engenharia geotécnica.
+			
+			Ele oferece uma oportunidade para colegas de todo o mundo entenderem 
+			os desenvolvimentos atuais nas áreas de mecânica de rochas, engenharia geotécnica, 
+			mecânica de solos e engenharia de fundações, engenharia civil, engenharia de minas, 
+			engenharia hidráulica, engenharia de petróleo, geologia de engenharia, etc.
 
+			O JRMGE tem como objetivo promover o intercâmbio acadêmico internacional e 
+			funciona como uma ponte entre os desenvolvimentos fundamentais e as aplicações práticas.
+
+			Os tópicos abordados pelo JRMGE incluem novas teorias, novas tecnologias, novos métodos e 
+			experiências, testes in-situ e de laboratório, novos desenvolvimentos, estudos de caso e 
+			revisões oportunas sobre assuntos selecionados em mecânica de rochas e engenharia geotécnica.
+
+************************************************************************************************************
 ****
 ISSN:			0723-2632	
 TÍTULO:			ROCK MECHANICS AND ROCK ENGINEERING (PRINT)	
 ÁREA:			ENGENHARIAS I	
 CLASSIFICAÇÃO:		A1
-Impact factor:		6.2
-AIM AND SCOPE:		https://www.springer.com/journal/603
+Impact factor:		6.2 (2022), 5.5 (2024)
+Editor Chefe:		J. Sulem, Ecole des Ponts ParisTech, Paris, França
 SUBMISSION:		https://www.editorialmanager.com/rmre/default2.aspx
+AIM AND SCOPE:		https://link.springer.com/journal/603/aims-and-scope
 
+			A Rock Mechanics and Rock Engineering publica pesquisas originais sobre os aspectos 
+			experimentais e teóricos da mecânica de rochas, incluindo testes de laboratório e 
+			de campo, métodos computacionais, princípios de projeto e investigação de locais. 
+			A cobertura também inclui histórias de casos de projeto e construção de estruturas 
+			em rochas e artigos de revisão. A revista mantém o forte vínculo entre a geologia 
+			de engenharia e a engenharia de rochas. Ela oferece uma ponte entre os desenvolvimentos 
+			fundamentais e as aplicações práticas, como aberturas subterrâneas, fundações de 
+			grandes barragens e taludes rochosos. Os tópicos específicos também incluem, mas 
+			não se restringem a, mecânica de rochas relacionada à energia, engenharia de petróleo, 
+			sistemas geotérmicos, armazenamento de energia, sequestro de gases de efeito estufa e 
+			descarte de resíduos.
