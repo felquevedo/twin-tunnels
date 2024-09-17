@@ -5,54 +5,64 @@ Reallocating 'name_of_file' (item size: 1) to 17 items.
 The style file: model3-num-names.bst
 Reallocating 'name_of_file' (item size: 1) to 9 items.
 Database file #1: cas-refs.bib
+I was expecting a `,' or a `}'---line 1309 of file cas-refs.bib
+ :  
+ :  publisher  = {Taylor and Francis Group},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
 Name 1 in "Quevedo, F. P. M., and Bernaud, D. and Maghous, S." has a comma at the end for entry quevedo2022b
 while executing---line 1591 of file model3-num-names.bst
 Reallocating 'wiz_functions' (item size: 4) to 6000 items.
 Reallocating 'singl_function' (item size: 4) to 100 items.
+Warning--empty author in insam2019
+Warning--empty pages in hsiao2005
+Warning--empty author in sjoberg2006
+Warning--empty year in sjoberg2006; set to ????
+Warning--empty pages in sjoberg2006
 Warning--empty pages in Fortsakis2012
 Name 1 in "Quevedo, F. P. M., and Bernaud, D. and Maghous, S." has a comma at the end for entry quevedo2022b
 while executing---line 1685 of file model3-num-names.bst
 Name 1 in "Quevedo, F. P. M., and Bernaud, D. and Maghous, S." has a comma at the end for entry quevedo2022b
 while executing---line 1685 of file model3-num-names.bst
-You've used 44 entries,
+You've used 45 entries,
             3138 wiz_defined-function locations,
-            961 strings with 14725 characters,
-and the built_in function-call counts, 37281 in all, are:
-= -- 3129
-> -- 789
-< -- 31
-+ -- 428
-- -- 208
-* -- 4099
-:= -- 4682
-add.period$ -- 171
-call.type$ -- 44
-change.case$ -- 232
-chr.to.int$ -- 40
-cite$ -- 45
-duplicate$ -- 3352
-empty$ -- 3321
-format.name$ -- 347
-if$ -- 7461
-int.to.chr$ -- 5
-int.to.str$ -- 45
-missing$ -- 442
-newline$ -- 270
+            965 strings with 14873 characters,
+and the built_in function-call counts, 38084 in all, are:
+= -- 3207
+> -- 781
+< -- 30
++ -- 424
+- -- 206
+* -- 4194
+:= -- 4778
+add.period$ -- 175
+call.type$ -- 45
+change.case$ -- 242
+chr.to.int$ -- 43
+cite$ -- 55
+duplicate$ -- 3447
+empty$ -- 3418
+format.name$ -- 337
+if$ -- 7612
+int.to.chr$ -- 3
+int.to.str$ -- 46
+missing$ -- 447
+newline$ -- 275
 num.names$ -- 129
-pop$ -- 840
+pop$ -- 851
 preamble$ -- 1
-purify$ -- 220
+purify$ -- 224
 quote$ -- 0
-skip$ -- 724
+skip$ -- 731
 stack$ -- 0
-substring$ -- 3424
-swap$ -- 1673
-text.length$ -- 6
+substring$ -- 3550
+swap$ -- 1678
+text.length$ -- 5
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 256
-warning$ -- 1
-while$ -- 162
+type$ -- 262
+warning$ -- 6
+while$ -- 163
 width$ -- 0
-write$ -- 704
-(There were 3 error messages)
+write$ -- 719
+(There were 4 error messages)
