@@ -20,49 +20,50 @@ Warning--empty author in sjoberg2006
 Warning--empty year in sjoberg2006; set to ????
 Warning--empty pages in sjoberg2006
 Warning--empty pages in Fortsakis2012
+Warning--there's a number but no volume in pedro2022
 Name 1 in "Quevedo, F. P. M., and Bernaud, D. and Maghous, S." has a comma at the end for entry quevedo2022b
 while executing---line 1685 of file model3-num-names.bst
 Name 1 in "Quevedo, F. P. M., and Bernaud, D. and Maghous, S." has a comma at the end for entry quevedo2022b
 while executing---line 1685 of file model3-num-names.bst
-You've used 45 entries,
+You've used 65 entries,
             3138 wiz_defined-function locations,
-            965 strings with 14873 characters,
-and the built_in function-call counts, 38084 in all, are:
-= -- 3207
-> -- 781
-< -- 30
-+ -- 424
-- -- 206
-* -- 4194
-:= -- 4778
-add.period$ -- 175
-call.type$ -- 45
-change.case$ -- 242
-chr.to.int$ -- 43
-cite$ -- 55
-duplicate$ -- 3447
-empty$ -- 3418
-format.name$ -- 337
-if$ -- 7612
-int.to.chr$ -- 3
-int.to.str$ -- 46
-missing$ -- 447
-newline$ -- 275
-num.names$ -- 129
-pop$ -- 851
+            1088 strings with 19422 characters,
+and the built_in function-call counts, 57609 in all, are:
+= -- 4881
+> -- 1258
+< -- 37
++ -- 676
+- -- 330
+* -- 6417
+:= -- 7192
+add.period$ -- 254
+call.type$ -- 65
+change.case$ -- 345
+chr.to.int$ -- 61
+cite$ -- 76
+duplicate$ -- 5160
+empty$ -- 5124
+format.name$ -- 528
+if$ -- 11537
+int.to.chr$ -- 5
+int.to.str$ -- 66
+missing$ -- 665
+newline$ -- 392
+num.names$ -- 186
+pop$ -- 1233
 preamble$ -- 1
-purify$ -- 224
+purify$ -- 324
 quote$ -- 0
-skip$ -- 731
+skip$ -- 1095
 stack$ -- 0
-substring$ -- 3550
-swap$ -- 1678
-text.length$ -- 5
+substring$ -- 5493
+swap$ -- 2528
+text.length$ -- 7
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 262
-warning$ -- 6
-while$ -- 163
+type$ -- 382
+warning$ -- 7
+while$ -- 250
 width$ -- 0
-write$ -- 719
+write$ -- 1034
 (There were 4 error messages)

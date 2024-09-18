@@ -1,4 +1,4 @@
-\begin{thebibliography}{45}
+\begin{thebibliography}{65}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \providecommand{\href}[2]{#2}
@@ -14,12 +14,12 @@
 \providecommand{\bibinfo}[2]{#2}
 \ifx\xfnm\undefined \def\xfnm[#1]{\unskip,\space#1}\fi
 %Type = Article
-\bibitem[{Chortis and Kavvadas(2021)}]{chortis2021b}
+\bibitem[{Chortis and Kavvadas(2021{\natexlab{a}})}]{chortis2021b}
 \bibinfo{author}{Chortis\xfnm[ F.]}, \bibinfo{author}{Kavvadas\xfnm[ M.]}.
 \newblock \bibinfo{title}{Three-dimensional numerical investigation of the
   interaction between twin tunnels}.
 \newblock \bibinfo{journal}{Geotechnical and Geological Engineering}
-  \bibinfo{year}{2021};\bibinfo{volume}{39}:\bibinfo{pages}{5559--5585}.
+  \bibinfo{year}{2021}{\natexlab{a}};\bibinfo{volume}{39}:\bibinfo{pages}{5559--5585}.
 \newblock \DOIprefix\doi{https://doi.org/10.1007/s10706-021-01845-5}.
 %Type = Incollection
 \bibitem[{ins(2019)}]{insam2019}
@@ -122,6 +122,18 @@
   \bibinfo{year}{2016};\bibinfo{volume}{51}:\bibinfo{pages}{226--237}.
 \newblock \DOIprefix\doi{10.1016/j.tust.2015.10.037}.
 %Type = Article
+\bibitem[{Connor~Langford et~al.(2016)Connor~Langford, Vlachopoulos and
+  Diederichs}]{connor2016}
+\bibinfo{author}{Connor~Langford\xfnm[ J.]},
+  \bibinfo{author}{Vlachopoulos\xfnm[ N.]}, \bibinfo{author}{Diederichs\xfnm[
+  M.S.]}.
+\newblock \bibinfo{title}{Revisiting support optimization at the {Driskos}
+  tunnel using a quantitative risk approach}.
+\newblock \bibinfo{journal}{Journal of Rock Mechanics and Geotechnical
+  Engineering}
+  \bibinfo{year}{2016};\bibinfo{volume}{8}(\bibinfo{number}{2}):\bibinfo{pages}{147--163}.
+\newblock \DOIprefix\doi{10.1016/j.jrmge.2015.11.003}.
+%Type = Article
 \bibitem[{Wan et~al.(2017)Wan, Standing, Potts and Burland}]{wan2017}
 \bibinfo{author}{Wan\xfnm[ M.S.P.]}, \bibinfo{author}{Standing\xfnm[ J.R.]},
   \bibinfo{author}{Potts\xfnm[ D.M.]}, \bibinfo{author}{Burland\xfnm[ J.B.]}.
@@ -137,6 +149,204 @@
 \newblock \bibinfo{journal}{Tunnelling and Underground Space Technology}
   \bibinfo{year}{2015};\bibinfo{volume}{50}:\bibinfo{pages}{376--395}.
 \newblock \DOIprefix\doi{10.1016/j.tust.2015.08.005}.
+%Type = Article
+\bibitem[{Chortis and Kavvadas(2021{\natexlab{b}})}]{chortis2021a}
+\bibinfo{author}{Chortis\xfnm[ F.]}, \bibinfo{author}{Kavvadas\xfnm[ M.]}.
+\newblock \bibinfo{title}{Three-dimensional numerical analyses of perpendicular
+  tunnel intersections}.
+\newblock \bibinfo{journal}{Geotechnical and Geological Engineering}
+  \bibinfo{year}{2021}{\natexlab{b}};\bibinfo{volume}{39}:\bibinfo{pages}{1771--1793}.
+\newblock \DOIprefix\doi{https://doi.org/10.1007/s10706-020-01587-w}.
+%Type = Article
+\bibitem[{Zheng et~al.(2015)Zheng, Zhang and Diao}]{ZHENG2015}
+\bibinfo{author}{Zheng\xfnm[ G.]}, \bibinfo{author}{Zhang\xfnm[ T.]},
+  \bibinfo{author}{Diao\xfnm[ Y.]}.
+\newblock \bibinfo{title}{Mechanism and countermeasures of preceding tunnel
+  distortion induced by succeeding {EPBS} tunnelling in close proximity}.
+\newblock \bibinfo{journal}{Computers and Geotechnics}
+  \bibinfo{year}{2015};\bibinfo{volume}{66}:\bibinfo{pages}{53--65}.
+\newblock \DOIprefix\doi{https://doi.org/10.1016/j.compgeo.2015.01.008}.
+%Type = Article
+\bibitem[{Do et~al.(2014)Do, Dias, Oreste and
+  Djeran-Maigre}]{do_three-dimensional_2014}
+\bibinfo{author}{Do\xfnm[ N.A.]}, \bibinfo{author}{Dias\xfnm[ D.]},
+  \bibinfo{author}{Oreste\xfnm[ P.]}, \bibinfo{author}{Djeran-Maigre\xfnm[
+  I.]}.
+\newblock \bibinfo{title}{Three-dimensional numerical simulation of a
+  mechanized twin tunnels in soft ground}.
+\newblock \bibinfo{journal}{Tunnelling and Underground Space Technology}
+  \bibinfo{year}{2014};\bibinfo{volume}{42}:\bibinfo{pages}{40--51}.
+\newblock \DOIprefix\doi{10.1016/j.tust.2014.02.001}.
+%Type = Article
+\bibitem[{Do et~al.(2016)Do, Dias and Oreste}]{do_3d_2016}
+\bibinfo{author}{Do\xfnm[ N.A.]}, \bibinfo{author}{Dias\xfnm[ D.]},
+  \bibinfo{author}{Oreste\xfnm[ P.]}.
+\newblock \bibinfo{title}{{3D} numerical investigation of mechanized twin
+  tunnels in soft ground – {Influence} of lagging distance between two tunnel
+  faces}.
+\newblock \bibinfo{journal}{Engineering Structures}
+  \bibinfo{year}{2016};\bibinfo{volume}{109}:\bibinfo{pages}{117--125}.
+\newblock \DOIprefix\doi{10.1016/j.engstruct.2015.11.053}.
+%Type = Article
+\bibitem[{Vlachopoulos et~al.(2018)Vlachopoulos, Vazaios and
+  Madjdabadi}]{vlachopoulos2018}
+\bibinfo{author}{Vlachopoulos\xfnm[ N.]}, \bibinfo{author}{Vazaios\xfnm[ I.]},
+  \bibinfo{author}{Madjdabadi\xfnm[ B.]}.
+\newblock \bibinfo{title}{Investigation into the influence of excavation of
+  twin-bored tunnels within weak rock masses adjacent to slopes}.
+\newblock \bibinfo{journal}{Canadian Geotechnical Journal}
+  \bibinfo{year}{2018};\bibinfo{volume}{55}(\bibinfo{number}{11}):\bibinfo{pages}{1533--1551}.
+\newblock \DOIprefix\doi{10.1139/cgj-2017-0392}.
+%Type = Article
+\bibitem[{Forsat et~al.(2022)Forsat, Taghipoor and Palassi}]{forsat2022}
+\bibinfo{author}{Forsat\xfnm[ M.]}, \bibinfo{author}{Taghipoor\xfnm[ M.]},
+  \bibinfo{author}{Palassi\xfnm[ M.]}.
+\newblock \bibinfo{title}{{3D} {FEM} {Model} on the {Parameters}’ {Influence}
+  of {EPB}-{TBM} on {Settlements} of {Single} and {Twin} {Metro} {Tunnels}
+  {During} {Construction}}.
+\newblock \bibinfo{journal}{International Journal of Pavement Research and
+  Technology}
+  \bibinfo{year}{2022};\bibinfo{volume}{15}(\bibinfo{number}{3}):\bibinfo{pages}{525--538}.
+\newblock \DOIprefix\doi{10.1007/s42947-021-00034-0}.
+%Type = Article
+\bibitem[{Do et~al.(2022)Do, Dias, Golpasand, Dang, Nait-Rabah, Pham
+  et~al.}]{do_numerical_2022}
+\bibinfo{author}{Do\xfnm[ N.A.]}, \bibinfo{author}{Dias\xfnm[ D.]},
+  \bibinfo{author}{Golpasand\xfnm[ M.R.B.]}, \bibinfo{author}{Dang\xfnm[
+  V.K.]}, \bibinfo{author}{Nait-Rabah\xfnm[ O.]}, \bibinfo{author}{Pham\xfnm[
+  V.V.]}, et~al.
+\newblock \bibinfo{title}{Numerical analyses of twin stacked mechanized tunnels
+  in soft grounds – {Influence} of their position and construction
+  procedure}.
+\newblock \bibinfo{journal}{Tunnelling and Underground Space Technology}
+  \bibinfo{year}{2022};\bibinfo{volume}{130}:\bibinfo{pages}{104734}.
+\newblock \DOIprefix\doi{10.1016/j.tust.2022.104734}.
+%Type = Article
+\bibitem[{Pedro et~al.(2022)Pedro, Grazina and Sousa}]{pedro2022}
+\bibinfo{author}{Pedro\xfnm[ A.M.G.]}, \bibinfo{author}{Grazina\xfnm[ J.C.D.]},
+  \bibinfo{author}{Sousa\xfnm[ J.N.V.A.e.]}.
+\newblock \bibinfo{title}{Lining forces in tunnel interaction problems}.
+\newblock \bibinfo{journal}{Soils and Rocks}
+  \bibinfo{year}{2022};(\bibinfo{number}{3}).
+\newblock \URLprefix \url{https://soilsandrocks.com/sr-2022-077221}.
+%Type = Article
+\bibitem[{Phutthananon et~al.(2023)Phutthananon, Lertkultanon, Jongpradist,
+  Duangsano, Likitlersuang and Jamsawang}]{PHUTTHANANON2023}
+\bibinfo{author}{Phutthananon\xfnm[ C.]}, \bibinfo{author}{Lertkultanon\xfnm[
+  S.]}, \bibinfo{author}{Jongpradist\xfnm[ P.]},
+  \bibinfo{author}{Duangsano\xfnm[ O.]}, \bibinfo{author}{Likitlersuang\xfnm[
+  S.]}, \bibinfo{author}{Jamsawang\xfnm[ P.]}.
+\newblock \bibinfo{title}{Numerical investigation on the responses of existing
+  single piles due to adjacent twin tunneling considering the lagging
+  distance}.
+\newblock \bibinfo{journal}{Underground Space}
+  \bibinfo{year}{2023};\bibinfo{volume}{11}:\bibinfo{pages}{171--188}.
+\newblock \DOIprefix\doi{https://doi.org/10.1016/j.undsp.2022.12.005}.
+%Type = Article
+\bibitem[{Islam and Iskander(2021)}]{ISLAM2021}
+\bibinfo{author}{Islam\xfnm[ M.S.]}, \bibinfo{author}{Iskander\xfnm[ M.]}.
+\newblock \bibinfo{title}{Twin tunnelling induced ground settlements: A
+  review}.
+\newblock \bibinfo{journal}{Tunnelling and Underground Space Technology}
+  \bibinfo{year}{2021};\bibinfo{volume}{110}:\bibinfo{pages}{103614}.
+\newblock \DOIprefix\doi{https://doi.org/10.1016/j.tust.2020.103614}.
+%Type = Article
+\bibitem[{Guo et~al.(2021)Guo, Liu and Zhu}]{GUO2021}
+\bibinfo{author}{Guo\xfnm[ Z.]}, \bibinfo{author}{Liu\xfnm[ X.]},
+  \bibinfo{author}{Zhu\xfnm[ Z.]}.
+\newblock \bibinfo{title}{An elastic solution for twin circular tunnels’
+  stress in hydrostatic stress field}.
+\newblock \bibinfo{journal}{Geotechnical and Geological Engineering}
+  \bibinfo{year}{2021};\bibinfo{volume}{39}:\bibinfo{pages}{1--11}.
+\newblock \DOIprefix\doi{https://doi.org/10.1007/s10706-021-01756-5}.
+%Type = Article
+\bibitem[{quan Chen et~al.(2019)quan Chen, bin Lin and yong Li}]{Chen2019}
+\bibinfo{author}{quan Chen\xfnm[ F.]}, \bibinfo{author}{bin Lin\xfnm[ L.]},
+  \bibinfo{author}{yong Li\xfnm[ D.]}.
+\newblock \bibinfo{title}{Analytic solutions for twin tunneling at great depth
+  considering liner installation and mutual interaction between geomaterial and
+  liners}.
+\newblock \bibinfo{journal}{Applied Mathematical Modelling}
+  \bibinfo{year}{2019};\bibinfo{volume}{73}:\bibinfo{pages}{412--441}.
+\newblock \DOIprefix\doi{https://doi.org/10.1016/j.apm.2019.04.026}.
+%Type = Article
+\bibitem[{Ma et~al.(2020)Ma, Lu, Zeng and Cai}]{MA2020}
+\bibinfo{author}{Ma\xfnm[ Y.]}, \bibinfo{author}{Lu\xfnm[ A.]},
+  \bibinfo{author}{Zeng\xfnm[ X.]}, \bibinfo{author}{Cai\xfnm[ H.]}.
+\newblock \bibinfo{title}{Analytical solution for determining the plastic zones
+  around twin circular tunnels excavated at great depth}.
+\newblock \bibinfo{journal}{International Journal of Rock Mechanics and Mining
+  Sciences} \bibinfo{year}{2020};\bibinfo{volume}{136}:\bibinfo{pages}{104475}.
+\newblock \DOIprefix\doi{https://doi.org/10.1016/j.ijrmms.2020.104475}.
+%Type = Article
+\bibitem[{Chen et~al.(2009)Chen, Lee and Gui}]{chen2009}
+\bibinfo{author}{Chen\xfnm[ S.L.]}, \bibinfo{author}{Lee\xfnm[ S.C.]},
+  \bibinfo{author}{Gui\xfnm[ M.W.]}.
+\newblock \bibinfo{title}{Effects of rock pillar width on the excavation
+  behavior of parallel tunnels}.
+\newblock \bibinfo{journal}{Tunnelling and Underground Space Technology}
+  \bibinfo{year}{2009};\bibinfo{volume}{24}(\bibinfo{number}{2}):\bibinfo{pages}{148--154}.
+\newblock \DOIprefix\doi{10.1016/j.tust.2008.05.006}.
+%Type = Article
+\bibitem[{Vlachopoulos and Diederichs(2014)}]{vlachopoulos2014}
+\bibinfo{author}{Vlachopoulos\xfnm[ N.]}, \bibinfo{author}{Diederichs\xfnm[
+  M.S.]}.
+\newblock \bibinfo{title}{Appropriate uses and practical limitations of 2d
+  numerical analysis of tunnels and tunnel support response}.
+\newblock \bibinfo{journal}{Geotechnical and Geological Engineering}
+  \bibinfo{year}{2014};\bibinfo{volume}{32}(\bibinfo{number}{2}):\bibinfo{pages}{469--488}.
+\newblock \DOIprefix\doi{10.1007/s10706-014-9727-x}.
+%Type = Article
+\bibitem[{Shaofeng et~al.(2018)Shaofeng, Jincai, Pinghua and
+  Xiang}]{shaofeng2018}
+\bibinfo{author}{Shaofeng\xfnm[ L.]}, \bibinfo{author}{Jincai\xfnm[ F.]},
+  \bibinfo{author}{Pinghua\xfnm[ Z.]}, \bibinfo{author}{Xiang\xfnm[ L.]}.
+\newblock \bibinfo{title}{Stability analysis of two parallel closely spaced
+  tunnels based on convergence–confinement principle}.
+\newblock \bibinfo{journal}{Journal of Construction Engineering and Management}
+  \bibinfo{year}{2018};\bibinfo{volume}{144}(\bibinfo{number}{6}):\bibinfo{pages}{04018041}.
+\newblock \DOIprefix\doi{10.1061/(ASCE)CO.1943-7862.0001496}.
+%Type = Article
+\bibitem[{Hsiao et~al.(2009)Hsiao, Wang and Chern}]{hsiao2009}
+\bibinfo{author}{Hsiao\xfnm[ F.Y.]}, \bibinfo{author}{Wang\xfnm[ C.L.]},
+  \bibinfo{author}{Chern\xfnm[ J.C.]}.
+\newblock \bibinfo{title}{Numerical simulation of rock deformation for support
+  design in tunnel intersection area}.
+\newblock \bibinfo{journal}{Tunnelling and Underground Space Technology}
+  \bibinfo{year}{2009};\bibinfo{volume}{24}(\bibinfo{number}{1}):\bibinfo{pages}{14--21}.
+\newblock \DOIprefix\doi{10.1016/j.tust.2008.01.003}.
+%Type = Article
+\bibitem[{Liu et~al.(2017)Liu, Li, Li and Zhang}]{liu2017}
+\bibinfo{author}{Liu\xfnm[ H.l.]}, \bibinfo{author}{Li\xfnm[ S.c.]},
+  \bibinfo{author}{Li\xfnm[ L.p.]}, \bibinfo{author}{Zhang\xfnm[ Q.q.]}.
+\newblock \bibinfo{title}{Study on deformation behavior at intersection of adit
+  and major tunnel in railway}.
+\newblock \bibinfo{journal}{KSCE Journal of Civil Engineering}
+  \bibinfo{year}{2017};\bibinfo{volume}{21}(\bibinfo{number}{6}):\bibinfo{pages}{2459--2466}.
+\newblock \DOIprefix\doi{10.1007/s12205-017-2128-y}.
+%Type = Incollection
+\bibitem[{Chortis and Kavvadas(2023{\natexlab{a}})}]{chortis2023b}
+\bibinfo{author}{Chortis\xfnm[ F.]}, \bibinfo{author}{Kavvadas\xfnm[ M.]}.
+\newblock \bibinfo{title}{3{D} numerical investigation of the bending moments
+  acting on tunnel junctions constructed in fractured/weathered to very blocky
+  rockmass}.
+\newblock In: \bibinfo{booktitle}{Expanding Underground-Knowledge and Passion
+  to Make a Positive Impact on the World}. \bibinfo{publisher}{CRC Press};
+  \bibinfo{year}{2023}{\natexlab{a}}, p. \bibinfo{pages}{1583--1591}.
+%Type = Incollection
+\bibitem[{Chortis and Kavvadas(2023{\natexlab{b}})}]{chortis2023a}
+\bibinfo{author}{Chortis\xfnm[ F.]}, \bibinfo{author}{Kavvadas\xfnm[ M.]}.
+\newblock \bibinfo{title}{3{D} numerical investigation of the axial forces
+  acting on tunnel junctions constructed in fractured/weathered to very blocky
+  rockmass}.
+\newblock In: \bibinfo{booktitle}{Expanding Underground-Knowledge and Passion
+  to Make a Positive Impact on the World}. \bibinfo{publisher}{CRC Press};
+  \bibinfo{year}{2023}{\natexlab{b}}, p. \bibinfo{pages}{1574--1582}.
+%Type = Manual
+\bibitem[{ANSYS(2013)}]{ANSYS:2013b}
+ANSYS.
+\newblock \bibinfo{title}{ANSYS Programmer's Reference, release 15.0}.
+\newblock \bibinfo{address}{Canonsburg, Pennsylvania}; \bibinfo{year}{2013}.
 %Type = Book
 \bibitem[{Nemat-Nasser and Hori(1993)}]{nemat1993}
 \bibinfo{author}{Nemat-Nasser\xfnm[ S.]}, \bibinfo{author}{Hori\xfnm[ M.]}.
@@ -361,15 +571,6 @@
 \newblock \bibinfo{title}{Computational Inelasticity}.
 \newblock \bibinfo{publisher}{Springer-Verlag}; \bibinfo{year}{1998}.
 %Type = Article
-\bibitem[{Guo et~al.(2021)Guo, Liu and Zhu}]{GUO2021}
-\bibinfo{author}{Guo\xfnm[ Z.]}, \bibinfo{author}{Liu\xfnm[ X.]},
-  \bibinfo{author}{Zhu\xfnm[ Z.]}.
-\newblock \bibinfo{title}{An elastic solution for twin circular tunnels’
-  stress in hydrostatic stress field}.
-\newblock \bibinfo{journal}{Geotechnical and Geological Engineering}
-  \bibinfo{year}{2021};\bibinfo{volume}{39}:\bibinfo{pages}{1--11}.
-\newblock \DOIprefix\doi{https://doi.org/10.1007/s10706-021-01756-5}.
-%Type = Article
 \bibitem[{Ling(1948)}]{ling1948}
 \bibinfo{author}{Ling\xfnm[ C.B.]}.
 \newblock \bibinfo{title}{On the stresses in a plate containing two circular
@@ -377,15 +578,6 @@
 \newblock \bibinfo{journal}{Journal of Applied Physics}
   \bibinfo{year}{1948};\bibinfo{volume}{19}(\bibinfo{number}{1}):\bibinfo{pages}{77--82}.
 \newblock \DOIprefix\doi{https://doi.org/10.1063/1.1697875}.
-%Type = Article
-\bibitem[{Ma et~al.(2020)Ma, Lu, Zeng and Cai}]{MA2020}
-\bibinfo{author}{Ma\xfnm[ Y.]}, \bibinfo{author}{Lu\xfnm[ A.]},
-  \bibinfo{author}{Zeng\xfnm[ X.]}, \bibinfo{author}{Cai\xfnm[ H.]}.
-\newblock \bibinfo{title}{Analytical solution for determining the plastic zones
-  around twin circular tunnels excavated at great depth}.
-\newblock \bibinfo{journal}{International Journal of Rock Mechanics and Mining
-  Sciences} \bibinfo{year}{2020};\bibinfo{volume}{136}:\bibinfo{pages}{104475}.
-\newblock \DOIprefix\doi{https://doi.org/10.1016/j.ijrmms.2020.104475}.
 %Type = Phdthesis
 \bibitem[{Giraud(1993)}]{giraud1993}
 \bibinfo{author}{Giraud\xfnm[ A.]}.
