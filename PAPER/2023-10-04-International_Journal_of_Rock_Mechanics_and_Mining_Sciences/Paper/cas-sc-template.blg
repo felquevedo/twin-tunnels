@@ -5,65 +5,46 @@ Reallocating 'name_of_file' (item size: 1) to 17 items.
 The style file: model3-num-names.bst
 Reallocating 'name_of_file' (item size: 1) to 9 items.
 Database file #1: cas-refs.bib
-I was expecting a `,' or a `}'---line 1385 of file cas-refs.bib
- :  
- :  publisher  = {Taylor and Francis Group},
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
-Name 1 in "Quevedo, F. P. M., and Bernaud, D. and Maghous, S." has a comma at the end for entry quevedo2022b
-while executing---line 1591 of file model3-num-names.bst
 Reallocating 'wiz_functions' (item size: 4) to 6000 items.
 Reallocating 'singl_function' (item size: 4) to 100 items.
-Warning--empty author in insam2019
-Warning--empty pages in hsiao2005
-Warning--empty author in sjoberg2006
-Warning--empty year in sjoberg2006; set to ????
-Warning--empty pages in sjoberg2006
-Warning--empty pages in Fortsakis2012
-Warning--there's a number but no volume in pedro2022
-Name 1 in "Quevedo, F. P. M., and Bernaud, D. and Maghous, S." has a comma at the end for entry quevedo2022b
-while executing---line 1685 of file model3-num-names.bst
-Name 1 in "Quevedo, F. P. M., and Bernaud, D. and Maghous, S." has a comma at the end for entry quevedo2022b
-while executing---line 1685 of file model3-num-names.bst
 You've used 68 entries,
             3138 wiz_defined-function locations,
-            1105 strings with 19999 characters,
-and the built_in function-call counts, 60741 in all, are:
-= -- 5152
-> -- 1335
-< -- 37
-+ -- 716
-- -- 350
-* -- 6787
-:= -- 7578
+            1110 strings with 19596 characters,
+and the built_in function-call counts, 61541 in all, are:
+= -- 5212
+> -- 1389
+< -- 40
++ -- 740
+- -- 364
+* -- 6866
+:= -- 7682
 add.period$ -- 266
 call.type$ -- 68
 change.case$ -- 360
 chr.to.int$ -- 64
-cite$ -- 79
-duplicate$ -- 5432
-empty$ -- 5397
-format.name$ -- 557
-if$ -- 12160
+cite$ -- 68
+duplicate$ -- 5486
+empty$ -- 5433
+format.name$ -- 577
+if$ -- 12333
 int.to.chr$ -- 5
 int.to.str$ -- 69
-missing$ -- 699
+missing$ -- 714
 newline$ -- 410
-num.names$ -- 195
-pop$ -- 1286
+num.names$ -- 201
+pop$ -- 1301
 preamble$ -- 1
-purify$ -- 339
+purify$ -- 340
 quote$ -- 0
-skip$ -- 1145
+skip$ -- 1170
 stack$ -- 0
-substring$ -- 5826
-swap$ -- 2667
-text.length$ -- 7
+substring$ -- 5874
+swap$ -- 2737
+text.length$ -- 10
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 400
-warning$ -- 7
-while$ -- 265
+warning$ -- 0
+while$ -- 276
 width$ -- 0
-write$ -- 1082
-(There were 4 error messages)
+write$ -- 1085

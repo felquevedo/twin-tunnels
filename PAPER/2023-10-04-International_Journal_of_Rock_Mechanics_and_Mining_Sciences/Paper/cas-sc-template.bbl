@@ -20,11 +20,13 @@
   interaction between twin tunnels}.
 \newblock \bibinfo{journal}{Geotechnical and Geological Engineering}
   \bibinfo{year}{2021}{\natexlab{a}};\bibinfo{volume}{39}:\bibinfo{pages}{5559--5585}.
-\newblock \DOIprefix\doi{https://doi.org/10.1007/s10706-021-01845-5}.
+\newblock \DOIprefix\doi{10.1007/s10706-021-01845-5}.
 %Type = Incollection
-\bibitem[{ins(2019)}]{insam2019}
-\bibinfo{title}{Brenner {Base} {Tunnel} – interaction between underground
-  structures, complex challenges and strategies}.
+\bibitem[{Insam et~al.(2019)Insam, Wahlen and Wieland}]{insam2019}
+\bibinfo{author}{Insam\xfnm[ R.]}, \bibinfo{author}{Wahlen\xfnm[ R.]},
+  \bibinfo{author}{Wieland\xfnm[ G.]}.
+\newblock \bibinfo{title}{Brenner {Base} {Tunnel} – interaction between
+  underground structures, complex challenges and strategies}.
 \newblock In: \bibinfo{booktitle}{Tunnels and {Underground} {Cities}:
   {Engineering} and {Innovation} meet {Archaeology}, {Architecture} and {Art}};
   \bibinfo{edition}{1} ed. \bibinfo{publisher}{CRC Press};
@@ -55,14 +57,17 @@
   areas adjacent to the ventilation shafts in the {Hsuehshan} tunnel}.
 \newblock In: \bibinfo{booktitle}{Proceedings of the international symposium on
   design, construction and operation of long tunnels, Taipei}.
-  \bibinfo{year}{2005},\URLprefix
-  \url{https://www.semanticscholar.org/paper/MODELING-THE-BEHAVIORS-OF-THE-TUNNEL-INTERSECTION-Hsiao-Chi-Wen/3a8f5327a1ef5e206f76657e5fc4b10865947987}.
+  \bibinfo{year}{2005}, p. \bibinfo{pages}{81--89}.
 %Type = Inproceedings
-\bibitem[{sjo(????)}]{sjoberg2006}
-\bibinfo{title}{Three-dimensional analysis of tunnel intersections for a train
-  tunnel under {Stockholm}}.
+\bibitem[{Sj{\"{o}}berg et~al.(2006)Sj{\"{o}}berg, Perman, Leander and
+  Saiang}]{sjoberg2006}
+\bibinfo{author}{Sj{\"{o}}berg\xfnm[ J.]}, \bibinfo{author}{Perman\xfnm[ F.]},
+  \bibinfo{author}{Leander\xfnm[ M.]}, \bibinfo{author}{Saiang\xfnm[ D.]}.
+\newblock \bibinfo{title}{Three-dimensional analysis of tunnel intersections
+  for a train tunnel under {Stockholm}}.
 \newblock In: \bibinfo{booktitle}{Proceedings of the North American Tunneling
-  2006 Conference}. ????,.
+  2006 Conference}. \bibinfo{publisher}{Taylor and Francis Group};
+  \bibinfo{year}{2006}, p. \bibinfo{pages}{1--10}.
 %Type = Article
 \bibitem[{Karakus et~al.(2007)Karakus, Ozsan and Başarır}]{karakus2007}
 \bibinfo{author}{Karakus\xfnm[ M.]}, \bibinfo{author}{Ozsan\xfnm[ A.]},
@@ -91,7 +96,8 @@
   P.]}.
 \newblock \bibinfo{title}{Numerical analysis of twin tunnels interaction}.
 \newblock In: \bibinfo{booktitle}{Proc. 1st Eastern European Tunnelling
-  Conference}. \bibinfo{address}{Budapest, Hungary}; \bibinfo{year}{2012},.
+  Conference}. \bibinfo{address}{Budapest, Hungary}; \bibinfo{year}{2012}, p.
+  \bibinfo{pages}{1--8}.
 %Type = Article
 \bibitem[{Fargnoli et~al.(2015)Fargnoli, Boldini and Amorosi}]{fargnoli2015}
 \bibinfo{author}{Fargnoli\xfnm[ V.]}, \bibinfo{author}{Boldini\xfnm[ D.]},
@@ -156,7 +162,7 @@
   tunnel intersections}.
 \newblock \bibinfo{journal}{Geotechnical and Geological Engineering}
   \bibinfo{year}{2021}{\natexlab{b}};\bibinfo{volume}{39}:\bibinfo{pages}{1771--1793}.
-\newblock \DOIprefix\doi{https://doi.org/10.1007/s10706-020-01587-w}.
+\newblock \DOIprefix\doi{10.1007/s10706-020-01587-w}.
 %Type = Article
 \bibitem[{Zheng et~al.(2015)Zheng, Zhang and Diao}]{ZHENG2015}
 \bibinfo{author}{Zheng\xfnm[ G.]}, \bibinfo{author}{Zhang\xfnm[ T.]},
@@ -165,7 +171,7 @@
   distortion induced by succeeding {EPBS} tunnelling in close proximity}.
 \newblock \bibinfo{journal}{Computers and Geotechnics}
   \bibinfo{year}{2015};\bibinfo{volume}{66}:\bibinfo{pages}{53--65}.
-\newblock \DOIprefix\doi{https://doi.org/10.1016/j.compgeo.2015.01.008}.
+\newblock \DOIprefix\doi{10.1016/j.compgeo.2015.01.008}.
 %Type = Article
 \bibitem[{Do et~al.(2014)Do, Dias, Oreste and
   Djeran-Maigre}]{do_three-dimensional_2014}
@@ -227,8 +233,7 @@
   \bibinfo{author}{Sousa\xfnm[ J.N.V.A.e.]}.
 \newblock \bibinfo{title}{Lining forces in tunnel interaction problems}.
 \newblock \bibinfo{journal}{Soils and Rocks}
-  \bibinfo{year}{2022};(\bibinfo{number}{3}).
-\newblock \URLprefix \url{https://soilsandrocks.com/sr-2022-077221}.
+  \bibinfo{year}{2022};\bibinfo{volume}{45}(\bibinfo{number}{3}).
 %Type = Article
 \bibitem[{Phutthananon et~al.(2023)Phutthananon, Lertkultanon, Jongpradist,
   Duangsano, Likitlersuang and Jamsawang}]{PHUTTHANANON2023}
@@ -241,7 +246,7 @@
   distance}.
 \newblock \bibinfo{journal}{Underground Space}
   \bibinfo{year}{2023};\bibinfo{volume}{11}:\bibinfo{pages}{171--188}.
-\newblock \DOIprefix\doi{https://doi.org/10.1016/j.undsp.2022.12.005}.
+\newblock \DOIprefix\doi{10.1016/j.undsp.2022.12.005}.
 %Type = Article
 \bibitem[{Islam and Iskander(2021)}]{ISLAM2021}
 \bibinfo{author}{Islam\xfnm[ M.S.]}, \bibinfo{author}{Iskander\xfnm[ M.]}.
@@ -249,7 +254,7 @@
   review}.
 \newblock \bibinfo{journal}{Tunnelling and Underground Space Technology}
   \bibinfo{year}{2021};\bibinfo{volume}{110}:\bibinfo{pages}{103614}.
-\newblock \DOIprefix\doi{https://doi.org/10.1016/j.tust.2020.103614}.
+\newblock \DOIprefix\doi{10.1016/j.tust.2020.103614}.
 %Type = Article
 \bibitem[{Guo et~al.(2021)Guo, Liu and Zhu}]{GUO2021}
 \bibinfo{author}{Guo\xfnm[ Z.]}, \bibinfo{author}{Liu\xfnm[ X.]},
@@ -258,17 +263,17 @@
   stress in hydrostatic stress field}.
 \newblock \bibinfo{journal}{Geotechnical and Geological Engineering}
   \bibinfo{year}{2021};\bibinfo{volume}{39}:\bibinfo{pages}{1--11}.
-\newblock \DOIprefix\doi{https://doi.org/10.1007/s10706-021-01756-5}.
+\newblock \DOIprefix\doi{10.1007/s10706-021-01756-5}.
 %Type = Article
-\bibitem[{quan Chen et~al.(2019)quan Chen, bin Lin and yong Li}]{Chen2019}
-\bibinfo{author}{quan Chen\xfnm[ F.]}, \bibinfo{author}{bin Lin\xfnm[ L.]},
-  \bibinfo{author}{yong Li\xfnm[ D.]}.
+\bibitem[{Chen et~al.(2019)Chen, Lin and Li}]{Chen2019}
+\bibinfo{author}{Chen\xfnm[ F.]}, \bibinfo{author}{Lin\xfnm[ L.]},
+  \bibinfo{author}{Li\xfnm[ D.]}.
 \newblock \bibinfo{title}{Analytic solutions for twin tunneling at great depth
   considering liner installation and mutual interaction between geomaterial and
   liners}.
 \newblock \bibinfo{journal}{Applied Mathematical Modelling}
   \bibinfo{year}{2019};\bibinfo{volume}{73}:\bibinfo{pages}{412--441}.
-\newblock \DOIprefix\doi{https://doi.org/10.1016/j.apm.2019.04.026}.
+\newblock \DOIprefix\doi{10.1016/j.apm.2019.04.026}.
 %Type = Article
 \bibitem[{Ma et~al.(2020)Ma, Lu, Zeng and Cai}]{MA2020}
 \bibinfo{author}{Ma\xfnm[ Y.]}, \bibinfo{author}{Lu\xfnm[ A.]},
@@ -277,7 +282,7 @@
   around twin circular tunnels excavated at great depth}.
 \newblock \bibinfo{journal}{International Journal of Rock Mechanics and Mining
   Sciences} \bibinfo{year}{2020};\bibinfo{volume}{136}:\bibinfo{pages}{104475}.
-\newblock \DOIprefix\doi{https://doi.org/10.1016/j.ijrmms.2020.104475}.
+\newblock \DOIprefix\doi{10.1016/j.ijrmms.2020.104475}.
 %Type = Article
 \bibitem[{Chen et~al.(2009)Chen, Lee and Gui}]{chen2009}
 \bibinfo{author}{Chen\xfnm[ S.L.]}, \bibinfo{author}{Lee\xfnm[ S.C.]},
@@ -361,8 +366,7 @@ ANSYS.
   Application to cracked rocks}.
 \newblock \bibinfo{journal}{Journal of Engineering Mechanics}
   \bibinfo{year}{2002};\bibinfo{volume}{128}(\bibinfo{number}{8}):\bibinfo{pages}{848--855}.
-\newblock
-  \DOIprefix\doi{https://doi.org/10.1061/(ASCE)0733-9399(2002)128:8(848)}.
+\newblock \DOIprefix\doi{10.1061/(ASCE)0733-9399(2002)128:8(848)}.
 %Type = Article
 \bibitem[{de~Buhan et~al.(2002)de~Buhan, Fréard, Garnier and
   Maghous}]{deBuhan2002}
@@ -372,8 +376,7 @@ ANSYS.
   anisotropic homogenized media}.
 \newblock \bibinfo{journal}{Journal of Engineering Mechanics}
   \bibinfo{year}{2002};\bibinfo{volume}{128}(\bibinfo{number}{8}):\bibinfo{pages}{869--875}.
-\newblock
-  \DOIprefix\doi{https://doi.org/10.1061/(ASCE)0733-9399(2002)128:8(869)}.
+\newblock \DOIprefix\doi{10.1061/(ASCE)0733-9399(2002)128:8(869)}.
 %Type = Article
 \bibitem[{Marmier et~al.(2007)Marmier, Jeannin and Barthélémy}]{Marmier2007}
 \bibinfo{author}{Marmier\xfnm[ R.]}, \bibinfo{author}{Jeannin\xfnm[ L.]},
@@ -383,7 +386,7 @@ ANSYS.
 \newblock \bibinfo{journal}{International Journal for Numerical and Analytical
   Methods in Geomechanics}
   \bibinfo{year}{2007};\bibinfo{volume}{31}(\bibinfo{number}{10}):\bibinfo{pages}{1217--1237}.
-\newblock \DOIprefix\doi{https://doi.org/10.1002/nag.595}.
+\newblock \DOIprefix\doi{10.1002/nag.595}.
 %Type = Article
 \bibitem[{Aguiar and Maghous(2023)}]{Aguiar2023}
 \bibinfo{author}{Aguiar\xfnm[ C.B.]}, \bibinfo{author}{Maghous\xfnm[ S.]}.
@@ -392,7 +395,7 @@ ANSYS.
 \newblock \bibinfo{journal}{International Journal for Numerical and Analytical
   Methods in Geomechanics}
   \bibinfo{year}{2023};\bibinfo{volume}{47}(\bibinfo{number}{6}):\bibinfo{pages}{936--971}.
-\newblock \DOIprefix\doi{https://doi.org/10.1002/nag.3500}.
+\newblock \DOIprefix\doi{10.1002/nag.3500}.
 %Type = Phdthesis
 \bibitem[{Rousset(1988)}]{rousset1988}
 \bibinfo{author}{Rousset\xfnm[ G.]}.
@@ -416,7 +419,7 @@ ANSYS.
 \newblock \bibinfo{title}{Time-dependent behaviour of deep clays}.
 \newblock \bibinfo{journal}{Engineering Geology}
   \bibinfo{year}{1996};\bibinfo{volume}{41}(\bibinfo{number}{1}):\bibinfo{pages}{181--195}.
-\newblock \DOIprefix\doi{https://doi.org/10.1016/0013-7952(95)00000-3}.
+\newblock \DOIprefix\doi{10.1016/0013-7952(95)00000-3}.
 %Type = Inproceedings
 \bibitem[{Bernaud and Rousset(1993)}]{Bernaud1993}
 \bibinfo{author}{Bernaud\xfnm[ D.]}, \bibinfo{author}{Rousset\xfnm[ G.]}.
@@ -453,7 +456,7 @@ ANSYS.
   elastoplastic–viscoplastic constitutive law for tunnels}.
 \newblock \bibinfo{journal}{International Journal of Geomechanics}
   \bibinfo{year}{2022}{\natexlab{a}};\bibinfo{volume}{22}(\bibinfo{number}{10}).
-\newblock \DOIprefix\doi{https://doi.org/10.1061/(ASCE)GM.1943-5622.0002512}.
+\newblock \DOIprefix\doi{10.1061/(ASCE)GM.1943-5622.0002512}.
 %Type = Phdthesis
 \bibitem[{Bernaud(1991)}]{bernaud1991}
 \bibinfo{author}{Bernaud\xfnm[ D.]}.
@@ -478,8 +481,7 @@ ANSYS.
   Formulation}.
 \newblock \bibinfo{journal}{Journal of Engineering Mechanics}
   \bibinfo{year}{1989}{\natexlab{a}};\bibinfo{volume}{115}(\bibinfo{number}{8}):\bibinfo{pages}{1691--1703}.
-\newblock
-  \DOIprefix\doi{https://doi.org/10.1061/(ASCE)0733-9399(1989)115:8(1691)}.
+\newblock \DOIprefix\doi{10.1061/(ASCE)0733-9399(1989)115:8(1691)}.
 %Type = Article
 \bibitem[{Ba{\v{z}}ant and Prasannan(1989{\natexlab{b}})}]{bazant:1989b}
 \bibinfo{author}{Ba{\v{z}}ant\xfnm[ Z.P.]}, \bibinfo{author}{Prasannan\xfnm[
@@ -488,8 +490,7 @@ ANSYS.
   Verification and application}.
 \newblock \bibinfo{journal}{Journal of Engineering Mechanics}
   \bibinfo{year}{1989}{\natexlab{b}};\bibinfo{volume}{115}(\bibinfo{number}{8}):\bibinfo{pages}{1704--1725}.
-\newblock
-  \DOIprefix\doi{https://doi.org/10.1061/(ASCE)0733-9399(1989)115:8(1704)}.
+\newblock \DOIprefix\doi{10.1061/(ASCE)0733-9399(1989)115:8(1704)}.
 %Type = Manual
 \bibitem[{CEB-FIP(1993)}]{CEB:1993}
 \bibinfo{author}{CEB-FIP\xfnm[]}.
@@ -507,7 +508,7 @@ ANSYS.
   analysis of concrete structures: long-term effects}.
 \newblock \bibinfo{journal}{IBRACON Structures and Materials Journal}
   \bibinfo{year}{2018};\bibinfo{volume}{11}(\bibinfo{number}{4}):\bibinfo{pages}{696--718}.
-\newblock \DOIprefix\doi{https://doi.org/10.1590/S1983-41952018000400005}.
+\newblock \DOIprefix\doi{10.1590/S1983-41952018000400005}.
 %Type = Article
 \bibitem[{Quevedo et~al.(2022{\natexlab{b}})Quevedo, Bernaud and
   Campos~Filho}]{quevedo2022}
@@ -517,7 +518,7 @@ ANSYS.
   rock mass considering the creep and shrinkage of the concrete lining}.
 \newblock \bibinfo{journal}{International Journal of Geomechanics}
   \bibinfo{year}{2022}{\natexlab{b}};\bibinfo{volume}{22}(\bibinfo{number}{4}).
-\newblock \DOIprefix\doi{https://doi.org/10.1061/(ASCE)GM.1943-5622.0002282}.
+\newblock \DOIprefix\doi{10.1061/(ASCE)GM.1943-5622.0002282}.
 %Type = Masterthesis
 \bibitem[{Quevedo(2017)}]{quevedo2017comportamento}
 \bibinfo{author}{Quevedo\xfnm[ F.P.M.]}.
@@ -536,7 +537,7 @@ ANSYS.
 \newblock \bibinfo{journal}{International Journal for Numerical and Analytical
   Methods in Geomechanics}
   \bibinfo{year}{1995};\bibinfo{volume}{19}(\bibinfo{number}{4}):\bibinfo{pages}{267--288}.
-\newblock \DOIprefix\doi{https://doi.org/10.1002/nag.1610190404}.
+\newblock \DOIprefix\doi{10.1002/nag.1610190404}.
 %Type = Article
 \bibitem[{Bernaud et~al.(2009)Bernaud, Maghous, Debuhan and
   Couto}]{bernaud2009}
@@ -546,7 +547,7 @@ ANSYS.
   tunnels regarded as homogenized structures}.
 \newblock \bibinfo{journal}{Tunneling and underground space technology}
   \bibinfo{year}{2009};\bibinfo{volume}{24}(\bibinfo{number}{5}):\bibinfo{pages}{533--546}.
-\newblock \DOIprefix\doi{https://doi.org/10.1016/j.tust.2009.02.002}.
+\newblock \DOIprefix\doi{10.1016/j.tust.2009.02.002}.
 %Type = Article
 \bibitem[{Maghous et~al.(2012)Maghous, Bernaud and Couto}]{maghous2012}
 \bibinfo{author}{Maghous\xfnm[ S.]}, \bibinfo{author}{Bernaud\xfnm[ D.]},
@@ -555,7 +556,7 @@ ANSYS.
   deformation in bolt-supported tunnels: A homogenization approach}.
 \newblock \bibinfo{journal}{Tunneling and Underground Space Technology}
   \bibinfo{year}{2012};\bibinfo{volume}{31}:\bibinfo{pages}{267--288}.
-\newblock \DOIprefix\doi{https://doi.org/10.1016/j.tust.2012.04.008}.
+\newblock \DOIprefix\doi{10.1016/j.tust.2012.04.008}.
 %Type = Article
 \bibitem[{Zienkiewicz and Cormeau(1974)}]{zienkiewicz1974visco}
 \bibinfo{author}{Zienkiewicz\xfnm[ O.]}, \bibinfo{author}{Cormeau\xfnm[ I.]}.
@@ -564,7 +565,7 @@ ANSYS.
 \newblock \bibinfo{journal}{International Journal for Numerical Methods in
   Engineering}
   \bibinfo{year}{1974};\bibinfo{volume}{8}(\bibinfo{number}{4}):\bibinfo{pages}{821--845}.
-\newblock \DOIprefix\doi{https://doi.org/10.1002/nme.v8:4}.
+\newblock \DOIprefix\doi{10.1002/nme.v8:4}.
 %Type = Book
 \bibitem[{Simo and Hughes(1998)}]{simo1998}
 \bibinfo{author}{Simo\xfnm[ J.C.]}, \bibinfo{author}{Hughes\xfnm[ T.J.R.]}.
@@ -577,7 +578,7 @@ ANSYS.
   holes}.
 \newblock \bibinfo{journal}{Journal of Applied Physics}
   \bibinfo{year}{1948};\bibinfo{volume}{19}(\bibinfo{number}{1}):\bibinfo{pages}{77--82}.
-\newblock \DOIprefix\doi{https://doi.org/10.1063/1.1697875}.
+\newblock \DOIprefix\doi{10.1063/1.1697875}.
 %Type = Phdthesis
 \bibitem[{Giraud(1993)}]{giraud1993}
 \bibinfo{author}{Giraud\xfnm[ A.]}.
@@ -594,7 +595,6 @@ ANSYS.
   Convergence-Confinement}}.
 \newblock \bibinfo{publisher}{Presses De L'ecole Nationale Des Ponts Et
   Chaussees}; \bibinfo{year}{1995}.
-\newblock ISBN \bibinfo{isbn}{2859782303}.
 %Type = Book
 \bibitem[{Hoek and Brown(1980)}]{brown1980}
 \bibinfo{author}{Hoek\xfnm[ E.]}, \bibinfo{author}{Brown\xfnm[ E.T.]}.
