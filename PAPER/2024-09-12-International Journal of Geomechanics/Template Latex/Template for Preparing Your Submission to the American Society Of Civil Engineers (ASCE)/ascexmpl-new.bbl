@@ -1,0 +1,421 @@
+\begin{thebibliography}{}
+
+\bibitem[\protect\citeauthoryear{}{Afifipour et~al.\@}{2011}]{afifipour2011}
+Afifipour, M., Sharifzadeh, M., Shahriar, K., and Jamshidi, H. (2011).
+\newblock ``Interaction of twin tunnels and shallow foundation at {Zand}
+  underpass, {Shiraz} metro, {Iran}.''\ {\em Tunnelling and Underground Space
+  Technology}, 26(2), 356--363.
+
+\bibitem[\protect\citeauthoryear{}{Aguiar and Maghous}{2023}]{Aguiar2023}
+Aguiar, C.~B. and Maghous, S. (2023).
+\newblock ``A micromechanics-based approach to damage propagation criterion in
+  viscoelastic fractured materials regarded as homogenized media.''\ {\em
+  International Journal for Numerical and Analytical Methods in Geomechanics},
+  47(6), 936--971.
+
+\bibitem[\protect\citeauthoryear{}{ANSYS}{2013}]{ANSYS:2013b}
+{\em ANSYS Programmer's Reference, release 15.0} (2013).
+\newblock ANSYS, Inc., Canonsburg, Pennsylvania.
+
+\bibitem[\protect\citeauthoryear{}{Ba{\v{z}}ant and
+  Prasannan}{1989a}]{bazant:1989a}
+Ba{\v{z}}ant, Z.~P. and Prasannan, S. (1989a).
+\newblock ``Solidification theory for concrete creep. {I}: Formulation.''\ {\em
+  Journal of Engineering Mechanics}, 115(8), 1691--1703.
+
+\bibitem[\protect\citeauthoryear{}{Ba{\v{z}}ant and
+  Prasannan}{1989b}]{bazant:1989b}
+Ba{\v{z}}ant, Z.~P. and Prasannan, S. (1989b).
+\newblock ``Solidification theory for concrete creep. {II}: Verification and
+  application.''\ {\em Journal of Engineering Mechanics}, 115(8), 1704--1725.
+
+\bibitem[\protect\citeauthoryear{}{Bernaud}{1991}]{bernaud1991}
+Bernaud, D. (1991).
+\newblock ``Tunnels profonds dans les milieux viscoplastiques: approches
+  exp{\'e}rimentale et num{\'e}rique.''\ Ph.{D}. {T}hesis (in french), Ecole
+  Nationale des Ponts et Chauss{\'e}es, Paris, France,
+  $<$https://theses.hal.science/tel-00529719/$>$.
+
+\bibitem[\protect\citeauthoryear{}{Bernaud et~al.\@}{1995}]{bernaud1995}
+Bernaud, D., Debuhan, P., and Maghous, S. (1995).
+\newblock ``Numerical-simulation of the convergence of a bolt-supported tunnel
+  through a homogenization method.''\ {\em International Journal for Numerical
+  and Analytical Methods in Geomechanics}, 19(4), 267--288.
+
+\bibitem[\protect\citeauthoryear{}{Bernaud et~al.\@}{2009}]{bernaud2009}
+Bernaud, D., Maghous, S., Debuhan, P., and Couto, E. (2009).
+\newblock ``A numerical approach for design of bolt-supported tunnels regarded
+  as homogenized structures.''\ {\em Tunneling and underground space
+  technology}, 24(5), 533--546.
+
+\bibitem[\protect\citeauthoryear{}{Bernaud and Rousset}{1993}]{Bernaud1993}
+Bernaud, D. and Rousset, G. (1993).
+\newblock ``{L'essai de soutènement à convergence controlée}.''\ {\em Proc.
+  of International Symposium, Geotechnical Engineering of Hard Soils-Soft
+  Rocks}, Athens,  1381--1391.
+
+\bibitem[\protect\citeauthoryear{}{CEB-FIP}{1993}]{CEB:1993}
+CEB-FIP (1993).
+\newblock {\em CEB-FIP model code 1990: Design code}.
+\newblock Comité Euro International du Béton and Fédération Internationale
+  de la Précontrainte (CEB-FIP).
+
+\bibitem[\protect\citeauthoryear{}{Chakeri et~al.\@}{2011}]{chakeri2011}
+Chakeri, H., Hasanpour, R., Hindistan, M.~A., and Ünver, B. (2011).
+\newblock ``Analysis of interaction between tunnels in soft ground by {3D}
+  numerical modeling.''\ {\em Bulletin of Engineering Geology and the
+  Environment}, 70(3), 439--448.
+
+\bibitem[\protect\citeauthoryear{}{Chen et~al.\@}{2019}]{Chen2019}
+Chen, F., Lin, L., and Li, D. (2019).
+\newblock ``Analytic solutions for twin tunneling at great depth considering
+  liner installation and mutual interaction between geomaterial and liners.''\
+  {\em Applied Mathematical Modelling}, 73, 412--441.
+
+\bibitem[\protect\citeauthoryear{}{Chen et~al.\@}{2009}]{chen2009}
+Chen, S.~L., Lee, S.~C., and Gui, M.~W. (2009).
+\newblock ``Effects of rock pillar width on the excavation behavior of parallel
+  tunnels.''\ {\em Tunnelling and Underground Space Technology}, 24(2),
+  148--154.
+
+\bibitem[\protect\citeauthoryear{}{Chortis and Kavvadas}{2021a}]{chortis2021a}
+Chortis, F. and Kavvadas, M. (2021a).
+\newblock ``Three-dimensional numerical analyses of perpendicular tunnel
+  intersections.''\ {\em Geotechnical and Geological Engineering}, 39,
+  1771--1793.
+
+\bibitem[\protect\citeauthoryear{}{Chortis and Kavvadas}{2021b}]{chortis2021b}
+Chortis, F. and Kavvadas, M. (2021b).
+\newblock ``Three-dimensional numerical investigation of the interaction
+  between twin tunnels.''\ {\em Geotechnical and Geological Engineering}, 39,
+  5559--5585.
+
+\bibitem[\protect\citeauthoryear{}{Chortis and Kavvadas}{2023a}]{chortis2023a}
+Chortis, F. and Kavvadas, M. (2023a).
+\newblock ``3{D} numerical investigation of the axial forces acting on tunnel
+  junctions constructed in fractured/weathered to very blocky rockmass.''\ {\em
+  Expanding Underground-Knowledge and Passion to Make a Positive Impact on the
+  World}, CRC Press,  1574--1582.
+
+\bibitem[\protect\citeauthoryear{}{Chortis and Kavvadas}{2023b}]{chortis2023b}
+Chortis, F. and Kavvadas, M. (2023b).
+\newblock ``3{D} numerical investigation of the bending moments acting on
+  tunnel junctions constructed in fractured/weathered to very blocky
+  rockmass.''\ {\em Expanding Underground-Knowledge and Passion to Make a
+  Positive Impact on the World}, CRC Press,  1583--1591.
+
+\bibitem[\protect\citeauthoryear{}{Connor~Langford et~al.\@}{2016}]{connor2016}
+Connor~Langford, J., Vlachopoulos, N., and Diederichs, M.~S. (2016).
+\newblock ``Revisiting support optimization at the {Driskos} tunnel using a
+  quantitative risk approach.''\ {\em Journal of Rock Mechanics and
+  Geotechnical Engineering}, 8(2), 147--163.
+
+\bibitem[\protect\citeauthoryear{}{de~Buhan et~al.\@}{2002}]{deBuhan2002}
+de~Buhan, P., Fréard, J., Garnier, D., and Maghous, S. (2002).
+\newblock ``Failure properties of fractured rock masses as anisotropic
+  homogenized media.''\ {\em Journal of Engineering Mechanics}, 128(8),
+  869--875.
+
+\bibitem[\protect\citeauthoryear{}{Deudé et~al.\@}{2002}]{deude2002}
+Deudé, V., Dormieux, L., Kondo, D., and Maghous, S. (2002).
+\newblock ``Micromechanical approach to nonlinear poroelasticity: Application
+  to cracked rocks.''\ {\em Journal of Engineering Mechanics}, 128(8),
+  848--855.
+
+\bibitem[\protect\citeauthoryear{}{Do et~al.\@}{2022}]{do_numerical_2022}
+Do, N.~A., Dias, D., Golpasand, M.-R.~B., Dang, V.~K., Nait-Rabah, O., Pham,
+  V.~V., and Dang, T.~T. (2022).
+\newblock ``Numerical analyses of twin stacked mechanized tunnels in soft
+  grounds – {Influence} of their position and construction procedure.''\ {\em
+  Tunnelling and Underground Space Technology}, 130, 104734.
+
+\bibitem[\protect\citeauthoryear{}{Do et~al.\@}{2015}]{do_3d_2015}
+Do, N.-A., Dias, D., and Oreste, P. (2015).
+\newblock ``{3D} numerical investigation on the interaction between mechanized
+  twin tunnels in soft ground.''\ {\em Environmental Earth Sciences}, 73(5),
+  2101--2113.
+
+\bibitem[\protect\citeauthoryear{}{Do et~al.\@}{2016}]{do_3d_2016}
+Do, N.-A., Dias, D., and Oreste, P. (2016).
+\newblock ``{3D} numerical investigation of mechanized twin tunnels in soft
+  ground – {Influence} of lagging distance between two tunnel faces.''\ {\em
+  Engineering Structures}, 109, 117--125.
+
+\bibitem[\protect\citeauthoryear{}{Do
+  et~al.\@}{2014}]{do_three-dimensional_2014}
+Do, N.-A., Dias, D., Oreste, P., and Djeran-Maigre, I. (2014).
+\newblock ``Three-dimensional numerical simulation of a mechanized twin tunnels
+  in soft ground.''\ {\em Tunnelling and Underground Space Technology}, 42,
+  40--51.
+
+\bibitem[\protect\citeauthoryear{}{Elwood and Martin}{2016}]{elwood2016}
+Elwood, D. E.~Y. and Martin, C.~D. (2016).
+\newblock ``Ground response of closely spaced twin tunnels constructed in
+  heavily overconsolidated soils.''\ {\em Tunnelling and Underground Space
+  Technology}, 51, 226--237.
+
+\bibitem[\protect\citeauthoryear{}{Fargnoli et~al.\@}{2015}]{fargnoli2015}
+Fargnoli, V., Boldini, D., and Amorosi, A. (2015).
+\newblock ``Twin tunnel excavation in coarse grained soils: {Observations} and
+  numerical back-predictions under free field conditions and in presence of a
+  surface structure.''\ {\em Tunnelling and Underground Space Technology}, 49,
+  454--469.
+
+\bibitem[\protect\citeauthoryear{}{Forsat et~al.\@}{2022}]{forsat2022}
+Forsat, M., Taghipoor, M., and Palassi, M. (2022).
+\newblock ``{3D} {FEM} {Model} on the {Parameters}’ {Influence} of
+  {EPB}-{TBM} on {Settlements} of {Single} and {Twin} {Metro} {Tunnels}
+  {During} {Construction}.''\ {\em International Journal of Pavement Research
+  and Technology}, 15(3), 525--538.
+
+\bibitem[\protect\citeauthoryear{}{Fortsakis et~al.\@}{2012}]{Fortsakis2012}
+Fortsakis, P., Bekri, E., Prountzopoulos, G., and Marinos, P. (2012).
+\newblock ``Numerical analysis of twin tunnels interaction.''\ {\em Proc. 1st
+  Eastern European Tunnelling Conference}, Budapest, Hungary,  1--8.
+
+\bibitem[\protect\citeauthoryear{}{Giraud}{1993}]{giraud1993}
+Giraud, A. (1993).
+\newblock ``Couplages thermo-hydro-m{\'e}caniques dans les poreux peu
+  perm{\'e}ables: application aux argiles profondes.''\ Ph.{D}. {T}hesis (in
+  french), Ecole Nationale des Ponts et Chauss{\'e}es, Paris, France,
+  $<$https://theses.fr/1993ENPC9310$>$.
+
+\bibitem[\protect\citeauthoryear{}{Giraud and Rousset}{1996}]{GIRAUD1996}
+Giraud, A. and Rousset, G. (1996).
+\newblock ``Time-dependent behaviour of deep clays.''\ {\em Engineering
+  Geology}, 41(1), 181--195.
+
+\bibitem[\protect\citeauthoryear{}{Guo et~al.\@}{2021}]{GUO2021}
+Guo, Z., Liu, X., and Zhu, Z. (2021).
+\newblock ``An elastic solution for twin circular tunnels’ stress in
+  hydrostatic stress field.''\ {\em Geotechnical and Geological Engineering},
+  39, 1--11.
+
+\bibitem[\protect\citeauthoryear{}{Hoek and Brown}{1980}]{brown1980}
+Hoek, E. and Brown, E.~T. (1980).
+\newblock {\em Underground excavations in rock}.
+\newblock CRC Press.
+
+\bibitem[\protect\citeauthoryear{}{Hsiao et~al.\@}{2005}]{hsiao2005}
+Hsiao, F., Chi-Wen, Y.~U., and Chern, J. (2005).
+\newblock ``Modeling the behaviors of the tunnel intersection areas adjacent to
+  the ventilation shafts in the {Hsuehshan} tunnel.''\ {\em Proceedings of the
+  international symposium on design, construction and operation of long
+  tunnels, Taipei},  81--89.
+
+\bibitem[\protect\citeauthoryear{}{Hsiao et~al.\@}{2009}]{hsiao2009}
+Hsiao, F.~Y., Wang, C.~L., and Chern, J.~C. (2009).
+\newblock ``Numerical simulation of rock deformation for support design in
+  tunnel intersection area.''\ {\em Tunnelling and Underground Space
+  Technology}, 24(1), 14--21.
+
+\bibitem[\protect\citeauthoryear{}{Insam et~al.\@}{2019}]{insam2019}
+Insam, R., Wahlen, R., and Wieland, G. (2019).
+\newblock ``Brenner {Base} {Tunnel} – interaction between underground
+  structures, complex challenges and strategies.''\ {\em Tunnels and
+  {Underground} {Cities}: {Engineering} and {Innovation} meet {Archaeology},
+  {Architecture} and {Art}}, CRC Press, 1 edition,  3857--3865.
+
+\bibitem[\protect\citeauthoryear{}{Islam and Iskander}{2021}]{ISLAM2021}
+Islam, M.~S. and Iskander, M. (2021).
+\newblock ``Twin tunnelling induced ground settlements: A review.''\ {\em
+  Tunnelling and Underground Space Technology}, 110, 103614.
+
+\bibitem[\protect\citeauthoryear{}{Karakus et~al.\@}{2007}]{karakus2007}
+Karakus, M., Ozsan, A., and Başarır, H. (2007).
+\newblock ``Finite element analysis for the twin metro tunnel constructed in
+  {Ankara} {Clay}, {Turkey}.''\ {\em Bulletin of Engineering Geology and the
+  Environment}, 66(1), 71--79.
+
+\bibitem[\protect\citeauthoryear{}{Li et~al.\@}{2016}]{li2016}
+Li, Y., Jin, X., Lv, Z., Dong, J., and Guo, J. (2016).
+\newblock ``Deformation and mechanical characteristics of tunnel lining in
+  tunnel intersection between subway station tunnel and construction tunnel.''\
+  {\em Tunnelling and Underground Space Technology}, 56, 22--33.
+
+\bibitem[\protect\citeauthoryear{}{Ling}{1948}]{ling1948}
+Ling, C.-B. (1948).
+\newblock ``On the stresses in a plate containing two circular holes.''\ {\em
+  Journal of Applied Physics}, 19(1), 77--82.
+
+\bibitem[\protect\citeauthoryear{}{Liu et~al.\@}{2017}]{liu2017}
+Liu, H.-l., Li, S.-c., Li, L.-p., and Zhang, Q.-q. (2017).
+\newblock ``Study on deformation behavior at intersection of adit and major
+  tunnel in railway.''\ {\em KSCE Journal of Civil Engineering}, 21(6),
+  2459--2466.
+
+\bibitem[\protect\citeauthoryear{}{Ma et~al.\@}{2020}]{MA2020}
+Ma, Y., Lu, A., Zeng, X., and Cai, H. (2020).
+\newblock ``Analytical solution for determining the plastic zones around twin
+  circular tunnels excavated at great depth.''\ {\em International Journal of
+  Rock Mechanics and Mining Sciences}, 136, 104475.
+
+\bibitem[\protect\citeauthoryear{}{Maghous et~al.\@}{2012}]{maghous2012}
+Maghous, S., Bernaud, D., and Couto, E. (2012).
+\newblock ``Three-dimensional numerical simulation of rock deformation in
+  bolt-supported tunnels: A homogenization approach.''\ {\em Tunneling and
+  Underground Space Technology}, 31, 267--288.
+
+\bibitem[\protect\citeauthoryear{}{Marmier et~al.\@}{2007}]{Marmier2007}
+Marmier, R., Jeannin, L., and Barthélémy, J.~F. (2007).
+\newblock ``Homogenized constitutive laws for rocks with elastoplastic
+  fractures.''\ {\em International Journal for Numerical and Analytical Methods
+  in Geomechanics}, 31(10), 1217--1237.
+
+\bibitem[\protect\citeauthoryear{}{Nemat-Nasser and Hori}{1993}]{nemat1993}
+Nemat-Nasser, S. and Hori, M. (1993).
+\newblock {\em Micromechanics: overall properties of heterogeneous materials}.
+\newblock North-Holland.
+
+\bibitem[\protect\citeauthoryear{}{Ng
+  et~al.\@}{2004}]{ng_three-dimensional_2004}
+Ng, C.~W., Lee, K.~M., and Tang, D.~K. (2004).
+\newblock ``Three-dimensional numerical investigations of new {Austrian}
+  tunnelling method ({NATM}) twin tunnel interactions.''\ {\em Canadian
+  Geotechnical Journal}, 41(3), 523--539.
+
+\bibitem[\protect\citeauthoryear{}{Nguyen~Minh and Rousset}{1987}]{Nguyen1987}
+Nguyen~Minh, D. and Rousset, G. (1987).
+\newblock ``Influence of instantaneous failure on time dependent behavior of
+  underground galleries.''\ {\em The 28th U.S. Symposium on Rock Mechanics
+  (USRMS)}, Tucson, Arizona,  ARMA--87--0663\ (06).
+
+\bibitem[\protect\citeauthoryear{}{Nyren}{1998}]{nyren1998}
+Nyren, R. (1998).
+\newblock ``Field measurements above twin tunnels in {London} {Clay}.''\
+  Ph.{D}. {T}hesis, Imperial College London (University of London), London,
+  England, $<$http://spiral.imperial.ac.uk/handle/10044/1/8573$>$.
+
+\bibitem[\protect\citeauthoryear{}{Panet}{1995}]{Panet1995}
+Panet, M. (1995).
+\newblock {\em {Le Calcul des Tunnels par la M{\'{e}}thode
+  Convergence-Confinement}}.
+\newblock Presses De L'ecole Nationale Des Ponts Et Chaussees.
+
+\bibitem[\protect\citeauthoryear{}{Pedro et~al.\@}{2022}]{pedro2022}
+Pedro, A. M.~G., Grazina, J. C.~D., and Sousa, J. N. V. A.~e. (2022).
+\newblock ``Lining forces in tunnel interaction problems.''\ {\em Soils and
+  Rocks}, 45(3).
+
+\bibitem[\protect\citeauthoryear{}{Perzyna}{1966}]{perzyna1966}
+Perzyna, P. (1966).
+\newblock ``Fundamental problems in viscoplasticity.''\ {\em Advances in
+  applied mechanics}, Vol.~9, Elsevier,  243--377.
+
+\bibitem[\protect\citeauthoryear{}{Phutthananon
+  et~al.\@}{2023}]{PHUTTHANANON2023}
+Phutthananon, C., Lertkultanon, S., Jongpradist, P., Duangsano, O.,
+  Likitlersuang, S., and Jamsawang, P. (2023).
+\newblock ``Numerical investigation on the responses of existing single piles
+  due to adjacent twin tunneling considering the lagging distance.''\ {\em
+  Underground Space}, 11, 171--188.
+
+\bibitem[\protect\citeauthoryear{}{Piepi}{1995}]{piepi1995}
+Piepi, G.~T. (1995).
+\newblock ``Comportement viscoplastique avec rupture des argiles raides.
+  applications aux ouvrages souterrains.''\ Ph.{D}. {T}hesis (in french), Ecole
+  Nationale des Ponts et Chauss{\'e}es, Paris, France,
+  $<$https://pastel.hal.science/tel-00523616/document$>$.
+
+\bibitem[\protect\citeauthoryear{}{Pöttler}{1992}]{pottler1992}
+Pöttler, R. (1992).
+\newblock ``Three{-}dimensional modelling of junctions at the {Channel}
+  {Tunnel} project.''\ {\em International Journal for Numerical and Analytical
+  Methods in Geomechanics}, 16(9), 683--695.
+
+\bibitem[\protect\citeauthoryear{}{Quevedo}{2017}]{quevedo2017comportamento}
+Quevedo, F. P.~M. (2017).
+\newblock ``Comportamento a longo prazo de t{\'u}neis profundos revestidos com
+  concreto: modelo em elementos finitos.''\ Master {T}hesis (in portuguese),
+  Federal University of Rio Grande do Sul, Porto Alegre, Brazil,
+  $<$https://lume.ufrgs.br/handle/10183/163886$>$.
+
+\bibitem[\protect\citeauthoryear{}{Quevedo}{2021}]{quevedo2022thesis}
+Quevedo, F. P.~M. (2021).
+\newblock ``An{\'a}lise computacional das deformações em t{\'u}neis profundos
+  considerando o acoplamento plasticidade-viscoplasticidade.''\ Ph.{D}.
+  {T}hesis (in portuguese), Federal University of Rio Grande do Sul, Porto
+  Alegre, Brazil, $<$https://lume.ufrgs.br/handle/10183/239617$>$.
+
+\bibitem[\protect\citeauthoryear{}{Quevedo et~al.\@}{2022a}]{quevedo2022}
+Quevedo, F. P.~M., Bernaud, D., and Campos~Filho, A. (2022a).
+\newblock ``Numerical analysis of deep tunnels in viscoplastic rock mass
+  considering the creep and shrinkage of the concrete lining.''\ {\em
+  International Journal of Geomechanics}, 22(4).
+
+\bibitem[\protect\citeauthoryear{}{Quevedo et~al.\@}{2022b}]{quevedo2022b}
+Quevedo, F. P.~M., Bernaud, D., and Maghous, S. (2022b).
+\newblock ``Numerical integration scheme for coupled
+  elastoplastic–viscoplastic constitutive law for tunnels.''\ {\em
+  International Journal of Geomechanics}, 22(10).
+
+\bibitem[\protect\citeauthoryear{}{Quevedo et~al.\@}{2018}]{quevedo2018}
+Quevedo, F. P.~M., Schmitz, R.~J., Morsch, I.~B., A., C.~F., and Bernaud, D.
+  (2018).
+\newblock ``Customization of a software of finite elements to analysis of
+  concrete structures: long-term effects.''\ {\em IBRACON Structures and
+  Materials Journal}, 11(4), 696--718.
+
+\bibitem[\protect\citeauthoryear{}{Rousset}{1988}]{rousset1988}
+Rousset, G. (1988).
+\newblock ``Comportement mecanique des argiles profondes: Application au
+  stockage de d{\'e}chets radioactifts.''\ Ph.{D}. {T}hesis (in french), Ecole
+  Nationale des Ponts et Chauss{\'e}es, Paris, France,
+  $<$http://www.theses.fr/1988ENPCA005$>$.
+
+\bibitem[\protect\citeauthoryear{}{Shaofeng et~al.\@}{2018}]{shaofeng2018}
+Shaofeng, L., Jincai, F., Pinghua, Z., and Xiang, L. (2018).
+\newblock ``Stability analysis of two parallel closely spaced tunnels based on
+  convergence–confinement principle.''\ {\em Journal of Construction
+  Engineering and Management}, 144(6), 04018041.
+
+\bibitem[\protect\citeauthoryear{}{Simo and Hughes}{1998}]{simo1998}
+Simo, J.~C. and Hughes, T. J.~R. (1998).
+\newblock {\em Computational Inelasticity}.
+\newblock Springer-Verlag.
+
+\bibitem[\protect\citeauthoryear{}{Sj{\"{o}}berg et~al.\@}{2006}]{sjoberg2006}
+Sj{\"{o}}berg, J., Perman, F., Leander, M., and Saiang, D. (2006).
+\newblock ``Three-dimensional analysis of tunnel intersections for a train
+  tunnel under {Stockholm}.''\ {\em Proceedings of the North American Tunneling
+  2006 Conference}, Taylor and Francis Group,  1--10.
+
+\bibitem[\protect\citeauthoryear{}{Spyridis and
+  Bergmeister}{2015}]{spyridis2015}
+Spyridis, P. and Bergmeister, K. (2015).
+\newblock ``Analysis of lateral openings in tunnel linings.''\ {\em Tunnelling
+  and Underground Space Technology}, 50, 376--395.
+
+\bibitem[\protect\citeauthoryear{}{Vlachopoulos and
+  Diederichs}{2014}]{vlachopoulos2014}
+Vlachopoulos, N. and Diederichs, M.~S. (2014).
+\newblock ``Appropriate uses and practical limitations of 2d numerical analysis
+  of tunnels and tunnel support response.''\ {\em Geotechnical and Geological
+  Engineering}, 32(2), 469--488.
+
+\bibitem[\protect\citeauthoryear{}{Vlachopoulos
+  et~al.\@}{2018}]{vlachopoulos2018}
+Vlachopoulos, N., Vazaios, I., and Madjdabadi, B. (2018).
+\newblock ``Investigation into the influence of excavation of twin-bored
+  tunnels within weak rock masses adjacent to slopes.''\ {\em Canadian
+  Geotechnical Journal}, 55(11), 1533--1551.
+
+\bibitem[\protect\citeauthoryear{}{Wan et~al.\@}{2017}]{wan2017}
+Wan, M. S.~P., Standing, J.~R., Potts, D.~M., and Burland, J.~B. (2017).
+\newblock ``Measured short-term ground surface response to {EPBM} tunnelling in
+  {London} {Clay}.''\ {\em Géotechnique}, 67(5), 420--445.
+
+\bibitem[\protect\citeauthoryear{}{Zheng et~al.\@}{2015}]{ZHENG2015}
+Zheng, G., Zhang, T., and Diao, Y. (2015).
+\newblock ``Mechanism and countermeasures of preceding tunnel distortion
+  induced by succeeding {EPBS} tunnelling in close proximity.''\ {\em Computers
+  and Geotechnics}, 66, 53--65.
+
+\bibitem[\protect\citeauthoryear{}{Zienkiewicz and
+  Cormeau}{1974}]{zienkiewicz1974visco}
+Zienkiewicz, O. and Cormeau, I. (1974).
+\newblock ``Visco-plasticity—plasticity and creep in elastic solids—a
+  unified numerical solution approach.''\ {\em International Journal for
+  Numerical Methods in Engineering}, 8(4), 821--845.
+
+\end{thebibliography}

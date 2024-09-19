@@ -1,0 +1,49 @@
+This is BibTeX, Version 0.99d
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: ascexmpl-new.aux
+Reallocating 'name_of_file' (item size: 1) to 13 items.
+The style file: ascelike-new.bst
+Reallocating 'name_of_file' (item size: 1) to 13 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Database file #1: ascexmpl-new.bib
+You've used 68 entries,
+            2831 wiz_defined-function locations,
+            1003 strings with 17560 characters,
+and the built_in function-call counts, 37215 in all, are:
+= -- 3804
+> -- 1296
+< -- 127
++ -- 374
+- -- 364
+* -- 3349
+:= -- 5226
+add.period$ -- 141
+call.type$ -- 68
+change.case$ -- 525
+chr.to.int$ -- 64
+cite$ -- 68
+duplicate$ -- 1648
+empty$ -- 2696
+format.name$ -- 766
+if$ -- 7531
+int.to.chr$ -- 5
+int.to.str$ -- 0
+missing$ -- 63
+newline$ -- 280
+num.names$ -- 398
+pop$ -- 550
+preamble$ -- 1
+purify$ -- 923
+quote$ -- 0
+skip$ -- 1423
+stack$ -- 0
+substring$ -- 2658
+swap$ -- 413
+text.length$ -- 10
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 1304
+warning$ -- 0
+while$ -- 230
+width$ -- 0
+write$ -- 910

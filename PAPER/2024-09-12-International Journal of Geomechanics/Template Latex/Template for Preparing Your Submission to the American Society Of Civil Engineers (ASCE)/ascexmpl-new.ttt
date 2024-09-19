@@ -1,0 +1,117 @@
+\begin{table}
+\caption{Parameters related to the geometry of the domain, excavation and installation of the lining.}
+\label{table1}
+\centering
+%\small
+\renewcommand{\arraystretch}{1.25}
+\begin{tabular}{c c c c}
+\hline
+\multicolumn{1}{c}{PARAMETERS} &
+\multicolumn{1}{c}{SYMBOL} &
+\multicolumn{1}{c}{UNIT} &
+\multicolumn{1}{c}{VALUES} \\
+\hline
+\multicolumn{4}{c}{Longitudinal tunnels} \\
+\hline
+Radius of the longitudinal tunnel & $R_t$ & m & $R_t$ \\
+Thickness of the lining & $e_t$ & m & $0.1R_t$ \\
+Step length of the excavation process & $L_{pt}$ & m & $1/3R_t$ \\
+Unlined length & $d_{0t}$ & m & $2L_{pt}$ \\
+Speed of the excavation face & $V_{pt}$ & m/day & $12.5$ \\
+Excavation step time & $t_p$ & day & $L_{pt}/V_{pt}$ \\
+\hline
+\multicolumn{4}{c}{Gallery} \\
+\hline
+Radius of the gallery & $R_{g}$ & m & $2/3R_t$ \\
+Thickness of the concrete lining & $e_g$ & m & $0.1R_t$ \\
+Step length of the excavation process \footnote{1} & $L_{pg}$ & m & $1/3R_g$ \\
+Unlined length & $d_{0g}$ & m & $2L_{pg}$ \\
+Speed of the excavation face & $V_{pg}$ & m/day & $12.5$ \\
+Number of steps that starts gallery excavation & $n_{pig}$ & un & $15$ \\
+\hline
+\multicolumn{4}{c}{Rest of domain} \\
+\hline
+Distance between longitudinal tunnel axes & $d_1$ & m & $4R_t ~8R_t ~16R_t$ \\
+Thickness along vertical direction $\ey$ & $d_3$ & m & $20R_t$ \\
+Length of the unexcavated region & $L_1$ & m & $10R_t$ \\
+Total excavated length & $L_2$ & m & $100L_{pt}$ \\
+Thickness along transversal direction $\ex$ & $L_3$ & m & $20R_t + d_1/2$ \\
+\hline
+\end{tabular}
+\normalsize
+\\ \footnotemark[1]{{\footnotesize Value of $L_{pg}$ is slightly different for the last excavation step to match the gallery lengh.}}
+\end{table}
+\efloatseparator
+ 
+\begin{table}[h!]
+\caption{Constitutive parameters used in the numerical analysis.}
+\label{table2}
+\centering
+%\small
+\renewcommand{\arraystretch}{1.25}
+\begin{tabular}{c c c c}
+\hline
+\multicolumn{1}{c}{PARAMETERS} &
+\multicolumn{1}{c}{SYMBOL} &
+\multicolumn{1}{c}{UNIT} &
+\multicolumn{1}{c}{VALUES} \\
+\hline
+\multicolumn{4}{c}{Constitutive model of rock mass} \\
+\hline
+Young's modulus & $E$ & MPa & $1500$ \\
+Poisson's ratio & $\nu$ & - & $0.49$ \\
+Plastic cohesion & $c$ & MPa & 4$\sqrt{3}/2$ \\
+Plastic friction angle & $\phi$ & $^{\circ}$ & 0 \\
+Viscoplastic cohesion & $c_{vp}$ & MPa & 2$\sqrt{3}/2$ \\
+Viscoplastic friction angle & $\phi_{vp}$ & $^{\circ}$ & 0 \\
+Power law parameter & $n$ & - & 1 \\
+Reference parameter & $f_0$ & MPa & 1 \\
+Viscosity coefficient & $\eta$ & day & $40000$ \\
+\hline
+\multicolumn{4}{c}{Constitutive model of lining} \\
+\hline
+
+Characteristic compressive strength at age of 28 days & $f_{ck}$ & MPa & $20$ \\
+Modulus of elasticity at the age of 28 days & $E_{c_{28}}$ & MPa & $30303$ \\
+Poisson's ratio & $\nu_c$ & - & $0.2$ \\
+
+Coefficient defining instantaneous relaxation modulus \citeyear{CEB:1993} & $s$ & - & $0.2$ \\
+Relative humidity of ambient environment & $RH$ & \% & $70$ \\
+Notional size of member - longitudinal concrete lining & $h_t$ & cm & $0.2111$ \\
+Notional size of member - gallery concrete lining & $h_{g}$ & cm & $0.2176$ \\
+Age of concrete at the beginning of shrinkage & $t_s$ & days & $7$ \\
+Shrinkage coefficient depending on cement type \citeyear{CEB:1993} & $\beta_{sc}$ & - & $8$ \\
+Temperature & $T$ & $^\circ$C & $20$ \\
+Age of concrete at loading & $t_0$ & days & $1$ \\
+\hline
+\end{tabular}
+\normalsize
+\end{table}
+\efloatseparator
+ 
+\begin{table}[h!]
+\caption{Configurations and associated abbreviations used in numerical simulations.}
+\label{table3}
+\centering
+%\small
+\renewcommand{\arraystretch}{1.25}
+\begin{tabular}{c c}
+\hline
+\multicolumn{1}{c}{DESCRIPTION} &
+\multicolumn{1}{c}{ABBREVIATION} \\
+\hline
+Elastic rock mass & E \\
+Elastoplastic rock mass & EP \\
+Elastoviscoplastic rock mass & VP \\
+Elastoplastic-Viscoplastic rock mass & EPVP \\
+No lining & NL \\
+Elastic lining & EL \\
+Viscoelastic lining & VEL \\
+Long-term & LT \\
+End of excavation process (Short-term) & ST \\
+With Gallery & WG \\
+No Gallery & NG \\ 
+\hline
+\end{tabular}
+\normalsize
+\end{table}

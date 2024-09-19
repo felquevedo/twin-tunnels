@@ -1,0 +1,279 @@
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=1]{Rheological representation.pdf}
+\caption{Rheological representation of the elastoplastic-viscoplastic model.}
+\label{reological_scheme}
+\end{figure}
+\efloatseparator
+ 
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.8]{Elastic-plastic-viscoplastic domains.pdf}
+\caption{Elastoplastic-viscoplastic domains.}
+\label{epvpdomains}
+\end{figure}
+\efloatseparator
+ 
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=1]{Rheological_representation_concrete.pdf}
+\caption{Generalized Kelvin model for uniaxial concrete viscoelasticity.}
+\label{reological_representation_concrete}
+\end{figure}
+\efloatseparator
+ 
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=1]{Domain.pdf}
+\caption{Schematic representation of the twin tunnels geometry problem.}
+\label{domain}
+\end{figure}
+\efloatseparator
+ 
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.5]{Mesh1.pdf}
+\caption{Mesh, dimensions and boundary conditions of the 3D twin tunnel domain.}
+\label{Mesh1}
+\end{figure}
+\efloatseparator
+ 
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.8]{Mesh2.pdf}
+\caption{Detail 1 - Mesh in longitudinal tunnel cross-section with spacing $d_1=4R_t$.}
+\label{Mesh2}
+\end{figure}
+\efloatseparator
+ 
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.8]{Mesh3.pdf}
+\caption{Geometry and F.E mesh of gallery cross-section for configurations $d_1=16R_t$, $d_1=8R_t$ and $d_1=4R_t$.}
+\label{Mesh3}
+\end{figure}
+\efloatseparator
+ 
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.6]{Mesh4.pdf}
+\caption{Views of longitudinal tunnel and gallery in the symmetry plane $y=0$ for configurations $d_1=16R_t$, $d_1=8R_t$ and $d_1=4R_t$.}
+\label{Mesh4}
+\end{figure}
+\efloatseparator
+ 
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.6]{Mesh5.pdf}
+\caption{View of the transition and tunnel/gallery intersection zones for configurations $d_1=16R_t$, $d_1=8R_t$ and $d_1=4R_t$.}
+\label{Mesh5}
+\end{figure}
+\efloatseparator
+ 
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.6]{Mesh6.pdf}
+\caption{Isometric view of the lining at the intersection for $d_1=16R_t$, $d_1=8R_t$ and $d_1=4R_t$ - expansion of symmetry in the $xz$ plane.}
+\label{Mesh6}
+\end{figure}
+\efloatseparator
+ 
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=1.3]{Diagram of excavations.pdf}
+\caption{Schematic representation of the excavation process.}
+\label{Diagram of excavations}
+\end{figure}
+\efloatseparator
+ 
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.7]{GUO_FIG0.pdf}
+\caption{Geometry model and loading mode of the twin circular tunnels studied in Guo.}
+\label{GUO_FIG0}
+\end{figure}
+\efloatseparator
+ 
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.65]{Convergence Profiles in B.pdf}
+\caption{Convergence profiles at the tunnel roof (point B).}
+\label{Convergence Profiles in B}
+\end{figure}
+\efloatseparator
+ 
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.65]{Relationship between Convergence in B and A.pdf}
+\caption{Illustration of the tunnel wall deformation anisotropy induced by twin tunnels proximity.}
+\label{Relationship between convergence in B and A}
+\end{figure}
+\efloatseparator
+ 
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.65]{Tangencial stress concentration factor in A.pdf}
+\caption{Tangential stress concentration factor at the side wall A versus twin tunnels distance $d_1/2R_t$.}
+\label{Tangencial stress concentration factor in A}
+\end{figure}
+\efloatseparator
+ 
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=1]{GUO_FIG1.pdf}
+\caption{Distribution of tangential stress $\sigma_{\theta \theta}$ around the tunnel wall  prevailing far behind the tunnel face (twin tunnels distance $d_1/2R_t = 1.5$).}
+\label{GUO_FIG1}
+\end{figure}
+\efloatseparator
+ 
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.65]{MA_Convergence Profiles in B.pdf}
+\caption{Convergence profiles at the tunnel roof (point B): $c=5$ MPa, $\sigma_v = \sigma_h = 30$ MPa.}
+\label{MA_convergence_profile_B}
+\end{figure}
+\efloatseparator
+ 
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.65]{MA_Relationship between Convergence in B and A.pdf}
+\caption{Tunnel wall deformation anisotropy induced by twin tunnels proximity: $c=5$ MPa, $\sigma_v = \sigma_h = 30$ MPa.}
+\label{MA_Relationship between convergence in B and A}
+\end{figure}
+\efloatseparator
+ 
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.7]{MA_Comparisions_plastic_zones.pdf}
+\caption{The plastic zone extent obtained from the present F.E. simulations and from the stress solution provided in Ma.}
+\label{MA_FIG1}
+\end{figure}
+\efloatseparator
+ 
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.6]{MA_stresspaths.pdf}
+\caption{Distribution of radial and orthoradial stress components along different radial directions: comparison between numerical and analytical predictions.}
+\label{MA_stresspaths}
+\end{figure}
+\efloatseparator
+ 
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.5]{Ovalization effect and monitoring point.pdf}
+\caption{Illustration of the deformation anisotropy induced by twin tunnels proximity.}
+\label{Ovalization effect and monitoring point}
+\end{figure}
+\efloatseparator
+ 
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.6]{zones.pdf}
+\caption{Evolution of deformation zones as the tunnel excavation proceeds.}
+\label{zones}
+\end{figure}
+\efloatseparator
+ 
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.9]{Convergence Profiles - WG_ST_LT - $d_1=16R_i$_anotate.pdf}
+\caption{Convergence Profiles: short-term (ST) and long-term (LT) analyses for the configuration with gallery (WG) and distance between twin tunnels $d_1 = 16R_t$.}
+\label{WG-ST-LT-D1-16RI}
+\end{figure}
+\efloatseparator
+ 
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.9]{Convergence Profiles - WG_ST_LT - $d_1=8R_i$_anotate.pdf}
+\caption{
+Convergence Profiles: short-term (ST) and long-term (LT) analyses for the configuration with gallery (WG) and distance between twin tunnels $d_1 = 8R_t$.}
+\label{WG-ST-LT-D1-8RI}
+\end{figure}
+\efloatseparator
+ 
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.9]{Convergence Profiles - WG_ST_LT - $d_1=4R_i$_anotate.pdf}
+\caption{Convergence Profiles: short-term (ST) and long-term (LT) analyses for the configuration with gallery (WG) and distance between twin tunnels $d_1 = 4R_t$.}
+\label{WG-ST-LT-D1-4RI}
+\end{figure}
+\efloatseparator
+ 
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.4]{ovalization.pdf}
+\caption{Illustration of deformation anisotropy induced: configuration with gallery (WG) and distance between twin tunnels $d_1 = 4R_t$.}
+\label{ovalization}
+\end{figure}
+\efloatseparator
+ 
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.65]{Convergence Profiles - UB - UAUB - $d_1=4R_t - ST_Lt$.pdf}
+\caption{Deformation anisotropy induced by twin tunnels proximity for the configuration without gallery (NG) and distance between twin tunnels $d_1=4R_t$: (a) convergence profile at the tunnel roof B, (b) anisotropy ratio obtained in short-term analysis, (c) anisotropy ratio obtained in long-term analysis.}
+\label{UB-UAUB-D1_4RT}
+\end{figure}
+\efloatseparator
+ 
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.9]{Convergence Profiles - VP_EPVP_EL_VEL_WG_LT_anotate.pdf}
+\caption{Long-term convergence profiles for the configuration of twin tunnels with transverse gallery (WG): effect of rock mass and lining creep deformation.}
+\label{VP-EL-EPVP-VEL-WG-LT}
+\end{figure}
+\efloatseparator
+ 
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.9]{Convergence Profiles - EP_EL_EPVP_VEL_WG_ST_LT_anotate.pdf}
+\caption{Short-term and long-term convergence profiles obtained for the configuration of twin tunnels with transverse gallery (WG): instantaneous versus delayed behaviors of the rock and lining constituent material.}
+\label{EP-EL-EPVP-VEL-WG-ST-LT}
+\end{figure}
+\efloatseparator
+ 
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.9]{Convergence Profiles - EP_d1_16Ri_anotate.pdf}
+\caption{Effect of lining stiffness on the convergence profiles for the configuration of twin tunnels with and without transverse gallery and distance between twin tunnels $d_1=16R_t$ - elastoplastic rock mass, without and with elastic lining.}
+\label{EP_d1_16Ri}
+\end{figure}
+\efloatseparator
+ 
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.9]{Convergence Profiles - EP_d1_4Ri_anotate.pdf}
+\caption{Effect of lining stiffness on the convergence profiles for the configuration of twin tunnels with and without transverse gallery and distance between twin tunnels $d_1=4R_t$ - elastoplastic rock mass, without and with elastic lining.}
+\label{EP_d1_4Ri}
+\end{figure}
+\efloatseparator
+ 
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.9]{Convergence Profiles - EPVP_VEL_d1_16Ri_anotate.pdf}
+\caption{Effect of instantaneous lining stiffness on the long-term convergence profiles for the configuration of twin tunnels with and without transverse gallery and distance between twin tunnels $d_1=16R_t$ - elastoplastic-viscoplastic rock mass with viscoelastic lining.}
+\label{EPVP_VEL_d1_16Ri}
+\end{figure}
+\efloatseparator
+ 
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.9]{Convergence Profiles - EPVP_VEL_d1_4Ri_anotate.pdf}
+\caption{Effect of instantaneous lining stiffness on the long-term convergence profiles for the configuration of twin tunnels with and without transverse gallery and distance between twin tunnels $d_1=4R_t$ - elastoplastic-viscoplastic rock mass with viscoelastic lining.}
+\label{EPVP_VEL_d1_4Ri}
+\end{figure}
+\efloatseparator
+ 
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.9]{Convergence Profiles - EPVP_EL_VEL_d1_16Ri_anotate.pdf}
+\caption{Effect of lining stiffness on the long-term convergence profiles for the configuration of twin tunnels with and without transverse gallery and distance between twin tunnels $d_1=16R_t$ - elastoplastic-viscoplastic rock mass with elastic lining.}
+\label{EPVP_EL_VEL_d1_16Ri}
+\end{figure}
+\efloatseparator
+ 
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.9]{Convergence Profiles - EPVP_EL_VEL_d1_4Ri_anotate.pdf}
+\caption{Effect of lining stiffness on the long-term convergence profiles for the configuration of twin tunnels with and without transverse gallery and distance between twin tunnels $d_1=4R_t$ - elastoplastic-viscoplastic rock mass with elastic lining.}
+\label{EPVP_EL_VEL_d1_4Ri}
+\end{figure}
