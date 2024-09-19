@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.12) (preloaded format=pdflatex 2024.7.1)  19 SEP 2024 17:57
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.12) (preloaded format=pdflatex 2024.7.1)  19 SEP 2024 18:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1261,7 +1261,7 @@ Package rerunfilecheck Info: File `cas-sc-template.out' has not changed.
 Here is how much of TeX's memory you used:
  17419 strings out of 476404
  275016 string characters out of 2789525
- 1883324 words of memory out of 3000000
+ 1884324 words of memory out of 3000000
  37259 multiletter control sequences out of 15000+600000
  632452 words of font info for 203 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1290,7 +1290,7 @@ TeX/fonts/type1/public/stix/stix-mathrm-bold.pfb><C:/Users/augus/AppData/Local/
 Programs/MiKTeX/fonts/type1/public/stix/stix-mathrm.pfb><C:/Users/augus/AppData
 /Local/Programs/MiKTeX/fonts/type1/public/stix/stix-mathscr.pfb><C:/Users/augus
 /AppData/Local/Programs/MiKTeX/fonts/type1/public/stix/stix-mathsf.pfb>
-Output written on cas-sc-template.pdf (39 pages, 4331343 bytes).
+Output written on cas-sc-template.pdf (39 pages, 4331338 bytes).
 PDF statistics:
  9435 PDF objects out of 10688 (max. 8388607)
  187 named destinations out of 1000 (max. 500000)
