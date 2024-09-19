@@ -1,4 +1,4 @@
-\begin{thebibliography}{65}
+\begin{thebibliography}{68}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \providecommand{\href}[2]{#2}
@@ -600,5 +600,34 @@ ANSYS.
 \bibinfo{author}{Hoek\xfnm[ E.]}, \bibinfo{author}{Brown\xfnm[ E.T.]}.
 \newblock \bibinfo{title}{Underground excavations in rock}.
 \newblock \bibinfo{publisher}{CRC Press}; \bibinfo{year}{1980}.
+%Type = Article
+\bibitem[{Chakeri et~al.(2011)Chakeri, Hasanpour, Hindistan and
+  Ünver}]{chakeri2011}
+\bibinfo{author}{Chakeri\xfnm[ H.]}, \bibinfo{author}{Hasanpour\xfnm[ R.]},
+  \bibinfo{author}{Hindistan\xfnm[ M.A.]}, \bibinfo{author}{Ünver\xfnm[ B.]}.
+\newblock \bibinfo{title}{Analysis of interaction between tunnels in soft
+  ground by {3D} numerical modeling}.
+\newblock \bibinfo{journal}{Bulletin of Engineering Geology and the
+  Environment}
+  \bibinfo{year}{2011};\bibinfo{volume}{70}(\bibinfo{number}{3}):\bibinfo{pages}{439--448}.
+\newblock \DOIprefix\doi{10.1007/s10064-010-0333-8}.
+%Type = Article
+\bibitem[{Do et~al.(2015)Do, Dias and Oreste}]{do_3d_2015}
+\bibinfo{author}{Do\xfnm[ N.A.]}, \bibinfo{author}{Dias\xfnm[ D.]},
+  \bibinfo{author}{Oreste\xfnm[ P.]}.
+\newblock \bibinfo{title}{{3D} numerical investigation on the interaction
+  between mechanized twin tunnels in soft ground}.
+\newblock \bibinfo{journal}{Environmental Earth Sciences}
+  \bibinfo{year}{2015};\bibinfo{volume}{73}(\bibinfo{number}{5}):\bibinfo{pages}{2101--2113}.
+\newblock \DOIprefix\doi{10.1007/s12665-014-3561-6}.
+%Type = Article
+\bibitem[{Ng et~al.(2004)Ng, Lee and Tang}]{ng_three-dimensional_2004}
+\bibinfo{author}{Ng\xfnm[ C.W.]}, \bibinfo{author}{Lee\xfnm[ K.M.]},
+  \bibinfo{author}{Tang\xfnm[ D.K.]}.
+\newblock \bibinfo{title}{Three-dimensional numerical investigations of new
+  {Austrian} tunnelling method ({NATM}) twin tunnel interactions}.
+\newblock \bibinfo{journal}{Canadian Geotechnical Journal}
+  \bibinfo{year}{2004};\bibinfo{volume}{41}(\bibinfo{number}{3}):\bibinfo{pages}{523--539}.
+\newblock \DOIprefix\doi{10.1139/t04-008}.
 
 \end{thebibliography}

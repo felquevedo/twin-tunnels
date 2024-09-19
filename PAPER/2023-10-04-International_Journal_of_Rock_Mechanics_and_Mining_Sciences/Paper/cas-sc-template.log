@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.12) (preloaded format=pdflatex 2024.7.1)  18 SEP 2024 13:47
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.12) (preloaded format=pdflatex 2024.7.1)  19 SEP 2024 14:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1264,13 +1264,13 @@ Package rerunfilecheck Info: File `cas-sc-template.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 17407 strings out of 476404
- 274745 string characters out of 2789525
- 1883324 words of memory out of 3000000
- 37250 multiletter control sequences out of 15000+600000
+ 17419 strings out of 476404
+ 275016 string characters out of 2789525
+ 1885324 words of memory out of 3000000
+ 37259 multiletter control sequences out of 15000+600000
  632452 words of font info for 203 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 90i,17n,90p,2606b,654s stack positions out of 10000i,1000n,20000p,200000b,80000s
+ 90i,17n,90p,2606b,658s stack positions out of 10000i,1000n,20000p,200000b,80000s
 
 pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist
 , replaced by a fixed one
@@ -1295,9 +1295,9 @@ TeX/fonts/type1/public/stix/stix-mathrm-bold.pfb><C:/Users/augus/AppData/Local/
 Programs/MiKTeX/fonts/type1/public/stix/stix-mathrm.pfb><C:/Users/augus/AppData
 /Local/Programs/MiKTeX/fonts/type1/public/stix/stix-mathscr.pfb><C:/Users/augus
 /AppData/Local/Programs/MiKTeX/fonts/type1/public/stix/stix-mathsf.pfb>
-Output written on cas-sc-template.pdf (39 pages, 4334109 bytes).
+Output written on cas-sc-template.pdf (39 pages, 4337454 bytes).
 PDF statistics:
- 9430 PDF objects out of 10688 (max. 8388607)
- 184 named destinations out of 1000 (max. 500000)
+ 9446 PDF objects out of 10688 (max. 8388607)
+ 187 named destinations out of 1000 (max. 500000)
  191 words of extra memory for PDF output out of 10000 (max. 10000000)
 
