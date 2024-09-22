@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.12) (preloaded format=pdflatex 2021.1.7)  21 SEP 2024 21:18
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.12) (preloaded format=pdflatex 2021.1.7)  21 SEP 2024 21:50
 entering extended mode
 **./ascexmpl-new.tex
 (ascexmpl-new.tex
@@ -1218,7 +1218,7 @@ Package pdftex.def Info: Convergence Profiles - EPVP_EL_VEL_d1_4Ri_anotate.pdf
  <./Convergence Profiles - EPVP_EL_VEL_d1_4Ri_anotate.pdf>]
 (ascexmpl-new.aux)
 Package rerunfilecheck Info: File `ascexmpl-new.out' has not changed.
-(rerunfilecheck)             Checksum: 6DAD69C5C83F9BD5C4F59F65BB26DCA5;493.
+(rerunfilecheck)             Checksum: B230A632C8F6E98A5848C9DE17FA559D;517.
 
 
 LaTeX Warning: There were multiply-defined labels.
@@ -1226,8 +1226,8 @@ LaTeX Warning: There were multiply-defined labels.
  ) 
 Here is how much of TeX's memory you used:
  12966 strings out of 479697
- 195903 string characters out of 2877010
- 485338 words of memory out of 3000000
+ 195945 string characters out of 2877010
+ 485392 words of memory out of 3000000
  29524 multiletter control sequences out of 15000+200000
  484504 words of font info for 143 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1254,7 +1254,7 @@ s/type1/public/newtx/txsys.pfb><C:/Users/fel_q/AppData/Roaming/MiKTeX/fonts/typ
 e1/public/newtx/ztmb.pfb><C:/Users/fel_q/AppData/Roaming/MiKTeX/fonts/type1/pub
 lic/newtx/ztmr.pfb><C:/Users/fel_q/AppData/Roaming/MiKTeX/fonts/type1/public/ne
 wtx/ztmri.pfb>
-Output written on ascexmpl-new.pdf (76 pages, 4169498 bytes).
+Output written on ascexmpl-new.pdf (76 pages, 4170780 bytes).
 PDF statistics:
  9540 PDF objects out of 10688 (max. 8388607)
  212 named destinations out of 1000 (max. 500000)
