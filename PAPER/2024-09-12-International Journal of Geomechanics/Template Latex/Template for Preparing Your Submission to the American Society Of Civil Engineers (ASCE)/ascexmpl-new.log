@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.12) (preloaded format=pdflatex 2021.1.7)  21 SEP 2024 22:22
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.12) (preloaded format=pdflatex 2021.1.7)  21 SEP 2024 22:54
 entering extended mode
 **./ascexmpl-new.tex
 (ascexmpl-new.tex
@@ -587,6 +587,9 @@ LaTeX Warning: Label `' multiply defined.
 
 LaTeX Warning: Label `' multiply defined.
 
+
+LaTeX Warning: Label `' multiply defined.
+
 )
 \openout1 = `ascexmpl-new.aux'.
 
@@ -887,7 +890,7 @@ LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
 ]) [41
 
 ] (ascexmpl-new.fff
-<Rheological representation.pdf, id=568, 306.86569pt x 170.44194pt>
+<Rheological representation.pdf, id=566, 306.86569pt x 170.44194pt>
 File: Rheological representation.pdf Graphic file (type pdf)
 <use Rheological representation.pdf>
 Package pdftex.def Info: Rheological representation.pdf  used on input line 3.
@@ -896,7 +899,7 @@ Package pdftex.def Info: Rheological representation.pdf  used on input line 3.
 
 
  <./Rheological representation.pdf>]
-<Elastic-plastic-viscoplastic domains.pdf, id=578, 341.08398pt x 213.32077pt>
+<Elastic-plastic-viscoplastic domains.pdf, id=576, 341.08398pt x 213.32077pt>
 File: Elastic-plastic-viscoplastic domains.pdf Graphic file (type pdf)
 <use Elastic-plastic-viscoplastic domains.pdf>
 Package pdftex.def Info: Elastic-plastic-viscoplastic domains.pdf  used on inpu
@@ -905,7 +908,7 @@ t line 11.
  [43
 
  <./Elastic-plastic-viscoplastic domains.pdf>]
-<Rheological_representation_concrete.pdf, id=615, 435.82964pt x 162.71996pt>
+<Rheological_representation_concrete.pdf, id=613, 435.82964pt x 162.71996pt>
 File: Rheological_representation_concrete.pdf Graphic file (type pdf)
 <use Rheological_representation_concrete.pdf>
 Package pdftex.def Info: Rheological_representation_concrete.pdf  used on input
@@ -914,7 +917,7 @@ Package pdftex.def Info: Rheological_representation_concrete.pdf  used on input
  [44
 
  <./Rheological_representation_concrete.pdf>]
-<Domain.pdf, id=631, 415.02281pt x 129.6322pt>
+<Domain.pdf, id=629, 415.02281pt x 129.6322pt>
 File: Domain.pdf Graphic file (type pdf)
 <use Domain.pdf>
 Package pdftex.def Info: Domain.pdf  used on input line 27.
@@ -922,7 +925,7 @@ Package pdftex.def Info: Domain.pdf  used on input line 27.
  [45
 
  <./Domain.pdf>]
-<Mesh1.pdf, id=682, 677.70567pt x 531.0825pt>
+<Mesh1.pdf, id=680, 677.70567pt x 531.0825pt>
 File: Mesh1.pdf Graphic file (type pdf)
 <use Mesh1.pdf>
 Package pdftex.def Info: Mesh1.pdf  used on input line 35.
@@ -930,7 +933,7 @@ Package pdftex.def Info: Mesh1.pdf  used on input line 35.
  [46
 
  <./Mesh1.pdf>]
-<Mesh2.pdf, id=696, 290.57947pt x 205.54703pt>
+<Mesh2.pdf, id=694, 290.57947pt x 205.54703pt>
 File: Mesh2.pdf Graphic file (type pdf)
 <use Mesh2.pdf>
 Package pdftex.def Info: Mesh2.pdf  used on input line 43.
@@ -938,7 +941,7 @@ Package pdftex.def Info: Mesh2.pdf  used on input line 43.
  [47
 
  <./Mesh2.pdf>]
-<Mesh3.pdf, id=717, 545.45775pt x 274.00345pt>
+<Mesh3.pdf, id=715, 545.45775pt x 274.00345pt>
 File: Mesh3.pdf Graphic file (type pdf)
 <use Mesh3.pdf>
 Package pdftex.def Info: Mesh3.pdf  used on input line 51.
@@ -946,7 +949,7 @@ Package pdftex.def Info: Mesh3.pdf  used on input line 51.
  [48
 
  <./Mesh3.pdf>]
-<Mesh4.pdf, id=739, 486.81274pt x 437.76105pt>
+<Mesh4.pdf, id=737, 486.81274pt x 437.76105pt>
 File: Mesh4.pdf Graphic file (type pdf)
 <use Mesh4.pdf>
 Package pdftex.def Info: Mesh4.pdf  used on input line 59.
@@ -954,7 +957,7 @@ Package pdftex.def Info: Mesh4.pdf  used on input line 59.
  [49
 
  <./Mesh4.pdf>]
-<Mesh5.pdf, id=763, 465.05559pt x 435.00398pt>
+<Mesh5.pdf, id=760, 465.05559pt x 435.00398pt>
 File: Mesh5.pdf Graphic file (type pdf)
 <use Mesh5.pdf>
 Package pdftex.def Info: Mesh5.pdf  used on input line 67.
@@ -962,7 +965,7 @@ Package pdftex.def Info: Mesh5.pdf  used on input line 67.
  [50
 
  <./Mesh5.pdf>]
-<Mesh6.pdf, id=786, 459.33456pt x 498.24783pt>
+<Mesh6.pdf, id=782, 459.33456pt x 498.24783pt>
 File: Mesh6.pdf Graphic file (type pdf)
 <use Mesh6.pdf>
 Package pdftex.def Info: Mesh6.pdf  used on input line 75.
@@ -970,7 +973,7 @@ Package pdftex.def Info: Mesh6.pdf  used on input line 75.
  [51
 
  <./Mesh6.pdf>]
-<Diagram of excavations.pdf, id=813, 326.31583pt x 150.96735pt>
+<Diagram of excavations.pdf, id=809, 326.31583pt x 150.96735pt>
 File: Diagram of excavations.pdf Graphic file (type pdf)
 <use Diagram of excavations.pdf>
 Package pdftex.def Info: Diagram of excavations.pdf  used on input line 83.
@@ -978,7 +981,7 @@ Package pdftex.def Info: Diagram of excavations.pdf  used on input line 83.
  [52
 
  <./Diagram of excavations.pdf>]
-<GUO_FIG0.pdf, id=826, 268.28249pt x 259.401pt>
+<GUO_FIG0.pdf, id=823, 268.28249pt x 259.401pt>
 File: GUO_FIG0.pdf Graphic file (type pdf)
 <use GUO_FIG0.pdf>
 Package pdftex.def Info: GUO_FIG0.pdf  used on input line 91.
@@ -986,7 +989,7 @@ Package pdftex.def Info: GUO_FIG0.pdf  used on input line 91.
  [53
 
  <./GUO_FIG0.pdf>]
-<Convergence Profiles in B.pdf, id=833, 570.13pt x 340.27126pt>
+<Convergence Profiles in B.pdf, id=830, 570.13pt x 340.27126pt>
 File: Convergence Profiles in B.pdf Graphic file (type pdf)
 <use Convergence Profiles in B.pdf>
 Package pdftex.def Info: Convergence Profiles in B.pdf  used on input line 99.
@@ -994,7 +997,7 @@ Package pdftex.def Info: Convergence Profiles in B.pdf  used on input line 99.
  [54
 
  <./Convergence Profiles in B.pdf>]
-<Relationship between Convergence in B and A.pdf, id=1119, 573.14125pt x 340.27
+<Relationship between Convergence in B and A.pdf, id=1116, 573.14125pt x 340.27
 126pt>
 File: Relationship between Convergence in B and A.pdf Graphic file (type pdf)
 <use Relationship between Convergence in B and A.pdf>
@@ -1004,7 +1007,7 @@ on input line 107.
  [55
 
  <./Relationship between Convergence in B and A.pdf>]
-<Tangencial stress concentration factor in A.pdf, id=1478, 588.1975pt x 340.271
+<Tangencial stress concentration factor in A.pdf, id=1475, 588.1975pt x 340.271
 26pt>
 File: Tangencial stress concentration factor in A.pdf Graphic file (type pdf)
 <use Tangencial stress concentration factor in A.pdf>
@@ -1014,7 +1017,7 @@ on input line 115.
  [56
 
  <./Tangencial stress concentration factor in A.pdf>]
-<GUO_FIG1.pdf, id=1908, 282.92361pt x 174.32298pt>
+<GUO_FIG1.pdf, id=1905, 282.92361pt x 174.32298pt>
 File: GUO_FIG1.pdf Graphic file (type pdf)
 <use GUO_FIG1.pdf>
 Package pdftex.def Info: GUO_FIG1.pdf  used on input line 123.
@@ -1022,7 +1025,7 @@ Package pdftex.def Info: GUO_FIG1.pdf  used on input line 123.
  [57
 
  <./GUO_FIG1.pdf>]
-<MA_Convergence Profiles in B.pdf, id=1931, 570.13pt x 340.27126pt>
+<MA_Convergence Profiles in B.pdf, id=1928, 570.13pt x 340.27126pt>
 File: MA_Convergence Profiles in B.pdf Graphic file (type pdf)
 <use MA_Convergence Profiles in B.pdf>
 Package pdftex.def Info: MA_Convergence Profiles in B.pdf  used on input line 1
@@ -1031,7 +1034,7 @@ Package pdftex.def Info: MA_Convergence Profiles in B.pdf  used on input line 1
  [58
 
  <./MA_Convergence Profiles in B.pdf>]
-<MA_Relationship between Convergence in B and A.pdf, id=2229, 588.1975pt x 340.
+<MA_Relationship between Convergence in B and A.pdf, id=2226, 588.1975pt x 340.
 27126pt>
 File: MA_Relationship between Convergence in B and A.pdf Graphic file (type pdf
 )
@@ -1042,7 +1045,7 @@ ed on input line 139.
  [59
 
  <./MA_Relationship between Convergence in B and A.pdf>]
-<MA_Comparisions_plastic_zones.pdf, id=2599, 659.32217pt x 400.0251pt>
+<MA_Comparisions_plastic_zones.pdf, id=2596, 659.32217pt x 400.0251pt>
 File: MA_Comparisions_plastic_zones.pdf Graphic file (type pdf)
 <use MA_Comparisions_plastic_zones.pdf>
 Package pdftex.def Info: MA_Comparisions_plastic_zones.pdf  used on input line 
@@ -1051,7 +1054,7 @@ Package pdftex.def Info: MA_Comparisions_plastic_zones.pdf  used on input line
  [60
 
  <./MA_Comparisions_plastic_zones.pdf>]
-<MA_stresspaths.pdf, id=2979, 657.88791pt x 677.71976pt>
+<MA_stresspaths.pdf, id=2975, 657.88791pt x 677.71976pt>
 File: MA_stresspaths.pdf Graphic file (type pdf)
 <use MA_stresspaths.pdf>
 Package pdftex.def Info: MA_stresspaths.pdf  used on input line 155.
@@ -1059,7 +1062,7 @@ Package pdftex.def Info: MA_stresspaths.pdf  used on input line 155.
  [61
 
  <./MA_stresspaths.pdf>]
-<Ovalization effect and monitoring point.pdf, id=6129, 453.695pt x 345.29pt>
+<Ovalization effect and monitoring point.pdf, id=6124, 453.695pt x 345.29pt>
 File: Ovalization effect and monitoring point.pdf Graphic file (type pdf)
 <use Ovalization effect and monitoring point.pdf>
 Package pdftex.def Info: Ovalization effect and monitoring point.pdf  used on i
@@ -1069,7 +1072,7 @@ nput line 163.
 [62
 
  <./Ovalization effect and monitoring point.pdf>]
-<zones.pdf, id=6202, 521.77295pt x 320.23767pt>
+<zones.pdf, id=6197, 521.77295pt x 320.23767pt>
 File: zones.pdf Graphic file (type pdf)
 <use zones.pdf>
 Package pdftex.def Info: zones.pdf  used on input line 171.
@@ -1077,7 +1080,7 @@ Package pdftex.def Info: zones.pdf  used on input line 171.
  [63
 
  <./zones.pdf>]
-<Convergence Profiles - WG_ST_LT - $d_1=16R_i$_anotate.pdf, id=6234, 487.8225pt
+<Convergence Profiles - WG_ST_LT - $d_1=16R_i$_anotate.pdf, id=6229, 487.8225pt
  x 271.0125pt>
 File: Convergence Profiles - WG_ST_LT - $d_1=16R_i$_anotate.pdf Graphic file (t
 ype pdf)
@@ -1089,7 +1092,7 @@ pdf  used on input line 179.
 [64
 
  <./Convergence Profiles - WG_ST_LT - $d_1=16R_i$_anotate.pdf>]
-<Convergence Profiles - WG_ST_LT - $d_1=8R_i$_anotate.pdf, id=6490, 487.8225pt 
+<Convergence Profiles - WG_ST_LT - $d_1=8R_i$_anotate.pdf, id=6485, 487.8225pt 
 x 271.0125pt>
 File: Convergence Profiles - WG_ST_LT - $d_1=8R_i$_anotate.pdf Graphic file (ty
 pe pdf)
@@ -1100,7 +1103,7 @@ df  used on input line 187.
  [65
 
  <./Convergence Profiles - WG_ST_LT - $d_1=8R_i$_anotate.pdf>]
-<Convergence Profiles - WG_ST_LT - $d_1=4R_i$_anotate.pdf, id=6746, 487.8225pt 
+<Convergence Profiles - WG_ST_LT - $d_1=4R_i$_anotate.pdf, id=6741, 487.8225pt 
 x 271.0125pt>
 File: Convergence Profiles - WG_ST_LT - $d_1=4R_i$_anotate.pdf Graphic file (ty
 pe pdf)
@@ -1111,7 +1114,7 @@ df  used on input line 196.
  [66
 
  <./Convergence Profiles - WG_ST_LT - $d_1=4R_i$_anotate.pdf>]
-<ovalization.pdf, id=7002, 748.71045pt x 832.81702pt>
+<ovalization.pdf, id=6997, 748.71045pt x 832.81702pt>
 File: ovalization.pdf Graphic file (type pdf)
 <use ovalization.pdf>
 Package pdftex.def Info: ovalization.pdf  used on input line 204.
@@ -1119,7 +1122,7 @@ Package pdftex.def Info: ovalization.pdf  used on input line 204.
  [67
 
  <./ovalization.pdf>]
-<Convergence Profiles - UB - UAUB - $d_1=4R_t - ST_Lt$.pdf, id=7070, 653.53915p
+<Convergence Profiles - UB - UAUB - $d_1=4R_t - ST_Lt$.pdf, id=7065, 653.53915p
 t x 406.73724pt>
 File: Convergence Profiles - UB - UAUB - $d_1=4R_t - ST_Lt$.pdf Graphic file (t
 ype pdf)
@@ -1130,7 +1133,7 @@ pdf  used on input line 212.
  [68
 
  <./Convergence Profiles - UB - UAUB - $d_1=4R_t - ST_Lt$.pdf>]
-<Convergence Profiles - VP_EPVP_EL_VEL_WG_LT_anotate.pdf, id=7482, 487.8225pt x
+<Convergence Profiles - VP_EPVP_EL_VEL_WG_LT_anotate.pdf, id=7477, 487.8225pt x
  271.0125pt>
 File: Convergence Profiles - VP_EPVP_EL_VEL_WG_LT_anotate.pdf Graphic file (typ
 e pdf)
@@ -1141,7 +1144,7 @@ f  used on input line 220.
  [69
 
  <./Convergence Profiles - VP_EPVP_EL_VEL_WG_LT_anotate.pdf>]
-<Convergence Profiles - EP_EL_EPVP_VEL_WG_ST_LT_anotate.pdf, id=7762, 487.8225p
+<Convergence Profiles - EP_EL_EPVP_VEL_WG_ST_LT_anotate.pdf, id=7757, 487.8225p
 t x 271.0125pt>
 File: Convergence Profiles - EP_EL_EPVP_VEL_WG_ST_LT_anotate.pdf Graphic file (
 type pdf)
@@ -1152,7 +1155,7 @@ Package pdftex.def Info: Convergence Profiles - EP_EL_EPVP_VEL_WG_ST_LT_anotate
  [70
 
  <./Convergence Profiles - EP_EL_EPVP_VEL_WG_ST_LT_anotate.pdf>]
-<Convergence Profiles - EP_d1_16Ri_anotate.pdf, id=8042, 487.8225pt x 271.0125p
+<Convergence Profiles - EP_d1_16Ri_anotate.pdf, id=8037, 487.8225pt x 271.0125p
 t>
 File: Convergence Profiles - EP_d1_16Ri_anotate.pdf Graphic file (type pdf)
 <use Convergence Profiles - EP_d1_16Ri_anotate.pdf>
@@ -1162,7 +1165,7 @@ Package pdftex.def Info: Convergence Profiles - EP_d1_16Ri_anotate.pdf  used on
  [71
 
  <./Convergence Profiles - EP_d1_16Ri_anotate.pdf>]
-<Convergence Profiles - EP_d1_4Ri_anotate.pdf, id=8289, 487.8225pt x 271.0125pt
+<Convergence Profiles - EP_d1_4Ri_anotate.pdf, id=8284, 487.8225pt x 271.0125pt
 >
 File: Convergence Profiles - EP_d1_4Ri_anotate.pdf Graphic file (type pdf)
 <use Convergence Profiles - EP_d1_4Ri_anotate.pdf>
@@ -1172,7 +1175,7 @@ input line 244.
  [72
 
  <./Convergence Profiles - EP_d1_4Ri_anotate.pdf>]
-<Convergence Profiles - EPVP_VEL_d1_16Ri_anotate.pdf, id=8536, 487.8225pt x 271
+<Convergence Profiles - EPVP_VEL_d1_16Ri_anotate.pdf, id=8531, 487.8225pt x 271
 .0125pt>
 File: Convergence Profiles - EPVP_VEL_d1_16Ri_anotate.pdf Graphic file (type pd
 f)
@@ -1183,7 +1186,7 @@ sed on input line 252.
  [73
 
  <./Convergence Profiles - EPVP_VEL_d1_16Ri_anotate.pdf>]
-<Convergence Profiles - EPVP_VEL_d1_4Ri_anotate.pdf, id=8766, 487.8225pt x 271.
+<Convergence Profiles - EPVP_VEL_d1_4Ri_anotate.pdf, id=8761, 487.8225pt x 271.
 0125pt>
 File: Convergence Profiles - EPVP_VEL_d1_4Ri_anotate.pdf Graphic file (type pdf
 )
@@ -1194,7 +1197,7 @@ ed on input line 260.
  [74
 
  <./Convergence Profiles - EPVP_VEL_d1_4Ri_anotate.pdf>]
-<Convergence Profiles - EPVP_EL_VEL_d1_16Ri_anotate.pdf, id=8995, 487.8225pt x 
+<Convergence Profiles - EPVP_EL_VEL_d1_16Ri_anotate.pdf, id=8990, 487.8225pt x 
 271.0125pt>
 File: Convergence Profiles - EPVP_EL_VEL_d1_16Ri_anotate.pdf Graphic file (type
  pdf)
@@ -1205,7 +1208,7 @@ Package pdftex.def Info: Convergence Profiles - EPVP_EL_VEL_d1_16Ri_anotate.pdf
  [75
 
  <./Convergence Profiles - EPVP_EL_VEL_d1_16Ri_anotate.pdf>]
-<Convergence Profiles - EPVP_EL_VEL_d1_4Ri_anotate.pdf, id=9225, 487.8225pt x 2
+<Convergence Profiles - EPVP_EL_VEL_d1_4Ri_anotate.pdf, id=9220, 487.8225pt x 2
 71.0125pt>
 File: Convergence Profiles - EPVP_EL_VEL_d1_4Ri_anotate.pdf Graphic file (type 
 pdf)
@@ -1225,8 +1228,8 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 12972 strings out of 479697
- 196041 string characters out of 2877010
+ 12967 strings out of 479697
+ 195955 string characters out of 2877010
  485413 words of memory out of 3000000
  29524 multiletter control sequences out of 15000+200000
  484504 words of font info for 143 fonts, out of 3000000 for 9000
@@ -1234,24 +1237,6 @@ Here is how much of TeX's memory you used:
  80i,14n,85p,2576b,475s stack positions out of 5000i,500n,10000p,200000b,50000s
 pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exi
 st, replaced by a fixed one
-
-pdfTeX warning (dest): name{table.caption.23} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{table.caption.22} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{table.caption.12} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{figure.caption.3} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{figure.caption.2} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{figure.caption.1} has been referenced but does not 
-exist, replaced by a fixed one
 
 {C:/Users/fel_q/AppData/Roaming/MiKTeX/fonts/enc/dvips/newtx/ntxsups_t1.enc}{C:
 /Users/fel_q/AppData/Roaming/MiKTeX/fonts/enc/dvips/newtx/ntx-ec-tlf.enc}{C:/Us
@@ -1272,9 +1257,9 @@ s/type1/public/newtx/txsys.pfb><C:/Users/fel_q/AppData/Roaming/MiKTeX/fonts/typ
 e1/public/newtx/ztmb.pfb><C:/Users/fel_q/AppData/Roaming/MiKTeX/fonts/type1/pub
 lic/newtx/ztmr.pfb><C:/Users/fel_q/AppData/Roaming/MiKTeX/fonts/type1/public/ne
 wtx/ztmri.pfb>
-Output written on ascexmpl-new.pdf (76 pages, 4192259 bytes).
+Output written on ascexmpl-new.pdf (76 pages, 4191809 bytes).
 PDF statistics:
- 9574 PDF objects out of 10688 (max. 8388607)
- 218 named destinations out of 1000 (max. 500000)
+ 9565 PDF objects out of 10688 (max. 8388607)
+ 213 named destinations out of 1000 (max. 500000)
  224 words of extra memory for PDF output out of 10000 (max. 10000000)
 
