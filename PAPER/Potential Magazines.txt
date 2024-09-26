@@ -176,3 +176,30 @@ AIM AND SCOPE:		https://link.springer.com/journal/603/aims-and-scope
 			não se restringem a, mecânica de rochas relacionada à energia, engenharia de petróleo, 
 			sistemas geotérmicos, armazenamento de energia, sequestro de gases de efeito estufa e 
 			descarte de resíduos.
+
+************************************************************************************************************
+****
+ISSN:			1573-1529	
+TÍTULO:			GEOTECHNICAL AND GEOLOGICAL ENGINEERING	
+ÁREA:			ENGENHARIAS I	
+CLASSIFICAÇÃO:		A2
+Impact factor:		1.7 (2024)
+Editor Chefe:		Mohamed A. Meguid, McGill University, Department of Civil Engineering, Montréal, QC, Canada
+SUBMISSION:		https://www.editorialmanager.com/gege/default.aspx
+SUBMISSION GUIDELINES:	https://link.springer.com/journal/10706/submission-guidelines
+AIM AND SCOPE:		https://link.springer.com/journal/10706/aims-and-scope
+
+			A Geotechnical and Geological Engineering publica artigos nas áreas de engenharia 
+			de solos e rochas e também de geologia aplicada nos setores de engenharia civil, 
+			mineração e petróleo. A ênfase está nos aspectos de engenharia da mecânica do solo 
+			e das rochas, geologia e hidrogeologia, embora também sejam bem-vindos artigos sobre 
+			avanços teóricos e experimentais na mecânica do solo.
+
+			Engenharia de solos e rochas;
+			Engenharia de fundações;
+			Geologia aplicada para projeto e construção;
+			Engenharia geoambiental;
+			Engenharia de terremotos e comportamento dinâmico de solos e rochas;
+			
+			A Geotechnical and Geological Engineering publica contribuições na forma de artigos 
+			originais e de revisão, ou como notas técnicas curtas.
