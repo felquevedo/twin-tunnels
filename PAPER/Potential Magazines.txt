@@ -203,3 +203,20 @@ AIM AND SCOPE:		https://link.springer.com/journal/10706/aims-and-scope
 			
 			A Geotechnical and Geological Engineering publica contribuições na forma de artigos 
 			originais e de revisão, ou como notas técnicas curtas.
+			
+EXTRA INFO:		- manuscrito pode ser em docx ou LaTeX
+			- Abstract: 150 a 250 palavras
+			- 4 a 6 palavras-chaves
+			- Sistema decimal de títulos até três níveis
+			- Negrito para vetores, tensores e matrizes
+			- Citação por Nome e ano entre parênteses
+			- Deve incluir após as referências (exemplos no guia)
+				- Funding
+				- Competing Interests
+				- Author Contributions
+				- Data Availability
+			- Figuras citadas no texto em ordem numérica consecutiva Fig.# (em negrito)
+			- Nomear arquivos de figuras Fig#.eps
+			- Figuras no corpo do texto.
+			
+				
