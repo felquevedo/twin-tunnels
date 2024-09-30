@@ -1,0 +1,74 @@
+Albert Giraud: albert.giraud@univ-lorraine.fr
+GeoRessources Laboratory, Université de Lorraine (ENSG), Vandoeuvrelès-Nancy, F-54518, France
+Paper: Effet du comportement différé sur le creusement des tunnels, Revue Française de Géotechnique 118(118), 2007
+Researchgate: https://www.researchgate.net/profile/Albert_Giraud
+
+Samir Maghous: samir.maghous@ufrgs.br
+Federal University of Rio Grande do Sul
+Paper: Formulation of reference solutions for compaction process in sedimentary basins
+International Journal for Numerical and Analytical Methods in Geomechanics, 2020
+ORCID: https://orcid.org/0000-0002-1123-3411
+ResearchGate: https://www.researchgate.net/profile/Samir_Maghous
+
+Patrick de Buhan: debuhan@lmsgc.enpc.fr
+UR Navier, ENPC 6 et 8, av. B. Pascal, 77455 Marne-la-Vallée, France
+Paper: Numerical simulation of bolt-supported tunnels by means of a multiphase model conceived as an improved homogenization procedure, International Journal for Numerical and Analytical Methods in Geomechanics, 32(13), 2008.
+Researchgate: https://www.researchgate.net/scientific-contributions/Patrick-de-Buhan-56438048/publications/2
+
+Inácio Benvegnu Morsch: morsch@ufrgs.br
+Federal University of Rio Grande do Sul
+Paper: Numerical simulation of composite steel-concrete alveolar beams: web-post buckling, Vierendeel and flexural mechanisms
+ORCID: https://orcid.org/0000-0002-2473-3474
+Researchgate: https://www.researchgate.net/profile/Inacio_Morsch
+
+Mauro De Vasconcellos Real: mvrealgm@gmail.com
+Universidade Federal do Rio Grande (FURG) | FURG · School of Engineering - EE
+Paper: Geometric evaluation of steel plates subjected to uniform transverse load with rectangular or trapezoidal stiffeners by means Constructal Design method, International Journal of Hydromechatornics, 2020
+Researchgate: https://www.researchgate.net/profile/Mauro_Real
+ORCID: https://orcid.org/0000-0003-4916-9133
+
+Giovanni Barla: giovanni.barla@polito.it; giovanni.barla2@gmail.com
+Politecnico di Torino, Polytechnic University of Turin, Italy
+Paper: Time-dependent modelling of tunnels in squeezing conditions. International Journal of Geomechanics, 12(6), 2012.
+ResearchGate: https://www.researchgate.net/profile/Giovanni_Barla
+
+Roman Lackner: roman.lackner@tuwien.ac.at
+Research Assistant, Institute for Strength of Materials, Vienna Univ. of Technology, Karlsplatz 13/202, A-1040 Vienna, Austria
+Paper: Hybrid method for analysis of segmented shotcrete tunnel linings. Journal of Geotechnical and Geoenvironmental Engineering, 128(4), 2002.
+ORCID: https://orcid.org/0000-0003-0341-8157
+Google Scholar: https://scholar.google.com/citations?hl=en&user=JjU96PMAAAAJ&view_op=list_works&sortby=pubdate
+
+Hebert A. Mang: herbert.mang@tuwien.ac.at
+Professor, Institute for Strength of Materials, Vienna Univ. of Technology, Karlsplatz 13/202, A-1040 Vienna, Austria
+Hybrid method for analysis of segmented shotcrete tunnel linings. Journal of Geotechnical and Geoenvironmental Engineering, 128(4), 2002.
+Google Scholar: https://scholar.google.at/citations?hl=de&user=eRVOtFgAAAAJ&view_op=list_works&sortby=pubdate
+
+F.I. Shalabi: fshalabi@hu.edu.jo
+Department of Civil Engineering, Hashemite University, Zarqa, Jordan
+Paper: FE analysis of time-dependent behaviour of tunnelling in squeezing ground using two different creep models. Tunnelling and Underground Space Technology, 20(3), 2005.
+Google Scholar: https://scholar.google.at/citations?hl=de&user=Uncu4pMAAAAJ&view_op=list_works&sortby=pubdate
+
+Donatella Sterpi: donatella.sterpi@polimi.it
+Department of Structural Engineering, Politecnico di Milano, P. Leonardo da Vinci, 32, Milan, Italy
+Paper: Visco-plastic behaviour around advancing tunnels in squeezing rock. Rock Mechanics and Rock Engineering, 42(2), 2009.
+Research gate: https://www.researchgate.net/profile/Donatella_Sterpi
+
+Xiao-Fei Wang: wangxfei@cumt.edu.cn
+Laboratory for Geomechanics and Depp Underground
+Engineering, School of Mechanics & Civil Engineering, China University of Mining & Technology, Xuzhou 221116, PR China.
+Paper: Analytical solution of circular tunnel in elastic-viscoplastic rock mass. Latin American Journal of Solids and Structures, 6(6), 2019
+ORCID: http://orcid.org/0000-0003-0085-3911
+
+Meng-Meng Lu: lmm79@126.com
+Laboratory for Geomechanics and Depp Underground
+Engineering, School of Mechanics & Civil Engineering, China University of Mining & Technology, Xuzhou 221116, PR China.
+Paper: Analytical solution of circular tunnel in elastic-viscoplastic rock mass. Latin American Journal of Solids and Structures, 6(6), 2019
+ORCID: http://orcid.org/0000-0002-1052-388X
+
+Miao Chen: 463083935@qq.com
+Engineering, School of Mechanics & Civil Engineering, China University of Mining & Technology, Xuzhou 221116, PR China.
+Paper: Analytical solution of circular tunnel in elastic-viscoplastic rock mass. Latin American Journal of Solids and Structures, 6(6), 2019
+ORCID: https://orcid.org/0000-0002-7997-9594
+
+
+
