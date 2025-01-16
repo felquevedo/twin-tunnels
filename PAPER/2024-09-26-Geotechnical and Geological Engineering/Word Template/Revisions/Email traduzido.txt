@@ -30,10 +30,6 @@ Revisor nº 2: O trabalho de pesquisa é baseado em derivação teórica pura e 
 
 * Não há o que responder.
 
-
-
-
-
 Revisor nº 5:
 Neste manuscrito, os autores estudam a deformação da rocha em túneis gêmeos com uma galeria transversal, considerando a plasticidade e modelos constitutivos dependentes do tempo. Depois de revisar o manuscrito, acredito que as seguintes questões devem ser abordadas na versão revisada:
 
@@ -43,17 +39,60 @@ Neste manuscrito, os autores estudam a deformação da rocha em túneis gêmeos 
 
 2) O túnel duplo mencionado na Seção 5 é um estudo de caso real? Em caso afirmativo, devem ser fornecidas as propriedades geotécnicas, bem como detalhes sobre o tamanho, o método de escavação e as unidades litológicas da área de estudo.
 
+The twin tunnel mentioned in Section 5 is not a real-case study but an academic configuration used to validate and demonstrate the application of the developed numerical model. The geometrical properties, material parameters, and boundary conditions were defined based on data from the literature and idealized assumptions. There are no specific geotechnical data, excavation methods, or lithological unit details, as the study aims to explore generic scenarios of interaction between twin tunnels and a transverse gallery.
+
+This response can be incorporated into Section 5: "Spatial and Time Discretization of the Domain", immediately after introducing the model geometry and conditions, with the following text:
+
+"This study does not represent a real-case scenario. The twin tunnel configuration is an academic setup designed to validate and illustrate the applicability of the proposed numerical model. Geometrical parameters, material properties, and boundary conditions were idealized and based on data from the literature, without referencing specific geotechnical, excavation methods, or lithological units."
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 * Na seção 5, trata-se apenas do domínio geométrico parametrizado para abordar o problema de túneis gêmeos conectados com galerias. As propriedades geotécnicas são fornecidas na seção 7 juntamente com a tabela 2, onde é feita a aplicação numérica. Essas propriedades correpondem as rochas argilosas de Aisne. Apesar das propriedades serem de um túnel real, a aplicação não é de um túnel gêmeo com galeria.
+
+
+The twin tunnel mentioned in Section 5 is not a real case study. It is an academic configuration used for numerical analysis and verification of the computer model. The geometry and material properties were defined based on generic parameters and simplifications, such as considering the rock mass to be homogeneous and isotropic, as well as adopting geostatic initial stresses. The purpose of theses analysis is to evaluate the model's ability to predict the mechanical behavior and structural interactions in deep twin tunnels with a transverse gallery, in a theoretical context. Therefore, it is not a specific case applied to a real location or project.
 
 3) Qual software foi usado para simular o túnel?
 
-* O software utilizado foi o ANSYS porém os modelos constitutivos foram implementados dentro do software através do recurso de UPF/USERMAT.
+The software used was ANSYS, but the constitutive models were implemented within it using the UPF/USERMAT resource.
+
+* O software utilizado foi o ANSYS porém os modelos constitutivos foram implementados dentro do mesmo através do recurso de UPF/USERMAT.
 
 4) Como o modelo numérico foi calibrado?
 
 * O modelo numérico do concreto foi calibrado para túneis simples nos trabalhos de Quevedo et al 2022a e Quevedo et al 2022b.
 
+
 5) Como os resultados da simulação numérica foram verificados?
+
+Como não há soluções analíticas, envolvendo esse domínio com a galeria e o comportamento reológico dos materiais, os resultados da seção 7 não possuem verificações com soluções analíticas. Contudo, o modelo computacional em elementos finitos foi verificado preliminarmente através de soluções analíticas para túneis gêmeos em meios elásticos e elastoplásticos (como as de Guo et al., 2021 e Ma et al., 2020).
+
+O modelo computacional em elementos finitos foi verificado através de soluções analíticas para túneis gêmeos em meios elásticos e elastoplásticos (como as de Guo et al., 2021, e Ma et al., 2020).
+
+
 
 * Como não há soluções analíticas que envolvam a galeria transversal, esses resultados não foram verificados. Porém, a solução numérica para túneis gêmeos, foi verificada com soluções analíticas em elasticidade e plasticidade.
 
@@ -67,12 +106,10 @@ Neste manuscrito, os autores estudam a deformação da rocha em túneis gêmeos 
 
 8) Como a rigidez normal e a rigidez de cisalhamento entre os sistemas de suporte inicial e secundário foram consideradas no modelo?
 
+The lining is modeled as a continuous structure, without distinguishing between primary and secondary support systems. This simplification ensures consistent analysis and is appropriate for scenarios where the supports act as a single system. The interaction between the support and rock mass was modeled assuming perfect bonding, eliminating the need to explicitly consider normal and shear stiffness. This simplification is valid for scenarios with good material connection. For interfaces with potential sliding or separation, advanced models with specific parameters could be applied.
+
+
 * Na seção 2 é dito que se trata de um revestimento de espessura constante e com perfeita aderência entre o revestimento e o maciço.
-
-
-
-
-
 
 
 
