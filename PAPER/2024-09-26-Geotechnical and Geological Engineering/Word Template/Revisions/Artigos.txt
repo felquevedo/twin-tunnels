@@ -11,8 +11,17 @@ The jointed rock mass behavior often plays a major role in the design of undergr
 
 O comportamento do maciço rochoso articulado geralmente desempenha um papel importante no projeto de escavação subterrânea, e suas falhas durante a escavação e a operação geralmente estão intimamente relacionadas às juntas. Esta pesquisa procura avaliar os efeitos de dois fatores geométricos básicos que influenciam o comportamento do túnel em um maciço rochoso articulado: o espaçamento e a orientação das juntas. Um código de elemento de contorno indireto hibridizado conhecido como TFSDDM (Two-dimensional Fictitious Stress Displacement Discontinuity Method) é usado para estudar a distribuição de tensões ao redor dos túneis escavados em maciços rochosos com juntas. Essa análise numérica revelou que tanto o ângulo de mergulho quanto o espaçamento das juntas têm influências importantes na distribuição de tensão nas paredes do túnel. Por exemplo, as tensões tangenciais de tração e compressão no limite do túnel circular aumentam com a redução do espaçamento das juntas e, com o aumento do ângulo de mergulho das juntas, a tensão de tração no teto do túnel diminui.
 
+Detalhes:
 
-
+- Solução analítica
+- Método: The hybridized indrect boundary element method (FSM - Fictitious Stress Method + DDM - Dispplacement Discontinuity Method)
+- Objetivo: descobrir os efeitos de vários ângulos de mergulho e espaçamento de juntas em camadas na estabilidade do túnel que é escavado em um maciço rochoso com juntas
+- Juntas: primeiro momento linear elástico e após a falha MC
+- A junta pode ser descrita como uma rachadura longa e fina com o preenchimento compressivel.
+- Os elementos DDM vão ao longo da descontinuidade e os FSM ao longo da borda do túnel
+- O domínio parece ser EPD com a superfície
+- Mostra a comparação do BEM com a solução de Kirsch
+- Vai reduzindo o espaçamento entre as juntas paralelas
 
 2) M. S. Abdollahi, M. Najafi, AR Yarahmadi Bafghi, MF Marji, 2019, A 3D numerical model to determine suitable reinforcement strategies for passing TBM through a fault zone, a case study: Safaroud water transmission tunnel, Iran,Tunneling and Underground Space Technology 88, 186-199.
 
