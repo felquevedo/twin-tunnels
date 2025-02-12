@@ -38,7 +38,18 @@ No final da introdução:
 
 O principal objetivo desta pesquisa é investigar a estabilidade do túnel de Safarood na zona de falha de Lalezar. Para tanto, utilizou-se o software FLAC3D para modelagem numérica e o software Phase2 para análise do sistema de suporte de túnel na zona defeituosa (em três posições, quando TBM entra na falha, dentro da falha e quando sai da falha). Finalmente, um padrão de reforço adequado foi escolhido para este estudo.
 
+Detalhes:
+
+FLAC3D - Diferenças finitas
 Modelo MC para o maciço e elástico para o revestimento.
+Comprimento do modelo 80m, altura 100m, espessura 50m, diâmetro do túnel 5.27m antes do suporte, 4.5m depois do suporte
+Profundidade 550-60m tensão vertical de 11-13MPa
+Passo de escavação 5m
+Modelou a TBM elastica-linear
+Analisa a estabilidade por meio de deslocamentos e pressões na face
+Compara com métodos analíticos
+Simula reforços de forma discreta (enfilagens), tirantes radiais, graute 6 métodos
+Analisa entrando e saindo da falha
 
 Conclusão:
 
@@ -60,6 +71,14 @@ O artigo discute considerações de propagação de trincas em um meio poroelás
 Inicio da conclusão:
 
 O método da descontinuidade do deslocamento (DDM) é particularmente ideal para problemas envolvendo fraturas e descontinuidades, porque a solução fundamental contém um salto de deslocamento. No entanto, o original DDM e suas extensões de ordem superior são todas limitadas a problemas elásticos. Muitas situações em geomecânica, como fraturamento hidráulico, medição de tensão in situ, geotérmica etc. ocorrem em um meio poroso.
+
+Detalhes:
+
+Utiliza o método da descontinuidade com poroelasticidade
+Utiliza algum critério de propagaçaõ de trincas (princípios da mecânica da fratura elástica)
+Tem implementação numérica em um programa próprio chamado CEP-DDM)
+Foi verificado com uma solução analítica de uma trinca em um meio infinito (drenado e não drenado)
+
 
 
 
