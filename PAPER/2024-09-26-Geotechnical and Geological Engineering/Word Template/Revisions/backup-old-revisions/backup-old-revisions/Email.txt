@@ -1,0 +1,145 @@
+Dear Dr. Quevedo,
+
+We have received the reports from our advisors on your manuscript, "Numerical analysis of the rock deformation in twin tunnels with transverse gallery considering plasticity and time-dependent constitutive models", which you submitted to Geotechnical and Geological Engineering.
+The manuscript number is GEGE-D-24-01227
+
+Based on the advice received, I feel that your manuscript could be reconsidered for publication should you be prepared to incorporate major revisions.
+When preparing your revised manuscript, you are asked to carefully consider the reviewer comments which are attached, and submit a list of responses to the comments.
+
+Submit your response as separate submission item.
+
+PLEASE VISIT THE WEBSITE FOR POSSIBLE REVIEWER ATTACHMENTS
+
+In order to submit your revised manuscript, please access the Editorial Manager Website.
+
+Your username is: fel_quevedo
+If you forgot your password, you can click the 'Send Login Details' link on the EM Login page at https://www.editorialmanager.com/gege/
+
+We look forward to receiving your revised manuscript within eight weeks.
+
+With kind regards,
+Jia-wen Zhou, Ph.D.
+Associate Editor
+Geotechnical and Geological Engineering
+
+
+COMMENTS TO THE AUTHOR:
+
+Reviewer #2: The research work is based on pure theoretical derivation and simulation analysis. Many mature commercial software has good calculation and analysis functions. Therefore, the innovation of the research work is insufficient, and the practical guiding role of the project is insufficient. In addition, there are too many sections and too long length. It is suggested to carry out targeted research on an innovative problem to avoid lengthy discussion. Unfortunately, the existing manuscript cannot be supported.
+
+
+Reviewer #5:
+In this manuscript, the authors study rock deformation in twin tunnels with a transverse gallery, considering plasticity and time-dependent constitutive models. After reviewing the manuscript, I believe the following questions should be addressed in the revised version:
+
+1)    The title could be changed to "Evaluation of Rock Deformation in Twin Tunnels with a Transverse Gallery, Considering Plasticity and Time-Dependent Constitutive Models."
+
+
+
+2) Is the twin tunnel mentioned in Section 5 an actual case study? If so, the geotechnical properties, as well as details regarding the size, excavation method, and lithological units of the study area, should be provided.
+
+The twin tunnel mentioned in Section 5 is not a real-case study but an academic configuration used to validate and demonstrate the application of the developed numerical model. The geometrical properties, material parameters, and boundary conditions were defined based on data from the literature and idealized assumptions. There are no specific geotechnical data, excavation methods, or lithological unit details, as the study aims to explore generic scenarios of interaction between twin tunnels and a transverse gallery.
+
+This response can be incorporated into Section 5: "Spatial and Time Discretization of the Domain", immediately after introducing the model geometry and conditions, with the following text:
+
+"This study does not represent a real-case scenario. The twin tunnel configuration is an academic setup designed to validate and illustrate the applicability of the proposed numerical model. Geometrical parameters, material properties, and boundary conditions were idealized and based on data from the literature, without referencing specific geotechnical, excavation methods, or lithological units."
+
+3)    Which software was used for simulating the tunnel?
+
+The software used was ANSYS, but the constitutive models were implemented within it using the UPF/USERMAT resource. The software doesn't have these models. This information is in the text of the article.
+
+4)    How was the numerical model calibrated?
+
+
+
+5)    How were the results of the numerical simulation verified?
+
+The results of the numerical simulations were verified by comparing them with analytical solutions and numerical results available in the literature for similar configurations without transverse gallery. For example, comparisons were made with the analytical stress solutions for twin tunnels under plane strain conditions proposed by Guo et al. (2021) and Ma et al. (2020). Preliminary numerical tests were conducted to evaluate the accuracy of the finite element implementation, including stress distributions and plastic zone boundaries. These comparisons demonstrated the ability of the model to capture the key interaction effects and deformation mechanisms.
+
+6)    The support systems of the tunnels and gallery should be clearly presented in a specified table.
+
+This presented in Table 1.
+
+7)    The boundary conditions, assigned material properties, and model size should be illustrated in the text.
+
+Boundary conditions are detailed in Section 5 and illustrated in Figure 5, including the geostatic initial stresses (Equation 11) and symmetry conditions. The model size is described in Section 5, with domain dimensions and mesh details shown in Figure 5 and Table 1. Assigned material properties are provided in Section 7.1 and summarized in Table 2, covering both rock mass and lining parameters.
+
+8)    How were the normal and shear stiffness between the initial and secondary support systems considered in the model?
+
+The concrete lining is modeled as a continuous structure with constant thickness, without distinguishing between primary and secondary support systems. The interaction between the support and rock mass was modeled assuming perfect bonding, eliminating the need to explicitly consider normal and shear stiffness. This simplification is valid for scenarios with good material connection. For interfaces with potential sliding or separation, advanced interface models with specific parameters could be applied.
+
+This response can be incorporated in Section 2: "Fundamental Assumptions":
+
+"The lining was modeled as a continuous structure, assuming perfect bonding with the rock mass and without distinguishing between primary and secondary supports. This simplification avoids explicitly modeling normal and shear stiffness and is valid for scenarios with strong material connections."
+
+and eliminate alinea:
+
+"Perfect bonding is assumed at the interface between concrete lining and the rock mass."
+
+and change alinea:
+
+"The simulation excavation processes are curried out assuming a constant tunnel advancement rate (i.e., constant excavation speed), together with a constant thickness of concrete lining."
+
+to:
+
+"The simulation excavation processes are curried out assuming a constant tunnel advancement rate (i.e., constant excavation speed)."
+
+
+
+
+
+
+
+
+
+
+
+
+Reviewer #6: The paper is good and worthy explaining the finite element analyses of the  twin circular tunnels deformation mechanisms taking into account the visco-elasto-plastic behavior of the surrounding rocks. the following comments are suggested:
+
+1- Title of the paper may be revised as the numerical modelling analyses are based on the FEM. For example the following title is suggested: "A three-dimensional finite element analysis of the rock deformation mechanisms in twin circular tunnels with a transverse gallery based on visco-elasto-plastic constitutive models".
+
+2- The English of the abstract may be rechecked. Some lengthy and somewhat repetitive sentences exist.
+
+3- The  theoretical background and literature review on the stress analyses around rock tunnels may be improved. For example see the following papers:
+
+N Nikadat, MF Marji, 2016, Analysis of stress distribution around tunnels by hybridized FSM and DDM considering the influences of joints parameters, Geotechnical and Geological Engineering 11 (2 (April 2016)), 269-288.
+
+M. S. Abdollahi, M. Najafi, AR Yarahmadi Bafghi, MF Marji, 2019, A 3D numerical model to determine suitable reinforcement strategies for passing TBM through a fault zone, a case study: Safaroud water transmission tunnel, Iran,Tunneling and Underground Space Technology 88, 186-199.
+
+A Abdollahipour, MF Marji, AY Bafghi, J Gholamnejad, 2016, Time-dependent crack propagation in a poroelastic medium using a fully coupled hydromechanical displacement discontinuity method, International Journal of Fracture 199, 71-87.
+
+A Abdollahipour, MF Marji, AY Bafghi, J Gholamnejad, 2016, A complete formulation of an indirect boundary element method for poroelastic rocks, Computers and Geotechnics 74, 15-25.
+
+4-The explanations for Figures' captions may be improved, For example the caption of Figs. 11 is very concise. It may be divided into two parts (a) and (b) for the two figs, and explain them individually., The same is true for Figs. 19 and Figs. 20, etc..
+ 
+
+
+
+
+Reviewer #7: This paper conducted numerical analysis of the rock deformation in twin tunnels with transverse gallery. Overall, this paper is interesting. The following comments are for the authors to consider. After revision, I think this paper can be published.
+(1) In the introduction, the authors mentioned that tunnels are widely used and in the underwater environment. Therefore, the latest research regarding the interaction between rock mass around tunnels and water is recommended to be added (10.1016/j.engfailanal.2024.109137).
+(2) For the fundamental assumptions, this section can be shortened.
+(3) Please further check whether some equations or figures should be cited in Section 3, such as Figure 1 and Equation (2).
+(4) The above comment is also applicable to section 4.
+(5) When author mesh the geometry to the corresponding number of elements, which guideline did the authors follow? I mean how did the authors determine the corresponding number of elements?
+(6) The authors conducted a comprehensive analysis and parameter study. However, it will be better to compare the numerical study with some in-situ tunnelling cases. I understand that the fundamental research will be quite difficult to have certain in-situ tunnelling cases. Therefore, this is a recommendation for the authors to consider.
+
+
+
+
+
+
+
+
+Authors may need to take specific actions to achieve compliance with funder and institutional open access mandates. If your research is supported by a funder that requires immediate open access (e.g. according to Plan S principles) then you should select the gold OA route, and we will direct you to the compliant route where possible. For authors selecting the subscription publication route our standard licensing terms will need to be accepted, including our self-archiving policies. Those standard licensing terms will supersede any other terms that the author or any third party may assert apply to any version of the manuscript.<br> <br> Find out more about compliance: https://www.springernature.com/gp/open-research/funding/policy-compliance-faqs
+
+Did you know Springer Nature Author Services can help you improve your manuscript through services including English language editing, developmental comments, manuscript formatting, figure preparation, translation, and more.<br> <br> Find out more about how you can take advantage of these services: https://authorservices.springernature.com/go/sn/?utm_source=EM&utm_medium=Revision+Email&utm_campaign=SNAS+Referrals+2023&utm_id=ref2023<br> <br> Please note that the use of these tools, or any other service, is not a requirement for publication, nor does it imply or guarantee that editors will accept the article, or even select it for peer review.
+
+Please note: When uploading your revised manuscript files, please make sure only to submit your editable source files (i.e. Word, Tex). PDF is not allowed at this stage.
+
+This letter contains confidential information, is for your own use, and should not be forwarded to third parties.
+
+Recipients of this email are registered users within the Editorial Manager database for this journal. We will keep your information on file to use in the process of submitting, evaluating and publishing a manuscript. For more information on how we use your personal details please see our privacy policy at https://www.springernature.com/production-privacy-policy. If you no longer wish to receive messages from this journal or you have questions regarding database management, please contact the Publication Office at the link below.
+
+__________________________________________________
+In compliance with data protection regulations, you may request that we remove your personal registration details at any time.  (Use the following URL: https://www.editorialmanager.com/gege/login.asp?a=r). Please contact the publication office if you have any questions.
